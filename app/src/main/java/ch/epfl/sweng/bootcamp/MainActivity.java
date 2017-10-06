@@ -95,4 +95,9 @@ public class MainActivity extends AppCompatActivity {
         /*starts an instance of the DisplayMessageActivity specified by the Intent.
         Now you need to create that class.*/
     }
+
+    public void readBarcode(View view) {
+        Intent intent = new Intent(this, BarcodeActivity.class);
+        startActivity(intent);
+    }
 }

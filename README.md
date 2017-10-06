@@ -1,9 +1,9 @@
 # Qeeqbii
-Idea: Not confident about the food you buy ? Qeeqbii is THE solution:
+#### Not confident about the food you buy ? Qeeqbii is THE solution:
 
-ALERT: Are you a little GMO on worldwide’s unregulated food market?
+**ALERT:** Are you a little GMO on worldwide’s unregulated food market?
 
-Then this application might threaten you! 
+Then this application might threaten you!
 
 
 Regain control on what you eat, and become healthy again, as was your grandfather at the time he could eat his own farm products!
@@ -16,6 +16,6 @@ Project description: reading products barcodes to identify them and obtain its i
 
 Potential extensions: In a second time the App could be extended with some plugins such as
 
-    An allergy alert warning the user if a product contains ingredients that it is allergic to. This could be carried out thanks to the creation of a personal account that the user can use to specify the ingredients it is allergic to.
+1. An allergy alert warning the user if a product contains ingredients that it is allergic to. This could be carried out thanks to the creation of a personal account that the user can use to specify the ingredients it is allergic to.
 
-    Proposing an alternative to the food that has been scanned. The alternative can be based on different criterions defined by the user. This criterias could be the price, the nutrients, the environmental impact, the production location, fairtrade, ...
+2. Proposing an alternative to the food that has been scanned. The alternative can be based on different criterions defined by the user. This criterias could be the price, the nutrients, the environmental impact, the production location, fairtrade, ...
