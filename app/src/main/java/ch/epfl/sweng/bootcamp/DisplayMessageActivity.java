@@ -40,6 +40,14 @@ public class DisplayMessageActivity extends AppCompatActivity {
         TextView reportedMessage = (TextView) findViewById(R.id.greetingMessage);
         reportedMessage.setTextSize(40);
         reportedMessage.setTextColor(Color.rgb(200,0,0));
+        new OpenFoodQueryActivity()
+        {
+            @Override public void onPostExecute(String result)
+            {
+                TextView txt = (TextView) findViewById(R.id.greetingMessage);
+                txt.setText(result);
+            }
+        }.execute("");
         reportedMessage.setText(getString(R.string.hello) + message + getString(R.string.exclamation)); //BootCamp version
         //reportedMessage.setText(message); // qeeqbi version
     }

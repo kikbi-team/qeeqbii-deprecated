@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -74,7 +75,14 @@ public class MainActivity extends AppCompatActivity {
         // Do something in response to button
         Intent intent = new Intent(this, DisplayMessageActivity.class);
         EditText myText = (EditText) findViewById(R.id.mainName);
-        String message = myText.getText().toString();
+        //String message = myText.getText().toString();
+
+
+
+
+
+        startActivity(intent);
+
         /*String message = "";//"bisous";//importedData.get(0).getmAgent();
 
         for (int i = 0; i < importedData.size(); i = i + 1) {
@@ -82,7 +90,7 @@ public class MainActivity extends AppCompatActivity {
             message += " " + importedData.get(i).getmGroup() + "\n";
         }*/
 
-        intent.putExtra(getString(R.string.hello), message);
+        //intent.putExtra(getString(R.string.hello), message);
 
         /*adds the EditText's value to the intent.
         An Intent can carry data types as key-value pairs called extras.
@@ -91,7 +99,7 @@ public class MainActivity extends AppCompatActivity {
         app's package name as a prefix. This ensures the keys are unique, in case your app interacts
         with other apps. */
 
-        startActivity(intent);
+
         /*starts an instance of the DisplayMessageActivity specified by the Intent.
         Now you need to create that class.*/
     }
