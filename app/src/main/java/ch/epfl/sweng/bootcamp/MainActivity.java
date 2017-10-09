@@ -38,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
                 CancerData sample = new CancerData();
                 sample.setmAgent(tokens[0]); //Here we can add the fact that the dataBase might have leaks
                 sample.setmGroup(tokens[1]);
+                System.out.println(tokens[0]);
                 //Note if we want to import an int or a double we have to write:
                 //sample.setmGroup(Double.parseDouble(tokens[x]));
                 //sample.setmGroup(Integer.parseInt(tokens[x]));
