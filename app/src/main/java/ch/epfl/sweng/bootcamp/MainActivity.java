@@ -21,9 +21,6 @@ import java.util.logging.LogRecord;
 import static ch.epfl.sweng.bootcamp.R.layout.activity_main;
 
 public class MainActivity extends AppCompatActivity {
-
-    public static final String EXTRA_MESSAGE = "ch.epfl.sweng.bootcamp.mainNameExtracted";
-
     private List<CancerData> importedData = new ArrayList< >();
 
     private void readCSVFile() {
@@ -47,7 +44,6 @@ public class MainActivity extends AppCompatActivity {
                 //sample.setmGroup(Double.parseDouble(tokens[x]));
                 //sample.setmGroup(Integer.parseInt(tokens[x]));
                 importedData.add(sample); //adds the sample to the table with all the data
-
                 Log.d("MainActivity","Just created: " + sample); //d stands for debugg
             }
         } catch (IOException error) {
@@ -78,8 +74,7 @@ public class MainActivity extends AppCompatActivity {
         // Do something in response to button
         Intent intent = new Intent(this, DisplayMessageActivity.class);
         EditText myText = (EditText) findViewById(R.id.mainName);
-        //String message = myText.getText().toString();
-        String message = "";//"bisous";//importedData.get(0).getmAgent();
+        String message = "";
 
         for (int i = 0; i < importedData.size(); i = i + 1) {
             message += " " + importedData.get(i).getmAgent();
