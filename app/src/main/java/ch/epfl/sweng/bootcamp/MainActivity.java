@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageView;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -14,6 +15,10 @@ import java.io.InputStreamReader;
 import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Handler;
+import java.util.logging.LogRecord;
+
+import static ch.epfl.sweng.bootcamp.R.layout.activity_main;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -54,9 +59,8 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(activity_main);
         readCSVFile ();
-
     }
 
     /** Called when the user taps the Send button
