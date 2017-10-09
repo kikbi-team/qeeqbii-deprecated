@@ -1,9 +1,8 @@
 package ch.epfl.sweng.bootcamp;
 
 import android.content.Intent;
-import android.graphics.Color;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 
 import com.google.zxing.integration.android.IntentIntegrator;
