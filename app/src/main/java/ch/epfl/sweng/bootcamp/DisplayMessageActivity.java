@@ -38,17 +38,19 @@ public class DisplayMessageActivity extends AppCompatActivity {
 
         // Capture the layout's; TextView and set the string as its text
         TextView reportedMessage = (TextView) findViewById(R.id.greetingMessage);
-        reportedMessage.setTextSize(40);
-        reportedMessage.setTextColor(Color.rgb(200,0,0));
+        reportedMessage.setTextSize(20);
+        reportedMessage.setTextColor(Color.rgb(0,0,0));
         new OpenFoodQueryActivity()
         {
             @Override public void onPostExecute(String result)
             {
+                HTTPRequestResponse response = new HTTPRequestResponse(result);
                 TextView txt = (TextView) findViewById(R.id.greetingMessage);
-                txt.setText(result);
+                txt.setText(response.GetProductName("fr") + "\n\nIngredients: " + response.GetProductIngredients("fr") +
+                        "\n\nNutrients: (per 100g)\n " + response.GetProductNutrients("fr"));
             }
         }.execute("");
-        reportedMessage.setText(getString(R.string.hello) + message + getString(R.string.exclamation)); //BootCamp version
+        //reportedMessage.setText(getString(R.string.hello) + message + getString(R.string.exclamation)); //BootCamp version
         //reportedMessage.setText(message); // qeeqbi version
     }
 }

@@ -21,7 +21,7 @@ public class OpenFoodQueryActivity extends AsyncTask<String, Void, String> {
     {
 
         try {
-            URL url = new URL("https://www.openfood.ch/api/v3/products?excludes=name_translations%2Cdisplay_name_translations&barcodes=7610848337010");
+            URL url = new URL("https://www.openfood.ch/api/v3/products?excludes=name_translations&barcodes=7610848337010");
             HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
             urlConnection.setRequestMethod("GET");
             urlConnection.setRequestProperty("Content-Type","application/vnd.api+json");
