@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
     {
         // Do something in response to button
         Intent intent = new Intent(this, DisplayMessageActivity.class);
-        EditText myText = (EditText) findViewById(R.id.mainName);
+        //EditText myText = (EditText) findViewById(R.id.mainName); -> Usefull if we want to time in some text.
 
         String message = "";
         message += " id\tAgent\t\tGroup\n";
