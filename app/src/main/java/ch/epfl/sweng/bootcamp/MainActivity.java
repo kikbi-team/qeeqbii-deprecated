@@ -31,15 +31,14 @@ public class MainActivity extends AppCompatActivity {
         try {
             // Step over the headers
             reader.readLine();
-
             while ((line = reader.readLine()) != null) {
                 //split by ','
                 String[] tokens = line.split(",");
 
                 //read the data
                 CancerData sample = new CancerData();
-                sample.setmAgent(tokens[0]); //Here we can add the fact that the dataBase might have leaks
-                sample.setmGroup(tokens[1]);
+                sample.setmAgent(tokens[1]); //Here we can add the fact that the dataBase might have leaks
+                sample.setmGroup(tokens[2]);
                 //Note if we want to import an int or a double we have to write:
                 //sample.setmGroup(Double.parseDouble(tokens[x]));
                 //sample.setmGroup(Integer.parseInt(tokens[x]));
@@ -59,26 +58,20 @@ public class MainActivity extends AppCompatActivity {
         readCSVFile ();
     }
 
-    /** Called when the user taps the Send button
-    public void sendMessage(View view) {
-        Intent intent = new Intent(this, DisplayMessageActivity.class);
-        EditText editText = (EditText) findViewById(R.id.mainName);                         //Bootcamp versiom
-        String message = editText.getText().toString();
-        intent.putExtra(EXTRA_MESSAGE, message);
-        startActivity(intent);
-    }*/
-
     @SuppressWarnings("UnusedParameters")
     public void sendMessage(View view) //Called when the user taps the Go button
     {
         // Do something in response to button
         Intent intent = new Intent(this, DisplayMessageActivity.class);
         EditText myText = (EditText) findViewById(R.id.mainName);
+
         String message = "";
+        message += " id\tAgent\t\tGroup\n";
 
         for (int i = 0; i < importedData.size(); i = i + 1) {
-            message += " " + importedData.get(i).getmAgent();
-            message += " " + importedData.get(i).getmGroup() + "\n";
+            message += " " + Integer.toString(i);
+            message += "\t" + importedData.get(i).getmAgent();
+            message += "\t\t\t" + importedData.get(i).getmGroup() + "\n";
         }
 
         intent.putExtra(getString(R.string.hello), message);
