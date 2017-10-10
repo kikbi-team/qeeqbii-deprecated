@@ -1,13 +1,10 @@
-package ch.epfl.sweng.bootcamp;
+package ch.epfl.sweng.qeeqbii;
 
 import android.os.AsyncTask;
-import android.widget.EditText;
-import android.widget.TextView;
 
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.URL;
-import java.net.URLConnection;
 import java.net.HttpURLConnection;
 
 /**

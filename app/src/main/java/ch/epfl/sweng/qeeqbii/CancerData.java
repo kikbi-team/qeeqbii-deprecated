@@ -1,4 +1,4 @@
-package ch.epfl.sweng.bootcamp;
+package ch.epfl.sweng.qeeqbii;
 
 /**
  * Created by davidcleres on 03.10.17.

@@ -1,4 +1,4 @@
-package ch.epfl.sweng.bootcamp;
+package ch.epfl.sweng.qeeqbii;
 
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;

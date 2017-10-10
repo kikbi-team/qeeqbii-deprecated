@@ -1,4 +1,4 @@
-package ch.epfl.sweng.bootcamp;
+package ch.epfl.sweng.qeeqbii;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.ImageView;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -15,10 +14,8 @@ import java.io.InputStreamReader;
 import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.logging.Handler;
-import java.util.logging.LogRecord;
 
-import static ch.epfl.sweng.bootcamp.R.layout.activity_main;
+import static ch.epfl.sweng.qeeqbii.R.layout.activity_main;
 
 public class MainActivity extends AppCompatActivity {
     public static final String BARCODE_READER = "ch.epfl.sweng.qeeqbii.mainBarcode";
