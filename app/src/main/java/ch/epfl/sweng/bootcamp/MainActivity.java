@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageView;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -14,11 +15,12 @@ import java.io.InputStreamReader;
 import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Handler;
+import java.util.logging.LogRecord;
+
+import static ch.epfl.sweng.bootcamp.R.layout.activity_main;
 
 public class MainActivity extends AppCompatActivity {
-
-    public static final String EXTRA_MESSAGE = "ch.epfl.sweng.bootcamp.mainNameExtracted";
-
     private List<CancerData> importedData = new ArrayList< >();
 
     private void readCSVFile() {
@@ -41,7 +43,6 @@ public class MainActivity extends AppCompatActivity {
                 //sample.setmGroup(Double.parseDouble(tokens[x]));
                 //sample.setmGroup(Integer.parseInt(tokens[x]));
                 importedData.add(sample); //adds the sample to the table with all the data
-
                 Log.d("MainActivity","Just created: " + sample); //d stands for debugg
             }
         } catch (IOException error) {
@@ -53,19 +54,9 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(activity_main);
         readCSVFile ();
-
     }
-
-    /** Called when the user taps the Send button
-    public void sendMessage(View view) {
-        Intent intent = new Intent(this, DisplayMessageActivity.class);
-        EditText editText = (EditText) findViewById(R.id.mainName);                         //Bootcamp versiom
-        String message = editText.getText().toString();
-        intent.putExtra(EXTRA_MESSAGE, message);
-        startActivity(intent);
-    }*/
 
     @SuppressWarnings("UnusedParameters")
     public void sendMessage(View view) //Called when the user taps the Go button
@@ -73,13 +64,12 @@ public class MainActivity extends AppCompatActivity {
         // Do something in response to button
         Intent intent = new Intent(this, DisplayMessageActivity.class);
         EditText myText = (EditText) findViewById(R.id.mainName);
-        //String message = myText.getText().toString();
-        String message = "";//"bisous";//importedData.get(0).getmAgent();
-        message += " id\tAgent\t\tGroup\n";
+        String message = "";
+
         for (int i = 0; i < importedData.size(); i = i + 1) {
             message += " " + Integer.toString(i);
-            message += "\t" + importedData.get(i).getmAgent();
-            message += "\t\t\t" + importedData.get(i).getmGroup() + "\n";
+            message += " " + importedData.get(i).getmAgent();
+            message += " " + importedData.get(i).getmGroup() + "\n";
         }
 
         intent.putExtra(getString(R.string.hello), message);
