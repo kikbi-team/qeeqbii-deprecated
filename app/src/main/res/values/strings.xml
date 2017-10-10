@@ -7,6 +7,10 @@
     <string name="exclamation">!</string>
     <string name="barcode_button">Barcode Reader</string>
     <string name="cancer_data">Cancer Data Base</string>
+    <string name="fat_graph">Fats</string>
+    <string name="glucide_graph">Carbohyrates</string>
+    <string name="calories_graph">Calories</string>
+    <string name="salt_graph">Salts</string>
 
 
     <!-- Google Sign In -->
