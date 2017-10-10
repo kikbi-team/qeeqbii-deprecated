@@ -95,7 +95,7 @@ public class MainActivity extends AppCompatActivity {
     public void searchProductFromBarcode(View view)
     {
         Intent intent = new Intent(this, BarcodeToProductActivity.class);
-        EditText editText = (EditText) findViewById(R.id.mainName);                         //Bootcamp versiom
+        EditText editText = (EditText) findViewById(R.id.mainName);
         String barcode = editText.getText().toString();
         intent.putExtra(BARCODE_READER, barcode);
         startActivity(intent);

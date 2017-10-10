@@ -22,7 +22,6 @@ public class DisplayMessageActivity extends AppCompatActivity {
         TextView reportedMessage = (TextView) findViewById(R.id.greetingMessage);
         reportedMessage.setTextSize(12);
         reportedMessage.setTextColor(Color.rgb(200,0,0));
-        reportedMessage.setText(message); //BootCamp version
-        //reportedMessage.setText(message); // qeeqbi version
+        reportedMessage.setText(message);
     }
 }
