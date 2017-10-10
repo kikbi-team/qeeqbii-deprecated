@@ -26,6 +26,7 @@
                 android:value=".MainActivity" />
         </activity>
         <activity android:name=".BarcodeActivity"></activity>
+        <activity android:name=".BarcodeToProductActivity"></activity>
     </application>
 
 </manifest>

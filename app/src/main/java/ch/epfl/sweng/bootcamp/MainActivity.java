@@ -18,7 +18,8 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-    public static final String EXTRA_MESSAGE = "ch.epfl.sweng.bootcamp.mainNameExtracted";
+    public static final String EXTRA_MESSAGE = "ch.epfl.sweng.qeeqbii.mainNameExtracted";
+    public static final String BARCODE_READER = "ch.epfl.sweng.qeeqbii.mainBarcode";
 
     private List<CancerData> importedData = new ArrayList< >();
 
@@ -106,6 +107,15 @@ public class MainActivity extends AppCompatActivity {
 
     public void readBarcode(View view) {
         Intent intent = new Intent(this, BarcodeActivity.class);
+        startActivity(intent);
+    }
+
+    public void searchProductFromBarcode(View view)
+    {
+        Intent intent = new Intent(this, BarcodeToProductActivity.class);
+        EditText editText = (EditText) findViewById(R.id.mainName);                         //Bootcamp versiom
+        String barcode = editText.getText().toString();
+        intent.putExtra(BARCODE_READER, barcode);
         startActivity(intent);
     }
 }

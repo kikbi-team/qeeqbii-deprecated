@@ -40,7 +40,9 @@ public class DisplayMessageActivity extends AppCompatActivity {
         TextView reportedMessage = (TextView) findViewById(R.id.greetingMessage);
         reportedMessage.setTextSize(20);
         reportedMessage.setTextColor(Color.rgb(0,0,0));
-        new OpenFoodQueryActivity()
+        String[] barcode = new String[1];
+        barcode[0] = "7610848337010";
+        new OpenFoodQuery()
         {
             @Override public void onPostExecute(String result)
             {
@@ -49,7 +51,7 @@ public class DisplayMessageActivity extends AppCompatActivity {
                 txt.setText(response.GetProductName("fr") + "\n\nIngredients: " + response.GetProductIngredients("fr") +
                         "\n\nNutrients: (per 100g)\n " + response.GetProductNutrients("fr"));
             }
-        }.execute("");
+        }.execute(barcode);
         //reportedMessage.setText(getString(R.string.hello) + message + getString(R.string.exclamation)); //BootCamp version
         //reportedMessage.setText(message); // qeeqbi version
     }
