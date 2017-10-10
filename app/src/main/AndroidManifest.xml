@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="ch.epfl.sweng.bootcamp">
-
     <uses-permission android:name="android.permission.INTERNET" />
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -41,6 +39,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
         </activity>
-        <activity android:name=".BarcodeActivity" />
+        <activity android:name=".BarcodeActivity"></activity>
+        <activity android:name=".BarcodeToProductActivity"></activity>
     </application>
 </manifest>
