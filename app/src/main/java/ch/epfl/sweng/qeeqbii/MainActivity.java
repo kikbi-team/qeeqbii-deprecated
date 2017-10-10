@@ -58,11 +58,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @SuppressWarnings("UnusedParameters")
-    public void sendMessage(View view) //Called when the user taps the Go button
+    public void sendMessage(View view)
     {
-        // Do something in response to button
         Intent intent = new Intent(this, DisplayMessageActivity.class);
-        //EditText myText = (EditText) findViewById(R.id.mainName); -> Usefull if we want to time in some text.
 
         String message = "";
         message += " id\tAgent\t\tGroup\n";
@@ -74,17 +72,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         intent.putExtra(getString(R.string.hello), message);
-
-        /*adds the EditText's value to the intent.
-        An Intent can carry data types as key-value pairs called extras.
-        Your key is a public constant EXTRA_MESSAGE because the next activity uses the key to
-        retrieve the text value. It's a good practice to define keys for intent extras using your
-        app's package name as a prefix. This ensures the keys are unique, in case your app interacts
-        with other apps. */
-
         startActivity(intent);
-        /*starts an instance of the DisplayMessageActivity specified by the Intent.
-        Now you need to create that class.*/
     }
 
     public void readBarcode(View view) {
