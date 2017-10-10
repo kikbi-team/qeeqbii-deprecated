@@ -26,7 +26,7 @@
             </TextView>
 
             <TextView
-                android:id="@+id/greetingMessage"
+                android:id="@+id/cancerDataBaseMessage"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:textAppearance="?android:attr/textAppearanceSmall"
