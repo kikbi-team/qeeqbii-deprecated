@@ -31,7 +31,7 @@
 
         <activity android:name="ch.epfl.sweng.qeeqbii.MainActivity" />
         <activity
-            android:name="ch.epfl.sweng.qeeqbii.DisplayMessageActivity"
+            android:name="ch.epfl.sweng.qeeqbii.CancerDataShowActivity"
             android:parentActivityName="ch.epfl.sweng.qeeqbii.MainActivity">
 
             <!-- The meta-data tag is required if you support API level 15 and lower -->

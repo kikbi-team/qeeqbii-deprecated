@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 
-public class DisplayMessageActivity extends AppCompatActivity {
+public class CancerDataShowActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState)

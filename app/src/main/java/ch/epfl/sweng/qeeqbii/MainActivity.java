@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
     @SuppressWarnings("UnusedParameters")
     public void sendMessage(View view)
     {
-        Intent intent = new Intent(this, DisplayMessageActivity.class);
+        Intent intent = new Intent(this, CancerDataShowActivity.class);
 
         String message = "";
         message += " id\tAgent\t\tGroup\n";
