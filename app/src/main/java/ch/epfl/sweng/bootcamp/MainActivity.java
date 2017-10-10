@@ -64,12 +64,14 @@ public class MainActivity extends AppCompatActivity {
         // Do something in response to button
         Intent intent = new Intent(this, DisplayMessageActivity.class);
         EditText myText = (EditText) findViewById(R.id.mainName);
+
         String message = "";
+        message += " id\tAgent\t\tGroup\n";
 
         for (int i = 0; i < importedData.size(); i = i + 1) {
             message += " " + Integer.toString(i);
-            message += " " + importedData.get(i).getmAgent();
-            message += " " + importedData.get(i).getmGroup() + "\n";
+            message += "\t" + importedData.get(i).getmAgent();
+            message += "\t\t\t" + importedData.get(i).getmGroup() + "\n";
         }
 
         intent.putExtra(getString(R.string.hello), message);
