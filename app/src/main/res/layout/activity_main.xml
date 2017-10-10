@@ -33,6 +33,7 @@
         app:layout_constraintHorizontal_bias="0.235"
         app:layout_constraintRight_toLeftOf="@+id/mainGoButton" />
 
+
     <TextView
         android:id="@+id/welcomeText"
         android:layout_width="216dp"

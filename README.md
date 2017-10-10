@@ -1,4 +1,7 @@
 # Qeeqbii
+
+[![Build Status](https://jenkins.epfl.ch/sweng/buildStatus/icon?job=team-qeeq)](https://jenkins.epfl.ch/sweng/job/team-qeeq/)
+
 #### Not confident about the food you buy ? Qeeqbii is THE solution:
 
 **ALERT:** Are you a little GMO on worldwide’s unregulated food market?

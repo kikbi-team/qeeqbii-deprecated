@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageView;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -14,10 +15,12 @@ import java.io.InputStreamReader;
 import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Handler;
+import java.util.logging.LogRecord;
+
+import static ch.epfl.sweng.bootcamp.R.layout.activity_main;
 
 public class MainActivity extends AppCompatActivity {
-
-    public static final String EXTRA_MESSAGE = "ch.epfl.sweng.qeeqbii.mainNameExtracted";
     public static final String BARCODE_READER = "ch.epfl.sweng.qeeqbii.mainBarcode";
 
     private List<CancerData> importedData = new ArrayList< >();
@@ -30,20 +33,18 @@ public class MainActivity extends AppCompatActivity {
         try {
             // Step over the headers
             reader.readLine();
-
             while ((line = reader.readLine()) != null) {
                 //split by ','
                 String[] tokens = line.split(",");
 
                 //read the data
                 CancerData sample = new CancerData();
-                sample.setmAgent(tokens[0]); //Here we can add the fact that the dataBase might have leaks
-                sample.setmGroup(tokens[1]);
+                sample.setmAgent(tokens[1]); //Here we can add the fact that the dataBase might have leaks
+                sample.setmGroup(tokens[2]);
                 //Note if we want to import an int or a double we have to write:
                 //sample.setmGroup(Double.parseDouble(tokens[x]));
                 //sample.setmGroup(Integer.parseInt(tokens[x]));
                 importedData.add(sample); //adds the sample to the table with all the data
-
                 Log.d("MainActivity","Just created: " + sample); //d stands for debugg
             }
         } catch (IOException error) {
@@ -55,19 +56,9 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(activity_main);
         readCSVFile ();
-
     }
-
-    /** Called when the user taps the Send button
-    public void sendMessage(View view) {
-        Intent intent = new Intent(this, DisplayMessageActivity.class);
-        EditText editText = (EditText) findViewById(R.id.mainName);                         //Bootcamp versiom
-        String message = editText.getText().toString();
-        intent.putExtra(EXTRA_MESSAGE, message);
-        startActivity(intent);
-    }*/
 
     @SuppressWarnings("UnusedParameters")
     public void sendMessage(View view) //Called when the user taps the Go button
