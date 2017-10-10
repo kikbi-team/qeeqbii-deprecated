@@ -19,7 +19,6 @@ public class OpenFoodQuery extends AsyncTask<String, Void, String> {
     @Override
     public String doInBackground(String params[])
     {
-
         try {
             URL url = new URL("https://www.openfood.ch/api/v3/products?excludes=name_translations&barcodes=" + params[0]);
             HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();

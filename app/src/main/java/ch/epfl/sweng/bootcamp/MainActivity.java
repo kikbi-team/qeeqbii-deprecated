@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
     {
         // Do something in response to button
         Intent intent = new Intent(this, DisplayMessageActivity.class);
-        EditText myText = (EditText) findViewById(R.id.mainName);
+        //EditText myText = (EditText) findViewById(R.id.mainName); -> Usefull if we want to time in some text.
 
         String message = "";
         message += " id\tAgent\t\tGroup\n";
@@ -101,6 +101,12 @@ public class MainActivity extends AppCompatActivity {
         EditText editText = (EditText) findViewById(R.id.mainName);                         //Bootcamp versiom
         String barcode = editText.getText().toString();
         intent.putExtra(BARCODE_READER, barcode);
+        startActivity(intent);
+    }
+
+    public void showGraphs(View view)
+    {
+        Intent intent = new Intent(this, Graphs.class);
         startActivity(intent);
     }
 }

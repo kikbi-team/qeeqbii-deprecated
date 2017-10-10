@@ -5,7 +5,9 @@
     <string name="hello_world">Hello World ! </string>
     <string name="hello">"Hello "</string>
     <string name="exclamation">!</string>
-    <string name="barcode_button">Barcode reader</string>
+    <string name="barcode_button">Barcode Reader</string>
+    <string name="cancer_data">Cancer Data Base</string>
+
 
     <!-- Google Sign In -->
     <string name="AppName">Firebase Authentication</string>
