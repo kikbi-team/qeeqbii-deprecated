@@ -1,12 +1,10 @@
-package ch.epfl.sweng.bootcamp;
+package ch.epfl.sweng.qeeqbii;
 
-import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
+import android.graphics.Color;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
-import android.view.View;
-import android.widget.EditText;
-import android.widget.ImageView;
+import android.widget.TextView;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -15,12 +13,9 @@ import java.io.InputStreamReader;
 import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.logging.Handler;
-import java.util.logging.LogRecord;
 
-import static ch.epfl.sweng.bootcamp.R.layout.activity_main;
+public class CancerDataShowActivity extends AppCompatActivity {
 
-public class MainActivity extends AppCompatActivity {
     private List<CancerData> importedData = new ArrayList< >();
 
     private void readCSVFile() {
@@ -52,21 +47,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(activity_main);
-        readCSVFile ();
-    }
-
-    @SuppressWarnings("UnusedParameters")
-    public void sendMessage(View view) //Called when the user taps the Go button
+    protected void onCreate(Bundle savedInstanceState)
     {
-        // Do something in response to button
-        Intent intent = new Intent(this, DisplayMessageActivity.class);
-        EditText myText = (EditText) findViewById(R.id.mainName);
-
-        String message = "";
-        message += " id\tAgent\t\tGroup\n";
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_display_message);
+        readCSVFile();
+        String message = " id\tAgent\t\tGroup\n";
 
         for (int i = 0; i < importedData.size(); i = i + 1) {
             message += " " + Integer.toString(i);
@@ -74,22 +60,10 @@ public class MainActivity extends AppCompatActivity {
             message += "\t\t\t" + importedData.get(i).getmGroup() + "\n";
         }
 
-        intent.putExtra(getString(R.string.hello), message);
-
-        /*adds the EditText's value to the intent.
-        An Intent can carry data types as key-value pairs called extras.
-        Your key is a public constant EXTRA_MESSAGE because the next activity uses the key to
-        retrieve the text value. It's a good practice to define keys for intent extras using your
-        app's package name as a prefix. This ensures the keys are unique, in case your app interacts
-        with other apps. */
-
-        startActivity(intent);
-        /*starts an instance of the DisplayMessageActivity specified by the Intent.
-        Now you need to create that class.*/
-    }
-
-    public void readBarcode(View view) {
-        Intent intent = new Intent(this, BarcodeActivity.class);
-        startActivity(intent);
+        // Capture the layout's; TextView and set the string as its text
+        TextView reportedMessage = (TextView) findViewById(R.id.cancerDataBaseMessage);
+        reportedMessage.setTextSize(12);
+        reportedMessage.setTextColor(Color.rgb(200,0,0));
+        reportedMessage.setText(message);
     }
 }

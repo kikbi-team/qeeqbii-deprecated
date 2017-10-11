@@ -10,7 +10,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:962204149834:android:7e30437d1ce326cd",
         "android_client_info": {
-          "package_name": "ch.epfl.sweng.bootcamp"
+          "package_name": "ch.epfl.sweng.qeeqbii"
         }
       },
       "oauth_client": [
@@ -18,7 +18,7 @@
           "client_id": "962204149834-heth55ug4l3rfj35j6vceipugpqbm2u2.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "ch.epfl.sweng.bootcamp",
+            "package_name": "ch.epfl.sweng.qeeqbii",
             "certificate_hash": "17ace38f8f1de35f4e66321e3ea9eff5dbb0fa9c"
           }
         },
