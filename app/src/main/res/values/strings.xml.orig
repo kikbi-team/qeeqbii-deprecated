@@ -2,11 +2,17 @@
     <string name="app_name">Qeeqbi</string>
     <string name="welcome_text">With Qeeqbii you will eat healthy again in no time!</string>
     <string name="barcode_button">Barcode Reader</string>
+<<<<<<< HEAD
     <string name="cancer_data">Cancer DataBase</string>
+||||||| merged common ancestors
+    <string name="cancer_data">Cancer Data Base</string>
+=======
+    <string name="cancer_data">Cancer Data Base</string>
     <string name="fat_graph">Fats</string>
     <string name="glucide_graph">Carbohyrates</string>
     <string name="calories_graph">Calories</string>
     <string name="salt_graph">Salts</string>
+>>>>>>> origin/master
 
 
     <!-- Google Sign In -->
