@@ -4,6 +4,7 @@ import android.os.AsyncTask;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.URL;
@@ -19,14 +20,14 @@ public class OpenFoodQuery extends AsyncTask<String, Void, String> {
     @Override
     public String doInBackground(String params[])
     {
-
-        try {
+        try
+        {
             URL url = new URL("https://www.openfood.ch/api/v3/products?excludes=name_translations&barcodes=" + params[0]);
             HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
             urlConnection.setRequestMethod("GET");
-            urlConnection.setRequestProperty("Content-Type","application/vnd.api+json");
-            urlConnection.setRequestProperty("Accept","application/json");
-            urlConnection.setRequestProperty("Authorization","Token token=\"da68d406381c30aae6796d39d474265a\"");
+            urlConnection.setRequestProperty("Content-Type", "application/vnd.api+json");
+            urlConnection.setRequestProperty("Accept", "application/json");
+            urlConnection.setRequestProperty("Authorization", "Token token=\"da68d406381c30aae6796d39d474265a\"");
             InputStream in = urlConnection.getInputStream();
 
             InputStreamReader isw = new InputStreamReader(in);
@@ -41,8 +42,10 @@ public class OpenFoodQuery extends AsyncTask<String, Void, String> {
             urlConnection.disconnect();
 
             return str;
-        } catch(Exception e) {
-            return e.toString();
+        }
+        catch(Exception e)
+        {
+            return e.getMessage();
         }
     }
 }
