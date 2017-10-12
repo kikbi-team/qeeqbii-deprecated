@@ -10,12 +10,56 @@
       "client_info": {
         "mobilesdk_app_id": "1:962204149834:android:7e30437d1ce326cd",
         "android_client_info": {
-          "package_name": "ch.epfl.sweng.qeeqbii"
+          "package_name": "ch.epfl.sweng.bootcamp"
         }
       },
       "oauth_client": [
         {
           "client_id": "962204149834-heth55ug4l3rfj35j6vceipugpqbm2u2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "ch.epfl.sweng.bootcamp",
+            "certificate_hash": "17ace38f8f1de35f4e66321e3ea9eff5dbb0fa9c"
+          }
+        },
+        {
+          "client_id": "962204149834-0ids9jfnl5b7m18ps4oo1dctni2eloqm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCb3ODQtrXzsjFSp2jQfmU5EeMwojMhDn0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "962204149834-0ids9jfnl5b7m18ps4oo1dctni2eloqm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:962204149834:android:ce61f0923604108e",
+        "android_client_info": {
+          "package_name": "ch.epfl.sweng.qeeqbii"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "962204149834-v2jh13n7qc4q60qvqfuok1mv5of8h0da.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "ch.epfl.sweng.qeeqbii",
