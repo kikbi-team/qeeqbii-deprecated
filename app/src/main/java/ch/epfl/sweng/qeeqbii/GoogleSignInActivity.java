@@ -9,6 +9,8 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -27,6 +29,8 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 /**
  * Demonstrate Firebase Authentication using a Google ID Token.
@@ -45,6 +49,11 @@ public class GoogleSignInActivity extends BaseActivity implements
     private GoogleApiClient mGoogleApiClient;
     private TextView mStatusTextView;
     private TextView mDetailTextView;
+
+
+    private DatabaseReference databaseReference;
+    private EditText editTextFirstName,editTextLastName,editTextAllergie,editTextGout;
+    private Button buttonSave;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -76,8 +85,41 @@ public class GoogleSignInActivity extends BaseActivity implements
         // [START initialize_auth]
         mAuth = FirebaseAuth.getInstance();
         // [END initialize_auth]
+
+        databaseReference= FirebaseDatabase.getInstance().getReference();
+        editTextAllergie = (EditText) findViewById(R.id.editTextAllergie);
+        editTextFirstName = (EditText) findViewById(R.id.editTextFirstName);
+        editTextLastName = (EditText) findViewById(R.id.editTextLastName);
+        editTextGout = (EditText) findViewById(R.id.editTextGout);
+        buttonSave = (Button) findViewById(R.id.buttonSave);
+        buttonSave.setOnClickListener(this);
     }
 
+    private void saveUserInformation () {
+
+        String firstname= editTextFirstName.getText().toString().trim();
+        String lastname= editTextLastName.getText().toString().trim();
+        String allergie= editTextAllergie.getText().toString().trim();
+        String gout= editTextGout.getText().toString().trim();
+
+        UserInformation userInformation = new UserInformation(firstname,lastname,allergie,gout);
+
+        FirebaseUser user= mAuth.getCurrentUser();
+
+        databaseReference.child(user.getUid()).setValue(userInformation);
+
+        Toast.makeText(this, "Information Saved...", Toast.LENGTH_LONG).show();
+
+        final Button button = (Button) findViewById(R.id.buttonSave);
+        button.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(GoogleSignInActivity.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
+    }
     // [START on_start_check_user]
     @Override
     public void onStart() {
@@ -212,6 +254,9 @@ public class GoogleSignInActivity extends BaseActivity implements
             signOut();
         } else if (i == R.id.disconnect_button) {
             revokeAccess();
+        }
+        if (v == buttonSave) {
+            saveUserInformation();
         }
     }
 }

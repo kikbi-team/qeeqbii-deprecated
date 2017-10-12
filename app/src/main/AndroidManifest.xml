@@ -11,6 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
+
         <activity android:name="ch.epfl.sweng.qeeqbii.HomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,7 +21,6 @@
             </intent-filter>
         </activity>
 
-        <!--
       <activity android:name=".GoogleSignInActivity">
            <intent-filter>
            <action android:name="android.intent.action.MAIN" />
@@ -27,7 +28,7 @@
            <category android:name="android.intent.category.LAUNCHER" />
        </intent-filter>
        </activity>
-        -->
+
 
         <activity android:name="ch.epfl.sweng.qeeqbii.MainActivity" />
         <activity
