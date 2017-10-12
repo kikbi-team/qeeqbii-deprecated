@@ -16,10 +16,10 @@ import java.util.List;
 
 public class CancerDataShowActivity extends AppCompatActivity {
 
-    private List<CancerData> importedData = new ArrayList< >();
+    private List<CancerData> importedData = new ArrayList<>();
 
-    private void readCSVFile() {
-        InputStream inStream = getResources().openRawResource(R.raw.original_classification_iarc_english);
+    public void readCSVFile(int fileName) {
+        InputStream inStream = getResources().openRawResource(fileName); //R.raw.original_classification_iarc_english);
         BufferedReader reader = new BufferedReader(new InputStreamReader(inStream, Charset.forName("UTF-8")));
 
         String line = null;
@@ -46,12 +46,31 @@ public class CancerDataShowActivity extends AppCompatActivity {
         }
     }
 
+    public List<CancerData> getImportedData() {
+        return importedData;
+    }
+
+    public List<String> getImportedDataString() {
+        List<String> stringImportedData = new ArrayList<>();
+        for (int i = 0; i < importedData.size(); i++) {
+            stringImportedData.add(importedData.get(i).getmAgent());
+            stringImportedData.add(importedData.get(i).getmGroup());
+        }
+        return stringImportedData;
+    }
+
+
+    public void setImportedData(List<CancerData> importedData) {
+        this.importedData = importedData;
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_display_message);
-        readCSVFile();
+        int fileName = R.raw.original_classification_iarc_english;
+        readCSVFile(fileName);
         String message = " id\tAgent\t\tGroup\n";
 
         for (int i = 0; i < importedData.size(); i = i + 1) {
