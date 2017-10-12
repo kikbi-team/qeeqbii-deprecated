@@ -1,24 +1,14 @@
-# Qeeqbii
+Qeeqbii v2.0
 
-[![Build Status](https://jenkins.epfl.ch/sweng/buildStatus/icon?job=team-qeeq)](https://jenkins.epfl.ch/sweng/job/team-qeeq/)
+Project description
 
-#### Not confident about the food you buy ? Qeeqbii is THE solution:
+Think about all of the food you have eaten during the last year. Do you know for a fact if it was healthy or good for you? We believe that you could do much better, and we have a solution!
 
-**ALERT:** Are you a little GMO on worldwide’s unregulated food market?
+Regain control on what you eat, and become healthy again! With Qeeqbii, eating healthy is not a concern anymore. The app will warn you if you’re getting a risk eating the food that you are daily buying and alerting you when the contents of your fridge do not constitute a healthy diet. Everybody’s different, and Qeeqbii knows it: the app will give specific advices, based on all the aspects of your profile. Eat healthy again, and you’ll gain the energy to get over every challenge life puts on your path.
 
-Then this application might threaten you!
+The app will instantly display the amount of important constituents the products you have bought contain. For example, after you scan a can of coke, an yoghurt and a pack of spaghetti, you will now know if your shopping list meets the daily requirements on proteins, salt, sugar, fat and energy.
 
+Moreover, the app will alert you if your ration is not balanced. For example, if you eat frozen pizza often, you might lack certain elements which are contained in fruits. The app will display a message and suggest you to buy some. It will advise you to eat in a healthy way without you ever thinking about it.
 
-Regain control on what you eat, and become healthy again, as was your grandfather at the time he could eat his own farm products!
+Finally, the app tracks every product in the fridge you have. Each time you go to a supermarket and have a list of products to buy, you will be able to compare it to what you have in the fridge so you wouldn’t forget to buy that pasta you finished the day before! Moreover, you will be able to automatically check the item on your shopping list the moment you scan the barcode.
 
-With Qeeqbii, cancer is not a problem anymore. The app will warn you if you’re getting a risk eating the food that you are daily buying. Everybody’s different, and Qeeqbii knows it: the app will give specific advices, based on all the aspects of your profile. Eat healthy again, and you’ll gain the energy to get over every challenge life puts on your path.
-
-
-Project description: reading products barcodes to identify them and obtain its ingredients thanks to the open source OpenFood database (https://www.openfood.ch/). Identifying harmful products by comparing the ingredients with the list of cancerigen products published by the World Health Organization. Thanks to the OpenFood database, we will enable our users to identify products by scanning the barcode with their smartphone. The application makes the link between the barcode and the registered product in the database. The ingredients that compose the product will be listed on the screen with some useful health information about the harmfulness of the ingredients that the application was able to fetch from the WTO database.
-
-
-Potential extensions: In a second time the App could be extended with some plugins such as
-
-1. An allergy alert warning the user if a product contains ingredients that it is allergic to. This could be carried out thanks to the creation of a personal account that the user can use to specify the ingredients it is allergic to.
-
-2. Proposing an alternative to the food that has been scanned. The alternative can be based on different criterions defined by the user. This criterias could be the price, the nutrients, the environmental impact, the production location, fairtrade, ...

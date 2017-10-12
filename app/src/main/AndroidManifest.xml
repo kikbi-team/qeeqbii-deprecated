@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="ch.epfl.sweng.bootcamp">
+    package="ch.epfl.sweng.qeeqbii">
+
     <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,7 +12,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name=".HomeActivity">
+
+        <activity android:name="ch.epfl.sweng.qeeqbii.HomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -18,28 +21,29 @@
             </intent-filter>
         </activity>
 
-        <!--
       <activity android:name=".GoogleSignInActivity">
            <intent-filter>
            <action android:name="android.intent.action.MAIN" />
 
            <category android:name="android.intent.category.LAUNCHER" />
        </intent-filter>
-       </activity> -->
-
-       <activity android:name=".MainActivity">
        </activity>
 
-       <activity
-           android:name=".DisplayMessageActivity"
-           android:parentActivityName=".MainActivity">
 
-           <!-- The meta-data tag is required if you support API level 15 and lower -->
+        <activity android:name="ch.epfl.sweng.qeeqbii.MainActivity" />
+        <activity
+            android:name="ch.epfl.sweng.qeeqbii.CancerDataShowActivity"
+            android:parentActivityName="ch.epfl.sweng.qeeqbii.MainActivity">
+
+            <!-- The meta-data tag is required if you support API level 15 and lower -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity" />
+                android:value="ch.epfl.sweng.qeeqbii.MainActivity" />
         </activity>
-        <activity android:name=".BarcodeActivity"></activity>
-        <activity android:name=".BarcodeToProductActivity"></activity>
+        <activity android:name="ch.epfl.sweng.qeeqbii.BarcodeActivity" />
+        <activity android:name="ch.epfl.sweng.qeeqbii.BarcodeToProductActivity" />
+        <activity android:name=".graphs" />
+        <activity android:name="ch.epfl.sweng.qeeqbii.Graphs"></activity>
     </application>
+
 </manifest>
