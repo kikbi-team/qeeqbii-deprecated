@@ -15,23 +15,35 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CancerDataShowActivity extends AppCompatActivity {
-
+    //CONSTRUCTOR
+    public CancerDataShowActivity() {
+        mIsTest = false;
+    }
     private List<CancerData> importedData = new ArrayList<>();
+    private boolean mIsTest;
 
-    public void readCSVFile(int fileName) {
-        InputStream inStream = getResources().openRawResource(fileName); //R.raw.original_classification_iarc_english);
+    //METHODS
+    public void readCSVFile() {
+        importedData.clear(); //adds the sample to the table with all the data
+        InputStream inStream;
+        if (mIsTest) {
+             inStream = getResources().openRawResource(R.raw.test_text);
+        }
+        else {
+             inStream = getResources().openRawResource(R.raw.original_classification_iarc_english);
+        }
+
         BufferedReader reader = new BufferedReader(new InputStreamReader(inStream, Charset.forName("UTF-8")));
-
         String line = null;
+
         try {
-            // Step over the headers
-            reader.readLine();
+            reader.readLine(); // Step over the headers
             while ((line = reader.readLine()) != null) {
                 //split by ','
                 String[] tokens = line.split(",");
-
                 //read the data
                 CancerData sample = new CancerData();
+                sample.setmLabel(Integer.parseInt(tokens[0]));
                 sample.setmAgent(tokens[1]); //Here we can add the fact that the dataBase might have leaks
                 sample.setmGroup(tokens[2]);
                 //Note if we want to import an int or a double we have to write:
@@ -59,7 +71,8 @@ public class CancerDataShowActivity extends AppCompatActivity {
         return stringImportedData;
     }
 
-
+    public boolean ismIsTest() {return mIsTest;}
+    public void setmIsTest(boolean mIsTest) {this.mIsTest = mIsTest;}
     public void setImportedData(List<CancerData> importedData) {
         this.importedData = importedData;
     }
@@ -69,8 +82,7 @@ public class CancerDataShowActivity extends AppCompatActivity {
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_display_message);
-        int fileName = R.raw.original_classification_iarc_english;
-        readCSVFile(fileName);
+        readCSVFile();
         String message = " id\tAgent\t\tGroup\n";
 
         for (int i = 0; i < importedData.size(); i = i + 1) {

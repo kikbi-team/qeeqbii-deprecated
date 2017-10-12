@@ -1,28 +1,51 @@
 package ch.epfl.sweng.qeeqbii;
 
-import org.junit.Test;
+import android.support.test.InstrumentationRegistry;
+import android.support.test.runner.AndroidJUnit4;
+import android.test.ActivityInstrumentationTestCase2;
 
-import java.util.ArrayList;
+import org.junit.Before;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+
 import java.util.Arrays;
 import java.util.List;
 
-import static junit.framework.Assert.assertEquals;
+@RunWith(AndroidJUnit4.class)
 
-public class AReadCSVClassShould {
+/* It is important to note here that we tested the behaviour of an activity. This is not an easy
+ * since an activity is "refreshed" constantly by the handler loop of the application. It was neces-
+ * sary to implement the android.os folder that contains code that is making sur that once the
+ * background talks (here uploading a .csv file, has been done and is now available for testing.
+ * Then we had to extend the class with ActivityInstrumentationTestCase2<CancerDataShowActivity>,
+ * create an instance of the class that we want to test (CancerDataShowActivity) and to call its
+ * contructor in the constructure of this class. Furthermore, the setUp method is also necessery
+ * for this tsting manner. It is important to understand that this is now a basic JUnit test
+ * trsting a class that run in backgroud but a class that is making the link between back end and
+ * front end.
+ */
 
-    private CancerDataShowActivity cancerData = new CancerDataShowActivity(); //Causes the problem
+public class AReadCSVClassShould extends ActivityInstrumentationTestCase2<CancerDataShowActivity>
+{
+    private CancerDataShowActivity cancerData;
 
-    private List<String> importedData = new ArrayList<>();
+    public AReadCSVClassShould() {
+        super(CancerDataShowActivity.class);
+    }
+
+    @Before
+    public void setUp() throws Exception {
+        super.setUp();
+        injectInstrumentation(InstrumentationRegistry.getInstrumentation());
+        cancerData = getActivity();
+    }
 
     @Test
-    public void readInAFile() {
-        //int testFileName = R.raw.test_text;
-        int fileName = R.raw.test_text;
-        List<String> expected = Arrays.asList("aAgent","Group", "0","Formaldehyde");
-        cancerData.readCSVFile(fileName);
+    public void TestReadInAFile() {
+        List<String> expected = Arrays.asList("Formaldehyde","1","Phenobarbital", "2B", "Mitomycin C","2B");
+        cancerData.setmIsTest(true);
+        cancerData.readCSVFile();
         List<String> data = cancerData.getImportedDataString();
-        //InputStream inputstream = new FileInputStream("res/raw/test_text.csv");
-        //List<String> data = Arrays.asList("aAgent","Group", "0","Formaldehyde";
         assertEquals(expected, data);
     }
 }

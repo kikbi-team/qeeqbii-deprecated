@@ -42,7 +42,6 @@
         </activity>
         <activity android:name="ch.epfl.sweng.qeeqbii.BarcodeActivity" />
         <activity android:name="ch.epfl.sweng.qeeqbii.BarcodeToProductActivity" />
-        <activity android:name=".graphs" />
         <activity android:name="ch.epfl.sweng.qeeqbii.Graphs"></activity>
     </application>
 
