@@ -1,10 +1,11 @@
 package ch.epfl.sweng.qeeqbii;
 
 /**
- * Created by davidcleres on 03.10.17.
+ * Created by adrien on 12/10/17.
  */
 
-public class CancerData {
+public class CancerSubstance {
+    // Attributes
     private String mAgent;
     private String mGroup;
     private int mLabel;
@@ -14,19 +15,13 @@ public class CancerData {
     public String getmGroup() {
         return mGroup;
     }
-    public void setmGroup(String mGroup) {
-        this.mGroup = mGroup;
-    }
+    public void setmGroup(String mGroup) { this.mGroup = mGroup;}
     public String getmAgent() {
         return mAgent;
     }
-    public void setmAgent(String mAgent) {
-        this.mAgent = mAgent;
-    }
-
-    @Override
+    public void setmAgent(String mAgent) { this.mAgent = mAgent;}
     public String toString() {
-        return "CancerData{" +
+        return "Substance{" +
                 "mAgent='" + mAgent + '\'' +
                 ", mGroup='" + mGroup + '\'' +
                 '}';
