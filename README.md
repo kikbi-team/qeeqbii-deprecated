@@ -1,6 +1,6 @@
-# Qeeqbii
+Qeeqbii v2.0
 
-[![Build Status](https://jenkins.epfl.ch/sweng/buildStatus/icon?job=team-qeeq)](https://jenkins.epfl.ch/sweng/job/team-qeeq/)
+Project description
 
 Think about all of the food you have eaten during the last year. Do you know for a fact if it was healthy or good for you? We believe that you could do much better, and we have a solution!
 
@@ -11,3 +11,4 @@ The app will instantly display the amount of important constituents the products
 Moreover, the app will alert you if your ration is not balanced. For example, if you eat frozen pizza often, you might lack certain elements which are contained in fruits. The app will display a message and suggest you to buy some. It will advise you to eat in a healthy way without you ever thinking about it.
 
 Finally, the app tracks every product in the fridge you have. Each time you go to a supermarket and have a list of products to buy, you will be able to compare it to what you have in the fridge so you wouldn’t forget to buy that pasta you finished the day before! Moreover, you will be able to automatically check the item on your shopping list the moment you scan the barcode.
+

@@ -208,7 +208,6 @@
 206,Furfural,3
 207,Cumene,2B
 208,a-Methylstyrene,2B
-209,alpha-Chlorinated toluenes (benzal chloride. benzotrichloride. benzyl chloride) and benzoyl chloride (combined exposures),2A
 210,Nitrobenzene,2B
 211,Nitrotoluenes,3
 212,5-Nitro-<i>ortho</i>-toluidine,3
@@ -413,7 +412,6 @@
 411,Dibenzo-<i>para</i>-dioxin,3
 412,Benzofuran,2B
 413,Methyl parathion,3
-414,Methoxsalen (8-methoxypsoralen) plus ultraviolet A radiation,1
 415,Treosulfan,1
 416,Hydrazine,2A
 417,Chloral hydrate,2A
@@ -456,7 +454,6 @@
 454,Kaempferol,3
 455,CI Acid Orange 20,3
 456,Orange I (see CI Acid Orange 20),unknown
-457,Angelicin plus ultraviolet A radiation,3
 458,Merphalan,2B
 459,<i>N</i>-[4-(5-Nitro-2-furyl)-2-thiazolyl]acetamide,2B
 460,Chrysoidine,3
@@ -607,7 +604,6 @@
 605,5-(Morpholinomethyl)-3-[(5-nitrofurfurylidene)­amino]-2-oxazolidinone,2B
 606,Brilliant Blue FCF. disodium salt,3
 607,4.5'.8-Trimethylpsoralen,3
-608,4.5'-Dimethylangelicin plus ultraviolet A radiation,3
 609,Crotonaldehyde,3
 610,Dacarbazine,2B
 611,Ponceau SX,3
@@ -634,9 +630,7 @@
 632,Jacobine,3
 633,5.6-Cyclopenteno-1.2-benzanthracene,3
 634,Methylene blue,3
-635,Lead,2B
 636,Mercury and inorganic mercury compounds,3
-637,Nickel. metallic and alloys,2B
 638,Plutonium,1
 639,Thorium-232 and its decay products,1
 640,Arsenic and inorganic arsenic compounds,1
@@ -663,12 +657,8 @@
 661,Terpene polychlorinates (Strobane®),3
 662,Creosotes,2A
 663,Crude oil,3
-664,Coal tars (see Coal-tar distillation),unknown
-665,Coal-tar distillation,1
 666,Acriflavinium chloride,3
 667,Saccharated iron oxide,3
-668,Bitumens. extracts of steam-refined and air-refined; steam-refined. cracking-residue and air-refined bitumens (see Bitumens. occupational exposures),unknown
-669,Bitumens. occupational exposure to straight-run bitumens and their emissions during road paving,2B
 670,Carrageenan. native,3
 671,Kava extract,2B
 672,Polytetrafluoroethylene,3
@@ -691,11 +681,9 @@
 689,Polymethyl methacrylate,3
 690,Polymethylene polyphenyl isocyanate,3
 691,Cobalt sulfate and other soluble cobalt(II) salts,2B
-692,Iodine-131 (see Radioiodines),unknown
 693,Radon-222 and its decay products,1
 694,Sterigmatocystin,2B
 695,Parasorbic acid,3
-696,Strontium-90 (see Fission products),unknown
 697,Copper 8-hydroxyquinoline,3
 698,Tamoxifen,1
 699,<i>N</i>-Nitrosomethylethylamine,2B
@@ -757,7 +745,6 @@
 755,3.9-Dinitrofluoranthene,2B
 756,Symphytine,3
 757,Oestradiol mustard,3
-758,4.4'-Dimethylangelicin plus ultraviolet A radiation,3
 759,Adriamycin,2A
 760,Riddelliine,2B
 761,Hycanthone mesylate,3
@@ -820,9 +807,7 @@
 818,Trp-P-2 (3-Amino-1-methyl-5<i>H</i>-pyrido[4.3-<i>b</i>]indole),2B
 819,6-Nitrobenzo[<i>a</i>]pyrene,3
 820,Arsenobetaine and other organic arsenic compounds that are not metabolized in humans,3
-821,Bitumens. occupational exposure to oxidized bitumens and their emissions during roofing,2A
 822,Mitoxantrone,2B
-823,Coal-tar pitch,1
 824,Erionite,1
 825,Glu-P-2 (2-Aminodipyrido[1.2-<i>a</i>:3'.2'-<i>d</i>]imidazole),2B
 826,Glu-P-1 (2-Amino-6-methyldipyrido[1.2-<i>a</i>:3'.2'-<i>d</i>]imidazole),2B
@@ -831,7 +816,6 @@
 829,Coconut oil diethanolamine condensate,2B
 830,Didanosine,3
 831,<i>N</i>'-Nitrosoanatabine (NAT),3
-832,5-Methylangelicin plus ultraviolet A radiation,3
 833,1.3-Dinitropyrene,2B
 834,IQ (2-Amino-3-methylimidazo[4.5-<i>f</i>]quinoline),2A
 835,MeIQ (2-Amino-3.4-dimethylimidazo[4.5-<i>f</i>]quinoline),2B
@@ -845,7 +829,6 @@
 843,Ptaquiloside,3
 844,Toremifene,3
 845,<i>Ginkgo biloba</i> extract,2B
-846,4.4'.6-Trimethylangelicin plus ultraviolet A radiation,3
 847,<i>N</i>-Methylolacrylamide,3
 848,Microcystin-LR,2B
 849,PhIP (2-Amino-1-methyl-6-phenylimidazo[4.5-<i>b</i>]pyridine),2B
@@ -870,195 +853,56 @@
 868,Acrylonitrile-butadiene-styrene copolymers,3
 869,Alcoholic beverages,1
 870,<i>Aloe vera</i>. whole leaf extract,2B
-871,Alpha particles (see Radionuclides),unknown
-872,Aluminium production,1
 873,Anaesthetics. volatile,3
 874,Androgenic (anabolic) steroids,2A
 875,Areca nut,1
-876,Art glass. glass containers and pressed ware (manufacture of),2A
-877,Auramine production,1
 878,Benzidine. dyes metabolized to,1
-879,Beta particles (see Radionuclides),unknown
-880,Betel quid with tobacco,1
-881,Betel quid without tobacco,1
-882,Biomass fuel (primarily wood). indoor emissions from household combustion of,2A
 883,Bisulfites,3
-884,Bitumens. occupational exposure to hard bitumens and their emissions during mastic asphalt work,2B
-885,BK polyomavirus (BKV),2B
-886,Boot and shoe manufacture and repair (see Leather dust. Benzene),unknown
 887,Bracken fern,2B
-888,Calcium carbide production,3
-889,Carbon electrode manufacture,2A
-890,Carpentry and joinery,2B
-891,Ceramic implants,3
-892,Chimney sweeping (see Soot),unknown
 893,Chlorinated drinking-water,3
 894,Chlorinated paraffins of average carbon chain length C12 and average degree of chlorination approximately 60%,2B
 895,Chlorophenols (see Polychlorophenols),unknown
 896,Chlorophenoxy herbicides,2B
-897,<i>Clonorchis sinensis</i> (infection with),1
-898,Coal dust,3
-899,Coal gasification,1
-900,Coal. indoor emissions from household combustion of,1
 901,Coffee (drinking),3
-902,Coke production,1
-903,Continuous glass filament (see Glass filament),unknown
-904,Dental materials,3
-905,Diesel engine exhaust (see Engine exhaust. diesel),unknown
-906,Diesel fuel. marine,2B
-907,Diesel fuels. distillate (light),3
-908,Dry cleaning (occupational exposures in),2B
 909,Dyes metabolized to benzidine (see Benzidine. dyes metabolized to),unknown
-910,Electric fields. extremely low-frequency,3
-911,Electric fields. static,3
-912,Engine exhaust. diesel,1
-913,Engine exhaust. gasoline,2B
-914,Epstein-Barr virus,1
-915,Estrogen therapy. postmenopausal,1
-916,Estrogen-progestogen menopausal therapy (combined),1
 917,Estrogen-progestogen oral contraceptives (combined),1
-918,Firefighter (occupational exposure as a),2B
-919,Fission products. including strontium-90,1
-920,Flat-glass and specialty glass (manufacture of),3
-921,Fluorescent lighting,3
 922,Fluoro-edenite fibrous amphibole,1
-923,Foreign  bodies (see Ceramic implants. Dental materials. Implanted foreign bodies. Metallic implants. Organic polymeric materials. Orthopaedic implants. Polymeric implants. Silicone breast implants),unknown
-924,Frying. emissions from high-temperature,2A
-925,Fuel oils. distillate (light),3
-926,Fuel oils. residual (heavy),2B
-927,Furniture and cabinet making (see Wood dust),unknown
 928,<i>Fusarium graminearum</i>. <i>F. culmorum</i>. and <i>F. crookwellense</i>. toxins derived from (zearalenone. deoxynivalenol. nivalenol. and fusarenone X),3
 929,<i>Fusarium sporotrichioides</i>. toxins derived from (T-2 toxin),3
-930,Gamma-Radiation (see X- and Gamma-Radiation),unknown
-931,Gasoline,2B
-932,Gasoline engine exhaust (see Engine exhaust. gasoline),unknown
-933,Glass filament. continuous,3
 934,Goldenseal root powder,2B
-935,Haematite mining (underground),1
-936,Hair colouring products (personal use of),3
-937,Hairdresser or barber (occupational exposure as a),2A
-938,<i>Helicobacter pylori</i> (infection with),1
-939,Hepatitis B virus (chronic infection with),1
-940,Hepatitis C virus (chronic infection with),1
-941,Hepatitis D virus,3
 942,Hexachlorocyclohexanes,2B
-943,High-temperature frying (see Frying),unknown
-944,Household combustion of biomass fuel (see Biomass fuel. indoor emissions from household combustion of),unknown
-945,Household combustion of coal (see Coal. indoor emissions from household combustion),unknown
-946,Human herpesvirus type 4 (see Epstein-Barr virus),unknown
-947,Human herpesvirus type 8 (see Kaposi sarcoma herpesvirus),unknown
-948,Human immunodeficiency virus type 1 (infection with),1
-949,Human immunodeficiency virus type 2 (infection with),2B
-950,Human papillomavirus genus beta (except types 5 and 8) and genus gamma,3
-951,Human papillomavirus type 68,2A
-952,Human papillomavirus types 16. 18. 31. 33. 35. 39. 45. 51. 52. 56. 58. 59,1
-953,Human papillomavirus types 26. 53. 66. 67. 70. 73. 82,2B
-954,Human papillomavirus types 30. 34. 69. 85. 97,2B
-955,Human papillomavirus types 5 and 8 (in patients with epidermodysplasia verruciformis),2B
-956,Human papillomavirus types 6 and 11,3
-957,Human T-cell lymphotropic virus type I,1
-958,Human T-cell lymphotropic virus type II,3
 959,Hypochlorite salts,3
-960,Implanted foreign bodies of metallic chromium or titanium and of cobalt-based. chromium-based. and titanium-based alloys. stainless steel and depleted uranium ,3
-961,Implanted foreign bodies of metallic cobalt. metallic nickel and an alloy powder containing 66-67% nickel. 13-16% chromium. and 7% iron,2B
-962,Insulation glass wool,3
-963,Involuntary smoking (see Tobacco smoke. second-hand),unknown
-964,Ionizing radiation (all types),1
-965,Iron and steel founding (occupational exposure during),1
-966,Isopropyl alcohol manufacture using strong acids,1
 967,Isopropyl oils,3
-968,JC polyomavirus (JCV),2B
-969,Jet fuel,3
-970,Kaposi sarcoma herpesvirus,1
-971,Lead compounds. inorganic,2A
-972,Lead compounds. organic,3
-973,Leather dust,1
-974,Leather goods manufacture,3
-975,Leather tanning and processing,3
-976,Lumber and sawmill industries (including logging),3
 977,Madder root (<i>Rubia tinctorum</i>),3
-978,Magenta production,1
-979,Magnetic fields. extremely low-frequency,2B
-980,Magnetic fields. static,3
-981,Malaria (caused by infection with <i>Plasmodium falciparum</i> in holoendemic areas),2A
 982,Mate. not very hot (drinking),3
 983,Mate. hot (see Very hot beverages),unknown
-984,Merkel cell polyomavirus (MCV),2A
 985,Metabisulfites,3
-986,Metallic implants prepared as thin smooth films,2B
 987,Methylmercury compounds,2B
 988,<i>Microcystis</i> extracts,3
 989,Mineral oils. highly-refined,3
 990,Mineral oils. untreated or mildly treated,1
 991,Modacrylic fibres,3
-992,MOPP and other combined chemotherapy including alkylating agents,1
-993,Neutron radiation,1
-994,Nickel compounds,1
-995,Nickel refining (see Nickel compounds),unknown
 996,Nitrate or nitrite (ingested) under conditions that result in endogenous nitrosation,2A
-997,Non-arsenical insecticides (occupational exposures in spraying and application of),2A
 998,Oestrogen (see Estrogen),unknown
-999,<i>Opisthorchis felineus</i> (infection with),3
-1000,<i>Opisthorchis viverrini</i> (infection with),1
 1001,Oral contraceptives. combined estrogen-progestogen (see Estrogen-progestogen oral contraceptives),unknown
 1002,Organic polymeric materials,3
-1003,Orthopaedic implants of complex composition and cardiac pacemakers,3
-1004,Outdoor air pollution,1
-1005,Outdoor air pollution. particulate matter in,1
-1006,Paint manufacture (occupational exposure in),3
-1007,Painter (occupational exposure as a),1
-1008,Particulate matter in outdoor air pollution (see Outdoor air pollution. particulate matter in),unknown
-1009,Paving and roofing with coal-tar pitch (see Coal-tar pitch),unknown
-1010,Petroleum refining (occupational exposures in),2A
-1011,Petroleum solvents,3
 1012,Phenacetin. analgesic mixtures containing,1
 1013,Pickled vegetables (traditional Asian),2B
 1014,Polychlorinated biphenyls. dioxin-like. with a Toxicity Equivalency Factor (TEF) according to WHO (PCBs 77. 81. 105. 114. 118. 123. 126. 156. 157. 167. 169. 189),1
 1015,Polychlorinated dibenzofurans (see 2.3.4.7.8-Pentachlorodibenzofuran),3
 1016,Polychlorinated dibenzo-<i>para</i>-dioxins (other than 2.3.7.8-tetrachlorodibenzo-<i>para</i>-dioxin),3
-1017,Polychlorophenols and their sodium salts (mixed exposures) (see Pentachlorophenol; 2.4.6-Trichlorophenol ),2B
-1018,Polymeric implant prepared as thin smooth films (with the exception of poly-glycolic acid),2B
-1019,Printing inks,3
-1020,Printing processes (occupational exposures in),2B
 1021,Processed meat (consumption of),1
 1022,Proflavine salts,3
 1023,Progestins,2B
 1024,Progestogen-only contraceptives,2B
-1025,Pulp and paper manufacture,3
-1026,Radiofrequency electromagnetic fields,2B
-1027,Radioiodines. including iodine-131,1
-1028,Radionuclides. alpha-particle-emitting. internally deposited,1
-1029,Radionuclides. beta-particle-emitting. internally deposited,1
 1030,Red meat (consumption of),2A
 1031,Refractory ceramic fibres,2B
-1032,Rock (stone) wool,3
 1033,Rubber manufacturing industry,1
 1034,Salted fish. Chinese-style,1
-1035,<i>Schistosoma haematobium</i> (infection with),1
-1036,<i>Schistosoma japonicum</i> (infection with),2B
-1037,<i>Schistosoma mansoni</i> (infection with),3
-1038,Shiftwork that involves circadian disruption,2A
-1039,Silicone breast implants,3
-1040,Slag wool,3
-1041,Solar radiation,1
-1042,Soot (as found in occupational exposure of chimney sweeps),1
 1043,Special-purpose fibres such as E-glass and '475' glass fibres,2B
 1044,Sulfites,3
-1045,Sunlamps and sunbeds (see Ultraviolet-emitting tanning devices),unknown
-1046,Surgical implants (see Ceramic implants. Dental materials. Implanted foreign bodies. Metallic implants. Organic polymeric materials. Orthopaedic implants. Polymeric implants. Silicone breast implants),unknown
-1047,SV40 polyomavirus ,3
 1048,Tea,3
 1049,Tetrakis(hydroxymethyl)phosphonium salts,3
-1050,Textile manufacturing industry (work in),2B
-1051,Tobacco smoke. second-hand,1
-1052,Tobacco smoking,1
-1053,Tobacco. smokeless,1
 1054,Toxins derived from certain <i>Fusarium</i> species (see <i>Fusarium</i>),unknown
-1055,Ultraviolet radiation (wavelengths 100-400 nm. encompassing UVA. UVB. and UVC),1
-1056,Ultraviolet-emitting tanning devices,1
 1057,Urethane (see Ethyl carbamate),unknown
 1058,Very hot beverages at above 65 °C (drinking),2A
-1059,Welding fumes,1
-1060,Wood dust,1
-1061,Wood smoke (see Biomass fuel. indoor emissions from household combustion),unknown
-1062,X- and Gamma-Radiation,1
