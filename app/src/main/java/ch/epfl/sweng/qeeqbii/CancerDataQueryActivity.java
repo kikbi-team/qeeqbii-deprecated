@@ -12,7 +12,7 @@ public class CancerDataQueryActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_display_message);
+        setContentView(R.layout.activity_cancer_data_query);
 
         CancerDataBase cancer_data_base = new CancerDataBase();
         String message = new String();

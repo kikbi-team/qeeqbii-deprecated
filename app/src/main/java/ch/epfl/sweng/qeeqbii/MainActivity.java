@@ -54,4 +54,10 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, Graphs.class);
         startActivity(intent);
     }
+
+    public void cancerDataQuery(View view)
+    {
+        Intent intent = new Intent(this, CancerDataQueryActivity.class);
+        startActivity(intent);
+    }
 }
