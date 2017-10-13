@@ -19,7 +19,7 @@ public class CancerDataShowActivity extends AppCompatActivity {
     public CancerDataShowActivity() {
         mIsTest = false;
     }
-    private List<CancerData> importedData = new ArrayList<>();
+    private List<CancerSubstance> importedData = new ArrayList<>();
     private boolean mIsTest;
 
     //METHODS
@@ -42,7 +42,7 @@ public class CancerDataShowActivity extends AppCompatActivity {
                 //split by ','
                 String[] tokens = line.split(",");
                 //read the data
-                CancerData sample = new CancerData();
+                CancerSubstance sample = new CancerSubstance();
                 sample.setmLabel(Integer.parseInt(tokens[0]));
                 sample.setmAgent(tokens[1]); //Here we can add the fact that the dataBase might have leaks
                 sample.setmGroup(tokens[2]);
@@ -58,7 +58,7 @@ public class CancerDataShowActivity extends AppCompatActivity {
         }
     }
 
-    public List<CancerData> getImportedData() {
+    public List<CancerSubstance> getImportedData() {
         return importedData;
     }
 
@@ -73,7 +73,7 @@ public class CancerDataShowActivity extends AppCompatActivity {
 
     public boolean ismIsTest() {return mIsTest;}
     public void setmIsTest(boolean mIsTest) {this.mIsTest = mIsTest;}
-    public void setImportedData(List<CancerData> importedData) {
+    public void setImportedData(List<CancerSubstance> importedData) {
         this.importedData = importedData;
     }
 
@@ -82,14 +82,29 @@ public class CancerDataShowActivity extends AppCompatActivity {
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_display_message);
-        readCSVFile();
-        String message = " id\tAgent\t\tGroup\n";
+
+        // Instantiation of a CancerDataBase object followed by:
+        // reading of the CSV file using the readCSVFile method
+        // sending of a ess
+        CancerDataBase cancer_data_base = new CancerDataBase();
+        String message = new String();
+        try {
+            cancer_data_base.readCSVFile(getApplicationContext());
+            message = cancer_data_base.sendOutputReadyToPrint();
+        }
+        catch(Exception e) {
+            System.err.println("Exception: " + e.getMessage());
+        }
+
+
+                /*" id\tAgent\t\tGroup\n";
 
         for (int i = 0; i < importedData.size(); i = i + 1) {
             message += " " + Integer.toString(i);
             message += "\t" + importedData.get(i).getmAgent();
             message += "\t\t\t" + importedData.get(i).getmGroup() + "\n";
         }
+        */
 
         // Capture the layout's; TextView and set the string as its text
         TextView reportedMessage = (TextView) findViewById(R.id.cancerDataBaseMessage);

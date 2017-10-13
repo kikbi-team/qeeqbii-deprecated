@@ -1,12 +1,14 @@
 package ch.epfl.sweng.qeeqbii;
 
 /**
- * Created by davidcleres on 03.10.17.
+ * Created by adrien on 12/10/17.
  */
 
-public class CancerData {
+public class CancerSubstance {
+    // Attributes
     private String mAgent;
     private String mGroup;
+
     private int mLabel;
 
     public int getmLabel() {return mLabel;}
@@ -26,7 +28,7 @@ public class CancerData {
 
     @Override
     public String toString() {
-        return "CancerData{" +
+        return "Substance{" +
                 "mAgent='" + mAgent + '\'' +
                 ", mGroup='" + mGroup + '\'' +
                 '}';

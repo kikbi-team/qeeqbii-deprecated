@@ -130,7 +130,5 @@
                 android:text="@string/disconnect"
                 android:theme="@style/ThemeOverlay.MyDarkButton" />
         </LinearLayout>
-
     </RelativeLayout>
-
 </LinearLayout>
