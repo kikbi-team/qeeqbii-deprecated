@@ -5,11 +5,23 @@ package ch.epfl.sweng.qeeqbii;
  */
 
 public class CancerSubstance {
+
+    // Constructor that defines an empty substance
+    public CancerSubstance() {
+        mId = -1;
+        mAgent = "empty";
+        mGroup = "empty";
+    }
+
     // Attributes
+    private int mId;
     private String mAgent;
     private String mGroup;
 
     // Set methods
+    public void setmId(int mId) {
+        this.mId = mId;
+    }
     public void setmGroup(String mGroup) {
         this.mGroup = mGroup;
     }
@@ -18,6 +30,7 @@ public class CancerSubstance {
     }
 
     // Get methods
+    public int getmId() { return mId; }
     public String getmGroup() {
         return mGroup;
     }
@@ -28,8 +41,9 @@ public class CancerSubstance {
     //@Override
     public String toString() {
         return "Substance{" +
-                "mAgent='" + mAgent + '\'' +
-                ", mGroup='" + mGroup + '\'' +
+                "mId: " + Integer.toString(mId) +
+                ", mAgent='" + mAgent + "\'" +
+                ", mGroup='" + mGroup + "\'" +
                 '}';
     }
 }

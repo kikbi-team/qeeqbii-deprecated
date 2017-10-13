@@ -68,15 +68,35 @@ public class CancerDataBase {
     public String sendOutputReadyToPrint() throws Exception {
         if (mopen_state == 1) {
             String output = " id\tAgent\t\tGroup\n";
-            for (int i = 0; i < msubstance_list.size(); i = i + 1) {
-                output += " " + Integer.toString(i);
-                output += "\t" + msubstance_list.get(i).getmAgent();
-                output += "\t\t\t" + msubstance_list.get(i).getmGroup() + "\n";
+            for (int i = 0; i < msubstance_list.size(); i++) {
+                output += msubstance_list.get(i).toString();
+                output += "\n";
             }
             return output;
         }
         else {
             throw new Exception("Read the carcinogenic database before trying to print it.\n");
+        }
+    }
+
+    // Method that queries a substance of the DataBase and outputs
+    // the substance and its group classification if the substance is found
+    // or an empty CancerSubstance object if the queried substance didn't match perfectly
+    // with a substance of the database
+    public CancerSubstance perfectMatchQuery(String queried_substance) throws Exception {
+        String[] output = new String[3];
+        if (mopen_state == 1) {
+            for (int i = 0; i < msubstance_list.size(); i++) {
+                if (msubstance_list.get(i).getmAgent() == queried_substance) {
+                    return msubstance_list.get(i);
+                }
+            }
+            // Returning an empty CancerSubstance that is thrown if no perfect match have been found
+            CancerSubstance empty_substance = new CancerSubstance();
+            return empty_substance;
+        }
+        else {
+            throw new Exception("Read the carcinogenic database before trying to query it.\n");
         }
     }
 }
