@@ -47,6 +47,7 @@ public class CancerDataBase {
 
                 //read the data
                 CancerSubstance new_substance = new CancerSubstance();
+                new_substance.setmId(Integer.parseInt(tokens[0]));
                 new_substance.setmAgent(tokens[1]); //Here we can add the fact that the dataBase might have leaks
                 new_substance.setmGroup(tokens[2]);
                 //Note if we want to import an int or a double we have to write:

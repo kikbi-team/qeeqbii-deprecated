@@ -41,9 +41,9 @@ public class CancerSubstance {
     //@Override
     public String toString() {
         return "Substance{" +
-                "mId: " + Integer.toString(mId) +
-                ", mAgent='" + mAgent + "\'" +
-                ", mGroup='" + mGroup + "\'" +
+                "mId = " + Integer.toString(mId) +
+                ", mAgent = '" + mAgent + "\'" +
+                ", mGroup = '" + mGroup + "\'" +
                 '}';
     }
 }

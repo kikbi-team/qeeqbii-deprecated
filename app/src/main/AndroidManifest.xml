@@ -33,6 +33,7 @@
         <activity android:name="ch.epfl.sweng.qeeqbii.MainActivity" />
         <activity
             android:name="ch.epfl.sweng.qeeqbii.CancerDataShowActivity"
+            android:exported="true"
             android:parentActivityName="ch.epfl.sweng.qeeqbii.MainActivity">
 
             <!-- The meta-data tag is required if you support API level 15 and lower -->
@@ -43,8 +44,6 @@
         <activity android:name="ch.epfl.sweng.qeeqbii.BarcodeActivity" />
         <activity android:name="ch.epfl.sweng.qeeqbii.BarcodeToProductActivity" />
         <activity android:name="ch.epfl.sweng.qeeqbii.Graphs" />
-        <activity android:name="ch.epfl.sweng.qeeqbii.CancerDataBaseActivity"
-                  android:exported="true"></activity>
     </application>
 
 </manifest>
