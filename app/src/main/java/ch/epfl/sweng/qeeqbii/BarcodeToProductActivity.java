@@ -30,10 +30,17 @@ public class BarcodeToProductActivity extends AppCompatActivity {
         {
             @Override public void onPostExecute(String result)
             {
-                HTTPRequestResponse response = new HTTPRequestResponse(result);
                 TextView txt = (TextView) findViewById(R.id.product_details);
-                txt.setText(response.GetProductName("fr") + "\n\nIngredients: " + response.GetProductIngredients("fr") +
-                        "\n\nNutrients: (per 100g)\n " + response.GetProductNutrients("fr"));
+                try{
+                    HTTPRequestResponse response = new HTTPRequestResponse(result);
+                    txt.setText(response.GetProductName("fr") + "\n\nIngredients: " + response.GetProductIngredients("fr") +
+                            "\n\nQuantity: " + response.GetProductQuantity() +
+                            "\n\nNutrients: (per 100g)\n" + response.GetProductNutrients("fr"));
+
+                } catch(Exception e) {
+                    txt.setText(e.getMessage());
+                }
+
             }
         }.execute(barcode);
     }
