@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -7,11 +8,69 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="ch.epfl.sweng.bootcamp.Graphs">
+    tools:context="ch.epfl.sweng.qeeqbii.Graphs">
 
     <com.github.mikephil.charting.charts.PieChart
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/idPieChart"></com.github.mikephil.charting.charts.PieChart>
+        android:layout_width="163dp"
+        android:layout_height="304dp"
+        android:id="@+id/idPieChart"
+        app:layout_constraintBottom_toTopOf="@+id/idPieChartGlucides"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/idPieChartSalts"/>
+
+    <com.github.mikephil.charting.charts.PieChart
+        android:layout_width="163dp"
+        android:layout_height="304dp"
+        android:id="@+id/idPieChartFat"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/idPieChartSalts"
+        app:layout_constraintRight_toLeftOf="@+id/idPieChartGlucides"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <com.github.mikephil.charting.charts.PieChart
+        android:layout_width="163dp"
+        android:layout_height="304dp"
+        android:id="@+id/idPieChartGlucides"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/idPieChart"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/idPieChartFat"/>
+
+    <com.github.mikephil.charting.charts.PieChart
+        android:layout_width="163dp"
+        android:layout_height="304dp"
+        android:id="@+id/idPieChartSalts"
+        app:layout_constraintBottom_toTopOf="@+id/idPieChartFat"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/idPieChart"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/guideline"
+        app:layout_constraintGuide_begin="20dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="20dp" />
+
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/guideline2"
+        app:layout_constraintGuide_begin="20dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="20dp" />
+
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/guideline3"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="595dp"
+        tools:layout_editor_absoluteY="32dp"
+        tools:layout_editor_absoluteX="0dp" />
 
 </android.support.constraint.ConstraintLayout>

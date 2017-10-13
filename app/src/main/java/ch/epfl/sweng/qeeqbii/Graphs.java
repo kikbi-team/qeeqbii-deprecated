@@ -1,4 +1,4 @@
-package ch.epfl.sweng.bootcamp;
+package ch.epfl.sweng.qeeqbii;
 
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
@@ -21,8 +21,8 @@ public class Graphs extends AppCompatActivity {
 
     private static String TAG = "Graphs";
 
-    private float[] yData = {25.3f, 10.6f, 66.76f, 44.32f, 46.01f, 16.89f, 23.9f};
-    private String[] xData = {"Mitch", "Jessica" , "Mohammad" , "Kelsey", "Sam", "Robert", "Ashley"};
+    private float[] yData = {700, 1600};
+    private String[] xData = {"Completed", "Left"};
     PieChart pieChart;
 
     @Override
@@ -31,20 +31,28 @@ public class Graphs extends AppCompatActivity {
         setContentView(R.layout.activity_graphs);
         Log.d(TAG, "onCreate: starting to create chart");
 
-        pieChart = (PieChart) findViewById(R.id.idPieChart);
+        createGraph(R.id.idPieChart, getString(R.string.calories_graph));
+        createGraph(R.id.idPieChartFat, getString(R.string.fat_graph));
+        createGraph(R.id.idPieChartGlucides, getString(R.string.glucide_graph));
+        createGraph(R.id.idPieChartSalts, getString(R.string.salt_graph));
+    }
+
+    private void createGraph(int numberChart, String nameGraph)
+    {
+        pieChart = (PieChart) findViewById(numberChart);
         pieChart.setRotationEnabled(true);
-        //pieChart.setUsePercentValues(true);
+        pieChart.setUsePercentValues(true);
         //pieChart.setHoleColor(Color.BLUE);
         //pieChart.setCenterTextColor(Color.BLACK);
-        pieChart.setHoleRadius(25f);
+        pieChart.setHoleRadius(80f);
         pieChart.setTransparentCircleAlpha(0);
-        pieChart.setCenterText("Super Cool Chart");
-        pieChart.setCenterTextSize(10);
+        pieChart.setCenterText(nameGraph);
+        pieChart.setCenterTextSize(13);
         //pieChart.setDrawEntryLabels(true);
         //pieChart.setEntryLabelTextSize(20);
         //More options just check out the documentation!
 
-        addDataSet();
+        addDataSet(numberChart, nameGraph);
 
         pieChart.setOnChartValueSelectedListener(new OnChartValueSelectedListener() {
             @Override
@@ -68,13 +76,11 @@ public class Graphs extends AppCompatActivity {
 
             @Override
             public void onNothingSelected() {
-
             }
         });
-
     }
 
-    private void addDataSet() {
+    private void addDataSet(int numberChart, String nameGraph) {
         Log.d(TAG, "addDataSet started");
         ArrayList<PieEntry> yEntrys = new ArrayList<>();
         ArrayList<String> xEntrys = new ArrayList<>();
@@ -88,31 +94,30 @@ public class Graphs extends AppCompatActivity {
         }
 
         //create the data set
-        PieDataSet pieDataSet = new PieDataSet(yEntrys, "Employee Sales");
-        pieDataSet.setSliceSpace(2);
-        pieDataSet.setValueTextSize(12);
+        PieDataSet pieDataSet = new PieDataSet(yEntrys, nameGraph+ " intake/ day");
+        pieDataSet.setSliceSpace(0); //sets the size of the yEntrys on the graph
+        pieDataSet.setValueTextSize(0);
 
         //add colors to dataset
         ArrayList<Integer> colors = new ArrayList<>();
         colors.add(Color.GRAY);
-        colors.add(Color.BLUE);
-        colors.add(Color.RED);
+        colors.add(Color.GREEN);
+        /*colors.add(Color.RED);
         colors.add(Color.GREEN);
         colors.add(Color.CYAN);
         colors.add(Color.YELLOW);
-        colors.add(Color.MAGENTA);
+        colors.add(Color.MAGENTA);*/
 
         pieDataSet.setColors(colors);
 
         //add legend to chart
         Legend legend = pieChart.getLegend();
-        legend.setForm(Legend.LegendForm.CIRCLE);
-        legend.setPosition(Legend.LegendPosition.LEFT_OF_CHART);
+        legend.setForm(Legend.LegendForm.SQUARE);
 
         //create pie data object
         PieData pieData = new PieData(pieDataSet);
         pieChart.setData(pieData);
-        pieChart.invalidate();
+        //pieChart.invalidate();
         pieChart.setEnabled(true);
     }
 }

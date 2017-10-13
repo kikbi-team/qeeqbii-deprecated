@@ -1,13 +1,13 @@
 <resources>
     <string name="app_name">Qeeqbi</string>
-    <string name="go_button">Cancer Data Base</string>
-    <string name="welcome_text">Welcome in the amazing Bootcamp App, hope you\'ll have fun here.</string>
-    <string name="hello_world">Hello World ! </string>
-    <string name="hello">"Hello "</string>
-    <string name="exclamation">!</string>
+    <string name="welcome_text">With Qeeqbii you will eat healthy again in no time!</string>
     <string name="barcode_button">Barcode Reader</string>
-    <string name="cancer_data">Cancer Data Base</string>
-
+    <string name="cancer_data">Cancer DataBase</string>
+    <string name="fat_graph">Fats</string>
+    <string name="glucide_graph">Carbohyrates</string>
+    <string name="calories_graph">Calories</string>
+    <string name="salt_graph">Salts</string>
+    <string name="barcode_scan_to_product">Go to product</string>
 
     <!-- Google Sign In -->
     <string name="AppName">Firebase Authentication</string>
@@ -85,5 +85,4 @@
 
     <string name="id_fmt">User ID: %s</string>
     <string name="email_fmt">Email: %s</string>
-
 </resources>
