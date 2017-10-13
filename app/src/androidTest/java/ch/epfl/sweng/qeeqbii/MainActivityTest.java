@@ -15,9 +15,10 @@ import static android.support.test.espresso.matcher.ViewMatchers.withId;
 import static android.support.test.espresso.matcher.ViewMatchers.withText;
 import static org.junit.Assert.assertEquals;
 
-
 @RunWith(AndroidJUnit4.class)
 public class MainActivityTest {
+
+    /*
     @Rule
     public final ActivityTestRule<MainActivity> mActivityRule =
             new ActivityTestRule<>(MainActivity.class);
@@ -39,7 +40,7 @@ public class MainActivityTest {
     @Test
     public void testCanOpenGraphs() throws InterruptedException {
         onView(withId(R.id.buttonGraphs)).perform(click());
-    }
+    } */
 
     @Test
     public void useAppContext() throws Exception {
