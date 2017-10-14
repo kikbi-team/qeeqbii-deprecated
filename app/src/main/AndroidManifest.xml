@@ -11,6 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
+
         <activity android:name="ch.epfl.sweng.qeeqbii.HomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,6 +21,7 @@
             </intent-filter>
         </activity>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         <activity android:name=".GoogleSignInActivity">
             <intent-filter>
@@ -31,6 +34,8 @@
        <activity android:name=".MainActivity">
 =======
         <!--
+=======
+>>>>>>> 2b08f9c639dd686f9a04f7fcd4dd234dfdaddb23
       <activity android:name=".GoogleSignInActivity">
            <intent-filter>
            <action android:name="android.intent.action.MAIN" />
@@ -39,7 +44,7 @@
        </intent-filter>
 >>>>>>> c626b9e8cd6aef94c55f066d22721bf9b406f9c6
        </activity>
-        -->
+
 
         <activity android:name="ch.epfl.sweng.qeeqbii.MainActivity" />
         <activity

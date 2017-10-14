@@ -3,12 +3,18 @@ package ch.epfl.sweng.qeeqbii;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
 
+import static ch.epfl.sweng.qeeqbii.MainActivity.BARCODE_READER;
+
 public class BarcodeActivity extends AppCompatActivity {
+
+    protected String last_barcode = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +31,14 @@ public class BarcodeActivity extends AppCompatActivity {
 
             TextView reportedMessage = (TextView) findViewById(R.id.barcodeMessage);
             reportedMessage.setText(scanResult.toString());
+            last_barcode = scanResult.getContents();
         }
+    }
+
+    public void searchProductFromScannedBarcode(View view)
+    {
+        Intent intent = new Intent(this, BarcodeToProductActivity.class);
+        intent.putExtra(BARCODE_READER, last_barcode);
+        startActivity(intent);
     }
 }

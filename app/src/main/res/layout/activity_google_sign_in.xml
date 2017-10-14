@@ -42,6 +42,43 @@
             style="@style/ThemeOverlay.MyTextDetail"
             tools:text="Firebase User ID: 123456789abc" />
 
+        <EditText
+            android:id="@+id/editTextFirstName"
+            style="@style/ThemeOverlay.MyTextDetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Fisrt_Name" />
+
+        <EditText
+            android:id="@+id/editTextLastName"
+            style="@style/ThemeOverlay.MyTextDetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Last_Name" />
+
+        <EditText
+            android:id="@+id/editTextAllergie"
+            style="@style/ThemeOverlay.MyTextDetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Allergies: " />
+
+        <EditText
+            android:id="@+id/editTextGout"
+            style="@style/ThemeOverlay.MyTextDetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="textMultiLine"
+            android:text="Aliments à proscrire: " />
+
+
     </LinearLayout>
 
 
@@ -70,6 +107,13 @@
                 android:layout_weight="1"
                 android:visibility="visible"
                 tools:visibility="gone" />
+
+            <Button
+                android:id="@+id/buttonSave"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Save and continue" />
 
             <Button
                 android:id="@+id/sign_out_button"
