@@ -94,7 +94,9 @@
         android:layout_height="wrap_content"
         android:onClick="cancerDataQuery"
         android:text="QUERY CANCER\n DATABASE"
-        tools:layout_editor_absoluteX="215dp"
-        tools:layout_editor_absoluteY="98dp" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="98dp"
+        android:layout_marginLeft="215dp"
+        app:layout_constraintLeft_toLeftOf="parent" />
 
 </android.support.constraint.ConstraintLayout>

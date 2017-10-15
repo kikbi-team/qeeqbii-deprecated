@@ -17,7 +17,7 @@ import static org.junit.Assert.assertEquals;
 public class CancerDataBaseTest extends AppCompatActivity {
     // ContextWrapper mocked_class = Mockito.mock(ContextWrapper.class);
 
-    // The idea of this test is to simply print the whole CancerDataBase to see if it has been loaded
+    // The idea of this test is to print the whole CancerDataBase to see if it has been loaded
     // properly
     @Test
     public void printDataBase() throws Exception {

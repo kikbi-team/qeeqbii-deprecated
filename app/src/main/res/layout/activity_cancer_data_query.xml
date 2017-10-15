@@ -8,12 +8,19 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Type query here" />
+        android:hint="Type query here"
+        android:inputType="textPersonName" />
 
     <Button
         android:id="@+id/sendCancerDataQuery"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:onClick="processQueryResult"
         android:text="SEND QUERY" />
+
+    <TextView
+        android:id="@+id/perfectQueryAnswerArea"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TextView" />
 </LinearLayout>

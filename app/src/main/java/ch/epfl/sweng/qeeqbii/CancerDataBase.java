@@ -88,7 +88,7 @@ public class CancerDataBase {
         String[] output = new String[3];
         if (mopen_state == 1) {
             for (int i = 0; i < msubstance_list.size(); i++) {
-                if (msubstance_list.get(i).getmAgent() == queried_substance) {
+                if (msubstance_list.get(i).getmAgent().equals(queried_substance)) {
                     return msubstance_list.get(i);
                 }
             }
