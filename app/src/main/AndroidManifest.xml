@@ -21,16 +21,14 @@
             </intent-filter>
         </activity>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <activity android:name=".GoogleSignInActivity">
+        <!--<activity android:name=".GoogleSignInActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
+        -->
        <activity android:name=".MainActivity">
 =======
         <!--
@@ -51,14 +49,13 @@
             android:name="ch.epfl.sweng.qeeqbii.CancerDataShowActivity"
             android:parentActivityName="ch.epfl.sweng.qeeqbii.MainActivity">
 
-            <!-- The meta-data tag is required if you support API level 15 and lower -->
+            <!- The meta-data tag is required if you support API level 15 and lower -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="ch.epfl.sweng.qeeqbii.MainActivity" />
         </activity>
         <activity android:name="ch.epfl.sweng.qeeqbii.BarcodeActivity" />
         <activity android:name="ch.epfl.sweng.qeeqbii.BarcodeToProductActivity" />
-        <activity android:name=".graphs" />
         <activity android:name="ch.epfl.sweng.qeeqbii.Graphs"></activity>
     </application>
 

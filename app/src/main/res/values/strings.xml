@@ -7,7 +7,8 @@
     <string name="glucide_graph">Carbohyrates</string>
     <string name="calories_graph">Calories</string>
     <string name="salt_graph">Salts</string>
-
+    <string name="open">Open</string>
+    <string name="close">Close</string>
     <string name="barcode_scan_to_product">Go to product</string>
 
     <!-- Google Sign In -->

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/nav_graphs"
+        android:title="Graphs" />
+
+    <item android:id="@+id/nav_cancerdb"
+        android:title="Cancer Database" />
+
+    <item android:id="@+id/nav_search_product"
+        android:title="Search Product" />
+</menu>
