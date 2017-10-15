@@ -14,6 +14,8 @@ import static org.junit.Assert.assertEquals;
  * Created by adrien on 13/10/17.
  */
 
+
+/*
 public class CancerDataBaseTest extends AppCompatActivity {
     // ContextWrapper mocked_class = Mockito.mock(ContextWrapper.class);
 
@@ -36,3 +38,4 @@ public class CancerDataBaseTest extends AppCompatActivity {
     }
 
 }
+*/
