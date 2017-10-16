@@ -21,7 +21,7 @@ public class HTTPRequestResponse {
         int language_ind = resp_body.indexOf("\"" + language + "\"", names_ind);
         int two_dots_ind = resp_body.indexOf(':', language_ind);
 
-        return resp_body.substring(two_dots_ind + 2, resp_body.indexOf('\"',two_dots_ind+2));
+        return resp_body.substring(two_dots_ind + 2, resp_body.indexOf('\"',two_dots_ind+2)).replace("\\n","\n").replace("\\r","\r");
     }
 
     public static String GetProductIngredients(String language)
@@ -31,7 +31,8 @@ public class HTTPRequestResponse {
         int language_ind = resp_body.indexOf("\"" + language + "\"", ingredients_ind);
         int two_dots_ind = resp_body.indexOf(':', language_ind);
 
-        return resp_body.substring(two_dots_ind + 2, resp_body.indexOf('\"',two_dots_ind+2));
+        return resp_body.substring(two_dots_ind + 2, resp_body.indexOf('\"',two_dots_ind+2)).replace("\\n","\n").replace("\\r","\r");
+        //We have to check if the replace is worth it
     }
 
 
@@ -57,7 +58,7 @@ public class HTTPRequestResponse {
                 current_index = resp_body.indexOf("},", current_index) + 2;
             }
 
-        return str;
+        return str.replace("\\n","\n").replace("\\r","\r");
         }
 
     }
@@ -70,7 +71,7 @@ public class HTTPRequestResponse {
         int unit_ind = resp_body.indexOf("\"unit\"",quantity_ind);
         String unit = resp_body.substring(unit_ind + 8, resp_body.indexOf(',',unit_ind)-1);
 
-        return quantity + unit;
+        return (quantity + unit).replace("\\n","\n").replace("\\r","\r");
 
     }
 

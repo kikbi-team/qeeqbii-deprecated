@@ -40,7 +40,8 @@ public class MainActivityTest {
     @Test
     public void testCanOpenGraphs() throws InterruptedException {
         onView(withId(R.id.buttonGraphs)).perform(click());
-    } */
+    }
+    */
 
     @Test
     public void useAppContext() throws Exception {

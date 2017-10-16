@@ -21,18 +21,22 @@
             </intent-filter>
         </activity>
 
-      <activity android:name=".GoogleSignInActivity">
+        <activity android:name=".GoogleSignInActivity">
            <intent-filter>
            <action android:name="android.intent.action.MAIN" />
 
            <category android:name="android.intent.category.LAUNCHER" />
-       </intent-filter>
-       </activity>
+        </intent-filter>
+        </activity>
 
 
-        <activity android:name="ch.epfl.sweng.qeeqbii.MainActivity" />
+        <activity
+            android:name="ch.epfl.sweng.qeeqbii.MainActivity"
+            android:exported="true">
+        </activity>
         <activity
             android:name="ch.epfl.sweng.qeeqbii.CancerDataShowActivity"
+            android:exported="true"
             android:parentActivityName="ch.epfl.sweng.qeeqbii.MainActivity">
 
             <!-- The meta-data tag is required if you support API level 15 and lower -->
@@ -43,6 +47,11 @@
         <activity android:name="ch.epfl.sweng.qeeqbii.BarcodeActivity" />
         <activity android:name="ch.epfl.sweng.qeeqbii.BarcodeToProductActivity" />
         <activity android:name="ch.epfl.sweng.qeeqbii.Graphs"></activity>
+        <activity
+            android:name="ch.epfl.sweng.qeeqbii.CancerDataQueryActivity"
+            android:parentActivityName="ch.epfl.sweng.qeeqbii.MainActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize">
+        </activity>
     </application>
 
 </manifest>

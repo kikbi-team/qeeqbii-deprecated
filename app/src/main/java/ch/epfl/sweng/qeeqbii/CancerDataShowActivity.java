@@ -15,6 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CancerDataShowActivity extends AppCompatActivity {
+
     //CONSTRUCTOR
     public CancerDataShowActivity() {
         mIsTest = false;
@@ -85,7 +86,7 @@ public class CancerDataShowActivity extends AppCompatActivity {
 
         // Instantiation of a CancerDataBase object followed by:
         // reading of the CSV file using the readCSVFile method
-        // sending of a ess
+        // sending of a message
         CancerDataBase cancer_data_base = new CancerDataBase();
         String message = new String();
         try {
@@ -96,7 +97,7 @@ public class CancerDataShowActivity extends AppCompatActivity {
             System.err.println("Exception: " + e.getMessage());
         }
 
-                /*" id\tAgent\t\tGroup\n";
+        /*" id\tAgent\t\tGroup\n";
 
         for (int i = 0; i < importedData.size(); i = i + 1) {
             message += " " + Integer.toString(i);

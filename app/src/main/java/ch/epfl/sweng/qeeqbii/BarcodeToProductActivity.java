@@ -34,7 +34,7 @@ public class BarcodeToProductActivity extends AppCompatActivity {
                 try{
                     HTTPRequestResponse response = new HTTPRequestResponse(result);
                     txt.setText(response.GetProductName("fr") + "\n\nIngredients: " + response.GetProductIngredients("fr") +
-                            "\n\nQuantity: " + response.GetProductQuantity() +
+                            "\n\nQuantity: "  + response.GetProductQuantity() +
                             "\n\nNutrients: (per 100g)\n" + response.GetProductNutrients("fr"));
 
                 } catch(Exception e) {

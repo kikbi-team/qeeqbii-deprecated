@@ -38,8 +38,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void searchProductFromBarcode(View view)
-    {
+    public void searchProductFromBarcode(View view) {
         Intent intent = new Intent(this, BarcodeToProductActivity.class);
         EditText editText = (EditText) findViewById(R.id.mainName);
         String barcode = editText.getText().toString();
@@ -47,9 +46,13 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void showGraphs(View view)
-    {
+    public void showGraphs(View view) {
         Intent intent = new Intent(this, Graphs.class);
+        startActivity(intent);
+    }
+
+    public void cancerDataQuery(View view) {
+        Intent intent = new Intent(this, CancerDataQueryActivity.class);
         startActivity(intent);
     }
 }
