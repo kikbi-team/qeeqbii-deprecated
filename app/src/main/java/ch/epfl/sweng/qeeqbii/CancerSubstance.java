@@ -17,8 +17,9 @@ public class CancerSubstance {
     private int mId;
     private String mAgent;
     private String mGroup;
+    private int mLabel;
 
-    // Set methods
+    // Setters methods
     public void setmId(int mId) {
         this.mId = mId;
     }
@@ -28,9 +29,12 @@ public class CancerSubstance {
     public void setmAgent(String mAgent) {
         this.mAgent = mAgent;
     }
+    public void setmLabel(int mLabel) {this.mLabel = mLabel;}
 
-    // Get methods
+
+    // Getters methods
     public int getmId() { return mId; }
+    public int getmLabel() {return mLabel;}
     public String getmGroup() {
         return mGroup;
     }
@@ -38,7 +42,7 @@ public class CancerSubstance {
         return mAgent;
     }
 
-    //@Override
+    //METHODS
     public String toString() {
         return "Substance{" +
                 "mId = " + Integer.toString(mId) +
