@@ -19,7 +19,7 @@ public class OpenFoodQuery extends AsyncTask<String, Void, String> {
     public String doInBackground(String params[])
     {
         try {
-            URL url = new URL("https://www.openfood.ch/api/v3/products?excludes=name_translations&barcodes=" + params[0]);
+            URL url = new URL("https://www.openfood.ch/api/v3/products?excludes=name_translations2Cimages&barcodes=" + params[0]);
             HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
             urlConnection.setRequestMethod("GET");
             urlConnection.setRequestProperty("Content-Type", "application/vnd.api+json");
