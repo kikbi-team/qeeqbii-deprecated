@@ -46,7 +46,7 @@
         </activity>
         <activity android:name="ch.epfl.sweng.qeeqbii.BarcodeActivity" />
         <activity android:name="ch.epfl.sweng.qeeqbii.BarcodeToProductActivity" />
-        <activity android:name="ch.epfl.sweng.qeeqbii.Graphs" />
+        <activity android:name="ch.epfl.sweng.qeeqbii.Graphs"></activity>
         <activity
             android:name="ch.epfl.sweng.qeeqbii.CancerDataQueryActivity"
             android:parentActivityName="ch.epfl.sweng.qeeqbii.MainActivity"
