@@ -32,13 +32,19 @@ public class BarcodeActivity extends AppCompatActivity {
             TextView reportedMessage = (TextView) findViewById(R.id.barcodeMessage);
             reportedMessage.setText(scanResult.toString());
             last_barcode = scanResult.getContents();
+
+            // go to openfood search result
+            searchProductFromScannedBarcode();
         }
     }
 
-    public void searchProductFromScannedBarcode(View view)
-    {
+    private void searchProductFromScannedBarcode() {
         Intent intent = new Intent(this, BarcodeToProductActivity.class);
         intent.putExtra(BARCODE_READER, last_barcode);
         startActivity(intent);
+    }
+
+    public void searchProductFromScannedBarcode(View view) {
+        searchProductFromScannedBarcode();
     }
 }
