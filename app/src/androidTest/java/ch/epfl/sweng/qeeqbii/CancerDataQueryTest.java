@@ -24,10 +24,11 @@ public class CancerDataQueryTest {
             new ActivityTestRule<>(CancerDataQueryActivity.class);
     @Test
     public void testCanGreetUsers() {
-        // Be careful to try to put "Formaldehyde" string into resource folder
-        onView(withId(R.id.cancerDataQueryTextField)).perform(typeText("Formaldehyde"));
+        //System.out.println(mActivityRule.getActivity().getResources().getString(R.string.Formaldehyde));
+        String substance_to_query = mActivityRule.getActivity().getResources().getString(R.string.Formaldehyde);
+        onView(withId(R.id.cancerDataQueryTextField)).perform(typeText(substance_to_query));
         onView(withId(R.id.cancerDataQueryButton)).perform(click());
-        //TextView text = (TextView)findViewById(R.id.perfectQueryAnswerArea);
+        //TextView text = (TextView)mActivityRule.getActivity().findViewById(R.id.perfectQueryAnswerArea);
         // onView(withId(R.id.greetingMessage)).check(matches(withText("Hello from my unit test!")));
     }
 }
