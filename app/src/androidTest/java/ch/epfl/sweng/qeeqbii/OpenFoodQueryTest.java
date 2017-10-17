@@ -4,7 +4,9 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
+import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
+import static org.junit.Assert.assertEquals;
 
 /**
  * Created by guillaume on 16.10.17.
@@ -15,7 +17,7 @@ public class OpenFoodQueryTest {
 
     @Rule
     public final ActivityTestRule<BarcodeToProductActivity> mActivityRule =
-            new ActivityTestRule<>(BarcodeToProductActivity);
+            new ActivityTestRule<>(BarcodeToProductActivity.class);
 
     @Test
     public void QueryOfExistingProduct()
@@ -29,7 +31,8 @@ public class OpenFoodQueryTest {
             @Override public void onPostExecute(String result)
             {
 
-                getResources().openRawResource();
+                String true_result = mActivityRule.getActivity().getResources()
+                        .openRawResource(R.raw.example_response_openfood_761084337010).toString();
 
                 result = result.substring(result.indexOf('['),result.indexOf(']'));
                 assertEquals(result,true_result);
