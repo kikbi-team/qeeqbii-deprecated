@@ -24,7 +24,8 @@ public class CancerDataQueryTest {
             new ActivityTestRule<>(CancerDataQueryActivity.class);
     @Test
     public void testCanGreetUsers() {
-        onView(withId(R.id.cancerDataQueryTextField)).perform(typeText(getString(R.string.Formaldehyde)));
+        // Be careful to try to put "Formaldehyde" string into resource folder
+        onView(withId(R.id.cancerDataQueryTextField)).perform(typeText("Formaldehyde"));
         onView(withId(R.id.cancerDataQueryButton)).perform(click());
         //TextView text = (TextView)findViewById(R.id.perfectQueryAnswerArea);
         // onView(withId(R.id.greetingMessage)).check(matches(withText("Hello from my unit test!")));
