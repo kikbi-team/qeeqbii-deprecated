@@ -9,6 +9,13 @@
     <string name="salt_graph">Salts</string>
     <string name="barcode_scan_to_product">Go to product</string>
 
+    <string name="Formaldehyde">Formaldehyde</string>
+
+
+
+
+
+
     <!-- Google Sign In -->
     <string name="AppName">Firebase Authentication</string>
 
