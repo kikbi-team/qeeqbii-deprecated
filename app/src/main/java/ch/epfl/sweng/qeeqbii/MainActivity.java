@@ -52,4 +52,10 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, Graphs.class);
         startActivity(intent);
     }
+
+    public void showShoppingList(View view)
+    {
+        Intent intent = new Intent(this, MainApp.class);
+        startActivity(intent);
+    }
 }

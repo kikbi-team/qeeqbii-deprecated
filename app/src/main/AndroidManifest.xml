@@ -3,6 +3,9 @@
     package="ch.epfl.sweng.qeeqbii">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -43,6 +46,85 @@
         <activity android:name="ch.epfl.sweng.qeeqbii.BarcodeActivity" />
         <activity android:name="ch.epfl.sweng.qeeqbii.BarcodeToProductActivity" />
         <activity android:name="ch.epfl.sweng.qeeqbii.Graphs"></activity>
-    </application>
 
+        <activity
+            android:name="ch.epfl.sweng.qeeqbii.MainApp"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="ch.epfl.sweng.qeeqbii.AddItemShoppingList"
+            android:label="@string/title_new"
+            android:parentActivityName="ch.epfl.sweng.qeeqbii.MainApp" >
+
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="ch.epfl.sweng.qeeqbii.MainApp" />
+        </activity>
+
+        <!-- This is my shopping list importer activity -->
+        <activity
+            android:name="ch.epfl.sweng.qeeqbii.ShoppingListImporter"
+            android:label="@string/xml_import"
+            android:parentActivityName="ch.epfl.sweng.qeeqbii.MainApp" >
+
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="ch.epfl.sweng.qeeqbii.MainApp" />
+
+            <!-- For Dropbox, Gmail and Drive -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:mimeType="application/octet-stream" />
+            </intent-filter>
+
+            <!-- Handle intent from a file browser app -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <action android:name="android.intent.action.EDIT" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="file" />
+                <data android:host="*" />
+                <data android:mimeType="*/*" />
+                <data android:pathPattern=".*\\.slx" />
+            </intent-filter>
+        </activity>
+
+        <!-- Activity for the configuration screen -->
+        <activity
+            android:name="ch.epfl.sweng.qeeqbii.vansprefs.UserPreferences"
+            android:label="@string/title_new" >
+
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <!--
+                 <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="br.com.vansact.MainApp" />
+
+            -->
+        </activity>
+
+        <receiver
+            android:name="ch.epfl.sweng.qeeqbii.vansschedule.AlarmeNotificationShoppingList"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="AlarmeNotificationShoppingList" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
+    </application>
 </manifest>
