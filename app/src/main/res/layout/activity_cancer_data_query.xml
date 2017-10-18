@@ -1,26 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/levenshteinCancerDataQueryButton"
+        android:layout_width="151dp"
+        android:layout_height="58dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="105dp"
+        android:onClick="processLevenshteinQueryResult"
+        android:text="LEVENSHTEIN\nQUERY"
+        app:layout_constraintHorizontal_bias="0.879"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintTop_creator="1" />
 
     <EditText
         android:id="@+id/cancerDataQueryTextField"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="Type query here"
-        android:inputType="textPersonName" />
+        android:inputType="textPersonName"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintRight_creator="1"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp" />
 
     <Button
         android:id="@+id/cancerDataQueryButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="processQueryResult"
-        android:text="SEND QUERY" />
+        android:layout_width="153dp"
+        android:layout_height="56dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="42dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="105dp"
+        android:onClick="processPerfectMatchQueryResult"
+        android:text="PERFECT MATCH\nQUERY"
+        app:layout_constraintHorizontal_bias="0.055"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintTop_creator="1" />
 
     <TextView
-        android:id="@+id/perfectQueryAnswerArea"
-        android:layout_width="match_parent"
+        android:id="@+id/queryCancerDataAnswerArea"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="TextView" />
-</LinearLayout>
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="17dp"
+        android:text="Query answer"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cancerDataQueryButton"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintTop_creator="1" />
+
+</android.support.constraint.ConstraintLayout>

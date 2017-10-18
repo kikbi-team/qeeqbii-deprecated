@@ -54,7 +54,7 @@ public class CancerDataShowActivity extends AppCompatActivity {
                 Log.d("MainActivity","Just created: " + sample); //d stands for debugg
             }
         } catch (IOException error) {
-            Log.wtf("MainActivity", "Error reading the data file in the .csv file" + line, error);
+            Log.wtf("MainActivity", "CustomExeptions reading the data file in the .csv file" + line, error);
             error.printStackTrace();
         }
     }
