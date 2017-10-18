@@ -41,6 +41,10 @@ dependencies {
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     compile 'com.google.firebase:firebase-auth:10.0.1'
     compile 'com.google.android.gms:play-services-auth:10.0.1'
+    compile 'com.google.zxing:android-core:3.3.0'
+    compile 'com.google.zxing:android-integration:3.3.0'
+    compile 'com.google.android.gms:play-services:10.0.1'
+
     compile 'com.google.firebase:firebase-database:10.0.1'
     compile 'com.github.PhilJay:MPAndroidChart:v3.0.2'
     testCompile 'junit:junit:4.12'
