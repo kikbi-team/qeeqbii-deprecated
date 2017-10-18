@@ -29,7 +29,7 @@ public class CancerDataQueryActivity extends AppCompatActivity {
         }
     }
 
-    public void processQueryResult(View view) {
+    public void processPerfectMatchQueryResult(View view) {
 
         // Getting the text entered by the user in the text area provided for the query
         EditText query_field = (EditText)findViewById(R.id.cancerDataQueryTextField);
@@ -46,11 +46,32 @@ public class CancerDataQueryActivity extends AppCompatActivity {
 
         // Print answer in TextView
         String query_answer = queried_substance.toString();
-        TextView answer_field = (TextView)findViewById(R.id.perfectQueryAnswerArea);
+        TextView answer_field = (TextView)findViewById(R.id.queryCancerDataAnswerArea);
         answer_field.setText(query_answer);
     }
 
 
+
+    public void processLevenshteinQueryResult(View view) {
+
+        // Getting the text entered by the user in the text area provided for the query
+        EditText query_field = (EditText)findViewById(R.id.cancerDataQueryTextField);
+        String string_queried_substance = query_field.getText().toString();
+
+        // Carrying out the query
+        CancerSubstance queried_substance = new CancerSubstance();
+        try {
+            queried_substance = cancer_data_base.levenshteinMatchQuery(string_queried_substance, 10);
+        }
+        catch(Exception e) {
+            System.err.println("Exception: " + e.getMessage());
+        }
+
+        // Print answer in TextView
+        String query_answer = queried_substance.toString();
+        TextView answer_field = (TextView)findViewById(R.id.queryCancerDataAnswerArea);
+        answer_field.setText(query_answer);
+    }
 
 
 }
