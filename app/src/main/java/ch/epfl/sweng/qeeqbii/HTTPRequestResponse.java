@@ -46,6 +46,8 @@ public class HTTPRequestResponse {
             int current_index = nutrients_ind + 10;
             while (resp_body.indexOf("{", current_index) < resp_body.indexOf("}", current_index))
             {
+                if(resp_body.indexOf("}", current_index) - resp_body.indexOf("{", current_index) == 1)
+                    return "Empty nutrients";
                 //current_index = resp_body.indexOf("\"",current_index)
                 //str += resp_body.substring(current_index+1,resp_body.indexOf("\"",current_index));
                 current_index = resp_body.indexOf("\"" + language + "\"", current_index);
