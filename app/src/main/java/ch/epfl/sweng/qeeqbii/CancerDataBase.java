@@ -51,14 +51,13 @@ public class CancerDataBase {
 
 
 
-/*
+
     // Constructor
     public CancerDataBase() {
         // mopen_state defined to 0 at instantiation because no CSV files have been read
         mopen_state = 0;
-        msubstance_list = new ArrayList<CancerSubstance>();
     }
-    */
+
 
     // Method that reads a CSVFile
     public void readCSVFile(Context context) throws Exception {
@@ -159,7 +158,7 @@ public class CancerDataBase {
                 min_dist = match.getDistance();
             }
         }
-        System.out.println("Distance: " + min_dist);
+        //System.out.println("Distance: " + min_dist);
 
         // We check that there is indeed a match with distance less than max_distance and if not we output
         // an empty CancerSubstance
