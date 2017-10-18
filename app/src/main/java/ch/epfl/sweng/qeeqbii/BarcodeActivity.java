@@ -3,6 +3,7 @@ package ch.epfl.sweng.qeeqbii;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -20,8 +21,14 @@ public class BarcodeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_barcode);
+
         IntentIntegrator integrator = new IntentIntegrator(this);
         integrator.initiateScan();
+    }
+
+    private void goToMain() {
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
     }
 
     public void onActivityResult(int requestCode, int resultCode, Intent intent) {
@@ -33,9 +40,13 @@ public class BarcodeActivity extends AppCompatActivity {
             reportedMessage.setText(scanResult.toString());
             last_barcode = scanResult.getContents();
 
-            // go to openfood search result
-            searchProductFromScannedBarcode();
+
+            // go back to main activity if the barcode was invalid
+            // or the scan was interrupted
+            if(last_barcode == null || last_barcode == "") goToMain();
+            else searchProductFromScannedBarcode();
         }
+        else goToMain();
     }
 
     private void searchProductFromScannedBarcode() {
@@ -46,5 +57,18 @@ public class BarcodeActivity extends AppCompatActivity {
 
     public void searchProductFromScannedBarcode(View view) {
         searchProductFromScannedBarcode();
+    }
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event)  {
+        if (keyCode == KeyEvent.KEYCODE_BACK ) {
+            // go back to main activity after BACK button was pressed
+            Intent intent = new Intent(this, MainActivity.class);
+            startActivity(intent);
+
+            return true;
+        }
+
+        return super.onKeyDown(keyCode, event);
     }
 }

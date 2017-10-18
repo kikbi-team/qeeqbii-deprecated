@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.KeyEvent;
 import android.widget.TextView;
 
 /**
@@ -44,4 +45,18 @@ public class BarcodeToProductActivity extends AppCompatActivity {
             }
         }.execute(barcode);
     }
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event)  {
+        if (keyCode == KeyEvent.KEYCODE_BACK ) {
+            // go back to main activity after BACK button was pressed
+            Intent intent = new Intent(this, MainActivity.class);
+            startActivity(intent);
+
+            return true;
+        }
+
+        return super.onKeyDown(keyCode, event);
+    }
+
 }
