@@ -15,9 +15,12 @@ import org.junit.runner.RunWith;
 
 import static android.support.test.InstrumentationRegistry.getTargetContext;
 import static android.support.test.espresso.Espresso.onView;
+import static android.support.test.espresso.assertion.ViewAssertions.matches;
 import static android.support.test.espresso.intent.Intents.intended;
 import static android.support.test.espresso.intent.matcher.IntentMatchers.hasComponent;
 import static android.support.test.espresso.matcher.ViewMatchers.withId;
+import static android.support.test.espresso.matcher.ViewMatchers.withText;
+import static org.hamcrest.core.StringStartsWith.startsWith;
 import static org.junit.Assert.assertEquals;
 
 /**
@@ -35,8 +38,11 @@ public class BarcodeLeadsToProduct {
 
     @Test
     public void useAppContext() throws Exception {
+        // https://www.openfood.ch/en/products/972
+
         BarcodeActivity activity = mActivityRule.getActivity();
         activity.processBarcode("7611654884033");
         intended(hasComponent(new ComponentName(getTargetContext(), BarcodeToProductActivity.class)));
+        onView(withId(R.id.product_details)).check(matches(withText(startsWith("Chocolat au lait aux noisettes"))));
     }
 }
