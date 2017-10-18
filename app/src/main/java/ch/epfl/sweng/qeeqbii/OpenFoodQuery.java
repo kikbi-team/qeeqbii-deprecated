@@ -15,6 +15,12 @@ import java.net.HttpURLConnection;
 
 public class OpenFoodQuery extends AsyncTask<String, Void, String> {
 
+    public class OpenFoodQueryException extends Exception {
+        public OpenFoodQueryException(String message) {
+            super(message);
+        }
+    }
+
     @Override
     public String doInBackground(String params[])
     {
@@ -39,13 +45,13 @@ public class OpenFoodQuery extends AsyncTask<String, Void, String> {
             int barcode_begin = str.indexOf("barcode")+10;
             if (barcode_begin==9)
             {
-                throw new java.lang.Exception("barcode field not found in the 100 first char of the stream returned");
+                throw new OpenFoodQueryException("barcode field not found in the 100 first char of the stream returned");
             }
             int barcode_end = str.indexOf('\"',barcode_begin);
             String barcode = str.substring(barcode_begin,barcode_end);
             if(!(barcode.equals(params[0])))
             {
-                throw new java.lang.Exception("Barcode not found in the database.");
+                throw new OpenFoodQueryException("Barcode not found in the database.");
             }
             while (data != -1) {
                 char current = (char) data;
@@ -56,9 +62,13 @@ public class OpenFoodQuery extends AsyncTask<String, Void, String> {
 
             return str;
         }
-        catch(Exception e)
+        catch(OpenFoodQueryException e)
         {
-            return e.getMessage();
+            return "ERROR: (openfood) " + e.getMessage();
+        }
+        catch(java.io.IOException e)
+        {
+            return "ERROR: " + e.getMessage();
         }
     }
 }
