@@ -50,6 +50,7 @@
         <activity
             android:name="ch.epfl.sweng.qeeqbii.CancerDataQueryActivity"
             android:parentActivityName="ch.epfl.sweng.qeeqbii.MainActivity"
+            android:exported="true"
             android:configChanges="keyboardHidden|orientation|screenSize">
         </activity>
     </application>
