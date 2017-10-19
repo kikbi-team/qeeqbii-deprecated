@@ -45,7 +45,7 @@ public class OpenFoodQuery extends AsyncTask<String, Void, String> {
             int barcode_begin = str.indexOf("barcode")+10;
             if (barcode_begin==9)
             {
-                throw new java.lang.Exception("Unusable data registered for this product.");
+                throw new OpenFoodQueryException("Unusable data registered for this product.");
             }
             int barcode_end = str.indexOf('\"',barcode_begin);
             String barcode = str.substring(barcode_begin,barcode_end);
