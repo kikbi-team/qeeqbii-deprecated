@@ -7,6 +7,11 @@ package ch.epfl.sweng.qeeqbii;
 public class HTTPRequestResponse {
     private static String resp_body;
 
+    public HTTPRequestResponse()
+    {
+        resp_body = "";
+    }
+
     public HTTPRequestResponse(String str) throws Exception
     {
         if (str.charAt(0) != '{') throw new Exception(str);
