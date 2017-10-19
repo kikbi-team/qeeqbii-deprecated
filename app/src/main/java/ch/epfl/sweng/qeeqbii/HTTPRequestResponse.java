@@ -7,9 +7,12 @@ package ch.epfl.sweng.qeeqbii;
 public class HTTPRequestResponse {
     private static String resp_body;
 
+    private static String ingredients;
+
     public HTTPRequestResponse()
     {
         resp_body = "";
+        ingredients = "";
     }
 
     public HTTPRequestResponse(String str) throws Exception
@@ -17,6 +20,7 @@ public class HTTPRequestResponse {
         if (str.charAt(0) != '{') throw new Exception(str);
         if ((str.substring(0,10).indexOf("[]") != -1)) throw new Exception("Request gave an empty field, the barcode seems not to be present in the database.");
         resp_body = str;
+        ingredients = "";
     }
 
     public static String GetProductName(String language)
@@ -32,11 +36,17 @@ public class HTTPRequestResponse {
     public static String GetProductIngredients(String language)
     {
         int ingredients_ind = resp_body.indexOf("ingredients_translations\":");
-        if (ingredients_ind == -1) return "Ingredients Not Found";
+        if (ingredients_ind == -1)
+        {
+            ingredients = "Ingredients Not Found";
+            return ingredients;
+        }
         int language_ind = resp_body.indexOf("\"" + language + "\"", ingredients_ind);
         int two_dots_ind = resp_body.indexOf(':', language_ind);
 
-        return resp_body.substring(two_dots_ind + 2, resp_body.indexOf('\"',two_dots_ind+2)).replace("\\n","\n").replace("\\r","\r");
+
+        ingredients = resp_body.substring(two_dots_ind + 2, resp_body.indexOf('\"',two_dots_ind+2)).replace("\\n","\n").replace("\\r","\r");
+        return ingredients;
         //We have to check if the replace is worth it
     }
 
@@ -81,6 +91,22 @@ public class HTTPRequestResponse {
         return (quantity + unit).replace("\\n","\n").replace("\\r","\r");
 
     }
+
+    public static String[] ParseIngredients()
+    {
+        if (ingredients.matches("") | ingredients.matches("Ingredients Not Found"))
+        {
+            GetProductIngredients("en");
+        }
+
+        String[] parsed_ingredients = ingredients.split(",");
+
+        System.out.println(parsed_ingredients[0]);
+
+        return parsed_ingredients;
+
+    }
+
 
 
 

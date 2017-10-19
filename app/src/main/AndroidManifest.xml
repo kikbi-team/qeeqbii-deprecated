@@ -40,7 +40,9 @@
                 android:value="ch.epfl.sweng.qeeqbii.MainActivity" />
         </activity>
         <activity android:name="ch.epfl.sweng.qeeqbii.BarcodeActivity" />
-        <activity android:name="ch.epfl.sweng.qeeqbii.BarcodeToProductActivity" />
+        <activity
+            android:name="ch.epfl.sweng.qeeqbii.BarcodeToProductActivity"
+            android:exported="true"/>
         <activity android:name="ch.epfl.sweng.qeeqbii.Graphs"></activity>
         <activity
             android:name="ch.epfl.sweng.qeeqbii.CancerDataQueryActivity"
