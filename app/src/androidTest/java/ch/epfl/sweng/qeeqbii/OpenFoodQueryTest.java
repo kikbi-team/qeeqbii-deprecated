@@ -84,7 +84,7 @@ public class OpenFoodQueryTest {
                     }
                     catch(Exception e)
                     {
-                        assertEquals(e.getMessage(),"Barcode not found in the database.");
+                        assertEquals(e.getMessage(),"ERROR: (openfood) Barcode not found in the database.");
                         assertEquals(resp.GetProductQuantity(), "Quantity Not Found");
                         assertEquals(resp.GetProductName("fr"), "Name Not Found");
                         assertEquals(resp.GetProductIngredients("fr"), "Ingredients Not Found");
