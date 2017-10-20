@@ -85,7 +85,7 @@ public class BarcodeToProductActivity extends AppCompatActivity {
         try {
             cancer_database.readCSVFile(getApplicationContext());
             for (int i = 0; i < parsed_ingredients.length; ++i) {
-                str += cancer_database.levenshteinMatchQuery(parsed_ingredients[i], 10).toString();
+                str += cancer_database.levenshteinMatchQuery(parsed_ingredients[i], 10).toString() + "\n";
 
             }
         }
