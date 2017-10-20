@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
     private ActionBarDrawerToggle mToggle;
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,13 +54,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @SuppressWarnings("UnusedParameters")
-    public void cancerDataBaseShow(View view)
+    public void cancerDataBaseShow(MenuItem item)
     {
         Intent intent = new Intent(this, CancerDataShowActivity.class);
         startActivity(intent);
     }
 
-    public void readBarcode(View view) {
+    public void readBarcode(MenuItem item) {
         Intent intent = new Intent(this, BarcodeActivity.class);
         startActivity(intent);
     }
@@ -67,13 +68,13 @@ public class MainActivity extends AppCompatActivity {
     public void searchProductFromBarcode(View view)
     {
         Intent intent = new Intent(this, BarcodeToProductActivity.class);
-        //EditText editText = (EditText) findViewById(R.id.mainName);
-        //String barcode = editText.getText().toString();
-        //intent.putExtra(BARCODE_READER, barcode);
-        //startActivity(intent);
+        EditText editText = (EditText) findViewById(R.id.mainName);
+        String barcode = editText.getText().toString();
+        intent.putExtra(BARCODE_READER, barcode);
+        startActivity(intent);
     }
 
-    public void showGraphs(View view)
+    public void showGraphs(MenuItem item)
     {
         Intent intent = new Intent(this, Graphs.class);
         startActivity(intent);

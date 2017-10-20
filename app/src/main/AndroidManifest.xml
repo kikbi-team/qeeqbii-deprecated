@@ -21,35 +21,21 @@
             </intent-filter>
         </activity>
 
-        <!--<activity android:name=".GoogleSignInActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+       <activity android:name="ch.epfl.sweng.qeeqbii.MainActivity"/>
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        -->
-       <activity android:name="ch.epfl.sweng.qeeqbii.MainActivity">
-=======
-        <!--
-=======
->>>>>>> 2b08f9c639dd686f9a04f7fcd4dd234dfdaddb23
       <activity android:name=".GoogleSignInActivity">
            <intent-filter>
            <action android:name="android.intent.action.MAIN" />
 
            <category android:name="android.intent.category.LAUNCHER" />
        </intent-filter>
->>>>>>> c626b9e8cd6aef94c55f066d22721bf9b406f9c6
        </activity>
 
-
-        <activity android:name="ch.epfl.sweng.qeeqbii.MainActivity" />
         <activity
             android:name="ch.epfl.sweng.qeeqbii.CancerDataShowActivity"
             android:parentActivityName="ch.epfl.sweng.qeeqbii.MainActivity">
 
-            <!- The meta-data tag is required if you support API level 15 and lower -->
+            <!-- The meta-data tag is required if you support API level 15 and lower -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="ch.epfl.sweng.qeeqbii.MainActivity" />
