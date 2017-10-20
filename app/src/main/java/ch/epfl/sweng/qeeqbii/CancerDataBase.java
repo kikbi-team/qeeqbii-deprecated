@@ -29,7 +29,7 @@ import static java.lang.Integer.MIN_VALUE;
 
 public class CancerDataBase {
 
-    // Attributes
+    // ATTRIBUTES
     private List<CancerSubstance> msubstance_list = new ArrayList<>();
     private HashMap<String, CancerSubstance> msubstance_map = new HashMap<>();
     // mopen_state takes value 0 if no file have been read and takes value 1 if readCSVfile() have
@@ -52,7 +52,7 @@ public class CancerDataBase {
 
 
 
-    // Constructor
+    // CONSTRUCTOR
     public CancerDataBase() {
         // mopen_state defined to 0 at instantiation because no CSV files have been read
         mopen_state = 0;
@@ -72,26 +72,32 @@ public class CancerDataBase {
         String line = null;
         // Step over the headers
         reader.readLine();
-        while ((line = reader.readLine()) != null) {
-            //split by ','
-            String[] tokens = line.split(",");
+        try {
+            while ((line = reader.readLine()) != null) {
+                //split by ','
+                String[] tokens = line.split(",");
 
-            //read the data
-            CancerSubstance new_substance = new CancerSubstance();
+                //read the data
+                CancerSubstance new_substance = new CancerSubstance();
 
-            // Filling of new_substance's attributes
-            new_substance.setmId(Integer.parseInt(tokens[0]));
-            new_substance.setmAgent(tokens[1]); //Here we can add the fact that the dataBase might have leaks
-            new_substance.setmGroup(tokens[2]);
+                // Filling of new_substance's attributes
+                new_substance.setmId(Integer.parseInt(tokens[0]));
+                new_substance.setmAgent(tokens[1]); //Here we can add the fact that the dataBase might have leaks
+                new_substance.setmGroup(tokens[2]);
 
-            // Filling of BK-Tree with the Agent name
-            mbkTree.add(tokens[1]);
+                // Filling of BK-Tree with the Agent name
+                mbkTree.add(tokens[1]);
 
-            //Note if we want to import an int or a double we have to write:
-            //sample.setmGroup(Double.parseDouble(tokens[x]));
-            //sample.setmGroup(Integer.parseInt(tokens[x]));
-            msubstance_list.add(new_substance); //adds the sample to the table with all the data
-            msubstance_map.put(new_substance.getmAgent(), new_substance);
+                //Note if we want to import an int or a double we have to write:
+                //sample.setmGroup(Double.parseDouble(tokens[x]));
+                //sample.setmGroup(Integer.parseInt(tokens[x]));
+                msubstance_list.add(new_substance); //adds the sample to the table with all the data
+                msubstance_map.put(new_substance.getmAgent(), new_substance);
+            }
+        }
+        catch (IOException error) {
+            Log.wtf("MainActivity", "CustomExeptions reading the data file in the .csv file" + line, error);
+            error.printStackTrace();
         }
 
         // Change the mopen_state to value 1 because the file is read

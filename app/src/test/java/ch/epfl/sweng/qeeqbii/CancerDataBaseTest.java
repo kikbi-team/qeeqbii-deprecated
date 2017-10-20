@@ -1,17 +1,34 @@
 package ch.epfl.sweng.qeeqbii;
 
-import android.support.test.InstrumentationRegistry;
-import android.support.test.runner.AndroidJUnit4;
-import android.test.ActivityInstrumentationTestCase2;
 
-import org.junit.Before;
+import org.junit.BeforeClass;
 import org.junit.Test;
-import org.junit.runner.RunWith;
 
-import java.util.Arrays;
-import java.util.List;
+public class CancerDataBaseTest {
 
-@RunWith(AndroidJUnit4.class)
+    CancerDataBase cancer_db_tester;
+
+    @BeforeClass
+    public static void testSetup() {
+        cancer_db_tester = new CancerDataBase();
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//@RunWith(AndroidJUnit4.class)
 
 /* It is important to note here that we tested the behaviour of an activity. This is not an easy
  * since an activity is "refreshed" constantly by the handler loop of the application. It was neces-
@@ -24,6 +41,9 @@ import java.util.List;
  * trsting a class that run in backgroud but a class that is making the link between back end and
  * front end.
  */
+
+
+/*
 
 public class AReadCSVClassShould extends ActivityInstrumentationTestCase2<CancerDataShowActivity>
 {
@@ -49,3 +69,6 @@ public class AReadCSVClassShould extends ActivityInstrumentationTestCase2<Cancer
         assertEquals(expected, data);
     }
 }
+
+
+*/
