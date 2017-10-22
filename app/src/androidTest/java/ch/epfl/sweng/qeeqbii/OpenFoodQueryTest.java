@@ -4,9 +4,13 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
+import android.support.test.espresso.core.deps.guava.collect.Multiset;
 import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
 
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Set;
 import java.util.concurrent.CountDownLatch;
 
 import static junit.framework.TestCase.fail;
@@ -36,18 +40,27 @@ public class OpenFoodQueryTest {
 
                 HTTPRequestResponse resp = new HTTPRequestResponse();
                 try {
-                    HTTPRequestResponse resp2 = new HTTPRequestResponse(result);
-                    assertEquals(resp2.GetProductQuantity(), "245.0g");
-                    assertEquals(resp2.GetProductName("fr"), "Mangue : en tranches");
-                    assertEquals(resp2.GetProductIngredients("fr"), "mangue (Thaïlande), eau, sucre, acidifiant (E330)");
-                    assertEquals(resp2.GetProductNutrients("fr"), "Sel: 0.0g\nProtéines: 0.5g\nFibres alimentaires: 1.5g\nSucres: 15.0g\n" +
+                    resp = new HTTPRequestResponse(result);
+                    assertEquals(resp.GetProductQuantity(), "245.0g");
+                    assertEquals(resp.GetProductName("fr"), "Mangue : en tranches");
+                    assertEquals(resp.GetProductIngredients("fr"), "mangue (Thaïlande), eau, sucre, acidifiant (E330)");
+                    assertEquals(resp.GetProductNutrients("fr"), "Sel: 0.0g\nProtéines: 0.5g\nFibres alimentaires: 1.5g\nSucres: 15.0g\n" +
                             "Glucides: 15.0g\nAcides gras saturées: 0.0g\nMatières grasses: 0.0g\nÉnergie (kCal): 67.0kCal\nÉnergie: 280.0kJ\n");
+                    Map<String, Double> parsed_nutrients = resp.ParseNutrients();
+
+                    //Set<Map.Entry<String,Double>> set = parsed_nutrients.entrySet();
+                    //Iterator<Map.Entry<String,Double>> it = set.iterator();
+                    //Map.Entry<String,Double> e = it.next();
+                    //assertEquals(e.getValue(),new Double(0.0));
+
+                    assertEquals(parsed_nutrients.get("Sel (g)"),new Double(0.0));
+                    assertEquals(parsed_nutrients.get("Énergie (kCal)"),new Double(67.0));
+                    assertEquals(parsed_nutrients.get("Énergie (kJ)"),new Double(280.0));
 
                 } catch (Exception e) {
 
                     fail(e.getMessage());
                 } finally {
-
                     signal.countDown();
                 }
 

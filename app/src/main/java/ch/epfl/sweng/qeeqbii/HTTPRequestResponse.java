@@ -1,18 +1,23 @@
 package ch.epfl.sweng.qeeqbii;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * Created by guillaume on 09/10/17.
  */
 
 public class HTTPRequestResponse {
-    private static String resp_body;
+    private String resp_body = "";
 
-    private static String ingredients;
+    private String ingredients = "";
+    private String nutrients= "";
 
     public HTTPRequestResponse()
     {
         resp_body = "";
         ingredients = "";
+        nutrients = "";
     }
 
     public HTTPRequestResponse(String str) throws Exception
@@ -23,7 +28,7 @@ public class HTTPRequestResponse {
         ingredients = "";
     }
 
-    public static String GetProductName(String language)
+    public String GetProductName(String language)
     {
         int names_ind = resp_body.indexOf("display_name_translations\":");
         if (names_ind == -1) return "Name Not Found";
@@ -33,7 +38,7 @@ public class HTTPRequestResponse {
         return resp_body.substring(two_dots_ind + 2, resp_body.indexOf('\"',two_dots_ind+2)).replace("\\n","\n").replace("\\r","\r");
     }
 
-    public static String GetProductIngredients(String language)
+    public String GetProductIngredients(String language)
     {
         int ingredients_ind = resp_body.indexOf("ingredients_translations\":");
         if (ingredients_ind == -1)
@@ -51,11 +56,12 @@ public class HTTPRequestResponse {
     }
 
 
-    public static String GetProductNutrients(String language) {
+    public String GetProductNutrients(String language) {
         String str = "";
         int nutrients_ind = resp_body.indexOf("nutrients\":");
         if (nutrients_ind == -1) {
-            return "Nutrients Not Found";
+            nutrients = "Nutrients Not Found";
+            return nutrients;
         } else
             {
             int current_index = nutrients_ind + 10;
@@ -75,12 +81,13 @@ public class HTTPRequestResponse {
                 current_index = resp_body.indexOf("},", current_index) + 2;
             }
 
-        return str.replace("\\n","\n").replace("\\r","\r");
+            nutrients = str.replace("\\n","\n").replace("\\r","\r");
+            return nutrients;
         }
 
     }
 
-        public static String GetProductQuantity()
+        public String GetProductQuantity()
     {
         int quantity_ind = resp_body.indexOf("\"quantity\":");
         if (quantity_ind == -1) return "Quantity Not Found";
@@ -92,18 +99,56 @@ public class HTTPRequestResponse {
 
     }
 
-    public static String[] ParseIngredients()
+    public String[] ParseIngredients()
     {
         if (ingredients.matches("") | ingredients.matches("Ingredients Not Found"))
         {
-            GetProductIngredients("en");
+            GetProductIngredients("fr");
         }
 
         String[] parsed_ingredients = ingredients.split(",");
 
-        System.out.println(parsed_ingredients[0]);
-
         return parsed_ingredients;
+
+    }
+
+    public Map<String,Double> ParseNutrients()
+    {
+        if (nutrients.matches("") | nutrients.matches("Nutrients Not Found"))
+        {
+            GetProductNutrients("fr");
+        }
+        String[] parsed_nutrients = nutrients.split("\\n");
+        Map<String,Double> nutrient_map = new HashMap<String, Double>();
+
+        for (int i = 0; i < parsed_nutrients.length; ++i)
+        {
+            String str = parsed_nutrients[i];
+            int two_dots_index = str.indexOf(':');
+            String key = str.substring(0, two_dots_index);
+            int search_alpha = two_dots_index + 1;
+
+            while(!Character.isLetter(str.charAt(search_alpha)))
+            {
+                search_alpha += 1;
+            }
+
+            Double value = Double.parseDouble(str.substring(two_dots_index + 2,search_alpha));
+            System.out.println(value);
+
+            String unit = str.substring(search_alpha, str.length());
+
+            if (key.indexOf("(" + unit + ")") == -1)
+            {
+                key = key + " (" + unit + ")";
+            }
+
+            nutrient_map.put(key,value);
+
+        }
+
+        return nutrient_map;
+
 
     }
 
