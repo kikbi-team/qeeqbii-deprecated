@@ -5,6 +5,7 @@ import android.os.AsyncTask;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.lang.*;
 import java.net.URL;
 import java.net.HttpURLConnection;
 
@@ -14,11 +15,17 @@ import java.net.HttpURLConnection;
 
 public class OpenFoodQuery extends AsyncTask<String, Void, String> {
 
+    public class OpenFoodQueryException extends Exception {
+        public OpenFoodQueryException(String message) {
+            super(message);
+        }
+    }
+
     @Override
     public String doInBackground(String params[])
     {
         try {
-            URL url = new URL("https://www.openfood.ch/api/v3/products?excludes=name_translations&barcodes=" + params[0]);
+            URL url = new URL("https://www.openfood.ch/api/v3/products?excludes=name_translations2Cimages&barcodes=" + params[0]);
             HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
             urlConnection.setRequestMethod("GET");
             urlConnection.setRequestProperty("Content-Type", "application/vnd.api+json");
@@ -30,6 +37,22 @@ public class OpenFoodQuery extends AsyncTask<String, Void, String> {
 
             String str = "";
             int data = isw.read();
+            for(int i = 0; i<100; ++i) {
+                char current = (char) data;
+                data = isw.read();
+                str += current;
+            }
+            int barcode_begin = str.indexOf("barcode")+10;
+            if (barcode_begin==9)
+            {
+                throw new OpenFoodQueryException("Unusable data registered for this product.");
+            }
+            int barcode_end = str.indexOf('\"',barcode_begin);
+            String barcode = str.substring(barcode_begin,barcode_end);
+            if(!(barcode.equals(params[0])))
+            {
+                throw new OpenFoodQueryException("Barcode not found in the database.");
+            }
             while (data != -1) {
                 char current = (char) data;
                 data = isw.read();
@@ -39,9 +62,13 @@ public class OpenFoodQuery extends AsyncTask<String, Void, String> {
 
             return str;
         }
-        catch(Exception e)
+        catch(OpenFoodQueryException e)
         {
-            return e.getMessage();
+            return "ERROR: (openfood) " + e.getMessage();
+        }
+        catch(java.io.IOException e)
+        {
+            return "ERROR: " + e.getMessage();
         }
     }
 }

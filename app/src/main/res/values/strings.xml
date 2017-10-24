@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Qeeqbi</string>
+    <string name="app_name">Qeeqbii</string>
     <string name="welcome_text">With Qeeqbii you will eat healthy again in no time!</string>
     <string name="barcode_button">Barcode Reader</string>
     <string name="cancer_data">Cancer DataBase</string>
@@ -10,6 +10,13 @@
     <string name="open">Open</string>
     <string name="close">Close</string>
     <string name="barcode_scan_to_product">Go to product</string>
+
+    <string name="Formaldehyde">Formaldehyde</string>
+
+
+
+
+
 
     <!-- Google Sign In -->
     <string name="AppName">Firebase Authentication</string>
@@ -87,5 +94,6 @@
 
     <string name="id_fmt">User ID: %s</string>
     <string name="email_fmt">Email: %s</string>
-
+    
+    <string name="search_in_database">Search for harmful ingredients</string>
 </resources>

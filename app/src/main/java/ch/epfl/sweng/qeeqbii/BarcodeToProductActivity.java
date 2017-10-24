@@ -4,6 +4,9 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
+import android.view.KeyEvent;
+import android.view.View;
 import android.widget.TextView;
 
 /**
@@ -11,6 +14,9 @@ import android.widget.TextView;
  */
 
 public class BarcodeToProductActivity extends AppCompatActivity {
+
+    private HTTPRequestResponse product_resp = new HTTPRequestResponse();
+
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -32,10 +38,17 @@ public class BarcodeToProductActivity extends AppCompatActivity {
             {
                 TextView txt = (TextView) findViewById(R.id.product_details);
                 try{
+                    if (result.startsWith("ERROR:"))
+                        throw new Exception(result);
+
                     HTTPRequestResponse response = new HTTPRequestResponse(result);
-                    txt.setText(response.GetProductName("fr") + "\n\nIngredients: " + response.GetProductIngredients("fr") +
-                            "\n\nQuantity: " + response.GetProductQuantity() +
-                            "\n\nNutrients: (per 100g)\n" + response.GetProductNutrients("fr"));
+                    String s = response.GetProductName("fr");
+                    s += "\n\nIngredients: " + response.GetProductIngredients("fr");
+                    s += "\n\nQuantity: "  + response.GetProductQuantity();
+                    s += "\n\nNutrients: (per 100g)\n" + response.GetProductNutrients("fr");
+                    Log.d("STATE", "Product found: " + s);
+                    product_resp = response;
+                    txt.setText(s);
 
                 } catch(Exception e) {
                     txt.setText(e.getMessage());
@@ -44,4 +57,47 @@ public class BarcodeToProductActivity extends AppCompatActivity {
             }
         }.execute(barcode);
     }
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event)  {
+        if (keyCode == KeyEvent.KEYCODE_BACK ) {
+            // go back to main activity after BACK button was pressed
+            Intent intent = new Intent(this, MainActivity.class);
+            startActivity(intent);
+
+            return true;
+        }
+
+        return super.onKeyDown(keyCode, event);
+    }
+
+    public void searchHarmfulIngredients(View view) {
+
+        String[] parsed_ingredients = product_resp.ParseIngredients();
+
+        TextView txt = (TextView) findViewById(R.id.harmful_ingredients);
+
+        CancerDataBase cancer_database = new CancerDataBase();
+
+
+
+        String str = "";
+        try {
+            cancer_database.readCSVFile(getApplicationContext());
+            for (int i = 0; i < parsed_ingredients.length; ++i) {
+                str += cancer_database.levenshteinMatchQuery(parsed_ingredients[i], 10).toString() + "\n";
+
+            }
+        }
+        catch(Exception e)
+        {
+            System.out.println(e.getMessage());
+        }
+
+        txt.setText(str);
+
+    }
+
+
+
 }

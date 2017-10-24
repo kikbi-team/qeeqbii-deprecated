@@ -9,7 +9,7 @@ public class HomeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-    Thread myThread = new Thread() {
+        Thread myThread = new Thread() {
             @Override
             public void run() {
                 try {
@@ -17,12 +17,13 @@ public class HomeActivity extends AppCompatActivity {
                     Intent intent = new Intent(getApplicationContext(), BarcodeActivity.class);
                     startActivity(intent);
                     finish();
-                } catch (InterruptedException e) {
+                }
+                catch (InterruptedException e) {
                     e.printStackTrace();
                 }
             }
         };
-            myThread.start();
-        }
+        myThread.start();
     }
+}
 
