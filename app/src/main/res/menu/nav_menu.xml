@@ -7,16 +7,13 @@
         android:icon="@mipmap/ic_data_usage_black_24dp"/>
 
     <item android:id="@+id/nav_cancerdb"
+        android:icon="@mipmap/ic_smoke_free_black_24dp"
         android:title="Cancer Database"
         android:onClick="cancerDataBaseShow"/>
 
-    <item android:id="@+id/nav_barcode_scan"
+<item android:id="@+id/nav_scan"
+        android:icon="@mipmap/ic_flip_black_24dp"
         android:title="Scan Barcode"
         android:onClick="readBarcode"/>
 
-    <!--<item android:id="@+id/nav_search_product"
-        android:icon="@mipmap/ic_search_black_24dp"
-        android:title="Search Product"
-        android:onClick="searchProductFromBarcode"/>
-    -->
 </menu>
