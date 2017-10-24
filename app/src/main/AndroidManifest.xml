@@ -12,7 +12,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-
         <activity android:name="ch.epfl.sweng.qeeqbii.HomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,8 +20,33 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".GoogleSignInActivity">
+        <activity android:name=".ChooserActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
+        <activity
+            android:name=".GoogleSignInActivity"
+            android:label="@string/label_google_sign_in" />
+        <activity
+            android:name=".FacebookLoginActivity"
+            android:label="@string/label_facebook_login" />
+        <activity
+            android:name=".EmailPasswordActivity"
+            android:label="@string/label_emailpassword"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".AnonymousAuthActivity"
+            android:label="@string/label_anonymous_auth" />
+        <activity
+            android:name=".TwitterLoginActivity"
+            android:label="@string/label_twitter_login" />
+        <activity
+            android:name=".FirebaseUIActivity"
+            android:label="@string/label_firebase_ui" />
+
 
 
         <activity
@@ -32,10 +56,10 @@
         <activity
             android:name="ch.epfl.sweng.qeeqbii.CancerDataShowActivity"
             android:exported="true"
-            android:parentActivityName="ch.epfl.sweng.qeeqbii.MainActivity">
+            android:parentActivityName="ch.epfl.sweng.qeeqbii.MainActivity">-->
 
             <!-- The meta-data tag is required if you support API level 15 and lower -->
-            <meta-data
+           <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="ch.epfl.sweng.qeeqbii.MainActivity" />
         </activity>
@@ -47,7 +71,7 @@
             android:parentActivityName="ch.epfl.sweng.qeeqbii.MainActivity"
             android:exported="true"
             android:configChanges="keyboardHidden|orientation|screenSize">
-        </activity>
+        </activity>-->
     </application>
 
 </manifest>

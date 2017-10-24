@@ -1,8 +1,20 @@
-package ch.epfl.sweng.qeeqbii;
-
 /**
- * Created by Nicolas on 04/10/2017.
+ * Copyright 2016 Google Inc. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  */
+
+package ch.epfl.sweng.qeeqbii;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -50,7 +62,6 @@ public class GoogleSignInActivity extends BaseActivity implements
     private TextView mStatusTextView;
     private TextView mDetailTextView;
 
-
     private DatabaseReference databaseReference;
     private EditText editTextFirstName,editTextLastName,editTextAllergie,editTextGout;
     private Button buttonSave;
@@ -58,7 +69,7 @@ public class GoogleSignInActivity extends BaseActivity implements
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_google_sign_in);
+        setContentView(R.layout.activity_google);
 
         // Views
         mStatusTextView = (TextView) findViewById(R.id.status);
@@ -93,6 +104,7 @@ public class GoogleSignInActivity extends BaseActivity implements
         editTextGout = (EditText) findViewById(R.id.editTextGout);
         buttonSave = (Button) findViewById(R.id.buttonSave);
         buttonSave.setOnClickListener(this);
+
     }
 
     private void saveUserInformation () {
@@ -120,6 +132,7 @@ public class GoogleSignInActivity extends BaseActivity implements
             }
         });
     }
+
     // [START on_start_check_user]
     @Override
     public void onStart() {
@@ -254,8 +267,7 @@ public class GoogleSignInActivity extends BaseActivity implements
             signOut();
         } else if (i == R.id.disconnect_button) {
             revokeAccess();
-        }
-        if (v == buttonSave) {
+        } else if (i == R.id.buttonSave) {
             saveUserInformation();
         }
     }
