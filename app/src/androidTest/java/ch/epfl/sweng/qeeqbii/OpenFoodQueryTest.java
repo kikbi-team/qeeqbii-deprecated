@@ -50,9 +50,9 @@ public class OpenFoodQueryTest {
                     //Map.Entry<String,Double> e = it.next();
                     //assertEquals(e.getValue(),new Double(0.0));
 
-                    assertEquals(parsed_nutrients.get("Sel (g)"),new Double(0.0));
-                    assertEquals(parsed_nutrients.get("Énergie (kCal)"),new Double(67.0));
-                    assertEquals(parsed_nutrients.get("Énergie (kJ)"),new Double(280.0));
+                    assertEquals(parsed_nutrients.get("Sel (g)"), new Double(0.0));
+                    assertEquals(parsed_nutrients.get("Énergie (kCal)"), new Double(67.0));
+                    assertEquals(parsed_nutrients.get("Énergie (kJ)"), new Double(280.0));
 
                 } catch (Exception e) {
 
@@ -72,18 +72,16 @@ public class OpenFoodQueryTest {
         }
     }
 
-        @Test
-        public void QueryOfNonExistingProduct()
-        {
+    @Test
+    public void QueryOfNonExistingProduct() {
         {
             final CountDownLatch signal = new CountDownLatch(1);
             String[] barcode = new String[1];
             barcode[0] = "";
 
-            new OpenFoodQuery()
-            {
-                @Override public void onPostExecute(String result)
-                {
+            new OpenFoodQuery() {
+                @Override
+                public void onPostExecute(String result) {
 
 
                     HTTPRequestResponse resp = new HTTPRequestResponse();
@@ -91,10 +89,8 @@ public class OpenFoodQueryTest {
                         resp = new HTTPRequestResponse(result);
                         fail("request gave: " + resp);
 
-                    }
-                    catch(Exception e)
-                    {
-                        assertEquals(e.getMessage(),"ERROR: (openfood) Barcode not found in the database.");
+                    } catch (Exception e) {
+                        assertEquals(e.getMessage(), "ERROR: (openfood) Barcode not found in the database.");
                         assertEquals(resp.GetProductQuantity(), "Quantity Not Found");
                         assertEquals(resp.GetProductName("fr"), "Name Not Found");
                         assertEquals(resp.GetProductIngredients("fr"), "Ingredients Not Found");
@@ -112,11 +108,10 @@ public class OpenFoodQueryTest {
 
             try {
                 signal.await(); //wait for callback
-            } catch(Exception e) {
+            } catch (Exception e) {
                 fail(e.getMessage());
             }
         }
-
 
 
     }

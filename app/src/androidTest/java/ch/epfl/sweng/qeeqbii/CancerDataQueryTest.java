@@ -26,6 +26,7 @@ public class CancerDataQueryTest {
     @Rule
     public final ActivityTestRule<CancerDataQueryActivity> mActivityRule =
             new ActivityTestRule<>(CancerDataQueryActivity.class);
+
     @Test
     public void testPerfectMatchCancerDataBase() {
         // Useful way of accessing resources
@@ -48,7 +49,6 @@ public class CancerDataQueryTest {
             onView(withId(R.id.cancerDataQueryButton)).perform(click());
             onView(withId(R.id.queryCancerDataAnswerArea)).check(matches(withText(iter[1])));
         }
-
 
 
         //TextView text = (TextView)mActivityRule.getActivity().findViewById(R.id.perfectQueryAnswerArea);

@@ -43,18 +43,16 @@ public class BarcodeActivity extends AppCompatActivity {
             String barcode = scanResult.getContents();
 
             processBarcode(barcode);
-        }
-        else goToMain();
+        } else goToMain();
     }
 
     public void processBarcode(String barcode) {
         // go back to main activity if the barcode was invalid
         // or the scan was interrupted
-        if(barcode == null || barcode == "") {
+        if (barcode == null || barcode == "") {
             Log.d("STATE", "Barcode is invalid, going back to main");
             goToMain();
-        }
-        else {
+        } else {
             Log.d("STATE", "Barcode " + barcode + " found, going to OpenFood");
             Intent intent = new Intent(this, BarcodeToProductActivity.class);
             intent.putExtra(BARCODE_READER, barcode);
@@ -67,8 +65,8 @@ public class BarcodeActivity extends AppCompatActivity {
     }
 
     @Override
-    public boolean onKeyDown(int keyCode, KeyEvent event)  {
-        if (keyCode == KeyEvent.KEYCODE_BACK ) {
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode == KeyEvent.KEYCODE_BACK) {
             // go back to main activity after BACK button was pressed
             Intent intent = new Intent(this, MainActivity.class);
             startActivity(intent);

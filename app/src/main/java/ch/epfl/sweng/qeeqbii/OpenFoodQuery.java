@@ -13,15 +13,8 @@ import java.net.URL;
 
 public class OpenFoodQuery extends AsyncTask<String, Void, String> {
 
-    public class OpenFoodQueryException extends Exception {
-        public OpenFoodQueryException(String message) {
-            super(message);
-        }
-    }
-
     @Override
-    public String doInBackground(String params[])
-    {
+    public String doInBackground(String params[]) {
         try {
             URL url = new URL("https://www.openfood.ch/api/v3/products?excludes=name_translations2Cimages&barcodes=" + params[0]);
             HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
@@ -35,20 +28,18 @@ public class OpenFoodQuery extends AsyncTask<String, Void, String> {
 
             String str = "";
             int data = isw.read();
-            for(int i = 0; i<100; ++i) {
+            for (int i = 0; i < 100; ++i) {
                 char current = (char) data;
                 data = isw.read();
                 str += current;
             }
-            int barcode_begin = str.indexOf("barcode")+10;
-            if (barcode_begin==9)
-            {
+            int barcode_begin = str.indexOf("barcode") + 10;
+            if (barcode_begin == 9) {
                 throw new OpenFoodQueryException("Unusable data registered for this product.");
             }
-            int barcode_end = str.indexOf('\"',barcode_begin);
-            String barcode = str.substring(barcode_begin,barcode_end);
-            if(!(barcode.equals(params[0])))
-            {
+            int barcode_end = str.indexOf('\"', barcode_begin);
+            String barcode = str.substring(barcode_begin, barcode_end);
+            if (!(barcode.equals(params[0]))) {
                 throw new OpenFoodQueryException("Barcode not found in the database.");
             }
             while (data != -1) {
@@ -59,14 +50,16 @@ public class OpenFoodQuery extends AsyncTask<String, Void, String> {
             urlConnection.disconnect();
 
             return str;
-        }
-        catch(OpenFoodQueryException e)
-        {
+        } catch (OpenFoodQueryException e) {
             return "ERROR: (openfood) " + e.getMessage();
-        }
-        catch(java.io.IOException e)
-        {
+        } catch (java.io.IOException e) {
             return "ERROR: " + e.getMessage();
+        }
+    }
+
+    public class OpenFoodQueryException extends Exception {
+        public OpenFoodQueryException(String message) {
+            super(message);
         }
     }
 }

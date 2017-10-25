@@ -38,6 +38,6 @@ public abstract class AsyncTask<Params, Progress, Result> {
         return result;
     }
 
-    public void finish(){
+    public void finish() {
     }
 }

@@ -18,8 +18,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @SuppressWarnings("UnusedParameters")
-    public void cancerDataBaseShow(View view)
-    {
+    public void cancerDataBaseShow(View view) {
         Intent intent = new Intent(this, CancerDataShowActivity.class);
         startActivity(intent);
     }
