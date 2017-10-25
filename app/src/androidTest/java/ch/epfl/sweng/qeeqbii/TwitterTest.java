@@ -1,9 +1,5 @@
 package ch.epfl.sweng.qeeqbii;
 
-/**
- * Created by nicol on 21.10.2017.
- */
-
 import android.support.test.espresso.Espresso;
 import android.support.test.espresso.IdlingResource;
 import android.support.test.espresso.NoMatchingViewException;
@@ -28,19 +24,24 @@ import static org.hamcrest.CoreMatchers.startsWith;
 
 @LargeTest
 @RunWith(AndroidJUnit4.class)
-public class FacebookSignInTest {
+public class TwitterTest {
 
+    private IdlingResource mActivityResource;
+
+    @Rule
+    public ActivityTestRule<AnonymousAuthActivity> mActivityTestRule =
+            new ActivityTestRule<>(AnonymousAuthActivity.class);
 
 
     @Test
-    public void FacebookSignInTest_() {
+    public void TwitterSignInTest_() {
         // Sign out if possible
         signOutIfPossible();
-        //Disconnect if possible
+        //Continue activity
         SaveIfPossible();
 
         // Click sign in
-        onView(allOf(withId(R.id.button_facebook_login), isDisplayed())).perform(click());
+        //onView(allOf(withId(R.id.button_facebook_login), isDisplayed())).perform(click());
 
     }
 
@@ -53,6 +54,16 @@ public class FacebookSignInTest {
         }
 
     }
+    /*private void signInIfPossible() {
+        try {
+            onView(allOf(withId(R.id.button_twitter_login), isDisplayed()))
+                    .perform(click());
+        } catch (NoMatchingViewException e) {
+            // Ignore
+        }
+
+    }*/
+
     private void SaveIfPossible() {
         try {
             onView(allOf(withId(R.id.buttonSave), isDisplayed()))
@@ -62,6 +73,5 @@ public class FacebookSignInTest {
         }
 
     }
-
 
 }
