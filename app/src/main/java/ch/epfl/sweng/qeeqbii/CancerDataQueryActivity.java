@@ -1,6 +1,5 @@
 package ch.epfl.sweng.qeeqbii;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -32,44 +31,41 @@ public class CancerDataQueryActivity extends AppCompatActivity {
     public void processPerfectMatchQueryResult(View view) {
 
         // Getting the text entered by the user in the text area provided for the query
-        EditText query_field = (EditText)findViewById(R.id.cancerDataQueryTextField);
+        EditText query_field = (EditText) findViewById(R.id.cancerDataQueryTextField);
         String string_queried_substance = query_field.getText().toString();
 
         // Carrying out the query
         CancerSubstance queried_substance = new CancerSubstance();
         try {
             queried_substance = cancer_data_base.perfectMatchQuery(string_queried_substance);
-        }
-        catch(Exception e) {
+        } catch (Exception e) {
             System.err.println("Exception: " + e.getMessage());
         }
 
         // Print answer in TextView
         String query_answer = queried_substance.toString();
-        TextView answer_field = (TextView)findViewById(R.id.queryCancerDataAnswerArea);
+        TextView answer_field = (TextView) findViewById(R.id.queryCancerDataAnswerArea);
         answer_field.setText(query_answer);
     }
-
 
 
     public void processLevenshteinQueryResult(View view) {
 
         // Getting the text entered by the user in the text area provided for the query
-        EditText query_field = (EditText)findViewById(R.id.cancerDataQueryTextField);
+        EditText query_field = (EditText) findViewById(R.id.cancerDataQueryTextField);
         String string_queried_substance = query_field.getText().toString();
 
         // Carrying out the query
         CancerSubstance queried_substance = new CancerSubstance();
         try {
             queried_substance = cancer_data_base.levenshteinMatchQuery(string_queried_substance, 10);
-        }
-        catch(Exception e) {
+        } catch (Exception e) {
             System.err.println("Exception: " + e.getMessage());
         }
 
         // Print answer in TextView
         String query_answer = queried_substance.toString();
-        TextView answer_field = (TextView)findViewById(R.id.queryCancerDataAnswerArea);
+        TextView answer_field = (TextView) findViewById(R.id.queryCancerDataAnswerArea);
         answer_field.setText(query_answer);
     }
 

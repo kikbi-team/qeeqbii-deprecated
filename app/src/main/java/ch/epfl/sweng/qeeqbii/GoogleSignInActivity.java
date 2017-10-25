@@ -52,7 +52,7 @@ public class GoogleSignInActivity extends BaseActivity implements
 
 
     private DatabaseReference databaseReference;
-    private EditText editTextFirstName,editTextLastName,editTextAllergie,editTextGout;
+    private EditText editTextFirstName, editTextLastName, editTextAllergie, editTextGout;
     private Button buttonSave;
 
     @Override
@@ -86,7 +86,7 @@ public class GoogleSignInActivity extends BaseActivity implements
         mAuth = FirebaseAuth.getInstance();
         // [END initialize_auth]
 
-        databaseReference= FirebaseDatabase.getInstance().getReference();
+        databaseReference = FirebaseDatabase.getInstance().getReference();
         editTextAllergie = (EditText) findViewById(R.id.editTextAllergie);
         editTextFirstName = (EditText) findViewById(R.id.editTextFirstName);
         editTextLastName = (EditText) findViewById(R.id.editTextLastName);
@@ -95,16 +95,16 @@ public class GoogleSignInActivity extends BaseActivity implements
         buttonSave.setOnClickListener(this);
     }
 
-    private void saveUserInformation () {
+    private void saveUserInformation() {
 
-        String firstname= editTextFirstName.getText().toString().trim();
-        String lastname= editTextLastName.getText().toString().trim();
-        String allergie= editTextAllergie.getText().toString().trim();
-        String gout= editTextGout.getText().toString().trim();
+        String firstname = editTextFirstName.getText().toString().trim();
+        String lastname = editTextLastName.getText().toString().trim();
+        String allergie = editTextAllergie.getText().toString().trim();
+        String gout = editTextGout.getText().toString().trim();
 
-        UserInformation userInformation = new UserInformation(firstname,lastname,allergie,gout);
+        UserInformation userInformation = new UserInformation(firstname, lastname, allergie, gout);
 
-        FirebaseUser user= mAuth.getCurrentUser();
+        FirebaseUser user = mAuth.getCurrentUser();
 
         databaseReference.child(user.getUid()).setValue(userInformation);
 
@@ -120,6 +120,7 @@ public class GoogleSignInActivity extends BaseActivity implements
             }
         });
     }
+
     // [START on_start_check_user]
     @Override
     public void onStart() {

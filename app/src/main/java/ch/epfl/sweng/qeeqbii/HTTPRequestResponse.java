@@ -11,38 +11,34 @@ public class HTTPRequestResponse {
     private String resp_body = "";
 
     private String ingredients = "";
-    private String nutrients= "";
+    private String nutrients = "";
 
-    public HTTPRequestResponse()
-    {
+    public HTTPRequestResponse() {
         resp_body = "";
         ingredients = "";
         nutrients = "";
     }
 
-    public HTTPRequestResponse(String str) throws Exception
-    {
+    public HTTPRequestResponse(String str) throws Exception {
         if (str.charAt(0) != '{') throw new Exception(str);
-        if ((str.substring(0,10).indexOf("[]") != -1)) throw new Exception("Request gave an empty field, the barcode seems not to be present in the database.");
+        if ((str.substring(0, 10).indexOf("[]") != -1))
+            throw new Exception("Request gave an empty field, the barcode seems not to be present in the database.");
         resp_body = str;
         ingredients = "";
     }
 
-    public String GetProductName(String language)
-    {
+    public String GetProductName(String language) {
         int names_ind = resp_body.indexOf("display_name_translations\":");
         if (names_ind == -1) return "Name Not Found";
         int language_ind = resp_body.indexOf("\"" + language + "\"", names_ind);
         int two_dots_ind = resp_body.indexOf(':', language_ind);
 
-        return resp_body.substring(two_dots_ind + 2, resp_body.indexOf('\"',two_dots_ind+2)).replace("\\n","\n").replace("\\r","\r");
+        return resp_body.substring(two_dots_ind + 2, resp_body.indexOf('\"', two_dots_ind + 2)).replace("\\n", "\n").replace("\\r", "\r");
     }
 
-    public String GetProductIngredients(String language)
-    {
+    public String GetProductIngredients(String language) {
         int ingredients_ind = resp_body.indexOf("ingredients_translations\":");
-        if (ingredients_ind == -1)
-        {
+        if (ingredients_ind == -1) {
             ingredients = "Ingredients Not Found";
             return ingredients;
         }
@@ -50,7 +46,7 @@ public class HTTPRequestResponse {
         int two_dots_ind = resp_body.indexOf(':', language_ind);
 
 
-        ingredients = resp_body.substring(two_dots_ind + 2, resp_body.indexOf('\"',two_dots_ind+2)).replace("\\n","\n").replace("\\r","\r");
+        ingredients = resp_body.substring(two_dots_ind + 2, resp_body.indexOf('\"', two_dots_ind + 2)).replace("\\n", "\n").replace("\\r", "\r");
         return ingredients;
         //We have to check if the replace is worth it
     }
@@ -62,12 +58,10 @@ public class HTTPRequestResponse {
         if (nutrients_ind == -1) {
             nutrients = "Nutrients Not Found";
             return nutrients;
-        } else
-            {
+        } else {
             int current_index = nutrients_ind + 10;
-            while (resp_body.indexOf("{", current_index) < resp_body.indexOf("}", current_index))
-            {
-                if(resp_body.indexOf("}", current_index) - resp_body.indexOf("{", current_index) == 1)
+            while (resp_body.indexOf("{", current_index) < resp_body.indexOf("}", current_index)) {
+                if (resp_body.indexOf("}", current_index) - resp_body.indexOf("{", current_index) == 1)
                     return "Empty nutrients";
                 //current_index = resp_body.indexOf("\"",current_index)
                 //str += resp_body.substring(current_index+1,resp_body.indexOf("\"",current_index));
@@ -81,28 +75,25 @@ public class HTTPRequestResponse {
                 current_index = resp_body.indexOf("},", current_index) + 2;
             }
 
-            nutrients = str.replace("\\n","\n").replace("\\r","\r");
+            nutrients = str.replace("\\n", "\n").replace("\\r", "\r");
             return nutrients;
         }
 
     }
 
-        public String GetProductQuantity()
-    {
+    public String GetProductQuantity() {
         int quantity_ind = resp_body.indexOf("\"quantity\":");
         if (quantity_ind == -1) return "Quantity Not Found";
-        String quantity = resp_body.substring(quantity_ind +11,resp_body.indexOf(',',quantity_ind));
-        int unit_ind = resp_body.indexOf("\"unit\"",quantity_ind);
-        String unit = resp_body.substring(unit_ind + 8, resp_body.indexOf(',',unit_ind)-1);
+        String quantity = resp_body.substring(quantity_ind + 11, resp_body.indexOf(',', quantity_ind));
+        int unit_ind = resp_body.indexOf("\"unit\"", quantity_ind);
+        String unit = resp_body.substring(unit_ind + 8, resp_body.indexOf(',', unit_ind) - 1);
 
-        return (quantity + unit).replace("\\n","\n").replace("\\r","\r");
+        return (quantity + unit).replace("\\n", "\n").replace("\\r", "\r");
 
     }
 
-    public String[] ParseIngredients()
-    {
-        if (ingredients.matches("") | ingredients.matches("Ingredients Not Found"))
-        {
+    public String[] ParseIngredients() {
+        if (ingredients.matches("") | ingredients.matches("Ingredients Not Found")) {
             GetProductIngredients("fr");
         }
 
@@ -112,38 +103,33 @@ public class HTTPRequestResponse {
 
     }
 
-    public Map<String,Double> ParseNutrients()
-    {
-        if (nutrients.matches("") | nutrients.matches("Nutrients Not Found"))
-        {
+    public Map<String, Double> ParseNutrients() {
+        if (nutrients.matches("") | nutrients.matches("Nutrients Not Found")) {
             GetProductNutrients("fr");
         }
         String[] parsed_nutrients = nutrients.split("\\n");
-        Map<String,Double> nutrient_map = new HashMap<String, Double>();
+        Map<String, Double> nutrient_map = new HashMap<String, Double>();
 
-        for (int i = 0; i < parsed_nutrients.length; ++i)
-        {
+        for (int i = 0; i < parsed_nutrients.length; ++i) {
             String str = parsed_nutrients[i];
             int two_dots_index = str.indexOf(':');
             String key = str.substring(0, two_dots_index);
             int search_alpha = two_dots_index + 1;
 
-            while(!Character.isLetter(str.charAt(search_alpha)))
-            {
+            while (!Character.isLetter(str.charAt(search_alpha))) {
                 search_alpha += 1;
             }
 
-            Double value = Double.parseDouble(str.substring(two_dots_index + 2,search_alpha));
+            Double value = Double.parseDouble(str.substring(two_dots_index + 2, search_alpha));
             System.out.println(value);
 
             String unit = str.substring(search_alpha, str.length());
 
-            if (key.indexOf("(" + unit + ")") == -1)
-            {
+            if (key.indexOf("(" + unit + ")") == -1) {
                 key = key + " (" + unit + ")";
             }
 
-            nutrient_map.put(key,value);
+            nutrient_map.put(key, value);
 
         }
 
@@ -151,9 +137,6 @@ public class HTTPRequestResponse {
 
 
     }
-
-
-
 
 
 }

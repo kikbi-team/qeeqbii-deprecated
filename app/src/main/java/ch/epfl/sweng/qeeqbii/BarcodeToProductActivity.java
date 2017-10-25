@@ -18,39 +18,37 @@ public class BarcodeToProductActivity extends AppCompatActivity {
     private HTTPRequestResponse product_resp = new HTTPRequestResponse();
 
     @Override
-    protected void onCreate(Bundle savedInstanceState)
-    {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_show_product_details);
 
         Intent intent = getIntent();
         String barcode = intent.getStringExtra(MainActivity.BARCODE_READER);
-        String[] barcode_array= new String[1];
+        String[] barcode_array = new String[1];
         barcode_array[0] = barcode;
 
         // Capture the layout's; TextView and set the string as its text
         final TextView txt = (TextView) findViewById(R.id.product_details);
         txt.setTextSize(20);
-        txt.setTextColor(Color.rgb(0,0,0));
-        new OpenFoodQuery()
-        {
-            @Override public void onPostExecute(String result)
-            {
+        txt.setTextColor(Color.rgb(0, 0, 0));
+        new OpenFoodQuery() {
+            @Override
+            public void onPostExecute(String result) {
                 TextView txt = (TextView) findViewById(R.id.product_details);
-                try{
+                try {
                     if (result.startsWith("ERROR:"))
                         throw new Exception(result);
 
                     HTTPRequestResponse response = new HTTPRequestResponse(result);
                     String s = response.GetProductName("fr");
                     s += "\n\nIngredients: " + response.GetProductIngredients("fr");
-                    s += "\n\nQuantity: "  + response.GetProductQuantity();
+                    s += "\n\nQuantity: " + response.GetProductQuantity();
                     s += "\n\nNutrients: (per 100g)\n" + response.GetProductNutrients("fr");
                     Log.d("STATE", "Product found: " + s);
                     product_resp = response;
                     txt.setText(s);
 
-                } catch(Exception e) {
+                } catch (Exception e) {
                     txt.setText(e.getMessage());
                 }
 
@@ -59,8 +57,8 @@ public class BarcodeToProductActivity extends AppCompatActivity {
     }
 
     @Override
-    public boolean onKeyDown(int keyCode, KeyEvent event)  {
-        if (keyCode == KeyEvent.KEYCODE_BACK ) {
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode == KeyEvent.KEYCODE_BACK) {
             // go back to main activity after BACK button was pressed
             Intent intent = new Intent(this, MainActivity.class);
             startActivity(intent);
@@ -80,7 +78,6 @@ public class BarcodeToProductActivity extends AppCompatActivity {
         CancerDataBase cancer_database = new CancerDataBase();
 
 
-
         String str = "";
         try {
             cancer_database.readCSVFile(getApplicationContext());
@@ -88,16 +85,13 @@ public class BarcodeToProductActivity extends AppCompatActivity {
                 str += cancer_database.levenshteinMatchQuery(parsed_ingredients[i], 10).toString() + "\n";
 
             }
-        }
-        catch(Exception e)
-        {
+        } catch (Exception e) {
             System.out.println(e.getMessage());
         }
 
         txt.setText(str);
 
     }
-
 
 
 }

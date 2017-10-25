@@ -2,7 +2,6 @@ package ch.epfl.sweng.qeeqbii;
 
 import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
-import android.widget.TextView;
 
 import org.junit.Rule;
 import org.junit.Test;
@@ -14,7 +13,6 @@ import java.util.List;
 import static android.support.test.espresso.Espresso.onView;
 import static android.support.test.espresso.action.ViewActions.click;
 import static android.support.test.espresso.action.ViewActions.replaceText;
-import static android.support.test.espresso.action.ViewActions.typeText;
 import static android.support.test.espresso.assertion.ViewAssertions.matches;
 import static android.support.test.espresso.matcher.ViewMatchers.withId;
 import static android.support.test.espresso.matcher.ViewMatchers.withText;
@@ -28,6 +26,7 @@ public class CancerDataQueryTest {
     @Rule
     public final ActivityTestRule<CancerDataQueryActivity> mActivityRule =
             new ActivityTestRule<>(CancerDataQueryActivity.class);
+
     @Test
     public void testPerfectMatchCancerDataBase() {
         // Useful way of accessing resources
@@ -50,7 +49,6 @@ public class CancerDataQueryTest {
             onView(withId(R.id.cancerDataQueryButton)).perform(click());
             onView(withId(R.id.queryCancerDataAnswerArea)).check(matches(withText(iter[1])));
         }
-
 
 
         //TextView text = (TextView)mActivityRule.getActivity().findViewById(R.id.perfectQueryAnswerArea);
