@@ -2,12 +2,10 @@ package ch.epfl.sweng.qeeqbii;
 
 import android.os.AsyncTask;
 
-import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.lang.*;
-import java.net.URL;
 import java.net.HttpURLConnection;
+import java.net.URL;
 
 /**
  * Created by guillaume on 06/10/17.

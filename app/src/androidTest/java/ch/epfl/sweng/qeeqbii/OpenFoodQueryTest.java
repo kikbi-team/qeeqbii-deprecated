@@ -1,16 +1,13 @@
 package ch.epfl.sweng.qeeqbii;
 
+import android.support.test.rule.ActivityTestRule;
+import android.support.test.runner.AndroidJUnit4;
+
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
-import android.support.test.espresso.core.deps.guava.collect.Multiset;
-import android.support.test.rule.ActivityTestRule;
-import android.support.test.runner.AndroidJUnit4;
-
-import java.util.Iterator;
 import java.util.Map;
-import java.util.Set;
 import java.util.concurrent.CountDownLatch;
 
 import static junit.framework.TestCase.fail;

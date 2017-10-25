@@ -1,7 +1,5 @@
 package android.os;
 
-import android.util.Log;
-
 import java.util.concurrent.ExecutionException;
 
 /**

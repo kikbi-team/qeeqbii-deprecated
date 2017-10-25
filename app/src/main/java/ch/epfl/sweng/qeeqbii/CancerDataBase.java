@@ -2,10 +2,8 @@ package ch.epfl.sweng.qeeqbii;
 
 import android.content.Context;
 import android.content.res.Resources;
-import android.util.Log;
 
 import java.io.BufferedReader;
-import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.nio.charset.Charset;
@@ -17,11 +15,9 @@ import java.util.Set;
 import edu.gatech.gtri.bktree.BkTreeSearcher;
 import edu.gatech.gtri.bktree.Metric;
 import edu.gatech.gtri.bktree.MutableBkTree;
-import info.debatty.java.stringsimilarity.Damerau;
 import info.debatty.java.stringsimilarity.Levenshtein;
 
 import static java.lang.Integer.MAX_VALUE;
-import static java.lang.Integer.MIN_VALUE;
 
 /**
  * Created by adrien on 12/10/17.
