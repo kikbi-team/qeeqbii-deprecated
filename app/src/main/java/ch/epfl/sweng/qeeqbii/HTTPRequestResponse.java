@@ -1,5 +1,6 @@
 package ch.epfl.sweng.qeeqbii;
 
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -20,12 +21,15 @@ public class HTTPRequestResponse {
         nutrients = "";
     }
 
-    public HTTPRequestResponse(String str) throws Exception
+    public HTTPRequestResponse(String str) throws IOException
     {
-        if (str.charAt(0) != '{') throw new Exception(str);
-        if ((str.substring(0,10).indexOf("[]") != -1)) throw new Exception("Request gave an empty field, the barcode seems not to be present in the database.");
+        // Normally this error should not happen anymore
+        if (str.charAt(0) != '{') throw new IOException(str);
+        // To change to either OpenFoodQueryException or HTTPRequestException
+        if ((str.substring(0,10).indexOf("[]") != -1)) throw new IOException("Request gave an empty field, the barcode seems not to be present in the database.");
         resp_body = str;
         ingredients = "";
+        nutrients = "";
     }
 
     public String GetProductName(String language)

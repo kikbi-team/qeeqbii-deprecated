@@ -1,6 +1,9 @@
 package ch.epfl.sweng.qeeqbii;
 
+import android.graphics.Path;
 import android.os.AsyncTask;
+
+import org.apache.http.params.HttpParams;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -8,12 +11,20 @@ import java.io.InputStreamReader;
 import java.lang.*;
 import java.net.URL;
 import java.net.HttpURLConnection;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Created by guillaume on 06/10/17.
  */
 
 public class OpenFoodQuery extends AsyncTask<String, Void, String> {
+
+    private static Map<String,HTTPRequestResponse> resp_cache = new HashMap<String, HTTPRequestResponse>();
+
+    private static Map<String,String> error_cache = new HashMap<String, String>();
+
+    private static String[] barcode_list;
 
     public class OpenFoodQueryException extends Exception {
         public OpenFoodQueryException(String message) {
@@ -22,10 +33,11 @@ public class OpenFoodQuery extends AsyncTask<String, Void, String> {
     }
 
     @Override
-    public String doInBackground(String params[])
+    protected String doInBackground(String params[])
     {
+        String barcode = params[0];
         try {
-            URL url = new URL("https://www.openfood.ch/api/v3/products?excludes=name_translations2Cimages&barcodes=" + params[0]);
+            URL url = new URL("https://www.openfood.ch/api/v3/products?excludes=name_translations2Cimages&barcodes=" + barcode);
             HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
             urlConnection.setRequestMethod("GET");
             urlConnection.setRequestProperty("Content-Type", "application/vnd.api+json");
@@ -48,8 +60,8 @@ public class OpenFoodQuery extends AsyncTask<String, Void, String> {
                 throw new OpenFoodQueryException("Unusable data registered for this product.");
             }
             int barcode_end = str.indexOf('\"',barcode_begin);
-            String barcode = str.substring(barcode_begin,barcode_end);
-            if(!(barcode.equals(params[0])))
+            String barcode_found = str.substring(barcode_begin,barcode_end);
+            if(!(barcode_found.equals(barcode)))
             {
                 throw new OpenFoodQueryException("Barcode not found in the database.");
             }
@@ -60,15 +72,40 @@ public class OpenFoodQuery extends AsyncTask<String, Void, String> {
             }
             urlConnection.disconnect();
 
-            return str;
+            resp_cache.put(barcode, new HTTPRequestResponse(str));
         }
         catch(OpenFoodQueryException e)
         {
-            return "ERROR: (openfood) " + e.getMessage();
+            error_cache.put(barcode, "ERROR: (openfood) " + e.getMessage());
         }
         catch(java.io.IOException e)
         {
-            return "ERROR: " + e.getMessage();
+            error_cache.put(barcode, "ERROR: " + e.getMessage());
+        }
+
+        return barcode;
+    }
+
+    public static HTTPRequestResponse GetOrCreateHTTPRequestResponse(String barcode) throws Exception
+    {
+        if(resp_cache.containsKey(barcode))
+        {
+            return resp_cache.get(barcode);
+        }
+
+        new OpenFoodQuery() {
+            @Override
+            protected void onPostExecute(String barcode) {
+
+
+            }
+        }.execute(barcode);
+
+        if(resp_cache.containsKey(barcode))
+        {
+            return resp_cache.get(barcode);
+        } else {
+            throw new Exception(error_cache.get(barcode));
         }
     }
 }
