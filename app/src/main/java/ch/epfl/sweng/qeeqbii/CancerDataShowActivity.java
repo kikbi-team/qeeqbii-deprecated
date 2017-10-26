@@ -3,16 +3,8 @@ package ch.epfl.sweng.qeeqbii;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.widget.TextView;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.nio.charset.Charset;
-import java.util.ArrayList;
-import java.util.List;
 
 public class CancerDataShowActivity extends AppCompatActivity {
 
@@ -25,14 +17,13 @@ public class CancerDataShowActivity extends AppCompatActivity {
         // Instantiation of a CancerDataBase object followed by:
         // reading of the CSV file using the readCSVFile method
         // sending of a message
-        CancerDataBase cancer_data_base = new CancerDataBase();
-        String message = new String();
+        String message;
         try {
-            cancer_data_base.readCSVFile(getApplicationContext());
-            message = cancer_data_base.sendOutputReadyToPrint();
+            message = CancerDataBase.sendOutputReadyToPrint();
         }
         catch(Exception e) {
             System.err.println("Exception: " + e.getMessage());
+            message = "Failed to get the CancerDataBase in CancerDataShowActivity.";
         }
 
         // Capture the layout's; TextView and set the string as its text

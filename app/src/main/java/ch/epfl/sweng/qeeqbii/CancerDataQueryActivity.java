@@ -1,32 +1,18 @@
 package ch.epfl.sweng.qeeqbii;
 
-import android.content.Intent;
+
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
-/**
- * Created by adrien on 13/10/17.
- */
 
 public class CancerDataQueryActivity extends AppCompatActivity {
-
-    private CancerDataBase cancer_data_base = new CancerDataBase();
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cancer_data_query);
-
-        String message = new String();
-        try {
-            cancer_data_base.readCSVFile(getApplicationContext());
-        } catch (Exception e) {
-            System.err.println("Exception: " + e.getMessage());
-        }
     }
 
     public void processPerfectMatchQueryResult(View view) {
@@ -38,7 +24,7 @@ public class CancerDataQueryActivity extends AppCompatActivity {
         // Carrying out the query
         CancerSubstance queried_substance = new CancerSubstance();
         try {
-            queried_substance = cancer_data_base.perfectMatchQuery(string_queried_substance);
+            queried_substance = CancerDataBase.perfectMatchQuery(string_queried_substance);
         }
         catch(Exception e) {
             System.err.println("Exception: " + e.getMessage());
@@ -61,7 +47,7 @@ public class CancerDataQueryActivity extends AppCompatActivity {
         // Carrying out the query
         CancerSubstance queried_substance = new CancerSubstance();
         try {
-            queried_substance = cancer_data_base.levenshteinMatchQuery(string_queried_substance, 10);
+            queried_substance = CancerDataBase.levenshteinMatchQuery(string_queried_substance, 10);
         }
         catch(Exception e) {
             System.err.println("Exception: " + e.getMessage());

@@ -17,50 +17,44 @@ import java.util.Set;
 import edu.gatech.gtri.bktree.BkTreeSearcher;
 import edu.gatech.gtri.bktree.Metric;
 import edu.gatech.gtri.bktree.MutableBkTree;
-import info.debatty.java.stringsimilarity.Damerau;
 import info.debatty.java.stringsimilarity.Levenshtein;
 
 import static java.lang.Integer.MAX_VALUE;
-import static java.lang.Integer.MIN_VALUE;
 
-/**
- * Created by adrien on 12/10/17.
- */
 
-public class CancerDataBase {
+class CancerDataBase {
 
     // ATTRIBUTES
-    private List<CancerSubstance> msubstance_list = new ArrayList<>();
-    private HashMap<String, CancerSubstance> msubstance_map = new HashMap<>();
+    static private List<CancerSubstance> msubstance_list = new ArrayList<>();
+    static private HashMap<String, CancerSubstance> msubstance_map = new HashMap<>();
     // mopen_state takes value 0 if no file have been read and takes value 1 if readCSVfile() have
     // been called and succeeded in reading a CSV file
-    private int mopen_state;
+    static private int mopen_state;
 
     // Definition of the hamming distance that will be used to query the database
     // The Levenshtein distance is chosen here
-    private Metric<String> mhammingLevenshtein = new Metric<String>() {
+    static private Metric<String> mhammingLevenshtein = new Metric<String>() {
         @Override
         public int distance(String x, String y) {
             Levenshtein levenshtein = new Levenshtein();
-            int distance = (int) Math.round(levenshtein.distance(x, y));
-            return distance;
+            return (int) Math.round(levenshtein.distance(x, y));
         }
     };
-    private MutableBkTree<String> mbkTree = new MutableBkTree<>(mhammingLevenshtein);
+    static private MutableBkTree<String> mbkTree = new MutableBkTree<>(mhammingLevenshtein);
 
 
 
 
 
     // CONSTRUCTOR
-    public CancerDataBase() {
+    CancerDataBase() {
         // mopen_state defined to 0 at instantiation because no CSV files have been read
         mopen_state = 0;
     }
 
 
     // Method that reads a CSVFile
-    public void readCSVFile(Context context) throws Exception {
+    static void readCSVFile(Context context) throws Exception {
         if (mopen_state == 1) {
             throw new Exception("Tried to open carcinogenic database whereas it's already done.\n");
         }
@@ -105,7 +99,7 @@ public class CancerDataBase {
     }
 
     // Method that outputs a string containing a summary of all the substances and their categorization
-    public String sendOutputReadyToPrint() throws Exception {
+    static String sendOutputReadyToPrint() throws Exception {
         if (mopen_state == 1) {
             String output = " id\tAgent\t\tGroup\n";
             for (int i = 0; i < msubstance_list.size(); i++) {
@@ -123,7 +117,7 @@ public class CancerDataBase {
     // the substance and its group classification if the substance is found
     // or an empty CancerSubstance object if the queried substance didn't match perfectly
     // with a substance of the database
-    public CancerSubstance perfectMatchQuery(String queried_substance) throws NotOpenFileException, NullInputException {
+    static CancerSubstance perfectMatchQuery(String queried_substance) throws NotOpenFileException, NullInputException {
         if (mopen_state == 0) {
             throw new NotOpenFileException("Read the carcinogenic database before trying to query it.\n");
         }
@@ -134,15 +128,14 @@ public class CancerDataBase {
         CancerSubstance output_substance = msubstance_map.get(queried_substance);
 
         if (output_substance == null) {
-            CancerSubstance empty_substance = new CancerSubstance();
-            return empty_substance;
+            return new CancerSubstance();
         }
 
         return output_substance;
     }
 
 
-    public CancerSubstance levenshteinMatchQuery(String queried_substance, int max_distance)
+    static CancerSubstance levenshteinMatchQuery(String queried_substance, int max_distance)
             throws NotOpenFileException, NullInputException {
         if (mopen_state == 0) {
             throw new NotOpenFileException("Read the carcinogenic database before trying to query it.\n");
@@ -164,7 +157,6 @@ public class CancerDataBase {
                 min_dist = match.getDistance();
             }
         }
-        //System.out.println("Distance: " + min_dist);
 
         // We check that there is indeed a match with distance less than max_distance and if not we output
         // an empty CancerSubstance
@@ -173,9 +165,7 @@ public class CancerDataBase {
             // Output the substance as an empty CancerSubstance (Query failed)
             return output_substance;
         }
-
         output_substance = msubstance_map.get(kept_match);
-
         return output_substance;
     }
 }

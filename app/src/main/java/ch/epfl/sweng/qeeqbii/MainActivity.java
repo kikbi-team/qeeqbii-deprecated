@@ -11,6 +11,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.io.Serializable;
 import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.List;
@@ -20,10 +21,17 @@ import static ch.epfl.sweng.qeeqbii.R.layout.activity_main;
 public class MainActivity extends AppCompatActivity {
     public static final String BARCODE_READER = "ch.epfl.sweng.qeeqbii.mainBarcode";
 
+    //private CancerDataBase cancer_data_base = new CancerDataBase();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        try {
+            CancerDataBase.readCSVFile(getApplicationContext());
+        }
+        catch(Exception e) {
+            System.err.println("Exception: " + e.getMessage());
+        }
         setContentView(activity_main);
     }
 
