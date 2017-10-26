@@ -59,7 +59,7 @@ class CancerDataBase {
         InputStream inStream = resources.openRawResource(R.raw.original_classification_iarc_english);
         BufferedReader reader = new BufferedReader(new InputStreamReader(inStream, Charset.forName("UTF-8")));
 
-        String line = null;
+        String line = new String();
         // Step over the headers
         reader.readLine();
         try {

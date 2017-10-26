@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/grey_100"
     android:orientation="vertical"
     android:weightSum="4">
 
@@ -44,25 +43,22 @@
             style="@style/ThemeOverlay.MyTextDetail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:hint="@string/FirstNameText" />
+            android:hint="@string/first_name" />
 
         <EditText
             android:id="@+id/editTextLastName"
             style="@style/ThemeOverlay.MyTextDetail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:hint="Last_Name" />
+            android:hint="@string/last_name" />
 
         <EditText
             android:id="@+id/editTextAllergie"
             style="@style/ThemeOverlay.MyTextDetail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:ems="10"
-            android:hint="Allergies: "
+            android:hint="@string/allergies"
             android:inputType="textPersonName" />
 
         <EditText
@@ -70,9 +66,8 @@
             style="@style/ThemeOverlay.MyTextDetail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:ems="10"
-            android:hint="Aliments à proscrire"
+            android:hint="@string/aliments_proscrire"
             android:inputType="textMultiLine" />
 
 
@@ -102,14 +97,17 @@
             android:paddingLeft="16dp"
             android:paddingRight="16dp"
             android:visibility="gone"
-            tools:visibility="visible">
+            tools:visibility="visible"
+            style="?android:attr/buttonBarStyle">
 
             <Button
                 android:id="@+id/buttonSave"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Save and continue" />
+                style="?android:attr/buttonBarButtonStyle"
+                android:text="@string/save_and_continue"
+                tools:ignore="ButtonStyle" />
 
             <Button
                 android:id="@+id/sign_out_button"
@@ -117,6 +115,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/sign_out"
+                style="?android:attr/buttonBarButtonStyle"
                 android:theme="@style/ThemeOverlay.MyDarkButton" />
 
             <Button
@@ -125,6 +124,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/disconnect"
+                style="?android:attr/buttonBarButtonStyle"
                 android:theme="@style/ThemeOverlay.MyDarkButton" />
         </LinearLayout>
 

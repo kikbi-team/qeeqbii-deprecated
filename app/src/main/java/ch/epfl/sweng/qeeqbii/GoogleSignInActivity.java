@@ -102,11 +102,8 @@ public class GoogleSignInActivity extends BaseActivity implements
 
         FirebaseUser user = mAuth.getCurrentUser();
 
-        // Be careful here to handle the case of a null user.
-        // Maybe try to set up an Exception
-        if (user != null) {
-            databaseReference.child(user.getUid()).setValue(userInformation);
-        }
+        assert user != null;
+        databaseReference.child(user.getUid()).setValue(userInformation);
 
         Toast.makeText(this, "Information Saved...", Toast.LENGTH_LONG).show();
 

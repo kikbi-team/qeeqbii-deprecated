@@ -14,6 +14,9 @@ android {
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         multiDexEnabled true
     }
+    lintOptions {
+        disable 'GoogleAppIndexingWarning'
+    }
     buildTypes {
         debug {
             testCoverageEnabled = true

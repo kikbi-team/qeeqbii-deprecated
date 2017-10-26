@@ -2,6 +2,7 @@ package ch.epfl.sweng.qeeqbii;
 
 /**
  * Created by adrien on 12/10/17.
+ *
  */
 
 class CancerSubstance {

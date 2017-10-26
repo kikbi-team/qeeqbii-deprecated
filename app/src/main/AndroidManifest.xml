@@ -23,7 +23,6 @@
         </activity>
 
         <activity android:name=".GoogleSignInActivity" />
-        <activity android:name="ch.epfl.sweng.qeeqbii.BaseActivity" />
 
         <activity
             android:name="ch.epfl.sweng.qeeqbii.MainActivity"
@@ -43,9 +42,9 @@
         <activity android:name="ch.epfl.sweng.qeeqbii.Graphs" />
         <activity
             android:name="ch.epfl.sweng.qeeqbii.CancerDataQueryActivity"
-            android:configChanges="keyboardHidden|orientation|screenSize">
-        </activity>
-
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true" />
+        <activity android:name=".BaseActivity" />
     </application>
 
 </manifest>
