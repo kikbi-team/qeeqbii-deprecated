@@ -79,8 +79,8 @@ public class CancerDataShowActivity extends AppCompatActivity {
         return mIsTest;
     }
 
-    public void setmIsTest(boolean mIsTest) {
-        this.mIsTest = mIsTest;
+    public void setmIsTest() {
+        this.mIsTest = true;
     }
 
     @Override

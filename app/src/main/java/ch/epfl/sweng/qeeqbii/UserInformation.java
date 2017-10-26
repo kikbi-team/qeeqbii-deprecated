@@ -5,12 +5,12 @@ package ch.epfl.sweng.qeeqbii;
  *
  */
 
-public class UserInformation {
+class UserInformation {
 
-    public String lastname;
-    public String firstname;
-    public String allergies;
-    public String gout;
+    private final String lastname;
+    private final String firstname;
+    private final String allergies;
+    private final String gout;
 
     public UserInformation(String firstname, String lastname, String allergies, String gout) {
         this.firstname = firstname;

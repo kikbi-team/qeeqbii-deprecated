@@ -17,7 +17,7 @@ import static ch.epfl.sweng.qeeqbii.MainActivity.BARCODE_READER;
 
 public class BarcodeActivity extends AppCompatActivity {
 
-    protected String last_barcode;
+    private String last_barcode;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,7 +51,7 @@ public class BarcodeActivity extends AppCompatActivity {
     public void processBarcode(String barcode) {
         // go back to main activity if the barcode was invalid
         // or the scan was interrupted
-        if (barcode == null || Objects.equals(barcode, "")) {
+        if (barcode == null || barcode.equals("")) {
             Log.d("STATE", "Barcode is invalid, going back to main");
             goToMain();
         } else {

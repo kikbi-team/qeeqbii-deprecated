@@ -8,7 +8,7 @@ import java.util.Map;
  *
  */
 
-public class HTTPRequestResponse {
+class HTTPRequestResponse {
     private String resp_body = "";
 
     private String ingredients = "";
@@ -22,7 +22,7 @@ public class HTTPRequestResponse {
 
     public HTTPRequestResponse(String str) throws Exception {
         if (str.charAt(0) != '{') throw new Exception(str);
-        if ((str.substring(0, 10).indexOf("[]") != -1))
+        if ((str.substring(0, 10).contains("[]")))
             throw new Exception("Request gave an empty field, the barcode seems not to be present in the database.");
         resp_body = str;
         ingredients = "";
@@ -98,9 +98,7 @@ public class HTTPRequestResponse {
             GetProductIngredients("fr");
         }
 
-        String[] parsed_ingredients = ingredients.split(",");
-
-        return parsed_ingredients;
+        return ingredients.split(",");
 
     }
 
@@ -109,10 +107,9 @@ public class HTTPRequestResponse {
             GetProductNutrients("fr");
         }
         String[] parsed_nutrients = nutrients.split("\\n");
-        Map<String, Double> nutrient_map = new HashMap<String, Double>();
+        Map<String, Double> nutrient_map = new HashMap<>();
 
-        for (int i = 0; i < parsed_nutrients.length; ++i) {
-            String str = parsed_nutrients[i];
+        for (String str : parsed_nutrients) {
             int two_dots_index = str.indexOf(':');
             String key = str.substring(0, two_dots_index);
             int search_alpha = two_dots_index + 1;
@@ -126,7 +123,7 @@ public class HTTPRequestResponse {
 
             String unit = str.substring(search_alpha, str.length());
 
-            if (key.indexOf("(" + unit + ")") == -1) {
+            if (!key.contains("(" + unit + ")")) {
                 key = key + " (" + unit + ")";
             }
 

@@ -32,7 +32,6 @@ public class OpenFoodQueryTest {
         barcode[0] = "7610848337010";
 
         new OpenFoodQuery() {
-            @Override
             public void onPostExecute(String result) {
 
 
@@ -81,7 +80,6 @@ public class OpenFoodQueryTest {
             barcode[0] = "";
 
             new OpenFoodQuery() {
-                @Override
                 public void onPostExecute(String result) {
 
 

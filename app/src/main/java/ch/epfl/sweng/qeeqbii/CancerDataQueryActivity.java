@@ -13,7 +13,7 @@ import android.widget.TextView;
 
 public class CancerDataQueryActivity extends AppCompatActivity {
 
-    private CancerDataBase cancer_data_base = new CancerDataBase();
+    private final CancerDataBase cancer_data_base = new CancerDataBase();
 
 
     @Override

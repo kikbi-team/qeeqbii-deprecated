@@ -12,7 +12,7 @@ import java.net.URL;
  * 
  */
 
-public class OpenFoodQuery extends AsyncTask<String, Void, String> {
+class OpenFoodQuery extends AsyncTask<String, Void, String> {
 
     @Override
     public String doInBackground(String params[]) {

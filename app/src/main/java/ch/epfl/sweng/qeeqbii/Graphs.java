@@ -19,10 +19,10 @@ import java.util.ArrayList;
 
 public class Graphs extends AppCompatActivity {
 
-    private static String TAG = "Graphs";
-    PieChart pieChart;
-    private float[] yData = {700, 1600};
-    private String[] xData = {"Completed", "Left"};
+    private static final String TAG = "Graphs";
+    private PieChart pieChart;
+    private final float[] yData = {700, 1600};
+    private final String[] xData = {"Completed", "Left"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,7 +50,7 @@ public class Graphs extends AppCompatActivity {
         //pieChart.setEntryLabelTextSize(20);
         //More options just check out the documentation!
 
-        addDataSet(numberChart, nameGraph);
+        addDataSet(nameGraph);
 
         pieChart.setOnChartValueSelectedListener(new OnChartValueSelectedListener() {
             @Override
@@ -78,7 +78,7 @@ public class Graphs extends AppCompatActivity {
         });
     }
 
-    private void addDataSet(int numberChart, String nameGraph) {
+    private void addDataSet(String nameGraph) {
         Log.d(TAG, "addDataSet started");
         ArrayList<PieEntry> yEntrys = new ArrayList<>();
         //ArrayList<String> xEntrys = new ArrayList<>();
