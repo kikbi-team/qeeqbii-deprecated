@@ -11,8 +11,6 @@ import android.widget.TextView;
 import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
 
-import java.util.Objects;
-
 import static ch.epfl.sweng.qeeqbii.MainActivity.BARCODE_READER;
 
 public class BarcodeActivity extends AppCompatActivity {

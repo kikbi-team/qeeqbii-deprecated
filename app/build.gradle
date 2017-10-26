@@ -13,6 +13,10 @@ android {
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         multiDexEnabled true
     }
+    lintOptions {
+        disable 'GoogleAppIndexingWarning'
+        baseline file("lint-baseline.xml") // your choice of filename/path here
+    }
     buildTypes {
         debug {
             testCoverageEnabled = true

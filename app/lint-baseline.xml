@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<issues format="4" by="lint 2.3.3">
+
+    <issue
+        id="OldTargetApi"
+        message="Not targeting the latest versions of Android; compatibility modes apply. Consider testing and updating this version. Consult the android.os.Build.VERSION_CODES javadoc for details.">
+        <location
+            file="build.gradle"/>
+    </issue>
+
+    <issue
+        id="NestedWeights"
+        message="Nested weights are bad for performance">
+        <location
+            file="src/main/res/layout/activity_google_sign_in.xml"
+            line="63"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.facebook_app_id` appears to be unused">
+        <location
+            file="src/main/res/values/ids.xml"
+            line="8"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.twitter_consumer_key` appears to be unused">
+        <location
+            file="src/main/res/values/ids.xml"
+            line="14"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.twitter_consumer_secret` appears to be unused">
+        <location
+            file="src/main/res/values/ids.xml"
+            line="15"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.AppName` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.label_google_sign_in` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="15"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.desc_google_sign_in` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="16"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.label_facebook_login` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="18"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.desc_facebook_login` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="19"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.label_twitter_login` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="21"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.desc_twitter_login` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="22"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.label_emailpassword` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="24"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.desc_emailpassword` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="25"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.label_phone_auth` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="27"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.desc_phone_auth` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="28"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.label_anonymous_auth` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="30"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.desc_anonymous_auth` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="31"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.label_custom_auth` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="33"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.desc_custom_auth` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="34"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.label_firebase_ui` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="36"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.desc_firebase_ui` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="37"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.hint_user_id` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="39"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.get_custom_token` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="40"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.sign_in` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="41"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.create_account` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="42"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.verify_email` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="44"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.custom_token` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="47"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.signed_in` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="48"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.token_null` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="50"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.hint_email` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="51"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.hint_password` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="52"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.auth_failed` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="54"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.start_phone_auth` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="55"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.verify_phone_auth` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="56"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.resend_phone_auth` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="57"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.hint_phone_number` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="58"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.hint_verification_code` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="59"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.status_code_sent` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="60"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.status_verification_failed` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="61"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.status_verification_succeeded` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="62"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.status_sign_in_failed` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="63"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.instant_validation` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="64"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.firebase_user_management` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="67"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.facebook_status_fmt` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="72"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.facebook_title_text` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="73"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.emailpassword_status_fmt` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="75"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.emailpassword_title_text` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="76"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.phone_title_text` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="78"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.twitter_status_fmt` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="80"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.twitter_title_text` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="81"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.firebaseui_status_fmt` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="83"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.firebaseui_title_text` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="84"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.id_fmt` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="86"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.email_fmt` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="87"/>
+    </issue>
+
+    <issue
+        id="IconLauncherShape"
+        message="Launcher icon used as round icon did not have a circular shape">
+        <location
+            file="src/main/res/mipmap-hdpi/ic_launcher.png"/>
+    </issue>
+
+    <issue
+        id="IconLauncherShape"
+        message="Launcher icon used as round icon did not have a circular shape">
+        <location
+            file="src/main/res/mipmap-mdpi/ic_launcher.png"/>
+    </issue>
+
+    <issue
+        id="IconLauncherShape"
+        message="Launcher icon used as round icon did not have a circular shape">
+        <location
+            file="src/main/res/mipmap-xhdpi/ic_launcher.png"/>
+    </issue>
+
+    <issue
+        id="IconLauncherShape"
+        message="Launcher icon used as round icon did not have a circular shape">
+        <location
+            file="src/main/res/mipmap-xxhdpi/ic_launcher.png"/>
+    </issue>
+
+    <issue
+        id="IconLauncherShape"
+        message="Launcher icon used as round icon did not have a circular shape">
+        <location
+            file="src/main/res/mipmap-xxxhdpi/ic_launcher.png"/>
+    </issue>
+
+    <issue
+        id="IconDipSize"
+        message="The image `ic_launcher.png` varies significantly in its density-independent (dip) size across the various density versions: mipmap-hdpi/ic_launcher.png: 1365x1365 dp (2048x2048 px), mipmap-xhdpi/ic_launcher.png: 1024x1024 dp (2048x2048 px), mipmap-xxxhdpi/ic_launcher.png: 180x180 dp (720x720 px), mipmap-mdpi/ic_launcher.png: 180x180 dp (180x180 px), mipmap-xxhdpi/ic_launcher.png: 180x180 dp (540x540 px)">
+        <location
+            file="src/main/res/mipmap-xxhdpi/ic_launcher.png"/>
+        <location
+            file="src/main/res/mipmap-mdpi/ic_launcher.png"/>
+        <location
+            file="src/main/res/mipmap-xxxhdpi/ic_launcher.png"/>
+        <location
+            file="src/main/res/mipmap-xhdpi/ic_launcher.png"/>
+        <location
+            file="src/main/res/mipmap-hdpi/ic_launcher.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicatesConfig"
+        message="The `ic_launcher.png` icon has identical contents in the following configuration folders: mipmap-hdpi, mipmap-xhdpi">
+        <location
+            file="src/main/res/mipmap-xhdpi/ic_launcher.png"/>
+        <location
+            file="src/main/res/mipmap-hdpi/ic_launcher.png"/>
+    </issue>
+
+</issues>

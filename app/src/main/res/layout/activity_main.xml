@@ -96,6 +96,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="215dp"
+        android:layout_marginStart="215dp"
         android:layout_marginTop="98dp"
         android:onClick="cancerDataQuery"
         android:text="@string/query_cancer_n_database"
