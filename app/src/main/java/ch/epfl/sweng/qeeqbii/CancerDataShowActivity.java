@@ -75,6 +75,10 @@ public class CancerDataShowActivity extends AppCompatActivity {
         return stringImportedData;
     }
 
+    public void setmIsTest() {
+        this.mIsTest = true;
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -97,9 +101,5 @@ public class CancerDataShowActivity extends AppCompatActivity {
         reportedMessage.setTextSize(12);
         reportedMessage.setTextColor(Color.rgb(200, 0, 0));
         reportedMessage.setText(message);
-    }
-
-    public void setmIsTest(boolean mIsTest) {
-        this.mIsTest = mIsTest;
     }
 }

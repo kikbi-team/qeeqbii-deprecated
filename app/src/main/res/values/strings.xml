@@ -8,9 +8,7 @@
     <string name="calories_graph">Calories</string>
     <string name="salt_graph">Salts</string>
     <string name="barcode_scan_to_product">Go to product</string>
-
     <string name="Formaldehyde" tools:keep="@string/Formaldehyde">Formaldehyde</string>
-
 
     <!-- Google Sign In -->
     <string name="AppName" tools:keep="@string/AppName">Firebase Authentication</string>

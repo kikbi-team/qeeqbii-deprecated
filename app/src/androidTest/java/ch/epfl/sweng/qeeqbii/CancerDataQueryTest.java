@@ -19,6 +19,7 @@ import static android.support.test.espresso.matcher.ViewMatchers.withText;
 
 /**
  * Created by adrien on 16.10.17.
+ *
  */
 
 @RunWith(AndroidJUnit4.class)
@@ -32,7 +33,7 @@ public class CancerDataQueryTest {
         // Useful way of accessing resources
         //String substance_to_query = mActivityRule.getActivity().getResources().getString(R.string.Formaldehyde);
 
-        List<String[]> query_ans_pairs = new ArrayList<String[]>();
+        List<String[]> query_ans_pairs = new ArrayList<>();
 
         query_ans_pairs.add(new String[]{"Formaldehyde", "Substance{mId = 0, mAgent = 'Formaldehyde', mGroup = '1'}"});
         query_ans_pairs.add(new String[]{"", "Substance{mId = -1, mAgent = 'empty', mGroup = 'empty'}"});

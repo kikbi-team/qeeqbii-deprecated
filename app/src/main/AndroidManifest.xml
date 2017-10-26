@@ -15,7 +15,8 @@
         android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
-        android:fullBackupContent="@xml/backup_descriptor">
+        android:fullBackupContent="@xml/backup_descriptor"
+        tools:targetApi="donut">
 
 
         <activity android:name="ch.epfl.sweng.qeeqbii.HomeActivity">
@@ -27,7 +28,6 @@
         </activity>
 
         <activity android:name=".GoogleSignInActivity" />
-
         <activity
             android:name="ch.epfl.sweng.qeeqbii.MainActivity"
             android:exported="true" />
@@ -36,7 +36,6 @@
             android:exported="true"
             android:parentActivityName="ch.epfl.sweng.qeeqbii.MainActivity"
             tools:targetApi="jelly_bean">
-
             <!-- The meta-data tag is required if you support API level 15 and lower -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -73,7 +72,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="ch.epfl.sweng.qeeqbii.MainApp" />
         </activity>
-
+        <activity android:name=".BaseActivity" />
         <!-- This is my shopping list importer activity -->
         <activity
             android:name="ch.epfl.sweng.qeeqbii.ShoppingListImporter"
