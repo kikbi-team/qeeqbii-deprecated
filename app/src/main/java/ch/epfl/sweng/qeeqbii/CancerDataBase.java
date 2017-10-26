@@ -130,7 +130,7 @@ class CancerDataBase {
     }
 
 
-    static CancerSubstance levenshteinMatchQuery(String queried_substance, int max_distance)
+    static CancerSubstance levenshteinMatchQuery(String queried_substance)
             throws NotOpenFileException, NullInputException {
         if (mopen_state == 0) {
             throw new NotOpenFileException("Read the carcinogenic database before trying to query it.\n");
@@ -140,7 +140,7 @@ class CancerDataBase {
         }
 
         BkTreeSearcher<String> searcher = new BkTreeSearcher<>(mbkTree);
-        Set<BkTreeSearcher.Match<? extends String>> matches = searcher.search(queried_substance, max_distance);
+        Set<BkTreeSearcher.Match<? extends String>> matches = searcher.search(queried_substance, 10);
 
         // We go through all the matches with distance less or equal than max_distance and select the match
         // that involves the least distance

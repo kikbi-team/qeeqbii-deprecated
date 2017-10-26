@@ -23,7 +23,7 @@ import static android.support.test.espresso.intent.matcher.IntentMatchers.hasCom
 public class BarcodeInvalidLeadsToMain {
     @Rule
     public IntentsTestRule<BarcodeActivity> mActivityRule =
-            new IntentsTestRule<BarcodeActivity>(BarcodeActivity.class);
+            new IntentsTestRule<>(BarcodeActivity.class);
 
     @Test
     public void useAppContext() throws Exception {

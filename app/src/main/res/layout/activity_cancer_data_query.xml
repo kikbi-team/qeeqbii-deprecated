@@ -7,7 +7,6 @@
     android:orientation="vertical">
 
     <Button
-        android:id="@+id/levenshteinCancerDataQueryButton"
         android:layout_width="151dp"
         android:layout_height="58dp"
         android:layout_marginEnd="8dp"
@@ -16,7 +15,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="105dp"
         android:onClick="processLevenshteinQueryResult"
-        android:text="LEVENSHTEIN\nQUERY"
+        android:text = "@string/levenshteinQueryButtonText"
         app:layout_constraintHorizontal_bias="0.879"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -34,7 +33,7 @@
         android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
         android:ems="10"
-        android:hint="Type query here"
+        android:hint="@string/queryTextFieldText"
         android:inputType="textPersonName"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -53,7 +52,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="105dp"
         android:onClick="processPerfectMatchQueryResult"
-        android:text="PERFECT MATCH\nQUERY"
+        android:text = "@string/perfectMatchQueryButtonTextString"
         app:layout_constraintHorizontal_bias="0.055"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -69,7 +68,7 @@
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginTop="17dp"
-        android:text="Query answer"
+        android:text="@string/queryAnswerAreaText"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"

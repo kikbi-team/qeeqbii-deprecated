@@ -45,7 +45,7 @@ public class CancerDataQueryActivity extends AppCompatActivity {
         // Carrying out the query
         CancerSubstance queried_substance = new CancerSubstance();
         try {
-            queried_substance = CancerDataBase.levenshteinMatchQuery(string_queried_substance, 10);
+            queried_substance = CancerDataBase.levenshteinMatchQuery(string_queried_substance);
         }
         catch(Exception e) {
             System.err.println("Exception: " + e.getMessage());

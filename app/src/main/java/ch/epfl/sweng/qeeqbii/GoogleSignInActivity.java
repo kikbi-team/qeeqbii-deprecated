@@ -1,9 +1,5 @@
 package ch.epfl.sweng.qeeqbii;
 
-/**
- * Created by Nicolas on 04/10/2017.
- */
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -106,7 +102,11 @@ public class GoogleSignInActivity extends BaseActivity implements
 
         FirebaseUser user = mAuth.getCurrentUser();
 
-        databaseReference.child(user.getUid()).setValue(userInformation);
+        // Be careful here to handle the case of a null user.
+        // Maybe try to set up an Exception
+        if (user != null) {
+            databaseReference.child(user.getUid()).setValue(userInformation);
+        }
 
         Toast.makeText(this, "Information Saved...", Toast.LENGTH_LONG).show();
 

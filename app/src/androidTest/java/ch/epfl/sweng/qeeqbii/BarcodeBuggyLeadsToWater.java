@@ -28,7 +28,7 @@ import static org.hamcrest.core.StringStartsWith.startsWith;
 public class BarcodeBuggyLeadsToWater {
     @Rule
     public IntentsTestRule<BarcodeActivity> mActivityRule =
-            new IntentsTestRule<BarcodeActivity>(BarcodeActivity.class);
+            new IntentsTestRule<>(BarcodeActivity.class);
 
     @Test
     public void useAppContext() throws Exception {

@@ -16,6 +16,7 @@ import com.github.mikephil.charting.highlight.Highlight;
 import com.github.mikephil.charting.listener.OnChartValueSelectedListener;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Graphs extends AppCompatActivity {
 
@@ -87,9 +88,7 @@ public class Graphs extends AppCompatActivity {
             yEntrys.add(new PieEntry(yData[i], i));
         }
 
-        for (int i = 1; i < xData.length; i++) {
-            xEntrys.add(xData[i]);
-        }
+        xEntrys.addAll(Arrays.asList(xData).subList(1, xData.length));
 
         //create the data set
         PieDataSet pieDataSet = new PieDataSet(yEntrys, nameGraph + " intake/ day");
