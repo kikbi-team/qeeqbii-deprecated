@@ -42,10 +42,6 @@ class CancerDataBase {
     };
     static private MutableBkTree<String> mbkTree = new MutableBkTree<>(mhammingLevenshtein);
 
-
-
-
-
     // CONSTRUCTOR
     CancerDataBase() {
         // mopen_state defined to 0 at instantiation because no CSV files have been read
@@ -107,8 +103,7 @@ class CancerDataBase {
                 output += "\n";
             }
             return output;
-        }
-        else {
+        } else {
             throw new Exception("Read the carcinogenic database before trying to print it.\n");
         }
     }

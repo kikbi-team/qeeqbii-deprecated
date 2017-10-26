@@ -9,8 +9,7 @@ import android.widget.TextView;
 public class CancerDataShowActivity extends AppCompatActivity {
 
     @Override
-    protected void onCreate(Bundle savedInstanceState)
-    {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_display_message);
 
@@ -29,7 +28,7 @@ public class CancerDataShowActivity extends AppCompatActivity {
         // Capture the layout's; TextView and set the string as its text
         TextView reportedMessage = (TextView) findViewById(R.id.cancerDataBaseMessage);
         reportedMessage.setTextSize(12);
-        reportedMessage.setTextColor(Color.rgb(200,0,0));
+        reportedMessage.setTextColor(Color.rgb(200, 0, 0));
         reportedMessage.setText(message);
     }
 }

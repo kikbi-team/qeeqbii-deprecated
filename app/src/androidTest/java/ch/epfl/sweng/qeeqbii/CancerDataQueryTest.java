@@ -49,7 +49,6 @@ public class CancerDataQueryTest {
         }
 
 
-
         //TextView text = (TextView)mActivityRule.getActivity().findViewById(R.id.perfectQueryAnswerArea);
         //onView(withId(R.id.greetingMessage)).check(matches(withText("Hello from my unit test!")));
     }
