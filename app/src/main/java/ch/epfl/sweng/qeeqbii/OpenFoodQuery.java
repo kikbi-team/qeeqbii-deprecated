@@ -13,6 +13,7 @@ import java.net.URL;
 import java.net.HttpURLConnection;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.CountDownLatch;
 
 /**
  * Created by guillaume on 06/10/17.
@@ -26,7 +27,7 @@ public class OpenFoodQuery extends AsyncTask<String, Void, String> {
 
     private static String[] barcode_list;
 
-    public class OpenFoodQueryException extends Exception {
+    public static class OpenFoodQueryException extends Exception {
         public OpenFoodQueryException(String message) {
             super(message);
         }
@@ -73,25 +74,31 @@ public class OpenFoodQuery extends AsyncTask<String, Void, String> {
             urlConnection.disconnect();
 
             resp_cache.put(barcode, new HTTPRequestResponse(str));
+            return str;
         }
         catch(OpenFoodQueryException e)
         {
             error_cache.put(barcode, "ERROR: (openfood) " + e.getMessage());
+            return "ERROR: (openfood) " + e.getMessage();
         }
         catch(java.io.IOException e)
         {
             error_cache.put(barcode, "ERROR: " + e.getMessage());
+            return "ERROR: " + e.getMessage();
         }
 
-        return barcode;
+
     }
 
+    // This GetOrCreate can freeze the main thread if the barcode isn't in the cache.
     public static HTTPRequestResponse GetOrCreateHTTPRequestResponse(String barcode) throws Exception
     {
         if(resp_cache.containsKey(barcode))
         {
             return resp_cache.get(barcode);
         }
+
+        final CountDownLatch get_or_create_signal = new CountDownLatch(1);
 
         new OpenFoodQuery() {
             @Override
@@ -101,11 +108,33 @@ public class OpenFoodQuery extends AsyncTask<String, Void, String> {
             }
         }.execute(barcode);
 
+        get_or_create_signal.countDown();
+
         if(resp_cache.containsKey(barcode))
         {
             return resp_cache.get(barcode);
         } else {
             throw new Exception(error_cache.get(barcode));
+        }
+    }
+
+    public static boolean isCached(String barcode)
+    {
+        if (resp_cache.containsKey(barcode))
+        {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public static HTTPRequestResponse get(String barcode) throws OpenFoodQueryException
+    {
+        if (resp_cache.containsKey(barcode))
+        {
+            return resp_cache.get(barcode);
+        } else {
+            throw new OpenFoodQueryException("ERROR: (OpenFoodQuery) : this barcode \"" + barcode + "\" is not cached.");
         }
     }
 }

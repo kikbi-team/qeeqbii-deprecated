@@ -124,4 +124,33 @@ public class OpenFoodQueryTest {
 
     }
 
+    @Test
+    public void CacheQueryTest()
+    {
+        String barcode = "7610848337010";
+        try {
+            HTTPRequestResponse resp = OpenFoodQuery.GetOrCreateHTTPRequestResponse(barcode);
+            assertEquals(resp.GetProductQuantity(), "245.0g");
+            assertEquals(resp.GetProductName("fr"), "Mangue : en tranches");
+        } catch (Exception e) {
+            fail(e.getMessage());
+        }
+
+        if (OpenFoodQuery.isCached(barcode))
+        {
+            try {
+                HTTPRequestResponse resp = OpenFoodQuery.get(barcode);
+                assertEquals(resp.GetProductIngredients("fr"), "mangue (Thaïlande), eau, sucre, acidifiant (E330)");
+                assertEquals(resp.GetProductNutrients("fr"), "Sel: 0.0g\nProtéines: 0.5g\nFibres alimentaires: 1.5g\nSucres: 15.0g\n" +
+                        "Glucides: 15.0g\nAcides gras saturées: 0.0g\nMatières grasses: 0.0g\nÉnergie (kCal): 67.0kCal\nÉnergie: 280.0kJ\n");
+            } catch (Exception e) {
+                fail(e.getMessage());
+            }
+        } else {
+            fail("barcode should be cached");
+        }
+
+
+    }
+
 }
