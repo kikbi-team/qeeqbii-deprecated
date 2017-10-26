@@ -11,7 +11,6 @@
         <AutoCompleteTextView
             android:id="@+id/edDescription"
             style="@style/matchMatch"
-            android:capitalize="sentences"
             android:inputType="textCapSentences"
             android:layout_height="wrap_content"
             android:background="@drawable/custom_blanck_backgroud"
@@ -75,7 +74,7 @@
                 android:layout_marginRight="15dp"
                 android:layout_toStartOf="@+id/footer_total_sum"
                 android:layout_toLeftOf="@+id/footer_total_sum"
-                android:text="oijejf"
+                android:text="@string/text"
                 android:layout_gravity="end" />
 
             <TextView
@@ -83,7 +82,7 @@
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentRight="true"
                 style="@style/totalFont"
-                android:text="asiaish"
+                android:text="@string/text"
                 android:layout_gravity="end" />
         </RelativeLayout>
 

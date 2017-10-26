@@ -1,5 +1,6 @@
 package ch.epfl.sweng.qeeqbii;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -430,6 +431,7 @@ public class AddItemShoppingList extends Activity implements OnItemClickListener
 		return super.onKeyDown(keyCode, event);
 	}
 
+	@SuppressLint("SetTextI18n")
 	@Override
 	public void onFocusChange(View v, boolean hasFocus) {
 		if (hasFocus) {
@@ -473,4 +475,6 @@ public class AddItemShoppingList extends Activity implements OnItemClickListener
 		adapter.refreshCursorAdapter(last);
 	}
 
+    public void readBarcode(MenuItem item) {
+    }
 }

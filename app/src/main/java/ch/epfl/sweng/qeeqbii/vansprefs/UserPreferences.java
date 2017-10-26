@@ -35,7 +35,7 @@ public class UserPreferences extends PreferenceActivity implements OnSharedPrefe
 		editor.putBoolean(getString(R.string.user_preference_show_quantity), prefs.getBoolean(getString(R.string.user_preference_show_quantity), true));
 		editor.putBoolean(getString(R.string.user_preference_show_unit_value), prefs.getBoolean(getString(R.string.user_preference_show_unit_value), true));
 
-		editor.commit();
+		editor.apply();
 	}
 
 	@Override

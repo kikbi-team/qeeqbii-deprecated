@@ -1,5 +1,6 @@
 package ch.epfl.sweng.qeeqbii.vanswatch;
 
+import android.annotation.SuppressLint;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.MotionEvent;
@@ -28,6 +29,7 @@ public class CustomEditTextWatcher implements TextWatcher {
 	public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 	}
 
+	@SuppressLint("ClickableViewAccessibility")
 	@Override
 	public void onTextChanged(CharSequence s, int start, int before, int count) {
 		editText.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0);
@@ -35,15 +37,6 @@ public class CustomEditTextWatcher implements TextWatcher {
 		if (s.length() != 0) {
 			if (maxNumbers == -1) {
 				editText.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.drawable.ic_button_cancel, 0);
-				
-				editText.setOnTouchListener(new RightDrawableOnTouchListener(editText) {
-					@Override
-					public boolean onDrawableTouch(final MotionEvent event) {
-						editText.setText("");
-						return true;
-					}
-				});
-				
 			} else {
 				/* Samsung keyborad bug */
 				s = checkDecimalSeparator(s);

@@ -1,5 +1,6 @@
 package ch.epfl.sweng.qeeqbii.vansschedule;
 
+import android.annotation.SuppressLint;
 import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.app.TimePickerDialog;
@@ -57,6 +58,7 @@ public class ScheduleShoppingList extends Dialog implements android.view.View.On
 		setTimeDisplay(c.get(Calendar.HOUR_OF_DAY), c.get(Calendar.MINUTE));
 	}
 
+	@SuppressLint("SetTextI18n")
 	private void setDateDisplay(int year, int month, int day) {
 		calendar.set(Calendar.YEAR, year);
 		calendar.set(Calendar.MONTH, month);
@@ -65,6 +67,7 @@ public class ScheduleShoppingList extends Dialog implements android.view.View.On
 		btDisplayDate.setText(getContext().getString(R.string.date) + " " + CustomDateFormat.getFormatedDate(calendar.getTime()));
 	}
 
+	@SuppressLint("SetTextI18n")
 	private void setTimeDisplay(int hour, int minute) {
 
 		calendar.set(Calendar.HOUR_OF_DAY, hour);

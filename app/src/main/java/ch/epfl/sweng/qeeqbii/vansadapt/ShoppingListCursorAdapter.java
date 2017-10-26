@@ -1,5 +1,6 @@
 package ch.epfl.sweng.qeeqbii.vansadapt;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.database.Cursor;
 import android.graphics.Paint;
@@ -76,7 +77,8 @@ public class ShoppingListCursorAdapter extends CursorAdapter {
 
 	}
 
-	@Override
+	@SuppressLint("InflateParams")
+    @Override
 	public View newView(Context arg0, Cursor arg1, ViewGroup arg2) {
 		LayoutInflater inflater = (LayoutInflater) arg0.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 		return inflater.inflate(R.layout.adapter_shopping_list, null);

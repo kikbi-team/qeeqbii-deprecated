@@ -20,7 +20,8 @@
             android:layout_gravity="center"
             android:visibility="gone"
             android:src="@drawable/btn_check_on_holo_dark"
-            style="@style/wrapMatch" />
+            style="@style/wrapMatch"
+            android:contentDescription="@string/description" />
 
         <TextView
             android:id="@+id/nameShoppingList"
@@ -31,7 +32,7 @@
             android:layout_marginStart="@dimen/ten_dps"
             android:layout_marginLeft="@dimen/ten_dps"
             android:gravity="center_vertical"
-            android:text="aoisjdoajds" />
+            android:text="@string/text" />
 
         <LinearLayout
             android:id="@+id/view_date_shopping_list"
@@ -44,7 +45,7 @@
                 style="@style/mediumFont"
                 android:layout_marginEnd="25dp"
                 android:layout_marginRight="25dp"
-                android:text="22/26/2015" />
+                android:text="@string/text" />
 
             <TextView
                 android:id="@+id/timeShoppingList"
@@ -52,8 +53,7 @@
                 android:layout_marginRight="25dp"
                 android:layout_gravity="end"
                 android:layout_marginEnd="25dp"
-                android:text="12:56" />
+                android:text="@string/text" />
         </LinearLayout>
     </TableRow>
-
 </TableLayout>

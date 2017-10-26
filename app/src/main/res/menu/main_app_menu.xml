@@ -5,23 +5,22 @@
     <item
         android:id="@+id/action_add"
         android:icon="@drawable/ic_action_new"
-        android:showAsAction="ifRoom"
         android:title="@string/new_list"
-        yourapp:showAsAction="always"/>
+        yourapp:showAsAction="ifRoom"/>
 
     <!-- Menu Options -->
 
     <item
         android:id="@+id/action_delete_all"
-        android:showAsAction="never"
-        android:title="@string/delete_all"/>
+        android:title="@string/delete_all"
+        yourapp:showAsAction="never" />
     <item
         android:id="@+id/action_update"
-        android:showAsAction="never"
-        android:title="@string/update"/>
+        android:title="@string/update"
+        yourapp:showAsAction="never" />
     <item
         android:id="@+id/action_settings"
-        android:showAsAction="never"
-        android:title="@string/settings"/>
+        android:title="@string/settings"
+        yourapp:showAsAction="never" />
 
 </menu>

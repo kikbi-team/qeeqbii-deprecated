@@ -1,5 +1,6 @@
 package ch.epfl.sweng.qeeqbii;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -35,6 +36,7 @@ public class MainApp extends Activity implements OnItemClickListener, OnItemLong
 
     //private AdView adView;
 
+    @SuppressLint("InflateParams")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

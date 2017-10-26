@@ -8,9 +8,9 @@
   Reduzir -20% se baseando em 480dp.
 -->
 
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
-    <integer name="two_hundred">102</integer>
-    <integer name="one_hundred_sixty">82</integer>
+    <integer name="two_hundred" tools:keep="@integer/two_hundred">102</integer>
+    <integer name="one_hundred_sixty" tools:keep="@integer/one_hundred_sixty">82</integer>
 
 </resources>

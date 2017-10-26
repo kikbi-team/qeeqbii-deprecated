@@ -17,7 +17,8 @@
         android:onClick="cancerDataBaseShow"
         android:text="@string/cancer_data"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mainName" />
+        app:layout_constraintTop_toBottomOf="@+id/mainName"
+        android:layout_marginEnd="44dp" />
 
     <Button
         android:id="@+id/mainBarcodeButton"
@@ -70,7 +71,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="47dp"
         android:onClick="searchProductFromBarcode"
-        android:text="search product"
+        android:text="@string/search_product"
         app:layout_constraintHorizontal_bias="0.066"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -81,23 +82,25 @@
         android:layout_width="176dp"
         android:layout_height="41dp"
         android:onClick="showGraphs"
-        android:text="Graphs"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintHorizontal_bias="0.863" />
+        android:text="@string/graphs"
+        app:layout_constraintBottom_toTopOf="@+id/welcomeText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/buttonShopping"
+        app:layout_constraintTop_toBottomOf="@+id/cancerDataBaseButton"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/buttonShopping"
         android:layout_width="128dp"
         android:layout_height="50dp"
         android:onClick="showShoppingList"
-        android:text="ShoppingList"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="24dp"
-        tools:layout_editor_absoluteY="304dp" />
+        android:text="@string/shoppinglist"
+        app:layout_constraintBottom_toTopOf="@+id/welcomeText"
+        app:layout_constraintEnd_toStartOf="@+id/buttonGraphs"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mainBarcodeButton" />
 
     <Button
         android:id="@+id/cancerDataQuery"
@@ -106,8 +109,9 @@
         android:layout_marginLeft="215dp"
         android:layout_marginTop="98dp"
         android:onClick="cancerDataQuery"
-        android:text="QUERY CANCER\n DATABASE"
+        android:text="@string/query_cancer_n_database"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="215dp" />
 
 </android.support.constraint.ConstraintLayout>
