@@ -1,8 +1,8 @@
 package ch.epfl.sweng.qeeqbii;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 
 public class HomeActivity extends AppCompatActivity {
     @Override
@@ -17,8 +17,7 @@ public class HomeActivity extends AppCompatActivity {
                     Intent intent = new Intent(getApplicationContext(), GoogleSignInActivity.class);
                     startActivity(intent);
                     finish();
-                }
-                catch (InterruptedException e) {
+                } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
             }

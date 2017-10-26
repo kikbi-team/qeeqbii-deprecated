@@ -1,34 +1,31 @@
 package ch.epfl.sweng.qeeqbii;
 
-import android.graphics.Path;
 import android.os.AsyncTask;
 
-import org.apache.http.params.HttpParams;
-
-import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.lang.*;
-import java.net.URL;
 import java.net.HttpURLConnection;
+
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.CountDownLatch;
 
+import java.net.URL;
+
 /**
  * Created by guillaume on 06/10/17.
+ *
  */
 
-public class OpenFoodQuery extends AsyncTask<String, Void, String> {
+class OpenFoodQuery extends AsyncTask<String, Void, String> {
 
-    private static Map<String,HTTPRequestResponse> resp_cache = new HashMap<String, HTTPRequestResponse>();
 
-    private static Map<String,String> error_cache = new HashMap<String, String>();
+    private static Map<String,HTTPRequestResponse> resp_cache = new HashMap<>();
 
-    private static String[] barcode_list;
+    private static Map<String,String> error_cache = new HashMap<>();
 
-    public static class OpenFoodQueryException extends Exception {
-        public OpenFoodQueryException(String message) {
+    private static class OpenFoodQueryException extends Exception {
+        OpenFoodQueryException(String message) {
             super(message);
         }
     }
@@ -50,14 +47,13 @@ public class OpenFoodQuery extends AsyncTask<String, Void, String> {
 
             String str = "";
             int data = isw.read();
-            for(int i = 0; i<100; ++i) {
+            for (int i = 0; i < 100; ++i) {
                 char current = (char) data;
                 data = isw.read();
                 str += current;
             }
-            int barcode_begin = str.indexOf("barcode")+10;
-            if (barcode_begin==9)
-            {
+            int barcode_begin = str.indexOf("barcode") + 10;
+            if (barcode_begin == 9) {
                 throw new OpenFoodQueryException("Unusable data registered for this product.");
             }
             int barcode_end = str.indexOf('\"',barcode_begin);
@@ -91,7 +87,7 @@ public class OpenFoodQuery extends AsyncTask<String, Void, String> {
     }
 
     // This GetOrCreate can freeze the main thread if the barcode isn't in the cache.
-    public static HTTPRequestResponse GetOrCreateHTTPRequestResponse(String barcode) throws Exception
+    static HTTPRequestResponse GetOrCreateHTTPRequestResponse(String barcode) throws Exception
     {
         if(resp_cache.containsKey(barcode))
         {
@@ -118,17 +114,12 @@ public class OpenFoodQuery extends AsyncTask<String, Void, String> {
         }
     }
 
-    public static boolean isCached(String barcode)
+    static boolean isCached(String barcode)
     {
-        if (resp_cache.containsKey(barcode))
-        {
-            return true;
-        } else {
-            return false;
-        }
+        return (resp_cache.containsKey(barcode));
     }
 
-    public static HTTPRequestResponse get(String barcode) throws OpenFoodQueryException
+    static HTTPRequestResponse get(String barcode) throws OpenFoodQueryException
     {
         if (resp_cache.containsKey(barcode))
         {

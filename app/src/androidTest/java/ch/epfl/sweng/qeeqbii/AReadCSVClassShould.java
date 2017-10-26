@@ -25,8 +25,7 @@ import java.util.List;
  * front end.
  */
 
-public class AReadCSVClassShould extends ActivityInstrumentationTestCase2<CancerDataShowActivity>
-{
+public class AReadCSVClassShould extends ActivityInstrumentationTestCase2<CancerDataShowActivity> {
     private CancerDataShowActivity cancerData;
 
     public AReadCSVClassShould() {
@@ -42,7 +41,7 @@ public class AReadCSVClassShould extends ActivityInstrumentationTestCase2<Cancer
 
     @Test
     public void TestReadInAFile() {
-        List<String> expected = Arrays.asList("Formaldehyde","1","Phenobarbital", "2B", "Mitomycin C","2B");
+        List<String> expected = Arrays.asList("Formaldehyde", "1", "Phenobarbital", "2B", "Mitomycin C", "2B");
         cancerData.setmIsTest(true);
         cancerData.readCSVFile();
         List<String> data = cancerData.getImportedDataString();
