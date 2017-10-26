@@ -1,8 +1,8 @@
 package ch.epfl.sweng.qeeqbii;
 
 import android.graphics.Color;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.Toast;
 
@@ -20,10 +20,9 @@ import java.util.ArrayList;
 public class Graphs extends AppCompatActivity {
 
     private static String TAG = "Graphs";
-
+    PieChart pieChart;
     private float[] yData = {700, 1600};
     private String[] xData = {"Completed", "Left"};
-    PieChart pieChart;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,8 +36,7 @@ public class Graphs extends AppCompatActivity {
         createGraph(R.id.idPieChartSalts, getString(R.string.salt_graph));
     }
 
-    private void createGraph(int numberChart, String nameGraph)
-    {
+    private void createGraph(int numberChart, String nameGraph) {
         pieChart = (PieChart) findViewById(numberChart);
         pieChart.setRotationEnabled(true);
         pieChart.setUsePercentValues(true);
@@ -64,8 +62,8 @@ public class Graphs extends AppCompatActivity {
                 int pos1 = e.toString().indexOf("(sum): ");
                 String sales = e.toString().substring(pos1 + 7);
 
-                for(int i = 0; i < yData.length; i++){
-                    if(yData[i] == Float.parseFloat(sales)){
+                for (int i = 0; i < yData.length; i++) {
+                    if (yData[i] == Float.parseFloat(sales)) {
                         pos1 = i;
                         break;
                     }
@@ -85,16 +83,16 @@ public class Graphs extends AppCompatActivity {
         ArrayList<PieEntry> yEntrys = new ArrayList<>();
         ArrayList<String> xEntrys = new ArrayList<>();
 
-        for(int i = 0; i < yData.length; i++){
-            yEntrys.add(new PieEntry(yData[i] , i));
+        for (int i = 0; i < yData.length; i++) {
+            yEntrys.add(new PieEntry(yData[i], i));
         }
 
-        for(int i = 1; i < xData.length; i++){
+        for (int i = 1; i < xData.length; i++) {
             xEntrys.add(xData[i]);
         }
 
         //create the data set
-        PieDataSet pieDataSet = new PieDataSet(yEntrys, nameGraph+ " intake/ day");
+        PieDataSet pieDataSet = new PieDataSet(yEntrys, nameGraph + " intake/ day");
         pieDataSet.setSliceSpace(0); //sets the size of the yEntrys on the graph
         pieDataSet.setValueTextSize(0);
 
