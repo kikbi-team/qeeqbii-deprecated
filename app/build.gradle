@@ -15,7 +15,6 @@ android {
     }
     lintOptions {
         disable 'GoogleAppIndexingWarning'
-        baseline file("lint-baseline.xml") // your choice of filename/path here
     }
     buildTypes {
         debug {
