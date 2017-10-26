@@ -1,19 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools">
-
-    <!--
-        Your Facebook App ID. See README.
-    -->
-    <!--  TODO(developer): REPLACE -->
-    <string name="facebook_app_id" tools:keep="@string/facebook_app_id">REPLACE_ME</string>
-
-    <!--
-      Your Twitter Key and Secret, see README.
-    -->
-    <!-- TODO(developer): REPLACE -->
-    <string name="twitter_consumer_key" tools:keep="@string/twitter_consumer_key">REPLACE_ME</string>
-
-
     <item name="id_times_square" type="id"/>
 
 </resources>
