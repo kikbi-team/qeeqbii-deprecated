@@ -11,6 +11,7 @@ import static android.support.test.espresso.matcher.ViewMatchers.withId;
 
 /**
  * Created by davidcleres on 12.10.17.
+ *
  */
 
 public class AGraphClassShould {

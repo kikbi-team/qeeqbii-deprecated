@@ -22,8 +22,8 @@ import static android.support.test.espresso.intent.matcher.IntentMatchers.hasCom
 @RunWith(AndroidJUnit4.class)
 public class BarcodeInvalidLeadsToMain {
     @Rule
-    public IntentsTestRule<BarcodeActivity> mActivityRule =
-            new IntentsTestRule<BarcodeActivity>(BarcodeActivity.class);
+    public final IntentsTestRule<BarcodeActivity> mActivityRule =
+            new IntentsTestRule<>(BarcodeActivity.class);
 
     @Test
     public void useAppContext() throws Exception {

@@ -27,8 +27,8 @@ import static org.hamcrest.core.StringStartsWith.startsWith;
 @RunWith(AndroidJUnit4.class)
 public class BarcodeLeadsToProduct {
     @Rule
-    public IntentsTestRule<BarcodeActivity> mActivityRule =
-            new IntentsTestRule<BarcodeActivity>(BarcodeActivity.class);
+    public final IntentsTestRule<BarcodeActivity> mActivityRule =
+            new IntentsTestRule<>(BarcodeActivity.class);
 
     @Test
     public void useAppContext() throws Exception {
