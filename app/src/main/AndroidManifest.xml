@@ -24,18 +24,14 @@
             </intent-filter>
         </activity>
 
-      <activity android:name=".GoogleSignInActivity">
-           <intent-filter>
-           <action android:name="android.intent.action.MAIN" />
+        <activity android:name=".GoogleSignInActivity"></activity>
 
-           <category android:name="android.intent.category.LAUNCHER" />
-       </intent-filter>
-       </activity>
-
-
-        <activity android:name="ch.epfl.sweng.qeeqbii.MainActivity" />
+        <activity
+            android:name="ch.epfl.sweng.qeeqbii.MainActivity"
+            android:exported="true"></activity>
         <activity
             android:name="ch.epfl.sweng.qeeqbii.CancerDataShowActivity"
+            android:exported="true"
             android:parentActivityName="ch.epfl.sweng.qeeqbii.MainActivity">
 
             <!-- The meta-data tag is required if you support API level 15 and lower -->
@@ -44,9 +40,15 @@
                 android:value="ch.epfl.sweng.qeeqbii.MainActivity" />
         </activity>
         <activity android:name="ch.epfl.sweng.qeeqbii.BarcodeActivity" />
-        <activity android:name="ch.epfl.sweng.qeeqbii.BarcodeToProductActivity" />
+        <activity
+            android:name="ch.epfl.sweng.qeeqbii.BarcodeToProductActivity"
+            android:exported="true" />
         <activity android:name="ch.epfl.sweng.qeeqbii.Graphs"></activity>
-
+        <activity
+            android:name="ch.epfl.sweng.qeeqbii.CancerDataQueryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:parentActivityName="ch.epfl.sweng.qeeqbii.MainActivity"></activity>
         <activity
             android:name="ch.epfl.sweng.qeeqbii.MainApp"
             android:label="@string/app_name" >
@@ -77,30 +79,6 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="ch.epfl.sweng.qeeqbii.MainApp" />
-
-            <!-- For Dropbox, Gmail and Drive -->
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="android.intent.category.BROWSABLE" />
-
-                <data android:mimeType="application/octet-stream" />
-            </intent-filter>
-
-            <!-- Handle intent from a file browser app -->
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
-                <action android:name="android.intent.action.EDIT" />
-
-                <category android:name="android.intent.category.BROWSABLE" />
-                <category android:name="android.intent.category.DEFAULT" />
-
-                <data android:scheme="file" />
-                <data android:host="*" />
-                <data android:mimeType="*/*" />
-                <data android:pathPattern=".*\\.slx" />
-            </intent-filter>
         </activity>
 
         <!-- Activity for the configuration screen -->
@@ -116,7 +94,6 @@
 
             -->
         </activity>
-
         <receiver
             android:name="ch.epfl.sweng.qeeqbii.vansschedule.AlarmeNotificationShoppingList"
             android:exported="false" >

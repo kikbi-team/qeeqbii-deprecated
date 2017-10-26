@@ -13,29 +13,27 @@
         <RelativeLayout
             android:id="@+id/RelativeLayout01"
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content" >
+            android:layout_height="wrap_content">
 
-            <TextView
-                xmlns:android="http://schemas.android.com/apk/res/android"
+            <TextView xmlns:android="http://schemas.android.com/apk/res/android"
                 android:id="@+id/CancerData"
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:orientation="vertical"
                 android:text="@string/cancer_data"
-                android:textSize="22sp">
-            </TextView>
+                android:textSize="22sp"></TextView>
 
             <TextView
                 android:id="@+id/cancerDataBaseMessage"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:textAppearance="?android:attr/textAppearanceSmall"
-                android:layout_alignParentTop="true"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
                 android:layout_marginLeft="29dp"
                 android:layout_marginStart="29dp"
-                android:layout_marginTop="32dp"/>
+                android:layout_marginTop="32dp"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
         </RelativeLayout>
     </ScrollView>
 </android.support.constraint.ConstraintLayout>

@@ -1,19 +1,10 @@
 package ch.epfl.sweng.qeeqbii;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.EditText;
-
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.nio.charset.Charset;
-import java.util.ArrayList;
-import java.util.List;
 
 import static ch.epfl.sweng.qeeqbii.R.layout.activity_main;
 
@@ -27,8 +18,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @SuppressWarnings("UnusedParameters")
-    public void cancerDataBaseShow(View view)
-    {
+    public void cancerDataBaseShow(View view) {
         Intent intent = new Intent(this, CancerDataShowActivity.class);
         startActivity(intent);
     }
@@ -38,8 +28,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void searchProductFromBarcode(View view)
-    {
+    public void searchProductFromBarcode(View view) {
         Intent intent = new Intent(this, BarcodeToProductActivity.class);
         EditText editText = (EditText) findViewById(R.id.mainName);
         String barcode = editText.getText().toString();
@@ -47,15 +36,18 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void showGraphs(View view)
-    {
+    public void showGraphs(View view) {
         Intent intent = new Intent(this, Graphs.class);
         startActivity(intent);
     }
 
-    public void showShoppingList(View view)
-    {
+    public void showShoppingList(View view) {
         Intent intent = new Intent(this, MainApp.class);
+        startActivity(intent);
+    }
+
+    public void cancerDataQuery(View view) {
+        Intent intent = new Intent(this, CancerDataQueryActivity.class);
         startActivity(intent);
     }
 }

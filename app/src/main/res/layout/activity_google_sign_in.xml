@@ -17,12 +17,12 @@
         android:orientation="vertical">
 
         <ImageView
-            style="@style/ThemeOverlay.FirebaseIcon"
             android:id="@+id/google_icon"
-            android:contentDescription="@string/desc_firebase_lockup"
-            android:src="@mipmap/firebase_lockup_400"
+            style="@style/ThemeOverlay.FirebaseIcon"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/desc_firebase_lockup"
+            android:src="@mipmap/firebase_lockup_400" />
 
         <TextView
             android:id="@+id/title_text"
@@ -48,7 +48,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Fisrt_Name" />
+            android:hint="Fisrt_Name" />
 
         <EditText
             android:id="@+id/editTextLastName"
@@ -56,7 +56,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Last_Name" />
+            android:hint="Last_Name" />
 
         <EditText
             android:id="@+id/editTextAllergie"
@@ -65,8 +65,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
-            android:inputType="textPersonName"
-            android:text="Allergies: " />
+            android:hint="Allergies: "
+            android:inputType="textPersonName" />
 
         <EditText
             android:id="@+id/editTextGout"
@@ -75,8 +75,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
-            android:inputType="textMultiLine"
-            android:text="Aliments à proscrire: " />
+            android:hint="Aliments à proscrire"
+            android:inputType="textMultiLine" />
 
 
     </LinearLayout>

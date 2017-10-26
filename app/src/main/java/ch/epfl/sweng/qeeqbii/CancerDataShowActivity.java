@@ -15,6 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CancerDataShowActivity extends AppCompatActivity {
+
     //CONSTRUCTOR
     public CancerDataShowActivity() {
         mIsTest = false;
@@ -27,10 +28,9 @@ public class CancerDataShowActivity extends AppCompatActivity {
         importedData.clear(); //adds the sample to the table with all the data
         InputStream inStream;
         if (mIsTest) {
-             inStream = getResources().openRawResource(R.raw.test_text);
-        }
-        else {
-             inStream = getResources().openRawResource(R.raw.original_classification_iarc_english);
+            inStream = getResources().openRawResource(R.raw.test_text);
+        } else {
+            inStream = getResources().openRawResource(R.raw.original_classification_iarc_english);
         }
 
         BufferedReader reader = new BufferedReader(new InputStreamReader(inStream, Charset.forName("UTF-8")));
@@ -50,16 +50,20 @@ public class CancerDataShowActivity extends AppCompatActivity {
                 //sample.setmGroup(Double.parseDouble(tokens[x]));
                 //sample.setmGroup(Integer.parseInt(tokens[x]));
                 importedData.add(sample); //adds the sample to the table with all the data
-                Log.d("MainActivity","Just created: " + sample); //d stands for debugg
+                Log.d("MainActivity", "Just created: " + sample); //d stands for debugg
             }
         } catch (IOException error) {
-            Log.wtf("MainActivity", "Error reading the data file in the .csv file" + line, error);
+            Log.wtf("MainActivity", "CustomExeptions reading the data file in the .csv file" + line, error);
             error.printStackTrace();
         }
     }
 
     public List<CancerSubstance> getImportedData() {
         return importedData;
+    }
+
+    public void setImportedData(List<CancerSubstance> importedData) {
+        this.importedData = importedData;
     }
 
     public List<String> getImportedDataString() {
@@ -71,45 +75,31 @@ public class CancerDataShowActivity extends AppCompatActivity {
         return stringImportedData;
     }
 
-    public boolean ismIsTest() {return mIsTest;}
-    public void setmIsTest(boolean mIsTest) {this.mIsTest = mIsTest;}
-    public void setImportedData(List<CancerSubstance> importedData) {
-        this.importedData = importedData;
-    }
-
     @Override
-    protected void onCreate(Bundle savedInstanceState)
-    {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_display_message);
 
         // Instantiation of a CancerDataBase object followed by:
         // reading of the CSV file using the readCSVFile method
-        // sending of a ess
+        // sending of a message
         CancerDataBase cancer_data_base = new CancerDataBase();
-        String message = new String();
+        String message = "";
         try {
             cancer_data_base.readCSVFile(getApplicationContext());
             message = cancer_data_base.sendOutputReadyToPrint();
-        }
-        catch(Exception e) {
+        } catch (Exception e) {
             System.err.println("Exception: " + e.getMessage());
         }
-
-
-                /*" id\tAgent\t\tGroup\n";
-
-        for (int i = 0; i < importedData.size(); i = i + 1) {
-            message += " " + Integer.toString(i);
-            message += "\t" + importedData.get(i).getmAgent();
-            message += "\t\t\t" + importedData.get(i).getmGroup() + "\n";
-        }
-        */
 
         // Capture the layout's; TextView and set the string as its text
         TextView reportedMessage = (TextView) findViewById(R.id.cancerDataBaseMessage);
         reportedMessage.setTextSize(12);
-        reportedMessage.setTextColor(Color.rgb(200,0,0));
+        reportedMessage.setTextColor(Color.rgb(200, 0, 0));
         reportedMessage.setText(message);
+    }
+
+    public void setmIsTest(boolean mIsTest) {
+        this.mIsTest = mIsTest;
     }
 }
