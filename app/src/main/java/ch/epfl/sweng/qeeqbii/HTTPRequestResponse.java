@@ -5,6 +5,7 @@ import java.util.Map;
 
 /**
  * Created by guillaume on 09/10/17.
+ *
  */
 
 public class HTTPRequestResponse {

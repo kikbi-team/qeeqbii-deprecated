@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 /**
  * Created by guillaume on 10/10/17.
+ *
  */
 
 public class BarcodeToProductActivity extends AppCompatActivity {
@@ -24,8 +25,6 @@ public class BarcodeToProductActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
         String barcode = intent.getStringExtra(MainActivity.BARCODE_READER);
-        String[] barcode_array = new String[1];
-        barcode_array[0] = barcode;
 
         // Capture the layout's; TextView and set the string as its text
         final TextView txt = (TextView) findViewById(R.id.product_details);

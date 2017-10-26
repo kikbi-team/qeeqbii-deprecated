@@ -8,6 +8,7 @@ import android.widget.TextView;
 
 /**
  * Created by adrien on 13/10/17.
+ *
  */
 
 public class CancerDataQueryActivity extends AppCompatActivity {
@@ -20,7 +21,6 @@ public class CancerDataQueryActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cancer_data_query);
 
-        String message = new String();
         try {
             cancer_data_base.readCSVFile(getApplicationContext());
         } catch (Exception e) {

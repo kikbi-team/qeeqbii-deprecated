@@ -21,6 +21,7 @@ import static java.lang.Integer.MAX_VALUE;
 
 /**
  * Created by adrien on 12/10/17.
+ *
  */
 
 public class CancerDataBase {
@@ -62,7 +63,7 @@ public class CancerDataBase {
         InputStream inStream = resources.openRawResource(R.raw.original_classification_iarc_english);
         BufferedReader reader = new BufferedReader(new InputStreamReader(inStream, Charset.forName("UTF-8")));
 
-        String line = null;
+        String line;
         // Step over the headers
         reader.readLine();
         while ((line = reader.readLine()) != null) {

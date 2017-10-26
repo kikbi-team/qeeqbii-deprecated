@@ -10,7 +10,8 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        android:fullBackupContent="@xml/backup_descriptor">
 
 
         <activity android:name="ch.epfl.sweng.qeeqbii.HomeActivity">
@@ -29,8 +30,7 @@
             android:exported="true"></activity>
         <activity
             android:name="ch.epfl.sweng.qeeqbii.CancerDataShowActivity"
-            android:exported="true"
-            android:parentActivityName="ch.epfl.sweng.qeeqbii.MainActivity">
+            android:exported="true">
 
             <!-- The meta-data tag is required if you support API level 15 and lower -->
             <meta-data
@@ -45,8 +45,8 @@
         <activity
             android:name="ch.epfl.sweng.qeeqbii.CancerDataQueryActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
-            android:exported="true"
-            android:parentActivityName="ch.epfl.sweng.qeeqbii.MainActivity"></activity>
+            android:exported="true"></activity>
+        <activity android:name=".BaseActivity" />
     </application>
 
 </manifest>

@@ -15,6 +15,7 @@ import static org.junit.Assert.assertEquals;
 
 /**
  * Created by guillaume on 16.10.17.
+ *
  */
 
 @RunWith(AndroidJUnit4.class)
@@ -35,7 +36,7 @@ public class OpenFoodQueryTest {
             public void onPostExecute(String result) {
 
 
-                HTTPRequestResponse resp = new HTTPRequestResponse();
+                HTTPRequestResponse resp;
                 try {
                     resp = new HTTPRequestResponse(result);
                     assertEquals(resp.GetProductQuantity(), "245.0g");
@@ -50,9 +51,9 @@ public class OpenFoodQueryTest {
                     //Map.Entry<String,Double> e = it.next();
                     //assertEquals(e.getValue(),new Double(0.0));
 
-                    assertEquals(parsed_nutrients.get("Sel (g)"), new Double(0.0));
-                    assertEquals(parsed_nutrients.get("Énergie (kCal)"), new Double(67.0));
-                    assertEquals(parsed_nutrients.get("Énergie (kJ)"), new Double(280.0));
+                    assertEquals(parsed_nutrients.get("Sel (g)"), Double.valueOf(0.0));
+                    assertEquals(parsed_nutrients.get("Énergie (kCal)"), Double.valueOf(67.0));
+                    assertEquals(parsed_nutrients.get("Énergie (kJ)"), Double.valueOf(280.0));
 
                 } catch (Exception e) {
 

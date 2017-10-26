@@ -11,6 +11,8 @@ import android.widget.TextView;
 import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
 
+import java.util.Objects;
+
 import static ch.epfl.sweng.qeeqbii.MainActivity.BARCODE_READER;
 
 public class BarcodeActivity extends AppCompatActivity {
@@ -49,7 +51,7 @@ public class BarcodeActivity extends AppCompatActivity {
     public void processBarcode(String barcode) {
         // go back to main activity if the barcode was invalid
         // or the scan was interrupted
-        if (barcode == null || barcode == "") {
+        if (barcode == null || Objects.equals(barcode, "")) {
             Log.d("STATE", "Barcode is invalid, going back to main");
             goToMain();
         } else {

@@ -9,6 +9,7 @@ import java.net.URL;
 
 /**
  * Created by guillaume on 06/10/17.
+ * 
  */
 
 public class OpenFoodQuery extends AsyncTask<String, Void, String> {
