@@ -1,5 +1,6 @@
 package ch.epfl.sweng.qeeqbii;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -19,6 +20,8 @@ public class BarcodeToProductActivity extends AppCompatActivity {
     private HTTPRequestResponse product_resp = new HTTPRequestResponse();
 
     private String barcode;
+
+    @SuppressLint("StaticFieldLeak")
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

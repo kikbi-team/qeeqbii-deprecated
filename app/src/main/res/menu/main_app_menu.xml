@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:yourapp="http://schemas.android.com/apk/res-auto" >
+
+    <item
+        android:id="@+id/action_add"
+        android:icon="@drawable/ic_action_new"
+        android:title="@string/new_list"
+        yourapp:showAsAction="ifRoom"/>
+
+    <!-- Menu Options -->
+
+    <item
+        android:id="@+id/action_delete_all"
+        android:title="@string/delete_all"
+        yourapp:showAsAction="never" />
+    <item
+        android:id="@+id/action_update"
+        android:title="@string/update"
+        yourapp:showAsAction="never" />
+    <item
+        android:id="@+id/action_settings"
+        android:title="@string/settings"
+        yourapp:showAsAction="never" />
+
+</menu>

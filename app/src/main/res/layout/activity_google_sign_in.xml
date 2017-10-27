@@ -5,6 +5,7 @@
     android:id="@+id/main_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/transparent"
     android:orientation="vertical"
     android:weightSum="4">
 
@@ -46,7 +47,9 @@
             style="@style/ThemeOverlay.MyTextDetail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/first_name" />
+
+            android:hint="@string/first_name"
+            tools:ignore="NestedWeights" />
 
         <EditText
             android:id="@+id/editTextLastName"
@@ -73,10 +76,7 @@
             android:hint="@string/aliments_proscrire"
             android:inputType="textMultiLine" />
 
-
     </LinearLayout>
-
-
     <RelativeLayout
         android:layout_width="fill_parent"
         android:layout_height="0dp"
@@ -119,6 +119,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/sign_out"
+                tools:ignore="ButtonStyle"
                 style="?android:attr/buttonBarButtonStyle"
                 android:theme="@style/ThemeOverlay.MyDarkButton" />
 
@@ -128,10 +129,8 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/disconnect"
-                style="?android:attr/buttonBarButtonStyle"
-                android:theme="@style/ThemeOverlay.MyDarkButton" />
+                android:theme="@style/ThemeOverlay.MyDarkButton"
+                tools:ignore="ButtonStyle" />
         </LinearLayout>
-
     </RelativeLayout>
-
 </LinearLayout>

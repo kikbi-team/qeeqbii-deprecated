@@ -16,12 +16,12 @@ import java.util.List;
 
 public class CancerDataShowActivity extends AppCompatActivity {
 
-    private List<CancerSubstance> importedData = new ArrayList<>();
-    private boolean mIsTest;
     //CONSTRUCTOR
     public CancerDataShowActivity() {
         mIsTest = false;
     }
+    private List<CancerSubstance> importedData = new ArrayList<>();
+    private boolean mIsTest;
 
     //METHODS
     public void readCSVFile() {
@@ -75,10 +75,6 @@ public class CancerDataShowActivity extends AppCompatActivity {
         return stringImportedData;
     }
 
-    public boolean ismIsTest() {
-        return mIsTest;
-    }
-
     public void setmIsTest() {
         this.mIsTest = true;
     }
@@ -99,15 +95,6 @@ public class CancerDataShowActivity extends AppCompatActivity {
         } catch (Exception e) {
             System.err.println("Exception: " + e.getMessage());
         }
-
-        /*" id\tAgent\t\tGroup\n";
-
-        for (int i = 0; i < importedData.size(); i = i + 1) {
-            message += " " + Integer.toString(i);
-            message += "\t" + importedData.get(i).getmAgent();
-            message += "\t\t\t" + importedData.get(i).getmGroup() + "\n";
-        }
-        */
 
         // Capture the layout's; TextView and set the string as its text
         TextView reportedMessage = (TextView) findViewById(R.id.cancerDataBaseMessage);

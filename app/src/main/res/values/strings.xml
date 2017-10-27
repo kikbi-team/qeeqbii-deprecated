@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">Qeeqbii</string>
     <string name="welcome_text">With Qeeqbii you will eat healthy again in no time!</string>
     <string name="barcode_button">Barcode Reader</string>
@@ -10,85 +10,152 @@
     <string name="open">Open</string>
     <string name="close">Close</string>
     <string name="barcode_scan_to_product">Go to product</string>
+    <string name="Formaldehyde" tools:keep="@string/Formaldehyde">Formaldehyde</string>
 
     <!-- Google Sign In -->
-    <string name="AppName">Firebase Authentication</string>
+    <string name="AppName" tools:keep="@string/AppName">Firebase Authentication</string>
 
-    <string name="label_google_sign_in">Firebase + Google Sign In</string>
-    <string name="desc_google_sign_in">Use a Google Sign In credential to authenticate with Firebase.</string>
+    <string name="label_google_sign_in" tools:keep="@string/label_google_sign_in">Firebase + Google Sign In</string>
+    <string name="desc_google_sign_in" tools:keep="@string/desc_google_sign_in">Use a Google Sign In credential to authenticate with Firebase.</string>
 
-    <string name="label_facebook_login">Firebase + Facebook Login</string>
-    <string name="desc_facebook_login">Use a Facebook Login credential to authenticate with Firebase.</string>
+    <string name="label_facebook_login" tools:keep="@string/label_facebook_login">Firebase + Facebook Login</string>
+    <string name="desc_facebook_login" tools:keep="@string/desc_facebook_login">Use a Facebook Login credential to authenticate with Firebase.</string>
 
-    <string name="label_twitter_login">Firebase + Twitter Login</string>
-    <string name="desc_twitter_login">Use a Twitter Login credential to authenticate with Firebase.</string>
+    <string name="label_anonymous_auth" tools:keep="@string/label_anonymous_auth">Anonymous Authentication</string>
 
-    <string name="label_emailpassword">Email/Password Authentication</string>
-    <string name="desc_emailpassword">Use an email and password to authenticate with Firebase.</string>
+    <string name="label_custom_auth" tools:keep="@string/label_custom_auth">Custom Authentication</string>
 
-    <string name="label_phone_auth">Phone Number Authentication</string>
-    <string name="desc_phone_auth">Use a phone number to authenticate with Firebase.</string>
-
-    <string name="label_anonymous_auth">Anonymous Authentication</string>
-    <string name="desc_anonymous_auth">Sign in anonymously and then later upgrade to a full Firebase Auth user.</string>
-
-    <string name="label_custom_auth">Custom Authentication</string>
-    <string name="desc_custom_auth">Use a custom token signed by your own server to authenticate with Firebase.</string>
-
-    <string name="label_firebase_ui">FirebaseUI Auth</string>
-    <string name="desc_firebase_ui">Use the FirebaseUI-Android library to authenticate with Firebase.</string>
-
-    <string name="hint_user_id">User ID</string>
-    <string name="get_custom_token">Get Token</string>
-    <string name="sign_in">Sign In</string>
-    <string name="create_account">Create Account</string>
+    <string name="create_account" tools:keep="@string/create_account">Create Account</string>
     <string name="sign_out">Sign Out</string>
-    <string name="verify_email">Verify Email</string>
+    <string name="verify_email" tools:keep="@string/verify_email">Verify Email</string>
     <string name="disconnect">Disconnect</string>
     <string name="loading">Loading…</string>
-    <string name="custom_token">Custom Token</string>
-    <string name="signed_in">Signed In</string>
     <string name="signed_out">Signed Out</string>
-    <string name="token_null">Token: null</string>
-    <string name="hint_email">Email</string>
-    <string name="hint_password">Password</string>
+    <string name="hint_email" tools:keep="@string/hint_email">Email</string>
+    <string name="hint_password" tools:keep="@string/hint_password">Password</string>
     <string name="desc_firebase_lockup">Firebase logo and name</string>
-    <string name="auth_failed">Authentication failed</string>
-    <string name="start_phone_auth">Start</string>
-    <string name="verify_phone_auth">Verify</string>
-    <string name="resend_phone_auth">Resend</string>
-    <string name="hint_phone_number">Phone Number</string>
-    <string name="hint_verification_code">Verification Code</string>
-    <string name="status_code_sent">Code Sent</string>
-    <string name="status_verification_failed">Verification failed</string>
-    <string name="status_verification_succeeded">Verification succeeded</string>
-    <string name="status_sign_in_failed">Sign-in failed</string>
-    <string name="instant_validation">(instant validation)</string>
+    <string name="auth_failed" tools:keep="@string/auth_failed">Authentication failed</string>
+    <string name="start_phone_auth" tools:keep="@string/start_phone_auth">Start</string>
+    <string name="verify_phone_auth" tools:keep="@string/verify_phone_auth">Verify</string>
+    <string name="resend_phone_auth" tools:keep="@string/resend_phone_auth">Resend</string>
+    <string name="hint_verification_code" tools:keep="@string/hint_verification_code">Verification Code</string>
+    <string name="status_code_sent" tools:keep="@string/status_code_sent">Code Sent</string>
+    <string name="status_verification_failed" tools:keep="@string/status_verification_failed">Verification failed</string>
+    <string name="status_verification_succeeded" tools:keep="@string/status_verification_succeeded">Verification succeeded</string>
+    <string name="status_sign_in_failed" tools:keep="@string/status_sign_in_failed">Sign-in failed</string>
 
     <string name="firebase_status_fmt">Firebase User: %s</string>
-    <string name="firebase_user_management">Firebase User Management</string>
 
     <string name="google_status_fmt">Google User: %s</string>
     <string name="google_title_text">Google Sign In</string>
 
-    <string name="facebook_status_fmt">Facebook User: %s</string>
-    <string name="facebook_title_text">Facebook Login</string>
+    <string name="facebook_title_text" tools:keep="@string/facebook_title_text">Facebook Login</string>
 
-    <string name="emailpassword_status_fmt">Email User: %1$s (verified: %2$b)</string>
-    <string name="emailpassword_title_text">Email and Password</string>
+    <string name="emailpassword_title_text" tools:keep="@string/emailpassword_title_text">Email and Password</string>
 
-    <string name="phone_title_text">Phone Number</string>
+    <string name="phone_title_text" tools:keep="@string/phone_title_text">Phone Number</string>
 
-    <string name="twitter_status_fmt">Twitter User: %s</string>
-    <string name="twitter_title_text">Twitter Login</string>
+    <string name="twitter_status_fmt" tools:keep="@string/twitter_status_fmt">Twitter User: %s</string>
 
-    <string name="firebaseui_status_fmt">Firebase User: %s</string>
-    <string name="firebaseui_title_text">FirebaseUI Auth</string>
+    <string name="firebaseui_status_fmt" tools:keep="@string/firebaseui_status_fmt">Firebase User: %s</string>
+    <string name="firebaseui_title_text" tools:keep="@string/firebaseui_title_text">FirebaseUI Auth</string>
 
-    <string name="id_fmt">User ID: %s</string>
-    <string name="email_fmt">Email: %s</string>
+    <string name="email_fmt" tools:keep="@string/email_fmt">Email: %s</string>
 
+    <string name="share_title">Shopping list : </string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="add_list">Add item</string>
+    <string name="new_list">New list</string>
+    <string name="hint_desc">Add an item</string>
+    <string name="save">Save?</string>
+    <string name="schedule">Schedule</string>
+    <string name="untitled">Untitled</string>
+    <string name="no_description">No description</string>
+    <string name="mask_unti_value">US$</string>
+    <string name="update">Software update</string>
+    <string name="cancel">Cancel</string>
+    <string name="title_new">New shopping list</string>
+    <string name="delete_all">Delete all</string>
+    <string name="xml_import">Import shopping list</string>
+    <string name="select_a_date" tools:keep="@string/select_a_date">Select a date</string>
+    <string name="barcode_scan">Barcode scan</string>
+    <string name="delete_selecteds">Delete checked</string>
+    <string name="duplicate">Duplicate</string>
+
+    <string name="select_all">Check all</string>
+    <string name="desselect_all">Uncheck all</string>
+    <string name="delete_question">Excluir?</string>
+    <string name="want_delete_list" tools:keep="@string/want_delete_list">Do you want to delete the list</string>
+    <string name="want_delete_item">Do you want to delete the item</string>
+    <string name="want_delete_all_list">Do you want to delete all the shopping lists?</string>
+    <string name="want_delete_all_items">Do you want to delete all the items of this shopping lists?</string>
+    <string name="want_delete_all_selected_itens">Do you want to delete all the checked items of this shopping lists?</string>
+    <string name="info_desc">Enter the item description.</string>
+    <string name="time">Time:</string>
+    <string name="new_notification_seted">A new notification will be shown on </string>
+    <string name="notification_arrived">Time to go shopping!</string>
+    <string name="item_already_inserted">Item is already on the shopping list!</string>
+    <string name="no_connection">No internet connection   =(</string>
+    <string name="settings">Settings</string>
+    <string name="options" tools:keep="@string/options">Options</string>
+    <string name="rename">Rename</string>
+    <string name="delete">Delete</string>
+    <string name="share">Share</string>
+    <string name="order" tools:keep="@string/order">Ordination</string>
+    <string name="share_via_text">Share via text</string>
+    <string name="title_rename">Rename shopping list</string>
+    <string name="share_via">Share via</string>
+    <string name="no_item_added">No item was added</string>
+    <string name="no_list_added">Add a new list</string>
+    <string name="invalid_importable_xml">This is a invalid file</string>
+    <string name="total">Total</string>
+    <string name="description_title">Item description</string>
+    <string name="quantity_title">Quant.</string>
+    <string name="unit_value_title">Price</string>
+    <string name="visualization_style">Visualization style</string>
+    <string name="show_quantity_summary">Show information about item quantity</string>
+    <string name="show_check_box_summary">Show checkboxes in the shopping list</string>
+    <string name="show_check_boxe_title">Show checkboxes </string>
+    <string name="show_quantity_title">Show quantities</string>
+    <string name="show_unit_value_summary">Show information about item price</string>
+    <string name="show_unit_value_title">Show prices</string>
+    <string name="quant_items" tools:ignore="PluralsCandidate">%d Item(s)</string>
+    <string name="ordenation_style">Ordination style</string>
+    <string name="ordenation_checked_style_title">Default style ordering of checked items</string>
+    <string name="ordenation_alphabetical_style_title">Default alphabetical style ordering of items</string>
+    <string name="default_option">Current option is : </string>
+    <string name="about_app_install_date" tools:keep="@string/about_app_install_date">Installation date :</string>
+    <string name="date">Date:</string>
+    <string name="about_app_update_date" tools:keep="@string/about_app_update_date">Last update :</string>
+    <string name="about_app" tools:keep="@string/about_app">About this app</string>
+    <string name="about_app_version" tools:keep="@string/about_app_version">App version :</string>
+    <string name="about_app_code" tools:keep="@string/about_app_code">Version code :</string>
+    <string name="about_android_version" tools:keep="@string/about_android_version">Android version :</string>
+    <string name="schedule_notification">Schedule a notification for:</string>
+    <string name="about_app_contact_me" tools:keep="@string/about_app_contact_me">Contact me : </string>
+    <string name="about_app_description" tools:keep="@string/about_app_description">This is an experimental app developed by Júnior Vansuita. Do not pay for this app.</string>
+
+    <string name="about_pollfish" tools:keep="@string/about_pollfish">About PollFish</string>
+    <string name="pollfish_title" tools:keep="@string/pollfish_title">Survey Serving Technology</string>
+
+    <string name="pollfish_finish" tools:keep="@string/pollfish_finish">APPLE, GOOGLE AND AMAZON ARE NOT A SPONSOR NOR ARE INVOLVED IN ANY WAY IN THE DRAWS. NO APPLE PRODUCTS ARE BEING USED AS PRIZES.</string>
+
+    <string-array name="ordenation_checked_style_list_array">
+        <item>Natural ordination</item>
+        <item>Checked down</item>
+        <item>Checked up</item>
+    </string-array>
+    <string-array name="ordenation_alphabetical_style_list_array">
+        <item>Natural ordination</item>
+        <item>Ascending Alphabetical Order</item>
+        <item>Reverse Alphabetical Order</item>
+    </string-array>
     <string name="search_in_database">Search for harmful ingredients</string>
+    <string name="description">Description</string>
+    <string name="text">text</string>
+    <string name="search">Search</string>
+    <string name="shoppinglist">ShoppingList</string>
     <string name="levenshtein_nquery">LEVENSHTEIN QUERY</string>
     <string name="type_query_here">Type query here</string>
     <string name="perfect_match_nquery">PERFECT MATCH QUERY</string>
@@ -97,9 +164,12 @@
     <string name="last_name">Last_Name</string>
     <string name="allergies">Allergies:</string>
     <string name="aliments_proscrire">Aliments à proscrire</string>
-    <string name="save_and_continue">Save and continue</string>
     <string name="search_product">search product</string>
     <string name="graphs">Graphs</string>
     <string name="query_cancer_n_database">QUERY CANCER  DATABASE</string>
     <string name="show_graphs_from_show_product_activity">See nutrients graphs</string>
+    <string name="_36">36</string>
+    <string name="r_89_00">R$ 89,00</string>
+    <string name="r_890_00">R$ 890,00</string>
+    <string name="save_and_continue">Save and continue</string>
 </resources>

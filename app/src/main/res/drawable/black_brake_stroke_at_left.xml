@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layer-list xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    tools:keep="@drawable/black_brake_stroke_at_left">
+    <item
+        android:top="-6dp"
+        android:left="0dp"
+        android:right="-6dp"
+        android:bottom="-6dp">
+
+        <shape android:shape="rectangle">
+            <solid android:color="@android:color/transparent"/>
+            <stroke
+                android:width="@dimen/one_dps"
+                android:color="@color/black_brake"/>
+        </shape>
+    </item>
+</layer-list>

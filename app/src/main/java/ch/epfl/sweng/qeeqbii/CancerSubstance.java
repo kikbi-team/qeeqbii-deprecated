@@ -1,10 +1,5 @@
 package ch.epfl.sweng.qeeqbii;
 
-/**
- * Created by adrien on 12/10/17.
- *
- */
-
 public class CancerSubstance {
 
     // Attributes
@@ -13,6 +8,7 @@ public class CancerSubstance {
     private String mGroup;
     private int mLabel;
     // Constructor that defines an empty substance
+
     public CancerSubstance() {
         mId = -1;
         mAgent = "empty";

@@ -53,4 +53,22 @@
 
     </android.support.design.widget.NavigationView>
 
+    <Button
+        android:id="@+id/buttonShopping"
+        android:layout_width="128dp"
+        android:layout_height="50dp"
+        android:onClick="showShoppingList"
+        android:text="@string/shoppinglist"
+        app:layout_constraintBottom_toTopOf="@+id/welcomeText"
+        app:layout_constraintEnd_toStartOf="@+id/buttonGraphs"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mainBarcodeButton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteY="312dp" />
+
+
 </android.support.v4.widget.DrawerLayout>
