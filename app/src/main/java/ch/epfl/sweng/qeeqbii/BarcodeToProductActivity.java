@@ -18,13 +18,15 @@ public class BarcodeToProductActivity extends AppCompatActivity {
 
     private HTTPRequestResponse product_resp = new HTTPRequestResponse();
 
+    private String barcode;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_show_product_details);
 
         Intent intent = getIntent();
-        String barcode = intent.getStringExtra(MainActivity.BARCODE_READER);
+        barcode = intent.getStringExtra(MainActivity.BARCODE_READER);
 
         // Capture the layout's; TextView and set the string as its text
         final TextView txt = (TextView) findViewById(R.id.product_details);
@@ -90,6 +92,12 @@ public class BarcodeToProductActivity extends AppCompatActivity {
 
         txt.setText(str);
 
+    }
+
+    public void showNutrientsGraphs(View view) {
+        Intent intent = new Intent(this, Graphs.class);
+        intent.putExtra("barcode",barcode);
+        startActivity(intent);
     }
 
 
