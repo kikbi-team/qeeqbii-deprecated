@@ -37,10 +37,11 @@ public class Graphs extends AppCompatActivity {
         Log.d(TAG, "onCreate: starting to create chart");
 
         Intent intent = getIntent();
-        String barcode = intent.getExtras().getString("barcode");
 
-        if (barcode != null)
+
+        if (intent.hasExtra("barcode"))
         {
+            String barcode = intent.getExtras().getString("barcode");
 
             try
             {
@@ -89,7 +90,7 @@ public class Graphs extends AppCompatActivity {
         //pieChart.setEntryLabelTextSize(20);
         //More options just check out the documentation!
 
-        float[] yData = {0, 0};
+        float[] yData = {0, 1};
         if (numberChart == R.id.idPieChartCalories) yData = yDataCalories;
         if (numberChart == R.id.idPieChartFats) yData = yDataFats;
         if (numberChart == R.id.idPieChartSugars) yData = yDataSugars;
