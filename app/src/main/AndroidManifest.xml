@@ -28,6 +28,7 @@
         </activity>
 
         <activity android:name=".GoogleSignInActivity" />
+
         <activity
             android:name="ch.epfl.sweng.qeeqbii.MainActivity"
             android:exported="true" />
@@ -36,6 +37,7 @@
             android:exported="true"
             android:parentActivityName="ch.epfl.sweng.qeeqbii.MainActivity"
             tools:targetApi="jelly_bean">
+      
             <!-- The meta-data tag is required if you support API level 15 and lower -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"

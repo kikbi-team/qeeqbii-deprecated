@@ -15,7 +15,6 @@
         tools:layout_editor_absoluteY="8dp"
         tools:layout_editor_absoluteX="8dp">
 
-
         <EditText
             android:id="@+id/mainName"
             android:layout_width="wrap_content"
@@ -61,6 +60,7 @@
     </LinearLayout>
 
 
+
     <android.support.design.widget.NavigationView
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
@@ -71,6 +71,5 @@
         tools:layout_editor_absoluteX="0dp">
 
     </android.support.design.widget.NavigationView>
-
 
 </android.support.v4.widget.DrawerLayout>
