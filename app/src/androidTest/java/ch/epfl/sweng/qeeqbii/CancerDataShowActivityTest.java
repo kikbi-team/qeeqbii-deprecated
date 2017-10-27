@@ -2,7 +2,6 @@ package ch.epfl.sweng.qeeqbii;
 
 import android.support.test.rule.ActivityTestRule;
 
-import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
 
