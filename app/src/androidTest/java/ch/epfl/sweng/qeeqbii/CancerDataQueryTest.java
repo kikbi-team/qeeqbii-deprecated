@@ -17,21 +17,31 @@ import static android.support.test.espresso.assertion.ViewAssertions.matches;
 import static android.support.test.espresso.matcher.ViewMatchers.withId;
 import static android.support.test.espresso.matcher.ViewMatchers.withText;
 
-/**
- * Created by adrien on 16.10.17.
- *
- */
 
 @RunWith(AndroidJUnit4.class)
 public class CancerDataQueryTest {
+    //public final ActivityTestRule<CancerDataQueryActivity> mActivityRule =
+    //       new ActivityTestRule<>(CancerDataQueryActivity.class);
     @Rule
-    public final ActivityTestRule<CancerDataQueryActivity> mActivityRule =
-            new ActivityTestRule<>(CancerDataQueryActivity.class);
+    public final ActivityTestRule<MainActivity> mActivityRule =
+              new ActivityTestRule<>(MainActivity.class);
+
+    /*
+    @Before
+    public void Initialize() {
+        try {
+            CancerDataBase.readCSVFile(mActivityRule.getActivity().getApplicationContext());
+        }
+        catch(Exception e) {
+            System.err.println("Exception: " + e.getMessage());
+        }
+    }
+    */
 
     @Test
     public void testPerfectMatchCancerDataBase() {
         // Useful way of accessing resources
-        //String substance_to_query = mActivityRule.getActivity().getResources().getString(R.string.Formaldehyde);
+        onView(withId(R.id.cancerDataQuery)).perform(click());
 
         List<String[]> query_ans_pairs = new ArrayList<>();
 

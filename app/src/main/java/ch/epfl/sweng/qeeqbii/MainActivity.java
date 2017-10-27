@@ -9,6 +9,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 
+
 public class MainActivity extends AppCompatActivity {
     public static final String BARCODE_READER = "ch.epfl.sweng.qeeqbii.mainBarcode";
 
@@ -16,9 +17,17 @@ public class MainActivity extends AppCompatActivity {
     private DrawerLayout mDrawerLayout;
     private ActionBarDrawerToggle mToggle;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        try {
+            CancerDataBase.readCSVFile(getApplicationContext());
+        }
+        catch(Exception e) {
+            System.err.println("Exception: " + e.getMessage());
+        }
+
         setContentView(R.layout.activity_main);
 
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -37,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+
     }
 
     @SuppressWarnings("UnusedParameters")
@@ -73,6 +83,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void cancerDataQuery(View view) {
         Intent intent = new Intent(this, CancerDataQueryActivity.class);
+
         startActivity(intent);
     }
 }

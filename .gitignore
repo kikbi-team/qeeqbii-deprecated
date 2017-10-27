@@ -126,4 +126,13 @@ fabric.properties
 
 !/gradle/wrapper/gradle-wrapper.jar
 
+
+
+# Adrien's files
+print_clean_xml-checkpoint.ipynb
+clean_manifest.txt
+print_clean_xml.ipynb
+
+
+
 # End of https://www.gitignore.io/api/androidstudio
