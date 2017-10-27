@@ -3,6 +3,7 @@ package ch.epfl.sweng.qeeqbii;
 import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
 
+import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -20,15 +21,27 @@ import static android.support.test.espresso.matcher.ViewMatchers.withText;
 
 @RunWith(AndroidJUnit4.class)
 public class CancerDataQueryTest {
-    @Rule
     //public final ActivityTestRule<CancerDataQueryActivity> mActivityRule =
-    //        new ActivityTestRule<>(CancerDataQueryActivity.class);
+    //       new ActivityTestRule<>(CancerDataQueryActivity.class);
+    @Rule
     public final ActivityTestRule<MainActivity> mActivityRule =
-               new ActivityTestRule<>(MainActivity.class);
+              new ActivityTestRule<>(MainActivity.class);
+
+    /*
+    @Before
+    public void Initialize() {
+        try {
+            CancerDataBase.readCSVFile(mActivityRule.getActivity().getApplicationContext());
+        }
+        catch(Exception e) {
+            System.err.println("Exception: " + e.getMessage());
+        }
+    }
+    */
+
     @Test
     public void testPerfectMatchCancerDataBase() {
         // Useful way of accessing resources
-        //String substance_to_query = mActivityRule.getActivity().getResources().getString(R.string.Formaldehyde);
         onView(withId(R.id.cancerDataQuery)).perform(click());
 
         List<String[]> query_ans_pairs = new ArrayList<>();

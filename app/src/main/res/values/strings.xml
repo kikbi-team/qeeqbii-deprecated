@@ -43,5 +43,5 @@
     <string name="save_and_continue">Save and continue</string>
     <string name="search_product">search product</string>
     <string name="graphs">Graphs</string>
-    <string name="query_cancer_n_database">QUERY CANCER  DATABASE</string>
+    <string name="query_cancer_n_database">QUERY CANCER \n DATABASE</string>
 </resources>
