@@ -47,7 +47,10 @@
                 android:onClick="searchHarmfulIngredients"
                 android:text="@string/search_in_database"
                 app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/product_details" />
+                app:layout_constraintTop_toBottomOf="@+id/product_details"
+                android:layout_marginLeft="8dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintHorizontal_bias="1.0" />
 
             <TextView
                 android:id="@+id/harmful_ingredients"
