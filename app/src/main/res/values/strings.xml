@@ -11,9 +11,6 @@
     <string name="close">Close</string>
     <string name="barcode_scan_to_product">Go to product</string>
 
-    <string name="Formaldehyde">Formaldehyde</string>
-
-
     <!-- Google Sign In -->
     <string name="AppName">Firebase Authentication</string>
 
@@ -92,5 +89,16 @@
     <string name="email_fmt">Email: %s</string>
 
     <string name="search_in_database">Search for harmful ingredients</string>
-
+    <string name="levenshtein_nquery">LEVENSHTEIN QUERY</string>
+    <string name="type_query_here">Type query here</string>
+    <string name="perfect_match_nquery">PERFECT MATCH QUERY</string>
+    <string name="query_answer">Query answer</string>
+    <string name="first_name">First_Name</string>
+    <string name="last_name">Last_Name</string>
+    <string name="allergies">Allergies:</string>
+    <string name="aliments_proscrire">Aliments à proscrire</string>
+    <string name="save_and_continue">Save and continue</string>
+    <string name="search_product">search product</string>
+    <string name="graphs">Graphs</string>
+    <string name="query_cancer_n_database">QUERY CANCER  DATABASE</string>
 </resources>

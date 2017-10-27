@@ -2,6 +2,7 @@ package ch.epfl.sweng.qeeqbii;
 
 /**
  * Created by adrien on 12/10/17.
+ *
  */
 
 public class CancerSubstance {
@@ -18,18 +19,9 @@ public class CancerSubstance {
         mGroup = "empty";
     }
 
-    // Getters methods
-    public int getmId() {
-        return mId;
-    }
-
     // Setters methods
     public void setmId(int mId) {
         this.mId = mId;
-    }
-
-    public int getmLabel() {
-        return mLabel;
     }
 
     public void setmLabel(int mLabel) {
