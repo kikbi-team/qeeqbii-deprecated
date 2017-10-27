@@ -6,7 +6,7 @@ package ch.epfl.sweng.qeeqbii;
  */
 
 public class UserInformation {
-    /*
+
     public final String lastname;
     public final String firstname;
     public final String allergies;
@@ -18,7 +18,7 @@ public class UserInformation {
         this.allergies = allergies;
         this.gout = gout;
     }
-    */
+
 
 
 }
