@@ -2,6 +2,7 @@ package ch.epfl.sweng.qeeqbii;
 
 /**
  * Created by Nicolas on 12/10/2017.
+ *
  */
 
 public class UserInformation {

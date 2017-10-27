@@ -79,8 +79,8 @@ public class CancerDataShowActivity extends AppCompatActivity {
         return mIsTest;
     }
 
-    public void setmIsTest(boolean mIsTest) {
-        this.mIsTest = mIsTest;
+    public void setmIsTest() {
+        this.mIsTest = true;
     }
 
     @Override
@@ -92,7 +92,7 @@ public class CancerDataShowActivity extends AppCompatActivity {
         // reading of the CSV file using the readCSVFile method
         // sending of a message
         CancerDataBase cancer_data_base = new CancerDataBase();
-        String message = new String();
+        String message = "";
         try {
             cancer_data_base.readCSVFile(getApplicationContext());
             message = cancer_data_base.sendOutputReadyToPrint();

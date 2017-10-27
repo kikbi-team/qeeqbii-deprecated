@@ -1,7 +1,8 @@
 package ch.epfl.sweng.qeeqbii;
 
-/**
+/*
  * Created by Nicolas on 04/10/2017.
+ *
  */
 
 import android.content.Intent;
@@ -106,6 +107,7 @@ public class GoogleSignInActivity extends BaseActivity implements
 
         FirebaseUser user = mAuth.getCurrentUser();
 
+        assert user != null;
         databaseReference.child(user.getUid()).setValue(userInformation);
 
         Toast.makeText(this, "Information Saved...", Toast.LENGTH_LONG).show();
