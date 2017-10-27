@@ -4,7 +4,7 @@
     <string name="barcode_button">Barcode Reader</string>
     <string name="cancer_data">Cancer DataBase</string>
     <string name="fat_graph">Fats</string>
-    <string name="glucide_graph">Carbohyrates</string>
+    <string name="sugar_graph">Sugar</string>
     <string name="calories_graph">Calories</string>
     <string name="salt_graph">Salts</string>
     <string name="open">Open</string>
@@ -101,4 +101,5 @@
     <string name="search_product">search product</string>
     <string name="graphs">Graphs</string>
     <string name="query_cancer_n_database">QUERY CANCER  DATABASE</string>
+    <string name="show_graphs_from_show_product_activity">See nutrients graphs</string>
 </resources>
