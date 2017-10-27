@@ -1,9 +1,6 @@
 package ch.epfl.sweng.qeeqbii;
 
-/*
- * Created by Nicolas on 04/10/2017.
- *
- */
+
 
 import android.app.ProgressDialog;
 import android.support.annotation.VisibleForTesting;

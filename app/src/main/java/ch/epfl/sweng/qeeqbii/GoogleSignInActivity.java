@@ -1,10 +1,5 @@
 package ch.epfl.sweng.qeeqbii;
 
-/*
- * Created by Nicolas on 04/10/2017.
- *
- */
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;

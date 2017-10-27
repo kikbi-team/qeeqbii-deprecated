@@ -10,7 +10,6 @@
     tools:layout_editor_absoluteY="25dp">
 
     <ImageView
-        android:id="@+id/iv"
         android:layout_width="489dp"
         android:layout_height="733dp"
         android:src="@mipmap/qeeqbi"

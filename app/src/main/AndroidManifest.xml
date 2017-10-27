@@ -24,13 +24,11 @@
 
         <activity android:name=".GoogleSignInActivity" />
 
-
         <activity
             android:name="ch.epfl.sweng.qeeqbii.MainActivity"
             android:exported="true" />
         <activity
-            android:name="ch.epfl.sweng.qeeqbii.CancerDataShowActivity"
-            android:exported="true">
+            android:name="ch.epfl.sweng.qeeqbii.CancerDataShowActivity">
 
             <!-- The meta-data tag is required if you support API level 15 and lower -->
             <meta-data

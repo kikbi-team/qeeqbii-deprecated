@@ -7,6 +7,7 @@ android {
     defaultConfig {
         applicationId "ch.epfl.sweng.qeeqbii"
         minSdkVersion 15
+        //noinspection OldTargetApi
         targetSdkVersion 25
         versionCode 1
         versionName "1.0"
