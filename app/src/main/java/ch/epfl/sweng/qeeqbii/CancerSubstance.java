@@ -13,7 +13,7 @@ class CancerSubstance {
     private int mId;
     private String mAgent;
     private String mGroup;
-    private int mLabel;
+    // --Commented out by Inspection (27.10.17 14:36):private int mLabel;
     // Constructor that defines an empty substance
 
     CancerSubstance() {

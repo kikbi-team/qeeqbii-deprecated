@@ -23,10 +23,10 @@ public class Graphs extends AppCompatActivity {
 
     private static final String TAG = "Graphs";
     private PieChart pieChart;
-    private float[] yDataCalories = {0, 2000};
-    private float[] yDataFats= {0, 70};
-    private float[] yDataSugars = {0, 55};
-    private float[] yDataSalts = {0, 5};
+    private final float[] yDataCalories = {0, 2000};
+    private final float[] yDataFats= {0, 70};
+    private final float[] yDataSugars = {0, 55};
+    private final float[] yDataSalts = {0, 5};
     private final String[] xData = {"Completed", "Left"};
 
     @Override
