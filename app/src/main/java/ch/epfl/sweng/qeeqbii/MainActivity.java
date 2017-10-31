@@ -58,7 +58,6 @@ public class MainActivity extends AppCompatActivity {
 
     public void showShoppingList(View view) {
         Intent intent = new Intent(this, ShoppingList.class);
-
         startActivity(intent);
     }
 }
