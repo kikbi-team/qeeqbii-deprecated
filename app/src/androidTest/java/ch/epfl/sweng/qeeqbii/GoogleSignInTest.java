@@ -33,8 +33,11 @@ public class GoogleSignInTest {
     @Test
     public void useAppContext() throws Exception {
         GoogleSignInActivity activity = mActivityRule.getActivity();
+        Thread.sleep(200);
         Espresso.closeSoftKeyboard();
+        Thread.sleep(200);
         onView(withId(R.id.buttonSave)).perform(click());
+        Thread.sleep(50);
         onView(withId(R.id.buttonSave)).perform(click());
     }
 }
