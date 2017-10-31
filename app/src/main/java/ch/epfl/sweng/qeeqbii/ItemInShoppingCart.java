@@ -4,12 +4,12 @@ package ch.epfl.sweng.qeeqbii;
  * Created by davidcleres on 31.10.17.
  */
 
-public class ModelForShoppingCart {
+public class ItemInShoppingCart {
 
         private String m_name;
         private boolean m_selected;
 
-        public ModelForShoppingCart(String name) {
+        public ItemInShoppingCart(String name) {
             this.m_name = name;
             m_selected = false;
         }

@@ -3,7 +3,7 @@ package ch.epfl.sweng.qeeqbii;
 /**
  * Created by davidcleres on 31.10.17.
  */
-
+/*
 import android.app.Activity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -63,4 +63,4 @@ public class InteractiveArrayAdapter extends ArrayAdapter<ModelForShoppingCart> 
             holder.checkbox.setChecked(list.get(position).isSelected());
             return view;
         }
-    }
+    }*/

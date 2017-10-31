@@ -30,6 +30,17 @@
                 app:layout_collapseMode="pin"
                 app:popupTheme="@style/AppTheme.PopupOverlay" />
 
+            <TextView
+                android:id="@+id/title_cart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="casual"
+                android:text="Shopping Cart"
+                android:textColor="@color/pastelred"
+                android:textSize="36sp"
+                android:textStyle="bold"
+                android:typeface="normal" />
+
         </android.support.design.widget.CollapsingToolbarLayout>
     </android.support.design.widget.AppBarLayout>
 
@@ -41,8 +52,8 @@
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/fab_margin"
         android:onClick="showShoppingList"
-        app:layout_anchor="@id/app_bar"
-        app:layout_anchorGravity="bottom|end"
+        app:layout_anchor="@+id/app_bar"
+        app:layout_anchorGravity="right|center"
         app:srcCompat="@android:drawable/ic_input_add"
         tools:onClick="showShoppingList" />
 
