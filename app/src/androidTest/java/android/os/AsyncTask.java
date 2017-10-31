@@ -34,7 +34,7 @@ public abstract class AsyncTask<Params, Progress, Result> {
         return this;
     }
 
-    public final Result get() throws InterruptedException, ExecutionException {
+    public final Result get() {
         return result;
     }
 

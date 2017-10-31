@@ -25,22 +25,22 @@ import static java.lang.Integer.MAX_VALUE;
 class CancerDataBase {
 
     // ATTRIBUTES
-    static private List<CancerSubstance> msubstance_list = new ArrayList<>();
-    static private HashMap<String, CancerSubstance> msubstance_map = new HashMap<>();
+    static private final List<CancerSubstance> msubstance_list = new ArrayList<>();
+    static private final HashMap<String, CancerSubstance> msubstance_map = new HashMap<>();
     // mopen_state takes value 0 if no file have been read and takes value 1 if readCSVfile() have
     // been called and succeeded in reading a CSV file
     static private int mopen_state;
 
     // Definition of the hamming distance that will be used to query the database
     // The Levenshtein distance is chosen here
-    static private Metric<String> mhammingLevenshtein = new Metric<String>() {
+    static private final Metric<String> mhammingLevenshtein = new Metric<String>() {
         @Override
         public int distance(String x, String y) {
             Levenshtein levenshtein = new Levenshtein();
             return (int) Math.round(levenshtein.distance(x, y));
         }
     };
-    static private MutableBkTree<String> mbkTree = new MutableBkTree<>(mhammingLevenshtein);
+    static private final MutableBkTree<String> mbkTree = new MutableBkTree<>(mhammingLevenshtein);
 
     // CONSTRUCTOR
     CancerDataBase() {

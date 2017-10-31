@@ -20,9 +20,9 @@ import java.net.URL;
 class OpenFoodQuery extends AsyncTask<String, Void, String> {
 
 
-    private static Map<String,HTTPRequestResponse> resp_cache = new HashMap<>();
+    private static final Map<String,HTTPRequestResponse> resp_cache = new HashMap<>();
 
-    private static Map<String,String> error_cache = new HashMap<>();
+    private static final Map<String,String> error_cache = new HashMap<>();
 
     private static class OpenFoodQueryException extends Exception {
         OpenFoodQueryException(String message) {
