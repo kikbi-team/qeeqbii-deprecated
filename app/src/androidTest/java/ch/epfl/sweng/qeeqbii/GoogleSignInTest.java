@@ -4,6 +4,7 @@ import android.content.ComponentName;
 import android.support.test.espresso.Espresso;
 import android.support.test.espresso.intent.rule.IntentsTestRule;
 import android.support.test.runner.AndroidJUnit4;
+import android.view.KeyEvent;
 
 import org.junit.Rule;
 import org.junit.Test;
@@ -11,12 +12,10 @@ import org.junit.runner.RunWith;
 
 import static android.support.test.InstrumentationRegistry.getTargetContext;
 import static android.support.test.espresso.Espresso.onView;
-import static android.support.test.espresso.assertion.ViewAssertions.matches;
+import static android.support.test.espresso.action.ViewActions.click;
 import static android.support.test.espresso.intent.Intents.intended;
 import static android.support.test.espresso.intent.matcher.IntentMatchers.hasComponent;
 import static android.support.test.espresso.matcher.ViewMatchers.withId;
-import static android.support.test.espresso.matcher.ViewMatchers.withText;
-import static org.hamcrest.core.StringStartsWith.startsWith;
 
 /**
  * Instrumentation test, which will execute on an Android device.
@@ -26,20 +25,17 @@ import static org.hamcrest.core.StringStartsWith.startsWith;
 
 
 @RunWith(AndroidJUnit4.class)
-public class BarcodeLeadsToProduct {
+public class GoogleSignInTest {
     @Rule
-    public final IntentsTestRule<BarcodeActivity> mActivityRule =
-            new IntentsTestRule<>(BarcodeActivity.class);
+    public final IntentsTestRule<GoogleSignInActivity> mActivityRule =
+            new IntentsTestRule<>(GoogleSignInActivity.class);
 
     @Test
     public void useAppContext() throws Exception {
-        // https://www.openfood.ch/en/products/972
-
-        BarcodeActivity activity = mActivityRule.getActivity();
-        activity.processBarcode("7611654884033");
-        intended(hasComponent(new ComponentName(getTargetContext(), BarcodeToProductActivity.class)));
-        onView(withId(R.id.product_details)).check(matches(withText(startsWith("Chocolat au lait aux noisettes"))));
-        Espresso.pressBack();
-        intended(hasComponent(new ComponentName(getTargetContext(), MainActivity.class)));
+        GoogleSignInActivity activity = mActivityRule.getActivity();
+        Thread.sleep(200);
+        Espresso.closeSoftKeyboard();
+        Thread.sleep(200);
+        onView(withId(R.id.sign_in_button)).perform(click());
     }
 }
