@@ -97,6 +97,7 @@
         android:id="@+id/shoppingButton"
         android:layout_width="91dp"
         android:layout_height="70dp"
+        android:onClick="showShoppingList"
         app:layout_constraintBottom_toTopOf="@+id/welcomeText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
