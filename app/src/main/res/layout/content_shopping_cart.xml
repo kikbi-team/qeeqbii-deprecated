@@ -17,7 +17,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@+id/label"
-            android:textSize="30px"></TextView>
+            android:textSize="30sp" />
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/recycler"
@@ -25,12 +25,8 @@
             android:layout_height="wrap_content" />
 
         <CheckBox
-            android:id="@+id/check"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_marginLeft="4px"
-            android:layout_marginRight="10px"></CheckBox>
+            android:layout_height="wrap_content" />
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/recycler_1"

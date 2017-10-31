@@ -103,7 +103,8 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/buttonGraphs"
         app:layout_constraintTop_toBottomOf="@+id/mainBarcodeButton"
-        app:srcCompat="@mipmap/shopping_cart" />
+        app:srcCompat="@mipmap/shopping_cart"
+        android:contentDescription="@string/button_shopping" />
 
     <ImageButton
         android:id="@+id/buttonGraphs"
@@ -115,6 +116,7 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/mainBarcodeButton"
-        app:srcCompat="@mipmap/graph" />
+        app:srcCompat="@mipmap/graph"
+        android:contentDescription="@string/button_graphs" />
 
 </android.support.constraint.ConstraintLayout>
