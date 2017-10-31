@@ -9,14 +9,15 @@
     <LinearLayout
         android:id="@+id/linearLayout4"
         android:layout_width="368dp"
-        android:layout_height="175dp"
+        android:layout_height="180dp"
         android:layout_marginTop="4dp"
         android:orientation="horizontal"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout5"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintTop_toBottomOf="@+id/guideline"
+        app:layout_constraintVertical_bias="0.056">
 
         <LinearLayout
             android:layout_width="184dp"
@@ -47,7 +48,7 @@
         android:id="@+id/linearLayout5"
         android:layout_width="368dp"
         android:layout_height="196dp"
-        android:layout_marginTop="184dp"
+        android:layout_marginTop="200dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -81,7 +82,7 @@
     <LinearLayout
         android:id="@+id/linearLayout3"
         android:layout_width="368dp"
-        android:layout_height="182dp"
+        android:layout_height="171dp"
         android:layout_marginTop="168dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -93,12 +94,33 @@
         <LinearLayout
             android:layout_width="184dp"
             android:layout_height="match_parent"
-            android:orientation="vertical"></LinearLayout>
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/imageButton5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/cheese" />
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="187dp"
             android:layout_height="match_parent"
-            android:orientation="vertical"></LinearLayout>
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/imageButton6"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/wine" />
+        </LinearLayout>
     </LinearLayout>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
 
 </android.support.constraint.ConstraintLayout>
