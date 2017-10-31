@@ -6,45 +6,41 @@
 
     <application
         android:allowBackup="true"
+        android:fullBackupContent="@xml/backup_descriptor"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme"
-        android:fullBackupContent="@xml/backup_descriptor">
-
-
-        <activity android:name="ch.epfl.sweng.qeeqbii.HomeActivity">
+        android:theme="@style/AppTheme">
+        <activity android:name=".HomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity android:name=".GoogleSignInActivity" />
-
         <activity
-            android:name="ch.epfl.sweng.qeeqbii.MainActivity"
+            android:name=".MainActivity"
             android:exported="true" />
-        <activity
-            android:name="ch.epfl.sweng.qeeqbii.CancerDataShowActivity">
+        <activity android:name=".CancerDataShowActivity">
 
             <!-- The meta-data tag is required if you support API level 15 and lower -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="ch.epfl.sweng.qeeqbii.MainActivity" />
         </activity>
-        <activity android:name="ch.epfl.sweng.qeeqbii.BarcodeActivity" />
+        <activity android:name=".BarcodeActivity" />
         <activity
-            android:name="ch.epfl.sweng.qeeqbii.BarcodeToProductActivity"
+            android:name=".BarcodeToProductActivity"
             android:exported="true" />
-        <activity android:name="ch.epfl.sweng.qeeqbii.Graphs" />
+        <activity android:name=".Graphs" />
         <activity
-            android:name="ch.epfl.sweng.qeeqbii.CancerDataQueryActivity"
+            android:name=".CancerDataQueryActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:exported="true" />
         <activity android:name=".BaseActivity" />
+        <activity android:name=".ShoppingList"></activity>
     </application>
 
 </manifest>
