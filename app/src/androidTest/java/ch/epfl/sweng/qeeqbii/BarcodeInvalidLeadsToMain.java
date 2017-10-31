@@ -3,6 +3,7 @@ package ch.epfl.sweng.qeeqbii;
 import android.content.ComponentName;
 import android.support.test.espresso.intent.rule.IntentsTestRule;
 import android.support.test.runner.AndroidJUnit4;
+import android.view.KeyEvent;
 
 import org.junit.Rule;
 import org.junit.Test;
@@ -28,7 +29,7 @@ public class BarcodeInvalidLeadsToMain {
     @Test
     public void useAppContext() throws Exception {
         BarcodeActivity activity = mActivityRule.getActivity();
-        activity.processBarcode("");
+        activity.onKeyDown(KeyEvent.KEYCODE_BACK, new KeyEvent(0, KeyEvent.KEYCODE_BACK));
         intended(hasComponent(new ComponentName(getTargetContext(), MainActivity.class)));
     }
 }
