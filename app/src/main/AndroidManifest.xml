@@ -27,6 +27,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+
         <activity
             android:name=".GoogleSignInActivity"
             android:label="@string/label_google_sign_in" />
@@ -46,6 +48,14 @@
         <activity
             android:name=".FirebaseUIActivity"
             android:label="@string/label_firebase_ui" />
+
+        <activity android:name=".HomeActivity_share" android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".FacebookActivity"/>
 
 
 

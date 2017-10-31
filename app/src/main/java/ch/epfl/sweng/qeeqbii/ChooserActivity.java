@@ -35,7 +35,6 @@ import android.widget.TextView;
  *     {@link FacebookLoginActivity}
  *     {@link TwitterLoginActivity}
  *     {@link EmailPasswordActivity}
- *     {@link PhoneAuthActivity}
  *     {@link AnonymousAuthActivity}
 
  */

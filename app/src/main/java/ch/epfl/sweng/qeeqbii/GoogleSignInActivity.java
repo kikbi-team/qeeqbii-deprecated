@@ -127,7 +127,7 @@ public class GoogleSignInActivity extends BaseActivity implements
 
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(GoogleSignInActivity.this, MainActivity.class);
+                Intent intent = new Intent(GoogleSignInActivity.this, HomeActivity_share.class);
                 startActivity(intent);
             }
         });
