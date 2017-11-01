@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.TextView;
@@ -15,8 +14,6 @@ import android.widget.TextView;
  */
 
 public class BarcodeToProductActivity extends AppCompatActivity {
-
-    private HTTPRequestResponse product_resp = new HTTPRequestResponse();
 
     private String barcode;
 
@@ -32,10 +29,10 @@ public class BarcodeToProductActivity extends AppCompatActivity {
         final TextView txt = (TextView) findViewById(R.id.product_details);
         txt.setTextSize(20);
         txt.setTextColor(Color.rgb(0, 0, 0));
-        new OpenFoodQuery() {
+        /*new OpenFoodQuery() {
             @Override
             public void onPostExecute(String result) {
-                TextView txt = (TextView) findViewById(R.id.product_details);
+                //TextView txt = (TextView) findViewById(R.id.product_details);
                 try {
                     if (result.startsWith("ERROR:"))
                         throw new Exception(result);
@@ -54,7 +51,8 @@ public class BarcodeToProductActivity extends AppCompatActivity {
                 }
 
             }
-        }.execute(barcode);
+        }.execute(barcode);*/
+        OpenFoodQuery.ShowProduct(barcode, txt);
     }
 
     @Override
@@ -72,11 +70,22 @@ public class BarcodeToProductActivity extends AppCompatActivity {
 
     public void searchHarmfulIngredients(View view) {
 
-        String[] parsed_ingredients = product_resp.ParseIngredients();
+        if (!RecentlyScannedProducts.contains(barcode))
+        {
+            return;
+        }
 
-        TextView txt = (TextView) findViewById(R.id.harmful_ingredients);
+        TextView txt_harmfull_ing = (TextView) findViewById(R.id.harmful_ingredients);
 
-        CancerDataBase cancer_database = new CancerDataBase();
+        String parsed_ingredients[];
+
+        try {
+            parsed_ingredients = RecentlyScannedProducts.GetProduct(barcode).GetParseIngredients();
+        } catch (ProductException e)
+        {
+            txt_harmfull_ing.setText(e.getMessage());
+            return;
+        }
 
 
         String str = "";
@@ -90,7 +99,7 @@ public class BarcodeToProductActivity extends AppCompatActivity {
             System.out.println(e.getMessage());
         }
 
-        txt.setText(str);
+        txt_harmfull_ing.setText(str);
 
     }
 
