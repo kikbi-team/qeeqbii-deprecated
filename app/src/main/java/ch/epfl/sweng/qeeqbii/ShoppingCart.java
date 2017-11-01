@@ -44,6 +44,15 @@ public class ShoppingCart extends AppCompatActivity {
         m_item.add("Sweden");
         m_item.add("England");
         m_item.add("Spain");
+        m_item.add("Sweden");
+        m_item.add("England");
+        m_item.add("Spain");
+        m_item.add("Sweden");
+        m_item.add("England");
+        m_item.add("Spain");
+        m_item.add("Sweden");
+        m_item.add("England");
+        m_item.add("Spain");
 
         //Initializing and set adapter for each RecyclerView
         RecyclerViewAdapter firstAdapter = new RecyclerViewAdapter(this, m_item);
