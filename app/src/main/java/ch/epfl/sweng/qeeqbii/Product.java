@@ -28,22 +28,22 @@ class Product {
         mNutrients = nutrients;
     }
 
-    String GetName()
+    String getName()
     {
         return mName;
     }
 
-    String GetQuantity()
+    String getQuantity()
     {
         return mQuantity;
     }
 
-    String GetIngredients()
+    String getIngredients()
     {
         return mIngredients;
     }
 
-    String GetNutrients()
+    String getNutrients()
     {
         return mNutrients;
     }

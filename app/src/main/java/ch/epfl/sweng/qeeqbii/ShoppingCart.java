@@ -8,28 +8,28 @@ import java.util.List;
  */
 
 public class ShoppingCart {
-    private List<String> m_item = new ArrayList<String>();
+    private List<Product> m_items = new ArrayList<Product>();
 
     public ShoppingCart(){
         //TEST
-        m_item.add("Cheese");
-        m_item.add("Wine");
-        m_item.add("Beer");
+        m_items.add(new Product("Cheese", "500 mg", "Stuff", "cool Nutrients"));
+        m_items.add(new Product("Wine", "500 mg", "Stuff", "cool Nutrients"));
+        m_items.add(new Product("Beer", "500 mg", "Stuff", "cool Nutrients"));
     }
 
-    public void addItemToCart(String newItem) {
-        m_item.add(newItem);
+    public void addItemToCart(Product product) {
+        m_items.add(product);
     }
 
-    public void addSpecificItemInCart(int index, String name) {
-        m_item.add(index, name);
+    public void addSpecificItemInCart(int index, Product product) {
+        m_items.add(index, product);
     }
 
-    public List<String> getItemsInCart() {
-        return m_item;
+    public List<Product> getItemsInCart() {
+        return m_items;
     }
-    public String getSpecificItemInCart(int index) {
-        return m_item.get(index);
+    public Product getSpecificItemInCart(int index) {
+        return m_items.get(index);
     }
 
 }

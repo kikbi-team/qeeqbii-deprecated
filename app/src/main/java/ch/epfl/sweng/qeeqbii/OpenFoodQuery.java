@@ -131,10 +131,10 @@ class OpenFoodQuery extends AsyncTask<String, Void, Product> {
                     if (product == null)
                         throw new Exception(error_cache.get(barcode2));
 
-                    String s = product.GetName();
-                    s += "\n\nIngredients: " + product.GetIngredients();
-                    s += "\n\nQuantity: " + product.GetQuantity();
-                    s += "\n\nNutrients: (per 100g)\n" + product.GetNutrients();
+                    String s = product.getName();
+                    s += "\n\nIngredients: " + product.getIngredients();
+                    s += "\n\nQuantity: " + product.getQuantity();
+                    s += "\n\nNutrients: (per 100g)\n" + product.getNutrients();
                     Log.d("STATE", "Product found: " + s);
                     txt2.setText(s);
 
@@ -160,6 +160,4 @@ class OpenFoodQuery extends AsyncTask<String, Void, Product> {
             throw new OpenFoodQueryException("ERROR: (OpenFoodQuery) : this barcode \"" + barcode + "\" is not cached.");
         }
     }
-
-
 }
