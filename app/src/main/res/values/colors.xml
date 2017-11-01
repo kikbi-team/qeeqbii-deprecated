@@ -1,52 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources>
     <color name="colorPrimary">#13ca00</color>
-    <color name="colorPrimaryDark">#015b00</color>
+    <color name="colorPrimaryDark">#2d9d2c</color>
     <color name="colorAccent">#1aff00</color>
     <color name="grey_300">#E0E0E0</color>
+    <color name="navyblue">#2393b9</color>
+    <color name="pastelred">#f15f45</color>
+    <color name="Green">#39b238</color>
+    <color name="bordeau">#921a26</color>
 
-    <color name="black_royal" tools:keep="@color/black_royal">#262732</color>
-
-
-    <color name="black_brake">#DADADA</color>
-    <color name="black_brake_alpha" tools:keep="@color/black_brake_alpha">#66DADADA</color>
-
-    <color name="gray" tools:keep="@color/gray">#E6E6E8</color>
-    <color name="gray_alpha" tools:keep="@color/gray_alpha">#66E6E6E8</color>
-
-    <color name="white_overshadowed" tools:keep="@color/white_overshadowed">#F2F2F3</color>
-    <color name="white_overshadowed_alpha" tools:keep="@color/white_overshadowed_alpha">#66F2F2F3</color>
-
-    <color name="white_over" tools:keep="@color/white_over">#DEDEE1</color>
-
-    <color name="blue_marine_dark" tools:keep="@color/blue_marine_dark">#1A1A24</color>
-    <color name="blue_marine_dark_alpha" tools:keep="@color/blue_marine_dark_alpha">#661A1A24</color>
-
-    <color name="blue_marine_light" tools:keep="@color/blue_marine_light">#323340</color>
-    <color name="blue_marine_light_alpha" tools:keep="@color/blue_marine_light_alpha">#66323340</color>
-
-    <color name="blue_royal">#747EFF</color>
-    <color name="blue_royal_alpha" tools:keep="@color/blue_royal_alpha">#66747EFF</color>
-
-    <color name="blue_very_weak" tools:keep="@color/blue_very_weak">#D6DBEA</color>
-    <color name="blue_very_alpha" tools:keep="@color/blue_very_alpha">#66D6DBEA</color>
-
-    <color name="purple_blue">#33B5E5</color>
-    <color name="purple_blue_alpha">#6633B5E5</color>
-
-    <color name="red" tools:keep="@color/red">#E68176</color>
-    <color name="red_alpha" tools:keep="@color/red_alpha">#66E68176</color>
-
-    <color name="yellow" tools:keep="@color/yellow">#CCCC66</color>
-
-    <color name="yellow_weak" tools:keep="@color/yellow_weak">#f6ffce</color>
-    <color name="yellow_weak_alpha" tools:keep="@color/yellow_weak_alpha">#66F6FFCE</color>
-
-    <color name="white_heavy" tools:keep="@color/white_heavy">#CBCCD1</color>
-    <color name="white_heavy_alpha" tools:keep="@color/white_heavy_alpha">#CBCCD1</color>
-
-
-    <color name="gray_inactive">#D6D6D6</color>
-    <color name="azul" tools:keep="@color/azul">#0000ff</color>
-    <color name="gray_backgourd">#ECECEC</color>
 </resources>

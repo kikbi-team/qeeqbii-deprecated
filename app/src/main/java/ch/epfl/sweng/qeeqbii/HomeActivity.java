@@ -14,7 +14,7 @@ public class HomeActivity extends AppCompatActivity {
             public void run() {
                 try {
                     sleep(3000);
-                    Intent intent = new Intent(getApplicationContext(), BarcodeActivity.class);
+                    Intent intent = new Intent(getApplicationContext(), GoogleSignInActivity.class);
                     startActivity(intent);
                     finish();
                 } catch (InterruptedException e) {

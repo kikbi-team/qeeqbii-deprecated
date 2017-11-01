@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources>
     <!-- Default screen margins, per the Android Design guidelines. -->
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
@@ -7,37 +7,6 @@
     <dimen name="icon_top_margin">24dp</dimen>
     <dimen name="icon_bottom_margin">24dp</dimen>
     <dimen name="title_bottom_margin">16dp</dimen>
-    <dimen name="field_width_standard" tools:keep="@dimen/field_width_standard">160dp</dimen>
-
-    <!--
-  320dp: a typical phone screen (240x320 ldpi, 320x480 mdpi, 480x800 hdpi, etc).
-  480dp: a tweener tablet like the Streak (480x800 mdpi).
-  600dp: a 7” tablet (600x1024 mdpi).
-  720dp: a 10” tablet (720x1280 mdpi, 800x1280 mdpi, etc).
--->
-
-    <dimen name="nine_hundred_dps" tools:keep="@dimen/nine_hundred_dps">457dp</dimen>
-    <dimen name="five_hundred_eighty_dps" tools:keep="@dimen/five_hundred_eighty_dps">296.8dp</dimen>
-    <dimen name="three_hundred_dps" tools:keep="@dimen/three_hundred_dps">153.6dp</dimen>
-    <dimen name="two_hundred_dps" tools:keep="@dimen/two_hundred_dps">102dp</dimen>
-    <dimen name="one_hundred_thirty_dps" tools:keep="@dimen/one_hundred_thirty_dps">66.56dp</dimen>
-    <dimen name="one_hundred_dps" tools:keep="@dimen/one_hundred_dps">51.2dp</dimen>
-    <dimen name="ninety_dps" tools:keep="@dimen/ninety_dps">46.08dp</dimen>
-    <dimen name="eighty_dps" tools:keep="@dimen/eighty_dps">40.96dp</dimen>
-    <dimen name="seventy_five_dps" tools:keep="@dimen/seventy_five_dps">38.4dp</dimen>
-    <dimen name="sixty_dps" tools:keep="@dimen/sixty_dps">30.72dp</dimen>
-    <dimen name="fifty_five_dps" tools:keep="@dimen/fifty_five_dps">28.16dp</dimen>
-    <dimen name="fourty_five_dps" tools:keep="@dimen/fourty_five_dps">23dp</dimen>
-    <dimen name="fourty_dps">20.48dp</dimen>
-    <dimen name="thirty_five_dps" tools:keep="@dimen/thirty_five_dps">17.92dp</dimen>
-    <dimen name="thirty_dps">15.36dp</dimen>
-    <dimen name="twenty_eight_dps" tools:keep="@dimen/twenty_eight_dps">14.33dp</dimen>
-    <dimen name="twenty_three_dps" tools:keep="@dimen/twenty_three_dps">11.77dp</dimen>
-    <dimen name="twenty_dps">10.24dp</dimen>
-    <dimen name="fifteen_dps" tools:keep="@dimen/fifteen_dps">7.68dp</dimen>
-    <dimen name="thirteen_dps" tools:keep="@dimen/thirteen_dps">6.65dp</dimen>
-    <dimen name="ten_dps">5.12dp</dimen>
-    <dimen name="five_dps">2.56dp</dimen>
-    <dimen name="three_dps">1.53dp</dimen>
-    <dimen name="one_dps">0.51dp</dimen>
+    <dimen name="app_bar_height">180dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
 </resources>

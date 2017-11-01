@@ -2,12 +2,10 @@ package ch.epfl.sweng.qeeqbii;
 
 
 
-import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
 import android.support.annotation.VisibleForTesting;
 import android.support.v7.app.AppCompatActivity;
 
-@SuppressLint("Registered")
 public class BaseActivity extends AppCompatActivity {
 
     @VisibleForTesting

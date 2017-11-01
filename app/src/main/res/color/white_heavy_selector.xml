@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<selector xmlns:tools="http://schemas.android.com/tools" xmlns:android="http://schemas.android.com/apk/res/android" tools:keep="@color/white_heavy_selector">
-
-    <item android:state_pressed="true" android:color="@android:color/white"/>
-    <item android:color="@color/white_heavy"/>
-
-</selector>

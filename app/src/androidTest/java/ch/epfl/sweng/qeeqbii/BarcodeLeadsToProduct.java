@@ -1,6 +1,7 @@
 package ch.epfl.sweng.qeeqbii;
 
 import android.content.ComponentName;
+import android.support.test.espresso.Espresso;
 import android.support.test.espresso.intent.rule.IntentsTestRule;
 import android.support.test.runner.AndroidJUnit4;
 
@@ -38,5 +39,7 @@ public class BarcodeLeadsToProduct {
         activity.processBarcode("7611654884033");
         intended(hasComponent(new ComponentName(getTargetContext(), BarcodeToProductActivity.class)));
         onView(withId(R.id.product_details)).check(matches(withText(startsWith("Chocolat au lait aux noisettes"))));
+        Espresso.pressBack();
+        intended(hasComponent(new ComponentName(getTargetContext(), MainActivity.class)));
     }
 }

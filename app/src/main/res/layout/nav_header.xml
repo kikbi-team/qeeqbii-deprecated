@@ -13,7 +13,7 @@
         android:layout_alignParentTop="true"
         android:layout_margin="10dp"
         android:padding="20dp"
-        android:text="Navigation menu"
+        android:text="@string/nav_header"
         android:textColor="#ffffff"
         android:textSize="20sp"
         android:textStyle="bold" />

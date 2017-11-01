@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/transparent"
     android:orientation="vertical"
     android:weightSum="4">
 
@@ -44,9 +43,7 @@
             style="@style/ThemeOverlay.MyTextDetail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-
-            android:hint="@string/first_name"
-            tools:ignore="NestedWeights" />
+            android:hint="@string/first_name" />
 
         <EditText
             android:id="@+id/editTextLastName"
@@ -73,7 +70,10 @@
             android:hint="@string/aliments_proscrire"
             android:inputType="textMultiLine" />
 
+
     </LinearLayout>
+
+
     <RelativeLayout
         android:layout_width="fill_parent"
         android:layout_height="0dp"
@@ -92,15 +92,6 @@
             tools:visibility="visible"
             style="?android:attr/buttonBarStyle">
 
-            <com.google.android.gms.common.SignInButton
-                android:id="@+id/sign_in_button"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_centerInParent="true"
-                android:layout_weight="1"
-                android:visibility="visible"
-                tools:visibility="gone" />
-
             <Button
                 android:id="@+id/buttonSave"
                 android:layout_width="0dp"
@@ -116,7 +107,6 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/sign_out"
-                tools:ignore="ButtonStyle"
                 style="?android:attr/buttonBarButtonStyle"
                 android:theme="@style/ThemeOverlay.MyDarkButton" />
 
@@ -126,8 +116,10 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/disconnect"
-                android:theme="@style/ThemeOverlay.MyDarkButton"
-                tools:ignore="ButtonStyle" />
+                style="?android:attr/buttonBarButtonStyle"
+                android:theme="@style/ThemeOverlay.MyDarkButton" />
         </LinearLayout>
+
     </RelativeLayout>
+
 </LinearLayout>

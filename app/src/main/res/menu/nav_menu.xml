@@ -2,18 +2,15 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item android:id="@+id/nav_graphs"
-        android:title="Graphs"
-        android:onClick="showGraphs"
-        android:icon="@mipmap/ic_data_usage_black_24dp"/>
+        android:title="@string/graphs"
+        android:onClick="showGraphs" />
 
     <item android:id="@+id/nav_cancerdb"
-        android:icon="@mipmap/ic_smoke_free_black_24dp"
-        android:title="Cancer Database"
+        android:title="@string/cancer_database"
         android:onClick="cancerDataBaseShow"/>
 
-<item android:id="@+id/nav_scan"
-        android:icon="@mipmap/ic_flip_black_24dp"
-        android:title="Scan Barcode"
+    <item android:id="@+id/nav_scan"
+        android:title="@string/scan_barcode"
         android:onClick="readBarcode"/>
 
 </menu>

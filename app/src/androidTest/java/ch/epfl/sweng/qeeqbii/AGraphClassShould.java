@@ -22,7 +22,7 @@ public class AGraphClassShould {
     @Test
     //be able to sense that one clicked the button
     public void recognizesWhenCalled() throws InterruptedException {
-        onView(withId(R.id.button)).perform(click());
+        onView(withId(R.id.buttonGraphs)).perform(click());
     }
 
 
