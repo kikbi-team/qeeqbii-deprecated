@@ -1,24 +1,45 @@
 package ch.epfl.sweng.qeeqbii;
 
-import java.util.ArrayList;
-import java.util.List;
+/**
+ * Created by guillaume on 01/11/17.
+ * A repertory of all recently scan products.
+ */
 
+import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.Map;
 
-class RecentlyScannedProducts {
+public class RecentlyScannedProducts {
 
+    private static Map<String, Product> mProductMap = new HashMap<>();
+    private static LinkedList<String> mBarcodeList = new LinkedList<>();
 
-
-
-    static private ArrayList<Product> mRecentlyScannedProductsList;
-    static private ArrayList<String> mProductNameList;
-    static int mNumberProducts;
-
-    static public Product getProductFromIndex(int index) {
-        return mRecentlyScannedProductsList.get(index);
+    // Returns whether a product has been recently scanned or not.
+    static Boolean contains(String barcode)
+    {
+        return mProductMap.containsKey(barcode);
     }
 
-    static public ArrayList<String> getProductNameList() {
-        return mProductNameList;
+    static LinkedList<String> GetBarcodeList()
+    {
+        return mBarcodeList;
     }
 
+    static Product GetProduct(String barcode)
+    {
+        if (contains(barcode))
+        {
+            return mProductMap.get(barcode);
+        }
+        else
+        {
+            return new Product();
+        }
+    }
+
+    static void add(String barcode, Product product)
+    {
+        mProductMap.put(barcode,product);
+        mBarcodeList.addLast(barcode);
+    }
 }
