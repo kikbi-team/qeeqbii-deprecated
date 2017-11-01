@@ -11,11 +11,11 @@
         android:id="@+id/recently_scanned_product_text_view"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
         android:layout_alignParentTop="true"
         android:layout_alignWithParentIfMissing="true"
         android:gravity="center_vertical"
-        android:text="Product"
+        android:text="@string/empty_field"
         android:textSize="16sp" />
 
 </RelativeLayout>

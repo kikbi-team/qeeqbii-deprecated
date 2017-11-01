@@ -60,4 +60,9 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, ShoppingCart.class);
         startActivity(intent);
     }
+
+    public void showRecentlyScannedProductsActivity(View view) {
+        Intent intent = new Intent(this, RecentlyScannedProductsActivity.class);
+        startActivity(intent);
+    }
 }
