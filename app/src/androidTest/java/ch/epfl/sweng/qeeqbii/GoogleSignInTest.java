@@ -29,30 +29,9 @@ import static org.hamcrest.CoreMatchers.startsWith;
 @RunWith(AndroidJUnit4.class)
 public class GoogleSignInTest {
 
-        private IdlingResource mActivityResource;
-
         @Rule
         public ActivityTestRule<GoogleSignInActivity> mActivityTestRule =
                 new ActivityTestRule<>(GoogleSignInActivity.class);
-
-        @Before
-        public void setUp() {
-            if (mActivityResource != null) {
-                Espresso.unregisterIdlingResources(mActivityResource);
-            }
-
-            // Register Activity as idling resource
-            mActivityResource = new BaseActivityIdlingResource(mActivityTestRule.getActivity());
-            Espresso.registerIdlingResources(mActivityResource);
-        }
-
-        @After
-        public void tearDown() {
-            if (mActivityResource != null) {
-                Espresso.unregisterIdlingResources(mActivityResource);
-            }
-        }
-
 
         @Test
         public void GoogleSignInTest_() {

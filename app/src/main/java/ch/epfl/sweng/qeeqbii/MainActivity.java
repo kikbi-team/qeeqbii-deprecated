@@ -1,11 +1,16 @@
 package ch.epfl.sweng.qeeqbii;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
+
+import com.facebook.CallbackManager;
+import com.facebook.share.model.ShareLinkContent;
+import com.facebook.share.widget.ShareDialog;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -19,11 +24,31 @@ import static ch.epfl.sweng.qeeqbii.R.layout.activity_main;
 
 public class MainActivity extends AppCompatActivity {
     public static final String BARCODE_READER = "ch.epfl.sweng.qeeqbii.mainBarcode";
+    CallbackManager callbackManager;
+    ShareDialog shareDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(activity_main);
+
+        findViewById(R.id.button_share_facebook).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialogue();
+            }
+        });
+    }
+
+    public void dialogue () {
+        callbackManager = CallbackManager.Factory.create();
+        shareDialog = new ShareDialog(this);
+        if (ShareDialog.canShow(ShareLinkContent.class)) {
+            ShareLinkContent linkContent = new ShareLinkContent.Builder()
+                    .setContentUrl(Uri.parse("http://developers.facebook.com/android"))
+                    .build();
+            shareDialog.show(linkContent);
+        }
     }
 
     @SuppressWarnings("UnusedParameters")

@@ -49,20 +49,14 @@
             android:name=".FirebaseUIActivity"
             android:label="@string/label_firebase_ui" />
 
-        <activity android:name=".HomeActivity_share" android:label="@string/app_name">
+        <activity android:name=".MainActivity" android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".FacebookActivity"/>
 
 
-
-        <activity
-            android:name="ch.epfl.sweng.qeeqbii.MainActivity"
-            android:exported="true">
-        </activity>
         <activity
             android:name="ch.epfl.sweng.qeeqbii.CancerDataShowActivity"
             android:exported="true"
