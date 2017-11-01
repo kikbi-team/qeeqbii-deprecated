@@ -103,5 +103,4 @@ class Product {
         mParsedNutrients = nutrient_map;
         return nutrient_map;
     }
-
 }

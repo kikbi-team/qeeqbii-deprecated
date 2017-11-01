@@ -42,6 +42,4 @@ public class RecentlyScannedProducts {
         mProductMap.put(barcode,product);
         mBarcodeList.addLast(barcode);
     }
-
-
 }
