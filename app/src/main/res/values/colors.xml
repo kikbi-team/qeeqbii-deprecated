@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorPrimary">#13ca00</color>
-    <color name="colorPrimaryDark">#015b00</color>
+    <color name="colorPrimaryDark">#2d9d2c</color>
     <color name="colorAccent">#1aff00</color>
     <color name="grey_300">#E0E0E0</color>
+    <color name="navyblue">#2393b9</color>
+    <color name="pastelred">#f15f45</color>
+    <color name="Green">#39b238</color>
+    <color name="bordeau">#921a26</color>
+
 </resources>

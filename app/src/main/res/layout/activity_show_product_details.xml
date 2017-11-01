@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/ScrollView01"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent">
 
@@ -41,17 +39,15 @@
                 android:id="@+id/searchinCancerDatabaseButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="59dp"
                 android:layout_marginEnd="59dp"
+                android:layout_marginStart="8dp"
                 android:layout_marginTop="33dp"
                 android:onClick="searchHarmfulIngredients"
                 android:text="@string/search_in_database"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/product_details"
-                android:layout_marginLeft="8dp"
-                android:layout_marginStart="8dp"
+                app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintHorizontal_bias="1.0" />
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/product_details" />
 
             <TextView
                 android:id="@+id/harmful_ingredients"
@@ -65,18 +61,21 @@
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/searchinCancerDatabaseButton" />
 
-            <Button
-                android:id="@+id/show_graphs_from_show_product_activity"
-                android:layout_width="wrap_content"
+            <ImageButton
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="99dp"
-                android:layout_marginEnd="99dp"
-                android:layout_marginTop="32dp"
                 android:onClick="showNutrientsGraphs"
-                android:text="@string/show_graphs_from_show_product_activity"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/harmful_ingredients" />
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/harmful_ingredients"
+                app:srcCompat="@mipmap/graph"
+                android:contentDescription="@string/graph" />
 
         </android.support.constraint.ConstraintLayout>
     </RelativeLayout>
+
+
+
 </ScrollView>

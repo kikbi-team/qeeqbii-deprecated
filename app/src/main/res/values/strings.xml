@@ -16,14 +16,10 @@
     <string name="loading">Loading…</string>
     <string name="signed_out">Signed Out</string>
     <string name="desc_firebase_lockup">Firebase logo and name</string>
-
     <string name="firebase_status_fmt">Firebase User: %s</string>
-
     <string name="google_status_fmt">Google User: %s</string>
     <string name="google_title_text">Google Sign In</string>
-
     <string name="search_in_database">Search for harmful ingredients</string>
-
     <!-- XML -->
     <string name="levenshtein_nquery">LEVENSHTEIN\nQUERY</string>
     <string name="type_query_here">Type query here</string>
@@ -35,7 +31,16 @@
     <string name="aliments_proscrire">Aliments à proscrire</string>
     <string name="save_and_continue">Save and continue</string>
     <string name="search_product">search product</string>
-    <string name="graphs">Graphs</string>
-    <string name="query_cancer_n_database">QUERY CANCER\nDATABASE</string>
-    <string name="show_graphs_from_show_product_activity">See nutrients graphs</string>
+    <string name="title_activity_shopping_cart">ShoppingCart</string>
+    <string name="button_shopping">button_shopping</string>
+    <string name="shopping_cart">Shopping Cart</string>
+    <string name="button_graphs">button_graphs</string>
+    <string name="cheese">cheese</string>
+    <string name="apple">apple</string>
+    <string name="chips">chips</string>
+    <string name="wine">wine</string>
+    <string name="graph">graph</string>
+    <string name="meat">meat</string>
+    <string name="vegetables">vegetables</string>
+    <string name="query_cancer_n_database">query_cancer_n_database</string>button_graphs
 </resources>
