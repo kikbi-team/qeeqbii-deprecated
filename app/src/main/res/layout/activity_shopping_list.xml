@@ -8,33 +8,6 @@
 
     <LinearLayout
         android:layout_width="344dp"
-        android:layout_height="191dp"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
-
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:backgroundTint="@color/navyblue"
-            app:srcCompat="@drawable/cheese"
-            android:contentDescription="@string/cheese" />
-
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:backgroundTint="@color/Green"
-            app:srcCompat="@mipmap/apple"
-            android:contentDescription="@string/apple" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="344dp"
         android:layout_height="200dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -47,7 +20,7 @@
             android:layout_height="match_parent">
 
             <ImageButton
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:backgroundTint="@color/colorPrimaryDark"
@@ -55,7 +28,7 @@
                 android:contentDescription="@string/chips" />
 
             <ImageButton
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:backgroundTint="@color/pastelred"
@@ -68,28 +41,56 @@
     <LinearLayout
         android:layout_width="344dp"
         android:layout_height="189dp"
-        android:orientation="vertical"
+        android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" >
+        app:layout_constraintVertical_bias="1.0">
 
         <ImageButton
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:backgroundTint="@color/bordeau"
-            app:srcCompat="@mipmap/vegetables"
-            android:contentDescription="@string/vegetables" />
+            android:contentDescription="@string/vegetables"
+            app:srcCompat="@mipmap/vegetables" />
 
         <ImageButton
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:backgroundTint="#49c5b4"
-            app:srcCompat="@mipmap/meat"
-            android:contentDescription="@string/meat" />
+            android:contentDescription="@string/meat"
+            app:srcCompat="@mipmap/meat" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="344dp"
+        android:layout_height="191dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.002"
+        tools:layout_editor_absoluteX="8dp">
+
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="@color/navyblue"
+            android:contentDescription="@string/cheese"
+            app:srcCompat="@drawable/cheese" />
+
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="@color/Green"
+            android:contentDescription="@string/apple"
+            app:srcCompat="@mipmap/apple" />
     </LinearLayout>
 
 
