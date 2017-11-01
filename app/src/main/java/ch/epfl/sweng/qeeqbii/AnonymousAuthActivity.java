@@ -11,6 +11,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthCredential;
@@ -38,6 +39,7 @@ public class AnonymousAuthActivity extends BaseActivity implements
 
     private DatabaseReference databaseReference;
     private EditText editTextFirstName,editTextLastName,editTextAllergie,editTextGout;
+    private Button buttonSave;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,7 +64,7 @@ public class AnonymousAuthActivity extends BaseActivity implements
         editTextFirstName = (EditText) findViewById(R.id.editTextFirstName);
         editTextLastName = (EditText) findViewById(R.id.editTextLastName);
         editTextGout = (EditText) findViewById(R.id.editTextGout);
-        Button buttonSave = (Button) findViewById(R.id.buttonSave);
+        buttonSave = (Button) findViewById(R.id.buttonSave);
         buttonSave.setOnClickListener(this);
     }
 
@@ -77,7 +79,6 @@ public class AnonymousAuthActivity extends BaseActivity implements
 
         FirebaseUser user= mAuth.getCurrentUser();
 
-        assert user != null;
         databaseReference.child(user.getUid()).setValue(userInformation);
 
         Toast.makeText(this, "Information Saved...", Toast.LENGTH_LONG).show();

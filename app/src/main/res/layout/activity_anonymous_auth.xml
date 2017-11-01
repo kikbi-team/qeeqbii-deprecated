@@ -24,7 +24,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/icon"
         android:layout_marginBottom="8dp"
-        android:text="@string/sign_in_anonymously" />
+        android:text="@string/label_anonymous_auth" />
 
     <TextView
         android:id="@+id/anonymous_status_id"
@@ -54,17 +54,21 @@
         android:id="@+id/button_anonymous_sign_out"
         android:layout_width="@dimen/field_width_standard"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/button_anonymous_sign_in"
+
         android:enabled="false"
         android:text="@string/sign_out" />
+    <!--android:layout_alignTop="@+id/button_anonymous_sign_in"
+    android:layout_toRightOf="@+id/button_anonymous_sign_in"-->
     <Button
         android:id="@+id/buttonSave"
         android:layout_width="@dimen/field_width_standard"
         android:layout_height="wrap_content"
         android:enabled="false"
         android:text="@string/save_and_continue"
+        android:layout_marginLeft="52dp"
         android:layout_marginStart="52dp"
         android:layout_below="@+id/editTextAllergie"
+        android:layout_toRightOf="@+id/button_link_account"
         android:layout_toEndOf="@+id/button_link_account"
         android:layout_marginTop="51dp" />
     <EditText
@@ -74,6 +78,7 @@
         android:layout_height="wrap_content"
         android:hint="@string/first_name"
         android:layout_below="@+id/button_link_account"
+        android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
     <EditText
@@ -83,6 +88,7 @@
         android:layout_height="wrap_content"
         android:hint="@string/last_name"
         android:layout_below="@+id/editTextFirstName"
+        android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
     <EditText
@@ -94,6 +100,7 @@
         android:hint="@string/allergies"
         android:inputType="textPersonName"
         android:layout_below="@+id/editTextLastName"
+        android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
     <EditText
@@ -105,6 +112,7 @@
         android:hint="@string/aliments_proscrire"
         android:inputType="textMultiLine"
         android:layout_below="@+id/editTextAllergie"
+        android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
 
@@ -131,7 +139,6 @@
         android:layout_width="@dimen/field_width_standard"
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/field_email"
-        android:layout_toEndOf="@+id/field_email"
         android:hint="@string/hint_password"
         android:inputType="textPassword" />
 
