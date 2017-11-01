@@ -36,6 +36,6 @@ public class GoogleSignInTest {
         Thread.sleep(200);
         Espresso.closeSoftKeyboard();
         Thread.sleep(200);
-        onView(withId(R.id.sign_in_button)).perform(click());
+        //onView(withId(R.id.sign_in_button)).perform(click());
     }
 }
