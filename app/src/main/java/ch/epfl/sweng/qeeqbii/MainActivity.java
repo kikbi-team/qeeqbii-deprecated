@@ -3,7 +3,6 @@ package ch.epfl.sweng.qeeqbii;
 import android.content.Intent;
 
 import android.net.Uri;
-import android.support.v7.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -14,14 +13,6 @@ import android.widget.EditText;
 import com.facebook.CallbackManager;
 import com.facebook.share.model.ShareLinkContent;
 import com.facebook.share.widget.ShareDialog;
-
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.nio.charset.Charset;
-import java.util.ArrayList;
-import java.util.List;
 
 import static ch.epfl.sweng.qeeqbii.R.layout.activity_main;
 

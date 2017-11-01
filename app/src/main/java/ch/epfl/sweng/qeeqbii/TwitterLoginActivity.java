@@ -39,7 +39,6 @@ public class TwitterLoginActivity extends BaseActivity
 
     private DatabaseReference databaseReference;
     private EditText editTextFirstName,editTextLastName,editTextAllergie,editTextGout;
-    private Button buttonSave;
 
     // [START declare_auth]
     private FirebaseAuth mAuth;
@@ -96,7 +95,7 @@ public class TwitterLoginActivity extends BaseActivity
         editTextFirstName = (EditText) findViewById(R.id.editTextFirstName);
         editTextLastName = (EditText) findViewById(R.id.editTextLastName);
         editTextGout = (EditText) findViewById(R.id.editTextGout);
-        buttonSave = (Button) findViewById(R.id.buttonSave);
+        Button buttonSave = (Button) findViewById(R.id.buttonSave);
         buttonSave.setOnClickListener(this);
 
         findViewById(R.id.button_twitter_signout).setOnClickListener(this);
@@ -196,6 +195,7 @@ public class TwitterLoginActivity extends BaseActivity
 
         FirebaseUser user= mAuth.getCurrentUser();
 
+        assert user != null;
         databaseReference.child(user.getUid()).setValue(userInformation);
 
         Toast.makeText(this, "Information Saved...", Toast.LENGTH_LONG).show();

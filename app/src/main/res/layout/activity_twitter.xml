@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/grey_100"
     android:orientation="vertical"
     android:weightSum="4">
 
@@ -24,7 +22,6 @@
             android:layout_height="wrap_content" />
 
         <TextView
-            android:id="@+id/title_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/title_bottom_margin"
@@ -46,7 +43,6 @@
             style="@style/ThemeOverlay.MyTextDetail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:hint="@string/first_name" />
 
         <EditText
@@ -54,7 +50,6 @@
             style="@style/ThemeOverlay.MyTextDetail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:hint="@string/last_name" />
 
         <EditText
@@ -62,7 +57,6 @@
             style="@style/ThemeOverlay.MyTextDetail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:ems="10"
             android:hint="@string/allergies"
             android:inputType="textPersonName" />
@@ -71,8 +65,6 @@
             android:id="@+id/editTextGout"
             style="@style/ThemeOverlay.MyTextDetail"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:ems="10"
             android:hint="@string/aliments_proscrire"
             android:inputType="textMultiLine" />
@@ -105,13 +97,10 @@
             android:id="@+id/buttonSave"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="26dp"
             android:layout_marginStart="26dp"
-            android:layout_weight="1"
             android:layout_centerInParent="true"
             android:text="@string/save_and_continue"
             android:layout_below="@+id/button_twitter_signout"
-            android:layout_toRightOf="@+id/button_twitter_signout"
             android:layout_toEndOf="@+id/button_twitter_signout"
             android:theme="@style/ThemeOverlay.MyDarkButton"
             android:visibility="gone" />

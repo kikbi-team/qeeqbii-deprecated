@@ -42,7 +42,6 @@ public class EmailPasswordActivity extends BaseActivity implements
 
     private DatabaseReference databaseReference;
     private EditText editTextFirstName,editTextLastName,editTextAllergie,editTextGout;
-    private Button buttonSave;
 
     private TextView mStatusTextView;
     private TextView mDetailTextView;
@@ -78,7 +77,7 @@ public class EmailPasswordActivity extends BaseActivity implements
         editTextFirstName = (EditText) findViewById(R.id.editTextFirstName);
         editTextLastName = (EditText) findViewById(R.id.editTextLastName);
         editTextGout = (EditText) findViewById(R.id.editTextGout);
-        buttonSave = (Button) findViewById(R.id.buttonSave);
+        Button buttonSave = (Button) findViewById(R.id.buttonSave);
         buttonSave.setOnClickListener(this);
 
     }
@@ -93,6 +92,7 @@ public class EmailPasswordActivity extends BaseActivity implements
 
         FirebaseUser user= mAuth.getCurrentUser();
 
+        assert user != null;
         databaseReference.child(user.getUid()).setValue(userInformation);
 
         Toast.makeText(this, "Information Saved...", Toast.LENGTH_LONG).show();
@@ -200,6 +200,7 @@ public class EmailPasswordActivity extends BaseActivity implements
         // Send verification email
         // [START send_email_verification]
         final FirebaseUser user = mAuth.getCurrentUser();
+        assert user != null;
         user.sendEmailVerification()
                 .addOnCompleteListener(this, new OnCompleteListener<Void>() {
                     @Override

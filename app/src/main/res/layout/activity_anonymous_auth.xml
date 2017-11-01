@@ -55,7 +55,6 @@
         android:layout_width="@dimen/field_width_standard"
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/button_anonymous_sign_in"
-        android:layout_toRightOf="@+id/button_anonymous_sign_in"
         android:enabled="false"
         android:text="@string/sign_out" />
     <Button
@@ -64,10 +63,8 @@
         android:layout_height="wrap_content"
         android:enabled="false"
         android:text="@string/save_and_continue"
-        android:layout_marginLeft="52dp"
         android:layout_marginStart="52dp"
         android:layout_below="@+id/editTextAllergie"
-        android:layout_toRightOf="@+id/button_link_account"
         android:layout_toEndOf="@+id/button_link_account"
         android:layout_marginTop="51dp" />
     <EditText
@@ -75,10 +72,8 @@
         style="@style/ThemeOverlay.MyTextDetail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
         android:hint="@string/first_name"
         android:layout_below="@+id/button_link_account"
-        android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
     <EditText
@@ -86,10 +81,8 @@
         style="@style/ThemeOverlay.MyTextDetail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
         android:hint="@string/last_name"
         android:layout_below="@+id/editTextFirstName"
-        android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
     <EditText
@@ -97,12 +90,10 @@
         style="@style/ThemeOverlay.MyTextDetail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
         android:ems="10"
         android:hint="@string/allergies"
         android:inputType="textPersonName"
         android:layout_below="@+id/editTextLastName"
-        android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
     <EditText
@@ -110,12 +101,10 @@
         style="@style/ThemeOverlay.MyTextDetail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
         android:ems="10"
         android:hint="@string/aliments_proscrire"
         android:inputType="textMultiLine"
         android:layout_below="@+id/editTextAllergie"
-        android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
 
@@ -142,7 +131,7 @@
         android:layout_width="@dimen/field_width_standard"
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/field_email"
-        android:layout_toRightOf="@+id/field_email"
+        android:layout_toEndOf="@+id/field_email"
         android:hint="@string/hint_password"
         android:inputType="textPassword" />
 

@@ -1,14 +1,10 @@
 package ch.epfl.sweng.qeeqbii;
 
 import android.content.Context;
-import android.graphics.Point;
-import android.os.RemoteException;
 import android.support.test.InstrumentationRegistry;
 import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
-import android.support.test.uiautomator.UiDevice;
 
-import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;

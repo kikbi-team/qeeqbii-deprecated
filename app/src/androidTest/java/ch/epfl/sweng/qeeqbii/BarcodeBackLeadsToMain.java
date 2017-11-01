@@ -1,7 +1,6 @@
 package ch.epfl.sweng.qeeqbii;
 
 import android.content.ComponentName;
-import android.support.test.espresso.Espresso;
 import android.support.test.espresso.intent.rule.IntentsTestRule;
 import android.support.test.runner.AndroidJUnit4;
 import android.view.KeyEvent;

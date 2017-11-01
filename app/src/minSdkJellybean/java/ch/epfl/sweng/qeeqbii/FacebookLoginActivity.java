@@ -17,7 +17,6 @@
 package ch.epfl.sweng.qeeqbii;
 
 import android.content.Intent;
-import android.hardware.camera2.params.Face;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.util.Log;
@@ -58,7 +57,6 @@ public class FacebookLoginActivity extends BaseActivity implements
 
     private DatabaseReference databaseReference;
     private EditText editTextFirstName,editTextLastName,editTextAllergie,editTextGout;
-    private Button buttonSave;
 
     // [START declare_auth]
     private FirebaseAuth mAuth;
@@ -87,7 +85,7 @@ public class FacebookLoginActivity extends BaseActivity implements
         editTextFirstName = (EditText) findViewById(R.id.editTextFirstName);
         editTextLastName = (EditText) findViewById(R.id.editTextLastName);
         editTextGout = (EditText) findViewById(R.id.editTextGout);
-        buttonSave = (Button) findViewById(R.id.buttonSave);
+        Button buttonSave = (Button) findViewById(R.id.buttonSave);
         buttonSave.setOnClickListener(this);
 
         // [START initialize_fblogin]
@@ -131,6 +129,7 @@ public class FacebookLoginActivity extends BaseActivity implements
 
         FirebaseUser user= mAuth.getCurrentUser();
 
+        assert user != null;
         databaseReference.child(user.getUid()).setValue(userInformation);
 
         Toast.makeText(this, "Information Saved...", Toast.LENGTH_LONG).show();

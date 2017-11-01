@@ -18,6 +18,7 @@ package ch.epfl.sweng.qeeqbii;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -94,8 +95,9 @@ public class ChooserActivity extends AppCompatActivity implements AdapterView.On
             mClasses = objects;
         }
 
+        @NonNull
         @Override
-        public View getView(int position, View convertView, ViewGroup parent) {
+        public View getView(int position, View convertView, @NonNull ViewGroup parent) {
             View view = convertView;
 
             if (convertView == null) {
