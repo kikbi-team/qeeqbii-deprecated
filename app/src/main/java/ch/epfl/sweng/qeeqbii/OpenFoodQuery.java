@@ -1,6 +1,8 @@
 package ch.epfl.sweng.qeeqbii;
 
 import android.os.AsyncTask;
+import android.util.Log;
+import android.widget.TextView;
 
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -17,12 +19,9 @@ import java.net.URL;
  * 
  */
 
-class OpenFoodQuery extends AsyncTask<String, Void, String> {
+class OpenFoodQuery extends AsyncTask<String, Void, Product> {
 
-
-    private static final Map<String,HTTPRequestResponse> resp_cache = new HashMap<>();
-
-    private static final Map<String,String> error_cache = new HashMap<>();
+    static final Map<String,String> error_cache = new HashMap<>();
 
     private static class OpenFoodQueryException extends Exception {
         OpenFoodQueryException(String message) {
@@ -31,9 +30,13 @@ class OpenFoodQuery extends AsyncTask<String, Void, String> {
     }
 
     @Override
-    protected String doInBackground(String params[])
+    protected Product doInBackground(String params[])
     {
         String barcode = params[0];
+        if(RecentlyScannedProducts.contains(barcode))
+        {
+            return RecentlyScannedProducts.GetProduct(barcode);
+        }
         try {
             URL url = new URL("https://www.openfood.ch/api/v3/products?excludes=name_translations2Cimages&barcodes=" + barcode);
             HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
@@ -69,36 +72,38 @@ class OpenFoodQuery extends AsyncTask<String, Void, String> {
             }
             urlConnection.disconnect();
 
-            resp_cache.put(barcode, new HTTPRequestResponse(str));
-            return str;
+            Product product = (new HTTPRequestResponse(str).toProduct());
+
+            RecentlyScannedProducts.add(barcode, product);
+            return product;
         }
         catch(OpenFoodQueryException e)
         {
             error_cache.put(barcode, "ERROR: (openfood) " + e.getMessage());
-            return "ERROR: (openfood) " + e.getMessage();
+            return null;
         }
         catch(java.io.IOException e)
         {
             error_cache.put(barcode, "ERROR: " + e.getMessage());
-            return "ERROR: " + e.getMessage();
+            return null;
         }
 
 
     }
 
     // This GetOrCreate can freeze the main thread if the barcode isn't in the cache.
-    static HTTPRequestResponse GetOrCreateHTTPRequestResponse(String barcode) throws Exception
+    static Product GetOrCreateProduct(String barcode) throws Exception
     {
-        if(resp_cache.containsKey(barcode))
+        if(RecentlyScannedProducts.contains(barcode))
         {
-            return resp_cache.get(barcode);
+            return RecentlyScannedProducts.GetProduct(barcode);
         }
 
         final CountDownLatch get_or_create_signal = new CountDownLatch(1);
 
         new OpenFoodQuery() {
             @Override
-            protected void onPostExecute(String barcode) {
+            protected void onPostExecute(Product barcode) {
 
 
             }
@@ -106,26 +111,55 @@ class OpenFoodQuery extends AsyncTask<String, Void, String> {
 
         get_or_create_signal.countDown();
 
-        if(resp_cache.containsKey(barcode))
+        if(RecentlyScannedProducts.contains(barcode))
         {
-            return resp_cache.get(barcode);
+            return RecentlyScannedProducts.GetProduct(barcode);
         } else {
             throw new Exception(error_cache.get(barcode));
         }
     }
 
-    static boolean isCached(String barcode)
+    static void ShowProduct(String barcode, TextView txt)
     {
-        return (resp_cache.containsKey(barcode));
+        final TextView txt2 = txt;
+        final String barcode2 = barcode;
+        new OpenFoodQuery() {
+            @Override
+            public void onPostExecute(Product product) {
+                //TextView txt = (TextView) findViewById(R.id.product_details);
+                try {
+                    if (product == null)
+                        throw new Exception(error_cache.get(barcode2));
+
+                    String s = product.GetName();
+                    s += "\n\nIngredients: " + product.GetIngredients();
+                    s += "\n\nQuantity: " + product.GetQuantity();
+                    s += "\n\nNutrients: (per 100g)\n" + product.GetNutrients();
+                    Log.d("STATE", "Product found: " + s);
+                    txt2.setText(s);
+
+                } catch (Exception e) {
+                    txt2.setText(e.getMessage());
+                }
+
+            }
+        }.execute(barcode);
     }
 
-    static HTTPRequestResponse get(String barcode) throws OpenFoodQueryException
+    static boolean isCached(String barcode)
     {
-        if (resp_cache.containsKey(barcode))
+        return (RecentlyScannedProducts.contains(barcode));
+    }
+
+    static Product get(String barcode) throws OpenFoodQueryException
+    {
+        if (RecentlyScannedProducts.contains(barcode))
         {
-            return resp_cache.get(barcode);
+            return RecentlyScannedProducts.GetProduct(barcode);
         } else {
             throw new OpenFoodQueryException("ERROR: (OpenFoodQuery) : this barcode \"" + barcode + "\" is not cached.");
         }
     }
+
+
 }
