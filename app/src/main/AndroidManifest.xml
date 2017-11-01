@@ -44,7 +44,10 @@
         <activity
             android:name=".ShoppingCart"
             android:label="@string/title_activity_shopping_cart"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".RecentlyScannedProductsActivity"
+            android:exported="true" />
     </application>
 
 </manifest>

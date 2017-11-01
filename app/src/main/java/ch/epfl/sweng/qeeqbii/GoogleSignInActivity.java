@@ -251,7 +251,8 @@ public class GoogleSignInActivity extends BaseActivity implements
         //} else if (i == R.id.sign_out_button) {
         if (i == R.id.sign_out_button) {
             signOut();
-        } else if (i == R.id.disconnect_button) {
+        }
+        else if (i == R.id.disconnect_button) {
             revokeAccess();
         }
         if (v == buttonSave) {

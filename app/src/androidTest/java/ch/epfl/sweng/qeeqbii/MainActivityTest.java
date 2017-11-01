@@ -69,6 +69,11 @@ public class MainActivityTest {
     }
 
     @Test
+    public void testCanOpenRecentlyScannedProductsActivity() throws InterruptedException {
+        onView(withId(R.id.listRecentlyScannedProductButton)).perform(click());
+    }
+
+    @Test
     public void useAppContext() throws Exception {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();

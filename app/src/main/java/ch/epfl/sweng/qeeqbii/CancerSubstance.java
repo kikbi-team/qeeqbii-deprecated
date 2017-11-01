@@ -26,7 +26,7 @@ class CancerSubstance {
 
 
     // setters methods
-    public void setmId(int mId) {
+    void setmId(int mId) {
         this.mId = mId;
     }
 
@@ -48,15 +48,15 @@ class CancerSubstance {
 //    }
 // --Commented out by Inspection STOP (26.10.17 20:08)
 
-    public void setmGroup(String mGroup) {
+    void setmGroup(String mGroup) {
         this.mGroup = mGroup;
     }
 
-    public String getmAgent() {
+    String getmAgent() {
         return mAgent;
     }
 
-    public void setmAgent(String mAgent) {
+    void setmAgent(String mAgent) {
         this.mAgent = mAgent;
     }
 
