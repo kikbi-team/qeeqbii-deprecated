@@ -38,6 +38,7 @@
     <string name="open"> Open </string>
     <string name="close"> Close </string>
     <string name="nav_header">Navigation Menu</string>
+
     <string name="title_activity_shopping_cart">ShoppingCart</string>
     <string name="button_shopping">button_shopping</string>
     <string name="shopping_cart">Shopping Cart</string>
