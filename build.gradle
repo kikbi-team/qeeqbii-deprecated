@@ -1,5 +1,12 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 
+
+// New plugins for jacoco
+//apply plugin: 'java'
+//apply plugin: 'findbugs'
+//apply plugin 'jacoco'
+
+
 buildscript {
     repositories {
         jcenter()
@@ -8,6 +15,9 @@ buildscript {
     dependencies {
         classpath 'com.android.tools.build:gradle:2.3.3'
         classpath 'com.google.gms:google-services:3.1.0'
+
+        // problem with this version of jacoco which is not compatible with gradle version 4.0.1
+        // this gradle version seems to automatically come with android version 3
         classpath 'com.trickyandroid:jacoco-everywhere:0.2.1'
 
         // NOTE: Do not place your application dependencies here; they belong
@@ -25,4 +35,40 @@ allprojects {
 
 task clean(type: Delete) {
     delete rootProject.buildDir
+}
+
+/*
+task jacocoTestReport() {
+    group = "Reporting"
+    description = "Generate Jacoco coverage reports after running tests."
+    additionalSourceDirs = files(sourceSets.main.allJava.srcDirs)
+}
+*/
+
+/*
+task jacocoTestReport() {
+    group = "Reporting"
+    reports {
+        xml.enabled true
+        csv.enabled false
+        html.destination "${buildDir}/reports/coverage"
+    }
+}
+*/
+
+
+task jacocoTestReport(type: JacocoReport, dependsOn: 'ch.epfl.sweng.qeeqbi.androidTest') {
+
+    reports {
+        xml.enabled = true
+        html.enabled = true
+    }
+
+    def fileFilter = ['**/R.class', '**/R$*.class', '**/BuildConfig.*', '**/Manifest*.*', '**/*Test*.*', 'android/**/*.*']
+    def debugTree = fileTree(dir: "${buildDir}/intermediates/classes/debug", excludes: fileFilter)
+    def mainSrc = "${project.projectDir}/src/main/java"
+
+    sourceDirectories = files([mainSrc])
+    classDirectories = files([debugTree])
+    executionData = files("${buildDir}/jacoco/testDebugUnitTest.exec")
 }
