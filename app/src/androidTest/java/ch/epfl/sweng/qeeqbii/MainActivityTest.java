@@ -44,7 +44,7 @@ public class MainActivityTest {
     public void testCanOpenGraphs() throws InterruptedException {
         onView(withId(R.id.buttonGraphs)).perform(click());
     }
-
+    /*
     @Before
     public void init(){
         UiDevice uiDevice = UiDevice.getInstance(InstrumentationRegistry.getInstrumentation());
@@ -62,6 +62,7 @@ public class MainActivityTest {
             e.printStackTrace();
         }
     }
+    */
     @Test
     public void testCanOpenShppoingCart() throws InterruptedException {
         onView(withId(R.id.shoppingButton)).perform(click());
