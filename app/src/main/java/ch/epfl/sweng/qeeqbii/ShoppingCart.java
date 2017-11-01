@@ -18,25 +18,20 @@ import java.util.List;
 public class ShoppingCart extends AppCompatActivity {
 
     private List<String> m_item = new ArrayList<String>();
-    private List<String> m_europeCountries = new ArrayList<String>();
 
-    private RecyclerView firstRecyclerView;
-    private RecyclerView secondRecyclerView;
+    private RecyclerView RecyclerView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_shopping_cart);
 
-        firstRecyclerView = (RecyclerView)findViewById(R.id.recycler);
-        secondRecyclerView = (RecyclerView)findViewById(R.id.recycler_1);
+        RecyclerView = (RecyclerView)findViewById(R.id.recycler);
 
         //create and set layout manager for each RecyclerView
         RecyclerView.LayoutManager firstLayoutManager = new LinearLayoutManager(this);
-        RecyclerView.LayoutManager secondLayoutManager = new LinearLayoutManager(this);
 
-        firstRecyclerView.setLayoutManager(firstLayoutManager);
-        secondRecyclerView.setLayoutManager(secondLayoutManager);
+        RecyclerView.setLayoutManager(firstLayoutManager);
 
         //TEST
         m_item.add("France");
@@ -56,10 +51,8 @@ public class ShoppingCart extends AppCompatActivity {
 
         //Initializing and set adapter for each RecyclerView
         RecyclerViewAdapter firstAdapter = new RecyclerViewAdapter(this, m_item);
-        RecyclerViewAdapter secondAdapter = new RecyclerViewAdapter(this, m_europeCountries);
 
-        firstRecyclerView.setAdapter(firstAdapter);
-        secondRecyclerView.setAdapter(secondAdapter);
+        RecyclerView.setAdapter(firstAdapter);
     }
 
     public void showShoppingList(View view) {
