@@ -1,12 +1,15 @@
 package ch.epfl.sweng.qeeqbii;
 
 import android.content.Intent;
+
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
+
 import android.os.Bundle;
-import android.util.Log;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.EditText;
+
 
 import com.facebook.CallbackManager;
 import com.facebook.share.model.ShareLinkContent;
@@ -27,9 +30,17 @@ public class MainActivity extends AppCompatActivity {
     CallbackManager callbackManager;
     ShareDialog shareDialog;
 
+    //private CancerDataBase cancer_data_base = new CancerDataBase();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        try {
+            CancerDataBase.readCSVFile(getApplicationContext());
+        }
+        catch(Exception e) {
+            System.err.println("Exception: " + e.getMessage());
+        }
         setContentView(activity_main);
 
         findViewById(R.id.button_share_facebook).setOnClickListener(new View.OnClickListener() {
@@ -52,8 +63,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @SuppressWarnings("UnusedParameters")
-    public void cancerDataBaseShow(View view)
-    {
+    public void cancerDataBaseShow(View view) {
         Intent intent = new Intent(this, CancerDataShowActivity.class);
         startActivity(intent);
     }
@@ -78,6 +88,12 @@ public class MainActivity extends AppCompatActivity {
 
     public void cancerDataQuery(View view) {
         Intent intent = new Intent(this, CancerDataQueryActivity.class);
+
+        startActivity(intent);
+    }
+
+    public void showShoppingList(View view) {
+        Intent intent = new Intent(this, ShoppingCart.class);
         startActivity(intent);
     }
 }

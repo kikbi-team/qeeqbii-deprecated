@@ -1,7 +1,5 @@
 package android.os;
 
-import android.util.Log;
-
 import java.util.concurrent.ExecutionException;
 
 /**
@@ -36,10 +34,10 @@ public abstract class AsyncTask<Params, Progress, Result> {
         return this;
     }
 
-    public final Result get() throws InterruptedException, ExecutionException {
+    public final Result get() {
         return result;
     }
 
-    public void finish(){
+    public void finish() {
     }
 }

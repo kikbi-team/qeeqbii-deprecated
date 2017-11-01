@@ -11,66 +11,63 @@
     tools:context="ch.epfl.sweng.qeeqbii.Graphs">
 
     <com.github.mikephil.charting.charts.PieChart
+        android:id="@+id/idPieChartCalories"
         android:layout_width="163dp"
         android:layout_height="304dp"
-        android:id="@+id/idPieChart"
-        app:layout_constraintBottom_toTopOf="@+id/idPieChartGlucides"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/idPieChartSugars"
+        app:layout_constraintLeft_toRightOf="@+id/idPieChartSalts"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintLeft_toRightOf="@+id/idPieChartSalts"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <com.github.mikephil.charting.charts.PieChart
+        android:id="@+id/idPieChartFats"
         android:layout_width="163dp"
         android:layout_height="304dp"
-        android:id="@+id/idPieChartFat"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/idPieChartSalts"
-        app:layout_constraintRight_toLeftOf="@+id/idPieChartGlucides"
-        app:layout_constraintLeft_toLeftOf="parent" />
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/idPieChartSugars"
+        app:layout_constraintTop_toBottomOf="@+id/idPieChartSalts" />
 
     <com.github.mikephil.charting.charts.PieChart
+        android:id="@+id/idPieChartSugars"
         android:layout_width="163dp"
         android:layout_height="304dp"
-        android:id="@+id/idPieChartGlucides"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/idPieChart"
+        app:layout_constraintLeft_toRightOf="@+id/idPieChartFats"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintLeft_toRightOf="@+id/idPieChartFat"/>
+        app:layout_constraintTop_toBottomOf="@+id/idPieChartCalories" />
 
     <com.github.mikephil.charting.charts.PieChart
-        android:layout_width="163dp"
-        android:layout_height="304dp"
         android:id="@+id/idPieChartSalts"
-        app:layout_constraintBottom_toTopOf="@+id/idPieChartFat"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintRight_toLeftOf="@+id/idPieChart"
-        app:layout_constraintLeft_toLeftOf="parent"/>
+        android:layout_width="163dp"
+        android:layout_height="304dp"
+        app:layout_constraintBottom_toTopOf="@+id/idPieChartFats"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/idPieChartCalories"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <android.support.constraint.Guideline
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/guideline"
-        app:layout_constraintGuide_begin="20dp"
         android:orientation="vertical"
-        tools:layout_editor_absoluteY="0dp"
-        tools:layout_editor_absoluteX="20dp" />
-
-    <android.support.constraint.Guideline
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/guideline2"
         app:layout_constraintGuide_begin="20dp"
-        android:orientation="vertical"
-        tools:layout_editor_absoluteY="0dp"
-        tools:layout_editor_absoluteX="20dp" />
+        tools:layout_editor_absoluteX="20dp"
+        tools:layout_editor_absoluteY="0dp" />
 
     <android.support.constraint.Guideline
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/guideline3"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp"
+        tools:layout_editor_absoluteX="20dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_end="595dp"
-        tools:layout_editor_absoluteY="32dp"
-        tools:layout_editor_absoluteX="0dp" />
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="32dp" />
 
 </android.support.constraint.ConstraintLayout>

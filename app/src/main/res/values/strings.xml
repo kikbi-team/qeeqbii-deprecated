@@ -4,71 +4,29 @@
     <string name="barcode_button">Barcode Reader</string>
     <string name="cancer_data">Cancer DataBase</string>
     <string name="fat_graph">Fats</string>
-    <string name="glucide_graph">Carbohyrates</string>
+    <string name="sugar_graph">Sugar</string>
     <string name="calories_graph">Calories</string>
     <string name="salt_graph">Salts</string>
     <string name="barcode_scan_to_product">Go to product</string>
+
 
     <string name="Formaldehyde">Formaldehyde</string>
 
 
     <!-- Google Sign In -->
-    <string name="AppName">Firebase Authentication</string>
 
-    <string name="label_google_sign_in">Firebase + Google Sign In</string>
-    <string name="desc_google_sign_in">Use a Google Sign In credential to authenticate with Firebase.</string>
-
-    <string name="label_facebook_login">Firebase + Facebook Login</string>
-    <string name="desc_facebook_login">Use a Facebook Login credential to authenticate with Firebase.</string>
-
-    <string name="label_twitter_login">Firebase + Twitter Login</string>
-    <string name="desc_twitter_login">Use a Twitter Login credential to authenticate with Firebase.</string>
-
-    <string name="label_emailpassword">Email/Password Authentication</string>
-    <string name="desc_emailpassword">Use an email and password to authenticate with Firebase.</string>
-
-    <string name="label_phone_auth">Phone Number Authentication</string>
-    <string name="desc_phone_auth">Use a phone number to authenticate with Firebase.</string>
-
-    <string name="label_anonymous_auth">Anonymous Authentication</string>
-    <string name="desc_anonymous_auth">Sign in anonymously and then later upgrade to a full Firebase Auth user.</string>
-
-    <string name="label_custom_auth">Custom Authentication</string>
-    <string name="desc_custom_auth">Use a custom token signed by your own server to authenticate with Firebase.</string>
-
-    <string name="label_firebase_ui">FirebaseUI Auth</string>
-    <string name="desc_firebase_ui">Use the FirebaseUI-Android library to authenticate with Firebase.</string>
-
-    <string name="hint_user_id">User ID</string>
-    <string name="get_custom_token">Get Token</string>
-    <string name="sign_in">Sign In</string>
-    <string name="create_account">Create Account</string>
     <string name="sign_out">Sign Out</string>
-    <string name="verify_email">Verify Email</string>
     <string name="disconnect">Disconnect</string>
     <string name="loading">Loading…</string>
-    <string name="custom_token">Custom Token</string>
-    <string name="signed_in">Signed In</string>
     <string name="signed_out">Signed Out</string>
+
     <string name="token_null">Token: null</string>
+
     <string name="desc_firebase_lockup">Firebase logo and name</string>
-    <string name="auth_failed">Authentication failed</string>
-    <string name="start_phone_auth">Start</string>
-    <string name="verify_phone_auth">Verify</string>
-    <string name="resend_phone_auth">Resend</string>
-    <string name="hint_phone_number">Phone Number</string>
-    <string name="hint_verification_code">Verification Code</string>
-    <string name="status_code_sent">Code Sent</string>
-    <string name="status_verification_failed">Verification failed</string>
-    <string name="status_verification_succeeded">Verification succeeded</string>
-    <string name="status_sign_in_failed">Sign-in failed</string>
-    <string name="instant_validation">(instant validation)</string>
-
     <string name="firebase_status_fmt">Firebase User: %s</string>
-    <string name="firebase_user_management">Firebase User Management</string>
-
     <string name="google_status_fmt">Google User: %s</string>
     <string name="google_title_text">Google Sign In</string>
+
 
     <string name="facebook_status_fmt">Facebook User: %s</string>
     <string name="facebook_title_text">Facebook Login</string>
@@ -89,37 +47,37 @@
 
     <string name="action_settings">Settings</string>
 
-<string name="menu_login">Log in</string>
-<string name="login_label">Log In</string>
-<string name="email_label">Email</string>
-<string name="password_label">Password</string>
-<string name="send_text">Send</string>
-<string name="lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nec condimentum ante, quis mattis mi. Proin ut rhoncus libero, ac euismod neque. Ut suscipit, enim a facilisis consequat, orci lacus venenatis orci, at ultricies orci nulla sed ex. In condimentum viverra velit, eget feugiat libero imperdiet vel. Aenean pretium, lectus vitae bibendum bibendum, diam turpis convallis eros, quis tristique leo sapien at ipsum. Praesent eu odio id nulla lobortis auctor. Donec eget dolor eget nisl euismod commodo vel a lacus. Quisque ut justo vitae urna pharetra accumsan. Etiam dignissim neque iaculis mauris viverra, blandit rhoncus odio porttitor. Phasellus nibh arcu.</string>
-<string name="title_sign_in">Welcome</string>
-<string name="sign_up">Sign Up</string>
-<string name="hint_password">password</string>
-<string name="hint_email">email</string>
-<string name="heading_recent">Recent</string>
-<string name="heading_my_posts">My Posts</string>
-<string name="heading_my_top_posts">My Top Posts</string>
+    <string name="menu_login">Log in</string>
+    <string name="login_label">Log In</string>
+    <string name="email_label">Email</string>
+    <string name="password_label">Password</string>
+    <string name="send_text">Send</string>
+    <string name="lorem">Lorem </string>
+    <string name="title_sign_in">Welcome</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="hint_password">password</string>
+    <string name="hint_email">email</string>
+    <string name="heading_recent">Recent</string>
+    <string name="heading_my_posts">My Posts</string>
+    <string name="heading_my_top_posts">My Top Posts</string>
 
-<string name="camera_button_text">Upload</string>
-<string name="sign_in_prompt">Sign In to begin</string>
-<string name="take_photo_prompt">Upload a Photo</string>
-<string name="download">Download</string>
-<string name="sign_in_anonymously">Sign In</string>
-<string name="rationale_storage">This sample reads images from your camera to demonstrate uploading.</string>
-<string name="label_link">Link to Uploaded File</string>
-<string name="label_download">Download File</string>
-<string name="log_out">Log out</string>
-<string name="success">Success</string>
-<string name="progress_downloading">Downloading…</string>
-<string name="progress_uploading">Uploading…</string>
-<string name="progress_auth">Signing In…</string>
-<string name="upload_success">Upload finished</string>
-<string name="upload_failure">Upload failed</string>
-<string name="download_success">Download finished</string>
-<string name="download_failure">Download failure</string>
+    <string name="camera_button_text">Upload</string>
+    <string name="sign_in_prompt">Sign In to begin</string>
+    <string name="take_photo_prompt">Upload a Photo</string>
+    <string name="download">Download</string>
+    <string name="sign_in_anonymously">Sign In</string>
+    <string name="rationale_storage">This sample reads images from your camera to demonstrate uploading.</string>
+    <string name="label_link">Link to Uploaded File</string>
+    <string name="label_download">Download File</string>
+    <string name="log_out">Log out</string>
+    <string name="success">Success</string>
+    <string name="progress_downloading">Downloading…</string>
+    <string name="progress_uploading">Uploading…</string>
+    <string name="progress_auth">Signing In…</string>
+    <string name="upload_success">Upload finished</string>
+    <string name="upload_failure">Upload failed</string>
+    <string name="download_success">Download finished</string>
+    <string name="download_failure">Download failure</string>
 
 
     <string name="text_home">This is just example of using <b>Simple Social Sharing</b> project\n\nYou can see right design of sharing here - <a href="">http://www.androidpatterns.com/uap_pattern/share-button</a></string>
@@ -137,4 +95,108 @@
     <string name="button_share_facebook">Share on Facebook</string>
     <string name="button_share_twitter">Share on Twitter</string>
     <string name="menu_logout">Logout</string>
+
+    <string name="search_in_database">Search for harmful ingredients</string>
+    <!-- XML -->
+    <string name="levenshtein_nquery">LEVENSHTEIN\nQUERY</string>
+    <string name="type_query_here">Type query here</string>
+    <string name="perfect_match_nquery">PERFECT MATCH\nQUERY</string>
+    <string name="query_answer">Query answer</string>
+    <string name="first_name">First_Name</string>
+    <string name="last_name">Last_Name</string>
+    <string name="allergies">Allergies:</string>
+    <string name="aliments_proscrire">Aliments à proscrire</string>
+    <string name="save_and_continue">Save and continue</string>
+    <string name="search_product">search product</string>
+    <string name="title_activity_shopping_cart">ShoppingCart</string>
+    <string name="button_shopping">button_shopping</string>
+    <string name="shopping_cart">Shopping Cart</string>
+    <string name="button_graphs">button_graphs</string>
+    <string name="cheese">cheese</string>
+    <string name="apple">apple</string>
+    <string name="chips">chips</string>
+    <string name="wine">wine</string>
+    <string name="graph">graph</string>
+    <string name="meat">meat</string>
+    <string name="vegetables">vegetables</string>
+    <string name="query_cancer_n_database">query_cancer_n_database</string>button_graphs
+
+    <string name="label_google_sign_in">Firebase + Google Sign In</string>
+
+    <string name="desc_google_sign_in">Use a Google Sign In credential to authenticate with Firebase.</string>
+
+    <string name="label_facebook_login">Firebase + Facebook Login</string>
+
+    <string name="desc_facebook_login">Use a Facebook Login credential to authenticate with Firebase.</string>
+
+    <string name="label_twitter_login">Firebase + Twitter Login</string>
+
+    <string name="desc_twitter_login">Use a Twitter Login credential to authenticate with Firebase.</string>
+
+    <string name="label_emailpassword">Email/Password Authentication</string>
+
+    <string name="desc_emailpassword">Use an email and password to authenticate with Firebase.</string>
+
+    <string name="label_phone_auth">Phone Number Authentication</string>
+
+    <string name="desc_phone_auth">Use a phone number to authenticate with Firebase.</string>
+
+    <string name="label_anonymous_auth">Anonymous Authentication</string>
+
+    <string name="desc_anonymous_auth">Sign in anonymously and then later upgrade to a full Firebase Auth user.</string>
+
+    <string name="label_custom_auth">Custom Authentication</string>
+
+    <string name="desc_custom_auth">Use a custom token signed by your own server to authenticate with Firebase.</string>
+
+    <string name="label_firebase_ui">FirebaseUI Auth</string>
+
+    <string name="desc_firebase_ui">Use the FirebaseUI-Android library to authenticate with Firebase.</string>
+    <string name="hint_user_id">User ID</string>
+
+    <string name="get_custom_token">Get Token</string>
+
+    <string name="sign_in">Sign In</string>
+
+    <string name="create_account">Create Account</string>
+
+
+    <string name="verify_email">Verify Email</string>
+
+
+    <string name="custom_token">Custom Token</string>
+
+    <string name="signed_in">Signed In</string>
+
+    <string name="Account_Linking">Account Linking</string>
+
+
+
+    <string name="auth_failed">Authentication failed</string>
+
+    <string name="start_phone_auth">Start</string>
+
+    <string name="verify_phone_auth">Verify</string>
+
+    <string name="resend_phone_auth">Resend</string>
+
+    <string name="hint_phone_number">Phone Number</string>
+
+    <string name="hint_verification_code">Verification Code</string>
+
+    <string name="status_code_sent">Code Sent</string>
+
+    <string name="status_verification_failed">Verification failed</string>
+
+    <string name="status_verification_succeeded">Verification succeeded</string>
+
+    <string name="status_sign_in_failed">Sign-in failed</string>
+
+    <string name="instant_validation">(instant validation)</string>
+
+
+    <string name="firebase_user_management">Firebase User Management</string>
+
+
+
 </resources>

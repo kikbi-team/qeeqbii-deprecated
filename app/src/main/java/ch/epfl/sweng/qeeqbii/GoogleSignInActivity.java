@@ -1,3 +1,19 @@
+/**
+ * Copyright 2016 Google Inc. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
 package ch.epfl.sweng.qeeqbii;
 
 import android.content.Intent;
@@ -47,7 +63,7 @@ public class GoogleSignInActivity extends BaseActivity implements
     private TextView mDetailTextView;
 
     private DatabaseReference databaseReference;
-    private EditText editTextFirstName,editTextLastName,editTextAllergie,editTextGout;
+    private EditText editTextFirstName, editTextLastName, editTextAllergie, editTextGout;
     private Button buttonSave;
 
     @Override
@@ -81,7 +97,7 @@ public class GoogleSignInActivity extends BaseActivity implements
         mAuth = FirebaseAuth.getInstance();
         // [END initialize_auth]
 
-        databaseReference= FirebaseDatabase.getInstance().getReference();
+        databaseReference = FirebaseDatabase.getInstance().getReference();
         editTextAllergie = (EditText) findViewById(R.id.editTextAllergie);
         editTextFirstName = (EditText) findViewById(R.id.editTextFirstName);
         editTextLastName = (EditText) findViewById(R.id.editTextLastName);
@@ -91,16 +107,16 @@ public class GoogleSignInActivity extends BaseActivity implements
 
     }
 
-    private void saveUserInformation () {
+    private void saveUserInformation() {
 
-        String firstname= editTextFirstName.getText().toString().trim();
-        String lastname= editTextLastName.getText().toString().trim();
-        String allergie= editTextAllergie.getText().toString().trim();
-        String gout= editTextGout.getText().toString().trim();
+        String firstname = editTextFirstName.getText().toString().trim();
+        String lastname = editTextLastName.getText().toString().trim();
+        String allergie = editTextAllergie.getText().toString().trim();
+        String gout = editTextGout.getText().toString().trim();
 
-        UserInformation userInformation = new UserInformation(firstname,lastname,allergie,gout);
+        UserInformation userInformation = new UserInformation(firstname, lastname, allergie, gout);
 
-        FirebaseUser user= mAuth.getCurrentUser();
+        FirebaseUser user = mAuth.getCurrentUser();
 
         databaseReference.child(user.getUid()).setValue(userInformation);
 

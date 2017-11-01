@@ -24,7 +24,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/icon"
         android:layout_marginBottom="8dp"
-        android:text="Anonymous Sign In" />
+        android:text="@string/sign_in_anonymously" />
 
     <TextView
         android:id="@+id/anonymous_status_id"
@@ -63,7 +63,7 @@
         android:layout_width="@dimen/field_width_standard"
         android:layout_height="wrap_content"
         android:enabled="false"
-        android:text="Save and continue"
+        android:text="@string/save_and_continue"
         android:layout_marginLeft="52dp"
         android:layout_marginStart="52dp"
         android:layout_below="@+id/editTextAllergie"
@@ -76,7 +76,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:hint="Fisrt_Name"
+        android:hint="@string/first_name"
         android:layout_below="@+id/button_link_account"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
@@ -87,7 +87,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:hint="Last_Name"
+        android:hint="@string/last_name"
         android:layout_below="@+id/editTextFirstName"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
@@ -99,7 +99,7 @@
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:ems="10"
-        android:hint="Allergies: "
+        android:hint="@string/allergies"
         android:inputType="textPersonName"
         android:layout_below="@+id/editTextLastName"
         android:layout_alignParentLeft="true"
@@ -112,7 +112,7 @@
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:ems="10"
-        android:hint="Aliments à proscrire"
+        android:hint="@string/aliments_proscrire"
         android:inputType="textMultiLine"
         android:layout_below="@+id/editTextAllergie"
         android:layout_alignParentLeft="true"
@@ -127,7 +127,7 @@
         android:layout_below="@+id/button_anonymous_sign_in"
         android:layout_marginBottom="8dp"
         android:layout_marginTop="24dp"
-        android:text="Account Linking" />
+        android:text="@string/Account_Linking" />
 
     <EditText
         android:id="@+id/field_email"
@@ -152,6 +152,6 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/field_email"
         android:enabled="false"
-        android:text="Link Account" />
+        android:text="@string/Account_Linking" />
 
 </RelativeLayout>

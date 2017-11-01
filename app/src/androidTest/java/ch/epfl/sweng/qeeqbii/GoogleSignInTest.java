@@ -1,8 +1,6 @@
 package ch.epfl.sweng.qeeqbii;
 
-/**
- * Created by nicol on 20.10.2017.
- */
+/*
 import android.support.test.espresso.Espresso;
 import android.support.test.espresso.IdlingResource;
 import android.support.test.espresso.NoMatchingViewException;
@@ -12,9 +10,18 @@ import android.test.suitebuilder.annotation.LargeTest;
 
 import org.junit.After;
 import org.junit.Before;
+
+import android.content.ComponentName;
+import android.support.test.espresso.Espresso;
+import android.support.test.espresso.intent.rule.IntentsTestRule;
+import android.support.test.runner.AndroidJUnit4;
+import android.view.KeyEvent;
+
+
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+
 
 import static android.support.test.espresso.Espresso.onView;
 import static android.support.test.espresso.action.ViewActions.click;
@@ -80,3 +87,37 @@ public class GoogleSignInTest {
 
 
 }
+*/
+import android.support.test.espresso.Espresso;
+import android.support.test.espresso.intent.rule.IntentsTestRule;
+import android.support.test.runner.AndroidJUnit4;
+
+import org.junit.Rule;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+
+import static android.support.test.InstrumentationRegistry.getTargetContext;
+import static android.support.test.espresso.Espresso.onView;
+import static android.support.test.espresso.action.ViewActions.click;
+import static android.support.test.espresso.intent.Intents.intended;
+import static android.support.test.espresso.intent.matcher.IntentMatchers.hasComponent;
+import static android.support.test.espresso.matcher.ViewMatchers.withId;
+
+
+
+@RunWith(AndroidJUnit4.class)
+public class GoogleSignInTest {
+    @Rule
+    public final IntentsTestRule<GoogleSignInActivity> mActivityRule =
+            new IntentsTestRule<>(GoogleSignInActivity.class);
+
+    @Test
+    public void useAppContext() throws Exception {
+        GoogleSignInActivity activity = mActivityRule.getActivity();
+        Thread.sleep(200);
+        Espresso.closeSoftKeyboard();
+        Thread.sleep(200);
+        onView(withId(R.id.sign_in_button)).perform(click());
+    }
+}
+

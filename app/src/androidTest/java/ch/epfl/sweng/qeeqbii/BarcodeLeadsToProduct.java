@@ -1,13 +1,9 @@
 package ch.epfl.sweng.qeeqbii;
 
 import android.content.ComponentName;
-import android.content.Context;
-import android.support.test.InstrumentationRegistry;
-import android.support.test.espresso.ViewAction;
+import android.support.test.espresso.Espresso;
 import android.support.test.espresso.intent.rule.IntentsTestRule;
-import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
-import android.view.View;
 
 import org.junit.Rule;
 import org.junit.Test;
@@ -21,7 +17,6 @@ import static android.support.test.espresso.intent.matcher.IntentMatchers.hasCom
 import static android.support.test.espresso.matcher.ViewMatchers.withId;
 import static android.support.test.espresso.matcher.ViewMatchers.withText;
 import static org.hamcrest.core.StringStartsWith.startsWith;
-import static org.junit.Assert.assertEquals;
 
 /**
  * Instrumentation test, which will execute on an Android device.
@@ -33,8 +28,8 @@ import static org.junit.Assert.assertEquals;
 @RunWith(AndroidJUnit4.class)
 public class BarcodeLeadsToProduct {
     @Rule
-    public IntentsTestRule<BarcodeActivity> mActivityRule =
-            new IntentsTestRule<BarcodeActivity>(BarcodeActivity.class);
+    public final IntentsTestRule<BarcodeActivity> mActivityRule =
+            new IntentsTestRule<>(BarcodeActivity.class);
 
     @Test
     public void useAppContext() throws Exception {
@@ -44,5 +39,7 @@ public class BarcodeLeadsToProduct {
         activity.processBarcode("7611654884033");
         intended(hasComponent(new ComponentName(getTargetContext(), BarcodeToProductActivity.class)));
         onView(withId(R.id.product_details)).check(matches(withText(startsWith("Chocolat au lait aux noisettes"))));
+        Espresso.pressBack();
+        intended(hasComponent(new ComponentName(getTargetContext(), MainActivity.class)));
     }
 }
