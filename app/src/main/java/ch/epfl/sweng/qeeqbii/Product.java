@@ -49,7 +49,7 @@ class Product {
     }
 
 
-    public String[] GetParseIngredients() throws ProductException
+    String[] GetParsedIngredients() throws ProductException
     {
         if(mParsedIngredients != null)
         {
@@ -65,7 +65,7 @@ class Product {
         return mParsedIngredients;
     }
 
-    public Map<String, Double> GetParsedNutrients() throws  ProductException {
+    Map<String, Double> GetParsedNutrients() throws  ProductException {
 
         if (mParsedNutrients != null) {
             return mParsedNutrients;
