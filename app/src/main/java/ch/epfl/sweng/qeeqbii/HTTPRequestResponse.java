@@ -1,9 +1,6 @@
 package ch.epfl.sweng.qeeqbii;
 
 import java.io.IOException;
-import java.util.HashMap;
-import java.util.Map;
-
 /**
  * Created by guillaume on 09/10/17.
  *
@@ -12,13 +9,8 @@ import java.util.Map;
 class HTTPRequestResponse {
     private String resp_body = "";
 
-    private String ingredients = "";
-    private String nutrients = "";
-
     HTTPRequestResponse() {
         resp_body = "";
-        ingredients = "";
-        nutrients = "";
     }
 
     HTTPRequestResponse(String str) throws IOException
@@ -28,11 +20,9 @@ class HTTPRequestResponse {
         // To change to either OpenFoodQueryException or HTTPRequestException
         if ((str.substring(0,10).contains("[]"))) throw new IOException("Request gave an empty field, the barcode seems not to be present in the database.");
         resp_body = str;
-        ingredients = "";
-        nutrients = "";
     }
 
-    String GetProductName(String language) {
+    private String GetProductName(String language) {
         int names_ind = resp_body.indexOf("display_name_translations\":");
         if (names_ind == -1) return "Name Not Found";
         int language_ind = resp_body.indexOf("\"" + language + "\"", names_ind);
@@ -41,28 +31,24 @@ class HTTPRequestResponse {
         return resp_body.substring(two_dots_ind + 2, resp_body.indexOf('\"', two_dots_ind + 2)).replace("\\n", "\n").replace("\\r", "\r");
     }
 
-    String GetProductIngredients(String language) {
+    private String GetProductIngredients(String language) {
         int ingredients_ind = resp_body.indexOf("ingredients_translations\":");
         if (ingredients_ind == -1) {
-            ingredients = "Ingredients Not Found";
-            return ingredients;
+            return "Ingredients Not Found";
         }
         int language_ind = resp_body.indexOf("\"" + language + "\"", ingredients_ind);
         int two_dots_ind = resp_body.indexOf(':', language_ind);
 
-
-        ingredients = resp_body.substring(two_dots_ind + 2, resp_body.indexOf('\"', two_dots_ind + 2)).replace("\\n", "\n").replace("\\r", "\r");
-        return ingredients;
+        return resp_body.substring(two_dots_ind + 2, resp_body.indexOf('\"', two_dots_ind + 2)).replace("\\n", "\n").replace("\\r", "\r");
         //We have to check if the replace is worth it
     }
 
 
-    String GetProductNutrients(String language) {
+    private String GetProductNutrients(String language) {
         String str = "";
         int nutrients_ind = resp_body.indexOf("nutrients\":");
         if (nutrients_ind == -1) {
-            nutrients = "Nutrients Not Found";
-            return nutrients;
+            return "Nutrients Not Found";
         } else {
             int current_index = nutrients_ind + 10;
             while (resp_body.indexOf("{", current_index) < resp_body.indexOf("}", current_index)) {
@@ -79,14 +65,12 @@ class HTTPRequestResponse {
                 str += resp_body.substring(current_index, resp_body.indexOf(",", current_index)) + unit + "\n";
                 current_index = resp_body.indexOf("},", current_index) + 2;
             }
-
-            nutrients = str.replace("\\n", "\n").replace("\\r", "\r");
-            return nutrients;
+            return str.replace("\\n", "\n").replace("\\r", "\r");
         }
 
     }
 
-    String GetProductQuantity() {
+    private String GetProductQuantity() {
         int quantity_ind = resp_body.indexOf("\"quantity\":");
         if (quantity_ind == -1) return "Quantity Not Found";
         String quantity = resp_body.substring(quantity_ind + 11, resp_body.indexOf(',', quantity_ind));
@@ -97,46 +81,19 @@ class HTTPRequestResponse {
 
     }
 
-    String[] ParseIngredients() {
-        if (ingredients.matches("") | ingredients.matches("Ingredients Not Found")) {
-            GetProductIngredients("fr");
-        }
 
-        return ingredients.split(",");
+
+
+    //Return a product from the HTTPRequestResponse
+    Product toProduct(String language)
+    {
+        return new Product(GetProductName(language), GetProductQuantity(), GetProductIngredients(language), GetProductNutrients(language));
     }
 
-    Map<String, Double> ParseNutrients() {
-        if (nutrients.matches("") | nutrients.matches("Nutrients Not Found")) {
-            GetProductNutrients("fr");
-        }
-        String[] parsed_nutrients = nutrients.split("\\n");
-        Map<String, Double> nutrient_map = new HashMap<>();
-
-        for(String nut : parsed_nutrients) {
-            int two_dots_index = nut.indexOf(':');
-            String key = nut.substring(0, two_dots_index);
-            int search_alpha = two_dots_index + 1;
-
-            while (!Character.isLetter(nut.charAt(search_alpha))) {
-                search_alpha += 1;
-            }
-
-            Double value = Double.parseDouble(nut.substring(two_dots_index + 2, search_alpha));
-            System.out.println(value);
-
-            String unit = nut.substring(search_alpha, nut.length());
-
-            if (!key.contains("(" + unit + ")")) {
-                key = key + " (" + unit + ")";
-            }
-
-            nutrient_map.put(key, value);
-
-        }
-
-        return nutrient_map;
-
-
+    // By default, we get the french version
+    Product toProduct()
+    {
+        return toProduct("fr");
     }
 
 

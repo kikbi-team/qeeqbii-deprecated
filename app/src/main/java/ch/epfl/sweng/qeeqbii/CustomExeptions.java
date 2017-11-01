@@ -7,7 +7,7 @@ package ch.epfl.sweng.qeeqbii;
 
 class NullInputException extends Exception {
     // Constructor that accepts a message
-    public NullInputException(String message) {
+    NullInputException(String message) {
         super(message);
     }
 }
@@ -15,9 +15,15 @@ class NullInputException extends Exception {
 
 class NotOpenFileException extends Exception {
     // Constructor that accepts a message
-    public NotOpenFileException(String message) {
+    NotOpenFileException(String message) {
         super(message);
     }
+}
+
+
+class ProductException extends Exception{
+    // Constructor that accepts a message
+    ProductException(String message) { super(message); }
 }
 
 
