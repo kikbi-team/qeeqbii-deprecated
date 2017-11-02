@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void showGraphs(View view) {
-        Intent intent = new Intent(this, Graphs.class);
+        Intent intent = new Intent(this, GraphsActivity.class);
         startActivity(intent);
     }
 
