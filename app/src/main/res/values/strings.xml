@@ -46,5 +46,7 @@
     <string name="scanned_n_product">SCANNED\nPRODUCTS</string>
     <string name="empty_field">Empty field</string>
     <string name="mainNameLabel">Please enter barcode here.</string>
+    <string name="camera_perm_ok">Received camera permission</string>
+    <string name="please_allow_camera">Please grant camera permission to use Qeeqbii</string>
 
 </resources>
