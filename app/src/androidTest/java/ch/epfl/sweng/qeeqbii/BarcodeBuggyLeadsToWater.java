@@ -28,14 +28,14 @@ import static org.hamcrest.core.StringStartsWith.startsWith;
 public class BarcodeBuggyLeadsToWater {
     @Rule
 
-    public final IntentsTestRule<BarcodeActivity> mActivityRule =
-            new IntentsTestRule<>(BarcodeActivity.class);
+    public final IntentsTestRule<BarcodeScannerActivity> mActivityRule =
+            new IntentsTestRule<>(BarcodeScannerActivity.class);
 
     @Test
     public void useAppContext() throws Exception {
         // evian water, see #85
 
-        BarcodeActivity activity = mActivityRule.getActivity();
+        BarcodeScannerActivity activity = mActivityRule.getActivity();
         activity.processBarcode("3068320353500");
         Thread.sleep(50);
         intended(hasComponent(new ComponentName(getTargetContext(), BarcodeToProductActivity.class)));

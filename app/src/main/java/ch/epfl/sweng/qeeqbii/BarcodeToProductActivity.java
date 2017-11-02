@@ -49,7 +49,7 @@ public class BarcodeToProductActivity extends AppCompatActivity {
     // Search for harmful ingredients contained in the product, making a query to the Cancer database.
     public void searchHarmfulIngredients(View view) {
 
-        if (!RecentlyScannedProducts.contains(barcode))
+        if (!(RecentlyScannedProducts.contains(barcode)))
         {
             return;
         }
@@ -69,7 +69,6 @@ public class BarcodeToProductActivity extends AppCompatActivity {
 
         String str = "";
         try {
-            CancerDataBase.readCSVFile(getApplicationContext());
             for (String ingredient : parsed_ingredients) {
                 str += CancerDataBase.levenshteinMatchQuery(ingredient).toString() + "\n";
 
@@ -84,7 +83,7 @@ public class BarcodeToProductActivity extends AppCompatActivity {
 
     // Call the Graphs activity to make generate plots from the nutrients of the product.
     public void showNutrientsGraphs(View view) {
-        Intent intent = new Intent(this, Graphs.class);
+        Intent intent = new Intent(this, GraphsActivity.class);
         intent.putExtra("barcode",barcode);
         startActivity(intent);
     }
