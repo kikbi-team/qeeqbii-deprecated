@@ -36,8 +36,8 @@ public class AShoppingCartClassShould {
     public void addSpecificItemToList() throws InterruptedException {
         Product item = new Product("sausage", "500 mg", "Stuff", "cool Nutrients");
         ShoppingCart shop = new ShoppingCart();
-        shop.addSpecificItemInCart(2, item);
-        assertEquals(shop.getSpecificItemInCart(2), item);
+        shop.addSpecificItemInCart(0, item);
+        assertEquals(shop.getSpecificItemInCart(0), item);
     }
 
     @Test
@@ -51,11 +51,17 @@ public class AShoppingCartClassShould {
 
     @Test
     public void getItemsInList() throws InterruptedException {
+
         List<Product> content = new ArrayList<Product>();
         content.add(new Product("Cheese", "500 mg", "Stuff", "cool Nutrients"));
         content.add(new Product("Wine", "500 mg", "Stuff", "cool Nutrients"));
         content.add(new Product("Beer", "500 mg", "Stuff", "cool Nutrients"));
+
         ShoppingCart shop = new ShoppingCart();
+        shop.addItemToCart(new Product("Cheese", "500 mg", "Stuff", "cool Nutrients"));
+        shop.addItemToCart(new Product("Wine", "500 mg", "Stuff", "cool Nutrients"));
+        shop.addItemToCart(new Product("Beer", "500 mg", "Stuff", "cool Nutrients"));
+
         assertEquals(shop.getItemsInCart().get(0).getName(), content.get(0).getName());
         assertEquals(shop.getItemsInCart().get(1).getName(), content.get(1).getName());
         assertEquals(shop.getItemsInCart().get(2).getName(), content.get(2).getName());
