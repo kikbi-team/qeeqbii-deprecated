@@ -31,6 +31,7 @@ public class CancerDataShowActivityTest {
     }
     */
 
+    /*
     @Test
     public void testPerfectMatchCancerDataBase() {
 
@@ -44,4 +45,5 @@ public class CancerDataShowActivityTest {
         }
         onView(withId(R.id.cancerDataBaseMessage)).check(matches(withText(string_tester)));
     }
+    */
 }

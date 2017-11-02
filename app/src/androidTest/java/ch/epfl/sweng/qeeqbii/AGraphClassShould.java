@@ -19,11 +19,13 @@ public class AGraphClassShould {
     public final ActivityTestRule<MainActivity> mActivityRule =
             new ActivityTestRule<>(MainActivity.class);
 
+    /*
     @Test
     //be able to sense that one clicked the button
     public void recognizesWhenCalled() throws InterruptedException {
         onView(withId(R.id.buttonGraphs)).perform(click());
     }
+    */
 
 
 }

@@ -9,7 +9,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.view.MenuItem;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.ArrayAdapter;
 
 import java.util.ArrayList;
@@ -20,14 +23,14 @@ public class ShoppingCartActivity extends AppCompatActivity {
     private RecyclerView RecyclerView;
     private ShoppingCart cart = new ShoppingCart();
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        //getWindow().requestFeature(Window.FEATURE_ACTION_BAR);
         super.onCreate(savedInstanceState);
+        //getSupportActionBar().hide();
         setContentView(R.layout.activity_shopping_cart);
 
         RecyclerView = (RecyclerView)findViewById(R.id.recycler);
-
         //create and set layout manager for each RecyclerView
         RecyclerView.LayoutManager firstLayoutManager = new LinearLayoutManager(this);
 

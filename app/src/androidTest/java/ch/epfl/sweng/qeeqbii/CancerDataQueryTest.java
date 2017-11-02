@@ -38,6 +38,7 @@ public class CancerDataQueryTest {
     }
     */
 
+    /*
     @Test
     public void testPerfectMatchCancerDataBase() {
         // Useful way of accessing resources
@@ -62,4 +63,5 @@ public class CancerDataQueryTest {
         //TextView text = (TextView)mActivityRule.getActivity().findViewById(R.id.perfectQueryAnswerArea);
         //onView(withId(R.id.greetingMessage)).check(matches(withText("Hello from my unit test!")));
     }
+    */
 }

@@ -15,6 +15,9 @@ public class ShoppingCart {
         m_items.add(new Product("Cheese", "500 mg", "Stuff", "cool Nutrients"));
         m_items.add(new Product("Wine", "500 mg", "Stuff", "cool Nutrients"));
         m_items.add(new Product("Beer", "500 mg", "Stuff", "cool Nutrients"));
+        m_items.add(new Product("Cheese", "500 mg", "Stuff", "cool Nutrients"));
+        m_items.add(new Product("Wine", "500 mg", "Stuff", "cool Nutrients"));
+        m_items.add(new Product("Beer", "500 mg", "Stuff", "cool Nutrients"));
     }
 
     public void addItemToCart(Product product) {

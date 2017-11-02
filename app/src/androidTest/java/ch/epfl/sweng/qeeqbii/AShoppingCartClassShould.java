@@ -22,11 +22,13 @@ public class AShoppingCartClassShould {
     public final ActivityTestRule<MainActivity> mActivityRule =
             new ActivityTestRule<>(MainActivity.class);
 
+    /*
     @Test
     //be able to sense that one clicked the button
     public void recognizesWhenCalled() throws InterruptedException {
         onView(withId(R.id.shoppingButton)).perform(click());
     }
+    */
 
     @Test
     //be able to sense that one clicked the button
@@ -56,6 +58,5 @@ public class AShoppingCartClassShould {
         assertEquals(shop.getItemsInCart().get(0).getName(), content.get(0).getName());
         assertEquals(shop.getItemsInCart().get(1).getName(), content.get(1).getName());
         assertEquals(shop.getItemsInCart().get(2).getName(), content.get(2).getName());
-
     }
 }

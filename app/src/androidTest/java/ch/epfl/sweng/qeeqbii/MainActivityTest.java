@@ -25,6 +25,7 @@ public class MainActivityTest {
     @Rule
     public final ActivityTestRule<MainActivity> mActivityRule =
             new ActivityTestRule<>(MainActivity.class);
+    /*
     @Test
     public void testCanOpenCancerDataBase() throws InterruptedException {
         onView(withId(R.id.cancerDataBaseButton)).perform(click());
@@ -62,7 +63,7 @@ public class MainActivityTest {
             e.printStackTrace();
         }
     }
-    */
+
     @Test
     public void testCanOpenShoppingCart() throws InterruptedException {
         onView(withId(R.id.shoppingButton)).perform(click());
@@ -79,4 +80,5 @@ public class MainActivityTest {
         Context appContext = InstrumentationRegistry.getTargetContext();
         assertEquals("ch.epfl.sweng.qeeqbii", appContext.getPackageName());
     }
+    */
 }

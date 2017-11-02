@@ -40,14 +40,15 @@
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:exported="true" />
         <activity android:name=".BaseActivity" />
-        <activity android:name=".ShoppingList" />
+        <activity android:name=".ShoppingList"
+            android:label="@string/title_activity_shopping_cart"
+            android:theme="@style/ThemeOverlay.MyNoTitleActivity" />
         <activity
             android:name=".ShoppingCartActivity"
             android:label="@string/title_activity_shopping_cart"
-            android:theme="@style/AppTheme" />
+            android:theme="@style/ThemeOverlay.MyNoTitleActivity" />
         <activity
             android:name=".RecentlyScannedProductsActivity"
             android:exported="true" />
     </application>
-
 </manifest>
