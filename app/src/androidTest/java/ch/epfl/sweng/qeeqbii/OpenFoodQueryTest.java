@@ -2,6 +2,8 @@ package ch.epfl.sweng.qeeqbii;
 
 import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
+import android.widget.TextView;
+import android.support.v7.app.AppCompatActivity.*;
 
 import org.junit.Rule;
 import org.junit.Test;
@@ -10,6 +12,9 @@ import org.junit.runner.RunWith;
 import java.util.Map;
 import java.util.concurrent.CountDownLatch;
 
+import static android.support.test.espresso.Espresso.onView;
+import static android.support.test.espresso.assertion.ViewAssertions.matches;
+import static android.support.test.espresso.matcher.ViewMatchers.withId;
 import static junit.framework.TestCase.fail;
 import static org.junit.Assert.assertEquals;
 
@@ -20,6 +25,15 @@ import static org.junit.Assert.assertEquals;
 
 @RunWith(AndroidJUnit4.class)
 public class OpenFoodQueryTest {
+
+    private String string_nutrients = "Sel: 0.0g\nProtéines: 0.5g\nFibres alimentaires: 1.5g\nSucres: 15.0g\n" +
+            "Glucides: 15.0g\nAcides gras saturées: 0.0g\nMatières grasses: 0.0g\nÉnergie (kCal): 67.0kCal\nÉnergie: 280.0kJ\n";
+
+    private String string_ingredients = "mangue (Thaïlande), eau, sucre, acidifiant (E330)";
+
+    private String string_name = "Mangue : en tranches";
+
+    private String string_quantity = "245.0g";
 
     @Rule
     public final ActivityTestRule<BarcodeToProductActivity> mActivityRule =
@@ -35,11 +49,10 @@ public class OpenFoodQueryTest {
             public void onPostExecute(Product product) {
 
                 try {
-                    assertEquals(product.GetQuantity(), "245.0g");
-                    assertEquals(product.GetName(), "Mangue : en tranches");
-                    assertEquals(product.GetIngredients(), "mangue (Thaïlande), eau, sucre, acidifiant (E330)");
-                    assertEquals(product.GetNutrients(), "Sel: 0.0g\nProtéines: 0.5g\nFibres alimentaires: 1.5g\nSucres: 15.0g\n" +
-                            "Glucides: 15.0g\nAcides gras saturées: 0.0g\nMatières grasses: 0.0g\nÉnergie (kCal): 67.0kCal\nÉnergie: 280.0kJ\n");
+                    assertEquals(product.GetQuantity(), string_quantity);
+                    assertEquals(product.GetName(), string_name);
+                    assertEquals(product.GetIngredients(), string_ingredients);
+                    assertEquals(product.GetNutrients(), string_nutrients);
                     Map<String, Double> parsed_nutrients = product.GetParsedNutrients();
 
                     //Set<Map.Entry<String,Double>> set = parsed_nutrients.entrySet();
@@ -105,8 +118,8 @@ public class OpenFoodQueryTest {
         String barcode = "7610848337010";
         try {
             Product product = OpenFoodQuery.GetOrCreateProduct(barcode);
-            assertEquals(product.GetQuantity(), "245.0g");
-            assertEquals(product.GetName(), "Mangue : en tranches");
+            assertEquals(product.GetQuantity(), string_quantity);
+            assertEquals(product.GetName(), string_name);
         } catch (Exception e) {
             fail(e.getMessage());
         }
@@ -115,17 +128,14 @@ public class OpenFoodQueryTest {
         {
             try {
                 Product product = OpenFoodQuery.get(barcode);
-                assertEquals(product.GetIngredients(), "mangue (Thaïlande), eau, sucre, acidifiant (E330)");
-                assertEquals(product.GetNutrients(), "Sel: 0.0g\nProtéines: 0.5g\nFibres alimentaires: 1.5g\nSucres: 15.0g\n" +
-                        "Glucides: 15.0g\nAcides gras saturées: 0.0g\nMatières grasses: 0.0g\nÉnergie (kCal): 67.0kCal\nÉnergie: 280.0kJ\n");
+                assertEquals(product.GetIngredients(), string_ingredients);
+                assertEquals(product.GetNutrients(), string_nutrients);
             } catch (Exception e) {
                 fail(e.getMessage());
             }
         } else {
             fail("barcode should be cached");
         }
-
-
     }
 
 }
