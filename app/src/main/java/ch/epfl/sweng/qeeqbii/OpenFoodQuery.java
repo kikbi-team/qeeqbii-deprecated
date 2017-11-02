@@ -35,7 +35,7 @@ class OpenFoodQuery extends AsyncTask<String, Void, Product> {
         String barcode = params[0];
         if(RecentlyScannedProducts.contains(barcode))
         {
-            return RecentlyScannedProducts.GetProduct(barcode);
+            return RecentlyScannedProducts.getProduct(barcode);
         }
         try {
             URL url = new URL("https://www.openfood.ch/api/v3/products?excludes=name_translations2Cimages&barcodes=" + barcode);
@@ -96,7 +96,7 @@ class OpenFoodQuery extends AsyncTask<String, Void, Product> {
     {
         if(RecentlyScannedProducts.contains(barcode))
         {
-            return RecentlyScannedProducts.GetProduct(barcode);
+            return RecentlyScannedProducts.getProduct(barcode);
         }
 
         final CountDownLatch get_or_create_signal = new CountDownLatch(1);
@@ -113,7 +113,7 @@ class OpenFoodQuery extends AsyncTask<String, Void, Product> {
 
         if(RecentlyScannedProducts.contains(barcode))
         {
-            return RecentlyScannedProducts.GetProduct(barcode);
+            return RecentlyScannedProducts.getProduct(barcode);
         } else {
             throw new Exception(error_cache.get(barcode));
         }
@@ -131,10 +131,10 @@ class OpenFoodQuery extends AsyncTask<String, Void, Product> {
                     if (product == null)
                         throw new Exception(error_cache.get(barcode2));
 
-                    String s = product.GetName();
-                    s += "\n\nIngredients: " + product.GetIngredients();
-                    s += "\n\nQuantity: " + product.GetQuantity();
-                    s += "\n\nNutrients: (per 100g)\n" + product.GetNutrients();
+                    String s = product.getName();
+                    s += "\n\nIngredients: " + product.getIngredients();
+                    s += "\n\nQuantity: " + product.getQuantity();
+                    s += "\n\nNutrients: (per 100g)\n" + product.getNutrients();
                     Log.d("STATE", "Product found: " + s);
                     txt2.setText(s);
 
@@ -155,7 +155,7 @@ class OpenFoodQuery extends AsyncTask<String, Void, Product> {
     {
         if (RecentlyScannedProducts.contains(barcode))
         {
-            return RecentlyScannedProducts.GetProduct(barcode);
+            return RecentlyScannedProducts.getProduct(barcode);
         } else {
             throw new OpenFoodQueryException("ERROR: (OpenFoodQuery) : this barcode \"" + barcode + "\" is not cached.");
         }

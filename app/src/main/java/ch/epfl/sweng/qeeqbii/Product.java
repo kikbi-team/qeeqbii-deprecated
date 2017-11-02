@@ -28,28 +28,28 @@ class Product {
         mNutrients = nutrients;
     }
 
-    String GetName()
+    String getName()
     {
         return mName;
     }
 
-    String GetQuantity()
+    String getQuantity()
     {
         return mQuantity;
     }
 
-    String GetIngredients()
+    String getIngredients()
     {
         return mIngredients;
     }
 
-    String GetNutrients()
+    String getNutrients()
     {
         return mNutrients;
     }
 
 
-    String[] GetParsedIngredients() throws ProductException
+    String[] getParsedIngredients() throws ProductException
     {
         if(mParsedIngredients != null)
         {
@@ -65,7 +65,7 @@ class Product {
         return mParsedIngredients;
     }
 
-    Map<String, Double> GetParsedNutrients() throws  ProductException {
+    Map<String, Double> getParsedNutrients() throws  ProductException {
 
         if (mParsedNutrients != null) {
             return mParsedNutrients;

@@ -20,12 +20,12 @@ public class RecentlyScannedProducts {
         return mProductMap.containsKey(barcode);
     }
 
-    static LinkedList<String> GetBarcodeList()
+    static LinkedList<String> getBarcodeList()
     {
         return mBarcodeList;
     }
 
-    static Product GetProduct(String barcode)
+    static Product getProduct(String barcode)
     {
         if (contains(barcode))
         {
@@ -36,6 +36,7 @@ public class RecentlyScannedProducts {
             return new Product();
         }
     }
+
 
     static void add(String barcode, Product product)
     {

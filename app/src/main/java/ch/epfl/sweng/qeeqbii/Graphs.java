@@ -46,7 +46,7 @@ public class Graphs extends AppCompatActivity {
             try
             {
                 Product product = OpenFoodQuery.get(barcode);
-                Map<String,Double> nutrients = product.GetParsedNutrients();
+                Map<String,Double> nutrients = product.getParsedNutrients();
                 if (nutrients.containsKey("Énergie (kCal)"))
                 {
                     yDataCalories[0] = nutrients.get("Énergie (kCal)").floatValue();

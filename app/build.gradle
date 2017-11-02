@@ -72,7 +72,7 @@ dependencies {
     androidTestCompile 'com.android.support.test.espresso:espresso-core:2.2.2'
     //noinspection GradleDependency
     androidTestCompile 'com.android.support.test.espresso:espresso-intents:2.2.2'
-    androidTestCompile 'com.android.support.test.uiautomator:uiautomator-v18:2.1.1'
+    //androidTestCompile 'com.android.support.test.uiautomator:uiautomator-v18:2.1.1'
     compile 'com.android.support:design:25.3.1'
     //noinspection GradleDependency
     compile 'com.android.support:recyclerview-v7:25.3.1'

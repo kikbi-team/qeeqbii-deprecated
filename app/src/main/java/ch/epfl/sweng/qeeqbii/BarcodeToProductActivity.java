@@ -80,7 +80,7 @@ public class BarcodeToProductActivity extends AppCompatActivity {
         String parsed_ingredients[];
 
         try {
-            parsed_ingredients = RecentlyScannedProducts.GetProduct(barcode).GetParsedIngredients();
+            parsed_ingredients = RecentlyScannedProducts.getProduct(barcode).getParsedIngredients();
         } catch (ProductException e)
         {
             txt_harmfull_ing.setText(e.getMessage());
