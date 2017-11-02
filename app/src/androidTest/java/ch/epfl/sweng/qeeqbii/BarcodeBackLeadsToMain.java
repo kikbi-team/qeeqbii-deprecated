@@ -1,7 +1,6 @@
 package ch.epfl.sweng.qeeqbii;
 
 import android.content.ComponentName;
-import android.support.test.espresso.Espresso;
 import android.support.test.espresso.intent.rule.IntentsTestRule;
 import android.support.test.runner.AndroidJUnit4;
 import android.view.KeyEvent;
@@ -24,12 +23,12 @@ import static android.support.test.espresso.intent.matcher.IntentMatchers.hasCom
 @RunWith(AndroidJUnit4.class)
 public class BarcodeBackLeadsToMain {
     @Rule
-    public final IntentsTestRule<BarcodeActivity> mActivityRule =
-            new IntentsTestRule<>(BarcodeActivity.class);
+    public final IntentsTestRule<BarcodeScannerActivity> mActivityRule =
+            new IntentsTestRule<>(BarcodeScannerActivity.class);
 
     @Test
     public void useAppContext() throws Exception {
-        BarcodeActivity activity = mActivityRule.getActivity();
+        BarcodeScannerActivity activity = mActivityRule.getActivity();
         activity.onKeyDown(KeyEvent.KEYCODE_BACK, new KeyEvent(0, KeyEvent.KEYCODE_BACK));
         intended(hasComponent(new ComponentName(getTargetContext(), MainActivity.class)));
     }
