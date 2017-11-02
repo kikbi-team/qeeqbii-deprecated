@@ -2,8 +2,6 @@ package ch.epfl.sweng.qeeqbii;
 
 import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
-import android.widget.TextView;
-import android.support.v7.app.AppCompatActivity.*;
 
 import org.junit.Rule;
 import org.junit.Test;
@@ -12,9 +10,6 @@ import org.junit.runner.RunWith;
 import java.util.Map;
 import java.util.concurrent.CountDownLatch;
 
-import static android.support.test.espresso.Espresso.onView;
-import static android.support.test.espresso.assertion.ViewAssertions.matches;
-import static android.support.test.espresso.matcher.ViewMatchers.withId;
 import static junit.framework.TestCase.fail;
 import static org.junit.Assert.assertEquals;
 
