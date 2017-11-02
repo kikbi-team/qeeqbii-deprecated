@@ -28,5 +28,4 @@ public class ShoppingCart {
     public Product getSpecificItemInCart(int index) {
         return m_items.get(index);
     }
-
 }
