@@ -38,7 +38,7 @@
         <activity
             android:name=".BarcodeToProductActivity"
             android:exported="true" />
-        <activity android:name=".Graphs" />
+        <activity android:name=".GraphsActivity" />
         <activity
             android:name=".CancerDataQueryActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
@@ -52,6 +52,7 @@
         <activity
             android:name=".RecentlyScannedProductsActivity"
             android:exported="true" />
+        <activity android:name=".ShareOnFacebookActivity" />
     </application>
 
 </manifest>
