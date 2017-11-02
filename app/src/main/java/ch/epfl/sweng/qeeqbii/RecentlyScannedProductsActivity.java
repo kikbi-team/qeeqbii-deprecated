@@ -16,7 +16,7 @@ public class RecentlyScannedProductsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_recently_scanned_product);
+        setContentView(R.layout.activity_recently_scanned_products);
 
 
         mRecentlyScannedProductsListView = (ListView) findViewById(R.id.recently_scanned_products_list_view);
