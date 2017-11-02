@@ -22,6 +22,7 @@ public class AShoppingCartClassShould {
     public final ActivityTestRule<MainActivity> mActivityRule =
             new ActivityTestRule<>(MainActivity.class);
 
+    //TEST THIS
     /*
     @Test
     //be able to sense that one clicked the button
