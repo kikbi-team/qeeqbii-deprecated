@@ -15,7 +15,7 @@ import static org.junit.Assert.assertEquals;
 
 /**
  * Created by guillaume on 16.10.17.
- *
+ * Tests for open food queries.
  */
 
 @RunWith(AndroidJUnit4.class)
