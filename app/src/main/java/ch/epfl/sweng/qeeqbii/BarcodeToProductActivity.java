@@ -10,7 +10,8 @@ import android.widget.TextView;
 
 /**
  * Created by guillaume on 10/10/17.
- *
+ * Activity that prints product details relative to the barcode entered
+ * in the barcode text field in the MainActivity.
  */
 
 public class BarcodeToProductActivity extends AppCompatActivity {
@@ -29,29 +30,6 @@ public class BarcodeToProductActivity extends AppCompatActivity {
         final TextView txt = (TextView) findViewById(R.id.product_details);
         txt.setTextSize(20);
         txt.setTextColor(Color.rgb(0, 0, 0));
-        /*new OpenFoodQuery() {
-            @Override
-            public void onPostExecute(String result) {
-                //TextView txt = (TextView) findViewById(R.id.product_details);
-                try {
-                    if (result.startsWith("ERROR:"))
-                        throw new Exception(result);
-
-                    HTTPRequestResponse response = new HTTPRequestResponse(result);
-                    String s = response.GetProductName("fr");
-                    s += "\n\nIngredients: " + response.GetProductIngredients("fr");
-                    s += "\n\nQuantity: " + response.GetProductQuantity();
-                    s += "\n\nNutrients: (per 100g)\n" + response.GetProductNutrients("fr");
-                    Log.d("STATE", "Product found: " + s);
-                    product_resp = response;
-                    txt.setText(s);
-
-                } catch (Exception e) {
-                    txt.setText(e.getMessage());
-                }
-
-            }
-        }.execute(barcode);*/
         OpenFoodQuery.ShowProduct(barcode, txt);
     }
 
@@ -68,6 +46,7 @@ public class BarcodeToProductActivity extends AppCompatActivity {
         return super.onKeyDown(keyCode, event);
     }
 
+    // Search for harmful ingredients contained in the product, making a query to the Cancer database.
     public void searchHarmfulIngredients(View view) {
 
         if (!RecentlyScannedProducts.contains(barcode))
@@ -103,6 +82,7 @@ public class BarcodeToProductActivity extends AppCompatActivity {
 
     }
 
+    // Call the Graphs activity to make generate plots from the nutrients of the product.
     public void showNutrientsGraphs(View view) {
         Intent intent = new Intent(this, Graphs.class);
         intent.putExtra("barcode",barcode);

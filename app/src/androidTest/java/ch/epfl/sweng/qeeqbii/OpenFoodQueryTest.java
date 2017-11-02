@@ -15,11 +15,20 @@ import static org.junit.Assert.assertEquals;
 
 /**
  * Created by guillaume on 16.10.17.
- *
+ * Tests for open food queries.
  */
 
 @RunWith(AndroidJUnit4.class)
 public class OpenFoodQueryTest {
+
+    private String string_nutrients = "Sel: 0.0g\nProtéines: 0.5g\nFibres alimentaires: 1.5g\nSucres: 15.0g\n" +
+            "Glucides: 15.0g\nAcides gras saturées: 0.0g\nMatières grasses: 0.0g\nÉnergie (kCal): 67.0kCal\nÉnergie: 280.0kJ\n";
+
+    private String string_ingredients = "mangue (Thaïlande), eau, sucre, acidifiant (E330)";
+
+    private String string_name = "Mangue : en tranches";
+
+    private String string_quantity = "245.0g";
 
     @Rule
     public final ActivityTestRule<BarcodeToProductActivity> mActivityRule =
@@ -41,6 +50,7 @@ public class OpenFoodQueryTest {
                     assertEquals(product.getNutrients(), "Sel: 0.0g\nProtéines: 0.5g\nFibres alimentaires: 1.5g\nSucres: 15.0g\n" +
                             "Glucides: 15.0g\nAcides gras saturées: 0.0g\nMatières grasses: 0.0g\nÉnergie (kCal): 67.0kCal\nÉnergie: 280.0kJ\n");
                     Map<String, Double> parsed_nutrients = product.getParsedNutrients();
+
 
                     //Set<Map.Entry<String,Double>> set = parsed_nutrients.entrySet();
                     //Iterator<Map.Entry<String,Double>> it = set.iterator();
@@ -107,6 +117,7 @@ public class OpenFoodQueryTest {
             Product product = OpenFoodQuery.GetOrCreateProduct(barcode);
             assertEquals(product.getQuantity(), "245.0g");
             assertEquals(product.getName(), "Mangue : en tranches");
+
         } catch (Exception e) {
             fail(e.getMessage());
         }
@@ -118,14 +129,13 @@ public class OpenFoodQueryTest {
                 assertEquals(product.getIngredients(), "mangue (Thaïlande), eau, sucre, acidifiant (E330)");
                 assertEquals(product.getNutrients(), "Sel: 0.0g\nProtéines: 0.5g\nFibres alimentaires: 1.5g\nSucres: 15.0g\n" +
                         "Glucides: 15.0g\nAcides gras saturées: 0.0g\nMatières grasses: 0.0g\nÉnergie (kCal): 67.0kCal\nÉnergie: 280.0kJ\n");
+
             } catch (Exception e) {
                 fail(e.getMessage());
             }
         } else {
             fail("barcode should be cached");
         }
-
-
     }
 
 }
