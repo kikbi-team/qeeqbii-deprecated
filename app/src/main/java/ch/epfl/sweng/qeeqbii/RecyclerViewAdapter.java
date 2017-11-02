@@ -11,11 +11,14 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder> {
     private Activity activity;
-    private String[] strings;
+    private List<String> strings;
 
-    public RecyclerViewAdapter(Activity activity, String[] strings) {
+    public RecyclerViewAdapter(Activity activity, List<String> strings) {
         this.activity = activity;
         this.strings = strings;
     }
@@ -30,12 +33,13 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     @Override
     public void onBindViewHolder(ViewHolder viewHolder, final int position) {
-        viewHolder.textView.setText(strings[position]);
+        viewHolder.textView.setText(strings.get(position));
     }
 
     @Override
     public int getItemCount() {
-        return strings.length;
+
+        return strings.size();
     }
 
     class ViewHolder extends RecyclerView.ViewHolder {

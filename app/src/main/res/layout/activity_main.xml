@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
-        android:layout_marginTop="-48dp"
+        android:layout_marginTop="0dp"
         android:onClick="cancerDataBaseShow"
         android:text="@string/cancer_data"
         app:layout_constraintHorizontal_bias="0.502"
@@ -52,8 +52,8 @@
 
     <TextView
         android:id="@+id/welcomeText"
-        android:layout_width="216dp"
-        android:layout_height="129dp"
+        android:layout_width="168dp"
+        android:layout_height="76dp"
         android:layout_marginBottom="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
@@ -62,7 +62,8 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent" />
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_editor_absoluteY="483dp" />
 
     <EditText
         android:id="@+id/mainName"
@@ -114,11 +115,12 @@
         android:onClick="showShoppingList"
         app:layout_constraintBottom_toTopOf="@+id/welcomeText"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/buttonGraphs"
         app:layout_constraintTop_toBottomOf="@+id/mainBarcodeButton"
         app:srcCompat="@mipmap/shopping_cart"
-        android:contentDescription="@string/button_shopping" />
+        android:contentDescription="@string/button_shopping"
+        tools:layout_editor_absoluteX="213dp"
+        app:layout_constraintVertical_bias="0.862" />
 
     <ImageButton
         android:id="@+id/buttonGraphs"
@@ -127,10 +129,22 @@
         android:onClick="showGraphs"
         app:layout_constraintBottom_toTopOf="@+id/welcomeText"
         app:layout_constraintEnd_toStartOf="@+id/shoppingButton"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/mainBarcodeButton"
         app:srcCompat="@mipmap/graph"
-        android:contentDescription="@string/button_graphs" />
+        android:contentDescription="@string/button_graphs"
+        tools:layout_editor_absoluteX="67dp"
+        app:layout_constraintVertical_bias="0.868" />
+
+    <Button
+        android:id="@+id/listRecentlyScannedProductButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="144dp"
+        android:layout_marginTop="-8dp"
+        android:onClick="showRecentlyScannedProductsActivity"
+        android:text="@string/scanned_n_product"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mainBarcodeButton" />
 
 </android.support.constraint.ConstraintLayout>
