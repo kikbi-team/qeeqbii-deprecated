@@ -17,7 +17,7 @@ import static android.support.test.espresso.assertion.ViewAssertions.matches;
 import static android.support.test.espresso.matcher.ViewMatchers.withId;
 import static android.support.test.espresso.matcher.ViewMatchers.withText;
 
-
+/*
 @RunWith(AndroidJUnit4.class)
 public class CancerDataQueryTest {
     //public final ActivityTestRule<CancerDataQueryActivity> mActivityRule =
@@ -63,5 +63,4 @@ public class CancerDataQueryTest {
         //TextView text = (TextView)mActivityRule.getActivity().findViewById(R.id.perfectQueryAnswerArea);
         //onView(withId(R.id.greetingMessage)).check(matches(withText("Hello from my unit test!")));
     }
-    */
-}
+}*/
