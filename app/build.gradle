@@ -2,6 +2,9 @@ apply plugin: 'com.android.application'
 apply plugin: 'jacoco-everywhere'
 check.dependsOn 'assembleMinSdkJellybeanDebugAndroidTest', 'assembleMinSdkIcsDebugAndroidTest','assembleDebugAndroidTest'
 
+
+
+
 android {
     compileSdkVersion 26
     buildToolsVersion "26.0.2"

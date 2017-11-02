@@ -71,7 +71,8 @@
     <string name="graph">graph</string>
     <string name="meat">meat</string>
     <string name="vegetables">vegetables</string>
-    <string name="query_cancer_n_database">query_cancer_n_database</string>button_graphs
+
+    
 
     <string name="label_google_sign_in">Firebase + Google Sign In</string>
 
@@ -114,6 +115,11 @@
 
 
     <string name="auth_failed">Authentication failed</string>
+
+
+    <string name="query_cancer_n_database">QUERY CANCER\nDATABASE</string>
+    <string name="scanned_n_product">SCANNED\nPRODUCTS</string>
+    <string name="empty_field">Empty field</string>
 
 
 </resources>

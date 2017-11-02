@@ -60,8 +60,13 @@ public class MainActivityTest {
     }
     */
     @Test
-    public void testCanOpenShppoingCart() throws InterruptedException {
+    public void testCanOpenShoppingCart() throws InterruptedException {
         onView(withId(R.id.shoppingButton)).perform(click());
+    }
+
+    @Test
+    public void testCanOpenRecentlyScannedProductsActivity() throws InterruptedException {
+        onView(withId(R.id.listRecentlyScannedProductButton)).perform(click());
     }
 
     @Test
