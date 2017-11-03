@@ -47,12 +47,12 @@ public class GraphsActivity extends AppCompatActivity {
         {
             String barcode = intent.getExtras().getString("barcode");
             TextView txt = (TextView) findViewById(R.id.product_name_graph_activity);
-            txt.setText(RecentlyScannedProducts.GetProduct(barcode).GetName());
+            txt.setText(RecentlyScannedProducts.getProduct(barcode).getName());
 
             try
             {
                 Product product = OpenFoodQuery.get(barcode);
-                Map<String,Double> nutrients = product.GetParsedNutrients();
+                Map<String,Double> nutrients = product.getParsedNutrients();
                 if (nutrients.containsKey("Énergie (kCal)"))
                 {
                     yDataCalories[0] = nutrients.get("Énergie (kCal)").floatValue();

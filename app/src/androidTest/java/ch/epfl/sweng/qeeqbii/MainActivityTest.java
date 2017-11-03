@@ -1,6 +1,7 @@
 package ch.epfl.sweng.qeeqbii;
 
 import android.content.Context;
+
 import android.support.test.InstrumentationRegistry;
 import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
