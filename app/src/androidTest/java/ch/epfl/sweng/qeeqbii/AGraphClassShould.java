@@ -11,7 +11,6 @@ import static android.support.test.espresso.matcher.ViewMatchers.withId;
 
 /**
  * Created by davidcleres on 12.10.17.
- *
  */
 
 public class AGraphClassShould {
@@ -23,9 +22,7 @@ public class AGraphClassShould {
     @Test
     //be able to sense that one clicked the button
     public void recognizesWhenCalled() throws InterruptedException {
-        onView(withId(R.id.buttonGraphs)).perform(click());
+        onView(withId(R.id.nav_graphs)).perform(click());
     }
     */
-
-
 }

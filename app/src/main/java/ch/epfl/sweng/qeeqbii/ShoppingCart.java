@@ -11,11 +11,16 @@ import java.util.List;
  * Created by davidcleres on 01.11.17.
  */
 public class ShoppingCart implements Parcelable {
-    private List<Product> m_items = new ArrayList<Product>();
+
+    static private List<Product> m_items = new ArrayList<Product>();
+
+    static void addToShoppingCartList (Product product) {
+        m_items.add(product);
+    }
 
     public ShoppingCart(){
         //To avoid an empty list
-        addItemToCart(new Product("Please Click on + to add an item", "0 mg", "Stuff", "cool Nutrients"));
+        //addItemToCart(new Product("Please Click on + to add an item", "0 mg", "Stuff", "cool Nutrients"));
     }
 
     public void addItemToCart(Product product) {

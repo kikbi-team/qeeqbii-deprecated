@@ -21,33 +21,44 @@ public class ShoppingListActivity extends AppCompatActivity {
 
     public void addCheese(View view) {
 
-        //Product prod = new Product("Cheese", "500 mg", "Stuff", "cool Nutrients");
+        Product prod = new Product("Cheese", "500 mg", "Stuff", "cool Nutrients");
+        ShoppingCart.addToShoppingCartList(prod);
         Intent intent = new Intent(this, ShoppingCartActivity.class);
         //intent.putExtra("product", (Parcelable) prod);
         startActivity(intent);
     }
 
     public void addWine(View view) {
+        Product prod = new Product("Wine", "500 mg", "Stuff", "cool Nutrients");
+        ShoppingCart.addToShoppingCartList(prod);
         Intent intent = new Intent(this, ShoppingCartActivity.class);
         startActivity(intent);
     }
 
     public void addMeat(View view) {
+        Product prod = new Product("Meat", "500 mg", "Stuff", "cool Nutrients");
+        ShoppingCart.addToShoppingCartList(prod);
         Intent intent = new Intent(this, ShoppingCartActivity.class);
         startActivity(intent);
     }
 
     public void addChip(View view) {
+        Product prod = new Product("Chips", "500 mg", "Stuff", "cool Nutrients");
+        ShoppingCart.addToShoppingCartList(prod);
         Intent intent = new Intent(this, ShoppingCartActivity.class);
         startActivity(intent);
     }
 
     public void addVegetable(View view) {
+        Product prod = new Product("Vegetable", "500 mg", "Stuff", "cool Nutrients");
+        ShoppingCart.addToShoppingCartList(prod);
         Intent intent = new Intent(this, ShoppingCartActivity.class);
         startActivity(intent);
     }
 
     public void addApple(View view) {
+        Product prod = new Product("Apple", "500 mg", "Stuff", "cool Nutrients");
+        ShoppingCart.addToShoppingCartList(prod);
         Intent intent = new Intent(this, ShoppingCartActivity.class);
         startActivity(intent);
     }
