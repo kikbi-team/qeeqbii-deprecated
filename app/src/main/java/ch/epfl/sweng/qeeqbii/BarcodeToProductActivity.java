@@ -89,4 +89,6 @@ public class BarcodeToProductActivity extends AppCompatActivity {
     }
 
 
+
+
 }
