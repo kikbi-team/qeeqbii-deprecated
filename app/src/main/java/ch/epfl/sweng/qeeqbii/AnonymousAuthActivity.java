@@ -3,6 +3,7 @@ package ch.epfl.sweng.qeeqbii;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
@@ -25,7 +26,7 @@ import com.google.firebase.database.FirebaseDatabase;
 /**
  * Activity to demonstrate anonymous login and account linking (with an email/password account).
  */
-public class AnonymousAuthActivity extends BaseActivity implements
+public class AnonymousAuthActivity extends AppCompatActivity implements
         View.OnClickListener {
 
     private static final String TAG = "AnonymousAuth";
@@ -105,7 +106,7 @@ public class AnonymousAuthActivity extends BaseActivity implements
     // [END on_start_check_user]
 
     private void signInAnonymously() {
-        showProgressDialog();
+        //showProgressDialog();
         // [START signin_anonymously]
         mAuth.signInAnonymously()
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
@@ -125,7 +126,7 @@ public class AnonymousAuthActivity extends BaseActivity implements
                         }
 
                         // [START_EXCLUDE]
-                        hideProgressDialog();
+                        //hideProgressDialog();
                         // [END_EXCLUDE]
                     }
                 });
@@ -151,7 +152,7 @@ public class AnonymousAuthActivity extends BaseActivity implements
         AuthCredential credential = EmailAuthProvider.getCredential(email, password);
 
         // Link the anonymous user to the email credential
-        showProgressDialog();
+        //showProgressDialog();
 
         // [START link_credential]
         mAuth.getCurrentUser().linkWithCredential(credential)
@@ -170,7 +171,7 @@ public class AnonymousAuthActivity extends BaseActivity implements
                         }
 
                         // [START_EXCLUDE]
-                        hideProgressDialog();
+                        //hideProgressDialog();
                         // [END_EXCLUDE]
                     }
                 });
@@ -200,7 +201,7 @@ public class AnonymousAuthActivity extends BaseActivity implements
     }
 
     private void updateUI(FirebaseUser user) {
-        hideProgressDialog();
+        //hideProgressDialog();
 
         TextView idView = (TextView) findViewById(R.id.anonymous_status_id);
         TextView emailView = (TextView) findViewById(R.id.anonymous_status_email);
