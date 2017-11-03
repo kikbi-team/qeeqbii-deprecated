@@ -5,9 +5,12 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.github.mikephil.charting.charts.PieChart;
+import com.github.mikephil.charting.components.Description;
 import com.github.mikephil.charting.components.Legend;
 import com.github.mikephil.charting.data.Entry;
 import com.github.mikephil.charting.data.PieData;
@@ -19,15 +22,16 @@ import com.github.mikephil.charting.listener.OnChartValueSelectedListener;
 import java.util.ArrayList;
 import java.util.Map;
 
-public class Graphs extends AppCompatActivity {
+public class GraphsActivity extends AppCompatActivity {
 
-    private static final String TAG = "Graphs";
+    private static final String TAG = "GraphsActivity";
     private PieChart pieChart;
     private final float[] yDataCalories = {0, 2000};
     private final float[] yDataFats= {0, 70};
     private final float[] yDataSugars = {0, 55};
     private final float[] yDataSalts = {0, 5};
     private final String[] xData = {"Completed", "Left"};
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -42,6 +46,8 @@ public class Graphs extends AppCompatActivity {
         if (intent.hasExtra("barcode"))
         {
             String barcode = intent.getExtras().getString("barcode");
+            TextView txt = (TextView) findViewById(R.id.product_name_graph_activity);
+            txt.setText(RecentlyScannedProducts.GetProduct(barcode).getName());
 
             try
             {
@@ -117,7 +123,7 @@ public class Graphs extends AppCompatActivity {
                     }
                 }
                 String employee = xData[pos1 + 1];
-                Toast.makeText(Graphs.this, "Employee " + employee + "\n" + "Sales: $" + sales + "K", Toast.LENGTH_LONG).show();
+                Toast.makeText(GraphsActivity.this, "Employee " + employee + "\n" + "Sales: $" + sales + "K", Toast.LENGTH_LONG).show();
             }
 
             @Override
@@ -140,7 +146,7 @@ public class Graphs extends AppCompatActivity {
         }*/
 
         //create the data set
-        PieDataSet pieDataSet = new PieDataSet(yEntrys, nameGraph + " intake/ day");
+        PieDataSet pieDataSet = new PieDataSet(yEntrys, nameGraph + " in 100g / daily needs");
         pieDataSet.setSliceSpace(0); //sets the size of the yEntrys on the graph
         pieDataSet.setValueTextSize(0);
 
@@ -160,10 +166,29 @@ public class Graphs extends AppCompatActivity {
         Legend legend = pieChart.getLegend();
         legend.setForm(Legend.LegendForm.SQUARE);
 
+        Description description = pieChart.getDescription();
+        description.setText(yData[0]/yData[1]*100 + "% of your daily need in " + nameGraph + ".          ");
+
+
         //create pie data object
         PieData pieData = new PieData(pieDataSet);
         pieChart.setData(pieData);
         //pieChart.invalidate();
         pieChart.setEnabled(true);
+    }
+
+    public void shareOnFacebook(View view)
+    {
+        Intent intent = new Intent(this, ShareOnFacebookActivity.class);
+        view.setVisibility(View.INVISIBLE);
+        ShareOnFacebookActivity.view = findViewById(R.id.GraphsLayout);
+        startActivity(intent);
+    }
+
+    @Override
+    protected void onResume()
+    {
+        super.onResume();
+        findViewById(R.id.button_share_on_fb_graph).setVisibility(View.VISIBLE);
     }
 }

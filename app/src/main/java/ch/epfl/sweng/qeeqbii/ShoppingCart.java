@@ -11,7 +11,8 @@ public class ShoppingCart {
     private List<Product> m_items = new ArrayList<Product>();
 
     public ShoppingCart(){
-        //TEST
+        //To avoid an empty list
+        addItemToCart(new Product("Please Click on + to add an item", "0 mg", "Stuff", "cool Nutrients"));
     }
 
     public void addItemToCart(Product product) {

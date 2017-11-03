@@ -47,18 +47,19 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void readBarcode(MenuItem item) {
-        Intent intent = new Intent(this, BarcodeActivity.class);
-        startActivity(intent);
-    }
 
-    public void showGraphs(MenuItem item) {
-        Intent intent = new Intent(this, Graphs.class);
+    public void readBarcode(MenuItem item) {
+        Intent intent = new Intent(this, BarcodeScannerActivity.class);
         startActivity(intent);
     }
 
     public void showShoppingList(MenuItem view) {
         Intent intent = new Intent(this, ShoppingCartActivity.class);
+        startActivity(intent);
+    }
+
+    public void showGraphs(MenuItem item) {
+        Intent intent = new Intent(this, GraphsActivity.class);
         startActivity(intent);
     }
 

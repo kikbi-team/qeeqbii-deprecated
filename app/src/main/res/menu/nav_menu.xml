@@ -20,7 +20,6 @@
         android:id="@+id/nav_shopping_cart"
         android:onClick="showShoppingList"
         android:title="@string/shopping_cart" />
-
     <item
         android:id="@+id/nav_dataquery"
         android:onClick="cancerDataQuery"

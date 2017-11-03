@@ -16,7 +16,8 @@ import java.net.URL;
 
 /**
  * Created by guillaume on 06/10/17.
- * 
+ * Class allowing to make GET requests to openfood.
+ * GET requests responses are cached in RecentlyScannedProducts.
  */
 
 class OpenFoodQuery extends AsyncTask<String, Void, Product> {
@@ -29,6 +30,9 @@ class OpenFoodQuery extends AsyncTask<String, Void, Product> {
         }
     }
 
+    // Make the GET request on an other thread.
+    // Search first in the RecentlyScannedProducts if the product is already cached.
+    // Returns a Product to the onPostExecution method.
     @Override
     protected Product doInBackground(String params[])
     {
@@ -119,6 +123,8 @@ class OpenFoodQuery extends AsyncTask<String, Void, Product> {
         }
     }
 
+    // Passing the barcode and a textview to this method makes the GET
+    // request to openFood without freezing the main thread.
     static void ShowProduct(String barcode, TextView txt)
     {
         final TextView txt2 = txt;

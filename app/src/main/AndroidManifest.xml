@@ -3,6 +3,10 @@
     package="ch.epfl.sweng.qeeqbii">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
 
     <application
         android:allowBackup="true"
@@ -30,11 +34,11 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="ch.epfl.sweng.qeeqbii.MainActivity" />
         </activity>
-        <activity android:name=".BarcodeActivity" />
+        <activity android:name=".BarcodeScannerActivity" />
         <activity
             android:name=".BarcodeToProductActivity"
             android:exported="true" />
-        <activity android:name=".Graphs" />
+        <activity android:name=".GraphsActivity" />
         <activity
             android:name=".CancerDataQueryActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
@@ -50,5 +54,6 @@
         <activity
             android:name=".RecentlyScannedProductsActivity"
             android:exported="true" />
+        <activity android:name=".ShareOnFacebookActivity" />
     </application>
 </manifest>

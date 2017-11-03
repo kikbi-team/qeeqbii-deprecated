@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/GraphsLayout"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,66 +9,78 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="ch.epfl.sweng.qeeqbii.Graphs">
+    tools:context="ch.epfl.sweng.qeeqbii.GraphsActivity">
 
     <com.github.mikephil.charting.charts.PieChart
         android:id="@+id/idPieChartCalories"
-        android:layout_width="163dp"
-        android:layout_height="304dp"
-        app:layout_constraintBottom_toTopOf="@+id/idPieChartSugars"
-        app:layout_constraintLeft_toRightOf="@+id/idPieChartSalts"
+        android:layout_width="160dp"
+        android:layout_height="250dp"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="0dp" />
 
     <com.github.mikephil.charting.charts.PieChart
         android:id="@+id/idPieChartFats"
-        android:layout_width="163dp"
-        android:layout_height="304dp"
+        android:layout_width="160dp"
+        android:layout_height="250dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toLeftOf="@+id/idPieChartSugars"
-        app:layout_constraintTop_toBottomOf="@+id/idPieChartSalts" />
+        android:layout_marginBottom="16dp"
+        android:layout_marginStart="0dp" />
 
     <com.github.mikephil.charting.charts.PieChart
         android:id="@+id/idPieChartSugars"
-        android:layout_width="163dp"
-        android:layout_height="304dp"
+        android:layout_width="160dp"
+        android:layout_height="250dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toRightOf="@+id/idPieChartFats"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/idPieChartCalories" />
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="0dp" />
 
     <com.github.mikephil.charting.charts.PieChart
         android:id="@+id/idPieChartSalts"
-        android:layout_width="163dp"
-        android:layout_height="304dp"
-        app:layout_constraintBottom_toTopOf="@+id/idPieChartFats"
+        android:layout_width="160dp"
+        android:layout_height="250dp"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toLeftOf="@+id/idPieChartCalories"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="32dp" />
+
+
+    <TextView
+        android:id="@+id/product_name_graph_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-8dp"
+        android:fontFamily="sans-serif"
+        android:text="@string/product_name_in_graph"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <android.support.constraint.Guideline
+    <TextView
+        android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_begin="20dp"
-        tools:layout_editor_absoluteX="20dp"
-        tools:layout_editor_absoluteY="0dp" />
+        android:text="@string/little_sentence_graph"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/product_name_graph_activity"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
 
-    <android.support.constraint.Guideline
+    <Button
+        android:id="@+id/button_share_on_fb_graph"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_begin="20dp"
-        tools:layout_editor_absoluteX="20dp"
-        tools:layout_editor_absoluteY="0dp" />
-
-    <android.support.constraint.Guideline
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_end="595dp"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="32dp" />
+        android:layout_marginEnd="92dp"
+        android:onClick="shareOnFacebook"
+        android:text="@string/share_on_facebook"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.533" />
 
 </android.support.constraint.ConstraintLayout>

@@ -28,14 +28,14 @@ import static org.hamcrest.core.StringStartsWith.startsWith;
 @RunWith(AndroidJUnit4.class)
 public class BarcodeLeadsToProduct {
     @Rule
-    public final IntentsTestRule<BarcodeActivity> mActivityRule =
-            new IntentsTestRule<>(BarcodeActivity.class);
+    public final IntentsTestRule<BarcodeScannerActivity> mActivityRule =
+            new IntentsTestRule<>(BarcodeScannerActivity.class);
 
     @Test
     public void useAppContext() throws Exception {
         // https://www.openfood.ch/en/products/972
 
-        BarcodeActivity activity = mActivityRule.getActivity();
+        BarcodeScannerActivity activity = mActivityRule.getActivity();
         activity.processBarcode("7611654884033");
         intended(hasComponent(new ComponentName(getTargetContext(), BarcodeToProductActivity.class)));
         onView(withId(R.id.product_details)).check(matches(withText(startsWith("Chocolat au lait aux noisettes"))));

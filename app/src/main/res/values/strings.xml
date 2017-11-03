@@ -7,7 +7,6 @@
     <string name="sugar_graph">Sugar</string>
     <string name="calories_graph">Calories</string>
     <string name="salt_graph">Salts</string>
-    <string name="barcode_scan_to_product">Go to product</string>
 
     <!-- Google Sign In -->
 
@@ -56,5 +55,12 @@
     <string name="scanned_products">Scanned Products</string>
     <string name="harmfull_ingredients_search">Harmfull Ingredients Search</string>
     <string name="search_product_from_barcode">Search Product From Barcode</string>
-
+    <string name="mainNameLabel">Please enter barcode here.</string>
+    <string name="product_name_in_graph">Product name</string>
+    <string name="little_sentence_graph">100g of this product contains:</string>
+    <string name="add_a_comment">Add a comment...</string>
+    <string name="image_to_share">Image to share</string>
+    <string name="share_on_facebook">Share on Facebook</string>
+    <string name="camera_perm_ok">Received camera permission</string>
+    <string name="please_allow_camera">Please grant camera permission to use Qeeqbii</string>
 </resources>

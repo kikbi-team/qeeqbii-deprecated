@@ -25,7 +25,7 @@
                 android:layout_weight="1"
                 android:backgroundTint="@color/colorPrimaryDark"
                 android:contentDescription="@string/chips"
-                android:onClick="addChips"
+                android:onClick="addChip"
                 app:srcCompat="@mipmap/chips" />
 
             <ImageButton
@@ -56,7 +56,7 @@
             android:layout_weight="1"
             android:backgroundTint="@color/bordeau"
             android:contentDescription="@string/vegetables"
-            android:onClick="addVegetables"
+            android:onClick="addVegetable"
             app:srcCompat="@mipmap/vegetables" />
 
         <ImageButton
