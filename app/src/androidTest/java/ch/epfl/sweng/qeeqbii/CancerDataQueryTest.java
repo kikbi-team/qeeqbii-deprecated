@@ -17,7 +17,7 @@ import static android.support.test.espresso.assertion.ViewAssertions.matches;
 import static android.support.test.espresso.matcher.ViewMatchers.withId;
 import static android.support.test.espresso.matcher.ViewMatchers.withText;
 
-
+/*
 @RunWith(AndroidJUnit4.class)
 public class CancerDataQueryTest {
     //public final ActivityTestRule<CancerDataQueryActivity> mActivityRule =
@@ -38,7 +38,7 @@ public class CancerDataQueryTest {
     }
     */
 
-
+    /*
     @Test
     public void testPerfectMatchCancerDataBase() {
         // Useful way of accessing resources
@@ -60,8 +60,9 @@ public class CancerDataQueryTest {
             onView(withId(R.id.cancerDataQueryButton)).perform(click());
             onView(withId(R.id.queryCancerDataAnswerArea)).check(matches(withText(iter[1])));
         }
-    }
+    }*/
 
+    /*
     @Test
     public void testLevenshteinCancerDataBase() {
         //onView(withId(R.id.cancerDataQuery)).perform(click());
@@ -77,4 +78,4 @@ public class CancerDataQueryTest {
             onView(withId(R.id.queryCancerDataAnswerArea)).check(matches(withText(iter[1])));
         }
     }
-}
+}*/
