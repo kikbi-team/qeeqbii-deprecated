@@ -62,8 +62,8 @@ public class AShoppingCartClassShould {
         shop.addItemToCart(new Product("Wine", "500 mg", "Stuff", "cool Nutrients"));
         shop.addItemToCart(new Product("Beer", "500 mg", "Stuff", "cool Nutrients"));
 
-        assertEquals(shop.getItemsInCart().get(0).getName(), content.get(0).getName());
-        assertEquals(shop.getItemsInCart().get(1).getName(), content.get(1).getName());
-        assertEquals(shop.getItemsInCart().get(2).getName(), content.get(2).getName());
+        assertEquals(shop.getItemsInCart().get(1).getName(), content.get(0).getName());
+        assertEquals(shop.getItemsInCart().get(2).getName(), content.get(1).getName());
+        assertEquals(shop.getItemsInCart().get(3).getName(), content.get(2).getName());
     }
 }
