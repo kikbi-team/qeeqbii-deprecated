@@ -59,8 +59,10 @@ public class AnonymousTest {
 
 
         // Click sign in
-        onView(allOf(withId(R.id.button_anonymous_sign_in),
-                withText(R.string.sign_in), isDisplayed())).perform(click());
+        //onView(allOf(withId(R.id.button_anonymous_sign_in),
+        //       withText(R.string.sign_in), isDisplayed())).perform(click());
+
+        onView(withId(R.id.button_anonymous_sign_in)).perform(click());
 
         // Make sure userID and email look right
       // String idString = mActivityTestRule.getActivity().getString(R.string.id_fmt, "");

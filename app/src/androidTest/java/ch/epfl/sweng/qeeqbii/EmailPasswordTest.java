@@ -74,11 +74,14 @@ public class EmailPasswordTest {
         enterPassword(password);
 
         // Click sign in
-        ViewInteraction appCompatButton = onView(
+        /*ViewInteraction appCompatButton = onView(
                 allOf(withId(R.id.email_sign_in_button), withText(R.string.sign_in),
                         withParent(withId(R.id.email_password_buttons)),
                         isDisplayed()));
+        appCompatButton.perform(click());*/
+        ViewInteraction appCompatButton = onView(withId(R.id.email_sign_in_button));
         appCompatButton.perform(click());
+
 
         // Check that auth failed
         onView(withText(R.string.auth_failed))
