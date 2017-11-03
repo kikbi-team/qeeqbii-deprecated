@@ -1,28 +1,38 @@
 package ch.epfl.sweng.qeeqbii;
 
+import android.app.Activity;
+import android.app.Instrumentation;
 import android.content.Context;
 
 import android.support.test.InstrumentationRegistry;
 import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
+import android.support.v7.widget.Toolbar;
+import android.test.ActivityInstrumentationTestCase2;
+import android.view.KeyEvent;
+import android.view.MenuItem;
+import android.widget.Button;
+
+import com.android.dx.command.Main;
 
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
+import static android.support.test.InstrumentationRegistry.getInstrumentation;
 import static android.support.test.espresso.Espresso.onView;
 import static android.support.test.espresso.action.ViewActions.click;
 import static android.support.test.espresso.action.ViewActions.typeText;
 import static android.support.test.espresso.assertion.ViewAssertions.matches;
 import static android.support.test.espresso.matcher.ViewMatchers.withId;
 import static android.support.test.espresso.matcher.ViewMatchers.withText;
+import static junit.framework.Assert.assertNotNull;
 import static org.junit.Assert.assertEquals;
 
 
 
 @RunWith(AndroidJUnit4.class)
 public class MainActivityTest {
-
 
     @Rule
     public final ActivityTestRule<MainActivity> mActivityRule =
@@ -37,11 +47,61 @@ public class MainActivityTest {
     @Test
     public void testCanAccessOpenFood() throws InterruptedException {
         onView(withId(R.id.SearchProductButton)).perform(click());
+    }*/
+
+    @Test
+    public void testOpenGraphs() {
+        // register next activity that need to be monitored.
+        Instrumentation.ActivityMonitor activityMonitor = getInstrumentation().addMonitor(GraphsActivity.class.getName(), null, false);
+
+        // open current activity.
+        MainActivity myActivity = mActivityRule.getActivity();
+        final MenuItem button = (MenuItem) myActivity.findViewById(R.id.nav_graphs);
+        myActivity.showGraphs(null);
+
+        //Watch for the timeout
+        //example values 5000 if in ms, or 5 if it's in seconds.
+        GraphsActivity nextActivity = (GraphsActivity) getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 5000);
+        // next activity is opened and captured.
+        assertNotNull(nextActivity);
+        nextActivity.finish();
     }
 
     @Test
-    public void testCanOpenGraphs() throws InterruptedException {
-        onView(withId(R.id.buttonGraphs)).perform(click());
+    public void testCanOpenGraphs() throws Exception {
+        //onView(withId(R.id.buttonGraphs)).perform(click());
+
+        MainActivity activity = mActivityRule.getActivity();
+        activity.showGraphs(null);
+
+
+        //MAINTENANT IL FAUT VERIFIER SI ON A BIEN CHANGER D'ACTIVITEET CELA PROUVE QUE LE BOUTON FONCTIONNE
+
+        //MenuItem item = (MenuItem) activity.findViewById(R.id.nav_graphs);
+
+        //assertEquals(item.getTitle().toString(), "Graphs");
+
+
+        /*MainActivity activity = mActivityRule.getActivity();
+        Instrumentation.ActivityMonitor am = getInstrumentation().addMonitor(MainActivity.class.getName(), null, false);
+
+        // Click the menu option
+        getInstrumentation().sendKeyDownUpSync(KeyEvent.KEYCODE_MENU);
+        getInstrumentation().invokeMenuActionSync(activity, R.id.nav_graphs, 0);
+
+        Activity a = getInstrumentation().waitForMonitorWithTimeout(am, 1000);
+        assertEquals(true, getInstrumentation().checkMonitorHit(am, 1));
+
+        // Check type of returned Activity:
+        //assertNotNull(a);
+        //assertTrue(a instanceof GraphsActivity);
+        a.finish();*/
+
+        //onView(withId(R.id.textView2)).perform(click());
+        //onView(withId(R.id.nav_graphs)).perform(click());
+        //openActionBarOverflowOrOptionsMenu(InstrumentationRegistry.getTargetContext());
+        //onView(withId(R.id.nav_graphs)).perform(click());
+
     }
     /*
     @Before
