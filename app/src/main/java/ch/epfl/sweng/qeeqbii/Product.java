@@ -48,8 +48,8 @@ class Product {
         return mNutrients;
     }
 
+    String[] getParsedIngredients() throws ProductException
     // Returns an array of string. Each entry of the array corresponds to an ingredient.
-    String[] GetParsedIngredients() throws ProductException
     {
         if(mParsedIngredients != null)
         {
@@ -65,10 +65,10 @@ class Product {
         return mParsedIngredients;
     }
 
+    Map<String, Double> getParsedNutrients() throws  ProductException {
     // Returns a map binding a nutrient to its quantity.
     // Key entered in the map can be e.g. "Sel (g)" or "Sucres (g)"
     // The quantity is returned as a double.
-    Map<String, Double> GetParsedNutrients() throws  ProductException {
 
         if (mParsedNutrients != null) {
             return mParsedNutrients;

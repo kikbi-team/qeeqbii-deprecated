@@ -51,47 +51,45 @@ class CancerDataBase {
 
     // Method that reads a CSVFile
     static void readCSVFile(Context context) throws Exception {
-        if (mopen_state == 1) {
-            throw new Exception("Tried to open carcinogenic database whereas it's already done.\n");
-        }
+        if (mopen_state == 0) {
 
-        Resources resources = context.getResources();
-        InputStream inStream = resources.openRawResource(R.raw.original_classification_iarc_english);
-        BufferedReader reader = new BufferedReader(new InputStreamReader(inStream, Charset.forName("UTF-8")));
+            Resources resources = context.getResources();
+            InputStream inStream = resources.openRawResource(R.raw.original_classification_iarc_english);
+            BufferedReader reader = new BufferedReader(new InputStreamReader(inStream, Charset.forName("UTF-8")));
 
-        String line = "";
-        // Step over the headers
-        reader.readLine();
-        try {
-            while ((line = reader.readLine()) != null) {
-                //split by ','
-                String[] tokens = line.split(",");
+            String line = "";
+            // Step over the headers
+            reader.readLine();
+            try {
+                while ((line = reader.readLine()) != null) {
+                    //split by ','
+                    String[] tokens = line.split(",");
 
-                //read the data
-                CancerSubstance new_substance = new CancerSubstance();
+                    //read the data
+                    CancerSubstance new_substance = new CancerSubstance();
 
-                // Filling of new_substance's attributes
-                new_substance.setmId(Integer.parseInt(tokens[0]));
-                new_substance.setmAgent(tokens[1]); //Here we can add the fact that the dataBase might have leaks
-                new_substance.setmGroup(tokens[2]);
+                    // Filling of new_substance's attributes
+                    new_substance.setmId(Integer.parseInt(tokens[0]));
+                    new_substance.setmAgent(tokens[1]); //Here we can add the fact that the dataBase might have leaks
+                    new_substance.setmGroup(tokens[2]);
 
-                // Filling of BK-Tree with the Agent name
-                mbkTree.add(tokens[1]);
+                    // Filling of BK-Tree with the Agent name
+                    mbkTree.add(tokens[1]);
 
-                //Note if we want to import an int or a double we have to write:
-                //sample.setmGroup(Double.parseDouble(tokens[x]));
-                //sample.setmGroup(Integer.parseInt(tokens[x]));
-                msubstance_list.add(new_substance); //adds the sample to the table with all the data
-                msubstance_map.put(new_substance.getmAgent(), new_substance);
+                    //Note if we want to import an int or a double we have to write:
+                    //sample.setmGroup(Double.parseDouble(tokens[x]));
+                    //sample.setmGroup(Integer.parseInt(tokens[x]));
+                    msubstance_list.add(new_substance); //adds the sample to the table with all the data
+                    msubstance_map.put(new_substance.getmAgent(), new_substance);
+                }
+            } catch (IOException error) {
+                Log.wtf("MainActivity", "CustomExeptions reading the data file in the .csv file" + line, error);
+                error.printStackTrace();
             }
-        }
-        catch (IOException error) {
-            Log.wtf("MainActivity", "CustomExeptions reading the data file in the .csv file" + line, error);
-            error.printStackTrace();
-        }
 
-        // Change the mopen_state to value 1 because the file is read
-        mopen_state = 1;
+            // Change the mopen_state to value 1 because the file is read
+            mopen_state = 1;
+        }
     }
 
     // Method that outputs a string containing a summary of all the substances and their categorization

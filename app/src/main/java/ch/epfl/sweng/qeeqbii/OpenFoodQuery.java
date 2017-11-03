@@ -39,7 +39,7 @@ class OpenFoodQuery extends AsyncTask<String, Void, Product> {
         String barcode = params[0];
         if(RecentlyScannedProducts.contains(barcode))
         {
-            return RecentlyScannedProducts.GetProduct(barcode);
+            return RecentlyScannedProducts.getProduct(barcode);
         }
         try {
             URL url = new URL("https://www.openfood.ch/api/v3/products?excludes=name_translations2Cimages&barcodes=" + barcode);
@@ -100,7 +100,7 @@ class OpenFoodQuery extends AsyncTask<String, Void, Product> {
     {
         if(RecentlyScannedProducts.contains(barcode))
         {
-            return RecentlyScannedProducts.GetProduct(barcode);
+            return RecentlyScannedProducts.getProduct(barcode);
         }
 
         final CountDownLatch get_or_create_signal = new CountDownLatch(1);
@@ -117,7 +117,7 @@ class OpenFoodQuery extends AsyncTask<String, Void, Product> {
 
         if(RecentlyScannedProducts.contains(barcode))
         {
-            return RecentlyScannedProducts.GetProduct(barcode);
+            return RecentlyScannedProducts.getProduct(barcode);
         } else {
             throw new Exception(error_cache.get(barcode));
         }
@@ -161,7 +161,7 @@ class OpenFoodQuery extends AsyncTask<String, Void, Product> {
     {
         if (RecentlyScannedProducts.contains(barcode))
         {
-            return RecentlyScannedProducts.GetProduct(barcode);
+            return RecentlyScannedProducts.getProduct(barcode);
         } else {
             throw new OpenFoodQueryException("ERROR: (OpenFoodQuery) : this barcode \"" + barcode + "\" is not cached.");
         }
