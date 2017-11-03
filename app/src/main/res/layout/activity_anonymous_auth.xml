@@ -56,7 +56,10 @@
         android:layout_height="wrap_content"
 
         android:enabled="false"
-        android:text="@string/sign_out" />
+        android:text="@string/sign_out"
+        android:layout_alignTop="@+id/buttonSave"
+        android:layout_alignEnd="@+id/title_anonymous"
+        android:layout_marginEnd="15dp" />
     <!--android:layout_alignTop="@+id/button_anonymous_sign_in"
     android:layout_toRightOf="@+id/button_anonymous_sign_in"-->
     <Button
@@ -138,9 +141,11 @@
         android:id="@+id/field_password"
         android:layout_width="@dimen/field_width_standard"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/field_email"
         android:hint="@string/hint_password"
-        android:inputType="textPassword" />
+        android:inputType="textPassword"
+        android:layout_alignBaseline="@+id/field_email"
+        android:layout_alignBottom="@+id/field_email"
+        android:layout_alignParentEnd="true" />
 
     <Button
         android:id="@+id/button_link_account"

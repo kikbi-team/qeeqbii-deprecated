@@ -34,8 +34,8 @@ public class FirebaseUIActivity extends AppCompatActivity implements View.OnClic
 
         mAuth = FirebaseAuth.getInstance();
 
-        mStatusView = findViewById(R.id.status);
-        mDetailView = findViewById(R.id.detail);
+        mStatusView = (TextView) findViewById(R.id.status);
+        mDetailView = (TextView) findViewById(R.id.detail);
 
         findViewById(R.id.sign_in_button).setOnClickListener(this);
         findViewById(R.id.sign_out_button).setOnClickListener(this);

@@ -64,7 +64,6 @@ public class ShareOnFacebookActivity extends AppCompatActivity {
     public void dialogue () {
         callbackManager = CallbackManager.Factory.create();
         shareDialog = new ShareDialog(this);
-        //if (ShareDialog.canShow(ShareLinkContent.class)) {
             SharePhoto photo = new SharePhoto.Builder()
                     .setBitmap(image_to_share)
                     .build();
@@ -72,7 +71,7 @@ public class ShareOnFacebookActivity extends AppCompatActivity {
                     .addPhoto(photo)
                     .build();
             shareDialog.show(content);
-        //}
+
     }
 
 

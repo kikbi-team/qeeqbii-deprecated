@@ -1,5 +1,5 @@
 package ch.epfl.sweng.qeeqbii;
-
+/*
 
 import android.support.test.espresso.NoMatchingViewException;
 import android.test.suitebuilder.annotation.LargeTest;
@@ -72,7 +72,7 @@ public class GoogleSignInTest {
 
 
 }
-/*
+*/
 import android.support.test.espresso.Espresso;
 import android.support.test.espresso.intent.rule.IntentsTestRule;
 import android.support.test.runner.AndroidJUnit4;
@@ -106,4 +106,3 @@ public class GoogleSignInTest {
     }
 }
 
-*/

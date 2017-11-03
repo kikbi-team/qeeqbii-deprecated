@@ -56,7 +56,7 @@ public class EmailPasswordTest {
     }
 */
     @Test
-    public void failedSignInTest() {/*
+    public void failedSignInTest() {
         String email = "test@test.com";
         String password = "123456";
 
@@ -82,7 +82,7 @@ public class EmailPasswordTest {
 
         // Check that auth failed
         onView(withText(R.string.auth_failed))
-                .check(matches(isDisplayed()));*/
+                .check(matches(isDisplayed()));
     }
 
     /*
