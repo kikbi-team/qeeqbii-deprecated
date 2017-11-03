@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="ch.epfl.sweng.qeeqbii">
 
     <uses-permission android:name="android.permission.INTERNET" />
@@ -16,33 +17,82 @@
         android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".HomeActivity">
+
+
+        <activity android:name="ch.epfl.sweng.qeeqbii.HomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".GoogleSignInActivity" />
+
+        <activity android:name=".ChooserActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
-            android:name=".MainActivity"
-            android:exported="true" />
-        <activity android:name=".CancerDataShowActivity">
+            android:name=".GoogleSignInActivity"
+            android:label="@string/label_google_sign_in" />
+        <!-- Facebook Configuration -->
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id"
+            tools:replace="android:value" />
+        <activity
+            android:name=".FacebookLoginActivity"
+            android:label="@string/label_facebook_login" />
+        <activity
+            android:name=".EmailPasswordActivity"
+            android:label="@string/label_emailpassword"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".AnonymousAuthActivity"
+            android:label="@string/label_anonymous_auth" />
+        <activity
+            android:name=".TwitterLoginActivity"
+            android:label="@string/label_twitter_login" />
+        <activity
+            android:name=".FirebaseUIActivity"
+            android:label="@string/label_firebase_ui" />
+
+        <activity android:name=".MainActivity" android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+
+        <activity
+            android:name="ch.epfl.sweng.qeeqbii.CancerDataShowActivity"
+            android:exported="true"
+            android:parentActivityName="ch.epfl.sweng.qeeqbii.MainActivity">
 
             <!-- The meta-data tag is required if you support API level 15 and lower -->
-            <meta-data
+           <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="ch.epfl.sweng.qeeqbii.MainActivity" />
         </activity>
         <activity android:name=".BarcodeScannerActivity" />
         <activity
+
+            android:name="ch.epfl.sweng.qeeqbii.CancerDataQueryActivity"
+            android:parentActivityName="ch.epfl.sweng.qeeqbii.MainActivity"
+            android:exported="true"
+            android:configChanges="keyboardHidden|orientation|screenSize">
+        </activity>
+        <provider android:authorities="com.facebook.app.FacebookContentProvider1502943653129350"
+            android:name="com.facebook.FacebookContentProvider"
+            android:exported="true"/>
+        <activity
             android:name=".BarcodeToProductActivity"
             android:exported="true" />
+
         <activity android:name=".GraphsActivity" />
-        <activity
-            android:name=".CancerDataQueryActivity"
-            android:configChanges="keyboardHidden|orientation|screenSize"
-            android:exported="true" />
         <activity android:name=".BaseActivity" />
         <activity android:name=".ShoppingList" />
         <activity

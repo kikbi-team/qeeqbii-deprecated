@@ -1,7 +1,5 @@
 package android.os;
 
-import java.util.concurrent.ExecutionException;
-
 /**
  * This is a shadow class for AsyncTask which forces it to run synchronously. AsyncTask enables proper
  * and easy use of the UI thread. This class allows you to perform background operations and publish

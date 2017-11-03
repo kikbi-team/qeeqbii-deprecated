@@ -8,16 +8,45 @@
     <string name="calories_graph">Calories</string>
     <string name="salt_graph">Salts</string>
 
+
     <!-- Google Sign In -->
 
     <string name="sign_out">Sign Out</string>
     <string name="disconnect">Disconnect</string>
     <string name="loading">Loading…</string>
     <string name="signed_out">Signed Out</string>
+
     <string name="desc_firebase_lockup">Firebase logo and name</string>
     <string name="firebase_status_fmt">Firebase User: %s</string>
     <string name="google_status_fmt">Google User: %s</string>
     <string name="google_title_text">Google Sign In</string>
+
+
+    <string name="facebook_status_fmt">Facebook User: %s</string>
+    <string name="facebook_title_text">Facebook Login</string>
+
+    <string name="emailpassword_status_fmt">Email User: %1$s (verified: %2$b)</string>
+    <string name="emailpassword_title_text">Email and Password</string>
+
+    <string name="twitter_status_fmt">Twitter User: %s</string>
+    <string name="twitter_title_text">Twitter Login</string>
+
+    <string name="firebaseui_status_fmt">Firebase User: %s</string>
+    <string name="firebaseui_title_text">FirebaseUI Auth</string>
+
+    <string name="id_fmt">User ID: %s</string>
+    <string name="email_fmt">Email: %s</string>
+
+    <string name="hint_password">password</string>
+    <string name="hint_email">email</string>
+
+    <string name="sign_in_anonymously">Sign In</string>
+
+
+    <!-- Facebook events -->
+    <!-- Text and labels -->
+    <string name="button_share_facebook">Share on Facebook</string>
+
     <string name="search_in_database">Search for harmful ingredients</string>
     <!-- XML -->
     <string name="levenshtein_nquery">LEVENSHTEIN\nQUERY</string>
@@ -41,9 +70,57 @@
     <string name="graph">graph</string>
     <string name="meat">meat</string>
     <string name="vegetables">vegetables</string>
+
+    
+
+    <string name="label_google_sign_in">Firebase + Google Sign In</string>
+
+    <string name="desc_google_sign_in">Use a Google Sign In credential to authenticate with Firebase.</string>
+
+    <string name="label_facebook_login">Firebase + Facebook Login</string>
+
+    <string name="desc_facebook_login">Use a Facebook Login credential to authenticate with Firebase.</string>
+
+    <string name="label_twitter_login">Firebase + Twitter Login</string>
+
+    <string name="desc_twitter_login">Use a Twitter Login credential to authenticate with Firebase.</string>
+
+    <string name="label_emailpassword">Email/Password Authentication</string>
+
+    <string name="desc_emailpassword">Use an email and password to authenticate with Firebase.</string>
+
+    <string name="desc_phone_auth">Use a phone number to authenticate with Firebase.</string>
+
+    <string name="label_anonymous_auth">Anonymous Authentication</string>
+
+    <string name="desc_anonymous_auth">Sign in anonymously and then later upgrade to a full Firebase Auth user.</string>
+
+    <string name="desc_custom_auth">Use a custom token signed by your own server to authenticate with Firebase.</string>
+
+    <string name="label_firebase_ui">FirebaseUI Auth</string>
+
+    <string name="desc_firebase_ui">Use the FirebaseUI-Android library to authenticate with Firebase.</string>
+
+    <string name="sign_in">Sign In</string>
+
+    <string name="create_account">Create Account</string>
+
+
+    <string name="verify_email">Verify Email</string>
+
+
+    <string name="Account_Linking">Account Linking</string>
+
+
+
+    <string name="auth_failed">Authentication failed</string>
+
+
     <string name="query_cancer_n_database">QUERY CANCER\nDATABASE</string>
     <string name="scanned_n_product">SCANNED\nPRODUCTS</string>
     <string name="empty_field">Empty field</string>
+
+
     <string name="mainNameLabel">Please enter barcode here.</string>
    <string name="product_name_in_graph">Product name</string>
     <string name="little_sentence_graph">100g of this product contains:</string>
@@ -52,5 +129,5 @@
     <string name="share_on_facebook">Share on Facebook</string>
     <string name="camera_perm_ok">Received camera permission</string>
     <string name="please_allow_camera">Please grant camera permission to use Qeeqbii</string>
-   
+
 </resources>

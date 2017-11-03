@@ -6,8 +6,15 @@
     -->
     <!--  TODO(developer): REPLACE -->
 
+    <string name="facebook_app_id">1502943653129350</string>
+
+
     <!--
       Your Twitter Key and Secret, see README.
     -->
     <!-- TODO(developer): REPLACE -->
+
+    <string name="twitter_consumer_key">7xuENgjztCtdiL12lxuqKXpTv</string>
+    <string name="twitter_consumer_secret">idpPYueQz0MwZxxWkQt8hoi7HCvTFOyVEi58AC9nGfQJPWKWum</string>
+
 </resources>
