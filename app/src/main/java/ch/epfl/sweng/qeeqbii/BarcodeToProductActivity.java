@@ -49,8 +49,7 @@ public class BarcodeToProductActivity extends AppCompatActivity {
     // Search for harmful ingredients contained in the product, making a query to the Cancer database.
     public void searchHarmfulIngredients(View view) {
 
-        if (!(RecentlyScannedProducts.contains(barcode)))
-        {
+        if (!(RecentlyScannedProducts.contains(barcode))) {
             return;
         }
 
@@ -60,8 +59,7 @@ public class BarcodeToProductActivity extends AppCompatActivity {
 
         try {
             parsed_ingredients = RecentlyScannedProducts.getProduct(barcode).getParsedIngredients();
-        } catch (ProductException e)
-        {
+        } catch (ProductException e) {
             txt_harmfull_ing.setText(e.getMessage());
             return;
         }
@@ -87,3 +85,4 @@ public class BarcodeToProductActivity extends AppCompatActivity {
         intent.putExtra("barcode", barcode);
         startActivity(intent);
     }
+}
