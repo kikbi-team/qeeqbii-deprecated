@@ -61,8 +61,25 @@ public class CancerDataQueryTest {
             onView(withId(R.id.queryCancerDataAnswerArea)).check(matches(withText(iter[1])));
         }
 
-
-        //TextView text = (TextView)mActivityRule.getActivity().findViewById(R.id.perfectQueryAnswerArea);
-        //onView(withId(R.id.greetingMessage)).check(matches(withText("Hello from my unit test!")));
     }
+
+
+    @Test
+    public void testLevenshteinCancerDataBase() {
+        onView(withId(R.id.cancerDataQuery)).perform(click());
+
+        List<String[]> query_ans_pairs = new ArrayList<>();
+
+        query_ans_pairs.add(new String[]{"Eau", "Substance{mId = 902, mAgent = 'Tea', mGroup = '3'}"});
+        query_ans_pairs.add(new String[]{"", "Substance{mId = 902, mAgent = 'Tea', mGroup = '3'}"});
+
+        for (String[] iter : query_ans_pairs) {
+            onView(withId(R.id.cancerDataQueryTextField)).perform(replaceText(iter[0]));
+            onView(withId(R.id.levenshteinCancerDataQueryButton)).perform(click());
+            onView(withId(R.id.queryCancerDataAnswerArea)).check(matches(withText(iter[1])));
+        }
+    }
+
+
+
 }
