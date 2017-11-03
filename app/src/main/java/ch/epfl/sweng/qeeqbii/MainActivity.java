@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void readBarcode(View view) {
-        Intent intent = new Intent(this, BarcodeActivity.class);
+        Intent intent = new Intent(this, BarcodeScannerActivity.class);
         startActivity(intent);
     }
 
@@ -73,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void showGraphs(View view) {
-        Intent intent = new Intent(this, Graphs.class);
+        Intent intent = new Intent(this, GraphsActivity.class);
         startActivity(intent);
     }
 

@@ -65,6 +65,8 @@
         app:layout_constraintRight_toRightOf="parent"
         tools:layout_editor_absoluteY="483dp" />
 
+
+
     <EditText
         android:id="@+id/mainName"
         android:layout_width="wrap_content"
@@ -74,6 +76,7 @@
         android:layout_marginTop="25dp"
         android:ems="10"
         android:inputType="textPersonName"
+        android:hint="@string/mainNameLabel"
         app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -81,7 +84,7 @@
         tools:ignore="LabelFor" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/SearchProductButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="8dp"
@@ -106,7 +109,7 @@
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        app:layout_constraintTop_toBottomOf="@+id/SearchProductButton" />
 
     <ImageButton
         android:id="@+id/shoppingButton"

@@ -247,7 +247,8 @@ public class GoogleSignInActivity extends BaseActivity implements
         int i = v.getId();
         if (i == R.id.sign_in_button) {
             signIn();
-        } else if (i == R.id.sign_out_button) {
+        }
+        else if (i == R.id.sign_out_button) {
             signOut();
         }
         else if (i == R.id.disconnect_button) {
