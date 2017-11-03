@@ -34,7 +34,6 @@ public class CancerDataQueryActivity extends AppCompatActivity {
         answer_field.setText(query_answer);
     }
 
-
     public void processLevenshteinQueryResult(View view) {
 
         // Getting the text entered by the user in the text area provided for the query
