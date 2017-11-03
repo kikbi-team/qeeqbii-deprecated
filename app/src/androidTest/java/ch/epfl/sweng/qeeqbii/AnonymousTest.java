@@ -32,7 +32,7 @@ public class AnonymousTest {
     public ActivityTestRule<AnonymousAuthActivity> mActivityTestRule =
             new ActivityTestRule<>(AnonymousAuthActivity.class);
 
-    @Before
+   /* @Before
     public void setUp() {
         if (mActivityResource != null) {
             Espresso.unregisterIdlingResources(mActivityResource);
@@ -48,7 +48,7 @@ public class AnonymousTest {
         if (mActivityResource != null) {
             Espresso.unregisterIdlingResources(mActivityResource);
         }
-    }
+    }*/
 
     @Test
     public void anonymousSignInTest() {
