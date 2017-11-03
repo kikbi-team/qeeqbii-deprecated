@@ -62,6 +62,24 @@ public class MainActivityTest {
         nextActivity.finish();
     }
 
+    @Test
+    public void testSearchProductBarcode() {
+        // register next activity that need to be monitored.
+        Instrumentation.ActivityMonitor activityMonitor = getInstrumentation().addMonitor(BarcodeToProductActivity.class.getName(), null, false);
+
+        // open current activity.
+        MainActivity myActivity = mActivityRule.getActivity();
+        final MenuItem button = (MenuItem) myActivity.findViewById(R.id.nav_searchProductFromBarcode);
+        myActivity.searchProductFromBarcode(button);
+
+        //Watch for the timeout
+        //example values 5000 if in ms, or 5 if it's in seconds.
+        BarcodeToProductActivity nextActivity = (BarcodeToProductActivity) getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 5000);
+        // next activity is opened and captured.
+        assertNotNull(nextActivity);
+        nextActivity.finish();
+    }
+
     /*
     @Test
     public void testCanAccessOpenFood() throws InterruptedException {
@@ -85,6 +103,7 @@ public class MainActivityTest {
         assertNotNull(nextActivity);
         nextActivity.finish();
     }
+
     /*
     @Test
     public void testCanOpenGraphs() throws Exception {
@@ -144,8 +163,27 @@ public class MainActivityTest {
     @Test
     public void testCanOpenShoppingCart() throws InterruptedException {
         onView(withId(R.id.shoppingButton)).perform(click());
+    } */
+
+    @Test
+    public void testShoppingCart() {
+        // register next activity that need to be monitored.
+        Instrumentation.ActivityMonitor activityMonitor = getInstrumentation().addMonitor(ShoppingCartActivity.class.getName(), null, false);
+
+        // open current activity.
+        MainActivity myActivity = mActivityRule.getActivity();
+        final MenuItem button = (MenuItem) myActivity.findViewById(R.id.nav_shopping_cart);
+        myActivity.showShoppingList(button);
+
+        //Watch for the timeout
+        //example values 5000 if in ms, or 5 if it's in seconds.
+        ShoppingCartActivity nextActivity = (ShoppingCartActivity) getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 5000);
+        // next activity is opened and captured.
+        assertNotNull(nextActivity);
+        nextActivity.finish();
     }
 
+    /*
     @Test
     public void testCanOpenRecentlyScannedProductsActivity() throws InterruptedException {
         onView(withId(R.id.listRecentlyScannedProductButton)).perform(click());
@@ -185,6 +223,60 @@ public class MainActivityTest {
     @Test
     public void testCanOpenQRCodesScanner() throws InterruptedException {
         onView(withId(R.id.mainBarcodeButton)).perform(click());
-
     }*/
+
+    /*
+    @Test
+    public void testRecentShoopingItems() {
+        // register next activity that need to be monitored.
+        Instrumentation.ActivityMonitor activityMonitor = getInstrumentation().addMonitor(RecentlyScannedProductsActivity.class.getName(), null, false);
+
+        // open current activity.
+        MainActivity myActivity = mActivityRule.getActivity();
+        final MenuItem button = (MenuItem) myActivity.findViewById(R.id.nav_scannedProducts);
+        myActivity.showRecentlyScannedProductsActivity(button);
+
+        //Watch for the timeout
+        //example values 5000 if in ms, or 5 if it's in seconds.
+        RecentlyScannedProductsActivity nextActivity = (RecentlyScannedProductsActivity) getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 5000);
+        // next activity is opened and captured.
+        assertNotNull(nextActivity);
+        nextActivity.finish();
+    } */
+
+    @Test
+    public void testCancerDataQuery() {
+        // register next activity that need to be monitored.
+        Instrumentation.ActivityMonitor activityMonitor = getInstrumentation().addMonitor(CancerDataQueryActivity.class.getName(), null, false);
+
+        // open current activity.
+        MainActivity myActivity = mActivityRule.getActivity();
+        final MenuItem button = (MenuItem) myActivity.findViewById(R.id.nav_dataquery);
+        myActivity.cancerDataQuery(button);
+
+        //Watch for the timeout
+        //example values 5000 if in ms, or 5 if it's in seconds.
+        CancerDataQueryActivity nextActivity = (CancerDataQueryActivity) getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 5000);
+        // next activity is opened and captured.
+        assertNotNull(nextActivity);
+        nextActivity.finish();
+    }
+
+    @Test
+    public void testCanOpenQRCodesScanner() {
+        // register next activity that need to be monitored.
+        Instrumentation.ActivityMonitor activityMonitor = getInstrumentation().addMonitor(BarcodeScannerActivity.class.getName(), null, false);
+
+        // open current activity.
+        MainActivity myActivity = mActivityRule.getActivity();
+        final MenuItem button = (MenuItem) myActivity.findViewById(R.id.nav_scan);
+        myActivity.readBarcode(button);
+
+        //Watch for the timeout
+        //example values 5000 if in ms, or 5 if it's in seconds.
+        BarcodeScannerActivity nextActivity = (BarcodeScannerActivity) getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 5000);
+        // next activity is opened and captured.
+        assertNotNull(nextActivity);
+        nextActivity.finish();
+    }
 }

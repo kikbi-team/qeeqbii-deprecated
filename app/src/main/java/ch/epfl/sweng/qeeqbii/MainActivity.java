@@ -54,9 +54,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void showShoppingList(MenuItem view) {
-        //Product cart = new Product();
         Intent intent = new Intent(this, ShoppingCartActivity.class);
-        //intent.putExtra("product", (Parcelable) cart);
         startActivity(intent);
     }
 
