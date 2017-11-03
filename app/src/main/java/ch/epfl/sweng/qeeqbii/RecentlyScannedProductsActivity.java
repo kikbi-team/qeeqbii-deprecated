@@ -6,16 +6,17 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
-import android.widget.ImageButton;
 import android.widget.ListView;
+import android.widget.TextView;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.LinkedList;
-import java.util.List;
+import java.util.Map;
 
 public class RecentlyScannedProductsActivity extends AppCompatActivity {
+
+    public static Map<String,String> displayed_products = new HashMap<>();
 
 
     private ArrayAdapter mAdapter;
@@ -30,15 +31,16 @@ public class RecentlyScannedProductsActivity extends AppCompatActivity {
 
         LinkedList<String> barcode_linked_list = RecentlyScannedProducts.getBarcodeList();
 
+        System.out.println(barcode_linked_list.getLast());
+
 
         //final ArrayList<RecentlyScannedProducts> recipeList = Recipe.getRecipesFromFile("recipes.json", this);
 
         ArrayList<String> listItems = new ArrayList<>();
-        listItems.add(0, "Test1");
-        listItems.add(1, "Test2");
-        for(int i = 2; i < barcode_linked_list.size(); i++){
+        for(int i = 0; i < barcode_linked_list.size(); i++){
             Product current_product = RecentlyScannedProducts.getProduct(barcode_linked_list.get(i));
             listItems.add(i, current_product.getName());
+            displayed_products.put(current_product.getName(),barcode_linked_list.get(i));
         }
 
         // The 2nd argument of the ArrayAdapter constructor is the layout of the list item
@@ -60,6 +62,22 @@ public class RecentlyScannedProductsActivity extends AppCompatActivity {
         RecentlyScannedProducts.clear();
         mAdapter.clear();
         mAdapter.notifyDataSetChanged();
+    }
+
+    /*public void showProductActivityFromRecentlyScanned(View view)
+    {
+        Intent intent = new Intent(this, BarcodeToProductActivity.class);
+        TextView txt = (TextView)view;
+        intent.putExtra(MainActivity.BARCODE_READER,RecentlyScannedProductsActivity.displayed_products.get(txt.getText()));
+        startActivity(intent);
+    }*/
+
+    public void shareOnFacebookRecentlyScanned(View view)
+    {
+        Intent intent = new Intent(this, ShareOnFacebookActivity.class);
+        view.setVisibility(View.INVISIBLE);
+        ShareOnFacebookActivity.view = findViewById(R.id.recently_scanned_products);
+        startActivity(intent);
     }
 
 

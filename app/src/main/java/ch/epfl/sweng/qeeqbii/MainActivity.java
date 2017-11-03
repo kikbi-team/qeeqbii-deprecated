@@ -6,7 +6,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.EditText;
 
-
 import static ch.epfl.sweng.qeeqbii.R.layout.activity_main;
 
 public class MainActivity extends AppCompatActivity {
