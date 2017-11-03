@@ -1,6 +1,6 @@
 apply plugin: 'com.android.application'
 apply plugin: 'jacoco-everywhere'
-check.dependsOn 'assembleMinSdkJellybeanDebugAndroidTest', 'assembleMinSdkIcsDebugAndroidTest','assembleDebugAndroidTest'
+//check.dependsOn 'assembleMinSdkJellybeanDebugAndroidTest', 'assembleMinSdkIcsDebugAndroidTest','assembleDebugAndroidTest'
 
 
 
@@ -8,7 +8,7 @@ check.dependsOn 'assembleMinSdkJellybeanDebugAndroidTest', 'assembleMinSdkIcsDeb
 android {
     compileSdkVersion 26
     buildToolsVersion "26.0.2"
-    flavorDimensions "minSdkVersion"
+    //flavorDimensions "minSdkVersion"
    // compileSdkVersion 25
     //buildToolsVersion '25.0.3'
     defaultConfig {
