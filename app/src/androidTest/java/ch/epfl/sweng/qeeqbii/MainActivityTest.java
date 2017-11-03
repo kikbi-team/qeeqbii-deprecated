@@ -42,8 +42,27 @@ public class MainActivityTest {
     @Test
     public void testCanOpenCancerDataBase() throws InterruptedException {
         onView(withId(R.id.cancerDataBaseButton)).perform(click());
+    } */
+
+    @Test
+    public void testCancerDataBaseShow() {
+        // register next activity that need to be monitored.
+        Instrumentation.ActivityMonitor activityMonitor = getInstrumentation().addMonitor(CancerDataShowActivity.class.getName(), null, false);
+
+        // open current activity.
+        MainActivity myActivity = mActivityRule.getActivity();
+        final MenuItem button = (MenuItem) myActivity.findViewById(R.id.nav_cancerdb);
+        myActivity.cancerDataBaseShow(button);
+
+        //Watch for the timeout
+        //example values 5000 if in ms, or 5 if it's in seconds.
+        CancerDataShowActivity nextActivity = (CancerDataShowActivity) getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 5000);
+        // next activity is opened and captured.
+        assertNotNull(nextActivity);
+        nextActivity.finish();
     }
 
+    /*
     @Test
     public void testCanAccessOpenFood() throws InterruptedException {
         onView(withId(R.id.SearchProductButton)).perform(click());
@@ -57,7 +76,7 @@ public class MainActivityTest {
         // open current activity.
         MainActivity myActivity = mActivityRule.getActivity();
         final MenuItem button = (MenuItem) myActivity.findViewById(R.id.nav_graphs);
-        myActivity.showGraphs(null);
+        myActivity.showGraphs(button);
 
         //Watch for the timeout
         //example values 5000 if in ms, or 5 if it's in seconds.
@@ -66,7 +85,7 @@ public class MainActivityTest {
         assertNotNull(nextActivity);
         nextActivity.finish();
     }
-
+    /*
     @Test
     public void testCanOpenGraphs() throws Exception {
         //onView(withId(R.id.buttonGraphs)).perform(click());
@@ -82,7 +101,7 @@ public class MainActivityTest {
         //assertEquals(item.getTitle().toString(), "Graphs");
 
 
-        /*MainActivity activity = mActivityRule.getActivity();
+        MainActivity activity = mActivityRule.getActivity();
         Instrumentation.ActivityMonitor am = getInstrumentation().addMonitor(MainActivity.class.getName(), null, false);
 
         // Click the menu option
@@ -95,14 +114,14 @@ public class MainActivityTest {
         // Check type of returned Activity:
         //assertNotNull(a);
         //assertTrue(a instanceof GraphsActivity);
-        a.finish();*/
+        a.finish();
 
         //onView(withId(R.id.textView2)).perform(click());
         //onView(withId(R.id.nav_graphs)).perform(click());
         //openActionBarOverflowOrOptionsMenu(InstrumentationRegistry.getTargetContext());
         //onView(withId(R.id.nav_graphs)).perform(click());
 
-    }
+    }*/
     /*
     @Before
     public void init(){

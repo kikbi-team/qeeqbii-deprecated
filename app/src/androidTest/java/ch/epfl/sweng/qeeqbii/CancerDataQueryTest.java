@@ -60,13 +60,11 @@ public class CancerDataQueryTest {
             onView(withId(R.id.cancerDataQueryButton)).perform(click());
             onView(withId(R.id.queryCancerDataAnswerArea)).check(matches(withText(iter[1])));
         }
-
     }
-
 
     @Test
     public void testLevenshteinCancerDataBase() {
-        onView(withId(R.id.cancerDataQuery)).perform(click());
+        //onView(withId(R.id.cancerDataQuery)).perform(click());
 
         List<String[]> query_ans_pairs = new ArrayList<>();
 
