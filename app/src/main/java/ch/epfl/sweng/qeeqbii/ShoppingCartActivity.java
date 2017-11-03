@@ -10,7 +10,7 @@ import android.view.View;
 public class ShoppingCartActivity extends AppCompatActivity {
 
     private RecyclerView RecyclerView;
-    private ShoppingCart cart = new ShoppingCart();
+    private ShoppingCart m_cart = new ShoppingCart();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,8 +25,12 @@ public class ShoppingCartActivity extends AppCompatActivity {
 
         RecyclerView.setLayoutManager(firstLayoutManager);
 
+        //UPDATES THE SHOPPING CART
+        //Product product = getIntent().getParcelableExtra("product");
+        //m_cart.addItemToCart(product);
+
         //Initializing and set adapter for each RecyclerView
-        RecyclerViewAdapter firstAdapter = new RecyclerViewAdapter(this, cart.getItemsInCart());
+        RecyclerViewAdapter firstAdapter = new RecyclerViewAdapter(this, m_cart.getItemsInCart());
 
         RecyclerView.setAdapter(firstAdapter);
     }

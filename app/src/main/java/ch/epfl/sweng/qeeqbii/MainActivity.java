@@ -2,6 +2,7 @@ package ch.epfl.sweng.qeeqbii;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
@@ -54,7 +55,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void showShoppingList(MenuItem view) {
+        //Product cart = new Product();
         Intent intent = new Intent(this, ShoppingCartActivity.class);
+        //intent.putExtra("product", (Parcelable) cart);
         startActivity(intent);
     }
 

@@ -1,10 +1,13 @@
 package ch.epfl.sweng.qeeqbii;
 
 import android.content.Intent;
+import android.os.Parcelable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
+
+import java.io.Serializable;
 
 public class ShoppingListActivity extends AppCompatActivity {
 
@@ -17,7 +20,10 @@ public class ShoppingListActivity extends AppCompatActivity {
     }
 
     public void addCheese(View view) {
+
+        //Product prod = new Product("Cheese", "500 mg", "Stuff", "cool Nutrients");
         Intent intent = new Intent(this, ShoppingCartActivity.class);
+        //intent.putExtra("product", (Parcelable) prod);
         startActivity(intent);
     }
 

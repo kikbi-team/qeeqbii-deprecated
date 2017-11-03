@@ -84,9 +84,7 @@ public class BarcodeToProductActivity extends AppCompatActivity {
     // Call the Graphs activity to make generate plots from the nutrients of the product.
     public void showNutrientsGraphs(View view) {
         Intent intent = new Intent(this, GraphsActivity.class);
-        intent.putExtra("barcode",barcode);
+        intent.putExtra("barcode", barcode);
         startActivity(intent);
     }
-
-
 }
