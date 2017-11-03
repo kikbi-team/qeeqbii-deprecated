@@ -122,7 +122,7 @@
 
 
     <string name="mainNameLabel">Please enter barcode here.</string>
-   <string name="product_name_in_graph">Product name</string>
+    <string name="product_name_in_graph">Product name</string>
     <string name="little_sentence_graph">100g of this product contains:</string>
     <string name="add_a_comment">Add a comment…</string>
     <string name="image_to_share">Image to share</string>

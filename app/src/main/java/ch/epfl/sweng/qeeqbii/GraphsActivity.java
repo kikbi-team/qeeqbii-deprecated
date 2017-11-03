@@ -19,6 +19,7 @@ import com.github.mikephil.charting.data.PieEntry;
 import com.github.mikephil.charting.highlight.Highlight;
 import com.github.mikephil.charting.listener.OnChartValueSelectedListener;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Map;
 
@@ -167,7 +168,10 @@ public class GraphsActivity extends AppCompatActivity {
         legend.setForm(Legend.LegendForm.SQUARE);
 
         Description description = pieChart.getDescription();
-        description.setText(yData[0]/yData[1]*100 + "% of your daily need in " + nameGraph + ".          ");
+        float percentage = yData[0]/yData[1]*100;
+        DecimalFormat numberFormat = new DecimalFormat("#.00");
+        String str_per = numberFormat.format(percentage);
+        description.setText( str_per + "% of your daily need in " + nameGraph + ".          ");
 
 
         //create pie data object
