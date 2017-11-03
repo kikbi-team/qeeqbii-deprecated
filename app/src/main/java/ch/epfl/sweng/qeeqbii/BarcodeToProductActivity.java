@@ -87,4 +87,3 @@ public class BarcodeToProductActivity extends AppCompatActivity {
         intent.putExtra("barcode", barcode);
         startActivity(intent);
     }
-}
