@@ -17,7 +17,7 @@ import static android.support.test.espresso.assertion.ViewAssertions.matches;
 import static android.support.test.espresso.matcher.ViewMatchers.withId;
 import static android.support.test.espresso.matcher.ViewMatchers.withText;
 
-/*
+
 @RunWith(AndroidJUnit4.class)
 public class CancerDataQueryTest {
     //public final ActivityTestRule<CancerDataQueryActivity> mActivityRule =
@@ -38,11 +38,11 @@ public class CancerDataQueryTest {
     }
     */
 
-    /*
+
     @Test
     public void testPerfectMatchCancerDataBase() {
         // Useful way of accessing resources
-        onView(withId(R.id.cancerDataQuery)).perform(click());
+        //onView(withId(R.id.cancerDataQuery)).perform(click());
 
         List<String[]> query_ans_pairs = new ArrayList<>();
 
@@ -55,12 +55,12 @@ public class CancerDataQueryTest {
         //query_ans_pairs.add(new String[]{null, "Substance{mId = -1, mAgent = 'empty', mGroup = 'empty'}"});
         // Apparently the replaceText method do not work with a null pointer which looks logical.
 
-        for (String[] iter : query_ans_pairs) {
-            onView(withId(R.id.cancerDataQueryTextField)).perform(replaceText(iter[0]));
-            onView(withId(R.id.cancerDataQueryButton)).perform(click());
-            onView(withId(R.id.queryCancerDataAnswerArea)).check(matches(withText(iter[1])));
-        }
+        //for (String[] iter : query_ans_pairs) {
+        //    onView(withId(R.id.cancerDataQueryTextField)).perform(replaceText(iter[0]));
+        //    onView(withId(R.id.cancerDataQueryButton)).perform(click());
+        //    onView(withId(R.id.queryCancerDataAnswerArea)).check(matches(withText(iter[1])));
+        //}
         //TextView text = (TextView)mActivityRule.getActivity().findViewById(R.id.perfectQueryAnswerArea);
         //onView(withId(R.id.greetingMessage)).check(matches(withText("Hello from my unit test!")));
     }
-}*/
+}

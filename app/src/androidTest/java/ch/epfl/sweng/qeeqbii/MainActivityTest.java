@@ -17,16 +17,17 @@ import static android.support.test.espresso.matcher.ViewMatchers.withId;
 import static android.support.test.espresso.matcher.ViewMatchers.withText;
 import static org.junit.Assert.assertEquals;
 
-/*
+
 
 @RunWith(AndroidJUnit4.class)
 public class MainActivityTest {
 
-    /*
+
     @Rule
     public final ActivityTestRule<MainActivity> mActivityRule =
             new ActivityTestRule<>(MainActivity.class);
 
+    /*
     @Test
     public void testCanOpenCancerDataBase() throws InterruptedException {
         onView(withId(R.id.cancerDataBaseButton)).perform(click());
@@ -77,6 +78,7 @@ public class MainActivityTest {
         assertEquals("ch.epfl.sweng.qeeqbii", appContext.getPackageName());
     }
 }
+*/
     @Test
     public void DisplayProductTest()
     {
@@ -104,5 +106,5 @@ public class MainActivityTest {
     public void testCanOpenQRCodesScanner() throws InterruptedException {
         onView(withId(R.id.mainBarcodeButton)).perform(click());
 
-    }
-}*/
+    }*/
+}
