@@ -225,7 +225,7 @@ public class MainActivityTest {
         onView(withId(R.id.mainBarcodeButton)).perform(click());
     }*/
 
-    /*
+    /* UNCOMMENT ME WHEN ADRIEN's CODE IS WORKING
     @Test
     public void testRecentShoopingItems() {
         // register next activity that need to be monitored.

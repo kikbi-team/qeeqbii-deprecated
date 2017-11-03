@@ -66,4 +66,14 @@ public class AShoppingCartClassShould {
         assertEquals(shop.getItemsInCart().get(1).getName(), content.get(1).getName());
         assertEquals(shop.getItemsInCart().get(2).getName(), content.get(2).getName());
     }
+
+    @Test
+    public void testConstructor() throws InterruptedException {
+        Product item = new Product("sausage", "500 mg", "Stuff", "cool Nutrients");
+        List<Product> products = new ArrayList<Product>();
+        ShoppingCart shop = new ShoppingCart(products);
+        shop.addItemToCart(item);
+        List<Product> items = shop.getItemsInCart();
+        assertEquals(shop.getSpecificItemInCart(items.size()-1).getName(), item.getName());
+    }
 }
