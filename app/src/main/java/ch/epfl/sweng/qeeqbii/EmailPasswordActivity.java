@@ -19,7 +19,6 @@ package ch.epfl.sweng.qeeqbii;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
-import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
@@ -36,7 +35,7 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-public class EmailPasswordActivity extends AppCompatActivity implements
+public class EmailPasswordActivity extends BaseActivity implements
         View.OnClickListener {
 
     private static final String TAG = "EmailPassword";
@@ -124,7 +123,7 @@ public class EmailPasswordActivity extends AppCompatActivity implements
             return;
         }
 
-        //showProgressDialog();
+        showProgressDialog();
 
         // [START create_user_with_email]
         mAuth.createUserWithEmailAndPassword(email, password)
@@ -145,7 +144,7 @@ public class EmailPasswordActivity extends AppCompatActivity implements
                         }
 
                         // [START_EXCLUDE]
-                        //hideProgressDialog();
+                        hideProgressDialog();
                         // [END_EXCLUDE]
                     }
                 });
@@ -158,7 +157,7 @@ public class EmailPasswordActivity extends AppCompatActivity implements
             return;
         }
 
-        //showProgressDialog();
+        showProgressDialog();
 
         // [START sign_in_with_email]
         mAuth.signInWithEmailAndPassword(email, password)
@@ -182,7 +181,7 @@ public class EmailPasswordActivity extends AppCompatActivity implements
                         if (!task.isSuccessful()) {
                             mStatusTextView.setText(R.string.auth_failed);
                         }
-                        //hideProgressDialog();
+                        hideProgressDialog();
                         // [END_EXCLUDE]
                     }
                 });
@@ -249,7 +248,7 @@ public class EmailPasswordActivity extends AppCompatActivity implements
     }
 
     private void updateUI(FirebaseUser user) {
-        //hideProgressDialog();
+        hideProgressDialog();
         if (user != null) {
             mStatusTextView.setText(getString(R.string.emailpassword_status_fmt,
                     user.getEmail(), user.isEmailVerified()));
