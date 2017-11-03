@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -50,6 +51,19 @@ public class RecentlyScannedProductsActivity extends AppCompatActivity {
         mAdapter = new ArrayAdapter(this.getApplicationContext(), R.layout.list_item_recently_scanned_product,
                 R.id.recently_scanned_product_text_view, listItems);
         mRecentlyScannedProductsListView.setAdapter(mAdapter);
+
+        mRecentlyScannedProductsListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+            @Override
+            public void onItemClick(AdapterView<?> adapter, View view, int position,
+                                    long arg3) {
+                Intent intent = new Intent(RecentlyScannedProductsActivity.this, BarcodeToProductActivity.class);
+                String txt = (String) adapter.getItemAtPosition(position);
+                intent.putExtra(MainActivity.BARCODE_READER,RecentlyScannedProductsActivity.displayed_products.get(txt));
+                startActivity(intent);
+            }
+
+        });
     }
 
     //ImageButton btn = (ImageButton) findViewById(R.id.delete_recently_scanned_product_button);
@@ -63,14 +77,6 @@ public class RecentlyScannedProductsActivity extends AppCompatActivity {
         mAdapter.clear();
         mAdapter.notifyDataSetChanged();
     }
-
-    /*public void showProductActivityFromRecentlyScanned(View view)
-    {
-        Intent intent = new Intent(this, BarcodeToProductActivity.class);
-        TextView txt = (TextView)view;
-        intent.putExtra(MainActivity.BARCODE_READER,RecentlyScannedProductsActivity.displayed_products.get(txt.getText()));
-        startActivity(intent);
-    }*/
 
     public void shareOnFacebookRecentlyScanned(View view)
     {
