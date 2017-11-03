@@ -13,6 +13,7 @@ import static android.support.test.espresso.assertion.ViewAssertions.matches;
 import static android.support.test.espresso.matcher.ViewMatchers.withId;
 import static android.support.test.espresso.matcher.ViewMatchers.withText;
 
+/*
 @RunWith(AndroidJUnit4.class)
 public class CancerDataShowActivityTest {
 
@@ -34,5 +35,4 @@ public class CancerDataShowActivityTest {
         }
         onView(withId(R.id.cancerDataBaseMessage)).check(matches(withText(string_tester)));
     }
-    */
-}
+}*/
