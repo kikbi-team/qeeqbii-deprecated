@@ -47,7 +47,7 @@ public class GraphsActivity extends AppCompatActivity {
         {
             String barcode = intent.getExtras().getString("barcode");
             TextView txt = (TextView) findViewById(R.id.product_name_graph_activity);
-            txt.setText(RecentlyScannedProducts.GetProduct(barcode).GetName());
+            txt.setText(RecentlyScannedProducts.getProduct(barcode).getName());
 
             try
             {
