@@ -66,11 +66,11 @@ public class FirebaseUITest {
         String idString = mActivityTestRule.getActivity().getString(R.string.id_fmt, "");
         String emailString = mActivityTestRule.getActivity().getString(R.string.email_fmt, "");
 
-        onView(withText(startsWith(idString)))
-                .check(matches(isDisplayed()));
+        //onView(withText(startsWith(idString))).check(matches(isDisplayed()));
+        onView(withId(R.id.anonymous_status_id)).check(matches(isDisplayed()));
 
-        onView(withText(startsWith(emailString)))
-                .check(matches(isDisplayed()));
+        //onView(withText(startsWith(emailString))).check(matches(isDisplayed()));
+        onView(withId(R.id.anonymous_status_email)).check(matches(isDisplayed()));
     }
 
     private void signOutIfPossible() {

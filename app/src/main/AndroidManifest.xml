@@ -51,7 +51,8 @@
             android:windowSoftInputMode="stateAlwaysHidden" />
         <activity
             android:name=".AnonymousAuthActivity"
-            android:label="@string/label_anonymous_auth" />
+            android:label="@string/label_anonymous_auth"
+            android:exported="true"/>
         <activity
             android:name=".TwitterLoginActivity"
             android:label="@string/label_twitter_login" />
