@@ -32,7 +32,7 @@ public class FirebaseUITest {
     public ActivityTestRule<AnonymousAuthActivity> mActivityTestRule =
             new ActivityTestRule<>(AnonymousAuthActivity.class);
 
-    @Before
+   /* @Before
     public void setUp() {
         if (mActivityResource != null) {
             Espresso.unregisterIdlingResources(mActivityResource);
@@ -49,7 +49,7 @@ public class FirebaseUITest {
             Espresso.unregisterIdlingResources(mActivityResource);
         }
     }
-
+*/
     @Test
     public void anonymousSignInTest() {
         // Sign out if possible
