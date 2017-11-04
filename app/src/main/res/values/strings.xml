@@ -30,6 +30,14 @@
     <string name="aliments_proscrire">Aliments à proscrire</string>
     <string name="save_and_continue">Save and continue</string>
     <string name="search_product">search product</string>
+    <string name="graphs">Graphs</string>
+    <string name="show_graphs_from_show_product_activity">See nutrients graphs</string>
+    <string name="scan_barcode">Scan Barcode</string>
+    <string name="cancer_database">Cancer Database</string>
+    <string name="open"> Open </string>
+    <string name="close"> Close </string>
+    <string name="nav_header">Menu</string>
+
     <string name="title_activity_shopping_cart">ShoppingCart</string>
     <string name="button_shopping">button_shopping</string>
     <string name="shopping_cart">Shopping Cart</string>
@@ -44,6 +52,9 @@
     <string name="query_cancer_n_database">QUERY CANCER\nDATABASE</string>
     <string name="scanned_n_product">SCANNED\nPRODUCTS</string>
     <string name="empty_field">Empty field</string>
+    <string name="scanned_products">Scanned Products</string>
+    <string name="harmfull_ingredients_search">Harmfull Ingredients Search</string>
+    <string name="search_product_from_barcode">Search Product From Barcode</string>
     <string name="mainNameLabel">Please enter barcode here.</string>
     <string name="product_name_in_graph">Product name</string>
     <string name="little_sentence_graph">100g of this product contains:</string>
@@ -52,5 +63,4 @@
     <string name="share_on_facebook">Share on Facebook</string>
     <string name="camera_perm_ok">Received camera permission</string>
     <string name="please_allow_camera">Please grant camera permission to use Qeeqbii</string>
-   
 </resources>

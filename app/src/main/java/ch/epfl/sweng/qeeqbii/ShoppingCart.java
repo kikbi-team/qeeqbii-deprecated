@@ -1,35 +1,44 @@
 package ch.epfl.sweng.qeeqbii;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
 /**
  * Created by davidcleres on 01.11.17.
  */
-
 public class ShoppingCart {
-    private List<String> m_item = new ArrayList<String>();
+
+    static private List<Product> m_items = new ArrayList<Product>();
+
+    static void addToShoppingCartList (Product product) {
+        m_items.add(product);
+    }
 
     public ShoppingCart(){
-        //TEST
-        m_item.add("Cheese");
-        m_item.add("Wine");
-        m_item.add("Beer");
+        //To avoid an empty list
+        //addItemToCart(new Product("Please Click on + to add an item", "0 mg", "Stuff", "cool Nutrients"));
     }
 
-    public void addItemToCart(String newItem) {
-        m_item.add(newItem);
+    public ShoppingCart(List<Product> items) {
+        m_items = items;
     }
 
-    public void addSpecificItemInCart(int index, String name) {
-        m_item.add(index, name);
+    public void addItemToCart(Product product) {
+        m_items.add(product);
     }
 
-    public List<String> getItemsInCart() {
-        return m_item;
-    }
-    public String getSpecificItemInCart(int index) {
-        return m_item.get(index);
+    public void addSpecificItemInCart(int index, Product product) {
+        m_items.add(index, product);
     }
 
+    public List<Product> getItemsInCart() {
+        return m_items;
+    }
+    public Product getSpecificItemInCart(int index) {
+        return m_items.get(index);
+    }
 }

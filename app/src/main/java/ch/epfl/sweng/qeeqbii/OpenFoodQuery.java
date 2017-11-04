@@ -166,6 +166,4 @@ class OpenFoodQuery extends AsyncTask<String, Void, Product> {
             throw new OpenFoodQueryException("ERROR: (OpenFoodQuery) : this barcode \"" + barcode + "\" is not cached.");
         }
     }
-
-
 }

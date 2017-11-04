@@ -4,7 +4,6 @@
     android:layout_height="wrap_content"
     android:padding="10dip">
 
-
     <TextView
         android:id="@+id/recently_scanned_product_text_view"
         android:layout_width="fill_parent"

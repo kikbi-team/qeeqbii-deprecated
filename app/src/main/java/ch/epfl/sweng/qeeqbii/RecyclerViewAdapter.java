@@ -16,11 +16,11 @@ import java.util.List;
 
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder> {
     private Activity activity;
-    private List<String> strings;
+    private List<Product> products;
 
-    public RecyclerViewAdapter(Activity activity, List<String> strings) {
+    public RecyclerViewAdapter(Activity activity, List<Product> products) {
         this.activity = activity;
-        this.strings = strings;
+        this.products = products;
     }
 
     @Override
@@ -33,13 +33,13 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     @Override
     public void onBindViewHolder(ViewHolder viewHolder, final int position) {
-        viewHolder.textView.setText(strings.get(position));
+        viewHolder.textView.setText(products.get(position).getName());
     }
 
     @Override
     public int getItemCount() {
 
-        return strings.size();
+        return products.size();
     }
 
     class ViewHolder extends RecyclerView.ViewHolder {

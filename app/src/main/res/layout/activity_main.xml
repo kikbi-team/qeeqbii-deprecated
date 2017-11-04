@@ -1,139 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="ch.epfl.sweng.qeeqbii.MainActivity"
+    tools:layout_editor_absoluteY="81dp"
     tools:layout_editor_absoluteX="0dp"
-    tools:layout_editor_absoluteY="81dp">
+    android:id="@+id/drawer_layout">
 
-    <Button
-        android:id="@+id/cancerDataBaseButton"
+    <android.support.constraint.ConstraintLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginTop="0dp"
-        android:onClick="cancerDataBaseShow"
-        android:text="@string/cancer_data"
-        app:layout_constraintHorizontal_bias="0.502"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cancerDataQuery" />
+        android:layout_height="wrap_content">
 
-    <Button
-        android:id="@+id/mainBarcodeButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginTop="-48dp"
-        android:onClick="readBarcode"
-        android:text="@string/barcode_button"
-        app:layout_constraintHorizontal_bias="0.502"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cancerDataBaseButton" />
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/search_product"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Barcode" />
 
+        <EditText
+            android:id="@+id/Barcode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            app:layout_constraintHorizontal_bias="0.503"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_conversion_absoluteHeight="46dp"
+            tools:layout_conversion_absoluteWidth="136dp" />
 
-    <TextView
-        android:id="@+id/welcomeText"
-        android:layout_width="168dp"
-        android:layout_height="76dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:text="@string/welcome_text"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        tools:layout_editor_absoluteY="483dp" />
-
+        <TextView
+            android:id="@+id/welcomeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="92dp"
+            android:text="@string/welcome_text"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/colorPrimary"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            tools:layout_conversion_absoluteHeight="129dp"
+            tools:layout_conversion_absoluteWidth="216dp" />
+    </android.support.constraint.ConstraintLayout>
 
 
     <EditText
         android:id="@+id/mainName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginTop="25dp"
         android:ems="10"
-        android:inputType="textPersonName"
         android:hint="@string/mainNameLabel"
+        android:inputType="textPersonName"
         app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/SearchProductButton"
+    <android.support.design.widget.NavigationView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginTop="-43dp"
-        android:onClick="searchProductFromBarcode"
-        android:text="@string/search_product"
-        app:layout_constraintHorizontal_bias="0.502"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mainName" />
-
-    <Button
-        android:id="@+id/cancerDataQuery"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginTop="-48dp"
-        android:onClick="cancerDataQuery"
-        android:text="@string/query_cancer_n_database"
-        app:layout_constraintHorizontal_bias="0.502"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/SearchProductButton" />
-
-    <ImageButton
-        android:id="@+id/shoppingButton"
-        android:layout_width="91dp"
-        android:layout_height="70dp"
-        android:onClick="showShoppingList"
-        app:layout_constraintBottom_toTopOf="@+id/welcomeText"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/buttonGraphs"
-        app:layout_constraintTop_toBottomOf="@+id/mainBarcodeButton"
-        app:srcCompat="@mipmap/shopping_cart"
-        android:contentDescription="@string/button_shopping"
-        tools:layout_editor_absoluteX="213dp"
-        app:layout_constraintVertical_bias="0.862" />
-
-    <ImageButton
-        android:id="@+id/buttonGraphs"
-        android:layout_width="88dp"
-        android:layout_height="71dp"
-        android:onClick="showGraphs"
-        app:layout_constraintBottom_toTopOf="@+id/welcomeText"
-        app:layout_constraintEnd_toStartOf="@+id/shoppingButton"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mainBarcodeButton"
-        app:srcCompat="@mipmap/graph"
-        android:contentDescription="@string/button_graphs"
-        tools:layout_editor_absoluteX="67dp"
-        app:layout_constraintVertical_bias="0.868" />
-
-    <Button
-        android:id="@+id/listRecentlyScannedProductButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="144dp"
-        android:layout_marginTop="-8dp"
-        android:onClick="showRecentlyScannedProductsActivity"
-        android:text="@string/scanned_n_product"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mainBarcodeButton" />
-
-</android.support.constraint.ConstraintLayout>
+        android:layout_height="match_parent"
+        app:menu="@menu/nav_menu"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/nav_header"
+        tools:layout_editor_absoluteY="8dp"
+        tools:layout_editor_absoluteX="0dp">
+    </android.support.design.widget.NavigationView>
+</android.support.v4.widget.DrawerLayout>
