@@ -70,6 +70,7 @@ public class AnonymousTest {
 
         onView(withText(startsWith(emailString)))
                 .check(matches(isDisplayed()));
+
         // Sign out if possible
         signOutIfPossible();
 
