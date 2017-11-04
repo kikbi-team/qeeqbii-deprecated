@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="ch.epfl.sweng.qeeqbii.ShoppingList">
+    tools:context="ch.epfl.sweng.qeeqbii.ShoppingListActivity">
 
     <LinearLayout
         android:layout_width="344dp"
@@ -24,16 +24,18 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:backgroundTint="@color/colorPrimaryDark"
-                app:srcCompat="@mipmap/chips"
-                android:contentDescription="@string/chips" />
+                android:contentDescription="@string/chips"
+                android:onClick="addChip"
+                app:srcCompat="@mipmap/chips" />
 
             <ImageButton
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:backgroundTint="@color/pastelred"
-                app:srcCompat="@drawable/wine"
-                android:contentDescription="@string/wine" />
+                android:contentDescription="@string/wine"
+                android:onClick="addWine"
+                app:srcCompat="@drawable/wine" />
         </LinearLayout>
 
     </LinearLayout>
@@ -54,6 +56,7 @@
             android:layout_weight="1"
             android:backgroundTint="@color/bordeau"
             android:contentDescription="@string/vegetables"
+            android:onClick="addVegetable"
             app:srcCompat="@mipmap/vegetables" />
 
         <ImageButton
@@ -62,6 +65,7 @@
             android:layout_weight="1"
             android:backgroundTint="#49c5b4"
             android:contentDescription="@string/meat"
+            android:onClick="addMeat"
             app:srcCompat="@mipmap/meat" />
     </LinearLayout>
 
@@ -82,14 +86,17 @@
             android:layout_weight="1"
             android:backgroundTint="@color/navyblue"
             android:contentDescription="@string/cheese"
+            android:onClick="addCheese"
             app:srcCompat="@drawable/cheese" />
 
         <ImageButton
+            android:id="@+id/imageButton"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:backgroundTint="@color/Green"
             android:contentDescription="@string/apple"
+            android:onClick="addApple"
             app:srcCompat="@mipmap/apple" />
     </LinearLayout>
 
