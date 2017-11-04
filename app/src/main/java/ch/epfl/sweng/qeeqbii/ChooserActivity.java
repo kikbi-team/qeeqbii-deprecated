@@ -47,7 +47,6 @@ public class ChooserActivity extends AppCompatActivity implements AdapterView.On
             TwitterLoginActivity.class,
             EmailPasswordActivity.class,
             AnonymousAuthActivity.class,
-            FirebaseUIActivity.class
     };
 
     private static final int[] DESCRIPTION_IDS = new int[] {

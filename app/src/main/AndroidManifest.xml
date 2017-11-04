@@ -56,9 +56,6 @@
         <activity
             android:name=".TwitterLoginActivity"
             android:label="@string/label_twitter_login" />
-        <activity
-            android:name=".FirebaseUIActivity"
-            android:label="@string/label_firebase_ui" />
 
         <activity android:name=".MainActivity" android:label="@string/app_name">
             <intent-filter>

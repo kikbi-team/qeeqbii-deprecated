@@ -63,9 +63,6 @@ public class EmailPasswordTest {
         // Make sure we're signed out
         signOutIfPossible();
 
-        //Disconnect if possible
-        SaveIfPossible();
-
 
         // Enter email
         enterEmail(email);
@@ -74,19 +71,19 @@ public class EmailPasswordTest {
         enterPassword(password);
 
         // Click sign in
-        /*ViewInteraction appCompatButton = onView(
+        ViewInteraction appCompatButton = onView(
                 allOf(withId(R.id.email_sign_in_button), withText(R.string.sign_in),
                         withParent(withId(R.id.email_password_buttons)),
                         isDisplayed()));
-        appCompatButton.perform(click());*/
-        ViewInteraction appCompatButton = onView(withId(R.id.email_sign_in_button));
         appCompatButton.perform(click());
+        //ViewInteraction appCompatButton = onView(withId(R.id.email_sign_in_button));
+        //appCompatButton.perform(click());
 
 
         // Check that auth failed
-        //onView(withText(R.string.auth_failed))
-        //onView(withId(R.id.))
-        //        .check(matches(isDisplayed()));
+        onView(withText(R.string.auth_failed));
+        //onView(withId(R.id.sign_out_button))
+          //     .check(matches(isDisplayed()));
     }
 
     /*
