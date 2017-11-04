@@ -96,8 +96,6 @@ public class FacebookLoginTest {
         Thread.sleep(200);
         Espresso.closeSoftKeyboard();
         Thread.sleep(200);
-        //onView(withId(R.id.buttonSave)).perform(click());
         onView(withId(R.id.button_facebook_login)).perform(click());
-        //onView(withId(R.id.button_facebook_signout)).perform(click());
     }
 }

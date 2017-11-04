@@ -1,5 +1,38 @@
 package ch.epfl.sweng.qeeqbii;
 
+import android.support.test.espresso.Espresso;
+import android.support.test.espresso.intent.rule.IntentsTestRule;
+import android.support.test.runner.AndroidJUnit4;
+
+import org.junit.Rule;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+
+import static android.support.test.InstrumentationRegistry.getTargetContext;
+import static android.support.test.espresso.Espresso.onView;
+import static android.support.test.espresso.action.ViewActions.click;
+import static android.support.test.espresso.intent.Intents.intended;
+import static android.support.test.espresso.intent.matcher.IntentMatchers.hasComponent;
+import static android.support.test.espresso.matcher.ViewMatchers.withId;
+
+
+
+@RunWith(AndroidJUnit4.class)
+public class TwitterTest {
+    @Rule
+    public final IntentsTestRule<TwitterLoginActivity> mActivityRule =
+            new IntentsTestRule<>(TwitterLoginActivity.class);
+
+    @Test
+    public void useAppContext() throws Exception {
+        TwitterLoginActivity activity = mActivityRule.getActivity();
+        Thread.sleep(200);
+        Espresso.closeSoftKeyboard();
+        Thread.sleep(200);
+        onView(withId(R.id.button_twitter_login)).perform(click());
+    }
+}
+/*
 import android.support.test.espresso.IdlingResource;
 import android.support.test.espresso.NoMatchingViewException;
 import android.support.test.rule.ActivityTestRule;
@@ -58,7 +91,7 @@ public class TwitterTest {
 
     }*/
 
-    private void SaveIfPossible() {
+   /* private void SaveIfPossible() {
         try {
             onView(allOf(withId(R.id.buttonSave), isDisplayed()))
                     .perform(click());
@@ -68,4 +101,4 @@ public class TwitterTest {
 
     }
 
-}
+}*/
