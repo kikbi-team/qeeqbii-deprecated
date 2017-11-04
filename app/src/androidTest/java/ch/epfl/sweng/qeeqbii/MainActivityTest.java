@@ -86,7 +86,7 @@ public class MainActivityTest {
         onView(withId(R.id.SearchProductButton)).perform(click());
     }*/
 
-   /* @Test
+    @Test
     public void testOpenGraphs() {
         // register next activity that need to be monitored.
         Instrumentation.ActivityMonitor activityMonitor = getInstrumentation().addMonitor(GraphsActivity.class.getName(), null, false);
@@ -102,7 +102,7 @@ public class MainActivityTest {
         // next activity is opened and captured.
         assertNotNull(nextActivity);
         nextActivity.finish();
-    }*/
+    }
 
     /*
     @Test

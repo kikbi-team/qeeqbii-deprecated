@@ -1,6 +1,4 @@
 package ch.epfl.sweng.qeeqbii;
-
-
 import android.support.test.espresso.Espresso;
 import android.support.test.espresso.IdlingResource;
 import android.support.test.espresso.NoMatchingViewException;
@@ -16,6 +14,8 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 
 import java.util.Random;
+
+import ch.epfl.sweng.qeeqbii.R;
 
 import static android.support.test.espresso.Espresso.onView;
 import static android.support.test.espresso.action.ViewActions.click;
@@ -36,7 +36,7 @@ public class EmailPasswordTest {
     @Rule
     public ActivityTestRule<EmailPasswordActivity> mActivityTestRule =
             new ActivityTestRule<>(EmailPasswordActivity.class);
-/*
+
     @Before
     public void setUp() {
         if (mActivityResource != null) {
@@ -54,7 +54,7 @@ public class EmailPasswordTest {
             Espresso.unregisterIdlingResources(mActivityResource);
         }
     }
-*/
+
     @Test
     public void failedSignInTest() {
         String email = "test@test.com";
@@ -62,7 +62,6 @@ public class EmailPasswordTest {
 
         // Make sure we're signed out
         signOutIfPossible();
-
 
         // Enter email
         enterEmail(email);
@@ -76,17 +75,12 @@ public class EmailPasswordTest {
                         withParent(withId(R.id.email_password_buttons)),
                         isDisplayed()));
         appCompatButton.perform(click());
-        //ViewInteraction appCompatButton = onView(withId(R.id.email_sign_in_button));
-        //appCompatButton.perform(click());
-
 
         // Check that auth failed
-        onView(withText(R.string.auth_failed));
-        //onView(withId(R.id.sign_out_button))
-          //     .check(matches(isDisplayed()));
+        onView(withText(R.string.auth_failed))
+                .check(matches(isDisplayed()));
     }
 
-    /*
     @Test
     public void successfulSignUpAndSignInTest() {
         String email = "user" + randomInt() + "@example.com";
@@ -94,10 +88,6 @@ public class EmailPasswordTest {
 
         // Make sure we're signed out
         signOutIfPossible();
-
-        //Disconnect if possible
-        SaveIfPossible();
-
 
         // Enter email
         enterEmail(email);
@@ -135,48 +125,16 @@ public class EmailPasswordTest {
                         isDisplayed()));
         signInButton.perform(click());
 
-        //User email shown
+        // User email shown
         onView(withText(emailString))
                 .check(matches(isDisplayed()));
+
+        saveAndContinue();
     }
-*/
+
     private void signOutIfPossible() {
         try {
-            //onView(allOf(withId(R.id.sign_out_button), withText(R.string.sign_out), isDisplayed()))
-            onView(withId(R.id.sign_out_button))
-                    .perform(click());
-        } catch (NoMatchingViewException e) {
-             //Ignore
-        }
-
-    }
-
-    private void enterEmail(String email) {
-        ViewInteraction emailField = onView(
-                withId(R.id.field_email));
-                //allOf(withId(R.id.field_email),
-                        //withParent(withId(R.id.email_password_fields)),
-                        //isDisplayed()));
-        emailField.perform(replaceText(email));
-    }
-
-    private void enterPassword(String password) {
-        ViewInteraction passwordField = onView(
-                withId(R.id.field_password));
-                //allOf(withId(R.id.field_password),
-                        //withParent(withId(R.id.email_password_fields)),
-                        //isDisplayed()));
-        passwordField.perform(replaceText(password));
-    }
-
-    private String randomInt() {
-        return String.valueOf(((new Random()).nextInt(100000)));
-    }
-
-    private void SaveIfPossible() {
-        try {
-            //onView(allOf(withId(R.id.buttonSave), isDisplayed()))
-            onView(withId(R.id.buttonSave))
+            onView(allOf(withId(R.id.sign_out_button), withText(R.string.sign_out), isDisplayed()))
                     .perform(click());
         } catch (NoMatchingViewException e) {
             // Ignore
@@ -184,4 +142,33 @@ public class EmailPasswordTest {
 
     }
 
+    private void enterEmail(String email) {
+        ViewInteraction emailField = onView(
+                allOf(withId(R.id.field_email),
+                        withParent(withId(R.id.email_password_fields)),
+                        isDisplayed()));
+        emailField.perform(replaceText(email));
+    }
+
+    private void enterPassword(String password) {
+        ViewInteraction passwordField = onView(
+                allOf(withId(R.id.field_password),
+                        withParent(withId(R.id.email_password_fields)),
+                        isDisplayed()));
+        passwordField.perform(replaceText(password));
+    }
+
+    private String randomInt() {
+        return String.valueOf(((new Random()).nextInt(100000)));
+    }
+
+    private void saveAndContinue() {
+        try {
+            onView(allOf(withId(R.id.buttonSave), isDisplayed()))
+                    .perform(click());
+        } catch (NoMatchingViewException e) {
+            // Ignore
+        }
+
+    }
 }

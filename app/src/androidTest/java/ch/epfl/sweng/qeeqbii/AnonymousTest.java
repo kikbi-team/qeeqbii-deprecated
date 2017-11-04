@@ -13,6 +13,8 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
+import ch.epfl.sweng.qeeqbii.R;
+
 import static android.support.test.espresso.Espresso.onView;
 import static android.support.test.espresso.action.ViewActions.click;
 import static android.support.test.espresso.assertion.ViewAssertions.matches;
@@ -32,7 +34,7 @@ public class AnonymousTest {
     public ActivityTestRule<AnonymousAuthActivity> mActivityTestRule =
             new ActivityTestRule<>(AnonymousAuthActivity.class);
 
-   /* @Before
+    @Before
     public void setUp() {
         if (mActivityResource != null) {
             Espresso.unregisterIdlingResources(mActivityResource);
@@ -48,34 +50,45 @@ public class AnonymousTest {
         if (mActivityResource != null) {
             Espresso.unregisterIdlingResources(mActivityResource);
         }
-    }*/
+    }
 
     @Test
     public void anonymousSignInTest() {
         // Sign out if possible
         signOutIfPossible();
-        //Disconnect if possible
-        SaveIfPossible();
-
 
         // Click sign in
-        //onView(allOf(withId(R.id.button_anonymous_sign_in),
-        //       withText(R.string.sign_in), isDisplayed())).perform(click());
-
-        onView(withId(R.id.button_anonymous_sign_in)).perform(click());
+        onView(allOf(withId(R.id.button_anonymous_sign_in),
+                withText(R.string.sign_in), isDisplayed())).perform(click());
 
         // Make sure userID and email look right
-      // String idString = mActivityTestRule.getActivity().getString(R.string.id_fmt, "");
-        //String emailString = mActivityTestRule.getActivity().getString(R.string.email_fmt, "");
+        String idString = mActivityTestRule.getActivity().getString(R.string.id_fmt, "");
+        String emailString = mActivityTestRule.getActivity().getString(R.string.email_fmt, "");
 
-//        onView(withText(startsWith(idString)))
-  //              .check(matches(isDisplayed()));
+        onView(withText(startsWith(idString)))
+                .check(matches(isDisplayed()));
 
-//       onView(withText(startsWith(emailString)))
-  //             .check(matches(isDisplayed()));
+        onView(withText(startsWith(emailString)))
+                .check(matches(isDisplayed()));
+        // Sign out if possible
+        signOutIfPossible();
+
+        // Click sign in
+        onView(allOf(withId(R.id.button_anonymous_sign_in),
+                withText(R.string.sign_in), isDisplayed())).perform(click());
+
+        // Make sure userID and email look right
+
+        onView(withText(startsWith(idString)))
+                .check(matches(isDisplayed()));
+
+        onView(withText(startsWith(emailString)))
+                .check(matches(isDisplayed()));
+
+        saveAndContinue ();
     }
 
-    private void signOutIfPossible(){
+    private void signOutIfPossible() {
         try {
             onView(allOf(withId(R.id.button_anonymous_sign_out), isDisplayed()))
                     .perform(click());
@@ -84,7 +97,8 @@ public class AnonymousTest {
         }
 
     }
-    private void SaveIfPossible() {
+
+    private void saveAndContinue() {
         try {
             onView(allOf(withId(R.id.buttonSave), isDisplayed()))
                     .perform(click());
