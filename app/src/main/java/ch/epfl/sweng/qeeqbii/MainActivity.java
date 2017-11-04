@@ -2,15 +2,12 @@ package ch.epfl.sweng.qeeqbii;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Parcelable;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
-
-import static ch.epfl.sweng.qeeqbii.R.layout.activity_main;
 
 public class MainActivity extends AppCompatActivity {
     public static final String BARCODE_READER = "ch.epfl.sweng.qeeqbii.mainBarcode";
@@ -53,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+
     public void showShoppingList(MenuItem view) {
         Intent intent = new Intent(this, ShoppingCartActivity.class);
         startActivity(intent);
@@ -68,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void searchProductFromBarcode(MenuItem item) {
+    public void searchProductFromBarcode(View view) {
         Intent intent = new Intent(this, BarcodeToProductActivity.class);
         EditText editText = (EditText) findViewById(R.id.Barcode);
         String barcode = editText.getText().toString();

@@ -31,8 +31,4 @@
         android:onClick="showRecentlyScannedProductsActivity"
         android:title="@string/scanned_products" />
 
-    <item
-        android:id="@+id/nav_searchProductFromBarcode"
-        android:onClick="searchProductFromBarcode"
-        android:title="@string/search_product_from_barcode" />
 </menu>
