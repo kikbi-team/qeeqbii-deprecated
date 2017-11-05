@@ -95,10 +95,10 @@ public class EmailPasswordTest {
     public void successfulSignUpAndSignInTest() {
         String email = "user" + randomInt() + "@example.com";
         String password = "password" + randomInt();
-        String firstname= "Nicolas";
-        String lastname="Lesimple";
-        String allergie = "cacahètes";
-        String aliment = "fruits";
+        //String firstname= "Nicolas";
+        //String lastname="Lesimple";
+        //String allergie = "cacahètes";
+        //String aliment = "fruits";
 
         // Make sure we're signed out
         signOutIfPossible();
@@ -125,10 +125,10 @@ public class EmailPasswordTest {
         onView(withText(emailString))
                 .check(matches(isDisplayed()));
         //enter informations
-        enterFirstName(firstname);
-        enterLastName(lastname);
-        enterAllergies(allergie);
-        enterAliment(aliment);
+        //enterFirstName(firstname);
+        //enterLastName(lastname);
+        //enterAllergies(allergie);
+        //enterAliment(aliment);
 
         // Sign out
         signOutIfPossible();
