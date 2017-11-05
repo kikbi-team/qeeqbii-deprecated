@@ -25,8 +25,7 @@ import com.google.firebase.database.FirebaseDatabase;
 /**
  * Activity to demonstrate anonymous login and account linking (with an email/password account).
  */
-public class AnonymousAuthActivity extends BaseActivity implements
-        View.OnClickListener {
+public class AnonymousAuthActivity extends BaseActivity implements View.OnClickListener {
 
     private static final String TAG = "AnonymousAuth";
 

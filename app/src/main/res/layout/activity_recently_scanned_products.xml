@@ -20,7 +20,7 @@
             android:layout_marginStart="20dp"
             app:srcCompat="@drawable/facebook_round"
             android:onClick="shareOnFacebookRecentlyScanned"
-            android:contentDescription="facebook share button"
+            android:contentDescription="@string/facebook_share_button"
             android:background="@color/white"/>
 
         <android.support.v7.widget.AppCompatImageButton

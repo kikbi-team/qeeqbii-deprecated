@@ -10,20 +10,19 @@ import android.widget.ImageView;
 
 public class ShoppingCartActivity extends AppCompatActivity {
 
-    private RecyclerView RecyclerView;
     private ShoppingCart m_cart = new ShoppingCart();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_shopping_cart);
-        RecyclerView = (RecyclerView)findViewById(R.id.recycler);
+        RecyclerView recyclerView = (RecyclerView)findViewById(R.id.recycler);
         //create and set layout manager for each RecyclerView
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
-        RecyclerView.setLayoutManager(layoutManager);
+        recyclerView.setLayoutManager(layoutManager);
         //Initializing and set adapter for each RecyclerView
         RecyclerViewAdapter adapter = new RecyclerViewAdapter(this, m_cart.getItemsInCart());
-        RecyclerView.setAdapter(adapter);
+        recyclerView.setAdapter(adapter);
     }
 
     public void showShoppingList(View view) {
