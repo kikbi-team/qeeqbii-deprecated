@@ -1,11 +1,20 @@
 package ch.epfl.sweng.qeeqbii;
 
+import android.content.Intent;
+import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.view.View;
+
 import android.os.Parcel;
 import android.os.Parcelable;
 
 import java.io.Serializable;
+
 import java.util.ArrayList;
 import java.util.List;
+
 
 /**
  * Created by davidcleres on 01.11.17.
