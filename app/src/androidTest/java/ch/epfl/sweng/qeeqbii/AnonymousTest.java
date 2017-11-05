@@ -3,6 +3,7 @@ package ch.epfl.sweng.qeeqbii;
 import android.support.test.espresso.Espresso;
 import android.support.test.espresso.IdlingResource;
 import android.support.test.espresso.NoMatchingViewException;
+import android.support.test.espresso.ViewInteraction;
 import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
 import android.test.suitebuilder.annotation.LargeTest;
@@ -17,6 +18,7 @@ import ch.epfl.sweng.qeeqbii.R;
 
 import static android.support.test.espresso.Espresso.onView;
 import static android.support.test.espresso.action.ViewActions.click;
+import static android.support.test.espresso.action.ViewActions.replaceText;
 import static android.support.test.espresso.assertion.ViewAssertions.matches;
 import static android.support.test.espresso.matcher.ViewMatchers.isDisplayed;
 import static android.support.test.espresso.matcher.ViewMatchers.withId;
@@ -54,6 +56,11 @@ public class AnonymousTest {
 
     @Test
     public void anonymousSignInTest() {
+        String firstname= "Nicolas";
+        String lastname="Lesimple";
+        String allergie = "cacahètes";
+        String aliment = "fruits";
+
         // Sign out if possible
         signOutIfPossible();
 
@@ -70,6 +77,12 @@ public class AnonymousTest {
 
         onView(withText(startsWith(emailString)))
                 .check(matches(isDisplayed()));
+
+        //enter informations
+        enterFirstName(firstname);
+        enterLastName(lastname);
+        enterAllergies(allergie);
+        enterAliment(aliment);
 
         // Sign out if possible
         signOutIfPossible();
@@ -107,5 +120,29 @@ public class AnonymousTest {
             // Ignore
         }
 
+    }
+    private void enterFirstName (String firstname){
+        ViewInteraction passwordField = onView(
+                allOf(withId(R.id.editTextFirstName),
+                        isDisplayed()));
+        passwordField.perform(replaceText(firstname));
+    }
+    private void enterLastName (String lastname) {
+        ViewInteraction passwordField = onView(
+                allOf(withId(R.id.editTextLastName),
+                        isDisplayed()));
+        passwordField.perform(replaceText(lastname));
+    }
+    private void enterAllergies (String allergies) {
+        ViewInteraction passwordField = onView(
+                allOf(withId(R.id.editTextAllergie),
+                        isDisplayed()));
+        passwordField.perform(replaceText(allergies));
+    }
+    private void enterAliment (String aliment) {
+        ViewInteraction passwordField = onView(
+                allOf(withId(R.id.editTextGout),
+                        isDisplayed()));
+        passwordField.perform(replaceText(aliment));
     }
 }

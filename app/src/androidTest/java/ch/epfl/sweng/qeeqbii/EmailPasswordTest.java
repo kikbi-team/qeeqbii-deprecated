@@ -59,9 +59,19 @@ public class EmailPasswordTest {
     public void failedSignInTest() {
         String email = "test@test.com";
         String password = "123456";
+        String firstname= "Nicolas";
+        String lastname="Lesimple";
+        String allergie = "cacahètes";
+        String aliment = "fruits";
 
         // Make sure we're signed out
         signOutIfPossible();
+
+        //enter informations
+        enterFirstName(firstname);
+        enterLastName(lastname);
+        enterAllergies(allergie);
+        enterAliment(aliment);
 
         // Enter email
         enterEmail(email);
@@ -85,6 +95,10 @@ public class EmailPasswordTest {
     public void successfulSignUpAndSignInTest() {
         String email = "user" + randomInt() + "@example.com";
         String password = "password" + randomInt();
+        String firstname= "Nicolas";
+        String lastname="Lesimple";
+        String allergie = "cacahètes";
+        String aliment = "fruits";
 
         // Make sure we're signed out
         signOutIfPossible();
@@ -110,6 +124,11 @@ public class EmailPasswordTest {
                 .getString(R.string.emailpassword_status_fmt, email,false);
         onView(withText(emailString))
                 .check(matches(isDisplayed()));
+        //enter informations
+        enterFirstName(firstname);
+        enterLastName(lastname);
+        enterAllergies(allergie);
+        enterAliment(aliment);
 
         // Sign out
         signOutIfPossible();
@@ -158,6 +177,30 @@ public class EmailPasswordTest {
         passwordField.perform(replaceText(password));
     }
 
+    private void enterFirstName (String firstname){
+        ViewInteraction passwordField = onView(
+                allOf(withId(R.id.editTextFirstName),
+                        isDisplayed()));
+        passwordField.perform(replaceText(firstname));
+    }
+    private void enterLastName (String lastname) {
+        ViewInteraction passwordField = onView(
+                allOf(withId(R.id.editTextLastName),
+                        isDisplayed()));
+        passwordField.perform(replaceText(lastname));
+    }
+    private void enterAllergies (String allergies) {
+        ViewInteraction passwordField = onView(
+                allOf(withId(R.id.editTextAllergie),
+                        isDisplayed()));
+        passwordField.perform(replaceText(allergies));
+    }
+    private void enterAliment (String aliment) {
+        ViewInteraction passwordField = onView(
+                allOf(withId(R.id.editTextGout),
+                        isDisplayed()));
+        passwordField.perform(replaceText(aliment));
+    }
     private String randomInt() {
         return String.valueOf(((new Random()).nextInt(100000)));
     }
