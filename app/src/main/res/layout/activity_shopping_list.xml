@@ -99,6 +99,4 @@
             android:onClick="addApple"
             app:srcCompat="@drawable/apple" />
     </LinearLayout>
-
-
 </android.support.constraint.ConstraintLayout>

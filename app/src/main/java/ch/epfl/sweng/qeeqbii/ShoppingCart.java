@@ -47,6 +47,7 @@ public class ShoppingCart {
     public List<Product> getItemsInCart() {
         return m_items;
     }
+
     public Product getSpecificItemInCart(int index) {
         return m_items.get(index);
     }

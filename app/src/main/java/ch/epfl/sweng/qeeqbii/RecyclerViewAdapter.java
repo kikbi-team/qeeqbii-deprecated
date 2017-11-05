@@ -43,6 +43,10 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         return products.size();
     }
 
+    public Activity getActivity() { return activity; }
+
+    public List<Product> getProducts() { return products; }
+
     //NESTED CLASS
     class ViewHolder extends RecyclerView.ViewHolder {
         private TextView textView;
