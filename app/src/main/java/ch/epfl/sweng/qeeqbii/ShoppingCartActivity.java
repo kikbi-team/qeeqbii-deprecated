@@ -29,4 +29,10 @@ public class ShoppingCartActivity extends AppCompatActivity {
         Intent intent = new Intent(this, ShoppingListActivity.class);
         startActivity(intent);
     }
+
+    public void deleteShoppingList(View view) {
+        ShoppingCart.emptyShoppingCartList();
+        Intent intent = new Intent(this, ShoppingCartActivity.class);
+        startActivity(intent);
+    }
 }
