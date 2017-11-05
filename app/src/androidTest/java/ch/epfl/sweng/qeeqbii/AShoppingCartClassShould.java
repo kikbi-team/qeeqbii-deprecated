@@ -32,6 +32,13 @@ public class AShoppingCartClassShould {
     */
 
     @Test
+    public void testDefaultConstructor() throws InterruptedException {
+        ShoppingCart shop = new ShoppingCart();
+        shop.emptyShoppingCartList();
+        assertEquals(true, shop.getItemsInCart().isEmpty());
+    }
+
+    @Test
     //be able to sense that one clicked the button
     public void addSpecificItemToList() throws InterruptedException {
         Product item = new Product("sausage", "500 mg", "Stuff", "cool Nutrients", R.drawable.cheese);
@@ -75,11 +82,5 @@ public class AShoppingCartClassShould {
         shop.addItemToCart(item);
         List<Product> items = shop.getItemsInCart();
         assertEquals(shop.getSpecificItemInCart(items.size()-1).getName(), item.getName());
-    }
-
-    @Test
-    public void testDefaultConstructor() throws InterruptedException {
-        ShoppingCart shop = new ShoppingCart();
-        assertEquals(true, shop.getItemsInCart().isEmpty());
     }
 }

@@ -27,6 +27,10 @@ public class ShoppingCart {
         m_items.add(product);
     }
 
+    static void emptyShoppingCartList () {
+        m_items.clear();
+    }
+
     public ShoppingCart(){
         //To avoid an empty list
         //addItemToCart(new Product("Please Click on + to add an item", "0 mg", "Stuff", "cool Nutrients"));
