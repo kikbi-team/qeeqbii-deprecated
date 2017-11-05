@@ -46,15 +46,13 @@ public class GoogleSignInActivity extends BaseActivity implements
     private TextView mStatusTextView;
     private TextView mDetailTextView;
 
-
     private DatabaseReference databaseReference;
     private EditText editTextFirstName, editTextLastName, editTextAllergie, editTextGout;
-    private Button buttonSave;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_google_sign_in);
+        setContentView(R.layout.activity_google);
 
         // Views
         mStatusTextView = (TextView) findViewById(R.id.status);
@@ -87,8 +85,9 @@ public class GoogleSignInActivity extends BaseActivity implements
         editTextFirstName = (EditText) findViewById(R.id.editTextFirstName);
         editTextLastName = (EditText) findViewById(R.id.editTextLastName);
         editTextGout = (EditText) findViewById(R.id.editTextGout);
-        buttonSave = (Button) findViewById(R.id.buttonSave);
+        Button buttonSave = (Button) findViewById(R.id.buttonSave);
         buttonSave.setOnClickListener(this);
+
     }
 
     private void saveUserInformation() {
@@ -254,8 +253,7 @@ public class GoogleSignInActivity extends BaseActivity implements
         }
         else if (i == R.id.disconnect_button) {
             revokeAccess();
-        }
-        if (v == buttonSave) {
+        } else if (i == R.id.buttonSave) {
             saveUserInformation();
         }
     }

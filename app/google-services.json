@@ -8,56 +8,76 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:962204149834:android:7e30437d1ce326cd",
-        "android_client_info": {
-          "package_name": "ch.epfl.sweng.bootcamp"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "962204149834-heth55ug4l3rfj35j6vceipugpqbm2u2.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "ch.epfl.sweng.bootcamp",
-            "certificate_hash": "17ace38f8f1de35f4e66321e3ea9eff5dbb0fa9c"
-          }
-        },
-        {
-          "client_id": "962204149834-0ids9jfnl5b7m18ps4oo1dctni2eloqm.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyCb3ODQtrXzsjFSp2jQfmU5EeMwojMhDn0"
-        }
-      ],
-      "services": {
-        "analytics_service": {
-          "status": 1
-        },
-        "appinvite_service": {
-          "status": 2,
-          "other_platform_oauth_client": [
-            {
-              "client_id": "962204149834-0ids9jfnl5b7m18ps4oo1dctni2eloqm.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
-        },
-        "ads_service": {
-          "status": 2
-        }
-      }
-    },
-    {
-      "client_info": {
         "mobilesdk_app_id": "1:962204149834:android:ce61f0923604108e",
         "android_client_info": {
           "package_name": "ch.epfl.sweng.qeeqbii"
         }
       },
       "oauth_client": [
+        {
+          "client_id": "962204149834-fc7qf0djfdth2dosdukhag4l60kuoji3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "ch.epfl.sweng.qeeqbii",
+            "certificate_hash": "4068db3937f7630f2a01db52da884e050fded093"
+          }
+        },
+        {
+          "client_id": "962204149834-26k6l5hek3jdg6763iq06nvo2fqjm4lc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "ch.epfl.sweng.qeeqbii",
+            "certificate_hash": "80c10ac6198cbd19ec5f4ac9dcdf22e91bd0a976"
+          }
+        },
+        {
+          "client_id": "962204149834-5ne18l2o29rbk1sb64l64h2epr79ddot.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "ch.epfl.sweng.qeeqbii",
+            "certificate_hash": "d3f12e6f3ee3f4cb7f13b79f8a0186eb2c2cfd26"
+          }
+        },
+        {
+          "client_id": "962204149834-7kibu47fmd8bsdrv4plt2nlob79rldcu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "ch.epfl.sweng.qeeqbii",
+            "certificate_hash": "40050b8bc79bb2a26143d0ad570096f4ff368959"
+          }
+        },
+        {
+          "client_id": "962204149834-2j5cqrhe2ea6d0lhech1d10ep90ncqgd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "ch.epfl.sweng.qeeqbii",
+            "certificate_hash": "3716264584d277e7823b5690182ced672806277c"
+          }
+        },
+        {
+          "client_id": "962204149834-37k1uoarvdpqe46e1uq9hpfljfetrokk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "ch.epfl.sweng.qeeqbii",
+            "certificate_hash": "2d49ca2b2f8406a86d872c7f2a2cb712f852b2a0"
+          }
+        },
+        {
+          "client_id": "962204149834-k794l135vms311igvv91rjqi02lnktqb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "ch.epfl.sweng.qeeqbii",
+            "certificate_hash": "ff2c6d433822efd5e53bc0002b41766ea64bc9e2"
+          }
+        },
+        {
+          "client_id": "962204149834-ca0vaamv3n895ji3j3r5m5ps9857mvov.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "ch.epfl.sweng.qeeqbii",
+            "certificate_hash": "03ea549269ee652acb4b24ba6ccc0787367bdca7"
+          }
+        },
         {
           "client_id": "962204149834-v2jh13n7qc4q60qvqfuok1mv5of8h0da.apps.googleusercontent.com",
           "client_type": 1,

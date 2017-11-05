@@ -1,7 +1,5 @@
 package ch.epfl.sweng.qeeqbii;
 
-
-
 import android.app.ProgressDialog;
 import android.support.annotation.VisibleForTesting;
 import android.support.v7.app.AppCompatActivity;
@@ -9,7 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 public class BaseActivity extends AppCompatActivity {
 
     @VisibleForTesting
-    private ProgressDialog mProgressDialog;
+    public ProgressDialog mProgressDialog;
 
     void showProgressDialog() {
         if (mProgressDialog == null) {
