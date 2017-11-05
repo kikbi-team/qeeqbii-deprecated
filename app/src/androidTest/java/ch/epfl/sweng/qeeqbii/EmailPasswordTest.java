@@ -180,24 +180,28 @@ public class EmailPasswordTest {
     private void enterFirstName (String firstname){
         ViewInteraction passwordField = onView(
                 allOf(withId(R.id.editTextFirstName),
+                        withParent(withId(R.id.informationsProfile)),
                         isDisplayed()));
         passwordField.perform(replaceText(firstname));
     }
     private void enterLastName (String lastname) {
         ViewInteraction passwordField = onView(
                 allOf(withId(R.id.editTextLastName),
+                        withParent(withId(R.id.informationsProfile)),
                         isDisplayed()));
         passwordField.perform(replaceText(lastname));
     }
     private void enterAllergies (String allergies) {
         ViewInteraction passwordField = onView(
                 allOf(withId(R.id.editTextAllergie),
+                        withParent(withId(R.id.informationsProfile)),
                         isDisplayed()));
         passwordField.perform(replaceText(allergies));
     }
     private void enterAliment (String aliment) {
         ViewInteraction passwordField = onView(
                 allOf(withId(R.id.editTextGout),
+                        withParent(withId(R.id.informationsProfile)),
                         isDisplayed()));
         passwordField.perform(replaceText(aliment));
     }
