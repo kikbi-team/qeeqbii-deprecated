@@ -34,7 +34,7 @@ public class AShoppingCartClassShould {
     @Test
     public void testDefaultConstructor() throws InterruptedException {
         ShoppingCart shop = new ShoppingCart();
-        shop.emptyShoppingCartList();
+        ShoppingCart.emptyShoppingCartList();
         assertEquals(true, shop.getItemsInCart().isEmpty());
     }
 
