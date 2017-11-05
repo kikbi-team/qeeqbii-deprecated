@@ -9,6 +9,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -34,20 +35,23 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     @Override
     public void onBindViewHolder(ViewHolder viewHolder, final int position) {
         viewHolder.textView.setText(products.get(position).getName());
+        viewHolder.imageView.setImageResource(products.get(position).getImageId());
     }
 
     @Override
     public int getItemCount() {
-
         return products.size();
     }
 
+    //NESTED CLASS
     class ViewHolder extends RecyclerView.ViewHolder {
         private TextView textView;
+        private ImageView imageView;
 
         public ViewHolder(View view) {
             super(view);
             textView = (TextView) view.findViewById(R.id.text);
+            imageView = (ImageView) view.findViewById(R.id.shoppingListImage);
         }
     }
 }

@@ -10,7 +10,7 @@
         android:layout_height="wrap_content">
 
         <ImageView
-            android:id="@+id/image"
+            android:id="@+id/shoppingListImage"
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:src="@drawable/wine"
@@ -24,7 +24,7 @@
             android:layout_height="wrap_content"
             android:textStyle="bold"
             android:layout_centerVertical="true"
-            android:layout_toEndOf="@+id/image"
+            android:layout_toEndOf="@+id/shoppingListImage"
             android:padding="10dp"
             tools:ignore="RelativeOverlap" />
 

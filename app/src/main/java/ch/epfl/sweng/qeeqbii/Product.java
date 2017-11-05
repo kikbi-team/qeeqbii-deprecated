@@ -1,5 +1,7 @@
 package ch.epfl.sweng.qeeqbii;
 
+import android.widget.ImageView;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -16,16 +18,18 @@ class Product {
     private String mNutrients = "";
     private String[] mParsedIngredients = null;
     private Map<String, Double> mParsedNutrients = null;
+    private int mImageId;
 
     Product() {}
 
 
-    Product(String name, String quantity, String ingredients, String nutrients)
+    Product(String name, String quantity, String ingredients, String nutrients, int imageId)
     {
         mName = name;
         mQuantity = quantity;
         mIngredients = ingredients;
         mNutrients = nutrients;
+        mImageId = imageId;
     }
 
     String getName()
@@ -47,6 +51,8 @@ class Product {
     {
         return mNutrients;
     }
+
+    int getImageId() { return mImageId; }
 
     String[] getParsedIngredients() throws ProductException
     // Returns an array of string. Each entry of the array corresponds to an ingredient.

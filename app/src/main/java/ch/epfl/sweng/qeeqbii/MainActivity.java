@@ -91,4 +91,9 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, RecentlyScannedProductsActivity.class);
         startActivity(intent);
     }
+
+    public void readBarcodeButton(View view) {
+        Intent intent = new Intent(this, BarcodeScannerActivity.class);
+        startActivity(intent);
+    }
 }
