@@ -56,10 +56,10 @@ public class AnonymousTest {
 
     @Test
     public void anonymousSignInTest() {
-        String firstname= "Nicolas";
-        String lastname="Lesimple";
-        String allergie = "cacahètes";
-        String aliment = "fruits";
+      //  String firstname= "Nicolas";
+       // String lastname="Lesimple";
+       // String allergie = "cacahètes";
+        //String aliment = "fruits";
 
         // Sign out if possible
         signOutIfPossible();
@@ -79,10 +79,10 @@ public class AnonymousTest {
                 .check(matches(isDisplayed()));
 
         //enter informations
-        enterFirstName(firstname);
-        enterLastName(lastname);
-        enterAllergies(allergie);
-        enterAliment(aliment);
+      //  enterFirstName(firstname);
+       // enterLastName(lastname);
+        //enterAllergies(allergie);
+        //enterAliment(aliment);
 
         // Sign out if possible
         signOutIfPossible();

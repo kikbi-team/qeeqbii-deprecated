@@ -59,19 +59,19 @@ public class EmailPasswordTest {
     public void failedSignInTest() {
         String email = "test@test.com";
         String password = "123456";
-        String firstname= "Nicolas";
-        String lastname="Lesimple";
-        String allergie = "cacahètes";
-        String aliment = "fruits";
+        //String firstname= "Nicolas";
+        //String lastname="Lesimple";
+        //String allergie = "cacahètes";
+        //String aliment = "fruits";
 
         // Make sure we're signed out
         signOutIfPossible();
 
         //enter informations
-        enterFirstName(firstname);
-        enterLastName(lastname);
-        enterAllergies(allergie);
-        enterAliment(aliment);
+       // enterFirstName(firstname);
+       // enterLastName(lastname);
+       // enterAllergies(allergie);
+       // enterAliment(aliment);
 
         // Enter email
         enterEmail(email);
