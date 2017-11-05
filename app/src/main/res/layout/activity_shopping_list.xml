@@ -26,7 +26,7 @@
                 android:backgroundTint="@color/colorPrimaryDark"
                 android:contentDescription="@string/chips"
                 android:onClick="addChip"
-                app:srcCompat="@mipmap/chips" />
+                app:srcCompat="@drawable/chips" />
 
             <ImageButton
                 android:layout_width="match_parent"
@@ -57,7 +57,7 @@
             android:backgroundTint="@color/bordeau"
             android:contentDescription="@string/vegetables"
             android:onClick="addVegetable"
-            app:srcCompat="@mipmap/vegetables" />
+            app:srcCompat="@drawable/vegetables" />
 
         <ImageButton
             android:layout_width="match_parent"
@@ -66,7 +66,7 @@
             android:backgroundTint="#49c5b4"
             android:contentDescription="@string/meat"
             android:onClick="addMeat"
-            app:srcCompat="@mipmap/meat" />
+            app:srcCompat="@drawable/meat" />
     </LinearLayout>
 
     <LinearLayout
@@ -97,7 +97,7 @@
             android:backgroundTint="@color/Green"
             android:contentDescription="@string/apple"
             android:onClick="addApple"
-            app:srcCompat="@mipmap/apple" />
+            app:srcCompat="@drawable/apple" />
     </LinearLayout>
 
 

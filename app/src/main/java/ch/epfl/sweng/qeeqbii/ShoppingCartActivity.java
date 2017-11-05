@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+import android.widget.ImageView;
 
 public class ShoppingCartActivity extends AppCompatActivity {
 
@@ -14,25 +15,15 @@ public class ShoppingCartActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        //getWindow().requestFeature(Window.FEATURE_ACTION_BAR);
         super.onCreate(savedInstanceState);
-        //getSupportActionBar().hide();
         setContentView(R.layout.activity_shopping_cart);
-
         RecyclerView = (RecyclerView)findViewById(R.id.recycler);
         //create and set layout manager for each RecyclerView
-        RecyclerView.LayoutManager firstLayoutManager = new LinearLayoutManager(this);
-
-        RecyclerView.setLayoutManager(firstLayoutManager);
-
-        //UPDATES THE SHOPPING CART
-        //Product product = getIntent().getParcelableExtra("product");
-        //m_cart.addItemToCart(product);
-
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
+        RecyclerView.setLayoutManager(layoutManager);
         //Initializing and set adapter for each RecyclerView
-        RecyclerViewAdapter firstAdapter = new RecyclerViewAdapter(this, m_cart.getItemsInCart());
-
-        RecyclerView.setAdapter(firstAdapter);
+        RecyclerViewAdapter adapter = new RecyclerViewAdapter(this, m_cart.getItemsInCart());
+        RecyclerView.setAdapter(adapter);
     }
 
     public void showShoppingList(View view) {
