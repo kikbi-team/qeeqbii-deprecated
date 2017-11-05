@@ -104,7 +104,7 @@ public class FacebookLoginTest {
 
 
     }
-
+/*
     @Test
     public void informationsTest () {
         String firstname= "Nicolas";
@@ -142,5 +142,5 @@ public class FacebookLoginTest {
                 allOf(withId(R.id.editTextGout),
                         isDisplayed()));
         passwordField.perform(replaceText(aliment));
-    }
+    }*/
 }
