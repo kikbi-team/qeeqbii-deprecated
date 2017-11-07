@@ -63,4 +63,5 @@
     <string name="share_on_facebook">Share on Facebook</string>
     <string name="camera_perm_ok">Received camera permission</string>
     <string name="please_allow_camera">Please grant camera permission to use Qeeqbii</string>
+    <string name="main_activity">Main Activity</string>
 </resources>

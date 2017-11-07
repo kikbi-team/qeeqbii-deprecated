@@ -4,6 +4,11 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
+        android:id="@+id/nav_main"
+        android:onClick="backToMain"
+        android:title="@string/main_activity" />
+
+    <item
         android:id="@+id/nav_graphs"
         android:onClick="showGraphs"
         android:title="@string/graphs" />

@@ -10,22 +10,18 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 
 import static android.support.test.InstrumentationRegistry.getInstrumentation;
-import static android.support.test.espresso.Espresso.onView;
-import static android.support.test.espresso.action.ViewActions.click;
-import static android.support.test.espresso.action.ViewActions.typeText;
-import static android.support.test.espresso.assertion.ViewAssertions.matches;
-import static android.support.test.espresso.matcher.ViewMatchers.withId;
-import static android.support.test.espresso.matcher.ViewMatchers.withText;
 import static junit.framework.Assert.assertNotNull;
 
-
+/**
+ * Created by antoine on 07/11/2017.
+ */
 
 @RunWith(AndroidJUnit4.class)
-public class MainActivityTest {
+public class graphSliderTest {
 
     @Rule
-    public final ActivityTestRule<MainActivity> mActivityRule =
-            new ActivityTestRule<>(MainActivity.class);
+    public final ActivityTestRule<GraphsActivity> mActivityRule =
+            new ActivityTestRule<>(GraphsActivity.class);
 
     @Test
     public void testBackToMain() {
@@ -33,7 +29,7 @@ public class MainActivityTest {
         Instrumentation.ActivityMonitor activityMonitor = getInstrumentation().addMonitor(MainActivity.class.getName(), null, false);
 
         // open current activity.
-        MainActivity myActivity = mActivityRule.getActivity();
+        GraphsActivity myActivity = mActivityRule.getActivity();
         final MenuItem button = (MenuItem) myActivity.findViewById(R.id.nav_main);
         myActivity.backToMain(button);
 
@@ -51,7 +47,7 @@ public class MainActivityTest {
         Instrumentation.ActivityMonitor activityMonitor = getInstrumentation().addMonitor(CancerDataShowActivity.class.getName(), null, false);
 
         // open current activity.
-        MainActivity myActivity = mActivityRule.getActivity();
+        GraphsActivity myActivity = mActivityRule.getActivity();
         final MenuItem button = (MenuItem) myActivity.findViewById(R.id.nav_cancerdb);
         myActivity.cancerDataBaseShow(button);
 
@@ -70,7 +66,7 @@ public class MainActivityTest {
         Instrumentation.ActivityMonitor activityMonitor = getInstrumentation().addMonitor(GraphsActivity.class.getName(), null, false);
 
         // open current activity.
-        MainActivity myActivity = mActivityRule.getActivity();
+        GraphsActivity myActivity = mActivityRule.getActivity();
         final MenuItem button = (MenuItem) myActivity.findViewById(R.id.nav_graphs);
         myActivity.showGraphs(button);
 
@@ -88,7 +84,7 @@ public class MainActivityTest {
         Instrumentation.ActivityMonitor activityMonitor = getInstrumentation().addMonitor(CancerDataQueryActivity.class.getName(), null, false);
 
         // open current activity.
-        MainActivity myActivity = mActivityRule.getActivity();
+        GraphsActivity myActivity = mActivityRule.getActivity();
         final MenuItem button = (MenuItem) myActivity.findViewById(R.id.nav_dataquery);
         myActivity.cancerDataQuery(button);
 
@@ -106,7 +102,7 @@ public class MainActivityTest {
         Instrumentation.ActivityMonitor activityMonitor = getInstrumentation().addMonitor(BarcodeScannerActivity.class.getName(), null, false);
 
         // open current activity.
-        MainActivity myActivity = mActivityRule.getActivity();
+        GraphsActivity myActivity = mActivityRule.getActivity();
         final MenuItem button = (MenuItem) myActivity.findViewById(R.id.nav_scan);
         myActivity.readBarcode(button);
 
@@ -124,7 +120,7 @@ public class MainActivityTest {
         Instrumentation.ActivityMonitor activityMonitor = getInstrumentation().addMonitor(ShoppingCartActivity.class.getName(), null, false);
 
         // open current activity.
-        MainActivity myActivity = mActivityRule.getActivity();
+        GraphsActivity myActivity = mActivityRule.getActivity();
         final MenuItem button = (MenuItem) myActivity.findViewById(R.id.nav_shopping_cart);
         myActivity.showShoppingList(button);
 
@@ -154,53 +150,4 @@ public class MainActivityTest {
         assertNotNull(nextActivity);
         nextActivity.finish();
     } */
-
-    /*
-    @Before
-    public void init(){
-        UiDevice uiDevice = UiDevice.getInstance(InstrumentationRegistry.getInstrumentation());
-        Point[] coordinates = new Point[4];
-        coordinates[0] = new Point(248, 1520);
-        coordinates[1] = new Point(248, 929);
-        coordinates[2] = new Point(796, 1520);
-        coordinates[3] = new Point(796, 929);
-        try {
-            if (!uiDevice.isScreenOn()) {
-                uiDevice.wakeUp();
-                uiDevice.swipe(coordinates, 10);
-            }
-        } catch (RemoteException e) {
-            e.printStackTrace();
-        }
-    }
-
-    @Test
-    public void useAppContext() throws Exception {
-        // Context of the app under test.
-        Context appContext = InstrumentationRegistry.getTargetContext();
-        assertEquals("ch.epfl.sweng.qeeqbii", appContext.getPackageName());
-    }
-}
-*/
-    @Test
-    public void DisplayProductTest() {
-        String barcode = "7610848337010";
-        String string_nutrients = "Sel: 0.0g\nProtéines: 0.5g\nFibres alimentaires: 1.5g\nSucres: 15.0g\n" +
-                "Glucides: 15.0g\nAcides gras saturées: 0.0g\nMatières grasses: 0.0g\nÉnergie (kCal): 67.0kCal\nÉnergie: 280.0kJ\n";
-
-        String string_ingredients = "mangue (Thaïlande), eau, sucre, acidifiant (E330)";
-
-        String string_name = "Mangue : en tranches";
-
-        String string_quantity = "245.0g";
-
-        String s = string_name;
-        s += "\n\nIngredients: " + string_ingredients;
-        s += "\n\nQuantity: " + string_quantity;
-        s += "\n\nNutrients: (per 100g)\n" + string_nutrients;
-        onView(withId(R.id.Barcode)).perform(typeText(barcode));
-        onView(withId(R.id.button)).perform(click());
-
-        onView(withId(R.id.product_details)).check(matches(withText(s)));
-    }
 }

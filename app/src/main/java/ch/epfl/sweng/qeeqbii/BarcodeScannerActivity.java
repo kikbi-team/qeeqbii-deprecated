@@ -5,9 +5,12 @@ import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.KeyEvent;
+import android.view.MenuItem;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
@@ -34,6 +37,7 @@ public class BarcodeScannerActivity extends AppCompatActivity implements ZXingSc
 
     // zxing library object
     private ZXingScannerView mScannerView;
+    private ActionBarDrawerToggle mToggle;
 
     // on activity creation
     // ask permissions and launch barcode reader
@@ -42,11 +46,21 @@ public class BarcodeScannerActivity extends AppCompatActivity implements ZXingSc
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_barcode_scanner);
 
+        DrawerLayout mDrawerLayout = (DrawerLayout) findViewById(R.id.barcode_scanner);
+        mToggle = new ActionBarDrawerToggle(this, mDrawerLayout, R.string.open, R.string.close);
+
+        mDrawerLayout.addDrawerListener(mToggle);
+        mToggle.syncState();
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         checkCameraPermissionAndRequest();
 
         ViewGroup contentFrame = (ViewGroup) findViewById(R.id.content_frame);
         mScannerView = new ZXingScannerView(this);
         contentFrame.addView(mScannerView);
+
+
     }
 
     // check if the camera permission is given
@@ -139,5 +153,48 @@ public class BarcodeScannerActivity extends AppCompatActivity implements ZXingSc
         }
 
         return super.onKeyDown(keyCode, event);
+    }
+
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        return mToggle.onOptionsItemSelected(item) || super.onOptionsItemSelected(item);
+    }
+
+
+    public void cancerDataBaseShow(MenuItem item) {
+        Intent intent = new Intent(this, CancerDataShowActivity.class);
+        startActivity(intent);
+    }
+
+
+    public void readBarcode(MenuItem item) {
+        Intent intent = new Intent(this, BarcodeScannerActivity.class);
+        startActivity(intent);
+    }
+
+
+    public void showShoppingList(MenuItem view) {
+        Intent intent = new Intent(this, ShoppingCartActivity.class);
+        startActivity(intent);
+    }
+
+    public void showGraphs(MenuItem item) {
+        Intent intent = new Intent(this, GraphsActivity.class);
+        startActivity(intent);
+    }
+
+    public void cancerDataQuery(MenuItem item) {
+        Intent intent = new Intent(this, CancerDataQueryActivity.class);
+        startActivity(intent);
+    }
+
+    public void showRecentlyScannedProductsActivity(MenuItem item) {
+        Intent intent = new Intent(this, RecentlyScannedProductsActivity.class);
+        startActivity(intent);
+    }
+
+    public void backToMain(MenuItem item) {
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
     }
 }

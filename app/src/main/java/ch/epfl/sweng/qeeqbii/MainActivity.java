@@ -66,16 +66,21 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void showRecentlyScannedProductsActivity(MenuItem item) {
+        Intent intent = new Intent(this, RecentlyScannedProductsActivity.class);
+        startActivity(intent);
+    }
+
+    public void backToMain(MenuItem item) {
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+    }
+
     public void searchProductFromBarcode(View view) {
         Intent intent = new Intent(this, BarcodeToProductActivity.class);
         EditText editText = (EditText) findViewById(R.id.Barcode);
         String barcode = editText.getText().toString();
         intent.putExtra(BARCODE_READER, barcode);
-        startActivity(intent);
-    }
-
-    public void showRecentlyScannedProductsActivity(MenuItem item) {
-        Intent intent = new Intent(this, RecentlyScannedProductsActivity.class);
         startActivity(intent);
     }
 }
