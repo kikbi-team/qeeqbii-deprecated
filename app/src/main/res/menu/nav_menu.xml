@@ -29,11 +29,10 @@
     <item
         android:id="@+id/nav_dataquery"
         android:onClick="cancerDataQuery"
-        android:title="@string/scan_barcode" />
+        android:title="@string/cancer_data_query" />
 
     <item
         android:id="@+id/nav_scannedProducts"
-        android:onClick="showRecentlyScannedProductsActivity"
         android:title="@string/scanned_products" />
 
 </menu>

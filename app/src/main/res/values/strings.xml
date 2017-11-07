@@ -141,4 +141,5 @@
     <string name="camera_perm_ok">Received camera permission</string>
     <string name="please_allow_camera">Please grant camera permission to use Qeeqbii</string>
     <string name="main_activity">Main Activity</string>
+    <string name="cancer_data_query">Cancer Data Query</string>
 </resources>
