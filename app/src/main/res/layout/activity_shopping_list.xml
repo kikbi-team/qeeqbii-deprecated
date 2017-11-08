@@ -6,97 +6,231 @@
     android:layout_height="match_parent"
     tools:context="ch.epfl.sweng.qeeqbii.ShoppingListActivity">
 
-    <LinearLayout
-        android:layout_width="344dp"
-        android:layout_height="200dp"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+    <ScrollView
+        android:layout_width="382dp"
+        android:layout_height="567dp"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-            <ImageButton
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:backgroundTint="@color/colorPrimaryDark"
-                android:contentDescription="@string/chips"
-                android:onClick="addChip"
-                app:srcCompat="@drawable/chips" />
+                android:layout_height="182dp"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0"
+                tools:layout_editor_absoluteX="20dp">
 
-            <ImageButton
+                <ImageButton
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/bordeau"
+                    android:backgroundTint="@color/bordeau"
+                    android:contentDescription="@string/vegetables"
+                    android:onClick="addVegetable"
+                    app:srcCompat="@drawable/sauce" />
+
+                <ImageButton
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#49c5b4"
+                    android:backgroundTint="#49c5b4"
+                    android:contentDescription="@string/meat"
+                    android:onClick="addMeat"
+                    app:srcCompat="@drawable/pizza" />
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:backgroundTint="@color/pastelred"
-                android:contentDescription="@string/wine"
-                android:onClick="addWine"
-                app:srcCompat="@drawable/wine" />
+                android:layout_height="181dp">
+
+                <ImageButton
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/colorPrimaryDark"
+                    android:backgroundTint="@color/colorPrimaryDark"
+                    android:contentDescription="@string/chips"
+                    android:onClick="addChip"
+                    app:srcCompat="@drawable/boulangerie" />
+
+                <ImageButton
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/pastelred"
+                    android:backgroundTint="@color/pastelred"
+                    android:contentDescription="@string/wine"
+                    android:onClick="addWine"
+                    app:srcCompat="@drawable/wine" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="181dp"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.002"
+                tools:layout_editor_absoluteX="20dp">
+
+                <ImageButton
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/navyblue"
+                    android:backgroundTint="@color/navyblue"
+                    android:contentDescription="@string/cheese"
+                    android:onClick="addCheese"
+                    app:srcCompat="@drawable/cheese" />
+
+                <ImageButton
+                    android:id="@+id/imageButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/Green"
+                    android:backgroundTint="@color/Green"
+                    android:contentDescription="@string/apple"
+                    android:onClick="addApple"
+                    app:srcCompat="@drawable/carot" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0"
+                tools:layout_editor_absoluteX="20dp">
+
+                <ImageButton
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/bordeau"
+                    android:backgroundTint="@color/bordeau"
+                    android:contentDescription="@string/vegetables"
+                    android:onClick="addVegetable"
+                    app:srcCompat="@drawable/saussage" />
+
+                <ImageButton
+                    android:id="@+id/imageButton2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#49c5b4"
+                    android:backgroundTint="#49c5b4"
+                    android:contentDescription="@string/meat"
+                    android:onClick="addMeat"
+                    app:srcCompat="@drawable/meat" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="181dp">
+
+                <ImageButton
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/colorPrimaryDark"
+                    android:backgroundTint="@color/colorPrimaryDark"
+                    android:contentDescription="@string/chips"
+                    android:onClick="addChip"
+                    app:srcCompat="@drawable/chips" />
+
+                <ImageButton
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/pastelred"
+                    android:backgroundTint="@color/pastelred"
+                    android:contentDescription="@string/wine"
+                    android:onClick="addWine"
+                    app:srcCompat="@drawable/wine" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="192dp"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.002"
+                tools:layout_editor_absoluteX="20dp">
+
+                <ImageButton
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/navyblue"
+                    android:backgroundTint="@color/navyblue"
+                    android:contentDescription="@string/cheese"
+                    android:onClick="addCheese"
+                    app:srcCompat="@drawable/cheese" />
+
+                <ImageButton
+                    android:id="@+id/imageButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/Green"
+                    android:backgroundTint="@color/Green"
+                    android:contentDescription="@string/apple"
+                    android:onClick="addApple"
+                    app:srcCompat="@drawable/apple" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0"
+                tools:layout_editor_absoluteX="20dp">
+
+                <ImageButton
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/bordeau"
+                    android:backgroundTint="@color/bordeau"
+                    android:contentDescription="@string/vegetables"
+                    android:onClick="addVegetable"
+                    app:srcCompat="@drawable/sauce" />
+
+                <ImageButton
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#49c5b4"
+                    android:backgroundTint="#49c5b4"
+                    android:contentDescription="@string/meat"
+                    android:onClick="addMeat"
+                    app:srcCompat="@drawable/pizza" />
+            </LinearLayout>
+
         </LinearLayout>
+    </ScrollView>
 
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="344dp"
-        android:layout_height="189dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0">
-
-        <ImageButton
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:backgroundTint="@color/bordeau"
-            android:contentDescription="@string/vegetables"
-            android:onClick="addVegetable"
-            app:srcCompat="@drawable/vegetables" />
-
-        <ImageButton
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:backgroundTint="#49c5b4"
-            android:contentDescription="@string/meat"
-            android:onClick="addMeat"
-            app:srcCompat="@drawable/meat" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="344dp"
-        android:layout_height="191dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.002"
-        tools:layout_editor_absoluteX="8dp">
-
-        <ImageButton
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:backgroundTint="@color/navyblue"
-            android:contentDescription="@string/cheese"
-            android:onClick="addCheese"
-            app:srcCompat="@drawable/cheese" />
-
-        <ImageButton
-            android:id="@+id/imageButton"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:backgroundTint="@color/Green"
-            android:contentDescription="@string/apple"
-            android:onClick="addApple"
-            app:srcCompat="@drawable/apple" />
-    </LinearLayout>
 </android.support.constraint.ConstraintLayout>
