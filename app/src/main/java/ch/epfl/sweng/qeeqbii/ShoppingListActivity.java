@@ -60,4 +60,13 @@ public class ShoppingListActivity extends AppCompatActivity {
         Intent intent = new Intent(this, ShoppingCartActivity.class);
         startActivity(intent);
     }
+
+    public void addGrossery(View view) {
+        Product prod = new Product("Grossery", "500 mg", "Stuff", "cool Nutrients", R.drawable.boulangerie);
+        ShoppingCart.addToShoppingCartList(prod);
+        Intent intent = new Intent(this, ShoppingCartActivity.class);
+        startActivity(intent);
+    }
+
+
 }
