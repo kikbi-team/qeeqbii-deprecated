@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginBottom="8dp">
@@ -9,7 +10,7 @@
         android:layout_height="wrap_content">
 
         <ImageView
-            android:id="@+id/image"
+            android:id="@+id/shoppingListImage"
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:src="@drawable/wine"
@@ -17,14 +18,15 @@
 
         <TextView
             android:id="@+id/text"
+            android:text="@string/app_name"
             android:textColor="@color/colorPrimary"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textStyle="bold"
             android:layout_centerVertical="true"
-            android:layout_toEndOf="@+id/image"
+            android:layout_toEndOf="@+id/shoppingListImage"
             android:padding="10dp"
-            android:text="@string/app_name" />
+            tools:ignore="RelativeOverlap" />
 
         <CheckBox
             android:layout_width="wrap_content"

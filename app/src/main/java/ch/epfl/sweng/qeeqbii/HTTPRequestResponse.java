@@ -81,13 +81,11 @@ class HTTPRequestResponse {
 
     }
 
-
-
-
     //Return a product from the HTTPRequestResponse
     Product toProduct(String language)
     {
-        return new Product(GetProductName(language), GetProductQuantity(), GetProductIngredients(language), GetProductNutrients(language));
+        return new Product(GetProductName(language), GetProductQuantity(), GetProductIngredients(language),
+                GetProductNutrients(language), R.drawable.cheese);
     }
 
     // By default, we get the french version

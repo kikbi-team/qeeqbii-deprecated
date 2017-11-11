@@ -19,6 +19,7 @@ android {
     }
     lintOptions {
         disable 'GoogleAppIndexingWarning'
+        abortOnError false
     }
     buildTypes {
         debug {
@@ -46,6 +47,7 @@ dependencies {
     })
     //noinspection GradleCompatible,GradleDependency
     compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'com.android.support:design:25.3.1'
     //noinspection GradleDependency
     compile 'com.android.support:mediarouter-v7:25.3.1'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
@@ -85,6 +87,47 @@ dependencies {
     compile 'com.android.support:cardview-v7:25.3.1'
     compile files('libs/TarsosLSH-latest.jar')
     compile 'me.dm7.barcodescanner:zxing:1.9.8'
+
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'com.android.support:animated-vector-drawable:25.3.1'
+    compile 'com.android.support:cardview-v7:25.3.1'
+    compile 'com.android.support:design:25.3.1'
+    compile 'com.android.support:recyclerview-v7:25.3.1'
+
+    // Google Sign In SDK (only required for Google Sign In)
+    compile 'com.google.android.gms:play-services-auth:11.0.4'
+    compile 'com.google.android.gms:play-services-maps:11.0.4'
+    compile 'com.google.android.gms:play-services-places:11.0.4'
+    compile 'com.google.android.gms:play-services-location:11.0.4'
+
+    // Facebook Android SDK (only required for Facebook Login)
+    // Used in FacebookLoginActivity. This is only compiled into the minSdkJellybean variant of this
+    // app. You can build a 'minSdkGingerbread' variant to test on devices with 9 <= SDK <= 15.
+    compile 'com.facebook.android:facebook-android-sdk:4.25.0'
+    compile 'com.android.support:customtabs:25.3.1'
+
+    // Twitter Android SDK (only required for Twitter Login)
+    compile('com.twitter.sdk.android:twitter-core:2.3.0@aar') {
+        transitive = true
+    }
+    compile('com.twitter.sdk.android:twitter:3.1.1@aar') {
+        transitive = true
+    }
+    // Firebase Authentication
+    compile 'com.google.firebase:firebase-auth:11.0.4'
+    compile 'com.google.firebase:firebase-database:11.0.4'
+    compile 'com.firebaseui:firebase-ui-database:2.0.0'
+    compile 'com.google.firebase:firebase-appindexing:11.0.4'
+    compile 'com.google.firebase:firebase-storage:11.0.4'
+
+    // Firebase UI
+    // Used in FirebaseUIActivity. The FirebaseUI-Android library has a minSdk level of 16
+    // so this library is only included in the minSdkJellybean variant.
+    compile 'com.firebaseui:firebase-ui-auth:2.0.0'
+
+    compile files('libs/TarsosLSH-latest.jar')
+    compile 'me.dm7.barcodescanner:zxing:1.9.8'
 }
 
 apply plugin: 'com.google.gms.google-services'
+

@@ -1,46 +1,38 @@
 package ch.epfl.sweng.qeeqbii;
 
-import android.app.ListActivity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;
 import android.view.View;
-import android.widget.ArrayAdapter;
-
-import java.util.ArrayList;
-import java.util.List;
+import android.widget.ImageView;
 
 public class ShoppingCartActivity extends AppCompatActivity {
 
-    private RecyclerView RecyclerView;
-    private ShoppingCart cart = new ShoppingCart();
-
+    private ShoppingCart m_cart = new ShoppingCart();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_shopping_cart);
-
-        RecyclerView = (RecyclerView)findViewById(R.id.recycler);
-
+        RecyclerView recyclerView = (RecyclerView)findViewById(R.id.recycler);
         //create and set layout manager for each RecyclerView
-        RecyclerView.LayoutManager firstLayoutManager = new LinearLayoutManager(this);
-
-        RecyclerView.setLayoutManager(firstLayoutManager);
-
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
+        recyclerView.setLayoutManager(layoutManager);
         //Initializing and set adapter for each RecyclerView
-        RecyclerViewAdapter firstAdapter = new RecyclerViewAdapter(this, cart.getItemsInCart());
-
-        RecyclerView.setAdapter(firstAdapter);
+        RecyclerViewAdapter adapter = new RecyclerViewAdapter(this, m_cart.getItemsInCart());
+        recyclerView.setAdapter(adapter);
     }
 
     public void showShoppingList(View view) {
-        Intent intent = new Intent(this, ShoppingList.class);
+        Intent intent = new Intent(this, ShoppingListActivity.class);
+        startActivity(intent);
+    }
+
+    public void deleteShoppingList(View view) {
+        ShoppingCart.emptyShoppingCartList();
+        Intent intent = new Intent(this, ShoppingCartActivity.class);
         startActivity(intent);
     }
 }
