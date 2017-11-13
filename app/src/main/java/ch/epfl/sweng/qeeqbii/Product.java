@@ -19,16 +19,23 @@ class Product {
     private String[] mParsedIngredients = null;
     private Map<String, Double> mParsedNutrients = null;
     private int mImageId;
+    private int mScanningDay;
+    private int mScanningMonth;
+    private int mScanningYear;
 
     Product() {}
 
-    Product(String name, String quantity, String ingredients, String nutrients, int imageId)
+    Product(String name, String quantity, String ingredients, String nutrients, int imageId, int day,
+            int month, int year)
     {
         mName = name;
         mQuantity = quantity;
         mIngredients = ingredients;
         mNutrients = nutrients;
         mImageId = imageId;
+        mScanningDay = day;
+        mScanningMonth = month;
+        mScanningYear = year;
     }
 
     String getName()
@@ -50,6 +57,12 @@ class Product {
     {
         return mNutrients;
     }
+
+    int getScanningDay() {return mScanningDay; }
+
+    int getScanningMonth() {return mScanningMonth; }
+
+    int getScanningYear() {return mScanningYear; }
 
     int getImageId() { return mImageId; }
 

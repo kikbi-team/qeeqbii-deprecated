@@ -79,7 +79,7 @@
     <string name="meat">meat</string>
     <string name="vegetables">vegetables</string>
 
-    
+
 
     <string name="label_google_sign_in">Firebase + Google Sign In</string>
 
@@ -127,7 +127,7 @@
     <string name="query_cancer_n_database">QUERY CANCER\nDATABASE</string>
     <string name="scanned_n_product">SCANNED\nPRODUCTS</string>
     <string name="empty_field">Empty field</string>
-   
+
     <string name="scanned_products">Scanned Products</string>
     <string name="harmfull_ingredients_search">Harmfull Ingredients Search</string>
     <string name="search_product_from_barcode">Search Product From Barcode</string>
