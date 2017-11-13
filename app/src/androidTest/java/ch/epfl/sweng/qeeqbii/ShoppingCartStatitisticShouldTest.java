@@ -42,6 +42,4 @@ public class ShoppingCartStatitisticShouldTest {
         section = new ShoppingCartStatistics.SectionsPagerAdapter(fm);
         assertEquals(section.getCount(), 3);
     }
-
-    
 }
