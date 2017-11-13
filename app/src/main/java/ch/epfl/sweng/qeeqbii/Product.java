@@ -19,54 +19,44 @@ class Product {
     private String[] mParsedIngredients = null;
     private Map<String, Double> mParsedNutrients = null;
     private int mImageId;
-    private int mScanningDay;
-    private int mScanningMonth;
-    private int mScanningYear;
+    private Date mDate;
 
-    Product() {}
+    public Product() {}
 
-    Product(String name, String quantity, String ingredients, String nutrients, int imageId, int day,
-            int month, int year)
+    public Product(String name, String quantity, String ingredients, String nutrients, int imageId,
+                   Date date)
     {
         mName = name;
         mQuantity = quantity;
         mIngredients = ingredients;
         mNutrients = nutrients;
         mImageId = imageId;
-        mScanningDay = day;
-        mScanningMonth = month;
-        mScanningYear = year;
+        mDate = date;
     }
 
-    String getName()
+    public String getName()
     {
         return mName;
     }
 
-    String getQuantity()
+    public String getQuantity()
     {
         return mQuantity;
     }
 
-    String getIngredients()
+    public String getIngredients()
     {
         return mIngredients;
     }
 
-    String getNutrients()
+    public String getNutrients()
     {
         return mNutrients;
     }
 
-    int getScanningDay() {return mScanningDay; }
+    public int getImageId() { return mImageId; }
 
-    int getScanningMonth() {return mScanningMonth; }
-
-    int getScanningYear() {return mScanningYear; }
-
-    int getImageId() { return mImageId; }
-
-    String[] getParsedIngredients() throws ProductException
+    public String[] getParsedIngredients() throws ProductException
     // Returns an array of string. Each entry of the array corresponds to an ingredient.
     {
         if(mParsedIngredients != null)
@@ -83,7 +73,7 @@ class Product {
         return mParsedIngredients;
     }
 
-    Map<String, Double> getParsedNutrients() throws  ProductException {
+    public Map<String, Double> getParsedNutrients() throws  ProductException {
     // Returns a map binding a nutrient to its quantity.
     // Key entered in the map can be e.g. "Sel (g)" or "Sucres (g)"
     // The quantity is returned as a double.
@@ -94,7 +84,6 @@ class Product {
 
         if (mNutrients.matches("") | mNutrients.matches("Nutrients Not Found")) {
             throw new ProductException("Nutrient list is empty for this product: unable to execute the parsing operation.");
-
         }
 
         String[] parsed_nutrients = mNutrients.split("\\n");
@@ -110,7 +99,6 @@ class Product {
             }
 
             Double value = Double.parseDouble(nut.substring(two_dots_index + 2, search_alpha));
-
             String unit = nut.substring(search_alpha, nut.length());
 
             if (!key.contains("(" + unit + ")")) {
@@ -118,7 +106,6 @@ class Product {
             }
 
             nutrient_map.put(key, value);
-
         }
 
         mParsedNutrients = nutrient_map;

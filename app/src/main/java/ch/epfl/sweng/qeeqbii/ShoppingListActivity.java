@@ -23,105 +23,110 @@ public class ShoppingListActivity extends AppCompatActivity {
         setContentView(R.layout.activity_shopping_list);
     }
 
-    private int getDay() {
-        Calendar calendar = Calendar.getInstance();
-        return calendar.get(Calendar.DAY_OF_MONTH);
-    }
-
-    private int getMonth() {
-        Calendar calendar = Calendar.getInstance();
-        return calendar.get(Calendar.MONTH);
-    }
-
-    private int getYear() {
-        Calendar calendar = Calendar.getInstance();
-        return calendar.get(Calendar.YEAR);
-    }
-
     public void addCheese(View view) {
 
+        Date date = new Date();
         Product prod = new Product("Cheese", "500 mg", "Stuff", "cool Nutrients", R.drawable.cheese,
-                getDay(), getMonth(), getYear());
+                date);
         ShoppingCart.addToShoppingCartList(prod);
         Intent intent = new Intent(this, ShoppingCartActivity.class);
         startActivity(intent);
     }
 
     public void addWine(View view) {
+
+        Date date = new Date();
         Product prod = new Product("Wine", "500 mg", "Stuff", "cool Nutrients", R.drawable.wine,
-                getDay(), getMonth(), getYear());
+                date);
         ShoppingCart.addToShoppingCartList(prod);
         Intent intent = new Intent(this, ShoppingCartActivity.class);
         startActivity(intent);
     }
 
     public void addMeat(View view) {
+
+        Date date = new Date();
         Product prod = new Product("Meat", "500 mg", "Stuff", "cool Nutrients", R.drawable.meat,
-                getDay(), getMonth(), getYear());
+                date);
         ShoppingCart.addToShoppingCartList(prod);
         Intent intent = new Intent(this, ShoppingCartActivity.class);
         startActivity(intent);
     }
 
     public void addChip(View view) {
+
+        Date date = new Date();
         Product prod = new Product("Chips", "500 mg", "Stuff", "cool Nutrients", R.drawable.chips,
-                getDay(), getMonth(), getYear());
+                date);
         ShoppingCart.addToShoppingCartList(prod);
         Intent intent = new Intent(this, ShoppingCartActivity.class);
         startActivity(intent);
     }
 
     public void addVegetable(View view) {
+        Date date = new Date();
         Product prod = new Product("Vegetable", "500 mg", "Stuff", "cool Nutrients", R.drawable.vegetables,
-                getDay(), getMonth(), getYear());
+                date);
         ShoppingCart.addToShoppingCartList(prod);
         Intent intent = new Intent(this, ShoppingCartActivity.class);
         startActivity(intent);
     }
 
     public void addApple(View view) {
+
+        Date date = new Date();
         Product prod = new Product("Apple", "500 mg", "Stuff", "cool Nutrients", R.drawable.apple,
-                getDay(), getMonth(), getYear());
+                date);
         ShoppingCart.addToShoppingCartList(prod);
         Intent intent = new Intent(this, ShoppingCartActivity.class);
         startActivity(intent);
     }
 
     public void addGrossery(View view) {
+
+        Date date = new Date();
         Product prod = new Product("Grossery", "500 mg", "Stuff", "cool Nutrients", R.drawable.boulangerie,
-                getDay(), getMonth(), getYear());
+                date);
         ShoppingCart.addToShoppingCartList(prod);
         Intent intent = new Intent(this, ShoppingCartActivity.class);
         startActivity(intent);
     }
 
     public void addSauce(View view) {
+
+        Date date = new Date();
         Product prod = new Product("Sauce", "500 mg", "Stuff", "cool Nutrients", R.drawable.sauce,
-                getDay(), getMonth(), getYear());
+                date);
         ShoppingCart.addToShoppingCartList(prod);
         Intent intent = new Intent(this, ShoppingCartActivity.class);
         startActivity(intent);
     }
 
     public void addPizza(View view) {
+
+        Date date = new Date();
         Product prod = new Product("Pizza", "500 mg", "Stuff", "cool Nutrients", R.drawable.pizza,
-                getDay(), getMonth(), getYear());
+                date);
         ShoppingCart.addToShoppingCartList(prod);
         Intent intent = new Intent(this, ShoppingCartActivity.class);
         startActivity(intent);
     }
 
     public void addCarrot(View view) {
+
+        Date date = new Date();
         Product prod = new Product("Carrot", "500 mg", "Stuff", "cool Nutrients", R.drawable.carot,
-                getDay(), getMonth(), getYear());
+                date);
         ShoppingCart.addToShoppingCartList(prod);
         Intent intent = new Intent(this, ShoppingCartActivity.class);
         startActivity(intent);
     }
 
     public void addSaussage(View view) {
+
+        Date date = new Date();
         Product prod = new Product("Saussage", "500 mg", "Stuff", "cool Nutrients", R.drawable.saussage,
-                getDay(), getMonth(), getYear());
+                date);
         ShoppingCart.addToShoppingCartList(prod);
         Intent intent = new Intent(this, ShoppingCartActivity.class);
         startActivity(intent);
