@@ -1,5 +1,6 @@
 package ch.epfl.sweng.qeeqbii;
 
+import android.content.Intent;
 import android.support.design.widget.TabLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -132,5 +133,11 @@ public class ShoppingCartStatistics extends AppCompatActivity {
             }
             return null;
         }
+    }
+
+    public void showGraphs(View view){
+
+        Intent intent = new Intent(this, GraphsActivity.class);
+        startActivity(intent);
     }
 }
