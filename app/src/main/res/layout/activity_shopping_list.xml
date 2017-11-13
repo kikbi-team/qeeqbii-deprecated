@@ -35,7 +35,7 @@
                     android:background="@color/bordeau"
                     android:backgroundTint="@color/bordeau"
                     android:contentDescription="@string/vegetables"
-                    android:onClick="addVegetable"
+                    android:onClick="addSauce"
                     app:srcCompat="@drawable/sauce" />
 
                 <ImageButton
@@ -45,7 +45,7 @@
                     android:background="#49c5b4"
                     android:backgroundTint="#49c5b4"
                     android:contentDescription="@string/meat"
-                    android:onClick="addMeat"
+                    android:onClick="addPizza"
                     app:srcCompat="@drawable/pizza" />
             </LinearLayout>
 
@@ -60,7 +60,7 @@
                     android:background="@color/colorPrimaryDark"
                     android:backgroundTint="@color/colorPrimaryDark"
                     android:contentDescription="@string/chips"
-                    android:onClick="addChip"
+                    android:onClick="addGrossery"
                     app:srcCompat="@drawable/boulangerie" />
 
                 <ImageButton
@@ -103,7 +103,7 @@
                     android:background="@color/Green"
                     android:backgroundTint="@color/Green"
                     android:contentDescription="@string/apple"
-                    android:onClick="addApple"
+                    android:onClick="addCarrot"
                     app:srcCompat="@drawable/carot" />
             </LinearLayout>
 
@@ -125,7 +125,7 @@
                     android:background="@color/bordeau"
                     android:backgroundTint="@color/bordeau"
                     android:contentDescription="@string/vegetables"
-                    android:onClick="addVegetable"
+                    android:onClick="addSaussage"
                     app:srcCompat="@drawable/saussage" />
 
                 <ImageButton
@@ -216,7 +216,7 @@
                     android:background="@color/bordeau"
                     android:backgroundTint="@color/bordeau"
                     android:contentDescription="@string/vegetables"
-                    android:onClick="addVegetable"
+                    android:onClick="addSauce"
                     app:srcCompat="@drawable/sauce" />
 
                 <ImageButton
@@ -226,7 +226,7 @@
                     android:background="#49c5b4"
                     android:backgroundTint="#49c5b4"
                     android:contentDescription="@string/meat"
-                    android:onClick="addMeat"
+                    android:onClick="addPizza"
                     app:srcCompat="@drawable/pizza" />
             </LinearLayout>
 

@@ -22,7 +22,6 @@ class Product {
 
     Product() {}
 
-
     Product(String name, String quantity, String ingredients, String nutrients, int imageId)
     {
         mName = name;

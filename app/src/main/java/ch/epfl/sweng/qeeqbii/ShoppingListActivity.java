@@ -68,5 +68,31 @@ public class ShoppingListActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void addSauce(View view) {
+        Product prod = new Product("Sauce", "500 mg", "Stuff", "cool Nutrients", R.drawable.sauce);
+        ShoppingCart.addToShoppingCartList(prod);
+        Intent intent = new Intent(this, ShoppingCartActivity.class);
+        startActivity(intent);
+    }
 
+    public void addPizza(View view) {
+        Product prod = new Product("Pizza", "500 mg", "Stuff", "cool Nutrients", R.drawable.pizza);
+        ShoppingCart.addToShoppingCartList(prod);
+        Intent intent = new Intent(this, ShoppingCartActivity.class);
+        startActivity(intent);
+    }
+
+    public void addCarrot(View view) {
+        Product prod = new Product("Carrot", "500 mg", "Stuff", "cool Nutrients", R.drawable.carot);
+        ShoppingCart.addToShoppingCartList(prod);
+        Intent intent = new Intent(this, ShoppingCartActivity.class);
+        startActivity(intent);
+    }
+
+    public void addSaussage(View view) {
+        Product prod = new Product("Saussage", "500 mg", "Stuff", "cool Nutrients", R.drawable.saussage);
+        ShoppingCart.addToShoppingCartList(prod);
+        Intent intent = new Intent(this, ShoppingCartActivity.class);
+        startActivity(intent);
+    }
 }
