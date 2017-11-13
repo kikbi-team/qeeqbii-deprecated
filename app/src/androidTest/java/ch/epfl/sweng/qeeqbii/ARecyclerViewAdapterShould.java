@@ -23,7 +23,9 @@ public class ARecyclerViewAdapterShould {
             new ActivityTestRule<>(MainActivity.class);
     @Test
     public void testConstructor() throws InterruptedException {
-        Product item = new Product("cheese", "500 mg", "Stuff", "cool Nutrients", R.drawable.cheese);
+        Date date = new Date();
+        Product item = new Product("cheese", "500 mg", "Stuff", "cool Nutrients", R.drawable.cheese,
+                date);
         List<Product> products = new ArrayList<Product>();
         products.add(item);
         products.add(item);
