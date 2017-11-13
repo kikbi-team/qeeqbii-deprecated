@@ -16,7 +16,7 @@
         android:text="@string/tab_3_yearly_stats"/>
 
     <ImageButton
-        android:id="@+id/showMonthGraph"
+        android:id="@+id/showYearGraph"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"

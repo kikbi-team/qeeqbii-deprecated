@@ -93,7 +93,7 @@ public class ShoppingCartStatistics extends AppCompatActivity {
      * A {@link FragmentPagerAdapter} that returns a fragment corresponding to
      * one of the sections/tabs/pages.
      */
-    public class SectionsPagerAdapter extends FragmentPagerAdapter {
+    public static class SectionsPagerAdapter extends FragmentPagerAdapter {
 
         public SectionsPagerAdapter(FragmentManager fm) {
             super(fm);
@@ -136,7 +136,6 @@ public class ShoppingCartStatistics extends AppCompatActivity {
     }
 
     public void showGraphs(View view){
-
         Intent intent = new Intent(this, GraphsActivity.class);
         startActivity(intent);
     }
