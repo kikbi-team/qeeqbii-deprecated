@@ -2,6 +2,7 @@ package ch.epfl.sweng.qeeqbii;
 
 import android.widget.ImageView;
 
+import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -10,7 +11,7 @@ import java.util.Map;
  * Product class contains all informations relative to a given product.
  */
 
-class Product {
+class Product implements Serializable {
 
     private String mName = "";
     private String mQuantity = "";
@@ -19,17 +20,29 @@ class Product {
     private String[] mParsedIngredients = null;
     private Map<String, Double> mParsedNutrients = null;
     private int mImageId;
+    private ClusterType mType = ClusterType.UNDETERMINED;
+    private String mBarcode;
 
     Product() {}
 
 
-    Product(String name, String quantity, String ingredients, String nutrients, int imageId)
+    Product(String name, String quantity, String ingredients, String nutrients, String barcode, int imageId)
     {
         mName = name;
         mQuantity = quantity;
         mIngredients = ingredients;
         mNutrients = nutrients;
         mImageId = imageId;
+    }
+
+    Product(String name, String quantity, String ingredients, String nutrients, String barcode, ClusterType type)
+    {
+        mName = name;
+        mQuantity = quantity;
+        mIngredients = ingredients;
+        mNutrients = nutrients;
+        mBarcode = barcode;
+        mType = type;
     }
 
     String getName()
@@ -52,7 +65,11 @@ class Product {
         return mNutrients;
     }
 
+    String getBarcode() { return mBarcode; }
+
     int getImageId() { return mImageId; }
+
+    ClusterType getCluster() { return mType; }
 
     String[] getParsedIngredients() throws ProductException
     // Returns an array of string. Each entry of the array corresponds to an ingredient.
@@ -111,5 +128,16 @@ class Product {
 
         mParsedNutrients = nutrient_map;
         return nutrient_map;
+    }
+
+    @Override
+    public String toString()
+    {
+        String s = getName();
+        s += "\n\nIngredients: " + getIngredients();
+        s += "\n\nQuantity: " + getQuantity();
+        s += "\n\nNutrients: (per 100g)\n" + getNutrients();
+
+        return s;
     }
 }

@@ -41,7 +41,7 @@ public class AShoppingCartClassShould {
     @Test
     //be able to sense that one clicked the button
     public void addSpecificItemToList() throws InterruptedException {
-        Product item = new Product("sausage", "500 mg", "Stuff", "cool Nutrients", R.drawable.cheese);
+        Product item = new Product("sausage", "500 mg", "Stuff", "cool Nutrients", "001", R.drawable.cheese);
         ShoppingCart shop = new ShoppingCart();
         shop.addSpecificItemInCart(0, item);
         assertEquals(shop.getSpecificItemInCart(0), item);
@@ -49,7 +49,7 @@ public class AShoppingCartClassShould {
 
     @Test
     public void addItemToList() throws InterruptedException {
-        Product item = new Product("sausage", "500 mg", "Stuff", "cool Nutrients", R.drawable.cheese);
+        Product item = new Product("sausage", "500 mg", "Stuff", "cool Nutrients", "001", R.drawable.cheese);
         ShoppingCart shop = new ShoppingCart();
         shop.addItemToCart(item);
         List<Product> items = shop.getItemsInCart();
@@ -60,14 +60,14 @@ public class AShoppingCartClassShould {
     public void getItemsInList() throws InterruptedException {
 
         List<Product> content = new ArrayList<Product>();
-        content.add(new Product("Cheese", "500 mg", "Stuff", "cool Nutrients", R.drawable.cheese));
-        content.add(new Product("Wine", "500 mg", "Stuff", "cool Nutrients", R.drawable.cheese));
-        content.add(new Product("Beer", "500 mg", "Stuff", "cool Nutrients", R.drawable.cheese));
+        content.add(new Product("Cheese", "500 mg", "Stuff", "cool Nutrients", "001", R.drawable.cheese));
+        content.add(new Product("Wine", "500 mg", "Stuff", "cool Nutrients", "001", R.drawable.cheese));
+        content.add(new Product("Beer", "500 mg", "Stuff", "cool Nutrients", "001", R.drawable.cheese));
 
         ShoppingCart shop = new ShoppingCart();
-        shop.addItemToCart(new Product("Cheese", "500 mg", "Stuff", "cool Nutrients", R.drawable.cheese));
-        shop.addItemToCart(new Product("Wine", "500 mg", "Stuff", "cool Nutrients", R.drawable.cheese));
-        shop.addItemToCart(new Product("Beer", "500 mg", "Stuff", "cool Nutrients", R.drawable.cheese));
+        shop.addItemToCart(new Product("Cheese", "500 mg", "Stuff", "cool Nutrients", "001", R.drawable.cheese));
+        shop.addItemToCart(new Product("Wine", "500 mg", "Stuff", "cool Nutrients", "001", R.drawable.cheese));
+        shop.addItemToCart(new Product("Beer", "500 mg", "Stuff", "cool Nutrients", "001", R.drawable.cheese));
 
         assertEquals(shop.getItemsInCart().get(0).getName(), content.get(0).getName());
         assertEquals(shop.getItemsInCart().get(1).getName(), content.get(1).getName());
@@ -76,7 +76,7 @@ public class AShoppingCartClassShould {
 
     @Test
     public void testConstructor() throws InterruptedException {
-        Product item = new Product("sausage", "500 mg", "Stuff", "cool Nutrients", R.drawable.cheese);
+        Product item = new Product("sausage", "500 mg", "Stuff", "cool Nutrients", "001", R.drawable.cheese);
         List<Product> products = new ArrayList<Product>();
         ShoppingCart shop = new ShoppingCart(products);
         shop.addItemToCart(item);

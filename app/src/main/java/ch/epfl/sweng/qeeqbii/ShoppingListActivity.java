@@ -20,49 +20,49 @@ public class ShoppingListActivity extends AppCompatActivity {
 
     public void addCheese(View view) {
 
-        Product prod = new Product("Cheese", "500 mg", "Stuff", "cool Nutrients", R.drawable.cheese);
+        Product prod = new Product("Cheese", "500 mg", "Stuff", "cool Nutrients", "001", R.drawable.cheese);
         ShoppingCart.addToShoppingCartList(prod);
         Intent intent = new Intent(this, ShoppingCartActivity.class);
         startActivity(intent);
     }
 
     public void addWine(View view) {
-        Product prod = new Product("Wine", "500 mg", "Stuff", "cool Nutrients", R.drawable.wine);
+        Product prod = new Product("Wine", "500 mg", "Stuff", "cool Nutrients","001", R.drawable.wine);
         ShoppingCart.addToShoppingCartList(prod);
         Intent intent = new Intent(this, ShoppingCartActivity.class);
         startActivity(intent);
     }
 
     public void addMeat(View view) {
-        Product prod = new Product("Meat", "500 mg", "Stuff", "cool Nutrients", R.drawable.meat);
+        Product prod = new Product("Meat", "500 mg", "Stuff", "cool Nutrients", "001", R.drawable.meat);
         ShoppingCart.addToShoppingCartList(prod);
         Intent intent = new Intent(this, ShoppingCartActivity.class);
         startActivity(intent);
     }
 
     public void addChip(View view) {
-        Product prod = new Product("Chips", "500 mg", "Stuff", "cool Nutrients", R.drawable.chips);
+        Product prod = new Product("Chips", "500 mg", "Stuff", "cool Nutrients", "001", R.drawable.chips);
         ShoppingCart.addToShoppingCartList(prod);
         Intent intent = new Intent(this, ShoppingCartActivity.class);
         startActivity(intent);
     }
 
     public void addVegetable(View view) {
-        Product prod = new Product("Vegetable", "500 mg", "Stuff", "cool Nutrients", R.drawable.vegetables);
+        Product prod = new Product("Vegetable", "500 mg", "Stuff", "cool Nutrients", "001", R.drawable.vegetables);
         ShoppingCart.addToShoppingCartList(prod);
         Intent intent = new Intent(this, ShoppingCartActivity.class);
         startActivity(intent);
     }
 
     public void addApple(View view) {
-        Product prod = new Product("Apple", "500 mg", "Stuff", "cool Nutrients", R.drawable.apple);
+        Product prod = new Product("Apple", "500 mg", "Stuff", "cool Nutrients", "001", R.drawable.apple);
         ShoppingCart.addToShoppingCartList(prod);
         Intent intent = new Intent(this, ShoppingCartActivity.class);
         startActivity(intent);
     }
 
     public void addGrossery(View view) {
-        Product prod = new Product("Grossery", "500 mg", "Stuff", "cool Nutrients", R.drawable.boulangerie);
+        Product prod = new Product("Grossery", "500 mg", "Stuff", "cool Nutrients", "001", R.drawable.boulangerie);
         ShoppingCart.addToShoppingCartList(prod);
         Intent intent = new Intent(this, ShoppingCartActivity.class);
         startActivity(intent);

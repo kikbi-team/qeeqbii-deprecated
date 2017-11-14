@@ -14,9 +14,9 @@ import android.widget.TextView;
  * in the barcode text field in the MainActivity.
  */
 
-public class BarcodeToProductActivity extends AppCompatActivity {
+public class ShowProductActivity extends AppCompatActivity {
 
-    private String barcode;
+    private Product mProduct;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,13 +24,12 @@ public class BarcodeToProductActivity extends AppCompatActivity {
         setContentView(R.layout.activity_show_product_details);
 
         Intent intent = getIntent();
-        barcode = intent.getStringExtra(MainActivity.BARCODE_READER);
+        mProduct = (Product) intent.getSerializableExtra("product");
 
-        // Capture the layout's; TextView and set the string as its text
         final TextView txt = (TextView) findViewById(R.id.product_details);
         txt.setTextSize(20);
         txt.setTextColor(Color.rgb(0, 0, 0));
-        OpenFoodQuery.ShowProduct(barcode, txt);
+        txt.setText(mProduct.toString());
     }
 
     @Override
@@ -50,16 +49,12 @@ public class BarcodeToProductActivity extends AppCompatActivity {
     // Search for harmful ingredients contained in the product, making a query to the Cancer database.
     public void searchHarmfulIngredients(View view) {
 
-        if (!(RecentlyScannedProducts.contains(barcode))) {
-            return;
-        }
-
         TextView txt_harmfull_ing = (TextView) findViewById(R.id.harmful_ingredients);
 
         String parsed_ingredients[];
 
         try {
-            parsed_ingredients = RecentlyScannedProducts.getProduct(barcode).getParsedIngredients();
+            parsed_ingredients = mProduct.getParsedIngredients();
         } catch (ProductException e) {
             txt_harmfull_ing.setText(e.getMessage());
             return;
@@ -83,7 +78,7 @@ public class BarcodeToProductActivity extends AppCompatActivity {
     // Call the Graphs activity to make generate plots from the nutrients of the product.
     public void showNutrientsGraphs(View view) {
         Intent intent = new Intent(this, GraphsActivity.class);
-        intent.putExtra("barcode", barcode);
+        intent.putExtra("product", mProduct);
         startActivity(intent);
     }
 }

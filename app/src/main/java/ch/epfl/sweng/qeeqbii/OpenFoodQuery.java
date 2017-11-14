@@ -76,7 +76,7 @@ class OpenFoodQuery extends AsyncTask<String, Void, Product> {
             }
             urlConnection.disconnect();
 
-            Product product = (new HTTPRequestResponse(str).toProduct());
+            Product product = (new HTTPRequestResponse(str, barcode).toProduct());
 
             RecentlyScannedProducts.add(barcode, product);
             return product;
