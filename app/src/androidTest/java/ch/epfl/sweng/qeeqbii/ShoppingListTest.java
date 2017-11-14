@@ -34,12 +34,38 @@ public class ShoppingListTest {
 
     @Test
     public void testCanOpenClickOnImageMeat() throws InterruptedException {
-        onView(withId(R.id.meatImageButton)).perform(click());
+        // register next activity that need to be monitored.
+        Instrumentation.ActivityMonitor activityMonitor = getInstrumentation().addMonitor(ShoppingCartActivity.class.getName(), null, false);
+
+        // open current activity.
+        ShoppingListActivity myActivity = mActivityRule.getActivity();
+        final View button = (View) myActivity.findViewById(R.id.meatImageButton);
+        myActivity.addMeat(button);
+
+        //Watch for the timeout
+        //example values 5000 if in ms, or 5 if it's in seconds.
+        ShoppingCartActivity nextActivity = (ShoppingCartActivity) getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 5000);
+        // next activity is opened and captured.
+        assertNotNull(nextActivity);
+        nextActivity.finish();
     }
 
     @Test
     public void testCanOpenClickOnImageCarot() throws InterruptedException {
-        onView(withId(R.id.carotImageButton)).perform(click());
+        // register next activity that need to be monitored.
+        Instrumentation.ActivityMonitor activityMonitor = getInstrumentation().addMonitor(ShoppingCartActivity.class.getName(), null, false);
+
+        // open current activity.
+        ShoppingListActivity myActivity = mActivityRule.getActivity();
+        final View button = (View) myActivity.findViewById(R.id.carotImageButton);
+        myActivity.addCarrot(button);
+
+        //Watch for the timeout
+        //example values 5000 if in ms, or 5 if it's in seconds.
+        ShoppingCartActivity nextActivity = (ShoppingCartActivity) getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 5000);
+        // next activity is opened and captured.
+        assertNotNull(nextActivity);
+        nextActivity.finish();
     }
 
     @Test
@@ -82,7 +108,20 @@ public class ShoppingListTest {
 
     @Test
     public void testCanOpenClickOnImageChips() throws InterruptedException {
-        onView(withId(R.id.chipsImageButton)).perform(click());
+        // register next activity that need to be monitored.
+        Instrumentation.ActivityMonitor activityMonitor = getInstrumentation().addMonitor(ShoppingCartActivity.class.getName(), null, false);
+
+        // open current activity.
+        ShoppingListActivity myActivity = mActivityRule.getActivity();
+        final View button = (View) myActivity.findViewById(R.id.chipsImageButton);
+        myActivity.addChip(button);
+
+        //Watch for the timeout
+        //example values 5000 if in ms, or 5 if it's in seconds.
+        ShoppingCartActivity nextActivity = (ShoppingCartActivity) getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 5000);
+        // next activity is opened and captured.
+        assertNotNull(nextActivity);
+        nextActivity.finish();
     }
 
     @Test
@@ -112,23 +151,4 @@ public class ShoppingListTest {
     public void testCanOpenClickOnImageCheese() throws InterruptedException {
         onView(withId(R.id.cheeseImageButton)).perform(click());
     }
-
-    /*
-    @Test
-    public void testCanOpenClickOnImageMeat() {
-        // register next activity that need to be monitored.
-        Instrumentation.ActivityMonitor activityMonitor = getInstrumentation().addMonitor(ShoppingListActivity.class.getName(), null, false);
-
-        // open current activity.
-        MainActivity myActivity = mActivityRule.getActivity();
-        final MenuItem button = (MenuItem) myActivity.findViewById(R.id.nav_cancerdb);
-        myActivity.cancerDataBaseShow(button);
-
-        //Watch for the timeout
-        //example values 5000 if in ms, or 5 if it's in seconds.
-        CancerDataShowActivity nextActivity = (CancerDataShowActivity) getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 5000);
-        // next activity is opened and captured.
-        assertNotNull(nextActivity);
-        nextActivity.finish();
-    }*/
 }
