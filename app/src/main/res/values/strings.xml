@@ -146,5 +146,6 @@
     <string name="tab_2_trimester_stats">tab_2_trimester_stats</string>
     <string name="tab_3_yearly_stats">tab_3_yearly_stats</string>
     <string name="show_the_user_statistics_about_his_consumption">Show the user statistics about his consumption</string>
+    <string name="saussage">saussage</string>
 
 </resources>

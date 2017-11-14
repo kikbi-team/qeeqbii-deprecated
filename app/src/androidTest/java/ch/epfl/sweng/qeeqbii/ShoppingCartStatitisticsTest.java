@@ -13,18 +13,15 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
-import static android.support.test.InstrumentationRegistry.getInstrumentation;
 import static android.support.test.espresso.Espresso.onView;
 import static android.support.test.espresso.action.ViewActions.click;
-import static android.support.test.espresso.action.ViewActions.typeText;
-import static android.support.test.espresso.assertion.ViewAssertions.matches;
 import static android.support.test.espresso.matcher.ViewMatchers.withId;
-import static android.support.test.espresso.matcher.ViewMatchers.withText;
 import static junit.framework.Assert.assertNotNull;
+import static junit.framework.Assert.assertNull;
 import static org.junit.Assert.assertEquals;
 
 @RunWith(AndroidJUnit4.class)
-public class ShoppingCartStatitisticShouldTest {
+public class ShoppingCartStatitisticsTest {
 
     @Rule
     public final ActivityTestRule<ShoppingCartStatistics> mActivityRule =
@@ -41,5 +38,21 @@ public class ShoppingCartStatitisticShouldTest {
         ShoppingCartStatistics.SectionsPagerAdapter section;
         section = new ShoppingCartStatistics.SectionsPagerAdapter(fm);
         assertEquals(section.getCount(), 3);
+    }
+
+    @Test
+    public void getPageTitleTest() throws InterruptedException {
+        FragmentManager fm = mActivityRule.getActivity().getSupportFragmentManager();
+        ShoppingCartStatistics.SectionsPagerAdapter section;
+        section = new ShoppingCartStatistics.SectionsPagerAdapter(fm);
+        assertNotNull(section.getPageTitle(2));
+    }
+
+    @Test
+    public void getPageTitleNullTest() throws InterruptedException {
+        FragmentManager fm = mActivityRule.getActivity().getSupportFragmentManager();
+        ShoppingCartStatistics.SectionsPagerAdapter section;
+        section = new ShoppingCartStatistics.SectionsPagerAdapter(fm);
+        assertNull(section.getPageTitle(4));
     }
 }

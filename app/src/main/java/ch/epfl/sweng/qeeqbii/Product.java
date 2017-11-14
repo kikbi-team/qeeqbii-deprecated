@@ -111,4 +111,8 @@ class Product {
         mParsedNutrients = nutrient_map;
         return nutrient_map;
     }
+
+    public void setParsedIngredients(String[] parsedIngredients) {
+        this.mParsedIngredients = parsedIngredients;
+    }
 }

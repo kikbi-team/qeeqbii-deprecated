@@ -30,8 +30,8 @@ import static junit.framework.Assert.assertEquals;
  * Created by davidcleres on 12.10.17.
  */
 @RunWith(AndroidJUnit4.class)
-public class AGraphClassShould extends ActivityInstrumentationTestCase2<MainActivity> {
-    public AGraphClassShould() {
+public class GraphActivityTest extends ActivityInstrumentationTestCase2<MainActivity> {
+    public GraphActivityTest() {
         super(MainActivity.class);
     }
 
