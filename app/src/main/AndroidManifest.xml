@@ -78,7 +78,7 @@
             android:name=".CancerDataQueryActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:exported="true"
-            android:parentActivityName=".MainActivity"></activity>
+            android:parentActivityName=".MainActivity" />
 
         <provider
             android:name="com.facebook.FacebookContentProvider"
@@ -105,6 +105,10 @@
         <activity
             android:name=".ShoppingCartStatistics"
             android:label="@string/title_activity_shopping_cart_statistics"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ChatActivity"
+            android:label="@string/title_activity_chat"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

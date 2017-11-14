@@ -1,6 +1,5 @@
 package ch.epfl.sweng.qeeqbii;
 
-import android.content.Intent;
 import android.support.design.widget.TabLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -12,11 +11,15 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 
-public class ShoppingCartStatistics extends AppCompatActivity {
+import android.widget.TextView;
+
+public class ChatActivity extends AppCompatActivity {
 
     /**
      * The {@link android.support.v4.view.PagerAdapter} that will provide
@@ -36,7 +39,7 @@ public class ShoppingCartStatistics extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_shopping_cart_statistics);
+        setContentView(R.layout.activity_chat);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -59,13 +62,13 @@ public class ShoppingCartStatistics extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
-    }
 
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_shopping_cart_statistics, menu);
+        getMenuInflater().inflate(R.menu.menu_chat, menu);
         return true;
     }
 
@@ -88,7 +91,7 @@ public class ShoppingCartStatistics extends AppCompatActivity {
      * A {@link FragmentPagerAdapter} that returns a fragment corresponding to
      * one of the sections/tabs/pages.
      */
-    public static class SectionsPagerAdapter extends FragmentPagerAdapter {
+    public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
         public SectionsPagerAdapter(FragmentManager fm) {
             super(fm);
@@ -98,21 +101,19 @@ public class ShoppingCartStatistics extends AppCompatActivity {
         public Fragment getItem(int position) {
             switch (position) {
                 case 0:
-                    Tab1MonthlyStatistics tab1 = new Tab1MonthlyStatistics();
+                    Tab1Chat tab1 = new Tab1Chat();
                     return tab1;
                 case 1:
-                    Tab2TrimestrialStats tab2 = new Tab2TrimestrialStats();
+                    Tab2Contacts tab2 = new Tab2Contacts();
                     return tab2;
-                case 2:
-                    Tab3YearlyStatistics tab3 = new Tab3YearlyStatistics();
-                    return tab3;
             }
             return null;
         }
 
+
         @Override
         public int getCount() {
-            // Show 3 total pages.
+            // Show 2 total pages.
             return 2;
         }
 
@@ -120,18 +121,11 @@ public class ShoppingCartStatistics extends AppCompatActivity {
         public CharSequence getPageTitle(int position) {
             switch (position) {
                 case 0:
-                    return "MONTH";
+                    return "Chat";
                 case 1:
-                    return "TRIMESTER";
-                case 2:
-                    return "YEAR";
+                    return "Contacts";
             }
             return null;
         }
-    }
-
-    public void showGraphs(View view){
-        Intent intent = new Intent(this, GraphsActivity.class);
-        startActivity(intent);
     }
 }
