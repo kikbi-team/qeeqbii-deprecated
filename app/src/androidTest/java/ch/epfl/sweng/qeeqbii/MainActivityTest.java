@@ -17,6 +17,8 @@ import static android.support.test.espresso.assertion.ViewAssertions.matches;
 import static android.support.test.espresso.matcher.ViewMatchers.withId;
 import static android.support.test.espresso.matcher.ViewMatchers.withText;
 import static junit.framework.Assert.assertNotNull;
+import static junit.framework.Assert.assertNull;
+import static org.junit.Assert.assertEquals;
 
 
 
@@ -64,6 +66,7 @@ public class MainActivityTest {
     }
 
 
+    
     @Test
     public void testOpenGraphs() {
         // register next activity that need to be monitored.
@@ -81,7 +84,7 @@ public class MainActivityTest {
         assertNotNull(nextActivity);
         nextActivity.finish();
     }
-
+/*
     @Test
     public void testCancerDataQuery() {
         // register next activity that need to be monitored.
@@ -172,6 +175,53 @@ public class MainActivityTest {
         } catch (RemoteException e) {
             e.printStackTrace();
         }
+    }
+
+    @Test
+    public void testCanOpenShoppingCart() throws InterruptedException {
+        onView(withId(R.id.shoppingButton)).perform(click());
+    } */
+
+    @Test
+    public void testShoppingCart() {
+        // register next activity that need to be monitored.
+        Instrumentation.ActivityMonitor activityMonitor = getInstrumentation().addMonitor(ShoppingCartActivity.class.getName(), null, false);
+
+        // open current activity.
+        MainActivity myActivity = mActivityRule.getActivity();
+        final MenuItem button = (MenuItem) myActivity.findViewById(R.id.nav_shopping_cart);
+        myActivity.showShoppingList(button);
+
+        //Watch for the timeout
+        //example values 5000 if in ms, or 5 if it's in seconds.
+        ShoppingCartActivity nextActivity = (ShoppingCartActivity) getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 5000);
+        // next activity is opened and captured.
+        assertNotNull(nextActivity);
+        nextActivity.finish();
+    }
+
+    @Test
+    public void testCanOpenStatistics() {
+        // register next activity that need to be monitored.
+        Instrumentation.ActivityMonitor activityMonitor = getInstrumentation().addMonitor(ShoppingCartStatistics.class.getName(),
+                null, false);
+        // open current activity.
+        MainActivity myActivity = mActivityRule.getActivity();
+        final MenuItem button = (MenuItem) myActivity.findViewById(R.id.nav_stats);
+        myActivity.showStatistics(button);
+
+        //Watch for the timeout
+        //example values 5000 if in ms, or 5 if it's in seconds.
+        ShoppingCartStatistics nextActivity = (ShoppingCartStatistics) getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 5000); //PROBLEME EST QUE ON PASSE DIRECTEMENT A TAB1 ...
+        // next activity is opened and captured.
+        assertNotNull(nextActivity);
+        nextActivity.finish();
+    }
+
+    /*
+    @Test
+    public void testCanOpenRecentlyScannedProductsActivity() throws InterruptedException {
+        onView(withId(R.id.listRecentlyScannedProductButton)).perform(click());
     }
 
     @Test

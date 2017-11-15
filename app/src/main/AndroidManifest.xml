@@ -5,9 +5,9 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.CAMERA" />
+
     <uses-feature android:name="android.hardware.camera" />
     <uses-feature android:name="android.hardware.camera.autofocus" />
-
 
     <application
         android:allowBackup="true"
@@ -17,16 +17,13 @@
         android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
-
-        <activity android:name="ch.epfl.sweng.qeeqbii.HomeActivity">
+        <activity android:name=".HomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity android:name=".ChooserActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -42,6 +39,7 @@
             android:name="com.facebook.sdk.ApplicationId"
             android:value="@string/facebook_app_id"
             tools:replace="android:value" />
+
         <activity
             android:name=".FacebookLoginActivity"
             android:label="@string/label_facebook_login" />
@@ -51,48 +49,49 @@
             android:windowSoftInputMode="stateAlwaysHidden" />
         <activity
             android:name=".AnonymousAuthActivity"
-            android:label="@string/label_anonymous_auth"
-            android:exported="true"/>
+            android:exported="true"
+            android:label="@string/label_anonymous_auth" />
         <activity
             android:name=".TwitterLoginActivity"
             android:label="@string/label_twitter_login" />
-
-        <activity android:name=".MainActivity" android:label="@string/app_name">
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-
         <activity
-            android:name="ch.epfl.sweng.qeeqbii.CancerDataShowActivity"
+            android:name=".CancerDataShowActivity"
             android:exported="true"
-            android:parentActivityName="ch.epfl.sweng.qeeqbii.MainActivity">
+            android:parentActivityName=".MainActivity">
 
             <!-- The meta-data tag is required if you support API level 15 and lower -->
-           <meta-data
+            <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="ch.epfl.sweng.qeeqbii.MainActivity" />
         </activity>
         <activity android:name=".BarcodeScannerActivity" />
         <activity
-
-            android:name="ch.epfl.sweng.qeeqbii.CancerDataQueryActivity"
-            android:parentActivityName="ch.epfl.sweng.qeeqbii.MainActivity"
+            android:name=".CancerDataQueryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
             android:exported="true"
-            android:configChanges="keyboardHidden|orientation|screenSize">
-        </activity>
-        <provider android:authorities="com.facebook.app.FacebookContentProvider1502943653129350"
+            android:parentActivityName=".MainActivity" />
+
+        <provider
             android:name="com.facebook.FacebookContentProvider"
-            android:exported="true"/>
+            android:authorities="com.facebook.app.FacebookContentProvider1502943653129350"
+            android:exported="true" />
+
         <activity
             android:name=".BarcodeToProductActivity"
             android:exported="true" />
-
         <activity android:name=".GraphsActivity" />
         <activity android:name=".BaseActivity" />
-        <activity android:name=".ShoppingListActivity"
+        <activity
+            android:name=".ShoppingListActivity"
             android:label="@string/title_activity_shopping_cart"
             android:theme="@style/ThemeOverlay.MyNoTitleActivity" />
         <activity
@@ -103,5 +102,14 @@
             android:name=".RecentlyScannedProductsActivity"
             android:exported="true" />
         <activity android:name=".ShareOnFacebookActivity" />
+        <activity
+            android:name=".ShoppingCartStatistics"
+            android:label="@string/title_activity_shopping_cart_statistics"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ChatActivity"
+            android:label="@string/title_activity_chat"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
+
 </manifest>

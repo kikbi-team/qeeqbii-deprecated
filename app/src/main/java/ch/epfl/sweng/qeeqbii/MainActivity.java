@@ -95,4 +95,24 @@ public class MainActivity extends AppCompatActivity {
         intent.putExtra(BARCODE_READER, barcode);
         startActivity(intent);
     }
+
+    public void showRecentlyScannedProductsActivity(MenuItem item) {
+        Intent intent = new Intent(this, RecentlyScannedProductsActivity.class);
+        startActivity(intent);
+    }
+
+    public void readBarcodeButton(View view) {
+        Intent intent = new Intent(this, BarcodeScannerActivity.class);
+        startActivity(intent);
+    }
+
+    public void showStatistics(MenuItem item) {
+        Intent intent = new Intent(this, ShoppingCartStatistics.class);
+        startActivity(intent);
+    }
+
+    public void showChat(MenuItem item) {
+        Intent intent = new Intent(this, ChatActivity.class);
+        startActivity(intent);
+    }
 }
