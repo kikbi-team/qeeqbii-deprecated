@@ -32,7 +32,11 @@ public class SavedProductsDatesActivity extends AppCompatActivity {
 
         try
         {
-            SavedProductsDatabase.load(getApplicationContext());
+            if (getIntent().hasExtra("test")) {
+                SavedProductsDatabase.load(getApplicationContext(),getIntent().getIntExtra("test",0));
+            } else {
+                SavedProductsDatabase.load(getApplicationContext());
+            }
             dates = SavedProductsDatabase.getDates();
 
         } catch (Exception e)

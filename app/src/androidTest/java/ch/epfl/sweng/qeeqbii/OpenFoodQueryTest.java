@@ -114,7 +114,7 @@ public class OpenFoodQueryTest {
     {
         String barcode = "7610848337010";
         try {
-            Product product = OpenFoodQuery.GetOrCreateProduct(barcode);
+            Product product = OpenFoodQuery.GetOrCreateProduct(barcode, null);
             assertEquals(product.getQuantity(), "245.0g");
             assertEquals(product.getName(), "Mangue : en tranches");
 

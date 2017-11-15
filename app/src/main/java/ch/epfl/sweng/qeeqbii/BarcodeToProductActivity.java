@@ -1,5 +1,6 @@
 package ch.epfl.sweng.qeeqbii;
 
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -30,7 +31,7 @@ public class BarcodeToProductActivity extends AppCompatActivity {
         final TextView txt = (TextView) findViewById(R.id.product_details);
         txt.setTextSize(20);
         txt.setTextColor(Color.rgb(0, 0, 0));
-        OpenFoodQuery.ShowProduct(barcode, txt);
+        OpenFoodQuery.ShowProduct(barcode, txt, getApplicationContext());
     }
 
     @Override

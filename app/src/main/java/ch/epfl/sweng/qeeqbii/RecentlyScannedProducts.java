@@ -5,6 +5,8 @@ package ch.epfl.sweng.qeeqbii;
  * A repertory of all recently scan products.
  */
 
+import android.content.Context;
+
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.Map;

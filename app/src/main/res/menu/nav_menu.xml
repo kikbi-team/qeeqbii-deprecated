@@ -35,4 +35,9 @@
         android:id="@+id/nav_searchProductFromBarcode"
         android:onClick="searchProductFromBarcode"
         android:title="@string/search_product_from_barcode" />
+
+    <item
+        android:id="@+id/scanning_history"
+        android:onClick="showSavedProducts"
+        android:title="@string/show_saved_products_activity" />
 </menu>

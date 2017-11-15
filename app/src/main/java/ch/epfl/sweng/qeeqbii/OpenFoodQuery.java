@@ -1,5 +1,6 @@
 package ch.epfl.sweng.qeeqbii;
 
+import android.content.Context;
 import android.os.AsyncTask;
 import android.util.Log;
 import android.widget.TextView;
@@ -96,7 +97,7 @@ class OpenFoodQuery extends AsyncTask<String, Void, Product> {
     }
 
     // This GetOrCreate can freeze the main thread if the barcode isn't in the cache.
-    static Product GetOrCreateProduct(String barcode) throws Exception
+    static Product GetOrCreateProduct(String barcode, Context context) throws Exception
     {
         if(RecentlyScannedProducts.contains(barcode))
         {
@@ -104,12 +105,19 @@ class OpenFoodQuery extends AsyncTask<String, Void, Product> {
         }
 
         final CountDownLatch get_or_create_signal = new CountDownLatch(1);
+        final Context save_context = context;
 
         new OpenFoodQuery() {
             @Override
-            protected void onPostExecute(Product barcode) {
-
-
+            protected void onPostExecute(Product product) {
+                try{
+                    SavedProductsDatabase.addProduct(product);
+                    if (save_context != null)
+                        SavedProductsDatabase.save(save_context);
+                } catch (Exception e)
+                {
+                    System.out.println(e.getMessage());
+                }
             }
         }.execute(barcode);
 
@@ -125,10 +133,11 @@ class OpenFoodQuery extends AsyncTask<String, Void, Product> {
 
     // Passing the barcode and a textview to this method makes the GET
     // request to openFood without freezing the main thread.
-    static void ShowProduct(String barcode, TextView txt)
+    static void ShowProduct(String barcode, TextView txt, Context context)
     {
         final TextView txt2 = txt;
         final String barcode2 = barcode;
+        final Context save_context = context;
         new OpenFoodQuery() {
             @Override
             public void onPostExecute(Product product) {
@@ -143,6 +152,13 @@ class OpenFoodQuery extends AsyncTask<String, Void, Product> {
                     s += "\n\nNutrients: (per 100g)\n" + product.getNutrients();
                     Log.d("STATE", "Product found: " + s);
                     txt2.setText(s);
+                    try{
+                        SavedProductsDatabase.addProduct(product);
+                        SavedProductsDatabase.save(save_context);
+                    } catch (Exception e)
+                    {
+                        System.out.println(e.getMessage());
+                    }
 
                 } catch (Exception e) {
                     txt2.setText(e.getMessage());

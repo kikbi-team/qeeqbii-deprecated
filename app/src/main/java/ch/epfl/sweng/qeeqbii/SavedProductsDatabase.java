@@ -8,6 +8,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.BufferedReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -18,6 +19,7 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.Locale;
 import java.util.Map;
 
 /**
@@ -26,7 +28,7 @@ import java.util.Map;
 
 public class SavedProductsDatabase
 {
-    private static DateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
+    private static DateFormat formatter = new SimpleDateFormat("dd/MM/yyyy", Locale.FRANCE);
 
     private static JSONObject saved_products_json = null;
 
@@ -122,6 +124,17 @@ public class SavedProductsDatabase
 
             json_today_products.put(json_today_products.length(), new_product);
         } catch (Exception e) {
+            throw e;
+        }
+    }
+
+    static void save(Context context) throws IOException
+    {
+        Resources res =  context.getResources();
+        try (FileWriter file = new FileWriter(res.getResourceName(R.raw.saved_products_database))) {
+            file.write(saved_products_json.toString());
+        } catch (Exception e)
+        {
             throw e;
         }
     }
