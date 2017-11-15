@@ -106,6 +106,13 @@ public class SavedProductsDatabaseTest {
 
             assertEquals(product2.getName(),entered_product2.getName());
 
+            Intent intent = new Intent(mActivityRule.getActivity(), SavedProductsDatesActivity.class);
+            mActivityRule.launchActivity(intent);
+            onView(withText(today_date.toString())).perform(click());
+            onView(withText("Raclette")).perform(click());
+            Product product3 = SavedProductsDatabase.getProductsFromDate(today_date)[0];
+            onView(withText(product3.toString())).check(matches(isDisplayed()));
+
 
         } catch (Exception e)
         {

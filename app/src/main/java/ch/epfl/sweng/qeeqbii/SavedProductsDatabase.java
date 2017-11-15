@@ -38,8 +38,9 @@ public class SavedProductsDatabase
 
     static void load(Context context) throws UnsupportedEncodingException, IOException, JSONException
     {
-        if (saved_products_json == null)
+        if (saved_products_json == null) {
             load(context, R.raw.saved_products_database);
+        }
     }
 
     static void load(Context context, int file_id) throws UnsupportedEncodingException, IOException, JSONException

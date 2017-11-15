@@ -112,8 +112,9 @@ class OpenFoodQuery extends AsyncTask<String, Void, Product> {
             protected void onPostExecute(Product product) {
                 try{
                     SavedProductsDatabase.addProduct(product);
-                    if (save_context != null)
+                    if (save_context != null) {
                         SavedProductsDatabase.save(save_context);
+                    }
                 } catch (Exception e)
                 {
                     System.out.println(e.getMessage());
@@ -154,7 +155,9 @@ class OpenFoodQuery extends AsyncTask<String, Void, Product> {
                     txt2.setText(s);
                     try{
                         SavedProductsDatabase.addProduct(product);
-                        SavedProductsDatabase.save(save_context);
+                        if (save_context != null) {
+                            SavedProductsDatabase.save(save_context);
+                        }
                     } catch (Exception e)
                     {
                         System.out.println(e.getMessage());
