@@ -10,7 +10,7 @@ import ch.epfl.sweng.qeeqbii.CustomExceptions.ProductException;
  * Product class contains all informations relative to a given product.
  */
 
-class Product {
+public class Product {
 
     private String mName = "";
     private String mQuantity = "";
