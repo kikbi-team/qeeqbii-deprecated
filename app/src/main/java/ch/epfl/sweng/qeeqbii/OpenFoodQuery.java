@@ -96,7 +96,7 @@ class OpenFoodQuery extends AsyncTask<String, Void, Product> {
     }
 
     // This GetOrCreate can freeze the main thread if the barcode isn't in the cache.
-    static Product GetOrCreateProduct(String barcode) throws Exception
+    static Product getOrCreateProduct(String barcode) throws Exception
     {
         if(RecentlyScannedProducts.contains(barcode))
         {
