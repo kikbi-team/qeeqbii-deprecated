@@ -16,7 +16,7 @@ enum ClusterType {
     BOULANGERIE,
     UNDETERMINED;
 
-    static ClusterType getClusterType(String name) throws IOException
+    static ClusterType getClusterType(String name)
     {
         if (name.toLowerCase().matches("cheese"))
         {
@@ -47,7 +47,7 @@ enum ClusterType {
             return BOULANGERIE;
         }
 
-        throw new IOException("String passed in argument does not correspond to any cluster type");
+        return UNDETERMINED;
     }
 
 }

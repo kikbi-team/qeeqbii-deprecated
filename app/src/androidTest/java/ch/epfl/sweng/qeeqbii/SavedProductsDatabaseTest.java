@@ -1,5 +1,6 @@
 package ch.epfl.sweng.qeeqbii;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
@@ -112,6 +113,8 @@ public class SavedProductsDatabaseTest {
             onView(withText("Raclette")).perform(click());
             Product product3 = SavedProductsDatabase.getProductsFromDate(today_date)[0];
             onView(withText(product3.toString())).check(matches(isDisplayed()));
+
+            SavedProductsDatabase.save(mActivityRule.getActivity().getApplicationContext(),"json_save_test.json");
 
 
         } catch (Exception e)

@@ -33,6 +33,7 @@ class Product implements Serializable {
         mIngredients = ingredients;
         mNutrients = nutrients;
         mImageId = imageId;
+        mBarcode = barcode;
     }
 
     Product(String name, String quantity, String ingredients, String nutrients, String barcode, ClusterType type)

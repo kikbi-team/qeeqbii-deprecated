@@ -77,6 +77,7 @@ class OpenFoodQuery extends AsyncTask<String, Void, Product> {
             }
             urlConnection.disconnect();
 
+            System.out.println("Product barcode: /////////////////////////////////////" + barcode);
             Product product = (new HTTPRequestResponse(str, barcode).toProduct());
 
             RecentlyScannedProducts.add(barcode, product);
@@ -113,7 +114,7 @@ class OpenFoodQuery extends AsyncTask<String, Void, Product> {
                 try{
                     SavedProductsDatabase.addProduct(product);
                     if (save_context != null) {
-                        SavedProductsDatabase.save(save_context);
+                        SavedProductsDatabase.save(save_context, "saved_products_database.json");
                     }
                 } catch (Exception e)
                 {
@@ -156,7 +157,7 @@ class OpenFoodQuery extends AsyncTask<String, Void, Product> {
                     try{
                         SavedProductsDatabase.addProduct(product);
                         if (save_context != null) {
-                            SavedProductsDatabase.save(save_context);
+                            SavedProductsDatabase.save(save_context, "saved_products_database.json");
                         }
                     } catch (Exception e)
                     {
