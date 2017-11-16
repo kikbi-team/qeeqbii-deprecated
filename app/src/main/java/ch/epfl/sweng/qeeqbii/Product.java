@@ -1,7 +1,5 @@
 package ch.epfl.sweng.qeeqbii;
 
-import android.widget.ImageView;
-
 import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
@@ -23,8 +21,7 @@ class Product implements Serializable {
     private ClusterType mType = ClusterType.UNDETERMINED;
     private String mBarcode;
 
-    Product() {}
-
+    public Product() {}
 
     Product(String name, String quantity, String ingredients, String nutrients, String barcode, int imageId)
     {
@@ -100,7 +97,6 @@ class Product implements Serializable {
 
         if (mNutrients.matches("") | mNutrients.matches("Nutrients Not Found")) {
             throw new ProductException("Nutrient list is empty for this product: unable to execute the parsing operation.");
-
         }
 
         String[] parsed_nutrients = mNutrients.split("\\n");
@@ -116,7 +112,6 @@ class Product implements Serializable {
             }
 
             Double value = Double.parseDouble(nut.substring(two_dots_index + 2, search_alpha));
-
             String unit = nut.substring(search_alpha, nut.length());
 
             if (!key.contains("(" + unit + ")")) {
@@ -124,7 +119,6 @@ class Product implements Serializable {
             }
 
             nutrient_map.put(key, value);
-
         }
 
         mParsedNutrients = nutrient_map;
@@ -132,13 +126,16 @@ class Product implements Serializable {
     }
 
     @Override
-    public String toString()
-    {
+    public String toString() {
         String s = getName();
         s += "\n\nIngredients: " + getIngredients();
         s += "\n\nQuantity: " + getQuantity();
         s += "\n\nNutrients: (per 100g)\n" + getNutrients();
 
         return s;
+    }
+
+    void setParsedIngredients(String[] parsedIngredients) {
+        this.mParsedIngredients = parsedIngredients;
     }
 }

@@ -186,7 +186,6 @@ public class GraphsActivity extends AppCompatActivity {
         String str_per = numberFormat.format(percentage);
         description.setText( str_per + "% of your daily need in " + nameGraph + ".          ");
 
-
         //create pie data object
         PieData pieData = new PieData(pieDataSet);
         pieChart.setData(pieData);

@@ -9,10 +9,6 @@ import java.io.IOException;
 class HTTPRequestResponse {
     private String resp_body = "";
 
-    HTTPRequestResponse() {
-        resp_body = "";
-    }
-
     private String mBarcode = "";
 
     HTTPRequestResponse(String str, String barcode) throws IOException
@@ -96,6 +92,4 @@ class HTTPRequestResponse {
     {
         return toProduct("fr");
     }
-
-
 }

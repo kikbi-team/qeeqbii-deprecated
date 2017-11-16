@@ -40,4 +40,14 @@
         android:id="@+id/scanning_history"
         android:onClick="showSavedProducts"
         android:title="@string/show_saved_products_activity" />
+
+    <item
+        android:id="@+id/nav_stats"
+        android:onClick="showStatistics"
+        android:title="@string/show_the_user_statistics_about_his_consumption" />
+
+    <item
+        android:id="@+id/nav_chat"
+        android:onClick="showChat"
+        android:title="@string/stats" />
 </menu>

@@ -8,13 +8,11 @@ import org.junit.Test;
 import java.util.ArrayList;
 import java.util.List;
 
-import static android.support.test.espresso.Espresso.onView;
-import static android.support.test.espresso.action.ViewActions.click;
-import static android.support.test.espresso.matcher.ViewMatchers.withId;
 import static org.junit.Assert.assertEquals;
 
 /**
  * Created by davidcleres on 01.11.17.
+ * Test for the shopping cart
  */
 
 public class AShoppingCartClassShould {
@@ -59,7 +57,8 @@ public class AShoppingCartClassShould {
     @Test
     public void getItemsInList() throws InterruptedException {
 
-        List<Product> content = new ArrayList<Product>();
+        List<Product> content = new ArrayList<>();
+
         content.add(new Product("Cheese", "500 mg", "Stuff", "cool Nutrients", "001", R.drawable.cheese));
         content.add(new Product("Wine", "500 mg", "Stuff", "cool Nutrients", "001", R.drawable.cheese));
         content.add(new Product("Beer", "500 mg", "Stuff", "cool Nutrients", "001", R.drawable.cheese));
@@ -77,7 +76,8 @@ public class AShoppingCartClassShould {
     @Test
     public void testConstructor() throws InterruptedException {
         Product item = new Product("sausage", "500 mg", "Stuff", "cool Nutrients", "001", R.drawable.cheese);
-        List<Product> products = new ArrayList<Product>();
+
+        List<Product> products = new ArrayList<>();
         ShoppingCart shop = new ShoppingCart(products);
         shop.addItemToCart(item);
         List<Product> items = shop.getItemsInCart();
