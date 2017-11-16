@@ -20,6 +20,7 @@ import static android.support.test.espresso.action.ViewActions.typeText;
 import static android.support.test.espresso.matcher.ViewMatchers.withId;
 import static android.support.test.espresso.matcher.ViewMatchers.withText;
 import static junit.framework.Assert.assertNotNull;
+import static junit.framework.Assert.assertNull;
 import static org.junit.Assert.assertEquals;
 
 
@@ -79,6 +80,7 @@ public class MainActivityTest {
         onView(withId(R.id.SearchProductButton)).perform(click());
     }*/
 
+    
     @Test
     public void testOpenGraphs() {
         // register next activity that need to be monitored.
@@ -96,6 +98,7 @@ public class MainActivityTest {
         assertNotNull(nextActivity);
         nextActivity.finish();
     }
+
 
     /*
     @Test
@@ -171,6 +174,24 @@ public class MainActivityTest {
         //Watch for the timeout
         //example values 5000 if in ms, or 5 if it's in seconds.
         ShoppingCartActivity nextActivity = (ShoppingCartActivity) getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 5000);
+        // next activity is opened and captured.
+        assertNotNull(nextActivity);
+        nextActivity.finish();
+    }
+
+    @Test
+    public void testCanOpenStatistics() {
+        // register next activity that need to be monitored.
+        Instrumentation.ActivityMonitor activityMonitor = getInstrumentation().addMonitor(ShoppingCartStatistics.class.getName(),
+                null, false);
+        // open current activity.
+        MainActivity myActivity = mActivityRule.getActivity();
+        final MenuItem button = (MenuItem) myActivity.findViewById(R.id.nav_stats);
+        myActivity.showStatistics(button);
+
+        //Watch for the timeout
+        //example values 5000 if in ms, or 5 if it's in seconds.
+        ShoppingCartStatistics nextActivity = (ShoppingCartStatistics) getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 5000); //PROBLEME EST QUE ON PASSE DIRECTEMENT A TAB1 ...
         // next activity is opened and captured.
         assertNotNull(nextActivity);
         nextActivity.finish();

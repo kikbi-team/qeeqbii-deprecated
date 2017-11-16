@@ -84,8 +84,9 @@ class HTTPRequestResponse {
     //Return a product from the HTTPRequestResponse
     Product toProduct(String language)
     {
+        Date date = new Date();
         return new Product(GetProductName(language), GetProductQuantity(), GetProductIngredients(language),
-                GetProductNutrients(language), R.drawable.cheese);
+                GetProductNutrients(language), R.drawable.cheese, date);
     }
 
     // By default, we get the french version
@@ -93,6 +94,4 @@ class HTTPRequestResponse {
     {
         return toProduct("fr");
     }
-
-
 }

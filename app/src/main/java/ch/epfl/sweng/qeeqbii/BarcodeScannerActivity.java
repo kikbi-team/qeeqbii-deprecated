@@ -1,6 +1,7 @@
 package ch.epfl.sweng.qeeqbii;
 
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
@@ -40,10 +41,16 @@ public class BarcodeScannerActivity extends AppCompatActivity implements ZXingSc
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        // disable autorotate if it was enabled
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LOCKED);
+
         setContentView(R.layout.activity_barcode_scanner);
 
+        // request for camera permission if it is not present
         checkCameraPermissionAndRequest();
 
+        // initialize ZXing scanner
         ViewGroup contentFrame = (ViewGroup) findViewById(R.id.content_frame);
         mScannerView = new ZXingScannerView(this);
         contentFrame.addView(mScannerView);
@@ -77,6 +84,7 @@ public class BarcodeScannerActivity extends AppCompatActivity implements ZXingSc
     @Override
     public void onResume() {
         super.onResume();
+
         // Register ourselves as a handler for scan results.
         mScannerView.setResultHandler(this);
 

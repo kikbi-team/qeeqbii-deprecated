@@ -94,4 +94,14 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, BarcodeScannerActivity.class);
         startActivity(intent);
     }
+
+    public void showStatistics(MenuItem item) {
+        Intent intent = new Intent(this, ShoppingCartStatistics.class);
+        startActivity(intent);
+    }
+
+    public void showChat(MenuItem item) {
+        Intent intent = new Intent(this, ChatActivity.class);
+        startActivity(intent);
+    }
 }
