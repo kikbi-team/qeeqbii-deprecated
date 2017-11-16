@@ -12,6 +12,7 @@ import org.junit.runner.RunWith;
 
 import ch.epfl.sweng.qeeqbii.Activities.CancerDataQueryActivity;
 import ch.epfl.sweng.qeeqbii.Activities.CancerDataShowActivity;
+import ch.epfl.sweng.qeeqbii.OpenFood.BarcodeToProductActivity;
 
 import static android.support.test.InstrumentationRegistry.getInstrumentation;
 import static android.support.test.espresso.Espresso.onView;

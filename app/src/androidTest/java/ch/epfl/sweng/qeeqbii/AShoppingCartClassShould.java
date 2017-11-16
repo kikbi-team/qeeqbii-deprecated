@@ -8,7 +8,8 @@ import org.junit.Test;
 import java.util.ArrayList;
 import java.util.List;
 
-import static android.support.test.espresso.Espresso.onView;
+import ch.epfl.sweng.qeeqbii.OpenFood.Product;
+
 import static android.support.test.espresso.action.ViewActions.click;
 import static android.support.test.espresso.matcher.ViewMatchers.withId;
 import static org.junit.Assert.assertEquals;

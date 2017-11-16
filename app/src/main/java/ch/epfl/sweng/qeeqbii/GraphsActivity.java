@@ -23,6 +23,10 @@ import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Map;
 
+import ch.epfl.sweng.qeeqbii.OpenFood.OpenFoodQuery;
+import ch.epfl.sweng.qeeqbii.OpenFood.Product;
+import ch.epfl.sweng.qeeqbii.OpenFood.RecentlyScannedProducts;
+
 public class GraphsActivity extends AppCompatActivity {
 
     private static final String TAG = "GraphsActivity";

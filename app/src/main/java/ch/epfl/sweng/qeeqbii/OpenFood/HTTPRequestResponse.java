@@ -1,6 +1,10 @@
-package ch.epfl.sweng.qeeqbii;
+package ch.epfl.sweng.qeeqbii.OpenFood;
 
 import java.io.IOException;
+
+import ch.epfl.sweng.qeeqbii.Date;
+import ch.epfl.sweng.qeeqbii.R;
+
 /**
  * Created by guillaume on 09/10/17.
  *

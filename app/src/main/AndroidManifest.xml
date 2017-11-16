@@ -87,7 +87,7 @@
             android:exported="true" />
 
         <activity
-            android:name=".BarcodeToProductActivity"
+            android:name=".OpenFood.BarcodeToProductActivity"
             android:exported="true" />
         <activity android:name=".GraphsActivity" />
         <activity android:name=".BaseActivity" />
@@ -100,7 +100,7 @@
             android:label="@string/title_activity_shopping_cart"
             android:theme="@style/ThemeOverlay.MyNoTitleActivity" />
         <activity
-            android:name=".RecentlyScannedProductsActivity"
+            android:name=".Activities.RecentlyScannedProductsActivity"
             android:exported="true" />
         <activity android:name=".ShareOnFacebookActivity" />
         <activity

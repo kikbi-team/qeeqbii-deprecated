@@ -1,19 +1,15 @@
 package ch.epfl.sweng.qeeqbii;
 
 import android.content.Intent;
-import android.os.Parcelable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.view.Window;
-import android.widget.ImageView;
 
 import com.google.firebase.appindexing.Action;
 import com.google.firebase.appindexing.FirebaseUserActions;
 import com.google.firebase.appindexing.builders.Actions;
 
-import java.io.Serializable;
-import java.util.Calendar;
+import ch.epfl.sweng.qeeqbii.OpenFood.Product;
 
 public class ShoppingListActivity extends AppCompatActivity {
 

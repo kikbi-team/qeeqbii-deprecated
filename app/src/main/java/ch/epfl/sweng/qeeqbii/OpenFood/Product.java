@@ -1,9 +1,10 @@
-package ch.epfl.sweng.qeeqbii;
+package ch.epfl.sweng.qeeqbii.OpenFood;
 
 import java.util.HashMap;
 import java.util.Map;
 
 import ch.epfl.sweng.qeeqbii.CustomExceptions.ProductException;
+import ch.epfl.sweng.qeeqbii.Date;
 
 /**
  * Created by guillaume on 01/11/17.

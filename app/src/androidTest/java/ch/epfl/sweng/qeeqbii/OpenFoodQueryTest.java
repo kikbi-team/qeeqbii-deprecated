@@ -10,6 +10,10 @@ import org.junit.runner.RunWith;
 import java.util.Map;
 import java.util.concurrent.CountDownLatch;
 
+import ch.epfl.sweng.qeeqbii.OpenFood.BarcodeToProductActivity;
+import ch.epfl.sweng.qeeqbii.OpenFood.OpenFoodQuery;
+import ch.epfl.sweng.qeeqbii.OpenFood.Product;
+
 import static junit.framework.TestCase.fail;
 import static org.junit.Assert.assertEquals;
 
@@ -20,6 +24,8 @@ import static org.junit.Assert.assertEquals;
 
 @RunWith(AndroidJUnit4.class)
 public class OpenFoodQueryTest {
+
+
 
     private String string_nutrients = "Sel: 0.0g\nProtéines: 0.5g\nFibres alimentaires: 1.5g\nSucres: 15.0g\n" +
             "Glucides: 15.0g\nAcides gras saturées: 0.0g\nMatières grasses: 0.0g\nÉnergie (kCal): 67.0kCal\nÉnergie: 280.0kJ\n";
@@ -92,7 +98,7 @@ public class OpenFoodQueryTest {
                 public void onPostExecute(Product product) {
                     assertEquals(null,product);
 
-                    assertEquals(OpenFoodQuery.error_cache.get(bc), "ERROR: (openfood) Barcode not found in the database.");
+                    assertEquals(OpenFoodQuery.getErrorCache().get(bc), "ERROR: (openfood) Barcode not found in the database.");
 
                     signal.countDown();
 
@@ -114,7 +120,7 @@ public class OpenFoodQueryTest {
     {
         String barcode = "7610848337010";
         try {
-            Product product = OpenFoodQuery.GetOrCreateProduct(barcode);
+            Product product = OpenFoodQuery.getOrCreateProduct(barcode);
             assertEquals(product.getQuantity(), "245.0g");
             assertEquals(product.getName(), "Mangue : en tranches");
 

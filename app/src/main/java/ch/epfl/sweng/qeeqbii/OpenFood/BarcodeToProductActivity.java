@@ -1,4 +1,4 @@
-package ch.epfl.sweng.qeeqbii;
+package ch.epfl.sweng.qeeqbii.OpenFood;
 
 import android.content.Intent;
 import android.graphics.Color;
@@ -10,6 +10,9 @@ import android.widget.TextView;
 
 import ch.epfl.sweng.qeeqbii.Cancer.CancerDataBase;
 import ch.epfl.sweng.qeeqbii.CustomExceptions.ProductException;
+import ch.epfl.sweng.qeeqbii.GraphsActivity;
+import ch.epfl.sweng.qeeqbii.MainActivity;
+import ch.epfl.sweng.qeeqbii.R;
 
 /**
  * Created by guillaume on 10/10/17.

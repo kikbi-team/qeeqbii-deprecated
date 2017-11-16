@@ -16,7 +16,9 @@ import com.facebook.share.widget.ShareDialog;
 
 import ch.epfl.sweng.qeeqbii.Activities.CancerDataQueryActivity;
 import ch.epfl.sweng.qeeqbii.Activities.CancerDataShowActivity;
+import ch.epfl.sweng.qeeqbii.Activities.RecentlyScannedProductsActivity;
 import ch.epfl.sweng.qeeqbii.Cancer.CancerDataBase;
+import ch.epfl.sweng.qeeqbii.OpenFood.BarcodeToProductActivity;
 
 public class MainActivity extends AppCompatActivity {
     public static final String BARCODE_READER = "ch.epfl.sweng.qeeqbii.mainBarcode";

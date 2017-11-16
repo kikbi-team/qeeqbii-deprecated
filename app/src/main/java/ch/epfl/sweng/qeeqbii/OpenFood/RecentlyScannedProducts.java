@@ -1,4 +1,4 @@
-package ch.epfl.sweng.qeeqbii;
+package ch.epfl.sweng.qeeqbii.OpenFood;
 
 /**
  * Created by guillaume on 01/11/17.

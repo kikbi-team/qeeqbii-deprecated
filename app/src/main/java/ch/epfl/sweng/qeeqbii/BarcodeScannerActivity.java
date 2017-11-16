@@ -14,6 +14,7 @@ import android.widget.Toast;
 
 import com.google.zxing.Result;
 
+import ch.epfl.sweng.qeeqbii.OpenFood.BarcodeToProductActivity;
 import me.dm7.barcodescanner.zxing.ZXingScannerView;
 
 import static android.content.ContentValues.TAG;
