@@ -37,11 +37,11 @@ class SavedProductsDatabase
     static void load(Context context) throws IOException, JSONException
     {
         if (saved_products_json == null) {
-            load(context,context.openFileInput("saved_products_database.json"));
+            load(context.openFileInput("saved_products_database.json"));
         }
     }
 
-    static void load(Context context, InputStream inStream) throws IOException, JSONException
+    static void load(InputStream inStream) throws IOException, JSONException
     {
         try {
 
@@ -50,12 +50,11 @@ class SavedProductsDatabase
 
             String inputStr;
             while ((inputStr = streamReader.readLine()) != null) {
-                System.out.println(inputStr);
-
                 responseStrBuilder.append(inputStr);
             }
             saved_products_json = new JSONObject(responseStrBuilder.toString());
             saved_products_json.getJSONArray("Dates");
+            dates_indices = new HashMap<>();
         } catch(Exception e )
         {
             saved_products_json = new JSONObject().put("Dates",new JSONArray());
@@ -71,7 +70,6 @@ class SavedProductsDatabase
             dates_indices.put(dates[i], i);
         }
         return dates;
-
     }
 
     static Product[] getProductsFromDate(Date date) throws JSONException, IOException
@@ -94,7 +92,6 @@ class SavedProductsDatabase
 
     static void addProduct(Product product) throws ParseException, JSONException {
         String date_of_the_day = formatter.format(Calendar.getInstance().getTime());
-
         if (!dates_indices.containsKey(formatter.parse(date_of_the_day))) {
             max_date_index += 1;
             JSONObject new_json_object = new JSONObject();

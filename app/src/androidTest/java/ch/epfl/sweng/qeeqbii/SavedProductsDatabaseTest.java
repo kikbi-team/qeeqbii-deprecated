@@ -1,6 +1,5 @@
 package ch.epfl.sweng.qeeqbii;
 
-import android.content.Context;
 import android.content.Intent;
 import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
@@ -52,6 +51,7 @@ public class SavedProductsDatabaseTest {
         {
             Date[] dates = SavedProductsDatabase.getDates();
             assertEquals(formatter.parse("13/11/2017"),dates[0]);
+            assertEquals(1,dates.length);
 
         } catch( Exception e)
         {
@@ -70,6 +70,7 @@ public class SavedProductsDatabaseTest {
             assertEquals(2,products.length);
             assertEquals("Tartiflette", products[0].getName());
             assertEquals("Rebloch, Rebloch, Rebloch et Reblochh", products[1].getIngredients());
+            assertEquals(1,SavedProductsDatabase.getDates().length);
 
         } catch (Exception e)
         {
@@ -88,6 +89,7 @@ public class SavedProductsDatabaseTest {
 
         try
         {
+            assertEquals(1,SavedProductsDatabase.getDates().length);
             SavedProductsDatabase.addProduct(product);
             SavedProductsDatabase.addProduct(product2);
             Date[] dates = SavedProductsDatabase.getDates();
