@@ -1,10 +1,14 @@
-package ch.epfl.sweng.qeeqbii;
+package ch.epfl.sweng.qeeqbii.Activities;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+
+import ch.epfl.sweng.qeeqbii.Cancer.CancerDataBase;
+import ch.epfl.sweng.qeeqbii.Cancer.CancerSubstance;
+import ch.epfl.sweng.qeeqbii.R;
 
 public class CancerDataQueryActivity extends AppCompatActivity {
     @Override

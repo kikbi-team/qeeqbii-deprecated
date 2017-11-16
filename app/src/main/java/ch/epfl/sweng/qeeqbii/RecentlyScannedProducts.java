@@ -6,6 +6,7 @@ package ch.epfl.sweng.qeeqbii;
  */
 
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.Map;
 
@@ -48,4 +49,32 @@ public class RecentlyScannedProducts {
         mProductMap.clear();
         mBarcodeList.clear();
     }
+
+    public Iterator<Product> iterator() {
+        return new ProductIterator();
+    }
+
+
+    private class ProductIterator implements Iterator<Product> {
+        int current_index = 0;
+
+        @Override
+        public boolean hasNext() {
+            return (current_index < mBarcodeList.size());
+        }
+
+        @Override
+        public Product next() {
+            String barcode = mBarcodeList.get(current_index);
+            return mProductMap.get(barcode);
+        }
+
+        @Override
+        public void remove() {
+            throw new UnsupportedOperationException("Remove method of" +
+                    "RecentlyScannedProducts' iterator is not implemented");
+        }
+    }
+
+
 }

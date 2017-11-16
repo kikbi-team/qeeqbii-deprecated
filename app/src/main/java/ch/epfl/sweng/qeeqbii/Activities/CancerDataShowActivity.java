@@ -1,9 +1,12 @@
-package ch.epfl.sweng.qeeqbii;
+package ch.epfl.sweng.qeeqbii.Activities;
 
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
+
+import ch.epfl.sweng.qeeqbii.Cancer.CancerDataBase;
+import ch.epfl.sweng.qeeqbii.R;
 
 
 public class CancerDataShowActivity extends AppCompatActivity {

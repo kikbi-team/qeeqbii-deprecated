@@ -1,9 +1,9 @@
 package ch.epfl.sweng.qeeqbii;
 
-import android.widget.ImageView;
-
 import java.util.HashMap;
 import java.util.Map;
+
+import ch.epfl.sweng.qeeqbii.CustomExceptions.ProductException;
 
 /**
  * Created by guillaume on 01/11/17.

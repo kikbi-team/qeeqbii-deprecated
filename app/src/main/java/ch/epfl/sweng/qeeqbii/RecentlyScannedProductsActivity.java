@@ -8,7 +8,6 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -52,8 +51,8 @@ public class RecentlyScannedProductsActivity extends AppCompatActivity {
                 R.id.recently_scanned_product_text_view, listItems);
         mRecentlyScannedProductsListView.setAdapter(mAdapter);
 
+        /*
         mRecentlyScannedProductsListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-
             @Override
             public void onItemClick(AdapterView<?> adapter, View view, int position,
                                     long arg3) {
@@ -62,8 +61,8 @@ public class RecentlyScannedProductsActivity extends AppCompatActivity {
                 intent.putExtra(MainActivity.BARCODE_READER,RecentlyScannedProductsActivity.displayed_products.get(txt));
                 startActivity(intent);
             }
-
         });
+        */
     }
 
     //ImageButton btn = (ImageButton) findViewById(R.id.delete_recently_scanned_product_button);
