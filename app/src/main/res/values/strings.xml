@@ -151,4 +151,5 @@
     <string name="saussage">saussage</string>
     <string name="title_activity_chat">ChatActivity</string>
     <string name="stats">Stats</string>
+    <string name="statistics">statistics</string>
 </resources>
