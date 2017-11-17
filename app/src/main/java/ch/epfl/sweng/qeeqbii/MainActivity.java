@@ -2,10 +2,7 @@ package ch.epfl.sweng.qeeqbii;
 
 import android.content.Intent;
 
-import android.net.Uri;
-
 import android.os.Bundle;
-import android.os.Parcelable;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
@@ -15,10 +12,7 @@ import android.widget.EditText;
 
 
 import com.facebook.CallbackManager;
-import com.facebook.share.model.ShareLinkContent;
 import com.facebook.share.widget.ShareDialog;
-
-import static ch.epfl.sweng.qeeqbii.R.layout.activity_main;
 
 public class MainActivity extends AppCompatActivity {
     public static final String BARCODE_READER = "ch.epfl.sweng.qeeqbii.mainBarcode";
@@ -33,6 +27,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         try {
             CancerDataBase.readCSVFile(getApplicationContext());
+            SavedProductsDatabase.load(getApplicationContext());
+            SavedProductsDatabase.getDates();
         }
         catch(Exception e) {
             System.err.println("Exception: " + e.getMessage());
@@ -94,6 +90,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void readBarcodeButton(View view) {
         Intent intent = new Intent(this, BarcodeScannerActivity.class);
+        startActivity(intent);
+    }
+
+    public void showSavedProducts(MenuItem item) {
+        Intent intent = new Intent(this, SavedProductsDatesActivity.class);
         startActivity(intent);
     }
 

@@ -44,15 +44,28 @@ public class GraphsActivity extends AppCompatActivity {
         Intent intent = getIntent();
 
 
-        if (intent.hasExtra("barcode"))
+        if (intent.hasExtra("barcode") | intent.hasExtra("product"))
         {
-            String barcode = intent.getExtras().getString("barcode");
+            Product product = new Product();
             TextView txt = (TextView) findViewById(R.id.product_name_graph_activity);
-            txt.setText(RecentlyScannedProducts.getProduct(barcode).getName());
+
+            if (intent.hasExtra("barcode"))
+            {
+                String barcode = intent.getExtras().getString("barcode");
+                try
+                {
+                    product = OpenFoodQuery.get(barcode);
+                } catch (Exception e) {
+                    Log.d(TAG, e.getMessage());
+                }
+            } else {
+                product = (Product) intent.getSerializableExtra("product");
+            }
+
+            txt.setText(product.getName());
 
             try
             {
-                Product product = OpenFoodQuery.get(barcode);
                 Map<String,Double> nutrients = product.getParsedNutrients();
                 if (nutrients.containsKey("Énergie (kCal)"))
                 {

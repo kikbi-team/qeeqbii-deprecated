@@ -86,6 +86,16 @@
             android:exported="true" />
 
         <activity
+            android:name=".RecentlyScannedProductsActivity"
+            android:exported="true" />
+        <activity
+            android:name=".SavedProductsDatesActivity"
+            android:exported="true" />
+        <activity
+            android:name=".SavedProductsListActivity"
+            android:exported="true" />
+
+        <activity
             android:name=".BarcodeToProductActivity"
             android:exported="true" />
         <activity android:name=".GraphsActivity" />
@@ -99,7 +109,7 @@
             android:label="@string/title_activity_shopping_cart"
             android:theme="@style/ThemeOverlay.MyNoTitleActivity" />
         <activity
-            android:name=".RecentlyScannedProductsActivity"
+            android:name=".ShowProductActivity"
             android:exported="true" />
         <activity android:name=".ShareOnFacebookActivity" />
         <activity
