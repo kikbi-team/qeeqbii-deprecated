@@ -1,7 +1,6 @@
 package ch.epfl.sweng.qeeqbii;
 
-import android.widget.ImageView;
-
+import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -10,7 +9,7 @@ import java.util.Map;
  * Product class contains all informations relative to a given product.
  */
 
-class Product {
+class Product implements Serializable {
 
     private String mName = "";
     private String mQuantity = "";
@@ -19,44 +18,58 @@ class Product {
     private String[] mParsedIngredients = null;
     private Map<String, Double> mParsedNutrients = null;
     private int mImageId;
-    private Date mDate;
+    private ClusterType mType = ClusterType.UNDETERMINED;
+    private String mBarcode;
 
     public Product() {}
 
-    public Product(String name, String quantity, String ingredients, String nutrients, int imageId,
-                   Date date)
+    Product(String name, String quantity, String ingredients, String nutrients, String barcode, int imageId)
     {
         mName = name;
         mQuantity = quantity;
         mIngredients = ingredients;
         mNutrients = nutrients;
         mImageId = imageId;
-        mDate = date;
+        mBarcode = barcode;
     }
 
-    public String getName()
+    Product(String name, String quantity, String ingredients, String nutrients, String barcode, ClusterType type)
+    {
+        mName = name;
+        mQuantity = quantity;
+        mIngredients = ingredients;
+        mNutrients = nutrients;
+        mBarcode = barcode;
+        mType = type;
+    }
+
+    String getName()
     {
         return mName;
     }
 
-    public String getQuantity()
+    String getQuantity()
     {
         return mQuantity;
     }
 
-    public String getIngredients()
+    String getIngredients()
     {
         return mIngredients;
     }
 
-    public String getNutrients()
+    String getNutrients()
     {
         return mNutrients;
     }
 
-    public int getImageId() { return mImageId; }
+    String getBarcode() { return mBarcode; }
 
-    public String[] getParsedIngredients() throws ProductException
+    int getImageId() { return mImageId; }
+
+    ClusterType getCluster() { return mType; }
+
+    String[] getParsedIngredients() throws ProductException
     // Returns an array of string. Each entry of the array corresponds to an ingredient.
     {
         if(mParsedIngredients != null)
@@ -73,7 +86,7 @@ class Product {
         return mParsedIngredients;
     }
 
-    public Map<String, Double> getParsedNutrients() throws  ProductException {
+    Map<String, Double> getParsedNutrients() throws  ProductException {
     // Returns a map binding a nutrient to its quantity.
     // Key entered in the map can be e.g. "Sel (g)" or "Sucres (g)"
     // The quantity is returned as a double.
@@ -112,7 +125,17 @@ class Product {
         return nutrient_map;
     }
 
-    public void setParsedIngredients(String[] parsedIngredients) {
+    @Override
+    public String toString() {
+        String s = getName();
+        s += "\n\nIngredients: " + getIngredients();
+        s += "\n\nQuantity: " + getQuantity();
+        s += "\n\nNutrients: (per 100g)\n" + getNutrients();
+
+        return s;
+    }
+
+    void setParsedIngredients(String[] parsedIngredients) {
         this.mParsedIngredients = parsedIngredients;
     }
 }

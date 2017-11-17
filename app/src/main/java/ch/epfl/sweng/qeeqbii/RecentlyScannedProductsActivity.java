@@ -8,7 +8,6 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -18,7 +17,6 @@ import java.util.Map;
 public class RecentlyScannedProductsActivity extends AppCompatActivity {
 
     public static Map<String,String> displayed_products = new HashMap<>();
-
 
     private ArrayAdapter mAdapter;
 
@@ -48,7 +46,7 @@ public class RecentlyScannedProductsActivity extends AppCompatActivity {
         //      The list item is duplicated for each element of the list provided as 4th argument
         // The 3rd argument of the ArrayAdapter constructor is the text view in which the text provided
         //      by the list which is the 4th argument must be printed
-        mAdapter = new ArrayAdapter(this.getApplicationContext(), R.layout.list_item_recently_scanned_product,
+        mAdapter = new ArrayAdapter<>(this.getApplicationContext(), R.layout.list_item_recently_scanned_product,
                 R.id.recently_scanned_product_text_view, listItems);
         mRecentlyScannedProductsListView.setAdapter(mAdapter);
 

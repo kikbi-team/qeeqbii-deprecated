@@ -9,20 +9,19 @@ import java.io.IOException;
 class HTTPRequestResponse {
     private String resp_body = "";
 
-    HTTPRequestResponse() {
-        resp_body = "";
-    }
+    private String mBarcode = "";
 
-    HTTPRequestResponse(String str) throws IOException
+    HTTPRequestResponse(String str, String barcode) throws IOException
     {
         // Normally this error should not happen anymore
         if (str.charAt(0) != '{') throw new IOException(str);
         // To change to either OpenFoodQueryException or HTTPRequestException
         if ((str.substring(0,10).contains("[]"))) throw new IOException("Request gave an empty field, the barcode seems not to be present in the database.");
         resp_body = str;
+        mBarcode = barcode;
     }
 
-    private String GetProductName(String language) {
+    private String getProductName(String language) {
         int names_ind = resp_body.indexOf("display_name_translations\":");
         if (names_ind == -1) return "Name Not Found";
         int language_ind = resp_body.indexOf("\"" + language + "\"", names_ind);
@@ -31,7 +30,7 @@ class HTTPRequestResponse {
         return resp_body.substring(two_dots_ind + 2, resp_body.indexOf('\"', two_dots_ind + 2)).replace("\\n", "\n").replace("\\r", "\r");
     }
 
-    private String GetProductIngredients(String language) {
+    private String getProductIngredients(String language) {
         int ingredients_ind = resp_body.indexOf("ingredients_translations\":");
         if (ingredients_ind == -1) {
             return "Ingredients Not Found";
@@ -44,7 +43,7 @@ class HTTPRequestResponse {
     }
 
 
-    private String GetProductNutrients(String language) {
+    private String getProductNutrients(String language) {
         String str = "";
         int nutrients_ind = resp_body.indexOf("nutrients\":");
         if (nutrients_ind == -1) {
@@ -70,7 +69,7 @@ class HTTPRequestResponse {
 
     }
 
-    private String GetProductQuantity() {
+    private String getProductQuantity() {
         int quantity_ind = resp_body.indexOf("\"quantity\":");
         if (quantity_ind == -1) return "Quantity Not Found";
         String quantity = resp_body.substring(quantity_ind + 11, resp_body.indexOf(',', quantity_ind));
@@ -84,9 +83,8 @@ class HTTPRequestResponse {
     //Return a product from the HTTPRequestResponse
     Product toProduct(String language)
     {
-        Date date = new Date();
-        return new Product(GetProductName(language), GetProductQuantity(), GetProductIngredients(language),
-                GetProductNutrients(language), R.drawable.cheese, date);
+        return new Product(getProductName(language), getProductQuantity(), getProductIngredients(language),
+                getProductNutrients(language), mBarcode, R.drawable.cheese);
     }
 
     // By default, we get the french version

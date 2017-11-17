@@ -25,6 +25,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         try {
             CancerDataBase.readCSVFile(getApplicationContext());
+            SavedProductsDatabase.load(getApplicationContext());
+            SavedProductsDatabase.getDates();
         }
         catch(Exception e) {
             System.err.println("Exception: " + e.getMessage());
@@ -87,6 +89,11 @@ public class MainActivity extends AppCompatActivity {
         EditText editText = (EditText) findViewById(R.id.Barcode);
         String barcode = editText.getText().toString();
         intent.putExtra(BARCODE_READER, barcode);
+        startActivity(intent);
+    }
+
+    public void showSavedProducts(MenuItem item) {
+        Intent intent = new Intent(this, SavedProductsDatesActivity.class);
         startActivity(intent);
     }
 
