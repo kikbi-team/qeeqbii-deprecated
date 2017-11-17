@@ -139,6 +139,8 @@
     <string name="share_on_facebook">Share on Facebook</string>
     <string name="camera_perm_ok">Received camera permission</string>
     <string name="please_allow_camera">Please grant camera permission to use Qeeqbii</string>
+    <string name="main_activity">Main Activity</string>
+    <string name="cancer_data_query">Cancer Data Query</string>
     <string name="facebook_share_button">facebook share button</string>
     <string name="title_activity_shopping_cart_statistics">ShoppingCartStatistics</string>
     <string name="action_settings">Settings</string>
@@ -150,5 +152,5 @@
     <string name="saussage">saussage</string>
     <string name="title_activity_chat">ChatActivity</string>
     <string name="stats">Stats</string>
-
+    <string name="statistics">statistics</string>
 </resources>
