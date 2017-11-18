@@ -1,18 +1,21 @@
-package ch.epfl.sweng.qeeqbii.OpenFood;
+package ch.epfl.sweng.qeeqbii.open_food;
 
+
+
+
+import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
 
-import ch.epfl.sweng.qeeqbii.CustomExceptions.ProductException;
-import ch.epfl.sweng.qeeqbii.Date;
+import ch.epfl.sweng.qeeqbii.ClusterType;
+import ch.epfl.sweng.qeeqbii.custom_exceptions.ProductException;
 
 /**
  * Created by guillaume on 01/11/17.
  * Product class contains all informations relative to a given product.
  */
 
-public class Product {
-
+public class Product implements Serializable {
     private String mName = "";
     private String mQuantity = "";
     private String mIngredients = "";
@@ -20,19 +23,29 @@ public class Product {
     private String[] mParsedIngredients = null;
     private Map<String, Double> mParsedNutrients = null;
     private int mImageId;
-    private Date mDate;
+    private ClusterType mType = ClusterType.UNDETERMINED;
+    private String mBarcode;
 
     public Product() {}
 
-    public Product(String name, String quantity, String ingredients, String nutrients, int imageId,
-                   Date date)
+    public Product(String name, String quantity, String ingredients, String nutrients, String barcode, int imageId)
     {
         mName = name;
         mQuantity = quantity;
         mIngredients = ingredients;
         mNutrients = nutrients;
         mImageId = imageId;
-        mDate = date;
+        mBarcode = barcode;
+    }
+
+    public Product(String name, String quantity, String ingredients, String nutrients, String barcode, ClusterType type)
+    {
+        mName = name;
+        mQuantity = quantity;
+        mIngredients = ingredients;
+        mNutrients = nutrients;
+        mBarcode = barcode;
+        mType = type;
     }
 
     public String getName()
@@ -55,7 +68,11 @@ public class Product {
         return mNutrients;
     }
 
+    public String getBarcode() { return mBarcode; }
+
     public int getImageId() { return mImageId; }
+
+    public ClusterType getCluster() { return mType; }
 
     public String[] getParsedIngredients() throws ProductException
     // Returns an array of string. Each entry of the array corresponds to an ingredient.
@@ -111,6 +128,16 @@ public class Product {
 
         mParsedNutrients = nutrient_map;
         return nutrient_map;
+    }
+
+    @Override
+    public String toString() {
+        String s = getName();
+        s += "\n\nIngredients: " + getIngredients();
+        s += "\n\nQuantity: " + getQuantity();
+        s += "\n\nNutrients: (per 100g)\n" + getNutrients();
+
+        return s;
     }
 
     public void setParsedIngredients(String[] parsedIngredients) {

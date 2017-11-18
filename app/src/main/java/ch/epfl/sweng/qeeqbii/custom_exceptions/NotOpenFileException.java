@@ -1,4 +1,4 @@
-package ch.epfl.sweng.qeeqbii.CustomExceptions;
+package ch.epfl.sweng.qeeqbii.custom_exceptions;
 
 
 

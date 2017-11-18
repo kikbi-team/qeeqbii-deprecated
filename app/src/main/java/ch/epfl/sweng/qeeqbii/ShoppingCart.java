@@ -3,7 +3,7 @@ package ch.epfl.sweng.qeeqbii;
 import java.util.ArrayList;
 import java.util.List;
 
-import ch.epfl.sweng.qeeqbii.OpenFood.Product;
+import ch.epfl.sweng.qeeqbii.open_food.Product;
 
 
 /**

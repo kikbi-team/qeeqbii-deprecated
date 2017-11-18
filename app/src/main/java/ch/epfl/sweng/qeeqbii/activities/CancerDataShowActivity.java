@@ -1,51 +1,58 @@
-package ch.epfl.sweng.qeeqbii;
+package ch.epfl.sweng.qeeqbii.activities;
 
 import android.content.Intent;
-
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.EditText;
+import android.widget.TextView;
 
-import com.facebook.CallbackManager;
-import com.facebook.share.widget.ShareDialog;
-
-import ch.epfl.sweng.qeeqbii.activities.CancerDataQueryActivity;
-import ch.epfl.sweng.qeeqbii.activities.CancerDataShowActivity;
-import ch.epfl.sweng.qeeqbii.activities.RecentlyScannedProductsActivity;
+import ch.epfl.sweng.qeeqbii.BarcodeScannerActivity;
 import ch.epfl.sweng.qeeqbii.cancer.CancerDataBase;
-import ch.epfl.sweng.qeeqbii.activities.BarcodeToProductActivity;
+import ch.epfl.sweng.qeeqbii.ChatActivity;
+import ch.epfl.sweng.qeeqbii.GraphsActivity;
+import ch.epfl.sweng.qeeqbii.MainActivity;
+import ch.epfl.sweng.qeeqbii.R;
+import ch.epfl.sweng.qeeqbii.ShoppingCartActivity;
+import ch.epfl.sweng.qeeqbii.ShoppingCartStatistics;
 
-public class MainActivity extends AppCompatActivity {
-    public static final String BARCODE_READER = "ch.epfl.sweng.qeeqbii.mainBarcode";
-    CallbackManager callbackManager;
-    ShareDialog shareDialog;
+
+public class CancerDataShowActivity extends AppCompatActivity {
 
     private ActionBarDrawerToggle mToggle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        try {
-            CancerDataBase.readCSVFile(getApplicationContext());
-            SavedProductsDatabase.load(getApplicationContext());
-            SavedProductsDatabase.getDates();
-        }
-        catch(Exception e) {
-            System.err.println("Exception: " + e.getMessage());
-        }
+        setContentView(R.layout.activity_display_message);
 
-        DrawerLayout mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout mDrawerLayout = (DrawerLayout) findViewById(R.id.cancerDataShow);
         mToggle = new ActionBarDrawerToggle(this, mDrawerLayout, R.string.open, R.string.close);
 
         mDrawerLayout.addDrawerListener(mToggle);
         mToggle.syncState();
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        // Instantiation of a CancerDataBase object followed by:
+        // reading of the CSV file using the readCSVFile method
+        // sending of a message
+        String message;
+        try {
+            message = CancerDataBase.sendOutputReadyToPrint();
+        }
+        catch(Exception e) {
+            System.err.println("Exception: " + e.getMessage());
+            message = "Failed to get the CancerDataBase in CancerDataShowActivity.";
+        }
+
+        // Capture the layout's; TextView and set the string as its text
+        TextView reportedMessage = (TextView) findViewById(R.id.cancerDataBaseMessage);
+        reportedMessage.setTextSize(12);
+        reportedMessage.setTextColor(Color.rgb(200, 0, 0));
+        reportedMessage.setText(message);
     }
 
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -88,19 +95,6 @@ public class MainActivity extends AppCompatActivity {
 
     public void backToMain(MenuItem item) {
         Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
-    }
-
-    public void searchProductFromBarcode(View view) {
-        Intent intent = new Intent(this, BarcodeToProductActivity.class);
-        EditText editText = (EditText) findViewById(R.id.Barcode);
-        String barcode = editText.getText().toString();
-        intent.putExtra(BARCODE_READER, barcode);
-        startActivity(intent);
-    }
-
-    public void showSavedProducts(MenuItem item) {
-        Intent intent = new Intent(this, SavedProductsDatesActivity.class);
         startActivity(intent);
     }
 

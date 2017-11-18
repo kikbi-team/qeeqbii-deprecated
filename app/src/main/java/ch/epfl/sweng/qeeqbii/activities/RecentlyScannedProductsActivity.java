@@ -1,4 +1,4 @@
-package ch.epfl.sweng.qeeqbii.Activities;
+package ch.epfl.sweng.qeeqbii.activities;
 
 
 import android.content.Intent;
@@ -13,15 +13,14 @@ import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.Map;
 
-import ch.epfl.sweng.qeeqbii.OpenFood.Product;
+import ch.epfl.sweng.qeeqbii.open_food.Product;
 import ch.epfl.sweng.qeeqbii.R;
-import ch.epfl.sweng.qeeqbii.OpenFood.RecentlyScannedProducts;
+import ch.epfl.sweng.qeeqbii.open_food.RecentlyScannedProducts;
 import ch.epfl.sweng.qeeqbii.ShareOnFacebookActivity;
 
 public class RecentlyScannedProductsActivity extends AppCompatActivity {
 
     public static Map<String,String> displayed_products = new HashMap<>();
-
 
     private ArrayAdapter mAdapter;
 
@@ -51,7 +50,7 @@ public class RecentlyScannedProductsActivity extends AppCompatActivity {
         //      The list item is duplicated for each element of the list provided as 4th argument
         // The 3rd argument of the ArrayAdapter constructor is the text view in which the text provided
         //      by the list which is the 4th argument must be printed
-        mAdapter = new ArrayAdapter(this.getApplicationContext(), R.layout.list_item_recently_scanned_product,
+        mAdapter = new ArrayAdapter<>(this.getApplicationContext(), R.layout.list_item_recently_scanned_product,
                 R.id.recently_scanned_product_text_view, listItems);
         mRecentlyScannedProductsListView.setAdapter(mAdapter);
 

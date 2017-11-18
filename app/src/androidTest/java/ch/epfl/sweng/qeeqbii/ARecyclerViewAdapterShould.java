@@ -8,7 +8,7 @@ import org.junit.Test;
 import java.util.ArrayList;
 import java.util.List;
 
-import ch.epfl.sweng.qeeqbii.OpenFood.Product;
+import ch.epfl.sweng.qeeqbii.open_food.Product;
 
 import static org.junit.Assert.assertEquals;
 
@@ -24,8 +24,7 @@ public class ARecyclerViewAdapterShould {
     @Test
     public void testConstructor() throws InterruptedException {
         Date date = new Date();
-        Product item = new Product("cheese", "500 mg", "Stuff", "cool Nutrients", R.drawable.cheese,
-                date);
+        Product item = new Product("cheese", "500 mg", "Stuff", "cool Nutrients", "001", R.drawable.cheese);
         List<Product> products = new ArrayList<Product>();
         products.add(item);
         products.add(item);

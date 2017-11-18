@@ -1,4 +1,4 @@
-package ch.epfl.sweng.qeeqbii.OpenFood;
+package ch.epfl.sweng.qeeqbii.open_food;
 
 /**
  * Created by guillaume on 01/11/17.
@@ -16,7 +16,7 @@ public class RecentlyScannedProducts {
     private static LinkedList<String> mBarcodeList = new LinkedList<>();
 
     // Returns whether a product has been recently scanned or not.
-    static Boolean contains(String barcode)
+    public static Boolean contains(String barcode)
     {
         return mProductMap.containsKey(barcode);
     }

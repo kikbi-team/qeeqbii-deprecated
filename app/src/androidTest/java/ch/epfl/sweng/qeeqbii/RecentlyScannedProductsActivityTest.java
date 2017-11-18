@@ -11,7 +11,7 @@ import org.junit.runner.RunWith;
 
 import java.util.ArrayList;
 
-import ch.epfl.sweng.qeeqbii.Activities.RecentlyScannedProductsActivity;
+import ch.epfl.sweng.qeeqbii.activities.RecentlyScannedProductsActivity;
 
 import static android.support.test.espresso.Espresso.onView;
 import static android.support.test.espresso.action.ViewActions.click;

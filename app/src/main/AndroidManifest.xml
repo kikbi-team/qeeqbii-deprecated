@@ -64,7 +64,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="ch.epfl.sweng.qeeqbii.Activities.CancerDataShowActivity"
+            android:name="ch.epfl.sweng.qeeqbii.activities.CancerDataShowActivity"
 
             android:exported="true"
             android:parentActivityName=".MainActivity">
@@ -76,7 +76,7 @@
         </activity>
         <activity android:name=".BarcodeScannerActivity" />
         <activity
-            android:name="ch.epfl.sweng.qeeqbii.Activities.CancerDataQueryActivity"
+            android:name="ch.epfl.sweng.qeeqbii.activities.CancerDataQueryActivity"
             android:parentActivityName="ch.epfl.sweng.qeeqbii.MainActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:exported="true"/>
@@ -87,7 +87,17 @@
             android:exported="true" />
 
         <activity
-            android:name=".OpenFood.BarcodeToProductActivity"
+            android:name=".activities.RecentlyScannedProductsActivity"
+            android:exported="true" />
+        <activity
+            android:name=".SavedProductsDatesActivity"
+            android:exported="true" />
+        <activity
+            android:name=".SavedProductsListActivity"
+            android:exported="true" />
+
+        <activity
+            android:name=".activities.BarcodeToProductActivity"
             android:exported="true" />
         <activity android:name=".GraphsActivity" />
         <activity android:name=".BaseActivity" />
@@ -100,7 +110,7 @@
             android:label="@string/title_activity_shopping_cart"
             android:theme="@style/ThemeOverlay.MyNoTitleActivity" />
         <activity
-            android:name=".Activities.RecentlyScannedProductsActivity"
+            android:name=".ShowProductActivity"
             android:exported="true" />
         <activity android:name=".ShareOnFacebookActivity" />
         <activity

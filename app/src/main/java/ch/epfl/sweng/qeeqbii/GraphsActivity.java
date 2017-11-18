@@ -3,8 +3,11 @@ package ch.epfl.sweng.qeeqbii;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -23,9 +26,11 @@ import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Map;
 
-import ch.epfl.sweng.qeeqbii.OpenFood.OpenFoodQuery;
-import ch.epfl.sweng.qeeqbii.OpenFood.Product;
-import ch.epfl.sweng.qeeqbii.OpenFood.RecentlyScannedProducts;
+import ch.epfl.sweng.qeeqbii.activities.CancerDataQueryActivity;
+import ch.epfl.sweng.qeeqbii.activities.CancerDataShowActivity;
+import ch.epfl.sweng.qeeqbii.activities.RecentlyScannedProductsActivity;
+import ch.epfl.sweng.qeeqbii.open_food.OpenFoodQuery;
+import ch.epfl.sweng.qeeqbii.open_food.Product;
 
 public class GraphsActivity extends AppCompatActivity {
 
@@ -36,6 +41,7 @@ public class GraphsActivity extends AppCompatActivity {
     private final float[] yDataSugars = {0, 55};
     private final float[] yDataSalts = {0, 5};
     private final String[] xData = {"Completed", "Left"};
+    private ActionBarDrawerToggle mToggle;
 
 
     @Override
@@ -47,16 +53,37 @@ public class GraphsActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
 
+        DrawerLayout mDrawerLayout = (DrawerLayout) findViewById(R.id.GraphsLayout);
+        mToggle = new ActionBarDrawerToggle(this, mDrawerLayout, R.string.open, R.string.close);
 
-        if (intent.hasExtra("barcode"))
+        mDrawerLayout.addDrawerListener(mToggle);
+        mToggle.syncState();
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+
+        if (intent.hasExtra("barcode") | intent.hasExtra("product"))
         {
-            String barcode = intent.getExtras().getString("barcode");
+            Product product = new Product();
             TextView txt = (TextView) findViewById(R.id.product_name_graph_activity);
-            txt.setText(RecentlyScannedProducts.getProduct(barcode).getName());
+
+            if (intent.hasExtra("barcode"))
+            {
+                String barcode = intent.getExtras().getString("barcode");
+                try
+                {
+                    product = OpenFoodQuery.get(barcode);
+                } catch (Exception e) {
+                    Log.d(TAG, e.getMessage());
+                }
+            } else {
+                product = (Product) intent.getSerializableExtra("product");
+            }
+
+            txt.setText(product.getName());
 
             try
             {
-                Product product = OpenFoodQuery.get(barcode);
                 Map<String,Double> nutrients = product.getParsedNutrients();
                 if (nutrients.containsKey("Énergie (kCal)"))
                 {
@@ -197,5 +224,57 @@ public class GraphsActivity extends AppCompatActivity {
     {
         super.onResume();
         findViewById(R.id.button_share_on_fb_graph).setVisibility(View.VISIBLE);
+    }
+
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        return mToggle.onOptionsItemSelected(item) || super.onOptionsItemSelected(item);
+    }
+
+    public void cancerDataBaseShow(MenuItem item) {
+        Intent intent = new Intent(this, CancerDataShowActivity.class);
+        startActivity(intent);
+    }
+
+
+    public void readBarcode(MenuItem item) {
+        Intent intent = new Intent(this, BarcodeScannerActivity.class);
+        startActivity(intent);
+    }
+
+
+    public void showShoppingList(MenuItem view) {
+        Intent intent = new Intent(this, ShoppingCartActivity.class);
+        startActivity(intent);
+    }
+
+    public void showGraphs(MenuItem item) {
+        Intent intent = new Intent(this, GraphsActivity.class);
+        startActivity(intent);
+    }
+
+    public void cancerDataQuery(MenuItem item) {
+        Intent intent = new Intent(this, CancerDataQueryActivity.class);
+        startActivity(intent);
+    }
+
+    public void showRecentlyScannedProductsActivity(MenuItem item) {
+        Intent intent = new Intent(this, RecentlyScannedProductsActivity.class);
+        startActivity(intent);
+    }
+
+    public void backToMain(MenuItem item) {
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+    }
+
+    public void showStatistics(MenuItem item) {
+        Intent intent = new Intent(this, ShoppingCartStatistics.class);
+        startActivity(intent);
+    }
+
+    public void showChat(MenuItem item) {
+        Intent intent = new Intent(this, ChatActivity.class);
+        startActivity(intent);
     }
 }

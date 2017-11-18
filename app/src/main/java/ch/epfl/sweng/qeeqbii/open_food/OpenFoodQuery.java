@@ -1,5 +1,6 @@
-package ch.epfl.sweng.qeeqbii.OpenFood;
+package ch.epfl.sweng.qeeqbii.open_food;
 
+import android.content.Context;
 import android.os.AsyncTask;
 import android.util.Log;
 import android.widget.TextView;
@@ -13,6 +14,8 @@ import java.util.Map;
 import java.util.concurrent.CountDownLatch;
 
 import java.net.URL;
+
+import ch.epfl.sweng.qeeqbii.SavedProductsDatabase;
 
 /**
  * Created by guillaume on 06/10/17.
@@ -80,7 +83,8 @@ public class OpenFoodQuery extends AsyncTask<String, Void, Product> {
             }
             urlConnection.disconnect();
 
-            Product product = (new HTTPRequestResponse(str).toProduct());
+            System.out.println("Product barcode: /////////////////////////////////////" + barcode);
+            Product product = (new HTTPRequestResponse(str, barcode).toProduct());
 
             RecentlyScannedProducts.add(barcode, product);
             return product;
@@ -100,7 +104,8 @@ public class OpenFoodQuery extends AsyncTask<String, Void, Product> {
     }
 
     // This GetOrCreate can freeze the main thread if the barcode isn't in the cache.
-    public static Product getOrCreateProduct(String barcode) throws Exception
+    // If we do not want to save the product in the scanned history, we can give a null context in parameter.
+    public static Product GetOrCreateProduct(String barcode, Context context) throws Exception
     {
         if(RecentlyScannedProducts.contains(barcode))
         {
@@ -108,12 +113,20 @@ public class OpenFoodQuery extends AsyncTask<String, Void, Product> {
         }
 
         final CountDownLatch get_or_create_signal = new CountDownLatch(1);
+        final Context save_context = context;
 
         new OpenFoodQuery() {
             @Override
-            protected void onPostExecute(Product barcode) {
-
-
+            protected void onPostExecute(Product product) {
+                try{
+                    SavedProductsDatabase.addProduct(product);
+                    if (save_context != null) {
+                        SavedProductsDatabase.save(save_context, "saved_products_database.json");
+                    }
+                } catch (Exception e)
+                {
+                    System.out.println(e.getMessage());
+                }
             }
         }.execute(barcode);
 
@@ -129,10 +142,11 @@ public class OpenFoodQuery extends AsyncTask<String, Void, Product> {
 
     // Passing the barcode and a textview to this method makes the GET
     // request to openFood without freezing the main thread.
-    static void ShowProduct(String barcode, TextView txt)
+    public static void ShowProduct(String barcode, TextView txt, Context context)
     {
         final TextView txt2 = txt;
         final String barcode2 = barcode;
+        final Context save_context = context;
         new OpenFoodQuery() {
             @Override
             public void onPostExecute(Product product) {
@@ -147,6 +161,15 @@ public class OpenFoodQuery extends AsyncTask<String, Void, Product> {
                     s += "\n\nNutrients: (per 100g)\n" + product.getNutrients();
                     Log.d("STATE", "Product found: " + s);
                     txt2.setText(s);
+                    try{
+                        SavedProductsDatabase.addProduct(product);
+                        if (save_context != null) {
+                            SavedProductsDatabase.save(save_context, "saved_products_database.json");
+                        }
+                    } catch (Exception e)
+                    {
+                        System.out.println(e.getMessage());
+                    }
 
                 } catch (Exception e) {
                     txt2.setText(e.getMessage());

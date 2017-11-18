@@ -10,9 +10,9 @@ import org.junit.runner.RunWith;
 import java.util.Map;
 import java.util.concurrent.CountDownLatch;
 
-import ch.epfl.sweng.qeeqbii.OpenFood.BarcodeToProductActivity;
-import ch.epfl.sweng.qeeqbii.OpenFood.OpenFoodQuery;
-import ch.epfl.sweng.qeeqbii.OpenFood.Product;
+import ch.epfl.sweng.qeeqbii.activities.BarcodeToProductActivity;
+import ch.epfl.sweng.qeeqbii.open_food.OpenFoodQuery;
+import ch.epfl.sweng.qeeqbii.open_food.Product;
 
 import static junit.framework.TestCase.fail;
 import static org.junit.Assert.assertEquals;
@@ -50,11 +50,10 @@ public class OpenFoodQueryTest {
             public void onPostExecute(Product product) {
 
                 try {
-                    assertEquals(product.getQuantity(), "245.0g");
-                    assertEquals(product.getName(), "Mangue : en tranches");
-                    assertEquals(product.getIngredients(), "mangue (Thaïlande), eau, sucre, acidifiant (E330)");
-                    assertEquals(product.getNutrients(), "Sel: 0.0g\nProtéines: 0.5g\nFibres alimentaires: 1.5g\nSucres: 15.0g\n" +
-                            "Glucides: 15.0g\nAcides gras saturées: 0.0g\nMatières grasses: 0.0g\nÉnergie (kCal): 67.0kCal\nÉnergie: 280.0kJ\n");
+                    assertEquals(product.getQuantity(), string_quantity);
+                    assertEquals(product.getName(), string_name);
+                    assertEquals(product.getIngredients(), string_ingredients);
+                    assertEquals(product.getNutrients(), string_nutrients);
 
                     Map<String, Double> parsed_nutrients = product.getParsedNutrients();
 
@@ -120,9 +119,9 @@ public class OpenFoodQueryTest {
     {
         String barcode = "7610848337010";
         try {
-            Product product = OpenFoodQuery.getOrCreateProduct(barcode);
-            assertEquals(product.getQuantity(), "245.0g");
-            assertEquals(product.getName(), "Mangue : en tranches");
+            Product product = OpenFoodQuery.GetOrCreateProduct(barcode, null);
+            assertEquals(product.getQuantity(), string_quantity);
+            assertEquals(product.getName(), string_name);
 
         } catch (Exception e) {
             fail(e.getMessage());
@@ -132,9 +131,8 @@ public class OpenFoodQueryTest {
         {
             try {
                 Product product = OpenFoodQuery.get(barcode);
-                assertEquals(product.getIngredients(), "mangue (Thaïlande), eau, sucre, acidifiant (E330)");
-                assertEquals(product.getNutrients(), "Sel: 0.0g\nProtéines: 0.5g\nFibres alimentaires: 1.5g\nSucres: 15.0g\n" +
-                        "Glucides: 15.0g\nAcides gras saturées: 0.0g\nMatières grasses: 0.0g\nÉnergie (kCal): 67.0kCal\nÉnergie: 280.0kJ\n");
+                assertEquals(product.getIngredients(), string_ingredients);
+                assertEquals(product.getNutrients(), string_nutrients);
 
             } catch (Exception e) {
                 fail(e.getMessage());

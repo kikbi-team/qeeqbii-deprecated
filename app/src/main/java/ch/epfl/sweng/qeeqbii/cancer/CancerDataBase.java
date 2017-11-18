@@ -1,4 +1,4 @@
-package ch.epfl.sweng.qeeqbii.Cancer;
+package ch.epfl.sweng.qeeqbii.cancer;
 
 import android.content.Context;
 import android.content.res.Resources;
@@ -14,8 +14,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Set;
 
-import ch.epfl.sweng.qeeqbii.CustomExceptions.NotOpenFileException;
-import ch.epfl.sweng.qeeqbii.CustomExceptions.NullInputException;
+import ch.epfl.sweng.qeeqbii.custom_exceptions.NotOpenFileException;
+import ch.epfl.sweng.qeeqbii.custom_exceptions.NullInputException;
 import ch.epfl.sweng.qeeqbii.R;
 import edu.gatech.gtri.bktree.BkTreeSearcher;
 import edu.gatech.gtri.bktree.Metric;

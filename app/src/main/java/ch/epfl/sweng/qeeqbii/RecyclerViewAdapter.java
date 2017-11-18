@@ -14,7 +14,7 @@ import android.widget.TextView;
 
 import java.util.List;
 
-import ch.epfl.sweng.qeeqbii.OpenFood.Product;
+import ch.epfl.sweng.qeeqbii.open_food.Product;
 
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder> {
     private Activity activity;
