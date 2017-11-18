@@ -1,11 +1,14 @@
 package ch.epfl.sweng.qeeqbii;
 
+import android.app.Activity;
 import android.support.test.espresso.Espresso;
 import android.support.test.espresso.IdlingResource;
 import android.support.test.espresso.ViewInteraction;
 import android.support.test.espresso.intent.rule.IntentsTestRule;
 import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
+import android.view.View;
+import android.widget.Button;
 
 import org.junit.After;
 import org.junit.Before;
@@ -54,11 +57,18 @@ public class TwitterTest {
 
     @Test
     public void useAppContext() throws Exception {
-        TwitterLoginActivity activity = mActivityTestRule.getActivity();
         Thread.sleep(200);
         Espresso.closeSoftKeyboard();
-        Thread.sleep(200);
-        onView(withId(R.id.button_twitter_login)).perform(click());
+        Activity current_activity = mActivityTestRule.getActivity();
+        Button buttonTwitterLogin = (Button) current_activity.findViewById(R.id.button_twitter_login);
+        if (buttonTwitterLogin.getVisibility() == View.VISIBLE) {
+            Thread.sleep(200);
+            onView(withId(R.id.button_twitter_login)).perform(click());
+        }
+        else {
+            Thread.sleep(200);
+            onView(withId(R.id.button_twitter_signout)).perform(click());
+        }
     }
 /*
     @Test
