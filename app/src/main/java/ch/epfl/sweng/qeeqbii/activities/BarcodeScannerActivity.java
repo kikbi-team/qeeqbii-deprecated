@@ -1,4 +1,4 @@
-package ch.epfl.sweng.qeeqbii;
+package ch.epfl.sweng.qeeqbii.activities;
 
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
@@ -17,14 +17,12 @@ import android.widget.Toast;
 
 import com.google.zxing.Result;
 
-import ch.epfl.sweng.qeeqbii.activities.CancerDataQueryActivity;
-import ch.epfl.sweng.qeeqbii.activities.CancerDataShowActivity;
-import ch.epfl.sweng.qeeqbii.activities.RecentlyScannedProductsActivity;
-import ch.epfl.sweng.qeeqbii.activities.BarcodeToProductActivity;
+import ch.epfl.sweng.qeeqbii.R;
+import ch.epfl.sweng.qeeqbii.shopping_cart.ShoppingCartStatistics;
 import me.dm7.barcodescanner.zxing.ZXingScannerView;
 
 import static android.content.ContentValues.TAG;
-import static ch.epfl.sweng.qeeqbii.MainActivity.BARCODE_READER;
+import static ch.epfl.sweng.qeeqbii.activities.MainActivity.BARCODE_READER;
 
 /**
  * Created by sergei on 02/11/17.

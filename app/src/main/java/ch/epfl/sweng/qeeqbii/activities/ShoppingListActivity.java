@@ -1,4 +1,4 @@
-package ch.epfl.sweng.qeeqbii;
+package ch.epfl.sweng.qeeqbii.activities;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -9,6 +9,8 @@ import com.google.firebase.appindexing.Action;
 import com.google.firebase.appindexing.FirebaseUserActions;
 import com.google.firebase.appindexing.builders.Actions;
 
+import ch.epfl.sweng.qeeqbii.R;
+import ch.epfl.sweng.qeeqbii.shopping_cart.ShoppingCart;
 import ch.epfl.sweng.qeeqbii.open_food.Product;
 
 public class ShoppingListActivity extends AppCompatActivity {

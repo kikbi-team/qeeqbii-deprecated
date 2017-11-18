@@ -15,8 +15,6 @@ import java.util.concurrent.CountDownLatch;
 
 import java.net.URL;
 
-import ch.epfl.sweng.qeeqbii.SavedProductsDatabase;
-
 /**
  * Created by guillaume on 06/10/17.
  * Class allowing to make GET requests to openfood.

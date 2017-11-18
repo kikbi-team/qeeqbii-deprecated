@@ -7,7 +7,6 @@ import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
 
-import ch.epfl.sweng.qeeqbii.ClusterType;
 import ch.epfl.sweng.qeeqbii.custom_exceptions.ProductException;
 
 /**

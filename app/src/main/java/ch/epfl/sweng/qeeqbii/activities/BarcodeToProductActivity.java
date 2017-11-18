@@ -10,8 +10,6 @@ import android.widget.TextView;
 
 import ch.epfl.sweng.qeeqbii.cancer.CancerDataBase;
 import ch.epfl.sweng.qeeqbii.custom_exceptions.ProductException;
-import ch.epfl.sweng.qeeqbii.GraphsActivity;
-import ch.epfl.sweng.qeeqbii.MainActivity;
 import ch.epfl.sweng.qeeqbii.R;
 import ch.epfl.sweng.qeeqbii.open_food.OpenFoodQuery;
 import ch.epfl.sweng.qeeqbii.open_food.RecentlyScannedProducts;

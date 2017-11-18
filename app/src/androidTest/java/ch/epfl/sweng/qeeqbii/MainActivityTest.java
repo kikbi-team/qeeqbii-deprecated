@@ -11,6 +11,10 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 
 import ch.epfl.sweng.qeeqbii.activities.CancerDataShowActivity;
+import ch.epfl.sweng.qeeqbii.activities.GraphsActivity;
+import ch.epfl.sweng.qeeqbii.activities.MainActivity;
+import ch.epfl.sweng.qeeqbii.activities.ShoppingCartActivity;
+import ch.epfl.sweng.qeeqbii.shopping_cart.ShoppingCartStatistics;
 
 import static android.support.test.InstrumentationRegistry.getInstrumentation;
 import static android.support.test.espresso.Espresso.onView;

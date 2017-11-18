@@ -1,4 +1,4 @@
-package ch.epfl.sweng.qeeqbii;
+package ch.epfl.sweng.qeeqbii.shopping_cart;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,11 +13,11 @@ public class ShoppingCart {
 
     static private List<Product> m_items = new ArrayList<Product>();
 
-    static void addToShoppingCartList (Product product) {
+    public static void addToShoppingCartList (Product product) {
         m_items.add(product);
     }
 
-    static void emptyShoppingCartList () {
+    public static void emptyShoppingCartList () {
         m_items.clear();
     }
 

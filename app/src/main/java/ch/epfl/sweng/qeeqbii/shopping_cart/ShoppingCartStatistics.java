@@ -1,4 +1,4 @@
-package ch.epfl.sweng.qeeqbii;
+package ch.epfl.sweng.qeeqbii.shopping_cart;
 
 import android.content.Intent;
 import android.support.design.widget.TabLayout;
@@ -15,6 +15,9 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+
+import ch.epfl.sweng.qeeqbii.R;
+import ch.epfl.sweng.qeeqbii.activities.GraphsActivity;
 
 public class ShoppingCartStatistics extends AppCompatActivity {
 

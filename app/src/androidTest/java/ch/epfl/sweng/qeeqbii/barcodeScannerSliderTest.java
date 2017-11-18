@@ -9,8 +9,12 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
+import ch.epfl.sweng.qeeqbii.activities.BarcodeScannerActivity;
 import ch.epfl.sweng.qeeqbii.activities.CancerDataQueryActivity;
 import ch.epfl.sweng.qeeqbii.activities.CancerDataShowActivity;
+import ch.epfl.sweng.qeeqbii.activities.GraphsActivity;
+import ch.epfl.sweng.qeeqbii.activities.MainActivity;
+import ch.epfl.sweng.qeeqbii.activities.ShoppingCartActivity;
 
 import static android.support.test.InstrumentationRegistry.getInstrumentation;
 import static junit.framework.Assert.assertNotNull;

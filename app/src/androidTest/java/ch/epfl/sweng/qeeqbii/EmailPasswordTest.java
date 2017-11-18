@@ -15,7 +15,7 @@ import org.junit.runner.RunWith;
 
 import java.util.Random;
 
-import ch.epfl.sweng.qeeqbii.R;
+import ch.epfl.sweng.qeeqbii.activities.login.EmailPasswordActivity;
 
 import static android.support.test.espresso.Espresso.onView;
 import static android.support.test.espresso.action.ViewActions.click;

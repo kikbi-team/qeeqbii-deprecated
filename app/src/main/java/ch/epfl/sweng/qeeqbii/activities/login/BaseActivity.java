@@ -1,8 +1,10 @@
-package ch.epfl.sweng.qeeqbii;
+package ch.epfl.sweng.qeeqbii.activities.login;
 
 import android.app.ProgressDialog;
 import android.support.annotation.VisibleForTesting;
 import android.support.v7.app.AppCompatActivity;
+
+import ch.epfl.sweng.qeeqbii.R;
 
 public class BaseActivity extends AppCompatActivity {
 

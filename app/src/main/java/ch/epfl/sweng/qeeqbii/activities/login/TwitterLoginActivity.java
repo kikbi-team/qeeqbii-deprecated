@@ -1,4 +1,4 @@
-package ch.epfl.sweng.qeeqbii;
+package ch.epfl.sweng.qeeqbii.activities.login;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -28,6 +28,10 @@ import com.twitter.sdk.android.core.TwitterCore;
 import com.twitter.sdk.android.core.TwitterException;
 import com.twitter.sdk.android.core.TwitterSession;
 import com.twitter.sdk.android.core.identity.TwitterLoginButton;
+
+import ch.epfl.sweng.qeeqbii.R;
+import ch.epfl.sweng.qeeqbii.activities.MainActivity;
+import ch.epfl.sweng.qeeqbii.login.UserInformation;
 
 public class TwitterLoginActivity extends BaseActivity
         implements View.OnClickListener {

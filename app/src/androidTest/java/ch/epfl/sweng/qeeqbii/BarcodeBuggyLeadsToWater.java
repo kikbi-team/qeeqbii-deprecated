@@ -8,6 +8,7 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
+import ch.epfl.sweng.qeeqbii.activities.BarcodeScannerActivity;
 import ch.epfl.sweng.qeeqbii.activities.BarcodeToProductActivity;
 
 import static android.support.test.InstrumentationRegistry.getTargetContext;

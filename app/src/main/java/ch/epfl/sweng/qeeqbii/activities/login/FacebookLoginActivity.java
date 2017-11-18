@@ -1,6 +1,6 @@
 
 
-package ch.epfl.sweng.qeeqbii;
+package ch.epfl.sweng.qeeqbii.activities.login;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -29,6 +29,10 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+
+import ch.epfl.sweng.qeeqbii.R;
+import ch.epfl.sweng.qeeqbii.login.UserInformation;
+import ch.epfl.sweng.qeeqbii.activities.MainActivity;
 
 /**
  * Demonstrate Firebase Authentication using a Facebook access token.
