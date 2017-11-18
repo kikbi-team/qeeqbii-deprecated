@@ -64,7 +64,8 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".CancerDataShowActivity"
+            android:name="ch.epfl.sweng.qeeqbii.activities.CancerDataShowActivity"
+
             android:exported="true"
             android:parentActivityName=".MainActivity">
 
@@ -75,10 +76,10 @@
         </activity>
         <activity android:name=".BarcodeScannerActivity" />
         <activity
-            android:name=".CancerDataQueryActivity"
+            android:name="ch.epfl.sweng.qeeqbii.activities.CancerDataQueryActivity"
+            android:parentActivityName="ch.epfl.sweng.qeeqbii.MainActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
-            android:exported="true"
-            android:parentActivityName=".MainActivity" />
+            android:exported="true"/>
 
         <provider
             android:name="com.facebook.FacebookContentProvider"
@@ -86,7 +87,7 @@
             android:exported="true" />
 
         <activity
-            android:name=".RecentlyScannedProductsActivity"
+            android:name=".activities.RecentlyScannedProductsActivity"
             android:exported="true" />
         <activity
             android:name=".SavedProductsDatesActivity"
@@ -96,7 +97,7 @@
             android:exported="true" />
 
         <activity
-            android:name=".BarcodeToProductActivity"
+            android:name=".activities.BarcodeToProductActivity"
             android:exported="true" />
         <activity android:name=".GraphsActivity" />
         <activity android:name=".BaseActivity" />

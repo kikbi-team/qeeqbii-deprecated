@@ -22,7 +22,7 @@ import com.facebook.share.widget.ShareDialog;
 
 public class ShareOnFacebookActivity extends AppCompatActivity {
     ImageView bmImage;
-    static View view;
+    public static View view;
     Bitmap image_to_share;
     CallbackManager callbackManager;
     ShareDialog shareDialog;

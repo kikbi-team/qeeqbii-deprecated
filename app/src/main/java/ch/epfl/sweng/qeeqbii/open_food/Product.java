@@ -1,16 +1,21 @@
-package ch.epfl.sweng.qeeqbii;
+package ch.epfl.sweng.qeeqbii.open_food;
+
+
+
 
 import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
+
+import ch.epfl.sweng.qeeqbii.ClusterType;
+import ch.epfl.sweng.qeeqbii.custom_exceptions.ProductException;
 
 /**
  * Created by guillaume on 01/11/17.
  * Product class contains all informations relative to a given product.
  */
 
-class Product implements Serializable {
-
+public class Product implements Serializable {
     private String mName = "";
     private String mQuantity = "";
     private String mIngredients = "";
@@ -23,7 +28,7 @@ class Product implements Serializable {
 
     public Product() {}
 
-    Product(String name, String quantity, String ingredients, String nutrients, String barcode, int imageId)
+    public Product(String name, String quantity, String ingredients, String nutrients, String barcode, int imageId)
     {
         mName = name;
         mQuantity = quantity;
@@ -33,7 +38,7 @@ class Product implements Serializable {
         mBarcode = barcode;
     }
 
-    Product(String name, String quantity, String ingredients, String nutrients, String barcode, ClusterType type)
+    public Product(String name, String quantity, String ingredients, String nutrients, String barcode, ClusterType type)
     {
         mName = name;
         mQuantity = quantity;
@@ -43,33 +48,33 @@ class Product implements Serializable {
         mType = type;
     }
 
-    String getName()
+    public String getName()
     {
         return mName;
     }
 
-    String getQuantity()
+    public String getQuantity()
     {
         return mQuantity;
     }
 
-    String getIngredients()
+    public String getIngredients()
     {
         return mIngredients;
     }
 
-    String getNutrients()
+    public String getNutrients()
     {
         return mNutrients;
     }
 
-    String getBarcode() { return mBarcode; }
+    public String getBarcode() { return mBarcode; }
 
-    int getImageId() { return mImageId; }
+    public int getImageId() { return mImageId; }
 
-    ClusterType getCluster() { return mType; }
+    public ClusterType getCluster() { return mType; }
 
-    String[] getParsedIngredients() throws ProductException
+    public String[] getParsedIngredients() throws ProductException
     // Returns an array of string. Each entry of the array corresponds to an ingredient.
     {
         if(mParsedIngredients != null)
@@ -86,7 +91,7 @@ class Product implements Serializable {
         return mParsedIngredients;
     }
 
-    Map<String, Double> getParsedNutrients() throws  ProductException {
+    public Map<String, Double> getParsedNutrients() throws  ProductException {
     // Returns a map binding a nutrient to its quantity.
     // Key entered in the map can be e.g. "Sel (g)" or "Sucres (g)"
     // The quantity is returned as a double.
@@ -135,7 +140,7 @@ class Product implements Serializable {
         return s;
     }
 
-    void setParsedIngredients(String[] parsedIngredients) {
+    public void setParsedIngredients(String[] parsedIngredients) {
         this.mParsedIngredients = parsedIngredients;
     }
 }

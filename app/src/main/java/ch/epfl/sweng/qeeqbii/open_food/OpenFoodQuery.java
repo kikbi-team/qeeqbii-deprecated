@@ -1,4 +1,4 @@
-package ch.epfl.sweng.qeeqbii;
+package ch.epfl.sweng.qeeqbii.open_food;
 
 import android.content.Context;
 import android.os.AsyncTask;
@@ -15,15 +15,21 @@ import java.util.concurrent.CountDownLatch;
 
 import java.net.URL;
 
+import ch.epfl.sweng.qeeqbii.SavedProductsDatabase;
+
 /**
  * Created by guillaume on 06/10/17.
  * Class allowing to make GET requests to openfood.
  * GET requests responses are cached in RecentlyScannedProducts.
  */
 
-class OpenFoodQuery extends AsyncTask<String, Void, Product> {
+public class OpenFoodQuery extends AsyncTask<String, Void, Product> {
 
-    static final Map<String,String> error_cache = new HashMap<>();
+    private static final Map<String,String> errorCache = new HashMap<>();
+
+    public static Map<String,String> getErrorCache() {
+        return  errorCache;
+    }
 
     private static class OpenFoodQueryException extends Exception {
         OpenFoodQueryException(String message) {
@@ -85,12 +91,12 @@ class OpenFoodQuery extends AsyncTask<String, Void, Product> {
         }
         catch(OpenFoodQueryException e)
         {
-            error_cache.put(barcode, "ERROR: (openfood) " + e.getMessage());
+            errorCache.put(barcode, "ERROR: (openfood) " + e.getMessage());
             return null;
         }
         catch(java.io.IOException e)
         {
-            error_cache.put(barcode, "ERROR: " + e.getMessage());
+            errorCache.put(barcode, "ERROR: " + e.getMessage());
             return null;
         }
 
@@ -99,7 +105,7 @@ class OpenFoodQuery extends AsyncTask<String, Void, Product> {
 
     // This GetOrCreate can freeze the main thread if the barcode isn't in the cache.
     // If we do not want to save the product in the scanned history, we can give a null context in parameter.
-    static Product GetOrCreateProduct(String barcode, Context context) throws Exception
+    public static Product GetOrCreateProduct(String barcode, Context context) throws Exception
     {
         if(RecentlyScannedProducts.contains(barcode))
         {
@@ -130,13 +136,13 @@ class OpenFoodQuery extends AsyncTask<String, Void, Product> {
         {
             return RecentlyScannedProducts.getProduct(barcode);
         } else {
-            throw new Exception(error_cache.get(barcode));
+            throw new Exception(errorCache.get(barcode));
         }
     }
 
     // Passing the barcode and a textview to this method makes the GET
     // request to openFood without freezing the main thread.
-    static void ShowProduct(String barcode, TextView txt, Context context)
+    public static void ShowProduct(String barcode, TextView txt, Context context)
     {
         final TextView txt2 = txt;
         final String barcode2 = barcode;
@@ -147,7 +153,7 @@ class OpenFoodQuery extends AsyncTask<String, Void, Product> {
                 //TextView txt = (TextView) findViewById(R.id.product_details);
                 try {
                     if (product == null)
-                        throw new Exception(error_cache.get(barcode2));
+                        throw new Exception(errorCache.get(barcode2));
 
                     String s = product.getName();
                     s += "\n\nIngredients: " + product.getIngredients();
@@ -173,12 +179,12 @@ class OpenFoodQuery extends AsyncTask<String, Void, Product> {
         }.execute(barcode);
     }
 
-    static boolean isCached(String barcode)
+    public static boolean isCached(String barcode)
     {
         return (RecentlyScannedProducts.contains(barcode));
     }
 
-    static Product get(String barcode) throws OpenFoodQueryException
+    public static Product get(String barcode) throws OpenFoodQueryException
     {
         if (RecentlyScannedProducts.contains(barcode))
         {

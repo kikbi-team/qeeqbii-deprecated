@@ -177,10 +177,9 @@ public class TwitterLoginActivity extends BaseActivity
         } else {
             mStatusTextView.setText(R.string.signed_out);
             mDetailTextView.setText(null);
-
-            findViewById(R.id.button_twitter_login).setVisibility(View.VISIBLE);
             findViewById(R.id.button_twitter_signout).setVisibility(View.GONE);
             findViewById(R.id.buttonSave).setVisibility(View.GONE);
+            findViewById(R.id.button_twitter_login).setVisibility(View.VISIBLE);
         }
     }
 

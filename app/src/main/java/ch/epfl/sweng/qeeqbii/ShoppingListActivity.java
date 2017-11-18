@@ -9,6 +9,8 @@ import com.google.firebase.appindexing.Action;
 import com.google.firebase.appindexing.FirebaseUserActions;
 import com.google.firebase.appindexing.builders.Actions;
 
+import ch.epfl.sweng.qeeqbii.open_food.Product;
+
 public class ShoppingListActivity extends AppCompatActivity {
 
     @Override

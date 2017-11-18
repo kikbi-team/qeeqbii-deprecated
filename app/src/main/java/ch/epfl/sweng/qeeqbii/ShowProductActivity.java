@@ -8,6 +8,10 @@ import android.view.KeyEvent;
 import android.view.View;
 import android.widget.TextView;
 
+import ch.epfl.sweng.qeeqbii.cancer.CancerDataBase;
+import ch.epfl.sweng.qeeqbii.custom_exceptions.ProductException;
+import ch.epfl.sweng.qeeqbii.open_food.Product;
+
 /**
  * Created by guillaume on 10/10/17.
  * Activity that prints product details relative to the barcode entered

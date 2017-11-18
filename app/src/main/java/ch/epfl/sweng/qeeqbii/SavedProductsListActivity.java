@@ -13,6 +13,8 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
+import ch.epfl.sweng.qeeqbii.open_food.Product;
+
 /**
  * Created by guillaume on 14/11/17.
  * This activity shows the list of dates present in the history of scanned products.

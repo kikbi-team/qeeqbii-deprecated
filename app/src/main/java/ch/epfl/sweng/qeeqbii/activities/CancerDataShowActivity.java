@@ -1,4 +1,4 @@
-package ch.epfl.sweng.qeeqbii;
+package ch.epfl.sweng.qeeqbii.activities;
 
 import android.content.Intent;
 import android.graphics.Color;
@@ -8,6 +8,15 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.widget.TextView;
+
+import ch.epfl.sweng.qeeqbii.BarcodeScannerActivity;
+import ch.epfl.sweng.qeeqbii.cancer.CancerDataBase;
+import ch.epfl.sweng.qeeqbii.ChatActivity;
+import ch.epfl.sweng.qeeqbii.GraphsActivity;
+import ch.epfl.sweng.qeeqbii.MainActivity;
+import ch.epfl.sweng.qeeqbii.R;
+import ch.epfl.sweng.qeeqbii.ShoppingCartActivity;
+import ch.epfl.sweng.qeeqbii.ShoppingCartStatistics;
 
 
 public class CancerDataShowActivity extends AppCompatActivity {

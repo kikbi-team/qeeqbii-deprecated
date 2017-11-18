@@ -1,11 +1,10 @@
-package ch.epfl.sweng.qeeqbii;
+package ch.epfl.sweng.qeeqbii.activities;
 
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
@@ -13,6 +12,11 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.Map;
+
+import ch.epfl.sweng.qeeqbii.open_food.Product;
+import ch.epfl.sweng.qeeqbii.R;
+import ch.epfl.sweng.qeeqbii.open_food.RecentlyScannedProducts;
+import ch.epfl.sweng.qeeqbii.ShareOnFacebookActivity;
 
 public class RecentlyScannedProductsActivity extends AppCompatActivity {
 
@@ -50,8 +54,8 @@ public class RecentlyScannedProductsActivity extends AppCompatActivity {
                 R.id.recently_scanned_product_text_view, listItems);
         mRecentlyScannedProductsListView.setAdapter(mAdapter);
 
+        /*
         mRecentlyScannedProductsListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-
             @Override
             public void onItemClick(AdapterView<?> adapter, View view, int position,
                                     long arg3) {
@@ -60,8 +64,8 @@ public class RecentlyScannedProductsActivity extends AppCompatActivity {
                 intent.putExtra(MainActivity.BARCODE_READER,RecentlyScannedProductsActivity.displayed_products.get(txt));
                 startActivity(intent);
             }
-
         });
+        */
     }
 
     //ImageButton btn = (ImageButton) findViewById(R.id.delete_recently_scanned_product_button);
