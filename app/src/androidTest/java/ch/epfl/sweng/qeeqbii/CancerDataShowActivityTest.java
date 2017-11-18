@@ -13,19 +13,19 @@ import static android.support.test.espresso.assertion.ViewAssertions.matches;
 import static android.support.test.espresso.matcher.ViewMatchers.withId;
 import static android.support.test.espresso.matcher.ViewMatchers.withText;
 
-/*
+
 @RunWith(AndroidJUnit4.class)
 public class CancerDataShowActivityTest {
 
     @Rule
-    public final ActivityTestRule<MainActivity> mActivityRule =
-            new ActivityTestRule<>(MainActivity.class);
+    public final ActivityTestRule<CancerDataShowActivity> mActivityRule =
+            new ActivityTestRule<>(CancerDataShowActivity.class);
 
-    /*
+
     @Test
     public void testPerfectMatchCancerDataBase() {
 
-        onView(withId(R.id.cancerDataBaseButton)).perform(click());
+        //onView(withId(R.id.cancerDataBaseButton)).perform(click());
         String string_tester;
         try {
             string_tester = CancerDataBase.sendOutputReadyToPrint();
@@ -35,4 +35,4 @@ public class CancerDataShowActivityTest {
         }
         onView(withId(R.id.cancerDataBaseMessage)).check(matches(withText(string_tester)));
     }
-}*/
+}

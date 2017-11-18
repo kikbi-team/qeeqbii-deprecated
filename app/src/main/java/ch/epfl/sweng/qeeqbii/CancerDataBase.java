@@ -54,7 +54,7 @@ class CancerDataBase {
         if (mopen_state == 0) {
 
             Resources resources = context.getResources();
-            InputStream inStream = resources.openRawResource(R.raw.original_classification_iarc_english);
+            InputStream inStream = resources.openRawResource(R.raw.clean_classification_iarc_french);
             BufferedReader reader = new BufferedReader(new InputStreamReader(inStream, Charset.forName("UTF-8")));
 
             String line = "";

@@ -3,6 +3,7 @@ package ch.epfl.sweng.qeeqbii;
 import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
 
+import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -17,28 +18,28 @@ import static android.support.test.espresso.assertion.ViewAssertions.matches;
 import static android.support.test.espresso.matcher.ViewMatchers.withId;
 import static android.support.test.espresso.matcher.ViewMatchers.withText;
 
-/*
+
 @RunWith(AndroidJUnit4.class)
 public class CancerDataQueryTest {
     //public final ActivityTestRule<CancerDataQueryActivity> mActivityRule =
     //       new ActivityTestRule<>(CancerDataQueryActivity.class);
     @Rule
-    public final ActivityTestRule<MainActivity> mActivityRule =
-              new ActivityTestRule<>(MainActivity.class);
+    public final ActivityTestRule<CancerDataQueryActivity> mActivityRule =
+              new ActivityTestRule<>(CancerDataQueryActivity.class);
 
-    /*
+
     @Before
     public void Initialize() {
         try {
             CancerDataBase.readCSVFile(mActivityRule.getActivity().getApplicationContext());
         }
         catch(Exception e) {
-            System.err.println("Exception: " + e.getMessage());
+            System.err.println(e.getMessage());
         }
     }
-    */
 
-    /*
+
+
     @Test
     public void testPerfectMatchCancerDataBase() {
         // Useful way of accessing resources
@@ -46,12 +47,10 @@ public class CancerDataQueryTest {
 
         List<String[]> query_ans_pairs = new ArrayList<>();
 
-        query_ans_pairs.add(new String[]{"Formaldehyde", "Substance{mId = 0, mAgent = 'Formaldehyde', mGroup = '1'}"});
+        query_ans_pairs.add(new String[]{"Formaldéhyde", "Substance{mId = 0, mAgent = 'Formaldéhyde', mGroup = '1'}"});
         query_ans_pairs.add(new String[]{"", "Substance{mId = -1, mAgent = 'empty', mGroup = 'empty'}"});
-        query_ans_pairs.add(new String[]{"Ethylene oxide", "Substance{mId = 102, mAgent = 'Ethylene oxide', mGroup = '1'}"});
-        query_ans_pairs.add(new String[]{"1.3-Dichloro-2-propanol", "Substance{mId = 197, mAgent = '1.3-Dichloro-2-propanol', mGroup = '2B'}"});
-        query_ans_pairs.add(new String[]{"β-Myrcene", "Substance{mId = 309, mAgent = 'β-Myrcene', mGroup = '2B'}"});
-        query_ans_pairs.add(new String[]{"Sodium <i>ortho</i>-phenylphenate", "Substance{mId = 330, mAgent = 'Sodium <i>ortho</i>-phenylphenate', mGroup = '2B'}"});
+        query_ans_pairs.add(new String[]{"Fluorure de vinyle", "Substance{mId = 98, mAgent = 'Fluorure de vinyle', mGroup = '2A'}"});
+        query_ans_pairs.add(new String[]{"Uréthane", "Substance{mId = 889, mAgent = 'Uréthane', mGroup = '2A'}"});
         //query_ans_pairs.add(new String[]{null, "Substance{mId = -1, mAgent = 'empty', mGroup = 'empty'}"});
         // Apparently the replaceText method do not work with a null pointer which looks logical.
 
@@ -60,17 +59,28 @@ public class CancerDataQueryTest {
             onView(withId(R.id.cancerDataQueryButton)).perform(click());
             onView(withId(R.id.queryCancerDataAnswerArea)).check(matches(withText(iter[1])));
         }
-    }*/
+    }
 
-    /*
+
     @Test
     public void testLevenshteinCancerDataBase() {
         //onView(withId(R.id.cancerDataQuery)).perform(click());
 
         List<String[]> query_ans_pairs = new ArrayList<>();
 
-        query_ans_pairs.add(new String[]{"Eau", "Substance{mId = 902, mAgent = 'Tea', mGroup = '3'}"});
-        query_ans_pairs.add(new String[]{"", "Substance{mId = 902, mAgent = 'Tea', mGroup = '3'}"});
+        CancerSubstance levenshteinOutput1 = new CancerSubstance();
+        CancerSubstance levenshteinOutput2 = new CancerSubstance();
+        try {
+            levenshteinOutput1 = CancerDataBase.levenshteinMatchQuery("");
+            levenshteinOutput2 = CancerDataBase.levenshteinMatchQuery("caffeine");
+        }
+        catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+
+        query_ans_pairs.add(new String[]{"", levenshteinOutput1.toString()});
+        query_ans_pairs.add(new String[]{"caffeine", levenshteinOutput2.toString()});
+
 
         for (String[] iter : query_ans_pairs) {
             onView(withId(R.id.cancerDataQueryTextField)).perform(replaceText(iter[0]));
@@ -78,4 +88,4 @@ public class CancerDataQueryTest {
             onView(withId(R.id.queryCancerDataAnswerArea)).check(matches(withText(iter[1])));
         }
     }
-}*/
+}
