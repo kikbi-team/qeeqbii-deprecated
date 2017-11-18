@@ -1,4 +1,4 @@
-package ch.epfl.sweng.qeeqbii;
+package ch.epfl.sweng.qeeqbii.activities;
 
 import android.graphics.Bitmap;
 import android.net.Uri;
@@ -14,6 +14,8 @@ import com.facebook.share.model.ShareLinkContent;
 import com.facebook.share.model.SharePhoto;
 import com.facebook.share.model.SharePhotoContent;
 import com.facebook.share.widget.ShareDialog;
+
+import ch.epfl.sweng.qeeqbii.R;
 
 /**
  * Created by guillaume on 02/11/17.

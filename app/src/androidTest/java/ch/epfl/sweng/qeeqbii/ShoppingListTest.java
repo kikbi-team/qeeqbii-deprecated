@@ -13,6 +13,9 @@ import org.junit.Rule;
 import org.junit.runner.RunWith;
 import org.junit.Test;
 
+import ch.epfl.sweng.qeeqbii.activities.ShoppingCartActivity;
+import ch.epfl.sweng.qeeqbii.activities.ShoppingListActivity;
+
 import static android.support.test.InstrumentationRegistry.getInstrumentation;
 import static junit.framework.Assert.assertNotNull;
 

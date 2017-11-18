@@ -1,6 +1,4 @@
-package ch.epfl.sweng.qeeqbii;
-
-import java.io.IOException;
+package ch.epfl.sweng.qeeqbii.open_food;
 
 /**
  * Created by guillaume on 14/11/17.

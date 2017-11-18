@@ -8,7 +8,9 @@ import org.junit.Test;
 import java.util.ArrayList;
 import java.util.List;
 
+import ch.epfl.sweng.qeeqbii.activities.MainActivity;
 import ch.epfl.sweng.qeeqbii.open_food.Product;
+import ch.epfl.sweng.qeeqbii.shopping_cart.ShoppingCart;
 
 
 import static org.junit.Assert.assertEquals;

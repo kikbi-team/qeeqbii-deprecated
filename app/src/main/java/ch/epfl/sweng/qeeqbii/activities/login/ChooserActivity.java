@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package ch.epfl.sweng.qeeqbii;
+package ch.epfl.sweng.qeeqbii.activities.login;
 
 import android.content.Context;
 import android.content.Intent;
@@ -27,6 +27,8 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
+
+import ch.epfl.sweng.qeeqbii.R;
 
 /**
  * Simple list-based Activity to redirect to one of the other Activities. This Activity does not

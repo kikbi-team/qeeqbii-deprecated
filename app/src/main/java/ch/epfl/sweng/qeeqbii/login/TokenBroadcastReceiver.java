@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package ch.epfl.sweng.qeeqbii;
+package ch.epfl.sweng.qeeqbii.login;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;

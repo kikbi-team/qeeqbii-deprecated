@@ -16,7 +16,6 @@ import java.util.Map;
 import ch.epfl.sweng.qeeqbii.open_food.Product;
 import ch.epfl.sweng.qeeqbii.R;
 import ch.epfl.sweng.qeeqbii.open_food.RecentlyScannedProducts;
-import ch.epfl.sweng.qeeqbii.ShareOnFacebookActivity;
 
 public class RecentlyScannedProductsActivity extends AppCompatActivity {
 

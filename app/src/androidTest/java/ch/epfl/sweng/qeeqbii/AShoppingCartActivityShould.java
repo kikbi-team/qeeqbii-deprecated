@@ -3,7 +3,9 @@ package ch.epfl.sweng.qeeqbii;
 import android.app.Instrumentation;
 import android.support.test.rule.ActivityTestRule;
 import android.view.View;
-import ch.epfl.sweng.qeeqbii.R;
+
+import ch.epfl.sweng.qeeqbii.activities.ShoppingCartActivity;
+import ch.epfl.sweng.qeeqbii.activities.ShoppingListActivity;
 
 import org.junit.Rule;
 import org.junit.Test;

@@ -15,7 +15,10 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
 
+import ch.epfl.sweng.qeeqbii.activities.SavedProductsDatesActivity;
+import ch.epfl.sweng.qeeqbii.open_food.ClusterType;
 import ch.epfl.sweng.qeeqbii.open_food.Product;
+import ch.epfl.sweng.qeeqbii.open_food.SavedProductsDatabase;
 
 import static android.support.test.espresso.Espresso.onView;
 import static android.support.test.espresso.action.ViewActions.click;

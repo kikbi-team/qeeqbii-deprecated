@@ -1,4 +1,4 @@
-package ch.epfl.sweng.qeeqbii;
+package ch.epfl.sweng.qeeqbii.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,6 +10,9 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import java.util.Date;
+
+import ch.epfl.sweng.qeeqbii.R;
+import ch.epfl.sweng.qeeqbii.open_food.SavedProductsDatabase;
 
 /**
  * Created by guillaume on 14/11/17.

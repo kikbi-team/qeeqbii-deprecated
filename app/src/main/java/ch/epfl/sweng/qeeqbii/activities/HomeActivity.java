@@ -1,8 +1,11 @@
-package ch.epfl.sweng.qeeqbii;
+package ch.epfl.sweng.qeeqbii.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+
+import ch.epfl.sweng.qeeqbii.R;
+import ch.epfl.sweng.qeeqbii.activities.login.ChooserActivity;
 
 public class HomeActivity extends AppCompatActivity {
     @Override

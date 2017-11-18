@@ -1,4 +1,4 @@
-package ch.epfl.sweng.qeeqbii;
+package ch.epfl.sweng.qeeqbii.open_food;
 
 import android.content.Context;
 import org.json.JSONArray;
@@ -19,8 +19,6 @@ import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
 
-import ch.epfl.sweng.qeeqbii.open_food.Product;
-
 /**
  * Created by guillaume on 13/11/17.
  * Manage the database of products scanned History.
@@ -36,14 +34,14 @@ public class SavedProductsDatabase
 
     private static Integer max_date_index;
 
-    static void load(Context context) throws IOException, JSONException
+    public static void load(Context context) throws IOException, JSONException
     {
         if (saved_products_json == null) {
             load(context.openFileInput("saved_products_database.json"));
         }
     }
 
-    static void load(InputStream inStream) throws IOException, JSONException
+    public static void load(InputStream inStream) throws IOException, JSONException
     {
         try {
 
@@ -63,7 +61,7 @@ public class SavedProductsDatabase
         }
     }
 
-    static Date[] getDates() throws JSONException, ParseException {
+    public static Date[] getDates() throws JSONException, ParseException {
         JSONArray dates_arr = saved_products_json.getJSONArray("Dates");
         Date[] dates = new Date[dates_arr.length()];
         max_date_index = dates_arr.length() - 1;
@@ -74,7 +72,7 @@ public class SavedProductsDatabase
         return dates;
     }
 
-    static Product[] getProductsFromDate(Date date) throws JSONException, IOException
+    public static Product[] getProductsFromDate(Date date) throws JSONException, IOException
     {
         Integer index = dates_indices.get(date);
         JSONArray products_json_array = saved_products_json.getJSONArray("Dates")

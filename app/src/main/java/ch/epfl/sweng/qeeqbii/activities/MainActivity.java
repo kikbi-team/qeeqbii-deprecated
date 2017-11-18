@@ -1,4 +1,4 @@
-package ch.epfl.sweng.qeeqbii;
+package ch.epfl.sweng.qeeqbii.activities;
 
 import android.content.Intent;
 
@@ -13,11 +13,10 @@ import android.widget.EditText;
 import com.facebook.CallbackManager;
 import com.facebook.share.widget.ShareDialog;
 
-import ch.epfl.sweng.qeeqbii.activities.CancerDataQueryActivity;
-import ch.epfl.sweng.qeeqbii.activities.CancerDataShowActivity;
-import ch.epfl.sweng.qeeqbii.activities.RecentlyScannedProductsActivity;
+import ch.epfl.sweng.qeeqbii.R;
+import ch.epfl.sweng.qeeqbii.open_food.SavedProductsDatabase;
+import ch.epfl.sweng.qeeqbii.shopping_cart.ShoppingCartStatistics;
 import ch.epfl.sweng.qeeqbii.cancer.CancerDataBase;
-import ch.epfl.sweng.qeeqbii.activities.BarcodeToProductActivity;
 
 public class MainActivity extends AppCompatActivity {
     public static final String BARCODE_READER = "ch.epfl.sweng.qeeqbii.mainBarcode";

@@ -3,6 +3,8 @@ package ch.epfl.sweng.qeeqbii;
 import android.app.ProgressDialog;
 import android.support.test.espresso.IdlingResource;
 
+import ch.epfl.sweng.qeeqbii.activities.login.BaseActivity;
+
 /**
  * Monitor Activity idle status by watching ProgressDialog.
  */
