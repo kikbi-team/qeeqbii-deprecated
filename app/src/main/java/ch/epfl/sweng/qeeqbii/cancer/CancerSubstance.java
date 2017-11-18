@@ -1,11 +1,11 @@
-package ch.epfl.sweng.qeeqbii;
+package ch.epfl.sweng.qeeqbii.cancer;
 
 /**
  * Created by adrien on 12/10/17.
  *
  */
 
-class CancerSubstance {
+public class CancerSubstance {
 
     // Attributes
     private int mId;
@@ -13,7 +13,7 @@ class CancerSubstance {
     private String mGroup;
     // --Commented out by Inspection (27.10.17 14:36):private int mLabel;
     // Constructor that defines an empty substance
-    CancerSubstance() {
+    public CancerSubstance() {
         mId = -1;
         mAgent = "empty";
         mGroup = "empty";

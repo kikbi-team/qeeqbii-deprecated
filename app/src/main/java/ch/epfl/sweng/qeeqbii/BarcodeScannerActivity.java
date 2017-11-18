@@ -17,6 +17,10 @@ import android.widget.Toast;
 
 import com.google.zxing.Result;
 
+import ch.epfl.sweng.qeeqbii.activities.CancerDataQueryActivity;
+import ch.epfl.sweng.qeeqbii.activities.CancerDataShowActivity;
+import ch.epfl.sweng.qeeqbii.activities.RecentlyScannedProductsActivity;
+import ch.epfl.sweng.qeeqbii.activities.BarcodeToProductActivity;
 import me.dm7.barcodescanner.zxing.ZXingScannerView;
 
 import static android.content.ContentValues.TAG;

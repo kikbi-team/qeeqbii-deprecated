@@ -26,6 +26,12 @@ import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Map;
 
+import ch.epfl.sweng.qeeqbii.activities.CancerDataQueryActivity;
+import ch.epfl.sweng.qeeqbii.activities.CancerDataShowActivity;
+import ch.epfl.sweng.qeeqbii.activities.RecentlyScannedProductsActivity;
+import ch.epfl.sweng.qeeqbii.open_food.OpenFoodQuery;
+import ch.epfl.sweng.qeeqbii.open_food.Product;
+
 public class GraphsActivity extends AppCompatActivity {
 
     private static final String TAG = "GraphsActivity";

@@ -1,14 +1,14 @@
 package ch.epfl.sweng.qeeqbii;
 
-import android.app.Activity;
 import android.support.test.rule.ActivityTestRule;
-import android.support.v7.app.AppCompatActivity;
 
 import org.junit.Rule;
 import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import ch.epfl.sweng.qeeqbii.open_food.Product;
 
 import static org.junit.Assert.assertEquals;
 

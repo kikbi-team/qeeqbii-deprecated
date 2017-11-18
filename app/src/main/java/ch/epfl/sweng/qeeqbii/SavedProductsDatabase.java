@@ -19,12 +19,14 @@ import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
 
+import ch.epfl.sweng.qeeqbii.open_food.Product;
+
 /**
  * Created by guillaume on 13/11/17.
  * Manage the database of products scanned History.
  */
 
-class SavedProductsDatabase
+public class SavedProductsDatabase
 {
     private static DateFormat formatter = new SimpleDateFormat("dd/MM/yyyy", Locale.FRANCE);
 
@@ -90,7 +92,7 @@ class SavedProductsDatabase
 
     }
 
-    static void addProduct(Product product) throws ParseException, JSONException {
+    public static void addProduct(Product product) throws ParseException, JSONException {
         String date_of_the_day = formatter.format(Calendar.getInstance().getTime());
         if (!dates_indices.containsKey(formatter.parse(date_of_the_day))) {
             max_date_index += 1;
@@ -116,7 +118,7 @@ class SavedProductsDatabase
         json_today_products.put(json_today_products.length(), new_product);
     }
 
-    static void save(Context context, String filename) throws IOException
+    public static void save(Context context, String filename) throws IOException
     {
 
         OutputStreamWriter outputStreamWriter = new OutputStreamWriter(context.openFileOutput(filename, Context.MODE_PRIVATE));

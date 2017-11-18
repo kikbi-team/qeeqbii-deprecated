@@ -7,6 +7,9 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
+import ch.epfl.sweng.qeeqbii.custom_exceptions.ProductException;
+import ch.epfl.sweng.qeeqbii.open_food.Product;
+
 import static junit.framework.Assert.assertEquals;
 
 /**

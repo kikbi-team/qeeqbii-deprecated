@@ -1,4 +1,4 @@
-package ch.epfl.sweng.qeeqbii;
+package ch.epfl.sweng.qeeqbii.cancer;
 
 import android.content.Context;
 import android.content.res.Resources;
@@ -14,6 +14,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Set;
 
+import ch.epfl.sweng.qeeqbii.custom_exceptions.NotOpenFileException;
+import ch.epfl.sweng.qeeqbii.custom_exceptions.NullInputException;
+import ch.epfl.sweng.qeeqbii.R;
 import edu.gatech.gtri.bktree.BkTreeSearcher;
 import edu.gatech.gtri.bktree.Metric;
 import edu.gatech.gtri.bktree.MutableBkTree;
@@ -22,7 +25,7 @@ import info.debatty.java.stringsimilarity.Levenshtein;
 import static java.lang.Integer.MAX_VALUE;
 
 
-class CancerDataBase {
+public class CancerDataBase {
 
     // ATTRIBUTES
     static private final List<CancerSubstance> msubstance_list = new ArrayList<>();
@@ -43,14 +46,14 @@ class CancerDataBase {
     static private final MutableBkTree<String> mbkTree = new MutableBkTree<>(mhammingLevenshtein);
 
     // CONSTRUCTOR
-    CancerDataBase() {
+    public CancerDataBase() {
         // mopen_state defined to 0 at instantiation because no CSV files have been read
         mopen_state = 0;
     }
 
 
     // Method that reads a CSVFile
-    static void readCSVFile(Context context) throws Exception {
+    public static void readCSVFile(Context context) throws Exception {
         if (mopen_state == 0) {
 
             Resources resources = context.getResources();
@@ -93,7 +96,7 @@ class CancerDataBase {
     }
 
     // Method that outputs a string containing a summary of all the substances and their categorization
-    static String sendOutputReadyToPrint() throws Exception {
+    public static String sendOutputReadyToPrint() throws Exception {
         if (mopen_state == 1) {
             String output = " id\tAgent\t\tGroup\n";
             for (int i = 0; i < msubstance_list.size(); i++) {
@@ -110,7 +113,7 @@ class CancerDataBase {
     // the substance and its group classification if the substance is found
     // or an empty CancerSubstance object if the queried substance didn't match perfectly
     // with a substance of the database
-    static CancerSubstance perfectMatchQuery(String queried_substance) throws NotOpenFileException, NullInputException {
+    public static CancerSubstance perfectMatchQuery(String queried_substance) throws NotOpenFileException, NullInputException {
         if (mopen_state == 0) {
             throw new NotOpenFileException("Read the carcinogenic database before trying to query it.\n");
         }
@@ -128,7 +131,7 @@ class CancerDataBase {
     }
 
 
-    static CancerSubstance levenshteinMatchQuery(String queried_substance)
+    public static CancerSubstance levenshteinMatchQuery(String queried_substance)
             throws NotOpenFileException, NullInputException {
         if (mopen_state == 0) {
             throw new NotOpenFileException("Read the carcinogenic database before trying to query it.\n");

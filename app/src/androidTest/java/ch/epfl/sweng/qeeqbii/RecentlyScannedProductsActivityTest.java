@@ -8,11 +8,10 @@ import android.widget.ArrayAdapter;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.mockito.Mock;
 
 import java.util.ArrayList;
 
-import dalvik.annotation.TestTargetClass;
+import ch.epfl.sweng.qeeqbii.activities.RecentlyScannedProductsActivity;
 
 import static android.support.test.espresso.Espresso.onView;
 import static android.support.test.espresso.action.ViewActions.click;

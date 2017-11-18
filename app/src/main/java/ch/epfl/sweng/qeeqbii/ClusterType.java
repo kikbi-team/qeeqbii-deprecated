@@ -6,7 +6,7 @@ import java.io.IOException;
  * Created by guillaume on 14/11/17.
  */
 
-enum ClusterType {
+public enum ClusterType {
     CHEESE,
     WINE,
     MEAT,
