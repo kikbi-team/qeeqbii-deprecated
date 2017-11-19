@@ -24,6 +24,7 @@
 
 
         <LinearLayout
+            style="?android:attr/buttonBarButtonStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
@@ -31,6 +32,7 @@
             android:weightSum="1">
 
             <Button
+                style="?android:attr/buttonBarButtonStyle"
                 android:id="@+id/cancerDataQueryButton"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -42,6 +44,7 @@
 
 
             <Button
+                style="?android:attr/buttonBarButtonStyle"
                 android:id="@+id/levenshteinCancerDataQueryButton"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -75,6 +78,7 @@
                 android:textSize="15sp" />
 
             <EditText
+                android:labelFor="@+id/ratcliff_threshold_text"
                 android:id="@+id/ratcliff_threshold_text"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"

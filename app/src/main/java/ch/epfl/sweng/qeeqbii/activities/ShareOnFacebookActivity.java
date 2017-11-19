@@ -24,7 +24,7 @@ import ch.epfl.sweng.qeeqbii.R;
 
 public class ShareOnFacebookActivity extends AppCompatActivity {
     ImageView bmImage;
-    public static View view;
+    static View view;
     Bitmap image_to_share;
     CallbackManager callbackManager;
     ShareDialog shareDialog;
