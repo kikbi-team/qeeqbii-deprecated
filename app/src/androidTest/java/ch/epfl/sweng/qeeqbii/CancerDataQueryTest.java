@@ -10,11 +10,13 @@ import org.junit.runner.RunWith;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import ch.epfl.sweng.qeeqbii.activities.CancerDataQueryActivity;
 import ch.epfl.sweng.qeeqbii.cancer.CancerDataBase;
 import ch.epfl.sweng.qeeqbii.cancer.CancerSubstance;
 import ch.epfl.sweng.qeeqbii.cancer.LevenshteinQueryCancerDB;
+import ch.epfl.sweng.qeeqbii.cancer.RatcliffQueryCancerDB;
 
 import static android.support.test.espresso.Espresso.onView;
 import static android.support.test.espresso.action.ViewActions.click;
@@ -90,6 +92,104 @@ public class CancerDataQueryTest {
         for (String[] iter : query_ans_pairs) {
             onView(withId(R.id.cancerDataQueryTextField)).perform(replaceText(iter[0]));
             onView(withId(R.id.levenshteinCancerDataQueryButton)).perform(click());
+            onView(withId(R.id.queryCancerDataAnswerArea)).check(matches(withText(iter[1])));
+        }
+    }
+
+    @Test
+    public void testRatcliffCancerDataBase() {
+        //onView(withId(R.id.cancerDataQuery)).perform(click());
+        List<String[]> query_ans_pairs = new ArrayList<>();
+
+        CancerSubstance ratcliffOutput1 = new CancerSubstance();
+        CancerSubstance ratcliffOutput2 = new CancerSubstance();
+        CancerSubstance ratcliffOutput3 = new CancerSubstance();
+        RatcliffQueryCancerDB ratcliffQuery = new RatcliffQueryCancerDB();
+        try {
+            ratcliffOutput1 = ratcliffQuery.query("");
+            ratcliffOutput2 = ratcliffQuery.query("caffeine");
+            ratcliffOutput3 = ratcliffQuery.query("Formaldehyd");
+
+        }
+        catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+
+        query_ans_pairs.add(new String[]{"", ratcliffOutput1.toString()});
+        query_ans_pairs.add(new String[]{"caffeine", ratcliffOutput2.toString()});
+        query_ans_pairs.add(new String[]{"Formaldehyd", ratcliffOutput3.toString()});
+
+
+
+        for (String[] iter : query_ans_pairs) {
+            onView(withId(R.id.cancerDataQueryTextField)).perform(replaceText(iter[0]));
+            onView(withId(R.id.ratcliffCancerDataQueryButton)).perform(click());
+            onView(withId(R.id.queryCancerDataAnswerArea)).check(matches(withText(iter[1])));
+        }
+    }
+
+    @Test//(expected = Exception.class)
+    public void testRatcliffNegativeThreshold() {
+        double threshold = -0.5;
+        List<String[]> query_ans_pairs = new ArrayList<>();
+
+        CancerSubstance ratcliffOutput1 = new CancerSubstance();
+        CancerSubstance ratcliffOutput2 = new CancerSubstance();
+        CancerSubstance ratcliffOutput3 = new CancerSubstance();
+        RatcliffQueryCancerDB ratcliffQuery = new RatcliffQueryCancerDB(threshold);
+        try {
+            ratcliffOutput1 = ratcliffQuery.query("");
+            ratcliffOutput2 = ratcliffQuery.query("caffeine");
+            ratcliffOutput3 = ratcliffQuery.query("Formaldehyd");
+
+        }
+        catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+
+        query_ans_pairs.add(new String[]{"", ratcliffOutput1.toString()});
+        query_ans_pairs.add(new String[]{"caffeine", ratcliffOutput2.toString()});
+        query_ans_pairs.add(new String[]{"Formaldehyd", ratcliffOutput3.toString()});
+
+        // With a negative threshold
+        onView(withId(R.id.ratcliff_threshold_text)).perform(replaceText(Double.toString(threshold)));
+        for (String[] iter : query_ans_pairs) {
+            onView(withId(R.id.cancerDataQueryTextField)).perform(replaceText(iter[0]));
+            onView(withId(R.id.ratcliffCancerDataQueryButton)).perform(click());
+            onView(withId(R.id.queryCancerDataAnswerArea)).check(matches(withText(iter[1])));
+        }
+    }
+
+
+    @Test//(expected = Exception.class)
+    public void testRatcliffTooBigThreshold() {
+        double threshold = 10;
+
+        List<String[]> query_ans_pairs = new ArrayList<>();
+
+        CancerSubstance ratcliffOutput1 = new CancerSubstance();
+        CancerSubstance ratcliffOutput2 = new CancerSubstance();
+        CancerSubstance ratcliffOutput3 = new CancerSubstance();
+        RatcliffQueryCancerDB ratcliffQuery = new RatcliffQueryCancerDB(threshold);
+        try {
+            ratcliffOutput1 = ratcliffQuery.query("");
+            ratcliffOutput2 = ratcliffQuery.query("caffeine");
+            ratcliffOutput3 = ratcliffQuery.query("Formaldehyd");
+
+        }
+        catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+
+        query_ans_pairs.add(new String[]{"", ratcliffOutput1.toString()});
+        query_ans_pairs.add(new String[]{"caffeine", ratcliffOutput2.toString()});
+        query_ans_pairs.add(new String[]{"Formaldehyd", ratcliffOutput3.toString()});
+
+        // With a negative threshold
+        onView(withId(R.id.ratcliff_threshold_text)).perform(replaceText(Double.toString(threshold)));
+        for (String[] iter : query_ans_pairs) {
+            onView(withId(R.id.cancerDataQueryTextField)).perform(replaceText(iter[0]));
+            onView(withId(R.id.ratcliffCancerDataQueryButton)).perform(click());
             onView(withId(R.id.queryCancerDataAnswerArea)).check(matches(withText(iter[1])));
         }
     }
