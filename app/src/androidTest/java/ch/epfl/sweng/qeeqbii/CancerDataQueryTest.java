@@ -14,6 +14,7 @@ import java.util.List;
 import ch.epfl.sweng.qeeqbii.activities.CancerDataQueryActivity;
 import ch.epfl.sweng.qeeqbii.cancer.CancerDataBase;
 import ch.epfl.sweng.qeeqbii.cancer.CancerSubstance;
+import ch.epfl.sweng.qeeqbii.cancer.LevenshteinQueryCancerDB;
 
 import static android.support.test.espresso.Espresso.onView;
 import static android.support.test.espresso.action.ViewActions.click;
@@ -69,14 +70,14 @@ public class CancerDataQueryTest {
     @Test
     public void testLevenshteinCancerDataBase() {
         //onView(withId(R.id.cancerDataQuery)).perform(click());
-
         List<String[]> query_ans_pairs = new ArrayList<>();
 
         CancerSubstance levenshteinOutput1 = new CancerSubstance();
         CancerSubstance levenshteinOutput2 = new CancerSubstance();
+        LevenshteinQueryCancerDB levQuery = new LevenshteinQueryCancerDB();
         try {
-            levenshteinOutput1 = CancerDataBase.levenshteinMatchQuery("");
-            levenshteinOutput2 = CancerDataBase.levenshteinMatchQuery("caffeine");
+            levenshteinOutput1 = levQuery.query("");
+            levenshteinOutput2 = levQuery.query("caffeine");
         }
         catch (Exception e) {
             System.out.println(e.getMessage());

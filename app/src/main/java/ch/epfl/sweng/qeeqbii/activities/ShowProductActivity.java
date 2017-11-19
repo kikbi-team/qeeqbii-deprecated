@@ -11,8 +11,10 @@ import android.widget.TextView;
 import ch.epfl.sweng.qeeqbii.R;
 import ch.epfl.sweng.qeeqbii.activities.GraphsActivity;
 import ch.epfl.sweng.qeeqbii.cancer.CancerDataBase;
+import ch.epfl.sweng.qeeqbii.cancer.LevenshteinQueryCancerDB;
 import ch.epfl.sweng.qeeqbii.custom_exceptions.ProductException;
 import ch.epfl.sweng.qeeqbii.open_food.Product;
+import info.debatty.java.stringsimilarity.Levenshtein;
 
 /**
  * Created by guillaume on 10/10/17.
@@ -68,10 +70,10 @@ public class ShowProductActivity extends AppCompatActivity {
 
 
         String str = "";
+        LevenshteinQueryCancerDB levQuery = new LevenshteinQueryCancerDB();
         try {
             for (String ingredient : parsed_ingredients) {
-                str += CancerDataBase.levenshteinMatchQuery(ingredient).toString() + "\n";
-
+                str += levQuery.query(ingredient).toString() + "\n";
             }
         } catch (Exception e) {
             System.out.println(e.getMessage());
