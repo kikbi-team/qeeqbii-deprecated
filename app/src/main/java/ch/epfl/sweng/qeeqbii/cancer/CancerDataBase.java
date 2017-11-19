@@ -14,6 +14,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Set;
 
+import ch.epfl.sweng.qeeqbii.custom_exceptions.AlreadyOpenException;
 import ch.epfl.sweng.qeeqbii.custom_exceptions.NotOpenFileException;
 import ch.epfl.sweng.qeeqbii.custom_exceptions.NullInputException;
 import ch.epfl.sweng.qeeqbii.R;
@@ -28,42 +29,37 @@ import static java.lang.Integer.MAX_VALUE;
 public class CancerDataBase {
 
     // ATTRIBUTES
-    static private final List<CancerSubstance> msubstance_list = new ArrayList<>();
-    static private final HashMap<String, CancerSubstance> msubstance_map = new HashMap<>();
+    static private final List<CancerSubstance> substanceList = new ArrayList<>();
+    static private final HashMap<String, CancerSubstance> substanceMap = new HashMap<>();
     // mopen_state takes value 0 if no file have been read and takes value 1 if readCSVfile() have
     // been called and succeeded in reading a CSV file
-    static private int mopen_state;
-
+    static private int openState = 0;
     // Definition of the hamming distance that will be used to query the database
     // The Levenshtein distance is chosen here
-    static private final Metric<String> mhammingLevenshtein = new Metric<String>() {
+    static private final Metric<String> hammingLevenshtein = new Metric<String>() {
         @Override
         public int distance(String x, String y) {
             Levenshtein levenshtein = new Levenshtein();
             return (int) Math.round(levenshtein.distance(x, y));
         }
     };
-    static private final MutableBkTree<String> mbkTree = new MutableBkTree<>(mhammingLevenshtein);
+    static private final MutableBkTree<String> bkTree = new MutableBkTree<>(hammingLevenshtein);
 
-    // CONSTRUCTOR
-    public CancerDataBase() {
-        // mopen_state defined to 0 at instantiation because no CSV files have been read
-        mopen_state = 0;
-    }
 
 
     // Method that reads a CSVFile
-    public static void readCSVFile(Context context) throws Exception {
-        if (mopen_state == 0) {
+    public static void readCSVFile(Context context) throws AlreadyOpenException {
+        if (openState == 0) {
 
             Resources resources = context.getResources();
             InputStream inStream = resources.openRawResource(R.raw.clean_classification_iarc_french);
             BufferedReader reader = new BufferedReader(new InputStreamReader(inStream, Charset.forName("UTF-8")));
 
             String line = "";
-            // Step over the headers
-            reader.readLine();
+
             try {
+                // Step over the headers
+                reader.readLine();
                 while ((line = reader.readLine()) != null) {
                     //split by ','
                     String[] tokens = line.split(",");
@@ -77,13 +73,13 @@ public class CancerDataBase {
                     new_substance.setmGroup(tokens[2]);
 
                     // Filling of BK-Tree with the Agent name
-                    mbkTree.add(tokens[1]);
+                    bkTree.add(tokens[1]);
 
                     //Note if we want to import an int or a double we have to write:
                     //sample.setmGroup(Double.parseDouble(tokens[x]));
                     //sample.setmGroup(Integer.parseInt(tokens[x]));
-                    msubstance_list.add(new_substance); //adds the sample to the table with all the data
-                    msubstance_map.put(new_substance.getmAgent(), new_substance);
+                    substanceList.add(new_substance); //adds the sample to the table with all the data
+                    substanceMap.put(new_substance.getmAgent(), new_substance);
                 }
             } catch (IOException error) {
                 Log.wtf("MainActivity", "CustomExeptions reading the data file in the .csv file" + line, error);
@@ -91,79 +87,46 @@ public class CancerDataBase {
             }
 
             // Change the mopen_state to value 1 because the file is read
-            mopen_state = 1;
+            openState = 1;
+        }
+        else {
+            throw new AlreadyOpenException("Error: the carcinogenic database has already been opened.\n");
         }
     }
 
     // Method that outputs a string containing a summary of all the substances and their categorization
-    public static String sendOutputReadyToPrint() throws Exception {
-        if (mopen_state == 1) {
+    public static String sendOutputReadyToPrint() throws NotOpenFileException {
+        if (openState == 1) {
             String output = " id\tAgent\t\tGroup\n";
-            for (int i = 0; i < msubstance_list.size(); i++) {
-                output += msubstance_list.get(i).toString();
+            for (CancerSubstance element : substanceList) {
+                output += element.toString();
                 output += "\n";
             }
             return output;
         } else {
-            throw new Exception("Read the carcinogenic database before trying to print it.\n");
+            throw new NotOpenFileException("Read the carcinogenic database before trying to print it.\n");
         }
     }
 
-    // Method that queries a substance of the DataBase and outputs
-    // the substance and its group classification if the substance is found
-    // or an empty CancerSubstance object if the queried substance didn't match perfectly
-    // with a substance of the database
-    public static CancerSubstance perfectMatchQuery(String queried_substance) throws NotOpenFileException, NullInputException {
-        if (mopen_state == 0) {
-            throw new NotOpenFileException("Read the carcinogenic database before trying to query it.\n");
-        }
-        if (queried_substance == null) {
-            throw new NullInputException("Provided null string to perfectMatchQuery CancerDataBase's method.\n");
-        }
+    // Setters and getters
 
-        CancerSubstance output_substance = msubstance_map.get(queried_substance);
+    static int getOpenState() {
+        return openState;
+    }
 
-        if (output_substance == null) {
+    public static CancerSubstance getSubstanceByName(String substanceName) {
+        CancerSubstance substanceOutput = substanceMap.get(substanceName);
+        // If the queried substance is not in the Cancer DataBase, return an empty CancerSubstance
+        if (substanceOutput == null) {
             return new CancerSubstance();
         }
-
-        return output_substance;
+        return substanceOutput;
     }
 
-
-    public static CancerSubstance levenshteinMatchQuery(String queried_substance)
-            throws NotOpenFileException, NullInputException {
-        if (mopen_state == 0) {
-            throw new NotOpenFileException("Read the carcinogenic database before trying to query it.\n");
-        }
-        if (queried_substance == null) {
-            throw new NullInputException("Provided null string to perfectMatchQuery CancerDataBase's method.\n");
-        }
-
-        BkTreeSearcher<String> searcher = new BkTreeSearcher<>(mbkTree);
-        Set<BkTreeSearcher.Match<? extends String>> matches = searcher.search(queried_substance, 10);
-
-        // We go through all the matches with distance less or equal than max_distance and select the match
-        // that involves the least distance
-        String kept_match = null;
-        int min_dist = MAX_VALUE;
-        for (BkTreeSearcher.Match<? extends String> match : matches) {
-            if (match.getDistance() < min_dist) {
-                kept_match = match.getMatch();
-                min_dist = match.getDistance();
-            }
-        }
-
-        // We check that there is indeed a match with distance less than max_distance and if not we output
-        // an empty CancerSubstance
-        CancerSubstance output_substance = new CancerSubstance();
-        if (kept_match == null) {
-            // Output the substance as an empty CancerSubstance (Query failed)
-            return output_substance;
-        }
-        output_substance = msubstance_map.get(kept_match);
-        return output_substance;
+    static MutableBkTree<String> getBkTree() {
+        return bkTree;
     }
+
 }
 
 

@@ -13,6 +13,8 @@ import android.widget.TextView;
 import ch.epfl.sweng.qeeqbii.cancer.CancerDataBase;
 import ch.epfl.sweng.qeeqbii.cancer.CancerSubstance;
 import ch.epfl.sweng.qeeqbii.R;
+import ch.epfl.sweng.qeeqbii.cancer.LevenshteinQueryCancerDB;
+import ch.epfl.sweng.qeeqbii.cancer.RatcliffQueryCancerDB;
 import ch.epfl.sweng.qeeqbii.shopping_cart.ShoppingCartStatistics;
 
 public class CancerDataQueryActivity extends AppCompatActivity {
@@ -42,7 +44,7 @@ public class CancerDataQueryActivity extends AppCompatActivity {
         // Carrying out the query
         CancerSubstance queried_substance = new CancerSubstance();
         try {
-            queried_substance = CancerDataBase.perfectMatchQuery(string_queried_substance);
+            queried_substance = CancerDataBase.getSubstanceByName(string_queried_substance);
         }
         catch(Exception e) {
             System.err.println("Exception: " + e.getMessage());
@@ -62,8 +64,32 @@ public class CancerDataQueryActivity extends AppCompatActivity {
 
         // Carrying out the query
         CancerSubstance queried_substance = new CancerSubstance();
+        LevenshteinQueryCancerDB levQuery = new LevenshteinQueryCancerDB();
         try {
-            queried_substance = CancerDataBase.levenshteinMatchQuery(string_queried_substance);
+            queried_substance = levQuery.query(string_queried_substance);
+        }
+        catch(Exception e) {
+            System.err.println("Exception: " + e.getMessage());
+        }
+
+        // Print answer in TextView
+        String query_answer = queried_substance.toString();
+        TextView answer_field = (TextView) findViewById(R.id.queryCancerDataAnswerArea);
+        answer_field.setText(query_answer);
+    }
+
+    public void processRatcliffQueryResult(View view) {
+        // Getting the text entered by the user in the text area provided for the query
+        EditText query_field = (EditText) findViewById(R.id.cancerDataQueryTextField);
+        String string_queried_substance = query_field.getText().toString();
+
+        EditText threshold = (EditText) findViewById(R.id.ratcliff_threshold_text);
+        double threshold_value = Double.parseDouble(threshold.getText().toString());
+        // Carrying out the query
+        CancerSubstance queried_substance = new CancerSubstance();
+        RatcliffQueryCancerDB ratcliffQuery = new RatcliffQueryCancerDB(threshold_value);
+        try {
+            queried_substance = ratcliffQuery.query(string_queried_substance);
         }
         catch(Exception e) {
             System.err.println("Exception: " + e.getMessage());
