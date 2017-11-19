@@ -47,7 +47,7 @@
     <!-- Text and labels -->
     <string name="button_share_facebook">Share on Facebook</string>
 
-    <string name="search_in_database">Search for harmful ingredients</string>
+    <string name="search_in_database">SEARCH FOR HARMFUL\nINGREDIENTS</string>
     <!-- XML -->
     <string name="levenshtein_nquery">LEVENSHTEIN\nQUERY</string>
     <string name="ratcliff_nquery">RATCLIFF\nQUERY</string>

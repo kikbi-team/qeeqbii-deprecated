@@ -8,8 +8,7 @@ import android.view.KeyEvent;
 import android.view.View;
 import android.widget.TextView;
 
-import ch.epfl.sweng.qeeqbii.cancer.CancerDataBase;
-import ch.epfl.sweng.qeeqbii.cancer.LevenshteinQueryCancerDB;
+import ch.epfl.sweng.qeeqbii.cancer.RatcliffQueryCancerDB;
 import ch.epfl.sweng.qeeqbii.custom_exceptions.ProductException;
 import ch.epfl.sweng.qeeqbii.R;
 import ch.epfl.sweng.qeeqbii.open_food.OpenFoodQuery;
@@ -74,10 +73,10 @@ public class BarcodeToProductActivity extends AppCompatActivity {
 
 
         String str = "";
-        LevenshteinQueryCancerDB levQuery = new LevenshteinQueryCancerDB(10);
+        RatcliffQueryCancerDB ratcliffQuery = new RatcliffQueryCancerDB();
         try {
             for (String ingredient : parsed_ingredients) {
-                str += levQuery.query(ingredient).toString() + "\n";
+                str += ratcliffQuery.query(ingredient).toString() + "\n";
             }
         } catch (Exception e) {
             System.out.println(e.getMessage());
