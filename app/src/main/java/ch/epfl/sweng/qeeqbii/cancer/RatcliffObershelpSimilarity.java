@@ -6,7 +6,7 @@ package ch.epfl.sweng.qeeqbii.cancer;
 
 public class RatcliffObershelpSimilarity {
 
-    public RatcliffObershelpSimilarity() {};
+    public RatcliffObershelpSimilarity() {}
 
     private static float tcnt;
 
@@ -89,7 +89,7 @@ public class RatcliffObershelpSimilarity {
     }
 
     private class Struct {
-        Struct() {};
+        Struct() {}
         int o1, o2, len;
 
         int getLen() {
