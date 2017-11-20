@@ -159,4 +159,7 @@
     <string name="title_activity_chat">ChatActivity</string>
     <string name="stats">Stats</string>
     <string name="statistics">statistics</string>
+    <string name="show_the_statistics_for_one_month">Show the statistics for one month</string>
+    <string name="show_the_statistics_for_the_trimester">Show the statistics for the trimester</string>
+    <string name="show_the_statistics_yearly_statistics">Show the statistics yearly statistics</string>
 </resources>
