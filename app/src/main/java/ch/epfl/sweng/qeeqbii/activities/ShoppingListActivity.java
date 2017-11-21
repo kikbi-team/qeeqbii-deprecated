@@ -91,6 +91,70 @@ public class ShoppingListActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void addBottle(View view) {
+        Product prod = new Product("Bottle", "500 mg", "Stuff", "cool Nutrients", "001", R.drawable.bottle);
+        ShoppingCart.addToShoppingCartList(prod);
+        Intent intent = new Intent(this, ShoppingCartActivity.class);
+        startActivity(intent);
+    }
+
+    public void addWater(View view) {
+        Product prod = new Product("Water", "500 mg", "Stuff", "cool Nutrients", "001", R.drawable.bottle_1);
+        ShoppingCart.addToShoppingCartList(prod);
+        Intent intent = new Intent(this, ShoppingCartActivity.class);
+        startActivity(intent);
+    }
+
+    public void addBiscuit(View view) {
+        Product prod = new Product("Biscuit", "500 mg", "Stuff", "cool Nutrients", "001", R.drawable.buiscuit);
+        ShoppingCart.addToShoppingCartList(prod);
+        Intent intent = new Intent(this, ShoppingCartActivity.class);
+        startActivity(intent);
+    }
+
+    public void addAlcohol(View view) {
+        Product prod = new Product("Cocktail", "500 mg", "Stuff", "cool Nutrients", "001", R.drawable.cocktail);
+        ShoppingCart.addToShoppingCartList(prod);
+        Intent intent = new Intent(this, ShoppingCartActivity.class);
+        startActivity(intent);
+    }
+
+    public void addDonut(View view) {
+        Product prod = new Product("Donut", "500 mg", "Stuff", "cool Nutrients", "001", R.drawable.donut);
+        ShoppingCart.addToShoppingCartList(prod);
+        Intent intent = new Intent(this, ShoppingCartActivity.class);
+        startActivity(intent);
+    }
+
+    public void addFruit(View view) {
+        Product prod = new Product("Fruit", "500 mg", "Stuff", "cool Nutrients", "001", R.drawable.fruit);
+        ShoppingCart.addToShoppingCartList(prod);
+        Intent intent = new Intent(this, ShoppingCartActivity.class);
+        startActivity(intent);
+    }
+
+    public void addExoticFruit(View view) {
+        Product prod = new Product("Exotic Fruit", "500 mg", "Stuff", "cool Nutrients", "001", R.drawable.fruit_1);
+        ShoppingCart.addToShoppingCartList(prod);
+        Intent intent = new Intent(this, ShoppingCartActivity.class);
+        startActivity(intent);
+    }
+
+
+    public void addHotDrink(View view) {
+        Product prod = new Product("Hot Drinks", "500 mg", "Stuff", "cool Nutrients", "001", R.drawable.mug);
+        ShoppingCart.addToShoppingCartList(prod);
+        Intent intent = new Intent(this, ShoppingCartActivity.class);
+        startActivity(intent);
+    }
+
+    public void addWing(View view) {
+        Product prod = new Product("Meat", "500 mg", "Stuff", "cool Nutrients", "001", R.drawable.wing);
+        ShoppingCart.addToShoppingCartList(prod);
+        Intent intent = new Intent(this, ShoppingCartActivity.class);
+        startActivity(intent);
+    }
+
     public void addSaussage(View view) {
         Product prod = new Product("Saussage", "500 mg", "Stuff", "cool Nutrients", "001", R.drawable.saussage);
         ShoppingCart.addToShoppingCartList(prod);
