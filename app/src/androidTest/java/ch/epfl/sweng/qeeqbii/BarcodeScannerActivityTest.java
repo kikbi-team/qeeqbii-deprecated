@@ -111,7 +111,7 @@ public class BarcodeScannerActivityTest {
 
     @Test
     public void t00_permissions() {
-        //resetPermission();
+        resetPermission();
         assertTrue(!isPermissionGranted());
         grantPermission();
         assertTrue(isPermissionGranted());
