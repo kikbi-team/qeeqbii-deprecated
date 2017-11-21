@@ -35,6 +35,9 @@ import static ch.epfl.sweng.qeeqbii.activities.MainActivity.BARCODE_READER;
 
 public class BarcodeScannerActivity extends AppCompatActivity implements ZXingScannerView.ResultHandler {
 
+    // name of the permission
+    public static final String CAMERA_PERMISSION = android.Manifest.permission.CAMERA;
+
     // code for permission call
     private static final int ZXING_CAMERA_PERMISSION = 1;
 
@@ -75,10 +78,10 @@ public class BarcodeScannerActivity extends AppCompatActivity implements ZXingSc
     // check if the camera permission is given
     // request one if it was not
     private void checkCameraPermissionAndRequest() {
-        if (ContextCompat.checkSelfPermission(this, android.Manifest.permission.CAMERA)
+        if (ContextCompat.checkSelfPermission(this, CAMERA_PERMISSION)
                 != PackageManager.PERMISSION_GRANTED) {
             ActivityCompat.requestPermissions(this,
-                    new String[]{android.Manifest.permission.CAMERA}, ZXING_CAMERA_PERMISSION);
+                    new String[]{CAMERA_PERMISSION}, ZXING_CAMERA_PERMISSION);
         }
     }
 
