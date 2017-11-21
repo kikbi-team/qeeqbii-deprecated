@@ -62,15 +62,13 @@ public class BarcodeScannerActivityTest {
 
     // function to reset permissions.
     // see https://stackoverflow.com/questions/33929937/android-marshmallow-test-permissions-with-espresso
-    @BeforeClass
+//    @BeforeClass
     public static void resetPermission() {
         assertTrue(Build.VERSION.SDK_INT >= Build.VERSION_CODES.M);
         getInstrumentation().getUiAutomation().executeShellCommand("pm revoke " +
                 getTargetContext().getPackageName() + " " +
                 BarcodeScannerActivity.CAMERA_PERMISSION);
         Log.d("Barcode Permission", "Revoked");
-
-        SystemClock.sleep(PERMISSIONS_DELAY);
     }
 
     // checks if the permission was granted already
@@ -111,9 +109,10 @@ public class BarcodeScannerActivityTest {
 
     @Test
     public void t00_permissions() {
-        resetPermission();
-        assertTrue(!isPermissionGranted());
-        grantPermission();
+        //resetPermission();
+        //SystemClock.sleep(PERMISSIONS_DELAY);
+        if(!isPermissionGranted())
+            grantPermission();
         assertTrue(isPermissionGranted());
     }
 
