@@ -31,8 +31,8 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 import ch.epfl.sweng.qeeqbii.R;
+import ch.epfl.sweng.qeeqbii.activities.BarcodeScannerActivity;
 import ch.epfl.sweng.qeeqbii.login.UserInformation;
-import ch.epfl.sweng.qeeqbii.activities.MainActivity;
 
 /**
  * Demonstrate Firebase Authentication using a Facebook access token.
@@ -129,7 +129,7 @@ public class FacebookLoginActivity extends BaseActivity implements
 
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(FacebookLoginActivity.this, MainActivity.class);
+                Intent intent = new Intent(FacebookLoginActivity.this, BarcodeScannerActivity.class);
                 startActivity(intent);
             }
         });
