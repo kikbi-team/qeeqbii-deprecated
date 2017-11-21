@@ -24,13 +24,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activities.login.ChooserActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <activity android:name=".activities.login.ChooserActivity" />
         <activity
             android:name=".activities.login.GoogleSignInActivity"
             android:label="@string/label_google_sign_in" />
@@ -57,11 +51,6 @@
         <activity
             android:name=".activities.MainActivity"
             android:label="@string/app_name">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name="ch.epfl.sweng.qeeqbii.activities.CancerDataShowActivity"
