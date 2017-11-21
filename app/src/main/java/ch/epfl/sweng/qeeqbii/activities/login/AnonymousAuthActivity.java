@@ -22,7 +22,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 import ch.epfl.sweng.qeeqbii.R;
-import ch.epfl.sweng.qeeqbii.activities.MainActivity;
+import ch.epfl.sweng.qeeqbii.activities.BarcodeScannerActivity;
 import ch.epfl.sweng.qeeqbii.login.UserInformation;
 
 /**
@@ -90,7 +90,7 @@ public class AnonymousAuthActivity extends BaseActivity implements View.OnClickL
 
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(AnonymousAuthActivity.this, MainActivity.class);
+                Intent intent = new Intent(AnonymousAuthActivity.this, BarcodeScannerActivity.class);
                 startActivity(intent);
             }
         });
