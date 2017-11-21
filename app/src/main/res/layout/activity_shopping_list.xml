@@ -196,15 +196,15 @@
                     app:srcCompat="@drawable/cheese" />
 
                 <ImageButton
-                    android:id="@+id/appleImageButton"
+                    android:id="@+id/bottleImageButton"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:background="@color/Green"
                     android:backgroundTint="@color/Green"
-                    android:contentDescription="@string/apple"
-                    android:onClick="addApple"
-                    app:srcCompat="@drawable/apple" />
+                    android:contentDescription="@string/bottle"
+                    android:onClick="addBottle"
+                    app:srcCompat="@drawable/bottle" />
             </LinearLayout>
 
             <LinearLayout
@@ -219,27 +219,152 @@
                 tools:layout_editor_absoluteX="20dp">
 
                 <ImageButton
+                    android:id="@+id/waterImageButton"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:background="@color/bordeau"
                     android:backgroundTint="@color/bordeau"
-                    android:contentDescription="@string/vegetables"
-                    android:onClick="addSauce"
-                    app:srcCompat="@drawable/sauce" />
+                    android:contentDescription="@string/water"
+                    android:onClick="addWater"
+                    app:srcCompat="@drawable/bottle_1" />
 
                 <ImageButton
+                    android:id="@+id/biscuitImageButton"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:background="#49c5b4"
                     android:backgroundTint="#49c5b4"
-                    android:contentDescription="@string/meat"
-                    android:onClick="addPizza"
-                    app:srcCompat="@drawable/pizza" />
+                    android:contentDescription="@string/biscuit"
+                    android:onClick="addBiscuit"
+                    app:srcCompat="@drawable/buiscuit" />
             </LinearLayout>
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="181dp">
+
+                <ImageButton
+                    android:id="@+id/cocktailImageButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/colorPrimaryDark"
+                    android:backgroundTint="@color/colorPrimaryDark"
+                    android:contentDescription="@string/cocktail"
+                    android:onClick="addAlcohol"
+                    app:srcCompat="@drawable/cocktail" />
+
+                <ImageButton
+                    android:id="@+id/donutImageButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/pastelred"
+                    android:backgroundTint="@color/pastelred"
+                    android:contentDescription="@string/donut"
+                    android:onClick="addDonut"
+                    app:srcCompat="@drawable/donut" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="192dp"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.002"
+                tools:layout_editor_absoluteX="20dp">
+
+                <ImageButton
+                    android:id="@+id/fruitImageButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/navyblue"
+                    android:backgroundTint="@color/navyblue"
+                    android:contentDescription="@string/fruit"
+                    android:onClick="addFruit"
+                    app:srcCompat="@drawable/fruit" />
+
+                <ImageButton
+                    android:id="@+id/exoticImageButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/Green"
+                    android:backgroundTint="@color/Green"
+                    android:contentDescription="@string/exotic_fruit"
+                    android:onClick="addExoticFruit"
+                    app:srcCompat="@drawable/fruit_1" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0"
+                tools:layout_editor_absoluteX="20dp">
+
+                <ImageButton
+                    android:id="@+id/hotDrinkImageButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/bordeau"
+                    android:backgroundTint="@color/bordeau"
+                    android:contentDescription="@string/hot_beverage"
+                    android:onClick="addHotDrink"
+                    app:srcCompat="@drawable/mug" />
+
+                <ImageButton
+                    android:id="@+id/wingImageButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#49c5b4"
+                    android:backgroundTint="#49c5b4"
+                    android:contentDescription="@string/butchery"
+                    android:onClick="addWing"
+                    app:srcCompat="@drawable/wing" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="181dp">
+
+                <ImageButton
+                    android:id="@+id/appleImageButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/colorPrimaryDark"
+                    android:backgroundTint="@color/colorPrimaryDark"
+                    android:contentDescription="@string/apple"
+                    android:onClick="addApple"
+                    app:srcCompat="@drawable/apple" />
+
+                <ImageButton
+                    android:id="@+id/vegetableImageButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/pastelred"
+                    android:backgroundTint="@color/pastelred"
+                    android:contentDescription="@string/vegetables"
+                    android:onClick="addVegetable"
+                    app:srcCompat="@drawable/vegetables" />
+            </LinearLayout>
         </LinearLayout>
+
+
     </ScrollView>
 
 </android.support.constraint.ConstraintLayout>

@@ -162,4 +162,13 @@
     <string name="show_the_statistics_for_one_month">Show the statistics for one month</string>
     <string name="show_the_statistics_for_the_trimester">Show the statistics for the trimester</string>
     <string name="show_the_statistics_yearly_statistics">Show the statistics yearly statistics</string>
+    <string name="bottle">Bottle</string>
+    <string name="water">Water</string>
+    <string name="biscuit">biscuit</string>
+    <string name="cocktail">Cocktail</string>
+    <string name="donut">Donut</string>
+    <string name="fruit">Fruit</string>
+    <string name="exotic_fruit">Exotic Fruit</string>
+    <string name="hot_beverage">Hot Beverage</string>
+    <string name="butchery">Butchery</string>
 </resources>
