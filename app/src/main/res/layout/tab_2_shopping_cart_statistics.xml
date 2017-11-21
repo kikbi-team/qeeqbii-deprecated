@@ -22,6 +22,7 @@
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         android:onClick="showGraphs"
-        app:srcCompat="@mipmap/graph" />
+        app:srcCompat="@mipmap/graph"
+        android:contentDescription="@string/show_the_statistics_for_the_trimester" />
 
 </RelativeLayout>
