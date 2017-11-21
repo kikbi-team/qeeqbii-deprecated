@@ -65,7 +65,9 @@ public class BarcodeScannerActivityTest {
     @BeforeClass
     public static void resetPermission() {
         assertTrue(Build.VERSION.SDK_INT >= Build.VERSION_CODES.M);
-        getInstrumentation().getUiAutomation().executeShellCommand("pm reset-permissions");
+        getInstrumentation().getUiAutomation().executeShellCommand("pm revoke " +
+                getTargetContext().getPackageName() + " " +
+                BarcodeScannerActivity.CAMERA_PERMISSION);
         Log.d("Barcode Permission", "Revoked");
 
         SystemClock.sleep(PERMISSIONS_DELAY);
@@ -109,7 +111,7 @@ public class BarcodeScannerActivityTest {
 
     @Test
     public void t00_permissions() {
-        resetPermission();
+        //resetPermission();
         assertTrue(!isPermissionGranted());
         grantPermission();
         assertTrue(isPermissionGranted());
