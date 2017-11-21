@@ -155,6 +155,13 @@ public class ShoppingListActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void addSaussage(View view) {
+        Product prod = new Product("Saussage", "500 mg", "Stuff", "cool Nutrients", "001", R.drawable.saussage);
+        ShoppingCart.addToShoppingCartList(prod);
+        Intent intent = new Intent(this, ShoppingCartActivity.class);
+        startActivity(intent);
+    }
+
     /**
      * ATTENTION: This was auto-generated to implement the App Indexing API.
      * See https://g.co/AppIndexing/AndroidStudio for more information.

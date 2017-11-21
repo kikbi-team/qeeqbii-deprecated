@@ -335,7 +335,36 @@
                     android:onClick="addWing"
                     app:srcCompat="@drawable/wing" />
             </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="181dp">
+
+                <ImageButton
+                    android:id="@+id/appleImageButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/colorPrimaryDark"
+                    android:backgroundTint="@color/colorPrimaryDark"
+                    android:contentDescription="@string/apple"
+                    android:onClick="addApple"
+                    app:srcCompat="@drawable/apple" />
+
+                <ImageButton
+                    android:id="@+id/vegetableImageButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/pastelred"
+                    android:backgroundTint="@color/pastelred"
+                    android:contentDescription="@string/vegetables"
+                    android:onClick="addVegetable"
+                    app:srcCompat="@drawable/vegetables" />
+            </LinearLayout>
         </LinearLayout>
+
+
     </ScrollView>
 
 </android.support.constraint.ConstraintLayout>

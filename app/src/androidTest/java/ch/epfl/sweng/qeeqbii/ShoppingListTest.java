@@ -190,4 +190,166 @@ public class ShoppingListTest {
         assertNotNull(nextActivity);
         nextActivity.finish();
     }
+
+    @Test
+    public void testCanOpenClickOnImageBootle() throws InterruptedException {
+        // register next activity that need to be monitored.
+        Instrumentation.ActivityMonitor activityMonitor = getInstrumentation().addMonitor(ShoppingCartActivity.class.getName(), null, false);
+
+        // open current activity.
+        ShoppingListActivity myActivity = mActivityRule.getActivity();
+        final View button = (View) myActivity.findViewById(R.id.bottleImageButton);
+        myActivity.addBottle(button);
+
+        //Watch for the timeout
+        //example values 5000 if in ms, or 5 if it's in seconds.
+        ShoppingCartActivity nextActivity = (ShoppingCartActivity) getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 5000);
+        // next activity is opened and captured.
+        assertNotNull(nextActivity);
+        nextActivity.finish();
+    }
+
+    @Test
+    public void testCanOpenClickOnImageWater() throws InterruptedException {
+        // register next activity that need to be monitored.
+        Instrumentation.ActivityMonitor activityMonitor = getInstrumentation().addMonitor(ShoppingCartActivity.class.getName(), null, false);
+
+        // open current activity.
+        ShoppingListActivity myActivity = mActivityRule.getActivity();
+        final View button = (View) myActivity.findViewById(R.id.waterImageButton);
+        myActivity.addWater(button);
+
+        //Watch for the timeout
+        //example values 5000 if in ms, or 5 if it's in seconds.
+        ShoppingCartActivity nextActivity = (ShoppingCartActivity) getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 5000);
+        // next activity is opened and captured.
+        assertNotNull(nextActivity);
+        nextActivity.finish();
+    }
+
+    @Test
+    public void testCanOpenClickOnImageBuiscuit() throws InterruptedException {
+        // register next activity that need to be monitored.
+        Instrumentation.ActivityMonitor activityMonitor = getInstrumentation().addMonitor(ShoppingCartActivity.class.getName(), null, false);
+
+        // open current activity.
+        ShoppingListActivity myActivity = mActivityRule.getActivity();
+        final View button = (View) myActivity.findViewById(R.id.biscuitImageButton);
+        myActivity.addBiscuit(button);
+
+        //Watch for the timeout
+        //example values 5000 if in ms, or 5 if it's in seconds.
+        ShoppingCartActivity nextActivity = (ShoppingCartActivity) getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 5000);
+        // next activity is opened and captured.
+        assertNotNull(nextActivity);
+        nextActivity.finish();
+    }
+
+    @Test
+    public void testCanOpenClickOnImageAlcohol() throws InterruptedException {
+        // register next activity that need to be monitored.
+        Instrumentation.ActivityMonitor activityMonitor = getInstrumentation().addMonitor(ShoppingCartActivity.class.getName(), null, false);
+
+        // open current activity.
+        ShoppingListActivity myActivity = mActivityRule.getActivity();
+        final View button = (View) myActivity.findViewById(R.id.cocktailImageButton);
+        myActivity.addAlcohol(button);
+
+        //Watch for the timeout
+        //example values 5000 if in ms, or 5 if it's in seconds.
+        ShoppingCartActivity nextActivity = (ShoppingCartActivity) getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 5000);
+        // next activity is opened and captured.
+        assertNotNull(nextActivity);
+        nextActivity.finish();
+    }
+
+    @Test
+    public void testCanOpenClickOnImageDonut() throws InterruptedException {
+        // register next activity that need to be monitored.
+        Instrumentation.ActivityMonitor activityMonitor = getInstrumentation().addMonitor(ShoppingCartActivity.class.getName(), null, false);
+
+        // open current activity.
+        ShoppingListActivity myActivity = mActivityRule.getActivity();
+        final View button = (View) myActivity.findViewById(R.id.donutImageButton);
+        myActivity.addDonut(button);
+
+        //Watch for the timeout
+        //example values 5000 if in ms, or 5 if it's in seconds.
+        ShoppingCartActivity nextActivity = (ShoppingCartActivity) getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 5000);
+        // next activity is opened and captured.
+        assertNotNull(nextActivity);
+        nextActivity.finish();
+    }
+
+    @Test
+    public void testCanOpenClickOnImageFruit() throws InterruptedException {
+        // register next activity that need to be monitored.
+        Instrumentation.ActivityMonitor activityMonitor = getInstrumentation().addMonitor(ShoppingCartActivity.class.getName(), null, false);
+
+        // open current activity.
+        ShoppingListActivity myActivity = mActivityRule.getActivity();
+        final View button = (View) myActivity.findViewById(R.id.fruitImageButton);
+        myActivity.addFruit(button);
+
+        //Watch for the timeout
+        //example values 5000 if in ms, or 5 if it's in seconds.
+        ShoppingCartActivity nextActivity = (ShoppingCartActivity) getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 5000);
+        // next activity is opened and captured.
+        assertNotNull(nextActivity);
+        nextActivity.finish();
+    }
+
+    @Test
+    public void testCanOpenClickOnImageExotic() throws InterruptedException {
+        // register next activity that need to be monitored.
+        Instrumentation.ActivityMonitor activityMonitor = getInstrumentation().addMonitor(ShoppingCartActivity.class.getName(), null, false);
+
+        // open current activity.
+        ShoppingListActivity myActivity = mActivityRule.getActivity();
+        final View button = (View) myActivity.findViewById(R.id.exoticImageButton);
+        myActivity.addExoticFruit(button);
+
+        //Watch for the timeout
+        //example values 5000 if in ms, or 5 if it's in seconds.
+        ShoppingCartActivity nextActivity = (ShoppingCartActivity) getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 5000);
+        // next activity is opened and captured.
+        assertNotNull(nextActivity);
+        nextActivity.finish();
+    }
+
+    @Test
+    public void testCanOpenClickOnImageHotDrink() throws InterruptedException {
+        // register next activity that need to be monitored.
+        Instrumentation.ActivityMonitor activityMonitor = getInstrumentation().addMonitor(ShoppingCartActivity.class.getName(), null, false);
+
+        // open current activity.
+        ShoppingListActivity myActivity = mActivityRule.getActivity();
+        final View button = (View) myActivity.findViewById(R.id.hotDrinkImageButton);
+        myActivity.addHotDrink(button);
+
+        //Watch for the timeout
+        //example values 5000 if in ms, or 5 if it's in seconds.
+        ShoppingCartActivity nextActivity = (ShoppingCartActivity) getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 5000);
+        // next activity is opened and captured.
+        assertNotNull(nextActivity);
+        nextActivity.finish();
+    }
+
+    @Test
+    public void testCanOpenClickOnImageWing() throws InterruptedException {
+        // register next activity that need to be monitored.
+        Instrumentation.ActivityMonitor activityMonitor = getInstrumentation().addMonitor(ShoppingCartActivity.class.getName(), null, false);
+
+        // open current activity.
+        ShoppingListActivity myActivity = mActivityRule.getActivity();
+        final View button = (View) myActivity.findViewById(R.id.wingImageButton);
+        myActivity.addWing(button);
+
+        //Watch for the timeout
+        //example values 5000 if in ms, or 5 if it's in seconds.
+        ShoppingCartActivity nextActivity = (ShoppingCartActivity) getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 5000);
+        // next activity is opened and captured.
+        assertNotNull(nextActivity);
+        nextActivity.finish();
+    }
 }
