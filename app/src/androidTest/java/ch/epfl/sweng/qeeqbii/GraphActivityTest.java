@@ -13,13 +13,6 @@ import org.junit.runner.RunWith;
 
 import ch.epfl.sweng.qeeqbii.activities.MainActivity;
 
-import static android.support.test.espresso.action.ViewActions.click;
-import static android.support.test.espresso.core.deps.guava.base.Preconditions.checkNotNull;
-import static android.support.test.espresso.matcher.ViewMatchers.withContentDescription;
-import static android.support.test.espresso.matcher.ViewMatchers.withId;
-import static android.support.test.espresso.matcher.ViewMatchers.withText;
-import static junit.framework.Assert.assertEquals;
-
 /**
  * Created by davidcleres on 12.10.17.
  */
