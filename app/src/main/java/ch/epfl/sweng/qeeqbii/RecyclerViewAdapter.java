@@ -48,11 +48,10 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
         //if true, your checkbox will be selected, else unselected
         viewHolder.isChecked.setChecked(objIncome.isChecked());
-
         viewHolder.isChecked.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener()
         {
             @Override
-            public void onCheckedChanged (CompoundButton buttonView,boolean isChecked){
+            public void onCheckedChanged (CompoundButton buttonView, boolean isChecked){
             //set your object's last status
             objIncome.setChecked(isChecked);
         }
