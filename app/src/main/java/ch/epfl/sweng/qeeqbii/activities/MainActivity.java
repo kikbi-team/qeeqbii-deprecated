@@ -14,6 +14,7 @@ import com.facebook.CallbackManager;
 import com.facebook.share.widget.ShareDialog;
 
 import ch.epfl.sweng.qeeqbii.R;
+import ch.epfl.sweng.qeeqbii.open_food.ClusterType;
 import ch.epfl.sweng.qeeqbii.open_food.SavedProductsDatabase;
 import ch.epfl.sweng.qeeqbii.shopping_cart.ShoppingCartStatistics;
 import ch.epfl.sweng.qeeqbii.cancer.CancerDataBase;
