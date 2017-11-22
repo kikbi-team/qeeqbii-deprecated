@@ -12,7 +12,7 @@ import ch.epfl.sweng.qeeqbii.open_food.Product;
  */
 public class ShoppingCart {
 
-    static private List<Product> m_items = new ArrayList<Product>();
+    static public List<Product> m_items = new ArrayList<Product>();
 
     public static void addToShoppingCartList (Product product) {
         m_items.add(product);
@@ -49,7 +49,7 @@ public class ShoppingCart {
 
     public static void deleteSingleItemShoppingCartList() {
         for (Product element : m_items) {
-            if (element.getChecked())
+            if (element.isChecked())
             {
                 m_items.remove(element);
             }

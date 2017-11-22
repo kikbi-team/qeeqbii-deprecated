@@ -146,7 +146,11 @@ public class Product implements Serializable {
         this.mParsedIngredients = parsedIngredients;
     }
 
-    public boolean getChecked() {
+    public boolean isChecked() {
         return mIsChecked;
+    }
+
+    public void setChecked(Boolean isChecked) {
+        mIsChecked = isChecked;
     }
 }
