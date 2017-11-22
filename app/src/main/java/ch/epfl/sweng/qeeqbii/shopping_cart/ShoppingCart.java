@@ -1,6 +1,7 @@
 package ch.epfl.sweng.qeeqbii.shopping_cart;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import ch.epfl.sweng.qeeqbii.open_food.Product;
@@ -44,5 +45,14 @@ public class ShoppingCart {
 
     public Product getSpecificItemInCart(int index) {
         return m_items.get(index);
+    }
+
+    public static void deleteSingleItemShoppingCartList() {
+        for (Product element : m_items) {
+            if (element.getChecked())
+            {
+                m_items.remove(element);
+            }
+        }
     }
 }

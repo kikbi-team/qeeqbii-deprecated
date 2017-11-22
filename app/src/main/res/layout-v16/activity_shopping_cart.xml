@@ -61,4 +61,16 @@
         app:srcCompat="@android:drawable/ic_input_add"
         tools:onClick="showShoppingList" />
 
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/removeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|right"
+        android:layout_margin="@dimen/fab_margin"
+        android:onClick="deleteSingleItem"
+        app:layout_anchor="@+id/app_bar"
+        app:layout_anchorGravity="center_vertical|center_horizontal"
+        app:srcCompat="@android:drawable/ic_delete"
+        tools:onClick="deleteShoppingList" />
+
 </android.support.design.widget.CoordinatorLayout>

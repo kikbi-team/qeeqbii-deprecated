@@ -217,6 +217,7 @@ public class ShoppingListTest {
         // open current activity.
         ShoppingListActivity myActivity = mActivityRule.getActivity();
         final View button = (View) myActivity.findViewById(R.id.waterImageButton);
+        System.out.print(button.getClass());
         myActivity.addWater(button);
 
         //Watch for the timeout

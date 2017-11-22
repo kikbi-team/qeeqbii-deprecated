@@ -24,6 +24,7 @@ public class Product implements Serializable {
     private int mImageId;
     private ClusterType mType = ClusterType.UNDETERMINED;
     private String mBarcode;
+    private Boolean mIsChecked;
 
     public Product() {}
 
@@ -35,6 +36,7 @@ public class Product implements Serializable {
         mNutrients = nutrients;
         mImageId = imageId;
         mBarcode = barcode;
+        mIsChecked = false;
     }
 
     public Product(String name, String quantity, String ingredients, String nutrients, String barcode, ClusterType type)
@@ -45,6 +47,7 @@ public class Product implements Serializable {
         mNutrients = nutrients;
         mBarcode = barcode;
         mType = type;
+        mIsChecked = false;
     }
 
     public String getName()
@@ -141,5 +144,9 @@ public class Product implements Serializable {
 
     public void setParsedIngredients(String[] parsedIngredients) {
         this.mParsedIngredients = parsedIngredients;
+    }
+
+    public boolean getChecked() {
+        return mIsChecked;
     }
 }
