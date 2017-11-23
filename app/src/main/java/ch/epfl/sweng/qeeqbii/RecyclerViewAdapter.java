@@ -9,12 +9,15 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.List;
 
 import ch.epfl.sweng.qeeqbii.open_food.Product;
+import ch.epfl.sweng.qeeqbii.shopping_cart.ShoppingCart;
 
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder> {
     private Activity activity;
@@ -37,6 +40,22 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     public void onBindViewHolder(ViewHolder viewHolder, final int position) {
         viewHolder.textView.setText(products.get(position).getName());
         viewHolder.imageView.setImageResource(products.get(position).getImageId());
+        //viewHolder.isChecked.setChecked(products.get(position).getChecked());
+
+        final Product objIncome = ShoppingCart.m_items.get(position);
+        //in some cases, it will prevent unwanted situations
+        viewHolder.isChecked.setOnCheckedChangeListener(null);
+
+        //if true, your checkbox will be selected, else unselected
+        viewHolder.isChecked.setChecked(objIncome.isChecked());
+        viewHolder.isChecked.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener()
+        {
+            @Override
+            public void onCheckedChanged (CompoundButton buttonView, boolean isChecked){
+            //set your object's last status
+            objIncome.setChecked(isChecked);
+        }
+        });
     }
 
     @Override
@@ -52,11 +71,13 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     class ViewHolder extends RecyclerView.ViewHolder {
         private TextView textView;
         private ImageView imageView;
+        private CheckBox isChecked;
 
         public ViewHolder(View view) {
             super(view);
             textView = (TextView) view.findViewById(R.id.text);
             imageView = (ImageView) view.findViewById(R.id.shoppingListImage);
+            isChecked = (CheckBox) view.findViewById(R.id.shoppingCheckbox);
         }
     }
 }
