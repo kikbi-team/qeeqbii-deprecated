@@ -38,6 +38,7 @@ public class ShoppingCartActivity extends AppCompatActivity {
         if (extras != null && extras.containsKey(EXTRA_BARCODE)) {
             String barcode = extras.getString(EXTRA_BARCODE);
             Log.d("STATE", "Shopping cart: checking " + barcode);
+            m_cart.checkItemFromBarcode(barcode);
         } else {
             Log.d("STATE", "Regular onCreate()");
         }
