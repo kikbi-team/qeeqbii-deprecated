@@ -21,21 +21,10 @@ public class Product implements Serializable {
     private String mNutrients = "";
     private String[] mParsedIngredients = null;
     private Map<String, Double> mParsedNutrients = null;
-    private int mImageId;
-    private ClusterType mType = ClusterType.UNDETERMINED;
+    private ClusterType mType = ClusterTypeSecondLevel.UNDETERMINED;
     private String mBarcode;
 
     public Product() {}
-
-    public Product(String name, String quantity, String ingredients, String nutrients, String barcode, int imageId)
-    {
-        mName = name;
-        mQuantity = quantity;
-        mIngredients = ingredients;
-        mNutrients = nutrients;
-        mImageId = imageId;
-        mBarcode = barcode;
-    }
 
     public Product(String name, String quantity, String ingredients, String nutrients, String barcode, ClusterType type)
     {
@@ -69,7 +58,7 @@ public class Product implements Serializable {
 
     public String getBarcode() { return mBarcode; }
 
-    public int getImageId() { return mImageId; }
+    public int getImageId() { return mType.getImageId(); }
 
     public ClusterType getCluster() { return mType; }
 
