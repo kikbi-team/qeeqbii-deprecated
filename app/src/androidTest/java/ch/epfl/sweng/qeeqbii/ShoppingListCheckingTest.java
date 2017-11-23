@@ -71,6 +71,9 @@ public class ShoppingListCheckingTest {
         final View button = (View) myActivity.findViewById(R.id.pizzaImageButton);
         myActivity.addPizza(button);
 
+        // use mock version of clustering
+        ShoppingCart.enableMockBarcodeChecking();
+
         // it is not checked
         assertFalse(ShoppingCart.m_items.get(0).isChecked());
 
