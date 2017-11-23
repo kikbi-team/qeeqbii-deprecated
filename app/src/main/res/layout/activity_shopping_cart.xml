@@ -73,4 +73,16 @@
         app:srcCompat="@android:drawable/ic_delete"
         tools:onClick="deleteShoppingList" />
 
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/scanToCheckButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|begin"
+        android:layout_margin="@dimen/fab_margin"
+        android:onClick="deleteSingleItem"
+        app:layout_anchor="@+id/app_bar"
+        app:layout_anchorGravity="center_vertical|left"
+        app:srcCompat="@android:drawable/ic_menu_camera"
+        tools:onClick="scanToCheck" />
+
 </android.support.design.widget.CoordinatorLayout>

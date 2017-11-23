@@ -18,8 +18,9 @@ import ch.epfl.sweng.qeeqbii.open_food.SavedProductsDatabase;
 import ch.epfl.sweng.qeeqbii.shopping_cart.ShoppingCartStatistics;
 import ch.epfl.sweng.qeeqbii.cancer.CancerDataBase;
 
+import static ch.epfl.sweng.qeeqbii.activities.BarcodeScannerActivity.EXTRA_BARCODE;
+
 public class MainActivity extends AppCompatActivity {
-    public static final String BARCODE_READER = "ch.epfl.sweng.qeeqbii.mainBarcode";
     CallbackManager callbackManager;
     ShareDialog shareDialog;
 
@@ -94,7 +95,7 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, BarcodeToProductActivity.class);
         EditText editText = (EditText) findViewById(R.id.Barcode);
         String barcode = editText.getText().toString();
-        intent.putExtra(BARCODE_READER, barcode);
+        intent.putExtra(EXTRA_BARCODE, barcode);
         startActivity(intent);
     }
 

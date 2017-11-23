@@ -22,7 +22,6 @@ import ch.epfl.sweng.qeeqbii.shopping_cart.ShoppingCartStatistics;
 import me.dm7.barcodescanner.zxing.ZXingScannerView;
 
 import static android.content.ContentValues.TAG;
-import static ch.epfl.sweng.qeeqbii.activities.MainActivity.BARCODE_READER;
 
 /**
  * Created by sergei on 02/11/17.
@@ -34,6 +33,23 @@ import static ch.epfl.sweng.qeeqbii.activities.MainActivity.BARCODE_READER;
  */
 
 public class BarcodeScannerActivity extends AppCompatActivity implements ZXingScannerView.ResultHandler {
+
+    // different actions after barcode result:
+    // OPENFOOD -- go to product description
+    // SHOPPING_CART -- send barcode to shopping cart
+    public static enum ACTION_TYPE {ACTION_OPENFOOD, ACTION_SHOPPING_CART};
+
+    // default action
+    public static final ACTION_TYPE ACTION_DEFAULT = ACTION_TYPE.ACTION_OPENFOOD;
+
+    // Extra name for barcode
+    public static final String EXTRA_BARCODE = "ch.epfl.sweng.qeeqbii.BarcodeScannerActivity.barcode";
+
+    // Extra name for action
+    public static final String EXTRA_ACTION = "ch.epfl.sweng.qeeqbii.BarcodeScannerActivity.action";
+
+    // action obtained on start
+    private ACTION_TYPE action;
 
     // name of the permission
     public static final String CAMERA_PERMISSION = android.Manifest.permission.CAMERA;
@@ -72,7 +88,15 @@ public class BarcodeScannerActivity extends AppCompatActivity implements ZXingSc
         mScannerView = new ZXingScannerView(this);
         contentFrame.addView(mScannerView);
 
+        // obtain action if present
+        Bundle extras = getIntent().getExtras();
+        if (extras != null && extras.containsKey(EXTRA_ACTION)) {
+            action = (ACTION_TYPE) extras.getSerializable(EXTRA_ACTION);
+        } else {
+            action = ACTION_DEFAULT;
+        }
 
+        Log.d("STATE", "EXTRA_ACTION is " + action);
     }
 
     // check if the camera permission is given
@@ -129,8 +153,10 @@ public class BarcodeScannerActivity extends AppCompatActivity implements ZXingSc
         // Prints the scan format (qr code, pdf417 etc.)
         Log.v(TAG, rawResult.getBarcodeFormat().toString());
 
+        // storing the barcode
         String barcode = rawResult.getText();
 
+        // do processing
         processBarcode(barcode);
     }
 
@@ -147,12 +173,18 @@ public class BarcodeScannerActivity extends AppCompatActivity implements ZXingSc
         if (barcode == null || barcode.equals("")) {
             Log.d("STATE", "Barcode is invalid, going back to main");
             goToMain();
-        } else {
+        } else if(action == ACTION_TYPE.ACTION_OPENFOOD) {
             Log.d("STATE", "Barcode " + barcode + " found, going to OpenFood");
             Intent intent = new Intent(this, BarcodeToProductActivity.class);
-            intent.putExtra(BARCODE_READER, barcode);
+            intent.putExtra(EXTRA_BARCODE, barcode);
+            startActivity(intent);
+        } else if(action == ACTION_TYPE.ACTION_SHOPPING_CART) {
+            Log.d("STATE", "Barcode " + barcode + " found, sending data to shopping list");
+            Intent intent = new Intent(this, ShoppingCartActivity.class);
+            intent.putExtra(EXTRA_BARCODE, barcode);
             startActivity(intent);
         }
+        // no other actions now
     }
 
     @Override
