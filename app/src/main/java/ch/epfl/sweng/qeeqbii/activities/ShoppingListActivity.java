@@ -141,7 +141,6 @@ public class ShoppingListActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-
     public void addHotDrink(View view) {
         Product prod = new Product("Hot Drinks", "500 mg", "Stuff", "cool Nutrients", "001", ClusterTypeSecondLevel.BOISSONS_SUCREES);
         ShoppingCart.addToShoppingCartList(prod);

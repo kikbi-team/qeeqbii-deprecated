@@ -9,6 +9,7 @@ import android.view.View;
 
 import ch.epfl.sweng.qeeqbii.R;
 import ch.epfl.sweng.qeeqbii.RecyclerViewAdapter;
+import ch.epfl.sweng.qeeqbii.open_food.Product;
 import ch.epfl.sweng.qeeqbii.shopping_cart.ShoppingCart;
 
 public class ShoppingCartActivity extends AppCompatActivity {
@@ -35,6 +36,12 @@ public class ShoppingCartActivity extends AppCompatActivity {
 
     public void deleteShoppingList(View view) {
         ShoppingCart.emptyShoppingCartList();
+        Intent intent = new Intent(this, ShoppingCartActivity.class);
+        startActivity(intent);
+    }
+
+    public void deleteSingleItem (View view) {
+        ShoppingCart.deleteSingleItemShoppingCartList();
         Intent intent = new Intent(this, ShoppingCartActivity.class);
         startActivity(intent);
     }

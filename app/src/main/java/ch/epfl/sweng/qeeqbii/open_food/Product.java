@@ -23,6 +23,7 @@ public class Product implements Serializable {
     private Map<String, Double> mParsedNutrients = null;
     private ClusterType mType = ClusterTypeSecondLevel.UNDETERMINED;
     private String mBarcode;
+    private Boolean mIsChecked;
 
     public Product() {}
 
@@ -34,6 +35,7 @@ public class Product implements Serializable {
         mNutrients = nutrients;
         mBarcode = barcode;
         mType = type;
+        mIsChecked = false;
     }
 
     public String getName()
@@ -130,5 +132,13 @@ public class Product implements Serializable {
 
     public void setParsedIngredients(String[] parsedIngredients) {
         this.mParsedIngredients = parsedIngredients;
+    }
+
+    public boolean isChecked() {
+        return mIsChecked;
+    }
+
+    public void setChecked(Boolean isChecked) {
+        mIsChecked = isChecked;
     }
 }
