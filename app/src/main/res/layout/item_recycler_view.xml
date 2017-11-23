@@ -29,6 +29,7 @@
             tools:ignore="RelativeOverlap" />
 
         <CheckBox
+            android:id="@+id/shoppingCheckbox"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
