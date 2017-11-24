@@ -14,6 +14,7 @@ import java.util.Map;
 import java.util.concurrent.CountDownLatch;
 
 import java.net.URL;
+import java.util.concurrent.TimeUnit;
 
 /**
  * Created by guillaume on 06/10/17.
@@ -110,7 +111,6 @@ public class OpenFoodQuery extends AsyncTask<String, Void, Product> {
             return RecentlyScannedProducts.getProduct(barcode);
         }
 
-        final CountDownLatch get_or_create_signal = new CountDownLatch(1);
         final Context save_context = context;
 
         new OpenFoodQuery() {
@@ -126,9 +126,7 @@ public class OpenFoodQuery extends AsyncTask<String, Void, Product> {
                     System.out.println(e.getMessage());
                 }
             }
-        }.execute(barcode);
-
-        get_or_create_signal.countDown();
+        }.execute(barcode).get(5, TimeUnit.SECONDS);
 
         if(RecentlyScannedProducts.contains(barcode))
         {

@@ -16,7 +16,7 @@ import java.util.Date;
 import java.util.Locale;
 
 import ch.epfl.sweng.qeeqbii.activities.SavedProductsDatesActivity;
-import ch.epfl.sweng.qeeqbii.open_food.ClusterType;
+import ch.epfl.sweng.qeeqbii.open_food.ClusterTypeSecondLevel;
 import ch.epfl.sweng.qeeqbii.open_food.Product;
 import ch.epfl.sweng.qeeqbii.open_food.SavedProductsDatabase;
 
@@ -76,6 +76,7 @@ public class SavedProductsDatabaseTest {
             assertEquals("Tartiflette", products[0].getName());
             assertEquals("Rebloch, Rebloch, Rebloch et Reblochh", products[1].getIngredients());
             assertEquals(1,SavedProductsDatabase.getDates().length);
+            assertEquals(ClusterTypeSecondLevel.FROMAGES, products[0].getCluster());
 
         } catch (Exception e)
         {
@@ -87,10 +88,10 @@ public class SavedProductsDatabaseTest {
     public void addProductTest()
     {
         Product product = new Product("Raclette", "1000g", "Cheese," +
-                " Cheese ,Cheese", "Sel: 0.200g", "00055232323", ClusterType.CHEESE);
+                " Cheese ,Cheese", "Sel: 0.200g", "00055232323", ClusterTypeSecondLevel.FROMAGES);
 
         Product product2 = new Product("Fondue", "1500g", "Cheese," +
-                " Cheese ,Cheese", "Sel: 0.300g", "00055237323", ClusterType.CHEESE);
+                " Cheese ,Cheese", "Sel: 0.300g", "00055237323", ClusterTypeSecondLevel.FROMAGES);
 
         try
         {
