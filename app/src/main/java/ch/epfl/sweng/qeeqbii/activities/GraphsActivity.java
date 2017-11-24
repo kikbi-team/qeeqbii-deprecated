@@ -42,7 +42,6 @@ public class GraphsActivity extends AppCompatActivity {
     private final String[] xData = {"Completed", "Left"};
     private ActionBarDrawerToggle mToggle;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -240,7 +239,6 @@ public class GraphsActivity extends AppCompatActivity {
         Intent intent = new Intent(this, BarcodeScannerActivity.class);
         startActivity(intent);
     }
-
 
     public void showShoppingList(MenuItem view) {
         Intent intent = new Intent(this, ShoppingCartActivity.class);
