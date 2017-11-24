@@ -33,7 +33,7 @@ public class RecentlyScannedProductsActivity extends AppCompatActivity {
 
         LinkedList<String> barcode_linked_list = RecentlyScannedProducts.getBarcodeList();
 
-        System.out.println(barcode_linked_list.getLast());
+        //System.out.println(barcode_linked_list.getLast());
 
 
         //final ArrayList<RecentlyScannedProducts> recipeList = Recipe.getRecipesFromFile("recipes.json", this);
@@ -53,18 +53,6 @@ public class RecentlyScannedProductsActivity extends AppCompatActivity {
                 R.id.recently_scanned_product_text_view, listItems);
         mRecentlyScannedProductsListView.setAdapter(mAdapter);
 
-        /*
-        mRecentlyScannedProductsListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapter, View view, int position,
-                                    long arg3) {
-                Intent intent = new Intent(RecentlyScannedProductsActivity.this, BarcodeToProductActivity.class);
-                String txt = (String) adapter.getItemAtPosition(position);
-                intent.putExtra(MainActivity.EXTRA_BARCODE,RecentlyScannedProductsActivity.displayed_products.get(txt));
-                startActivity(intent);
-            }
-        });
-        */
     }
 
     //ImageButton btn = (ImageButton) findViewById(R.id.delete_recently_scanned_product_button);
