@@ -17,19 +17,19 @@ import com.github.mikephil.charting.components.Legend;
 import ch.epfl.sweng.qeeqbii.R;
 
 
-public class PieChartFrag extends SimpleFragment {
+public class pieChartYearlyFrag extends SimpleFragment {
 
     public static Fragment newInstance() {
-        return new PieChartFrag();
+        return new pieChartYearlyFrag();
     }
 
     private PieChart mChart;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View v = inflater.inflate(R.layout.tab_1_shopping_cart_statistics, container, false);
+        View v = inflater.inflate(R.layout.tab_3_shopping_cart_statistics, container, false);
 
-        mChart = (PieChart) v.findViewById(R.id.idPieChartTab);
+        mChart = (PieChart) v.findViewById(R.id.idPieChartTabYearly);
         mChart.getDescription().setEnabled(false);
 
         Typeface tf = Typeface.createFromAsset(getActivity().getAssets(), "OpenSans-Light.ttf");
@@ -55,7 +55,7 @@ public class PieChartFrag extends SimpleFragment {
     }
 
     private SpannableString generateCenterText() {
-        SpannableString s = new SpannableString("Revenues\nQuarters 2015");
+        SpannableString s = new SpannableString("Past\nYear");
         s.setSpan(new RelativeSizeSpan(2f), 0, 8, 0);
         s.setSpan(new ForegroundColorSpan(Color.GRAY), 8, s.length(), 0);
         return s;
