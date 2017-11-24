@@ -13,6 +13,7 @@ import java.util.concurrent.CountDownLatch;
 import ch.epfl.sweng.qeeqbii.activities.BarcodeToProductActivity;
 import ch.epfl.sweng.qeeqbii.open_food.OpenFoodQuery;
 import ch.epfl.sweng.qeeqbii.open_food.Product;
+import ch.epfl.sweng.qeeqbii.open_food.RecentlyScannedProducts;
 
 import static junit.framework.TestCase.fail;
 import static org.junit.Assert.assertEquals;
@@ -118,6 +119,7 @@ public class OpenFoodQueryTest {
     public void CacheQueryTest()
     {
         String barcode = "7610848337010";
+        RecentlyScannedProducts.clear();
         try {
             Product product = OpenFoodQuery.GetOrCreateProduct(barcode, null);
             assertEquals(product.getQuantity(), string_quantity);

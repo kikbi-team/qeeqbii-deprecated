@@ -9,7 +9,7 @@
           "ingredients": "Rebloch, Rebloch, Rebloch",
           "nutrients": "Sel: 0.65g",
           "quantity": "4000g",
-          "cluster type": "cheese"
+          "cluster type": "FROMAGES"
         },
         {
           "name": "Tartiflette again",
@@ -17,7 +17,7 @@
           "ingredients": "Rebloch, Rebloch, Rebloch et Reblochh",
           "nutrients": "Sel: 0.650g",
           "quantity": "10000g",
-          "cluster type": "cheese"
+          "cluster type": "FROMAGES"
         }
       ]
     }
