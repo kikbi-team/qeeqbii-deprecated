@@ -103,10 +103,10 @@ public class ShoppingCartStatistics extends AppCompatActivity {
                     pieChartMonthlyFrag tab1 = new pieChartMonthlyFrag();
                     return tab1;
                 case 1:
-                    pieChartMonthlyFrag tab2 = new pieChartMonthlyFrag(); //CHANGE HERE
+                    pieChartTrimesterFrag tab2 = new pieChartTrimesterFrag(); //CHANGE HERE
                     return tab2;
                 case 2:
-                    pieChartMonthlyFrag tab3 = new pieChartMonthlyFrag();
+                    pieChartYearlyFrag tab3 = new pieChartYearlyFrag();
                     return tab3;
             }
             return null;

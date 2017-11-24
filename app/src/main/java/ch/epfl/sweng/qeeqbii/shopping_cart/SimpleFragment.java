@@ -106,7 +106,7 @@ public abstract class SimpleFragment extends Fragment {
             entries1.add(new PieEntry((float) ((Math.random() * 60) + 40), "Quarter " + (i+1)));
         }
 
-        PieDataSet ds1 = new PieDataSet(entries1, "Quarterly Revenues 2015");
+        PieDataSet ds1 = new PieDataSet(entries1, "Alimentation");
         ds1.setColors(ColorTemplate.VORDIPLOM_COLORS);
         ds1.setSliceSpace(2f);
         ds1.setValueTextColor(Color.WHITE);

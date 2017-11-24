@@ -43,11 +43,11 @@ public class pieChartMonthlyFrag extends SimpleFragment {
         mChart.setHoleRadius(45f);
         mChart.setTransparentCircleRadius(50f);
 
-        /*Legend l = mChart.getLegend();
+        Legend l = mChart.getLegend();
         l.setVerticalAlignment(Legend.LegendVerticalAlignment.TOP);
         l.setHorizontalAlignment(Legend.LegendHorizontalAlignment.RIGHT);
         l.setOrientation(Legend.LegendOrientation.VERTICAL);
-        l.setDrawInside(false);*/
+        l.setDrawInside(false);
 
         mChart.setData(generatePieData());
 

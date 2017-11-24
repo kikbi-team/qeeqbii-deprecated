@@ -55,7 +55,7 @@ public class pieChartTrimesterFrag extends SimpleFragment {
     }
 
     private SpannableString generateCenterText() {
-        SpannableString s = new SpannableString("Past\nTrimesters");
+        SpannableString s = new SpannableString("Past\nTrim.");
         s.setSpan(new RelativeSizeSpan(2f), 0, 8, 0);
         s.setSpan(new ForegroundColorSpan(Color.GRAY), 8, s.length(), 0);
         return s;
