@@ -29,10 +29,10 @@ public class ShoppingCartStatitisticsTest {
     public final ActivityTestRule<ShoppingCartStatistics> mActivityRule =
             new ActivityTestRule<>(ShoppingCartStatistics.class);
 
-    @Test
+    /*@Test
     public void testCanOpenMonthButton() throws InterruptedException {
         onView(withId(R.id.showMonthGraph)).perform(click());
-    }
+    }*/
 
     @Test
     public void CountTest() throws InterruptedException {
