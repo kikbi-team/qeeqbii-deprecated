@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import ch.epfl.sweng.qeeqbii.activities.MainActivity;
+import ch.epfl.sweng.qeeqbii.open_food.ClusterTypeSecondLevel;
 import ch.epfl.sweng.qeeqbii.open_food.Date;
 import ch.epfl.sweng.qeeqbii.open_food.Product;
 
@@ -26,7 +27,7 @@ public class ARecyclerViewAdapterShould {
     @Test
     public void testConstructor() throws InterruptedException {
         Date date = new Date();
-        Product item = new Product("cheese", "500 mg", "Stuff", "cool Nutrients", "001", R.drawable.cheese);
+        Product item = new Product("cheese", "500 mg", "Stuff", "cool Nutrients", "001", ClusterTypeSecondLevel.FROMAGES);
         List<Product> products = new ArrayList<Product>();
         products.add(item);
         products.add(item);

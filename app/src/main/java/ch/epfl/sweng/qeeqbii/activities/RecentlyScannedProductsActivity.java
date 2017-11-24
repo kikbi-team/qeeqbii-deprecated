@@ -60,7 +60,7 @@ public class RecentlyScannedProductsActivity extends AppCompatActivity {
                                     long arg3) {
                 Intent intent = new Intent(RecentlyScannedProductsActivity.this, BarcodeToProductActivity.class);
                 String txt = (String) adapter.getItemAtPosition(position);
-                intent.putExtra(MainActivity.BARCODE_READER,RecentlyScannedProductsActivity.displayed_products.get(txt));
+                intent.putExtra(MainActivity.EXTRA_BARCODE,RecentlyScannedProductsActivity.displayed_products.get(txt));
                 startActivity(intent);
             }
         });
