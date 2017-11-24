@@ -30,7 +30,7 @@ public class BarcodeToProductActivity extends AppCompatActivity {
         setContentView(R.layout.activity_show_product_details);
 
         Intent intent = getIntent();
-        barcode = intent.getStringExtra(MainActivity.BARCODE_READER);
+        barcode = intent.getStringExtra(BarcodeScannerActivity.EXTRA_BARCODE);
 
         // Capture the layout's; TextView and set the string as its text
         final TextView txt = (TextView) findViewById(R.id.product_details);

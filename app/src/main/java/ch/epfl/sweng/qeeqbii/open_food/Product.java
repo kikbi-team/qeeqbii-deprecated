@@ -1,8 +1,5 @@
 package ch.epfl.sweng.qeeqbii.open_food;
 
-
-
-
 import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
