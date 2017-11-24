@@ -20,7 +20,6 @@ import ch.epfl.sweng.qeeqbii.shopping_cart.ShoppingCartStatistics;
 import static ch.epfl.sweng.qeeqbii.activities.BarcodeScannerActivity.EXTRA_BARCODE;
 
 public class MainActivity extends AppCompatActivity {
-    private static final String BARCODE_READER = "";
     CallbackManager callbackManager;
     ShareDialog shareDialog;
 
@@ -97,7 +96,7 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
-    
+
     public void showSavedProducts(MenuItem item) {
         Intent intent = new Intent(this, SavedProductsDatesActivity.class);
         startActivity(intent);
