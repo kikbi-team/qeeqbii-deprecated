@@ -70,7 +70,7 @@ public class ShoppingListCheckingTest {
         // adding pizza
         final View button = (View) myActivity.findViewById(R.id.pizzaImageButton);
         myActivity.addPizza(button);
-        
+
         // use mock version of clustering
         ShoppingCart.enableMockBarcodeChecking();
 
