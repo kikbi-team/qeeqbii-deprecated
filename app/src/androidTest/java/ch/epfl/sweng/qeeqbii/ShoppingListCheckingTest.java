@@ -81,6 +81,7 @@ public class ShoppingListCheckingTest {
         onView(withId(R.id.scanToCheckButton)).perform(click());
         intended(hasComponent(new ComponentName(getTargetContext(), BarcodeScannerActivity.class)));
 
+
         // scanning pizza
         ((BarcodeScannerActivity) getActivityInstance()).processBarcode("4001724819905");
         intended(hasComponent(new ComponentName(getTargetContext(), ShoppingCartActivity.class)), times(2));
