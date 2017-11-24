@@ -143,4 +143,6 @@
     <string name="exotic_fruit">Exotic Fruit</string>
     <string name="hot_beverage">Hot Beverage</string>
     <string name="butchery">Butchery</string>
+    <string name="show_saved_products_activity">Show saved products</string>
+    <string name="Chat">Chat</string>
 </resources>
