@@ -100,13 +100,13 @@ public class ShoppingCartStatistics extends AppCompatActivity {
         public Fragment getItem(int position) {
             switch (position) {
                 case 0:
-                    Tab1MonthlyStatistics tab1 = new Tab1MonthlyStatistics();
+                    PieChartFrag tab1 = new PieChartFrag();
                     return tab1;
                 case 1:
-                    Tab2TrimestrialStats tab2 = new Tab2TrimestrialStats();
+                    PieChartFrag tab2 = new PieChartFrag(); //CHANGE HERE
                     return tab2;
                 case 2:
-                    Tab3YearlyStatistics tab3 = new Tab3YearlyStatistics();
+                    PieChartFrag tab3 = new PieChartFrag();
                     return tab3;
             }
             return null;
