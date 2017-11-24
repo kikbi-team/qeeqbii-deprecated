@@ -70,7 +70,7 @@ public class ShoppingListCheckingTest {
         // adding pizza
         final View button = (View) myActivity.findViewById(R.id.pizzaImageButton);
         myActivity.addPizza(button);
-
+        
         // use mock version of clustering
         ShoppingCart.enableMockBarcodeChecking();
 
@@ -80,6 +80,7 @@ public class ShoppingListCheckingTest {
         // going to barcode
         onView(withId(R.id.scanToCheckButton)).perform(click());
         intended(hasComponent(new ComponentName(getTargetContext(), BarcodeScannerActivity.class)));
+
 
         // scanning pizza
         ((BarcodeScannerActivity) getActivityInstance()).processBarcode("4001724819905");

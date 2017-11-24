@@ -79,7 +79,7 @@ public class ShoppingListActivity extends AppCompatActivity {
     }
 
     public void addPizza(View view) {
-        Product prod = new Product("Pizza", "500 mg", "Stuff", "cool Nutrients", "001", ClusterTypeSecondLevel.PIZZA);
+        Product prod = new Product("Pizza", "500 mg", "Stuff", "cool Nutrients", "001", ClusterTypeSecondLevel.PIZZAS_MENUS_SNACKS);
         ShoppingCart.addToShoppingCartList(prod);
         Intent intent = new Intent(this, ShoppingCartActivity.class);
         startActivity(intent);

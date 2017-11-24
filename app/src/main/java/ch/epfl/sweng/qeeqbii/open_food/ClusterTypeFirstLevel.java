@@ -249,11 +249,7 @@ public enum ClusterTypeFirstLevel implements ClusterType {
     @Override
     public Integer getImageId()
     {
-        if(imageIdMap.containsKey(this))
-        {
-            return imageIdMap.get(this);
-        }
-        return getParent().getImageId();
+        return imageIdMap.get(this);
     }
 
 

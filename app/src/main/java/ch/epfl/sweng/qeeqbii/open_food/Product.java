@@ -19,8 +19,8 @@ public class Product implements Serializable {
     private String[] mParsedIngredients = null;
     private Map<String, Double> mParsedNutrients = null;
     private ClusterType mType = ClusterTypeSecondLevel.UNDETERMINED;
-    private String mBarcode;
-    private Boolean mIsChecked;
+    private String mBarcode = "";
+    private Boolean mIsChecked = false;
 
     public Product() {}
     
