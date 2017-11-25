@@ -3,7 +3,10 @@ package ch.epfl.sweng.qeeqbii.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
@@ -16,11 +19,12 @@ import java.util.Map;
 import ch.epfl.sweng.qeeqbii.open_food.Product;
 import ch.epfl.sweng.qeeqbii.R;
 import ch.epfl.sweng.qeeqbii.open_food.RecentlyScannedProducts;
+import ch.epfl.sweng.qeeqbii.shopping_cart.ShoppingCartStatistics;
 
 public class RecentlyScannedProductsActivity extends AppCompatActivity {
 
     public static Map<String,String> displayed_products = new HashMap<>();
-
+    private ActionBarDrawerToggle mToggle;
     private ArrayAdapter mAdapter;
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +32,13 @@ public class RecentlyScannedProductsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recently_scanned_products);
 
+        DrawerLayout mDrawerLayout = (DrawerLayout) findViewById(R.id.SavedProductsLayout);
+        mToggle = new ActionBarDrawerToggle(this, mDrawerLayout, R.string.open, R.string.close);
+
+        mDrawerLayout.addDrawerListener(mToggle);
+        mToggle.syncState();
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         ListView mRecentlyScannedProductsListView = (ListView) findViewById(R.id.recently_scanned_products_list_view);
 
@@ -87,8 +98,65 @@ public class RecentlyScannedProductsActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-
     public ArrayAdapter getmAdapter() {
         return mAdapter;
+    }
+
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        return mToggle.onOptionsItemSelected(item) || super.onOptionsItemSelected(item);
+    }
+
+    public void cancerDataBaseShow(MenuItem item) {
+        Intent intent = new Intent(this, CancerDataShowActivity.class);
+        startActivity(intent);
+    }
+
+
+    public void readBarcode(MenuItem item) {
+        Intent intent = new Intent(this, BarcodeScannerActivity.class);
+        startActivity(intent);
+    }
+
+
+
+    public void showShoppingList(MenuItem view) {
+        Intent intent = new Intent(this, ShoppingCartActivity.class);
+        startActivity(intent);
+    }
+
+    public void showGraphs(MenuItem item) {
+        Intent intent = new Intent(this, GraphsActivity.class);
+        startActivity(intent);
+    }
+
+    public void cancerDataQuery(MenuItem item) {
+        Intent intent = new Intent(this, CancerDataQueryActivity.class);
+        startActivity(intent);
+    }
+
+    public void showRecentlyScannedProductsActivity(MenuItem item) {
+        Intent intent = new Intent(this, RecentlyScannedProductsActivity.class);
+        startActivity(intent);
+    }
+
+    public void backToMain(MenuItem item) {
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+    }
+
+    public void showSavedProducts(MenuItem item) {
+        Intent intent = new Intent(this, SavedProductsDatesActivity.class);
+        startActivity(intent);
+    }
+
+    public void showStatistics(MenuItem item) {
+        Intent intent = new Intent(this, ShoppingCartStatistics.class);
+        startActivity(intent);
+    }
+
+    public void showChat(MenuItem item) {
+        Intent intent = new Intent(this, ChatActivity.class);
+        startActivity(intent);
     }
 }

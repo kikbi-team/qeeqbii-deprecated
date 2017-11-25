@@ -15,6 +15,7 @@ import android.widget.ListView;
 import java.util.Date;
 
 import ch.epfl.sweng.qeeqbii.R;
+import ch.epfl.sweng.qeeqbii.open_food.RecentlyScannedProducts;
 import ch.epfl.sweng.qeeqbii.open_food.SavedProductsDatabase;
 import ch.epfl.sweng.qeeqbii.shopping_cart.ShoppingCartStatistics;
 
@@ -27,6 +28,7 @@ public class SavedProductsDatesActivity extends AppCompatActivity {
 
     private static final String TAG = "SavedProductsDatesActiv";
     private ActionBarDrawerToggle mToggle;
+    private ArrayAdapter mAdapter;
 
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -76,6 +78,20 @@ public class SavedProductsDatesActivity extends AppCompatActivity {
             }
 
         });
+    }
+
+    public void deleteItems(View view) {
+        RecentlyScannedProducts.clear();
+        mAdapter.clear();
+        mAdapter.notifyDataSetChanged();
+    }
+
+    public void shareOnFacebookRecentlyScanned(View view)
+    {
+        Intent intent = new Intent(this, ShareOnFacebookActivity.class);
+        view.setVisibility(View.INVISIBLE);
+        ShareOnFacebookActivity.view = findViewById(R.id.recently_scanned_products);
+        startActivity(intent);
     }
 
     public boolean onOptionsItemSelected(MenuItem item) {

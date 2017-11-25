@@ -33,6 +33,7 @@
 
     <item
         android:id="@+id/nav_scannedProducts"
+        android:onClick="showRecentlyScannedProductsActivity"
         android:title="@string/scanned_products" />
 
     <item
