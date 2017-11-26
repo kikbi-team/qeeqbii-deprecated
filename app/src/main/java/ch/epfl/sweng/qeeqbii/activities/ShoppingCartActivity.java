@@ -10,7 +10,6 @@ import android.view.View;
 
 import ch.epfl.sweng.qeeqbii.R;
 import ch.epfl.sweng.qeeqbii.RecyclerViewAdapter;
-import ch.epfl.sweng.qeeqbii.open_food.Product;
 import ch.epfl.sweng.qeeqbii.shopping_cart.ShoppingCart;
 
 import static ch.epfl.sweng.qeeqbii.activities.BarcodeScannerActivity.ACTION_TYPE.ACTION_SHOPPING_CART;
@@ -26,6 +25,7 @@ public class ShoppingCartActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_shopping_cart);
         RecyclerView recyclerView = (RecyclerView)findViewById(R.id.recycler);
+
         //create and set layout manager for each RecyclerView
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);

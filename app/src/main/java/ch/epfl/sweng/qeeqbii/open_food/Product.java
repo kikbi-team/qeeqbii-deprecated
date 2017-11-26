@@ -21,6 +21,7 @@ public class Product implements Serializable {
     private ClusterType mType = ClusterTypeSecondLevel.UNDETERMINED;
     private String mBarcode = "";
     private Boolean mIsChecked = false;
+    private float mOpacity = 1f;
 
     public Product() {}
     
@@ -33,6 +34,8 @@ public class Product implements Serializable {
         mBarcode = barcode;
         mType = type;
         mIsChecked = false;
+        mOpacity = 1f;
+
     }
 
     public String getName()
@@ -137,5 +140,13 @@ public class Product implements Serializable {
 
     public void setChecked(Boolean isChecked) {
         mIsChecked = isChecked;
+    }
+
+    public float getOpacity () {
+        return mOpacity;
+    }
+
+    public void setOpacity (float opacity){
+        mOpacity = opacity;
     }
 }

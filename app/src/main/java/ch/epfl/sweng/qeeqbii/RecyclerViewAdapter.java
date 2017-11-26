@@ -52,10 +52,20 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         {
             @Override
             public void onCheckedChanged (CompoundButton buttonView, boolean isChecked){
-            //set your object's last status
-            objIncome.setChecked(isChecked);
-        }
+                //set your object's last status
+                objIncome.setChecked(isChecked);
+                if(isChecked) {
+                    objIncome.setOpacity(0.5f);
+                }
+                else {
+                    objIncome.setOpacity(1f);
+                }
+            }
         });
+
+        viewHolder.isChecked.setAlpha(objIncome.getOpacity());
+        viewHolder.textView.setAlpha(objIncome.getOpacity());
+        viewHolder.imageView.setAlpha(objIncome.getOpacity());
     }
 
     @Override
@@ -78,6 +88,24 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             textView = (TextView) view.findViewById(R.id.text);
             imageView = (ImageView) view.findViewById(R.id.shoppingListImage);
             isChecked = (CheckBox) view.findViewById(R.id.shoppingCheckbox);
+
+            isChecked.setOnClickListener(new View.OnClickListener() {
+
+                @Override
+                public void onClick(View v) {
+
+                    if (((CheckBox)v).isChecked()) {
+                        v.setAlpha(0.50f);              //CHANGES THE OPACITY OF THE VIEW
+                        imageView.setAlpha(0.50f);
+                        textView.setAlpha(0.50f);
+                    }
+                    else {
+                        v.setAlpha(1f);              //CHANGES THE OPACITY OF THE VIEW
+                        imageView.setAlpha(1f);
+                        textView.setAlpha(1f);
+                    }
+                }
+            });
         }
     }
 }
