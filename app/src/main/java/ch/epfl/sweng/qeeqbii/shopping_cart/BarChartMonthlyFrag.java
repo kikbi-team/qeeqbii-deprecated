@@ -31,14 +31,14 @@ public class BarChartMonthlyFrag extends SimpleFragment implements OnChartGestur
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View v = inflater.inflate(R.layout.tab_1_shopping_cart_statistics, container, false);
+        View v = inflater.inflate(R.layout.frag_simple_bar, container, false);
 
         // create a new chart object
         mChart = new BarChart(getActivity());
         mChart.getDescription().setEnabled(false);
         mChart.setOnChartGestureListener(this);
 
-        MyMarkerView mv = new MyMarkerView(getActivity(), R.layout.tab_1_shopping_cart_statistics);
+        MyMarkerView mv = new MyMarkerView(getActivity(), R.layout.custom_marker_view);
         mv.setChartView(mChart); // For bounds control
         mChart.setMarker(mv);
 
@@ -62,7 +62,7 @@ public class BarChartMonthlyFrag extends SimpleFragment implements OnChartGestur
         xAxis.setEnabled(false);
 
         //programatically add the chart
-        LinearLayout parent = (LinearLayout) v.findViewById(R.id.parentLayout);
+        FrameLayout parent = (FrameLayout) v.findViewById(R.id.parentLayout);
         parent.addView(mChart);
 
         return v;
