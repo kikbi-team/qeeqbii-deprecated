@@ -24,11 +24,13 @@ public class pieChartMonthlyFrag extends SimpleFragment {
     }
 
     private PieChart mChart;
+    private PieChart mChart2;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.tab_1_shopping_cart_statistics, container, false);
 
+        //FIRST GRAPH
         mChart = (PieChart) v.findViewById(R.id.idPieChartTabMonth);
         mChart.getDescription().setEnabled(false);
 
@@ -50,6 +52,31 @@ public class pieChartMonthlyFrag extends SimpleFragment {
         l.setDrawInside(false);
 
         mChart.setData(generatePieData());
+
+        //SECOND GRAPH
+        mChart2 = (PieChart) v.findViewById(R.id.pieChart);
+        mChart2.getDescription().setEnabled(false);
+
+        Typeface tf2 = Typeface.createFromAsset(getActivity().getAssets(), "OpenSans-Light.ttf");
+
+        mChart2.setCenterTextTypeface(tf2);
+        mChart2.setCenterText(generateCenterText());
+        mChart2.setCenterTextSize(10f);
+        mChart2.setCenterTextTypeface(tf2);
+
+        // radius of the center hole in percent of maximum radius
+        mChart2.setHoleRadius(45f);
+        mChart2.setTransparentCircleRadius(50f);
+
+        Legend l2 = mChart2.getLegend();
+        l2.setVerticalAlignment(Legend.LegendVerticalAlignment.TOP);
+        l2.setHorizontalAlignment(Legend.LegendHorizontalAlignment.RIGHT);
+        l2.setOrientation(Legend.LegendOrientation.VERTICAL);
+        l2.setDrawInside(false);
+
+        mChart2.setData(generatePieData());
+
+
 
         return v;
     }
