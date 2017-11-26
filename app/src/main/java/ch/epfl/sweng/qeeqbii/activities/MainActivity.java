@@ -1,7 +1,6 @@
 package ch.epfl.sweng.qeeqbii.activities;
 
 import android.content.Intent;
-
 import android.os.Bundle;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -14,10 +13,9 @@ import com.facebook.CallbackManager;
 import com.facebook.share.widget.ShareDialog;
 
 import ch.epfl.sweng.qeeqbii.R;
-import ch.epfl.sweng.qeeqbii.open_food.ClusterType;
+import ch.epfl.sweng.qeeqbii.cancer.CancerDataBase;
 import ch.epfl.sweng.qeeqbii.open_food.SavedProductsDatabase;
 import ch.epfl.sweng.qeeqbii.shopping_cart.ShoppingCartStatistics;
-import ch.epfl.sweng.qeeqbii.cancer.CancerDataBase;
 
 import static ch.epfl.sweng.qeeqbii.activities.BarcodeScannerActivity.EXTRA_BARCODE;
 
@@ -49,11 +47,18 @@ public class MainActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
+    public void searchProductFromBarcode(View view) {
+        Intent intent = new Intent(this, BarcodeToProductActivity.class);
+        EditText editText = (EditText) findViewById(R.id.Barcode);
+        String barcode = editText.getText().toString();
+        intent.putExtra(EXTRA_BARCODE, barcode);
+        startActivity(intent);
+    }
+
     public boolean onOptionsItemSelected(MenuItem item) {
 
         return mToggle.onOptionsItemSelected(item) || super.onOptionsItemSelected(item);
     }
-
 
     public void cancerDataBaseShow(MenuItem item) {
         Intent intent = new Intent(this, CancerDataShowActivity.class);
@@ -89,14 +94,6 @@ public class MainActivity extends AppCompatActivity {
 
     public void backToMain(MenuItem item) {
         Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
-    }
-
-    public void searchProductFromBarcode(View view) {
-        Intent intent = new Intent(this, BarcodeToProductActivity.class);
-        EditText editText = (EditText) findViewById(R.id.Barcode);
-        String barcode = editText.getText().toString();
-        intent.putExtra(EXTRA_BARCODE, barcode);
         startActivity(intent);
     }
 

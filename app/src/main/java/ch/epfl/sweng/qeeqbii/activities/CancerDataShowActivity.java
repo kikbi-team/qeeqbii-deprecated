@@ -93,6 +93,11 @@ public class CancerDataShowActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void showSavedProducts(MenuItem item) {
+        Intent intent = new Intent(this, SavedProductsDatesActivity.class);
+        startActivity(intent);
+    }
+
     public void showStatistics(MenuItem item) {
         Intent intent = new Intent(this, ShoppingCartStatistics.class);
         startActivity(intent);
