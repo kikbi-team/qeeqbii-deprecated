@@ -19,6 +19,8 @@ import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
 
+import ch.epfl.sweng.qeeqbii.R;
+
 /**
  * Created by guillaume on 13/11/17.
  * Manage the database of products scanned History.

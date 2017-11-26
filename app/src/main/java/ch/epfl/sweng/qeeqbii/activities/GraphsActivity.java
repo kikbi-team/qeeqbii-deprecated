@@ -265,6 +265,11 @@ public class GraphsActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void showSavedProducts(MenuItem item) {
+        Intent intent = new Intent(this, SavedProductsDatesActivity.class);
+        startActivity(intent);
+    }
+
     public void showStatistics(MenuItem item) {
         Intent intent = new Intent(this, ShoppingCartStatistics.class);
         startActivity(intent);
@@ -274,4 +279,5 @@ public class GraphsActivity extends AppCompatActivity {
         Intent intent = new Intent(this, ChatActivity.class);
         startActivity(intent);
     }
+
 }
