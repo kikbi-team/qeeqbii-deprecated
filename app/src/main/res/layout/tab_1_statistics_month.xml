@@ -28,7 +28,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <FrameLayout
-                android:id="@+id/parentLayout"
+                android:id="@+id/barChartMonth"
                 android:layout_width="300dp"
                 android:layout_height="480dp" />
 
@@ -39,7 +39,4 @@
         android:id="@+id/barChart1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" /> -->
-
-
-
 </RelativeLayout>

@@ -34,10 +34,9 @@ public class BarChartMonthlyFrag extends SimpleFragment implements OnChartGestur
     private BarChart mChart;
     private PieChart mChartPie;
 
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View v = inflater.inflate(R.layout.frag_simple_bar, container, false);
+        View v = inflater.inflate(R.layout.tab_1_statistics_month, container, false);
 
         //FIRST GRAPH
         mChartPie = (PieChart) v.findViewById(R.id.idPieChartTabMonth);
@@ -76,7 +75,8 @@ public class BarChartMonthlyFrag extends SimpleFragment implements OnChartGestur
 
         Typeface tfBars = Typeface.createFromAsset(getActivity().getAssets(),"OpenSans-Light.ttf");
 
-        mChart.setData(generateBarData(1, 20000, 12));
+        mChart.setData(generateBarData(1, 20000, 12)); //If you want to change this file you have to
+        //take the files from git hub and to change it locally here to get a better graph.
 
         Legend legend = mChart.getLegend();
         legend.setTypeface(tfBars);
@@ -91,9 +91,8 @@ public class BarChartMonthlyFrag extends SimpleFragment implements OnChartGestur
         xAxis.setEnabled(false);
 
         //programatically add the chart
-        FrameLayout parent = (FrameLayout) v.findViewById(R.id.parentLayout);
+        FrameLayout parent = (FrameLayout) v.findViewById(R.id.barChartMonth);
         parent.addView(mChart);
-
 
         return v;
     }
@@ -139,12 +138,10 @@ public class BarChartMonthlyFrag extends SimpleFragment implements OnChartGestur
         Log.i("Translate / Move", "dX: " + dX + ", dY: " + dY);
     }
 
-
     private SpannableString generateCenterText() {
         SpannableString s = new SpannableString("Past\nMonth");
         s.setSpan(new RelativeSizeSpan(2f), 0, 8, 0);
         s.setSpan(new ForegroundColorSpan(Color.GRAY), 8, s.length(), 0);
         return s;
     }
-
 }
