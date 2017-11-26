@@ -100,7 +100,7 @@ public class ShoppingCartStatistics extends AppCompatActivity {
         public Fragment getItem(int position) {
             switch (position) {
                 case 0:
-                    pieChartMonthlyFrag tab1 = new pieChartMonthlyFrag();
+                    BarChartMonthlyFrag tab1 = new BarChartMonthlyFrag();
                     return tab1;
                 case 1:
                     pieChartTrimesterFrag tab2 = new pieChartTrimesterFrag(); //CHANGE HERE

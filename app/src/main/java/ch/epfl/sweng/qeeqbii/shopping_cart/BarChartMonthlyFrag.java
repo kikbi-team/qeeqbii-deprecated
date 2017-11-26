@@ -9,6 +9,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
+import android.widget.LinearLayout;
 
 import com.github.mikephil.charting.charts.BarChart;
 import com.github.mikephil.charting.components.Legend;
@@ -37,7 +38,7 @@ public class BarChartMonthlyFrag extends SimpleFragment implements OnChartGestur
         mChart.getDescription().setEnabled(false);
         mChart.setOnChartGestureListener(this);
 
-        MyMarkerView mv = new MyMarkerView(getActivity(), R.layout.custom_marker_view);
+        MyMarkerView mv = new MyMarkerView(getActivity(), R.layout.tab_1_shopping_cart_statistics);
         mv.setChartView(mChart); // For bounds control
         mChart.setMarker(mv);
 
@@ -60,8 +61,8 @@ public class BarChartMonthlyFrag extends SimpleFragment implements OnChartGestur
         XAxis xAxis = mChart.getXAxis();
         xAxis.setEnabled(false);
 
-        // programatically add the chart
-        FrameLayout parent = (FrameLayout) v.findViewById(R.id.parentLayout);
+        //programatically add the chart
+        LinearLayout parent = (LinearLayout) v.findViewById(R.id.parentLayout);
         parent.addView(mChart);
 
         return v;

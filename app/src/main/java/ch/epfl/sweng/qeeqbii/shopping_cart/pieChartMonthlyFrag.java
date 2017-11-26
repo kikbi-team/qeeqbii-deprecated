@@ -11,8 +11,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.github.mikephil.charting.charts.BarChart;
 import com.github.mikephil.charting.charts.PieChart;
 import com.github.mikephil.charting.components.Legend;
+import com.github.mikephil.charting.components.XAxis;
+import com.github.mikephil.charting.components.YAxis;
+import com.github.mikephil.charting.listener.OnChartGestureListener;
 
 import ch.epfl.sweng.qeeqbii.R;
 
@@ -25,6 +29,7 @@ public class pieChartMonthlyFrag extends SimpleFragment {
 
     private PieChart mChart;
     private PieChart mChart2;
+    private BarChart mChart3;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -75,8 +80,6 @@ public class pieChartMonthlyFrag extends SimpleFragment {
         l2.setDrawInside(false);
 
         mChart2.setData(generatePieData());
-
-
 
         return v;
     }
