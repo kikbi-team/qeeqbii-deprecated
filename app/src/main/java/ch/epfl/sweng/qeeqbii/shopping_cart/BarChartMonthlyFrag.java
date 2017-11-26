@@ -1,17 +1,21 @@
 package ch.epfl.sweng.qeeqbii.shopping_cart;
 
+import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.text.SpannableString;
+import android.text.style.ForegroundColorSpan;
+import android.text.style.RelativeSizeSpan;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
-import android.widget.LinearLayout;
 
 import com.github.mikephil.charting.charts.BarChart;
+import com.github.mikephil.charting.charts.PieChart;
 import com.github.mikephil.charting.components.Legend;
 import com.github.mikephil.charting.components.XAxis;
 import com.github.mikephil.charting.components.YAxis;
@@ -28,10 +32,35 @@ public class BarChartMonthlyFrag extends SimpleFragment implements OnChartGestur
     }
 
     private BarChart mChart;
+    private PieChart mChartPie;
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.frag_simple_bar, container, false);
+
+        //FIRST GRAPH
+        mChartPie = (PieChart) v.findViewById(R.id.idPieChartTabMonth);
+        mChartPie.getDescription().setEnabled(false);
+
+        Typeface tf = Typeface.createFromAsset(getActivity().getAssets(), "OpenSans-Light.ttf");
+
+        mChartPie.setCenterTextTypeface(tf);
+        mChartPie.setCenterText(generateCenterText());
+        mChartPie.setCenterTextSize(10f);
+        mChartPie.setCenterTextTypeface(tf);
+
+        // radius of the center hole in percent of maximum radius
+        mChartPie.setHoleRadius(45f);
+        mChartPie.setTransparentCircleRadius(50f);
+
+        Legend l = mChartPie.getLegend();
+        l.setVerticalAlignment(Legend.LegendVerticalAlignment.TOP);
+        l.setHorizontalAlignment(Legend.LegendHorizontalAlignment.RIGHT);
+        l.setOrientation(Legend.LegendOrientation.VERTICAL);
+        l.setDrawInside(false);
+
+        mChartPie.setData(generatePieData());
 
         // create a new chart object
         mChart = new BarChart(getActivity());
@@ -45,12 +74,12 @@ public class BarChartMonthlyFrag extends SimpleFragment implements OnChartGestur
         mChart.setDrawGridBackground(false);
         mChart.setDrawBarShadow(false);
 
-        Typeface tf = Typeface.createFromAsset(getActivity().getAssets(),"OpenSans-Light.ttf");
+        Typeface tfBars = Typeface.createFromAsset(getActivity().getAssets(),"OpenSans-Light.ttf");
 
         mChart.setData(generateBarData(1, 20000, 12));
 
-        Legend l = mChart.getLegend();
-        l.setTypeface(tf);
+        Legend legend = mChart.getLegend();
+        legend.setTypeface(tfBars);
 
         YAxis leftAxis = mChart.getAxisLeft();
         leftAxis.setTypeface(tf);
@@ -64,6 +93,7 @@ public class BarChartMonthlyFrag extends SimpleFragment implements OnChartGestur
         //programatically add the chart
         FrameLayout parent = (FrameLayout) v.findViewById(R.id.parentLayout);
         parent.addView(mChart);
+
 
         return v;
     }
@@ -107,6 +137,14 @@ public class BarChartMonthlyFrag extends SimpleFragment implements OnChartGestur
     @Override
     public void onChartTranslate(MotionEvent me, float dX, float dY) {
         Log.i("Translate / Move", "dX: " + dX + ", dY: " + dY);
+    }
+
+
+    private SpannableString generateCenterText() {
+        SpannableString s = new SpannableString("Past\nMonth");
+        s.setSpan(new RelativeSizeSpan(2f), 0, 8, 0);
+        s.setSpan(new ForegroundColorSpan(Color.GRAY), 8, s.length(), 0);
+        return s;
     }
 
 }
