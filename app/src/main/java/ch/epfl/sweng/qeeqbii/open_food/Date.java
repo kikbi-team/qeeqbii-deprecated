@@ -16,7 +16,7 @@ public class Date {
         Calendar calendar = Calendar.getInstance();
         mScanningDay = calendar.get(Calendar.DAY_OF_MONTH);
         mScanningMonth = calendar.get(Calendar.MONTH);
-        mScanningDay = calendar.get(Calendar.YEAR);
+        mScanningYear = calendar.get(Calendar.YEAR);
     }
 
     public int getScanningDay() {return mScanningDay; }

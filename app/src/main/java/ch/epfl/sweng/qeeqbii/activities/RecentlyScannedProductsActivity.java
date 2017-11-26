@@ -8,6 +8,7 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
@@ -63,6 +64,19 @@ public class RecentlyScannedProductsActivity extends AppCompatActivity {
         mAdapter = new ArrayAdapter<>(this.getApplicationContext(), R.layout.list_item_recently_scanned_product,
                 R.id.recently_scanned_product_text_view, listItems);
         mRecentlyScannedProductsListView.setAdapter(mAdapter);
+
+        mRecentlyScannedProductsListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+            @Override
+            public void onItemClick(AdapterView<?> adapter, View view, int position,
+                                    long arg3) {
+                Intent intent = new Intent(RecentlyScannedProductsActivity.this, ShowProductActivity.class);
+                String txt = (String) adapter.getItemAtPosition(position);
+                intent.putExtra("product", RecentlyScannedProducts.getProduct(displayed_products.get(txt)));
+                startActivity(intent);
+            }
+
+        });
 
     }
 
