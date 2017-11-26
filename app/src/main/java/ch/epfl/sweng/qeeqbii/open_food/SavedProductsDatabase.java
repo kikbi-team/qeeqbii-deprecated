@@ -39,8 +39,7 @@ public class SavedProductsDatabase
     public static void load(Context context) throws IOException, JSONException
     {
         if (saved_products_json == null) {
-            //load(context.openFileInput("saved_products_database.json"));
-            load(context.getResources().openRawResource(R.raw.saved_products_database_test));
+            load(context.openFileInput("saved_products_database.json"));
         }
     }
 
