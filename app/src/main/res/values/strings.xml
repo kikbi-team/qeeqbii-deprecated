@@ -145,4 +145,19 @@
     <string name="butchery">Butchery</string>
     <string name="show_saved_products_activity">Show saved products</string>
     <string name="Chat">Chat</string>
+
+    <string name="need_a_new_account">NEED A NEW ACCOUNT ?</string>
+    <string name="display_name">Display Name</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="log_out">Log Out</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="default_status">Hi there, I\'m using Qeeqbii App</string>
+    <string name="default_age">I need to enter my age</string>
+    <string name="default_allergies">I need to enter my allergies</string>
+    <string name="default_degout">I need to enter what I do not want to eat</string>
+
+    <string name="MainActivityChat">MainActivityChat</string>
 </resources>

@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 
 import ch.epfl.sweng.qeeqbii.R;
 import ch.epfl.sweng.qeeqbii.activities.login.ChooserActivity;
+import ch.epfl.sweng.qeeqbii.chat.StartActivity;
 
 public class HomeActivity extends AppCompatActivity {
     @Override
@@ -17,7 +18,7 @@ public class HomeActivity extends AppCompatActivity {
             public void run() {
                 try {
                     sleep(3000);
-                    Intent intent = new Intent(getApplicationContext(), ChooserActivity.class);
+                    Intent intent = new Intent(getApplicationContext(), StartActivity.class);
                     startActivity(intent);
                     finish();
                 } catch (InterruptedException e) {

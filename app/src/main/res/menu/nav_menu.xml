@@ -7,6 +7,10 @@
         android:id="@+id/nav_main"
         android:onClick="backToMain"
         android:title="@string/main_activity" />
+    <item
+        android:id="@+id/nav_chat"
+        android:onClick="showChat"
+        android:title="@string/Chat" />
 
     <item
         android:id="@+id/nav_graphs"
@@ -45,10 +49,5 @@
         android:id="@+id/nav_stats"
         android:onClick="showStatistics"
         android:title="@string/statistics" />
-
-    <item
-         android:id="@+id/nav_chat"
-         android:onClick="showChat"
-         android:title="@string/Chat" />
 
     </menu>

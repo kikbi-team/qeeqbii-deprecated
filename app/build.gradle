@@ -125,6 +125,15 @@ dependencies {
 
     // For google BiMap, needed for clusterType
     compile group: 'com.google.guava', name: 'guava', version: '23.5-android'
+
+    compile 'de.hdodenhof:circleimageview:2.1.0'
+    compile 'com.theartofdev.edmodo:android-image-cropper:2.4.+'
+    compile 'com.google.firebase:firebase-storage:11.0.4'
+    compile 'id.zelory:compressor:2.0.0'
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    compile 'com.squareup.okhttp:okhttp:2.5.0'
+    compile 'com.google.firebase:firebase-messaging:11.0.4'
+
 }
 
 apply plugin: 'com.google.gms.google-services'

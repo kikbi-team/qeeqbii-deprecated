@@ -18,6 +18,7 @@ import android.widget.Toast;
 import com.google.zxing.Result;
 
 import ch.epfl.sweng.qeeqbii.R;
+import ch.epfl.sweng.qeeqbii.chat.MainActivityChat;
 import ch.epfl.sweng.qeeqbii.shopping_cart.ShoppingCartStatistics;
 import me.dm7.barcodescanner.zxing.ZXingScannerView;
 
@@ -254,7 +255,7 @@ public class BarcodeScannerActivity extends AppCompatActivity implements ZXingSc
     }
 
     public void showChat(MenuItem item) {
-        Intent intent = new Intent(this, ChatActivity.class);
+        Intent intent = new Intent(this, MainActivityChat.class);
         startActivity(intent);
     }
 }
