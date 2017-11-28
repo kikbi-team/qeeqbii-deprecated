@@ -41,6 +41,7 @@
         android:layout_alignTop="@+id/user_single_name"
         android:layout_marginLeft="10dp"
         android:layout_toEndOf="@+id/user_single_name"
+        android:contentDescription="@string/MainActivityChat"
         android:visibility="invisible"
         app:srcCompat="@drawable/online_icon" />
 

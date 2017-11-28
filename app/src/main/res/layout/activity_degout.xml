@@ -25,7 +25,7 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Things you don't want to eat" />
+            android:hint="@string/donotwant" />
     </android.support.design.widget.TextInputLayout>
 
     <Button
@@ -36,7 +36,7 @@
         android:layout_below="@+id/degout_input"
         android:layout_marginTop="20dp"
         android:backgroundTint="@color/colorAccent"
-        android:text="SAVE CHANGES"
+        android:text="@string/savechanges"
         android:textColor="@android:color/white" />
 
 </RelativeLayout>

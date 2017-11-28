@@ -160,4 +160,16 @@
     <string name="default_degout">I need to enter what I do not want to eat</string>
 
     <string name="MainActivityChat">MainActivityChat</string>
+    <string name="ProfileActivity">ProfileActivity</string>
+    <string name="ActivityChat">ActivityChat</string>
+    <string name="EnterMessage">Enter Message ...</string>
+    <string name="YourAge">Your Age</string>
+    <string name="savechanges">SAVE CHANGES</string>
+    <string name="YourAllergies">Your Allergies</string>
+    <string name="donotwant">Things you don\'t want to eat</string>
+    <string name="LOGIN">LOGIN</string>
+    <string name="youraccount">Login to your Account</string>
+    <string name="YourEmail">Your Email</string>
+    <string name="PASSWORD">PASSWORD</string>
+
 </resources>

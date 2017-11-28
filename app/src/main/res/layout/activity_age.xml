@@ -25,7 +25,7 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Your Age" />
+            android:hint="@string/YourAge" />
     </android.support.design.widget.TextInputLayout>
 
     <Button
@@ -34,7 +34,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="26dp"
         android:backgroundTint="@color/colorAccent"
-        android:text="SAVE CHANGES"
+        android:text="@string/savechanges"
         android:textColor="@android:color/white"
         android:layout_below="@+id/age_input"
         android:layout_alignEnd="@+id/age_input" />

@@ -36,7 +36,7 @@
         android:layout_below="@+id/allergies_input"
         android:layout_marginTop="20dp"
         android:backgroundTint="@color/colorAccent"
-        android:text="SAVE CHANGES"
+        android:text="@string/savechanges"
         android:textColor="@android:color/white" />
 
 </RelativeLayout>
