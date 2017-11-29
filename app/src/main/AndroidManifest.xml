@@ -112,7 +112,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".chat.ChatActivity"
-            android:parentActivityName=".chat.MainActivityChat"></activity>
+            android:parentActivityName=".chat.MainActivityChat"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
 
 
 
