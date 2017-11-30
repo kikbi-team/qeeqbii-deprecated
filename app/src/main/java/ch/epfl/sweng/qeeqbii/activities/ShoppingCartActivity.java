@@ -24,7 +24,7 @@ public class ShoppingCartActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_shopping_cart);
-        RecyclerView recyclerView = (RecyclerView)findViewById(R.id.recycler);
+        RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recycler);
 
         //create and set layout manager for each RecyclerView
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
@@ -55,7 +55,7 @@ public class ShoppingCartActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void deleteSingleItem (View view) {
+    public void deleteSingleItem(View view) {
         ShoppingCart.deleteSingleItemShoppingCartList();
         Intent intent = new Intent(this, ShoppingCartActivity.class);
         startActivity(intent);
