@@ -36,7 +36,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 34,,8710447907931,/plats-cuisines/pizza-menus-snacks,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 35,Soupe de Chalet,7640134992128,/garnitures-ingredients/soupes-sauces-bouillon/soupes,1440.0,-1.0,12.0,0.0,65.0,3.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 36,,7640134992159,/garnitures-ingredients/soupes-sauces-bouillon/soupes,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
-37,Moments de détente - thé,4104420039728,/boissons-chaudes-froides,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
+37,Moments de détente- thé,4104420039728,/boissons-chaudes-froides,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 38,,7613269435037,/boissons-chaudes-froides,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 39,,7613269435044,/boissons-chaudes-froides,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 40,,4104420144934,/boissons-chaudes-froides,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
@@ -141,7 +141,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 139,,7616600824200,/plats-cuisines/pizza-menus-snacks/sauces-a-salade,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 140,,7613312101476,/garnitures-ingredients/epices-herbes,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 141,,7613312101483,/garnitures-ingredients/epices-herbes,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
-142,M Classic Chou rouge, cuit,7613269552550,/plats-cuisines/pizza-menus-snacks/compote-de-raves,169.0,1.3,0.8,7.0,8.0,0.5,0.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
+142,M Classic Chou rouge- cuit,7613269552550,/plats-cuisines/pizza-menus-snacks/compote-de-raves,169.0,1.3,0.8,7.0,8.0,0.5,0.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 143,,7613269552567,/plats-cuisines/pizza-menus-snacks/compote-de-raves,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 144,Migros BIO Sirop fruits rouges,7613312025437,/boissons-chaudes-froides/sirop-soda,204.0,0.0,0.0,12.0,12.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 145,,7613312095300,/boissons-chaudes-froides/sirop-soda,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
@@ -282,7 +282,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 280,Ice Tea Green Tea,7613269264811,/boissons-chaudes-froides/the-glace/the-glace-liquide,119.0,0.0,0.0,7.0,7.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 281,,7613269264828,/boissons-chaudes-froides/the-glace/the-glace-liquide,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 282,Sarasay Orange mangue,7616800836393,/boissons-chaudes-froides/jus-de-fruits-de-legumes,223.0,0.0,0.5,13.0,13.0,0.0,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
-283,Smams Maxi Mix 6 arômes Mélange de bonbons à mâcher, avec colorants naturels,7613269333234,/chocolat/bonbons-chewing-gum,1646.0,0.0,3.0,84.0,84.0,4.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
+283,Smams Maxi Mix 6 arômes Mélange de bonbons à mâcher- avec colorants naturels,7613269333234,/chocolat/bonbons-chewing-gum,1646.0,0.0,3.0,84.0,84.0,4.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 284,,7613269333241,/chocolat/bonbons-chewing-gum,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 285,Migros Cafino Classic,7610200081193,/boissons-chaudes-froides/cafe/cafe-soluble,1600.0,0.13,6.0,7.0,85.0,0.0,0.0,6.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 286,,7610121931157,/boissons-chaudes-froides/cafe/cafe-soluble,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
@@ -609,13 +609,13 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 607,,7616700044065,/boulangerie/produits-frais-de-boulangerie-refrigeres,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 608,,7616700158953,/boulangerie/petits-pains,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 609,,7616700158960,/boulangerie/petits-pains,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
-610,Smoothie Framboise, pomme, banane,7613269260844,/plats-cuisines/pizza-menus-snacks/jus-de-fruits,269.0,0.06,1.5,13.0,14.0,0.5,0.0,0.6,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
+610,Smoothie Framboise- pomme- banane,7613269260844,/plats-cuisines/pizza-menus-snacks/jus-de-fruits,269.0,0.06,1.5,13.0,14.0,0.5,0.0,0.6,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 611,,7616800820712,/plats-cuisines/pizza-menus-snacks/jus-de-fruits,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 612,,7616800608426,/plats-cuisines/pizza-menus-snacks/jus-de-fruits,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 613,Swiss-Style fondue moitié-moitié,7610200305428,/produits-laitiers-oeufs/fromages/fromage-fondu,1080.0,1.4,15.0,0.6,3.0,18.0,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 614,,7617068005996,/produits-laitiers-oeufs/fromages/fromage-fondu,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 615,aproz O2 Arôme Citron,7617500193953,/boissons-chaudes-froides/eau-aromatisee,60.0,0.0,0.0,3.5,3.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
-616,Anna's Best Lentilles vertes carottes, cuites,7617027633482,/plats-cuisines/pizza-menus-snacks/legumes,556.0,0.05,11.0,2.0,17.0,0.5,0.0,10.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
+616,Anna's Best Lentilles vertes carottes- cuites,7617027633482,/plats-cuisines/pizza-menus-snacks/legumes,556.0,0.05,11.0,2.0,17.0,0.5,0.0,10.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 617,,7617027633499,/plats-cuisines/pizza-menus-snacks/legumes,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 618,,7610200315434,/poisson-fruits-de-mer/traiteur,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 619,,7617027383691,/poisson-fruits-de-mer/traiteur,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
@@ -685,7 +685,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 683,,7613269315667,/boissons-chaudes-froides/the-glace/the-glace-liquide,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 684,,7613269767824,/boulangerie/boulangerie-patisserie/patisserie-gateaux-entiers,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 685,,7616700044379,/boulangerie/boulangerie-patisserie/patisserie-gateaux-entiers,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
-686,M Classic Préparation pour popcorns, salés,7617027048118,/aperitif/popcorn,1788.0,2.5,8.0,1.0,48.0,21.0,0.0,8.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
+686,M Classic Préparation pour popcorns- salés,7617027048118,/aperitif/popcorn,1788.0,2.5,8.0,1.0,48.0,21.0,0.0,8.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 687,,7617027048125,/aperitif/popcorn,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 688,Yogi tea biologique gingembre orange à la vanille,4012824401754,/boissons-chaudes-froides/the/yogi-tea,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 689,,4012824431751,/boissons-chaudes-froides/the/yogi-tea,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
@@ -718,9 +718,9 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 716,Cafino Voncoré Un doux plaisir à savourer à tout moment,7610200081216,/boissons-chaudes-froides/cafe/cafe-soluble,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 717,,7610121931768,/boissons-chaudes-froides/cafe/cafe-soluble,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 718,,7613312131312,/boissons-chaudes-froides/cafe/cafe-soluble,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
-719,Alnatura Mandel Mus weiss Purée d'amande , blanche,4104420181113,/petit-dejeuner,2734.0,0.01,26.0,4.5,5.0,58.0,4.4,7.6,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
+719,Alnatura Mandel Mus weiss Purée d'amande - blanche,4104420181113,/petit-dejeuner,2734.0,0.01,26.0,4.5,5.0,58.0,4.4,7.6,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 720,,7613269435693,/petit-dejeuner,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
-721,Alnatura Purée d'amande, blanche bio,4104420034624,/petit-dejeuner,2772.0,0.01,22.0,3.7,3.7,61.0,0.0,8.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
+721,Alnatura Purée d'amande- blanche bio,4104420034624,/petit-dejeuner,2772.0,0.01,22.0,3.7,3.7,61.0,0.0,8.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 722,,7613269435709,/petit-dejeuner,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 723,,4104420181120,/petit-dejeuner,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 724,,4104420034631,/petit-dejeuner,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
@@ -782,7 +782,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 780,,9000159094883,/aperitif/popcorn,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 781,M Budget MAGDALENAS Biscuits nature,7617027807074,/chocolat/biscuits-gaufres,2000.0,0.85,5.0,24.0,53.0,27.0,0.0,1.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 782,,7617027807081,/chocolat/biscuits-gaufres,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
-783,FiNiZZA Trattoria PROSCIUTTO Pizza avec jambon cuit, mozzarella et Edam,7613269223474,/produits-surgeles/pizza,1001.0,1.4,11.0,3.5,23.0,11.0,0.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
+783,FiNiZZA Trattoria PROSCIUTTO Pizza avec jambon cuit- mozzarella et Edam,7613269223474,/produits-surgeles/pizza,1001.0,1.4,11.0,3.5,23.0,11.0,0.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 784,,4002084601841,/produits-surgeles/pizza,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 785,,7613269223467,/produits-surgeles/pizza,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 786,,4002084601858,/produits-surgeles/pizza,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
@@ -817,7 +817,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 815,,2186264000005,/viande/lapin,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 816,,7617027761826,/viande/lapin,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 817,,7617027761819,/viande/lapin,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
-818,,4104420179677,/boissons-chaudes-froides/jus-de-fruits-de-legumes,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
+818,4104420179677,4104420179677,/boissons-chaudes-froides/jus-de-fruits-de-legumes,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 819,,7613269432807,/boissons-chaudes-froides/jus-de-fruits-de-legumes,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 820,,4104420070165,/boissons-chaudes-froides/jus-de-fruits-de-legumes,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 821,,7613269432814,/boissons-chaudes-froides/jus-de-fruits-de-legumes,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
@@ -899,7 +899,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 897,,7613269373520,/garnitures-ingredients/pates,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 898,,7613269831105,/boulangerie/pains/pains-longs,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 899,,7613269831112,/boulangerie/pains/pains-longs,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
-900,Super Mix mélange de banane d'Aronia.Graines de Tournesol, Noix de coco et Graines de Grenade,7613312112656,/boulangerie/ingredients-de-boulangerie/noix-fruits-secs,1980.0,0.04,11.0,24.0,36.0,29.0,13.0,13.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
+900,Super Mix mélange de banane d'Aronia.Graines de Tournesol- Noix de coco et Graines de Grenade,7613312112656,/boulangerie/ingredients-de-boulangerie/noix-fruits-secs,1980.0,0.04,11.0,24.0,36.0,29.0,13.0,13.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 901,,7613312112663,/boulangerie/ingredients-de-boulangerie/noix-fruits-secs,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 902,,7613269906643,/produits-laitiers-oeufs/fromages/fondue-raclette,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 903,,7613269906650,/produits-laitiers-oeufs/fromages/fondue-raclette,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
@@ -1212,7 +1212,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 1210,,8396,/boissons-chaudes-froides/the-glace/the-glace-liquide,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 1211,,7616800560229,/boissons-chaudes-froides/the-glace/the-glace-liquide,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 1212,,7617015039906,/boissons-chaudes-froides/the-glace/the-glace-liquide,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
-1213,Maître Pierre Tarte Flambeé avec Créme fraiche, lard et oignons,7610200315243,/produits-surgeles/pizza,1043.0,1.2,6.0,2.5,22.0,15.0,0.0,1.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
+1213,Maître Pierre Tarte Flambeé avec Créme fraiche- lard et oignons,7610200315243,/produits-surgeles/pizza,1043.0,1.2,6.0,2.5,22.0,15.0,0.0,1.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 1214,,7613269181347,/produits-surgeles/pizza,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 1215,,7617015027866,/produits-surgeles/pizza,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 1216,,3515750001780,/produits-surgeles/pizza,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
@@ -1355,14 +1355,14 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 1353,,7616500001817,/chocolat/chocolat/tablettes-de-chocolat,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 1354,MIGROS : Ice Tea,7616800205106,/boissons-chaudes-froides/the-glace/the-glace-liquide,150.0,0.04,0.0,8.0,9.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 1355,,7616800628189,/boissons-chaudes-froides/the-glace/the-glace-liquide,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
-1356,Pelican Coquilles Saint-Jacques, crues,7613269226383,/produits-surgeles/poisson-fruits-de-mer/fruits-de-mer,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
+1356,Pelican Coquilles Saint-Jacques- crues,7613269226383,/produits-surgeles/poisson-fruits-de-mer/fruits-de-mer,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 1357,,7613269268949,/produits-surgeles/poisson-fruits-de-mer/fruits-de-mer,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 1358,,7613269226390,/produits-surgeles/poisson-fruits-de-mer/fruits-de-mer,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 1359,,7613312163245,/produits-surgeles/poisson-fruits-de-mer/fruits-de-mer,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 1360,,7617067021171,/produits-laitiers-oeufs/fromages/fondue-raclette,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 1361,,7613269159858,/produits-laitiers-oeufs/fromages/fondue-raclette,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 1362,,7617068021170,/produits-laitiers-oeufs/fromages/fondue-raclette,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
-1363,MICROC EXTRA RUSTICA Tranche de froment, croquante et savoureuse,7610200302847,/boulangerie/biscottes-pain-croustillant,1644.0,1.8,11.0,7.0,74.0,4.5,0.0,4.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
+1363,MICROC EXTRA RUSTICA Tranche de froment- croquante et savoureuse,7610200302847,/boulangerie/biscottes-pain-croustillant,1644.0,1.8,11.0,7.0,74.0,4.5,0.0,4.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 1364,,7617015012138,/boulangerie/biscottes-pain-croustillant,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 1365,Bon Chef SALSA PER PASTA Quattro Formaggi,7613269299394,/garnitures-ingredients/soupes-sauces-bouillon/sauces,450.0,1.5,2.5,1.0,9.0,7.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 1366,,7610121400660,/garnitures-ingredients/soupes-sauces-bouillon/sauces,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
@@ -1685,7 +1685,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 1683,,7616700062977,/boulangerie/boulangerie-patisserie/patisserie-gateaux-entiers,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 1684,Aha! crème à café,7613269480600,/produits-laitiers-oeufs/creme,674.0,0.1,3.0,4.0,4.0,15.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 1685,,7613269480617,/produits-laitiers-oeufs/creme,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
-1686,Confiture, Quatre fruits,7616800101385,/petit-dejeuner/confitures,1050.0,0.03,0.5,59.0,61.0,0.0,0.0,0.8,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
+1686,Confiture- Quatre fruits,7616800101385,/petit-dejeuner/confitures,1050.0,0.03,0.5,59.0,61.0,0.0,0.0,0.8,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 1687,,2038000101388,/petit-dejeuner/confitures,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 1688,,7616800559650,/petit-dejeuner/confitures,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 1689,MIGROS BIO Café,7610200276612,/boissons-chaudes-froides/cafe/cafe-en-poudre-en-grains,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
@@ -1713,7 +1713,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 1711,,4104420133662,/chocolat/sain-bio,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 1712,Anna's Best Betteraves rouges cubes,7617027656849,/plats-cuisines/pizza-menus-snacks/legumes,190.0,0.08,1.0,5.0,9.0,0.5,0.0,2.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 1713,,7617027656856,/plats-cuisines/pizza-menus-snacks/legumes,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
-1714,Skai peppermint, gomme à mâcher sans sucre,7616500913431,/chocolat/bonbons-chewing-gum,740.0,0.01,0.3,0.1,70.0,0.0,0.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
+1714,Skai peppermint- gomme à mâcher sans sucre,7616500913431,/chocolat/bonbons-chewing-gum,740.0,0.01,0.3,0.1,70.0,0.0,0.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 1715,,7616500384576,/chocolat/bonbons-chewing-gum,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 1716,,7616500093591,/chocolat/bonbons-chewing-gum,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 1717,Terrasuise Tradition Tagliatelle Tricolore,7613312009918,/garnitures-ingredients/pates,1512.0,0.7,16.0,2.0,65.0,3.0,0.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
@@ -1826,7 +1826,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 1824,,7613312104460,/aperitif/noix-grillees,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 1825,,7613312110584,/produits-surgeles/glace-entremets,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 1826,,7613312110591,/produits-surgeles/glace-entremets,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
-1827,Smoothie ananas, coco,7613269260820,/plats-cuisines/pizza-menus-snacks/jus-de-fruits,311.0,0.04,0.7,12.0,12.0,2.5,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
+1827,Smoothie ananas- coco,7613269260820,/plats-cuisines/pizza-menus-snacks/jus-de-fruits,311.0,0.04,0.7,12.0,12.0,2.5,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 1828,,7616800818559,/plats-cuisines/pizza-menus-snacks/jus-de-fruits,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 1829,,7616800608402,/plats-cuisines/pizza-menus-snacks/jus-de-fruits,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 1830,,7617027629270,/plats-cuisines/pizza-menus-snacks/menus,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
@@ -2731,7 +2731,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 2729,,7624200018653,/produits-surgeles/glace-entremets,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 2730,,8001860201011,/garnitures-ingredients/riz,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 2731,,7613269093763,/garnitures-ingredients/riz,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
-2732,Finizza Trattoria Pizza avec mozzarella, Edam et tomates,7613269223498,/produits-surgeles/pizza,1075.0,1.2,11.0,3.5,23.0,13.0,0.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
+2732,Finizza Trattoria Pizza avec mozzarella- Edam et tomates,7613269223498,/produits-surgeles/pizza,1075.0,1.2,11.0,3.5,23.0,13.0,0.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 2733,,4002084601810,/produits-surgeles/pizza,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 2734,,7613269223481,/produits-surgeles/pizza,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 2735,,4002084601827,/produits-surgeles/pizza,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
@@ -2867,7 +2867,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 2865,,4104420112155,/produits-surgeles/legumes-pommes-de-terre,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 2866,ELSA DESSERT TRADITION Crème Vanille,7616600710473,/produits-laitiers-oeufs/dessert,550.0,0.1,2.5,17.0,19.0,5.0,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 2867,,7616600822893,/produits-laitiers-oeufs/dessert,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
-2868,FARMER BIRCHER MUESLI ORIGINAL Flocons d'avoine, d'orge et d'épeautre,7613312121443,/mueesli-cereales/mueesli,1646.0,0.93,12.0,12.0,61.0,9.0,1.0,9.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
+2868,FARMER BIRCHER MUESLI ORIGINAL Flocons d'avoine- d'orge et d'épeautre,7613312121443,/mueesli-cereales/mueesli,1646.0,0.93,12.0,12.0,61.0,9.0,1.0,9.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 2869,,7613312121450,/mueesli-cereales/mueesli,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 2870,,8714100396575,/plats-cuisines/pizza-menus-snacks,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 2871,Knorr Asia Quick Noodles Chicken,7611100470216,/plats-cuisines/pizza-menus-snacks,479.0,0.69,1.6,5.3,15.0,5.6,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
@@ -2883,7 +2883,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 2881,Frey Suprême Blanc Amandes,7616500644427,/chocolat/chocolat/tablettes-de-chocolat,2440.0,0.16,10.0,37.0,38.0,43.0,0.0,4.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 2882,,7616500373662,/chocolat/chocolat/tablettes-de-chocolat,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 2883,Migros Sélection Morilles spéciales ,7613312131770,/garnitures-ingredients/champignons,1253.0,0.02,28.0,4.1,26.0,4.3,0.5,22.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
-2884,ICE TEA Boisson sucrée instantanée au thé noir, à la menthe et à la lime,7613269294993,/boissons-chaudes-froides/the-glace/the-glace-en-poudre,118.0,0.01,0.5,7.0,7.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,30.0,0.0,0.0,0.0,0.0,0.0,endline
+2884,ICE TEA Boisson sucrée instantanée au thé noir- à la menthe et à la lime,7613269294993,/boissons-chaudes-froides/the-glace/the-glace-en-poudre,118.0,0.01,0.5,7.0,7.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,30.0,0.0,0.0,0.0,0.0,0.0,endline
 2885,,7610167652689,/boissons-chaudes-froides/the-glace/the-glace-en-poudre,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 2886,,7610167652641,/boissons-chaudes-froides/the-glace/the-glace-en-poudre,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 2887,,7610167751429,/boissons-chaudes-froides/the-glace/the-glace-en-poudre,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
@@ -3094,7 +3094,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 3092,,7613269284390,/plats-cuisines/pizza-menus-snacks/salades-pretes-a-lemploi,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 3093,M Budget BAGUETTES,7616700187496,/boulangerie/produits-frais-de-boulangerie-non-refrigeres,1060.0,1.6,10.0,3.0,49.0,0.9,0.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 3094,,7616700187502,/boulangerie/produits-frais-de-boulangerie-non-refrigeres,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
-3095,Cassis, pastilles pour la gorge,7610167620305,/chocolat/bonbons-chewing-gum,960.0,0.0,9.0,0.5,72.0,0.5,0.0,7.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
+3095,Cassis- pastilles pour la gorge,7610167620305,/chocolat/bonbons-chewing-gum,960.0,0.0,9.0,0.5,72.0,0.5,0.0,7.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 3096,,7610167620299,/chocolat/bonbons-chewing-gum,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 3097,,7610167751634,/chocolat/bonbons-chewing-gum,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 3098,,7610167752440,/chocolat/bonbons-chewing-gum,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
@@ -3301,7 +3301,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 3299,FREY les Délices Blanc croquant,7616500903654,/chocolat/chocolat/tablettes-de-chocolat,2410.0,0.21,6.0,52.0,53.0,38.0,0.0,0.06,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 3300,,7616500012219,/chocolat/chocolat/tablettes-de-chocolat,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 3301,,7616500083813,/chocolat/chocolat/tablettes-de-chocolat,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
-3302,Migros Bio Cranberries confites, séchées,7613269269410,/boulangerie/ingredients-de-boulangerie/noix-fruits-secs,1450.0,0.1,0.5,71.0,82.0,0.5,0.0,5.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
+3302,Migros Bio Cranberries confites- séchées,7613269269410,/boulangerie/ingredients-de-boulangerie/noix-fruits-secs,1450.0,0.1,0.5,71.0,82.0,0.5,0.0,5.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 3303,,7613312048481,/boulangerie/ingredients-de-boulangerie/noix-fruits-secs,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 3304,,7613269269427,/boulangerie/ingredients-de-boulangerie/noix-fruits-secs,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 3305,Migros Etoiles filantes,7617400031133,/chocolat/jours-de-fetes-evenements/biscuit,2241.0,0.26,7.0,27.0,62.0,28.0,0.0,54.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
@@ -3620,7 +3620,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 3618,,8715700420462,/garnitures-ingredients/soupes-sauces-bouillon/sauces,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 3619,Bischofszell Raviolis farcis à la viande de boeuf,7616800836744,/garnitures-ingredients/viande-en-conserve,340.0,0.9,4.0,2.5,10.0,2.5,0.0,1.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 3620,,7616800628530,/garnitures-ingredients/viande-en-conserve,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
-3621,Pelican Filets de tilapia panés en panure légére, salée et poivrée,7613269291589,/produits-surgeles/poisson-fruits-de-mer/poisson-filets-de-poisson,850.0,0.53,17.0,0.5,11.0,10.0,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
+3621,Pelican Filets de tilapia panés en panure légére- salée et poivrée,7613269291589,/produits-surgeles/poisson-fruits-de-mer/poisson-filets-de-poisson,850.0,0.53,17.0,0.5,11.0,10.0,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 3622,,5700001006630,/produits-surgeles/poisson-fruits-de-mer/poisson-filets-de-poisson,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 3623,,7613269291596,/produits-surgeles/poisson-fruits-de-mer/poisson-filets-de-poisson,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 3624,,5700001006623,/produits-surgeles/poisson-fruits-de-mer/poisson-filets-de-poisson,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
@@ -4199,7 +4199,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 4197,Oh! Yogurt Greek Style Myrtille-Vanille,7613269501664,/produits-laitiers-oeufs/divers/special,364.0,0.08,8.0,12.0,13.0,0.1,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 4198,,7613269501671,/produits-laitiers-oeufs/divers/special,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 4199,Apéritiv Tonic Water,7617500044101,/boissons-chaudes-froides/boissons-daperitif,136.0,0.0,0.0,8.0,8.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
-4200,YOGI TEA BIOLOGISCH Glücks Tee Ayurvedische Kräuterteemischung mit Zimt, Hopfen, Orangenschale,4012824401488,/boissons-chaudes-froides/the/yogi-tea,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
+4200,YOGI TEA BIOLOGISCH Glücks Tee Ayurvedische Kräuterteemischung mit Zimt- Hopfen- Orangenschale,4012824401488,/boissons-chaudes-froides/the/yogi-tea,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 4201,,4012824509092,/boissons-chaudes-froides/the/yogi-tea,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 4202,,4012824529618,/boissons-chaudes-froides/the/yogi-tea,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 4203,,4012824539099,/boissons-chaudes-froides/the/yogi-tea,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
@@ -4312,7 +4312,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 4310,,7611174699506,/boissons-chaudes-froides/boissons-energetiques,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 4311,,7617500194738,/boissons-chaudes-froides/eau-aromatisee,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 4312,,7617500222950,/boissons-chaudes-froides/eau-aromatisee,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
-4313,M Budget BONBONS DURS à l'arôme de menthe, sans sucres,7613312042366,/chocolat/bonbons-chewing-gum,1677.0,0.0,0.5,0.5,97.0,0.5,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
+4313,M Budget BONBONS DURS à l'arôme de menthe- sans sucres,7613312042366,/chocolat/bonbons-chewing-gum,1677.0,0.0,0.5,0.5,97.0,0.5,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 4314,,7613312042373,/chocolat/bonbons-chewing-gum,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 4315,Migros M-Budget Fraises Confiture ,7616800833118,/petit-dejeuner/confitures,1046.0,0.03,0.5,60.0,61.0,0.5,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 4316,,7613269178866,/petit-dejeuner/confitures,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
@@ -4399,7 +4399,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 4397,,7613312017814,/garnitures-ingredients/epices-herbes,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 4398,,7617014133445,/garnitures-ingredients/epices-herbes,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 4399,,7613312017821,/garnitures-ingredients/epices-herbes,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
-4400,Alnatura Galettes d'épeautre bio, natures,4104420178816,/boulangerie/biscottes-pain-croustillant,1573.0,0.03,12.0,2.5,70.0,2.8,0.0,9.4,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
+4400,Alnatura Galettes d'épeautre bio- natures,4104420178816,/boulangerie/biscottes-pain-croustillant,1573.0,0.03,12.0,2.5,70.0,2.8,0.0,9.4,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 4401,,7613269434313,/boulangerie/biscottes-pain-croustillant,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 4402,,4104420056947,/boulangerie/biscottes-pain-croustillant,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 4403,,7613269434320,/boulangerie/biscottes-pain-croustillant,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
@@ -4768,7 +4768,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 4766,,7616800818313,/produits-surgeles/legumes-pommes-de-terre,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 4767,,7613269180319,/produits-surgeles/legumes-pommes-de-terre,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 4768,,7616800593111,/produits-surgeles/legumes-pommes-de-terre,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
-4769,Anna's Best Siciliana Suge Sauce tomate au fromage, aux noix de pecan et a la crème,7613269700265,/plats-cuisines/pizza-menus-snacks/sauces,649.0,1.4,4.5,5.0,9.0,11.0,0.0,1.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
+4769,Anna's Best Siciliana Suge Sauce tomate au fromage- aux noix de pecan et a la crème,7613269700265,/plats-cuisines/pizza-menus-snacks/sauces,649.0,1.4,4.5,5.0,9.0,11.0,0.0,1.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 4770,,7613269700272,/plats-cuisines/pizza-menus-snacks/sauces,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 4771,CHOP STICK asian food - Sauce aigre-douce,7613269253099,/garnitures-ingredients/du-monde-entier/asie,512.0,2.2,0.6,27.0,29.0,0.5,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 4772,,7613269253105,/garnitures-ingredients/du-monde-entier/asie,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
@@ -4795,7 +4795,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 4793,,7617027392174,/fruits-et-legumes/fruits/raisins,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 4794,Subito Couscous,7613312001486,/plats-cuisines/plats-cuisines,1440.0,2.5,13.0,4.5,65.0,2.0,0.0,5.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 4795,,7613312001493,/plats-cuisines/plats-cuisines,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
-4796,Orange, mangue et raisin,7613269260660,/plats-cuisines/pizza-menus-snacks/jus-de-fruits,244.0,0.05,0.7,12.0,13.0,0.5,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
+4796,Orange- mangue et raisin,7613269260660,/plats-cuisines/pizza-menus-snacks/jus-de-fruits,244.0,0.05,0.7,12.0,13.0,0.5,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 4797,,7616800150352,/plats-cuisines/pizza-menus-snacks/jus-de-fruits,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 4798,,7616800608099,/plats-cuisines/pizza-menus-snacks/jus-de-fruits,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 4799,,7613269533078,/plats-cuisines/convenience,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
@@ -5053,7 +5053,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 5051,,7613269430483,/chocolat/chocolat/pralines,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 5052,,4104420056879,/chocolat/chocolat/pralines,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 5053,,7613269430490,/chocolat/chocolat/pralines,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
-5054,Costa Filets de saumon avec fromage frais au paprika, en pâte feuilletée,4008467055713,/produits-surgeles/poisson-fruits-de-mer/poisson-filets-de-poisson,1120.0,0.9,9.0,1.0,19.0,17.0,0.0,1.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
+5054,Costa Filets de saumon avec fromage frais au paprika- en pâte feuilletée,4008467055713,/produits-surgeles/poisson-fruits-de-mer/poisson-filets-de-poisson,1120.0,0.9,9.0,1.0,19.0,17.0,0.0,1.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 5055,,4008467155710,/produits-surgeles/poisson-fruits-de-mer/poisson-filets-de-poisson,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 5056,,4104420070585,/boissons-chaudes-froides/jus-de-fruits-de-legumes,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 5057,ALNATURA Smoothie,4104420146563,/boissons-chaudes-froides/jus-de-fruits-de-legumes,210.0,0.01,0.5,12.0,12.0,0.5,0.0,0.8,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
@@ -5242,7 +5242,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 5240,,8696000002308,/garnitures-ingredients/du-monde-entier/turquie,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 5241,,7616500660250,/chocolat/chocolat/barres-chocolatees-branches,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 5242,,7616500395251,/chocolat/chocolat/barres-chocolatees-branches,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
-5243,Alnatura Bio Émincé de soja épais, d'origine purement végétale,4104420141940,/garnitures-ingredients/garnitures-bio,1463.0,0.13,52.0,7.0,20.0,3.0,0.0,16.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
+5243,Alnatura Bio Émincé de soja épais- d'origine purement végétale,4104420141940,/garnitures-ingredients/garnitures-bio,1463.0,0.13,52.0,7.0,20.0,3.0,0.0,16.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 5244,,7613312064955,/garnitures-ingredients/garnitures-bio,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 5245,,4104420141957,/garnitures-ingredients/garnitures-bio,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 5246,,7610121400639,/garnitures-ingredients/soupes-sauces-bouillon/sauces,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
@@ -5439,7 +5439,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 5437,,7610200035233,/produits-laitiers-oeufs/lait-boissons-lactees/lait-uht,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 5438,,7613269779896,/produits-laitiers-oeufs/lait-boissons-lactees/lait-uht,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 5439,,7616600804769,/produits-laitiers-oeufs/lait-boissons-lactees/lait-uht,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
-5440,Migros Marbteigboden mit Biscuit, Quark und Sultaninen,7616700233414,/boulangerie/boulangerie-patisserie/patisserie-refrigeree,1030.0,0.33,6.0,25.0,39.0,7.0,0.0,0.7,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
+5440,Migros Marbteigboden mit Biscuit- Quark und Sultaninen,7616700233414,/boulangerie/boulangerie-patisserie/patisserie-refrigeree,1030.0,0.33,6.0,25.0,39.0,7.0,0.0,0.7,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 5441,,7616700233421,/boulangerie/boulangerie-patisserie/patisserie-refrigeree,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 5442,7610418200157,7610418200157,/boissons-chaudes-froides/the/the-bio,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 5443,,7610184011629,/boissons-chaudes-froides/the/the-bio,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
@@ -5535,7 +5535,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 5533,,2185032000001,/viande/volaille,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 5534,,7617027734042,/viande/volaille,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 5535,,7617027734035,/viande/volaille,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
-5536,Smoothie orange sanguine, ananas,7613269467724,/plats-cuisines/pizza-menus-snacks/jus-de-fruits,310.0,0.0,0.6,12.0,17.0,0.5,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
+5536,Smoothie orange sanguine- ananas,7613269467724,/plats-cuisines/pizza-menus-snacks/jus-de-fruits,310.0,0.0,0.6,12.0,17.0,0.5,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 5537,,7613269467731,/plats-cuisines/pizza-menus-snacks/jus-de-fruits,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 5538,,2187731000009,/poisson-fruits-de-mer/poisson-frais,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 5539,,7617100205148,/poisson-fruits-de-mer/poisson-frais,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
@@ -5641,7 +5641,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 5639,,7613269472476,/viande,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 5640,M Budget Gendarmes,7617027948715,/viande/salami-lard/salami-et-saucisses-crues-a-la-pce,2010.0,3.5,26.0,1.0,1.0,42.0,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 5641,,7617027948722,/viande/salami-lard/salami-et-saucisses-crues-a-la-pce,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
-5642,Ringo : gelato snack, gusto vaniglia,8005840005552,/produits-surgeles/glace-entremets,1322.0,0.29,5.4,25.0,48.0,11.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
+5642,Ringo : gelato snack- gusto vaniglia,8005840005552,/produits-surgeles/glace-entremets,1322.0,0.29,5.4,25.0,48.0,11.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 5643,,8009840050840,/produits-surgeles/glace-entremets,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 5644,,8009840050987,/produits-surgeles/glace-entremets,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 5645,,8009840999996,/produits-surgeles/glace-entremets,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
@@ -5671,7 +5671,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 5669,,7617014175056,/boissons-chaudes-froides/cafe/capsules-de-cafe,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 5670,,7617014175063,/boissons-chaudes-froides/cafe/capsules-de-cafe,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 5671,,9414232101076,/produits-surgeles/poisson-fruits-de-mer/fruits-de-mer,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
-5672,Pelican Moules vertes de Nouvelle-Zélande, demi-moules,7613269301776,/produits-surgeles/poisson-fruits-de-mer/fruits-de-mer,416.0,0.79,16.0,0.5,3.0,2.5,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
+5672,Pelican Moules vertes de Nouvelle-Zélande- demi-moules,7613269301776,/produits-surgeles/poisson-fruits-de-mer/fruits-de-mer,416.0,0.79,16.0,0.5,3.0,2.5,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 5673,,49414232102095,/produits-surgeles/poisson-fruits-de-mer/fruits-de-mer,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 5674,,7617027114691,/produits-surgeles/poisson-fruits-de-mer/fruits-de-mer,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 5675,,7613269301783,/produits-surgeles/poisson-fruits-de-mer/fruits-de-mer,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
@@ -5798,7 +5798,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 5796,,4104420132054,/garnitures-ingredients,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 5797,,4104420204515,/garnitures-ingredients,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 5798,,4104420204553,/garnitures-ingredients,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
-5799,M Budget Yaourt sucre avec framboises, de matieres grasses dans la partie lactique,7613269540120,/produits-laitiers-oeufs/yogourt,380.0,0.1,3.0,13.0,13.0,2.9,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
+5799,M Budget Yaourt sucre avec framboises- de matieres grasses dans la partie lactique,7613269540120,/produits-laitiers-oeufs/yogourt,380.0,0.1,3.0,13.0,13.0,2.9,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 5800,,7613269540137,/produits-laitiers-oeufs/yogourt,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 5801,,2137965000009,/viande/viande-sechee-jambon/jambon-cru,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 5802,,7617027524223,/viande/viande-sechee-jambon/jambon-cru,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
@@ -6012,7 +6012,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 6010,,7617027862257,/poisson-fruits-de-mer/traiteur,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 6011,Le Gruyère Rebibes,7613269406754,/produits-laitiers-oeufs/fromages/snacks-apero,1640.0,1.5,27.0,0.1,0.5,32.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 6012,,7613269406761,/produits-laitiers-oeufs/fromages/snacks-apero,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
-6013,MIDOR : Crème Patisserie, Arôme vanille,7617400020212,/boulangerie/ingredients-de-boulangerie/boulangerie-desserts,493.0,0.23,1.5,19.0,24.0,1.5,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
+6013,MIDOR : Crème Patisserie- Arôme vanille,7617400020212,/boulangerie/ingredients-de-boulangerie/boulangerie-desserts,493.0,0.23,1.5,19.0,24.0,1.5,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 6014,,7624200000238,/boulangerie/ingredients-de-boulangerie/boulangerie-desserts,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 6015,,7616700009613,/boulangerie/pains/tresses,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 6016,,7616700048728,/boulangerie/pains/tresses,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
@@ -6084,7 +6084,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 6082,,7617027006859,/garnitures-ingredients/du-monde-entier/asie,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 6083,,7617015026579,/garnitures-ingredients/du-monde-entier/asie,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 6084,,7613312103081,/garnitures-ingredients/du-monde-entier/asie,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
-6085,Migros Bonherba Pastilles aux herbes, sans sucres,7610167617428,/chocolat/bonbons-chewing-gum,824.0,0.03,0.0,0.5,47.0,0.0,0.0,42.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
+6085,Migros Bonherba Pastilles aux herbes- sans sucres,7610167617428,/chocolat/bonbons-chewing-gum,824.0,0.03,0.0,0.5,47.0,0.0,0.0,42.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 6086,,7613269293996,/chocolat/bonbons-chewing-gum,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 6087,,7610167753850,/chocolat/bonbons-chewing-gum,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 6088,,7613269294009,/chocolat/bonbons-chewing-gum,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
@@ -6113,7 +6113,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 6111,,7613269273943,/petit-dejeuner,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 6112,,7610632954232,/fruits-et-legumes/fruits/fruits-exotiques,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 6113,,7617027390606,/fruits-et-legumes/fruits/fruits-exotiques,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
-6114,Panfino Spinaci Mozzarella tomates séchées, ricotta demi-crème acidulée,7613312066737,/produits-surgeles/pizza,944.0,1.5,10.0,2.5,25.0,9.0,0.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
+6114,Panfino Spinaci Mozzarella tomates séchées- ricotta demi-crème acidulée,7613312066737,/produits-surgeles/pizza,944.0,1.5,10.0,2.5,25.0,9.0,0.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 6115,,7613312066744,/produits-surgeles/pizza,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 6116,SAUCE TRADITION Sauce Balsamique,7613269580591,/plats-cuisines/pizza-menus-snacks/sauces-a-salade,1160.0,1.2,0.5,10.0,10.0,40.0,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 6117,,7613269581307,/plats-cuisines/pizza-menus-snacks/sauces-a-salade,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
@@ -6153,7 +6153,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 6151,,7613269432500,/chocolat/sain-bio,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 6152,,4104420053793,/chocolat/sain-bio,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 6153,,7613269432517,/chocolat/sain-bio,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
-6154,mini Minis, snack à la viande,7610502118429,/chocolat/divers/special,1910.0,4.0,26.0,1.0,1.5,39.0,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
+6154,mini Minis- snack à la viande,7610502118429,/chocolat/divers/special,1910.0,4.0,26.0,1.0,1.5,39.0,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 6155,,7610502918425,/chocolat/divers/special,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 6156,Alnatura Sélection : Cerise Chili,4104420055469,/chocolat/chocolat/tablettes-de-chocolat,2383.0,0.02,7.0,28.2,33.6,43.4,0.0,10.9,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 6157,,7613269429760,/chocolat/chocolat/tablettes-de-chocolat,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
@@ -6309,7 +6309,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 6307,,7617027747653,/garnitures-ingredients/fruits-en-conserve,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 6308,Migros Huile de noix,7613312076323,/garnitures-ingredients/ingredients-de-cuisson,3404.0,0.0,0.0,0.0,0.0,92.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 6309,,7613312076330,/garnitures-ingredients/ingredients-de-cuisson,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
-6310,Nature Addicts, sticks framboise,3609200002837,/chocolat/divers/special,1274.0,0.0,1.4,69.3,69.3,0.5,0.0,6.7,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
+6310,Nature Addicts- sticks framboise,3609200002837,/chocolat/divers/special,1274.0,0.0,1.4,69.3,69.3,0.5,0.0,6.7,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 6311,,3609209000728,/chocolat/divers/special,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 6312,,3609209000735,/chocolat/divers/special,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 6313,,7613269868828,/produits-laitiers-oeufs/fromages/fromage-frais-fromage-a-tartiner-et-cottage-cheese,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
@@ -6431,7 +6431,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 6429,,4000611000976,/boulangerie/biscottes-pain-croustillant,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 6430,,7613312028476,/garnitures-ingredients/epices-herbes,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 6431,,7613312028483,/garnitures-ingredients/epices-herbes,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
-6432,M Budget LARDONS, fumés,7617027948777,/viande/produits-de-charcuterie/produits-carnes-refrigeres,1320.0,2.8,16.0,1.0,1.0,28.0,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
+6432,M Budget LARDONS- fumés,7617027948777,/viande/produits-de-charcuterie/produits-carnes-refrigeres,1320.0,2.8,16.0,1.0,1.0,28.0,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 6433,,7617027948784,/viande/produits-de-charcuterie/produits-carnes-refrigeres,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 6434,,7610200312822,/viande/produits-de-charcuterie/produits-de-charcuterie-saisonniers-non-refrigeres,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 6435,,7617027143844,/viande/produits-de-charcuterie/produits-de-charcuterie-saisonniers-non-refrigeres,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
@@ -6509,7 +6509,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 6507,,7613269184768,/garnitures-ingredients/pates,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 6508,M Budget TOAST clair,7616700103717,/boulangerie/pains-de-mie,1087.0,1.6,10.0,3.0,46.0,3.0,0.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 6509,,7616700103724,/boulangerie/pains-de-mie,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
-6510,Orange, fruit de la passion,7613269223351,/plats-cuisines/pizza-menus-snacks/jus-de-fruits,164.0,0.03,0.5,8.0,9.0,0.5,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
+6510,Orange- fruit de la passion,7613269223351,/plats-cuisines/pizza-menus-snacks/jus-de-fruits,164.0,0.03,0.5,8.0,9.0,0.5,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 6511,,7613269223368,/plats-cuisines/pizza-menus-snacks/jus-de-fruits,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 6512,Köttbullar - Boulettes de viande avec purée,7613269026358,/plats-cuisines/pizza-menus-snacks/menus,539.0,1.0,6.0,1.0,10.0,7.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 6513,,7613269026365,/plats-cuisines/pizza-menus-snacks/menus,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
@@ -6774,7 +6774,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 6772,,7617015020638,/chocolat/jours-de-fetes-evenements/biscuit,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 6773,,8005190404647,/chocolat/jours-de-fetes-evenements/biscuit,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 6774,,8005190401400,/chocolat/jours-de-fetes-evenements/biscuit,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
-6775,SUPER MIX Mélange de banane,pignons et de graines de chanvre,7613312112670,/boulangerie/ingredients-de-boulangerie/noix-fruits-secs,1610.0,0.02,8.0,53.0,61.0,10.0,1.0,8.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
+6775,SUPER MIX Mélange de banane-pignons et de graines de chanvre,7613312112670,/boulangerie/ingredients-de-boulangerie/noix-fruits-secs,1610.0,0.02,8.0,53.0,61.0,10.0,1.0,8.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 6776,,7613312112687,/boulangerie/ingredients-de-boulangerie/noix-fruits-secs,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 6777,M Budget Filets de truite fumés,7617027862707,/poisson-fruits-de-mer/traiteur,591.0,2.5,22.0,0.5,1.0,5.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 6778,,7617027862714,/poisson-fruits-de-mer/traiteur,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
@@ -6823,7 +6823,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 6821,,7613269260608,/plats-cuisines/pizza-menus-snacks,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 6822,,7616600710015,/plats-cuisines/pizza-menus-snacks,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 6823,,7616600822404,/plats-cuisines/pizza-menus-snacks,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
-6824,Kellogg's Urlegenden Flakes seigle, airelles, amandes et graines de lin,5053827151191,/mueesli-cereales/cereales,1651.0,0.9,11.0,21.0,67.0,7.0,0.0,8.3,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
+6824,Kellogg's Urlegenden Flakes seigle- airelles- amandes et graines de lin,5053827151191,/mueesli-cereales/cereales,1651.0,0.9,11.0,21.0,67.0,7.0,0.0,8.3,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 6825,,5053827151207,/mueesli-cereales/cereales,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 6826,Mclassic Strawberry gomme à mâcher,7613312098387,/chocolat/bonbons-chewing-gum,720.0,0.01,0.1,0.1,70.0,0.1,0.1,0.7,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 6827,,7613269195641,/chocolat/bonbons-chewing-gum,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
@@ -7085,7 +7085,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 7083,QUARK CRÈME Chocolat Truffes Crème au séré,76245015,/produits-laitiers-oeufs/sere,804.0,0.08,6.0,16.0,17.0,11.0,0.0,0.7,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 7084,,7617027295758,/produits-laitiers-oeufs/sere,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 7085,,7613269851615,/produits-laitiers-oeufs/sere,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
-7086,Migros Bio muesli croquant amaranthe, chia et pommes,7613312045312,/mueesli-cereales/cereales,1894.0,0.5,10.0,21.0,65.0,15.0,3.5,8.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
+7086,Migros Bio muesli croquant amaranthe- chia et pommes,7613312045312,/mueesli-cereales/cereales,1894.0,0.5,10.0,21.0,65.0,15.0,3.5,8.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 7087,,7613312045329,/mueesli-cereales/cereales,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 7088,PERLDOR Hugo HOLUNDERBLÜTEN \u0026 MINZAROMA,7613312060971,/boissons-chaudes-froides/boissons-daperitif,153.0,0.0,0.0,9.0,9.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 7089,,7613312060988,/boissons-chaudes-froides/boissons-daperitif,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
@@ -7244,7 +7244,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 7242,,7613312068519,/garnitures-ingredients/champignons,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 7243,Migros Bio Bolets sèchés,7613269346760,/garnitures-ingredients/champignons,1270.0,0.1,35.0,1.5,23.0,3.0,0.5,21.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 7244,,7613269346777,/garnitures-ingredients/champignons,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
-7245,Bon Chef Bouillon de poule granulé, sans graisse,7613312037386,/garnitures-ingredients/soupes-sauces-bouillon/bouillon,15.0,1.0,0.5,0.5,0.5,0.5,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
+7245,Bon Chef Bouillon de poule granulé- sans graisse,7613312037386,/garnitures-ingredients/soupes-sauces-bouillon/bouillon,15.0,1.0,0.5,0.5,0.5,0.5,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 7246,,7613312037393,/garnitures-ingredients/soupes-sauces-bouillon/bouillon,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 7247,Frey Truffes au lait,7616500639898,/chocolat/chocolat/pralines,1920.0,0.2,7.0,9.0,48.0,33.0,19.0,1.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 7248,,7616500366824,/chocolat/chocolat/pralines,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
@@ -7330,7 +7330,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 7328,,7617015020270,/garnitures-ingredients/legumes-legumes-au-vinaigre,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 7329,Bischofszell Ice Tea citron,7616800204154,/boissons-chaudes-froides/the-glace/the-glace-liquide,104.0,0.1,0.0,8.0,8.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 7330,,7616800566504,/boissons-chaudes-froides/the-glace/the-glace-liquide,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
-7331,Zweifel : Nature, original chips,7610095002006,/aperitif/chips,2300.0,1.0,6.0,0.8,48.0,36.0,0.0,6.0,0.0,0.0,8.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
+7331,Zweifel : Nature- original chips,7610095002006,/aperitif/chips,2300.0,1.0,6.0,0.8,48.0,36.0,0.0,6.0,0.0,0.0,8.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 7332,,7610095026507,/aperitif/chips,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 7333,,7610095026514,/aperitif/chips,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 7334,Al'fez Authentic Natural Tahini Pâte de graines de sésame,5034444112550,/garnitures-ingredients/du-monde-entier/afrique-orient,2872.0,0.43,0.0,0.0,12.0,60.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
@@ -7750,7 +7750,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 7748,,8001010019091,/garnitures-ingredients/ingredients-de-cuisson/vinaigre-vinaigre-balsamique,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 7749,Kellogg's : Toppas,5050083582035,/mueesli-cereales/cereales,1540.0,0.03,10.0,17.0,72.0,2.0,0.0,9.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 7750,,5050083582042,/mueesli-cereales/cereales,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
-7751,Bonherba classique Herbis, sans sucres,7610167617015,/chocolat/bonbons-chewing-gum,990.0,0.0,0.0,0.5,97.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
+7751,Bonherba classique Herbis- sans sucres,7610167617015,/chocolat/bonbons-chewing-gum,990.0,0.0,0.0,0.5,97.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 7752,,7613269324263,/chocolat/bonbons-chewing-gum,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 7753,,7610167754611,/chocolat/bonbons-chewing-gum,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 7754,,7613269324270,/chocolat/bonbons-chewing-gum,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
@@ -7824,7 +7824,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 7822,,7617027733960,/viande/saucisses/saucisses-fumees,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 7823,,7610200015013,/viande/saucisses,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 7824,,7617027151740,/viande/saucisses,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
-7825,M Classic Sucre de raisin au goût d'orange, riche en vitamine C,7617027010184,/chocolat/bonbons-chewing-gum,1498.0,0.0,0.0,87.0,87.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,240.0,0.0,0.0,0.0,0.0,0.0,endline
+7825,M Classic Sucre de raisin au goût d'orange- riche en vitamine C,7617027010184,/chocolat/bonbons-chewing-gum,1498.0,0.0,0.0,87.0,87.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,240.0,0.0,0.0,0.0,0.0,0.0,endline
 7826,,7613312065082,/chocolat/bonbons-chewing-gum,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 7827,,7617027010191,/chocolat/bonbons-chewing-gum,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 7828,StMichel  20 Galettes : Tout au beurre,3023470001015,/chocolat/specialites,1985.0,0.9,7.0,25.0,74.0,16.0,11.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
@@ -8368,7 +8368,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 8366,,2150318000006,/plats-cuisines/convenience,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 8367,,7617100218605,/plats-cuisines/convenience,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 8368,,7617100725073,/plats-cuisines/convenience,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
-8369,aha! Lasagne al Pesto - sans gluten, sans blé, sans céleri,7613312008966,/produits-surgeles/plats-cuisines,997.0,0.97,5.0,3.0,15.0,17.0,0.0,3.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
+8369,aha! Lasagne al Pesto - sans gluten- sans blé- sans céleri,7613312008966,/produits-surgeles/plats-cuisines,997.0,0.97,5.0,3.0,15.0,17.0,0.0,3.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 8370,,7613312008973,/produits-surgeles/plats-cuisines,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 8371,Feta originale,7617027149556,/produits-laitiers-oeufs/fromages/mozzarellafeta,1166.0,3.0,16.0,0.5,0.5,24.0,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 8372,,7616600813778,/produits-laitiers-oeufs/fromages/mozzarellafeta,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
@@ -8644,7 +8644,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 8642,,7610314730987,/produits-surgeles/aperitif-dessert,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 8643,,7611350800139,/produits-surgeles/aperitif-dessert,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 8644,,7613269301622,/produits-surgeles/aperitif-dessert,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
-8645,COSTA Pacific Prawns décortiquées, cuites,4008467055300,/produits-surgeles/poisson-fruits-de-mer/fruits-de-mer,373.0,1.1,19.0,0.5,1.0,0.9,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
+8645,COSTA Pacific Prawns décortiquées- cuites,4008467055300,/produits-surgeles/poisson-fruits-de-mer/fruits-de-mer,373.0,1.1,19.0,0.5,1.0,0.9,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 8646,,4008467155307,/produits-surgeles/poisson-fruits-de-mer/fruits-de-mer,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 8647,,2114712000000,/viande/saucisses/salami-et-saucisses-crues-en-tranches,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 8648,,7617027552608,/viande/saucisses/salami-et-saucisses-crues-en-tranches,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
@@ -8839,7 +8839,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 8837,,2146250000006,/poisson-fruits-de-mer/traiteur,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 8838,,7617100046970,/poisson-fruits-de-mer/traiteur,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 8839,,7617100550859,/poisson-fruits-de-mer/traiteur,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
-8840,farine de blé, beurre, sucre, farine de seigle, noix de macadaria 12%, oeuf entier (d'élevage en plein air), sel de cuisine, poudres à lever: E450, E500. ,7617400038699,/chocolat/biscuits-gaufres,2296.0,0.52,6.0,21.0,58.0,32.0,15.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
+8840,farine de blé- beurre- sucre- farine de seigle- noix de macadaria 12%- oeuf entier (d'élevage en plein air)- sel de cuisine- poudres à lever: E450- E500. ,7617400038699,/chocolat/biscuits-gaufres,2296.0,0.52,6.0,21.0,58.0,32.0,15.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 8841,,7624200018967,/chocolat/biscuits-gaufres,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 8842,CHOC MIDOR SUISSE ,7617400036046,/chocolat/biscuits-gaufres,2328.0,0.22,7.0,51.0,55.0,34.0,22.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 8843,,7624200014709,/chocolat/biscuits-gaufres,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
@@ -9186,7 +9186,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 9184,,7617068004982,/produits-laitiers-oeufs/fromages/fromages-a-pate-dure-mi-dure,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 9185,Terrasuisse Farina fleur,7617027015035,/boulangerie/farine,1497.0,0.0,12.0,0.5,72.0,1.0,0.0,4.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 9186,,7617027015042,/boulangerie/farine,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
-9187,Frey – TOURIST – Chocolat au lait avec raisins secs, noisettes et amandes,7616500012509,/chocolat/chocolat/tablettes-de-chocolat,2230.0,0.17,7.0,50.0,53.0,32.0,0.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
+9187,Frey – TOURIST – Chocolat au lait avec raisins secs- noisettes et amandes,7616500012509,/chocolat/chocolat/tablettes-de-chocolat,2230.0,0.17,7.0,50.0,53.0,32.0,0.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 9188,,7616500000650,/chocolat/chocolat/tablettes-de-chocolat,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 9189,,23500297,/chocolat/chocolat/tablettes-de-chocolat,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 9190,,7613312010891,/garnitures-ingredients/soupes-sauces-bouillon/soupes,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
@@ -9198,7 +9198,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 9196,,7613269430810,/chocolat,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 9197,Migros Vollmilch laktosfrei,7613269419815,/produits-laitiers-oeufs/lait-boissons-lactees/lait-uht,280.0,0.1,3.5,5.0,5.0,3.6,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 9198,,7613269419822,/produits-laitiers-oeufs/lait-boissons-lactees/lait-uht,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
-9199,Prunes bio, dénoyautées et séchées,4104420143906,/boulangerie/ingredients-de-boulangerie/noix-fruits-secs,1158.0,0.02,2.4,36.0,60.0,0.8,0.0,8.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
+9199,Prunes bio- dénoyautées et séchées,4104420143906,/boulangerie/ingredients-de-boulangerie/noix-fruits-secs,1158.0,0.02,2.4,36.0,60.0,0.8,0.0,8.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 9200,,7613312048016,/boulangerie/ingredients-de-boulangerie/noix-fruits-secs,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 9201,,4104420143913,/boulangerie/ingredients-de-boulangerie/noix-fruits-secs,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 9202,,4104420024731,/boulangerie/ingredients-de-boulangerie/noix-fruits-secs,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
@@ -9445,7 +9445,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 9443,,2180189000003,/produits-laitiers-oeufs/fromages/fromages-a-pate-dure-mi-dure,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 9444,,7617027523387,/produits-laitiers-oeufs/fromages/fromages-a-pate-dure-mi-dure,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 9445,,7617027082464,/produits-laitiers-oeufs/fromages/fromages-a-pate-dure-mi-dure,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
-9446,Migros M-Budget Riz Créole Parboiled, à grain long,7617027008846,/garnitures-ingredients/riz,1504.0,0.03,7.0,0.5,79.0,0.7,0.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
+9446,Migros M-Budget Riz Créole Parboiled- à grain long,7617027008846,/garnitures-ingredients/riz,1504.0,0.03,7.0,0.5,79.0,0.7,0.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 9447,,7613269325970,/garnitures-ingredients/riz,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 9448,,7617027008853,/garnitures-ingredients/riz,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 9449,,7613312124062,/chocolat/sain-bio,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
@@ -9739,7 +9739,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 9737,Pancho Villa Authentic Mexican Tortilla Chips Chili ,8410076481733,/garnitures-ingredients/du-monde-entier/etats-unis,2064.0,0.8,6.0,1.5,57.0,26.0,3.0,4.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 9738,,8410076582003,/garnitures-ingredients/du-monde-entier/etats-unis,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 9739,,8410076480910,/garnitures-ingredients/du-monde-entier/etats-unis,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
-9740,M Classic Pizza avec viande de bœuf, fromage et cornichons,7613312071816,/produits-surgeles/pizza,982.0,1.7,14.0,6.0,30.0,6.0,0.0,1.2,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
+9740,M Classic Pizza avec viande de bœuf- fromage et cornichons,7613312071816,/produits-surgeles/pizza,982.0,1.7,14.0,6.0,30.0,6.0,0.0,1.2,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 9741,,7613312071823,/produits-surgeles/pizza,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 9742,Ireland Saumon fumé,7617027744614,/poisson-fruits-de-mer/traiteur,704.0,2.7,23.0,0.5,1.0,8.0,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 9743,,7617027744621,/poisson-fruits-de-mer/traiteur,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
@@ -9915,7 +9915,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 9913,,7617027159135,/produits-laitiers-oeufs/oeufs/elevage-au-sol-suisse,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 9914,,7617027159142,/produits-laitiers-oeufs/oeufs/elevage-au-sol-suisse,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 9915,,7617014002970,/boulangerie/ingredients-de-boulangerie/noix-fruits-secs,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
-9916,Sun Queen : Canneberges : sucrées, séchées,7613312022757,/boulangerie/ingredients-de-boulangerie/noix-fruits-secs,1500.0,0.1,0.5,65.0,82.0,1.5,0.0,6.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
+9916,Sun Queen : Canneberges : sucrées- séchées,7613312022757,/boulangerie/ingredients-de-boulangerie/noix-fruits-secs,1500.0,0.1,0.5,65.0,82.0,1.5,0.0,6.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 9917,,7617014145189,/boulangerie/ingredients-de-boulangerie/noix-fruits-secs,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 9918,,7617014002987,/boulangerie/ingredients-de-boulangerie/noix-fruits-secs,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 9919,,7613312022764,/boulangerie/ingredients-de-boulangerie/noix-fruits-secs,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
@@ -10304,7 +10304,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 10302,,7613269478676,/boulangerie/pains-longue-conservation,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 10303,,7613269931058,/boissons-chaudes-froides/boissons-energetiques,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 10304,,7611174699483,/boissons-chaudes-froides/boissons-energetiques,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
-10305,Corn, Rice Quinoa,8000139924286,/garnitures-ingredients/pates,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
+10305,Corn- Rice Quinoa,8000139924286,/garnitures-ingredients/pates,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 10306,,8000139924293,/garnitures-ingredients/pates,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 10307,Créa d'Or FLEUR D'OR,7617400038804,/chocolat/biscuits-gaufres,2147.0,0.75,9.0,34.0,60.0,26.0,0.0,1.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 10308,,7624200019384,/chocolat/biscuits-gaufres,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
@@ -10454,7 +10454,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 10452,,7613269269984,/produits-laitiers-oeufs/yogourt,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 10453,Mini Cake au Citron,7616700131819,/boulangerie/boulangerie-patisserie/patisserie-gateaux-petites,1690.0,0.8,4.5,34.0,51.0,20.0,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 10454,,7616700131826,/boulangerie/boulangerie-patisserie/patisserie-gateaux-petites,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
-10455,ALNATURA, Huile d'olive vierge extra,4104420031050,/garnitures-ingredients,3367.0,0.0,0.0,0.0,0.0,91.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
+10455,ALNATURA- Huile d'olive vierge extra,4104420031050,/garnitures-ingredients,3367.0,0.0,0.0,0.0,0.0,91.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 10456,,7613269434023,/garnitures-ingredients,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 10457,,4104420031975,/garnitures-ingredients,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 10458,,7613269434030,/garnitures-ingredients,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
@@ -10640,7 +10640,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 10638,Petits pois potagers et carottes,7610200217929,/produits-surgeles/legumes-pommes-de-terre,240.0,0.05,3.0,2.5,9.0,0.0,0.0,4.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 10639,,7616800351056,/produits-surgeles/legumes-pommes-de-terre,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 10640,,7617015028115,/produits-surgeles/legumes-pommes-de-terre,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
-10641,M Classic Huile de tournesol, raffinée,7610200258984,/garnitures-ingredients/ingredients-de-cuisson/huiles,3404.0,0.0,0.0,0.0,0.0,92.0,0.0,0.0,0.0,0.0,36.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
+10641,M Classic Huile de tournesol- raffinée,7610200258984,/garnitures-ingredients/ingredients-de-cuisson/huiles,3404.0,0.0,0.0,0.0,0.0,92.0,0.0,0.0,0.0,0.0,36.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 10642,,7611690031026,/garnitures-ingredients/ingredients-de-cuisson/huiles,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 10643,,7617015025497,/garnitures-ingredients/ingredients-de-cuisson/huiles,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 10644,Migros Yogourt Framboise,7613269360773,/produits-laitiers-oeufs/yogourt,440.0,0.1,3.5,16.0,16.0,2.0,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
@@ -10961,7 +10961,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 10959,,8410066122790,/garnitures-ingredients/soupes-sauces-bouillon/sauces,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 10960,Anna's Best Salade de poulet,7613269284369,/plats-cuisines/pizza-menus-snacks/salades-pretes-a-lemploi,510.0,0.8,11.0,4.5,5.0,6.0,0.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 10961,,7613269284376,/plats-cuisines/pizza-menus-snacks/salades-pretes-a-lemploi,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
-10962,Prince Chester Café Royal Blonde City Roast, café torréfié en grains,7617014164340,/boissons-chaudes-froides/cafe/cafe-en-poudre-en-grains,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
+10962,Prince Chester Café Royal Blonde City Roast- café torréfié en grains,7617014164340,/boissons-chaudes-froides/cafe/cafe-en-poudre-en-grains,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 10963,,7617014164333,/boissons-chaudes-froides/cafe/cafe-en-poudre-en-grains,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 10964,,7617014179382,/boissons-chaudes-froides/cafe/cafe-en-poudre-en-grains,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 10965,Crème Sandwich ,7613269320180,/garnitures-ingredients/viande-en-conserve,1080.0,1.3,6.0,0.8,9.0,22.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
@@ -10971,7 +10971,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 10969,,7617027067867,/garnitures-ingredients/riz,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 10970,,7613269321194,/garnitures-ingredients/riz,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 10971,,7613269290902,/garnitures-ingredients/riz,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
-10972,Zweifel : Paprika, original chips,7610095012005,/aperitif/chips,2270.0,1.2,6.0,9.0,51.0,34.0,0.0,5.0,0.0,0.0,8.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
+10972,Zweifel : Paprika- original chips,7610095012005,/aperitif/chips,2270.0,1.2,6.0,9.0,51.0,34.0,0.0,5.0,0.0,0.0,8.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 10973,,7610095026804,/aperitif/chips,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 10974,,7610095026811,/aperitif/chips,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 10975,,7640168010010,/garnitures-ingredients/epices-herbes,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
@@ -11094,7 +11094,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 11092,,7617015046546,/garnitures-ingredients/legumes-legumes-au-vinaigre,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 11093,Klostergarten Erkältungstee GREGORIUS,7610200339706,/boissons-chaudes-froides/the/tisane-infusion,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 11094,,7617015023868,/boissons-chaudes-froides/the/tisane-infusion,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
-11095,Costa Filets de saumon au miel et moutarde, en pâte feuilletée,4008467055706,/produits-surgeles/poisson-fruits-de-mer/poisson-filets-de-poisson,1130.0,1.0,9.0,2.0,20.0,17.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
+11095,Costa Filets de saumon au miel et moutarde- en pâte feuilletée,4008467055706,/produits-surgeles/poisson-fruits-de-mer/poisson-filets-de-poisson,1130.0,1.0,9.0,2.0,20.0,17.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 11096,,4008467155703,/produits-surgeles/poisson-fruits-de-mer/poisson-filets-de-poisson,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 11097,Miel de nectar crémeux,7610200053510,/petit-dejeuner/miel,1421.0,0.02,0.5,82.0,82.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 11098,,7617015039081,/petit-dejeuner/miel,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
@@ -11170,7 +11170,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 11168,,7617500230146,/boissons-chaudes-froides/sirop-soda,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 11169,,7613269355823,/boissons-chaudes-froides/sirop-soda,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 11170,,7617500230573,/boissons-chaudes-froides/sirop-soda,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
-11171,M Budget Lemonade a l'arome de, la caféine contenant de la cafeine,7617500192307,/boissons-chaudes-froides/boissons-sucrees,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
+11171,M Budget Lemonade a l'arome de- la caféine contenant de la cafeine,7617500192307,/boissons-chaudes-froides/boissons-sucrees,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 11172,Migros Marguerites Gebäck Biscuits,7617400030174,/chocolat/biscuits-gaufres,2020.0,0.4,8.0,23.0,70.0,18.0,0.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 11173,,7624200001006,/chocolat/biscuits-gaufres,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 11174,,7617100193414,/produits-surgeles/viande/volaille,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
@@ -11374,7 +11374,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 11372,,4002570692667,/garnitures-ingredients/soupes-sauces-bouillon/ketchup,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 11373,,7610161022389,/garnitures-ingredients/soupes-sauces-bouillon/ketchup,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 11374,,7613269415992,/garnitures-ingredients/soupes-sauces-bouillon/ketchup,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
-11375,Bon Chef ABC - Potage avec pâtes et légumes, déshydraté,7613269297499,/garnitures-ingredients/soupes-sauces-bouillon/soupes,90.0,0.88,0.8,0.5,4.0,0.5,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
+11375,Bon Chef ABC - Potage avec pâtes et légumes- déshydraté,7613269297499,/garnitures-ingredients/soupes-sauces-bouillon/soupes,90.0,0.88,0.8,0.5,4.0,0.5,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 11376,,7610121300991,/garnitures-ingredients/soupes-sauces-bouillon/soupes,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 11377,,7610121931843,/garnitures-ingredients/soupes-sauces-bouillon/soupes,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 11378,,7613269297505,/garnitures-ingredients/soupes-sauces-bouillon/soupes,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
@@ -11859,7 +11859,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 11857,,7613269435235,/chocolat/sain-bio,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 11858,,4104420056275,/chocolat/sain-bio,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 11859,,7613269435242,/chocolat/sain-bio,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
-11860,Smoothie fruit du dragon, graines de chia, ananas,7613269682387,/plats-cuisines/pizza-menus-snacks/jus-de-fruits,0.0,0.04,0.6,0.0,11.0,0.5,0.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
+11860,Smoothie fruit du dragon- graines de chia- ananas,7613269682387,/plats-cuisines/pizza-menus-snacks/jus-de-fruits,0.0,0.04,0.6,0.0,11.0,0.5,0.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 11861,,7613269682394,/plats-cuisines/pizza-menus-snacks/jus-de-fruits,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 11862,Original Rösti Pommes de terre prêtes à rótir,7616800460307,/garnitures-ingredients/pommes-de-terre-spaetzli,465.0,0.9,2.0,0.5,17.0,3.5,0.0,1.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 11863,,7616800560816,/garnitures-ingredients/pommes-de-terre-spaetzli,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
@@ -12028,7 +12028,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 12026,,5700001006722,/produits-surgeles/poisson-fruits-de-mer/poisson-filets-de-poisson,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 12027,,7613269291473,/produits-surgeles/poisson-fruits-de-mer/poisson-filets-de-poisson,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 12028,,5700001006715,/produits-surgeles/poisson-fruits-de-mer/poisson-filets-de-poisson,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
-12029,Sun Queen Mélange de baies, séchées,7613312076101,/boulangerie/ingredients-de-boulangerie/noix-fruits-secs,1410.0,0.1,3.0,62.0,75.0,1.0,0.0,6.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
+12029,Sun Queen Mélange de baies- séchées,7613312076101,/boulangerie/ingredients-de-boulangerie/noix-fruits-secs,1410.0,0.1,3.0,62.0,75.0,1.0,0.0,6.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 12030,,7613312076118,/boulangerie/ingredients-de-boulangerie/noix-fruits-secs,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 12031,,2157390000009,/viande/viande-sechee-jambon/jambon-cuit-refrigere,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 12032,,7613269481669,/viande/viande-sechee-jambon/jambon-cuit-refrigere,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
@@ -12502,7 +12502,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 12500,,7617027401388,/fruits-et-legumes/legumes/legumes-frais,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 12501,Fratelli Beretta Jambon de Parme,8007660473023,/viande/viande-sechee-jambon/jambon-cuit-refrigere,1038.0,5.0,28.0,0.5,0.5,15.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 12502,,7617027370844,/viande/viande-sechee-jambon/jambon-cuit-refrigere,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
-12503,Buon Gusto Cannelloni Fiorentina Pâtes farcies d'épinards, ricotta et brocoli,7613312020661,/produits-surgeles/plats-cuisines,550.0,1.0,6.0,2.5,15.0,5.0,0.0,0.8,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
+12503,Buon Gusto Cannelloni Fiorentina Pâtes farcies d'épinards- ricotta et brocoli,7613312020661,/produits-surgeles/plats-cuisines,550.0,1.0,6.0,2.5,15.0,5.0,0.0,0.8,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 12504,,7613312020678,/produits-surgeles/plats-cuisines,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 12505,,2122683000004,/viande/viande-sechee-jambon/viande-sechee,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 12506,,7617027148894,/viande/viande-sechee-jambon/viande-sechee,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
@@ -12780,7 +12780,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 12778,,23514133,/chocolat/chocolat/barres-chocolatees-branches,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 12779,,7616500004528,/chocolat/chocolat/barres-chocolatees-branches,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 12780,,7616500086364,/chocolat/chocolat/barres-chocolatees-branches,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
-12781,M Budget DES DE BETTERAVE ROUGE, CUITE,7610200425232,/plats-cuisines/pizza-menus-snacks/legumes,210.0,0.0,1.0,5.0,9.0,0.5,0.0,2.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
+12781,M Budget DES DE BETTERAVE ROUGE- CUITE,7610200425232,/plats-cuisines/pizza-menus-snacks/legumes,210.0,0.0,1.0,5.0,9.0,0.5,0.0,2.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 12782,,7617027624015,/plats-cuisines/pizza-menus-snacks/legumes,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 12783,M Classic Huile de colza suisse,7617027731652,/garnitures-ingredients/ingredients-de-cuisson/huiles,3404.0,0.0,0.0,0.0,0.0,92.0,0.0,0.0,0.0,0.0,29.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 12784,,7610231087591,/garnitures-ingredients/ingredients-de-cuisson/huiles,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
@@ -13102,7 +13102,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 13100,,7613269179634,/produits-surgeles/legumes-pommes-de-terre,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 13101,,7617027955416,/poisson-fruits-de-mer/traiteur,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 13102,,7617027955423,/poisson-fruits-de-mer/traiteur,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
-13103,Frey Napolitains Selection Chocolats assortis, fourrés et non fourrés,7616500656161,/chocolat/chocolat/petits-chocolats,2390.0,0.0,0.0,45.0,47.0,39.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
+13103,Frey Napolitains Selection Chocolats assortis- fourrés et non fourrés,7616500656161,/chocolat/chocolat/petits-chocolats,2390.0,0.0,0.0,45.0,47.0,39.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 13104,,7616500389489,/chocolat/chocolat/petits-chocolats,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 13105,FERRERO ROCHER the golden experience,8000500032237,/chocolat/chocolat/pralines,2506.0,0.15,8.2,39.9,44.4,42.7,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 13106,,7617027917742,/chocolat/chocolat/pralines,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
@@ -13196,7 +13196,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 13194,,7616500013223,/chocolat/chocolat/tablettes-de-chocolat,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 13195,,23505827,/chocolat/chocolat/tablettes-de-chocolat,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 13196,,7616500000933,/chocolat/chocolat/tablettes-de-chocolat,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
-13197,Extra : Confiture, Abricots,7616800101019,/petit-dejeuner/confitures,1060.0,0.07,0.7,61.0,61.0,0.5,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
+13197,Extra : Confiture- Abricots,7616800101019,/petit-dejeuner/confitures,1060.0,0.07,0.7,61.0,61.0,0.5,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 13198,,2038000101012,/petit-dejeuner/confitures,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 13199,,7616800559513,/petit-dejeuner/confitures,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 13200,Pelican Bâtonnets de cabillaud,7613269291565,/produits-surgeles/poisson-fruits-de-mer/poisson-filets-de-poisson,781.0,0.63,12.0,0.6,14.0,9.0,0.0,0.8,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
@@ -13276,7 +13276,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 13274,Caçarola Haricots Blancs,5601255110138,/garnitures-ingredients/du-monde-entier/portugal,1352.0,0.03,22.8,3.7,48.5,1.5,0.0,11.8,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 13275,,25601255110132,/garnitures-ingredients/du-monde-entier/portugal,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 13276,,5601255510136,/garnitures-ingredients/du-monde-entier/portugal,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
-13277,Andros : Les Compotes Pocket : 6x Pomme/Fraise, 6x Pomme,3608580004882,/plats-cuisines/pizza-menus-snacks/compote,266.0,0.0,0.3,14.0,14.0,0.2,0.0,1.9,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
+13277,Andros : Les Compotes Pocket : 6x Pomme/Fraise- 6x Pomme,3608580004882,/plats-cuisines/pizza-menus-snacks/compote,266.0,0.0,0.3,14.0,14.0,0.2,0.0,1.9,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 13278,,7613269489115,/plats-cuisines/pizza-menus-snacks/compote,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 13279,,3083680020718,/garnitures-ingredients/legumes-legumes-au-vinaigre,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 13280,,3083680037297,/garnitures-ingredients/legumes-legumes-au-vinaigre,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
@@ -13646,7 +13646,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 13644,Yupi Bonbons gélifiés la guimauve,4003084010718,/chocolat/bonbons-chewing-gum,1382.0,0.2,5.0,47.0,76.0,0.5,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 13645,,4003084017380,/chocolat/bonbons-chewing-gum,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 13646,,7617015000647,/chocolat/bonbons-chewing-gum,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
-13647,Yogi Tea BIOLOGISCH Grüner Morgen Ayurvedische Jasminteemischung mit Ingwer, Zitronenschale,4012824401990,/boissons-chaudes-froides/the/yogi-tea,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
+13647,Yogi Tea BIOLOGISCH Grüner Morgen Ayurvedische Jasminteemischung mit Ingwer- Zitronenschale,4012824401990,/boissons-chaudes-froides/the/yogi-tea,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 13648,,4012824509054,/boissons-chaudes-froides/the/yogi-tea,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 13649,,4012824529656,/boissons-chaudes-froides/the/yogi-tea,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 13650,,4012824539051,/boissons-chaudes-froides/the/yogi-tea,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
@@ -13754,7 +13754,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 13752,,7617027753357,/viande/sous-produits,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 13753,,7617027753340,/viande/sous-produits,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 13754,,7610167652139,/boissons-chaudes-froides/the-glace/the-glace-en-poudre,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
-13755,Migros boisson instantanée sans calories au thé noir, au citron  10 sticks,7613269283331,/boissons-chaudes-froides/the-glace/the-glace-en-poudre,7.0,0.01,0.5,0.5,0.5,0.0,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
+13755,Migros boisson instantanée sans calories au thé noir- au citron  10 sticks,7613269283331,/boissons-chaudes-froides/the-glace/the-glace-en-poudre,7.0,0.01,0.5,0.5,0.5,0.0,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 13756,,7610167751917,/boissons-chaudes-froides/the-glace/the-glace-en-poudre,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 13757,,7613269295075,/boissons-chaudes-froides/the-glace/the-glace-en-poudre,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 13758,,7610167754048,/boissons-chaudes-froides/the-glace/the-glace-en-poudre,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
@@ -14116,7 +14116,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 14114,,7613269137979,/plats-cuisines/pizza-menus-snacks/salades-coupees,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 14115,,4000512010838,/chocolat/bonbons-chewing-gum,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 14116,,4000512270218,/chocolat/bonbons-chewing-gum,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
-14117,Extra : Confiture, Mûres,7616800101040,/petit-dejeuner/confitures,1070.0,0.04,0.5,60.0,61.0,0.5,0.0,2.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
+14117,Extra : Confiture- Mûres,7616800101040,/petit-dejeuner/confitures,1070.0,0.04,0.5,60.0,61.0,0.5,0.0,2.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 14118,,2038000101043,/petit-dejeuner/confitures,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 14119,,7616800559537,/petit-dejeuner/confitures,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 14120,,2115365000003,/viande/produits-de-charcuterie,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
@@ -14228,7 +14228,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 14226,,4000522003981,/aperitif/chips,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 14227,,7613312015483,/aperitif/chips,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 14228,,4000522067051,/aperitif/chips,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
-14229,clément : BISCOTTES, au froment,3273670002026,/boulangerie/biscottes-pain-croustillant,1641.0,1.52,10.7,7.2,77.8,2.9,0.0,3.9,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
+14229,clément : BISCOTTES- au froment,3273670002026,/boulangerie/biscottes-pain-croustillant,1641.0,1.52,10.7,7.2,77.8,2.9,0.0,3.9,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 14230,,3273670903699,/boulangerie/biscottes-pain-croustillant,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 14231,,2135894000008,/produits-laitiers-oeufs/fromages/fromages-a-pate-dure-mi-dure,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 14232,,7617027522649,/produits-laitiers-oeufs/fromages/fromages-a-pate-dure-mi-dure,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
@@ -14531,7 +14531,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 14529,,7613269184577,/produits-surgeles/plats-cuisines,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 14530,,7613312139059,/produits-surgeles/viande/volaille,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 14531,,7613312139066,/produits-surgeles/viande/volaille,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
-14532,Thé noir, décaféiné,7610200010971,/boissons-chaudes-froides/the/the-noir,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
+14532,Thé noir- décaféiné,7610200010971,/boissons-chaudes-froides/the/the-noir,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 14533,,7613269374077,/boissons-chaudes-froides/the/the-noir,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 14534,,7617014000426,/boissons-chaudes-froides/the/the-noir,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 14535,Knorr Stocki express oignons printaniers et lard,7611100036931,/plats-cuisines/pizza-menus-snacks,339.0,1.0,1.7,1.0,11.0,3.0,0.0,1.2,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
@@ -14656,7 +14656,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 14654,,4901510290034,/garnitures-ingredients/du-monde-entier/asie,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 14655,,4903056058031,/garnitures-ingredients/du-monde-entier/asie,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 14656,,7617015027026,/garnitures-ingredients/du-monde-entier/asie,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
-14657,Smoothie kiwi, banane,7613269223313,/plats-cuisines/pizza-menus-snacks/jus-de-fruits,296.0,0.0,0.6,14.0,16.0,0.5,0.0,0.6,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
+14657,Smoothie kiwi- banane,7613269223313,/plats-cuisines/pizza-menus-snacks/jus-de-fruits,296.0,0.0,0.6,14.0,16.0,0.5,0.0,0.6,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 14658,,7613269223320,/plats-cuisines/pizza-menus-snacks/jus-de-fruits,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 14659,Frey Classic Branches,7616500155879,/chocolat/chocolat/barres-chocolatees-branches,2270.0,0.15,7.0,53.0,55.0,32.0,0.0,3.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 14660,,7616500004542,/chocolat/chocolat/barres-chocolatees-branches,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
@@ -15047,7 +15047,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 15045,,2159110000009,/produits-laitiers-oeufs/fromages/fondue-raclette,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 15046,,7613269630814,/produits-laitiers-oeufs/fromages/fondue-raclette,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 15047,,7613269630807,/produits-laitiers-oeufs/fromages/fondue-raclette,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
-15048,Bonherba Orange-menthe, sans sucres,7610167618135,/chocolat/bonbons-chewing-gum,970.0,0.38,0.0,0.05,97.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1000.0,0.0,0.0,0.0,0.0,0.0,endline
+15048,Bonherba Orange-menthe- sans sucres,7610167618135,/chocolat/bonbons-chewing-gum,970.0,0.38,0.0,0.05,97.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1000.0,0.0,0.0,0.0,0.0,0.0,endline
 15049,,7613269294016,/chocolat/bonbons-chewing-gum,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 15050,,7610167753874,/chocolat/bonbons-chewing-gum,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 15051,,7613269294023,/chocolat/bonbons-chewing-gum,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
@@ -15685,10 +15685,10 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 15683,,7617014001560,/boulangerie/ingredients-de-boulangerie/noix-fruits-secs,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 15684,Garofalo Fusilli lunghi,8000139911149,/garnitures-ingredients/pates,1516.0,0.0,14.0,3.0,73.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 15685,,8000139911231,/garnitures-ingredients/pates,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
-15686,Smoothie ananas, banane, orange,7613269260813,/plats-cuisines/pizza-menus-snacks/jus-de-fruits,268.0,0.03,0.5,13.0,15.0,0.0,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
+15686,Smoothie ananas- banane- orange,7613269260813,/plats-cuisines/pizza-menus-snacks/jus-de-fruits,268.0,0.03,0.5,13.0,15.0,0.0,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 15687,,7616800814797,/plats-cuisines/pizza-menus-snacks/jus-de-fruits,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 15688,,7616800608396,/plats-cuisines/pizza-menus-snacks/jus-de-fruits,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
-15689,Mélange de fromages pour pizza, gratin ,7617067020716,/produits-laitiers-oeufs/fromages/fromages-rapes-melanges-de-fromages,1530.0,1.3,26.0,0.1,0.7,29.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
+15689,Mélange de fromages pour pizza- gratin ,7617067020716,/produits-laitiers-oeufs/fromages/fromages-rapes-melanges-de-fromages,1530.0,1.3,26.0,0.1,0.7,29.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 15690,,7617068020708,/produits-laitiers-oeufs/fromages/fromages-rapes-melanges-de-fromages,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 15691,Ferrero Mon Chéri,8000500034743,/chocolat/chocolat/pralines,1902.0,0.01,3.0,48.3,52.8,20.3,13.2,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 15692,,8000500033487,/chocolat/chocolat/pralines,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
@@ -15764,7 +15764,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 15762,,7613269431862,/boulangerie/biscottes-pain-croustillant,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 15763,,4104420054370,/boulangerie/biscottes-pain-croustillant,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 15764,,7613269431879,/boulangerie/biscottes-pain-croustillant,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
-15765,MIGROS BIO Farine paysanne avec du blé, de l'épeautre et du seigle,7610200298218,/boulangerie/farine,1464.0,0.01,15.0,1.5,65.0,1.5,0.0,6.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
+15765,MIGROS BIO Farine paysanne avec du blé- de l'épeautre et du seigle,7610200298218,/boulangerie/farine,1464.0,0.01,15.0,1.5,65.0,1.5,0.0,6.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 15766,,7617015010868,/boulangerie/farine,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 15767,M Classic De la région - Choucroute crue,7613269553052,/plats-cuisines/pizza-menus-snacks/compote-de-raves,51.0,1.1,0.6,0.5,1.0,0.5,0.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 15768,,7613269553069,/plats-cuisines/pizza-menus-snacks/compote-de-raves,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
@@ -15850,7 +15850,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 15848,,7617027389549,/fruits-et-legumes/fruits/agrumes,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 15849,,7616600709170,/produits-laitiers-oeufs/creme,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 15850,,7616600821179,/produits-laitiers-oeufs/creme,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
-15851,,7613269771586,/produits-laitiers-oeufs/fromages/fromage-frais-fromage-a-tartiner-et-cottage-cheese,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
+15851,M Classic Cottage Cheese ciboulette,7613269771586,/produits-laitiers-oeufs/fromages/fromage-frais-fromage-a-tartiner-et-cottage-cheese,390.0,1.0,10.0,2.0,4.0,4.0,2.5,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 15852,,7616600800112,/produits-laitiers-oeufs/fromages/fromage-frais-fromage-a-tartiner-et-cottage-cheese,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 15853,,7610632000212,/fruits-et-legumes/fruits/fruits-exotiques,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 15854,,7617027391511,/fruits-et-legumes/fruits/fruits-exotiques,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
@@ -15962,7 +15962,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 15960,,7613269433682,/garnitures-ingredients,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 15961,,4104420032910,/garnitures-ingredients,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 15962,,7613269433699,/garnitures-ingredients,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
-15963,Migros Mèlange pour panure prêt à l'emploi, assaisonné,7613312085028,/garnitures-ingredients/epices-herbes,1383.0,13.0,13.0,7.0,61.0,2.5,0.0,4.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
+15963,Migros Mèlange pour panure prêt à l'emploi- assaisonné,7613312085028,/garnitures-ingredients/epices-herbes,1383.0,13.0,13.0,7.0,61.0,2.5,0.0,4.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 15964,,7613312085035,/garnitures-ingredients/epices-herbes,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 15965,M Classic Haricots Borlotti,7610200026347,/garnitures-ingredients/legumineuses-haricots-verts-seches,1270.0,0.1,22.0,1.5,41.0,1.5,0.0,18.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 15966,,22051448,/garnitures-ingredients/legumineuses-haricots-verts-seches,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
@@ -16262,11 +16262,11 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 16260,M Classic Jus d'orange,7613312052259,/boissons-chaudes-froides/jus-de-fruits-de-legumes,188.0,0.0,0.5,9.0,11.0,0.5,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,30.0,0.0,0.0,0.0,0.0,0.0,endline
 16261,, 49g",,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 16262,, 49g",,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
-16263,Alnatura Dés de gingembre bio, confits,4104420024922,/boulangerie/ingredients-de-boulangerie/noix-fruits-secs,1440.0,0.06,0.5,79.0,81.0,0.5,0.0,4.3,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
+16263,Alnatura Dés de gingembre bio- confits,4104420024922,/boulangerie/ingredients-de-boulangerie/noix-fruits-secs,1440.0,0.06,0.5,79.0,81.0,0.5,0.0,4.3,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 16264,,7613269432128,/boulangerie/ingredients-de-boulangerie/noix-fruits-secs,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 16265,,4104420024939,/boulangerie/ingredients-de-boulangerie/noix-fruits-secs,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 16266,,7613269432135,/boulangerie/ingredients-de-boulangerie/noix-fruits-secs,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
-16267,Thunder storm Glace à l'eau au melon, à la cerise et au citron,7617400047318,/produits-surgeles/glace-entremets,381.0,0.01,0.5,22.0,22.0,0.5,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
+16267,Thunder storm Glace à l'eau au melon- à la cerise et au citron,7617400047318,/produits-surgeles/glace-entremets,381.0,0.01,0.5,22.0,22.0,0.5,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 16268,,7624200013269,/produits-surgeles/glace-entremets,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 16269,,7617027855402,/plats-cuisines/pizza-menus-snacks/salades-coupees,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 16270,,7617027855419,/plats-cuisines/pizza-menus-snacks/salades-coupees,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
@@ -16276,7 +16276,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 16274,,7624200008739,/produits-surgeles/glace-entremets,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 16275,,76102134,/boulangerie/ingredients-de-boulangerie/boulangerie-desserts,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 16276,,7617027011853,/boulangerie/ingredients-de-boulangerie/boulangerie-desserts,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
-16277,Patissier Levure Sèche Péparation rapide, utilisation sans dilution préalable,7613312115596,/boulangerie/ingredients-de-boulangerie/boulangerie-desserts,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
+16277,Patissier Levure Sèche Péparation rapide- utilisation sans dilution préalable,7613312115596,/boulangerie/ingredients-de-boulangerie/boulangerie-desserts,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 16278,,7617027011846,/boulangerie/ingredients-de-boulangerie/boulangerie-desserts,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 16279,,23001268,/boulangerie/ingredients-de-boulangerie/boulangerie-desserts,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 16280,,7613312115602,/boulangerie/ingredients-de-boulangerie/boulangerie-desserts,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
@@ -16290,7 +16290,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 16288,,7617014133117,/garnitures-ingredients/epices-herbes,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 16289,,7610327206486,/boissons-chaudes-froides/jus-de-fruits-de-legumes,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 16290,,7613269303374,/boissons-chaudes-froides/jus-de-fruits-de-legumes,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
-16291,Pelican Sticks croustillants - Colin d'Alaska, panés,7613269302162,/produits-surgeles/poisson-fruits-de-mer/poisson-filets-de-poisson,976.0,0.93,13.0,1.0,24.0,9.0,0.0,1.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
+16291,Pelican Sticks croustillants - Colin d'Alaska- panés,7613269302162,/produits-surgeles/poisson-fruits-de-mer/poisson-filets-de-poisson,976.0,0.93,13.0,1.0,24.0,9.0,0.0,1.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 16292,,7613033923036,/produits-surgeles/poisson-fruits-de-mer/poisson-filets-de-poisson,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 16293,,7613033923142,/produits-surgeles/poisson-fruits-de-mer/poisson-filets-de-poisson,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 16294,,7613312104347,/produits-surgeles/poisson-fruits-de-mer/poisson-filets-de-poisson,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
@@ -16343,7 +16343,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 16341,,4000068731881,/garnitures-ingredients/epices-herbes,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 16342,Migros Grana Padano ,7610200068323,/produits-laitiers-oeufs/fromages/fromages-rapes-melanges-de-fromages,1600.0,1.6,33.0,0.1,0.1,28.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 16343,,7617068000748,/produits-laitiers-oeufs/fromages/fromages-rapes-melanges-de-fromages,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
-16344,FARMER BIRCHER MÜESLI FIT  Flocons d'avoine, d'orge et de soja,7613312121467,/mueesli-cereales/mueesli,1652.0,0.08,17.0,10.0,52.0,11.0,1.0,9.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
+16344,FARMER BIRCHER MÜESLI FIT  Flocons d'avoine- d'orge et de soja,7613312121467,/mueesli-cereales/mueesli,1652.0,0.08,17.0,10.0,52.0,11.0,1.0,9.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 16345,,7613312121474,/mueesli-cereales/mueesli,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 16346,7610097120074,7610097120074,/boissons-chaudes-froides/boissons-sucrees,150.0,0.03,0.0,8.4,8.4,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 16347,,7610097120531,/boissons-chaudes-froides/boissons-sucrees,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
@@ -16462,7 +16462,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 16460,,2114630000007,/viande/salami-lard/salami-et-saucisses-crues-a-la-pce,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 16461,,7617027551250,/viande/salami-lard/salami-et-saucisses-crues-a-la-pce,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 16462,,7617027367240,/viande/salami-lard/salami-et-saucisses-crues-a-la-pce,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
-16463,kisss party  mousse au sucre, chocolat et gaufrette,7616500151437,/chocolat/chocolat/tetes-au-choco,1670.0,0.05,3.0,54.0,64.0,14.0,0.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
+16463,kisss party  mousse au sucre- chocolat et gaufrette,7616500151437,/chocolat/chocolat/tetes-au-choco,1670.0,0.05,3.0,54.0,64.0,14.0,0.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 16464,,7616500090903,/chocolat/chocolat/tetes-au-choco,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 16465,,7616500070844,/chocolat/chocolat/tetes-au-choco,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 16466,,7613312017487,/garnitures-ingredients/epices-herbes,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
@@ -16487,7 +16487,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 16485,,7613269287728,/viande,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 16486,Migros Crème Fraiche ,7613269267164,/produits-laitiers-oeufs/creme,1400.0,0.1,2.5,3.0,3.0,35.2,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 16487,,7613269267171,/produits-laitiers-oeufs/creme,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
-16488,Anna's Best Prosciutto, speck e cipolle,7613269490920,/plats-cuisines/pizza-menus-snacks/pizza,992.0,1.7,13.0,2.0,27.0,8.0,0.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
+16488,Anna's Best Prosciutto- speck e cipolle,7613269490920,/plats-cuisines/pizza-menus-snacks/pizza,992.0,1.7,13.0,2.0,27.0,8.0,0.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 16489,,7613269490937,/plats-cuisines/pizza-menus-snacks/pizza,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 16490,Bon Chef Bouillon de poule,7613312037508,/garnitures-ingredients/soupes-sauces-bouillon/bouillon,25.0,0.94,0.5,0.5,0.5,0.5,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 16491,,7613312037515,/garnitures-ingredients/soupes-sauces-bouillon/bouillon,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
@@ -16658,7 +16658,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 16656,,5000111604215,/garnitures-ingredients/epices-herbes,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 16657,,5000111604222,/garnitures-ingredients/epices-herbes,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 16658,,5000111607872,/garnitures-ingredients/epices-herbes,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
-16659,Bonherba Sureau, sans sucres,7610167617008,/chocolat/bonbons-chewing-gum,970.0,0.0,0.0,0.5,97.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
+16659,Bonherba Sureau- sans sucres,7610167617008,/chocolat/bonbons-chewing-gum,970.0,0.0,0.0,0.5,97.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 16660,,7613269294153,/chocolat/bonbons-chewing-gum,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 16661,,7610167754246,/chocolat/bonbons-chewing-gum,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 16662,,7613269294160,/chocolat/bonbons-chewing-gum,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
@@ -16866,7 +16866,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 16864,,7613312017357,/garnitures-ingredients/epices-herbes,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 16865,,7617014133230,/garnitures-ingredients/epices-herbes,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 16866,,7613312017326,/garnitures-ingredients/epices-herbes,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
-16867,Frey Tourist Crémant Chocolat noir avec raisins secs, noisettes et amandes,7616500012202,/chocolat/chocolat/tablettes-de-chocolat,2230.0,0.01,6.0,45.0,50.0,33.0,0.0,7.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
+16867,Frey Tourist Crémant Chocolat noir avec raisins secs- noisettes et amandes,7616500012202,/chocolat/chocolat/tablettes-de-chocolat,2230.0,0.01,6.0,45.0,50.0,33.0,0.0,7.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 16868,,23507616,/chocolat/chocolat/tablettes-de-chocolat,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 16869,,7616500000360,/chocolat/chocolat/tablettes-de-chocolat,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 16870,,7616800810454,/produits-surgeles/legumes-pommes-de-terre,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
@@ -16890,7 +16890,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 16888,,7613269435914,/garnitures-ingredients,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 16889,,4104420031296,/garnitures-ingredients,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 16890,,7613269435921,/garnitures-ingredients,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
-16891,Extra : Confiture, Framboises,7616800101262,/petit-dejeuner/confitures,1060.0,0.05,0.5,59.0,61.0,0.5,0.0,1.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
+16891,Extra : Confiture- Framboises,7616800101262,/petit-dejeuner/confitures,1060.0,0.05,0.5,59.0,61.0,0.5,0.0,1.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 16892,,2038000101265,/petit-dejeuner/confitures,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 16893,,7616800559582,/petit-dejeuner/confitures,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 16894,,2125991000001,/viande/produits-de-charcuterie/produits-carnes-refrigeres,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
@@ -17390,7 +17390,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 17388,,2110011000000,/produits-laitiers-oeufs/fromages/fromages-a-pate-dure-mi-dure,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 17389,,7617067004228,/produits-laitiers-oeufs/fromages/fromages-a-pate-dure-mi-dure,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 17390,,7617068003183,/produits-laitiers-oeufs/fromages/fromages-a-pate-dure-mi-dure,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
-17391,Skai cinnamon, gomme à mâcher sans sucre,7616500919631,/chocolat/bonbons-chewing-gum,740.0,0.01,0.1,0.1,71.0,0.1,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
+17391,Skai cinnamon- gomme à mâcher sans sucre,7616500919631,/chocolat/bonbons-chewing-gum,740.0,0.01,0.1,0.1,71.0,0.1,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 17392,,7616500384590,/chocolat/bonbons-chewing-gum,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 17393,,7616500099791,/chocolat/bonbons-chewing-gum,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 17394,MIGROS : BON CHEF : Bouillon de légumes,7613312037348,/garnitures-ingredients/soupes-sauces-bouillon/bouillon,17.0,1.0,0.5,0.6,0.8,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
@@ -17426,7 +17426,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 17424,,8001310081279,/garnitures-ingredients/champignons-olives-en-conserve,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 17425,,7613312052297,/boissons-chaudes-froides/jus-de-fruits-de-legumes,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 17426,,7613312052303,/boissons-chaudes-froides/jus-de-fruits-de-legumes,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
-17427,M-Classic Bonbons pour la gorge, sans sucre,7610167645018,/chocolat/bonbons-chewing-gum,980.0,0.0,0.0,0.5,98.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,310.0,0.0,0.0,0.0,0.0,0.0,endline
+17427,M-Classic Bonbons pour la gorge- sans sucre,7610167645018,/chocolat/bonbons-chewing-gum,980.0,0.0,0.0,0.5,98.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,310.0,0.0,0.0,0.0,0.0,0.0,endline
 17428,,7613269199328,/chocolat/bonbons-chewing-gum,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 17429,,23000964,/chocolat/bonbons-chewing-gum,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 17430,,7617015018390,/chocolat/bonbons-chewing-gum,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
@@ -17486,7 +17486,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 17484,,8001160503594,/boissons-chaudes-froides/boissons-energetiques,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 17485,France Charmentais,7610632000823,/fruits-et-legumes/fruits/fruits-exotiques,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 17486,,7617027391184,/fruits-et-legumes/fruits/fruits-exotiques,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
-17487,Smoothie mango, orange, limette, goji,7613269260837,/plats-cuisines/pizza-menus-snacks/jus-de-fruits,254.0,0.02,1.5,12.0,13.0,0.5,0.0,0.8,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
+17487,Smoothie mango- orange- limette- goji,7613269260837,/plats-cuisines/pizza-menus-snacks/jus-de-fruits,254.0,0.02,1.5,12.0,13.0,0.5,0.0,0.8,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 17488,,7616800820729,/plats-cuisines/pizza-menus-snacks/jus-de-fruits,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 17489,,7616800608419,/plats-cuisines/pizza-menus-snacks/jus-de-fruits,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 17490,M Classic Tartare Sauce,7616600380508,/garnitures-ingredients/soupes-sauces-bouillon/mayonnaise,2170.0,1.1,1.0,0.5,0.5,57.8,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
@@ -17550,7 +17550,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 17548,,2186883000004,/viande/boeuf,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 17549,,7617027794916,/viande/boeuf,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 17550,,7617027794909,/viande/boeuf,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
-17551,ALTANATURA Biscottes d'épeautre, non sucrées,4104420056343,/boulangerie/biscottes-pain-croustillant,1638.0,1.0,1.2,2.3,6.7,7.0,0.0,4.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
+17551,ALTANATURA Biscottes d'épeautre- non sucrées,4104420056343,/boulangerie/biscottes-pain-croustillant,1638.0,1.0,1.2,2.3,6.7,7.0,0.0,4.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 17552,,7613312095591,/boulangerie/biscottes-pain-croustillant,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 17553,,4104420056350,/boulangerie/biscottes-pain-croustillant,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 17554,,2123613000002,/fruits-et-legumes/fruits/raisins,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
@@ -17857,7 +17857,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 17855,Alnatura Bio Schoko Dinkel Kugeln Vollmilch,4104420054509,/chocolat/sain-bio,2107.0,0.51,7.5,33.6,52.6,28.3,0.0,4.8,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 17856,,7613312096598,/chocolat/sain-bio,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 17857,,4104420054516,/chocolat/sain-bio,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
-17858,Bonherba classique Aux herbes, sans sucres,7610167616537,/chocolat/bonbons-chewing-gum,960.0,0.0,0.0,0.5,96.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,206.0,0.0,0.0,0.0,0.0,0.0,endline
+17858,Bonherba classique Aux herbes- sans sucres,7610167616537,/chocolat/bonbons-chewing-gum,960.0,0.0,0.0,0.5,96.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,206.0,0.0,0.0,0.0,0.0,0.0,endline
 17859,,7613269294054,/chocolat/bonbons-chewing-gum,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 17860,,7610167750033,/chocolat/bonbons-chewing-gum,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 17861,,7613269294061,/chocolat/bonbons-chewing-gum,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
@@ -18013,7 +18013,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 18011,,7617027762557,/viande/gibier/gibier-cuit,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 18012,Bouillon de légumes (10g),7613312037409,/garnitures-ingredients/soupes-sauces-bouillon/bouillon,25.0,0.94,0.5,0.5,0.5,0.5,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 18013,,7613312037416,/garnitures-ingredients/soupes-sauces-bouillon/bouillon,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
-18014,Muffins, chocolate chips,7617400020458,/boulangerie/ingredients-de-boulangerie/boulangerie-desserts,1650.0,1.0,8.0,31.0,53.0,16.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
+18014,Muffins- chocolate chips,7617400020458,/boulangerie/ingredients-de-boulangerie/boulangerie-desserts,1650.0,1.0,8.0,31.0,53.0,16.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 18015,,24360722,/boulangerie/ingredients-de-boulangerie/boulangerie-desserts,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 18016,,7624200000344,/boulangerie/ingredients-de-boulangerie/boulangerie-desserts,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 18017,Migros Chocolat Dessert couronné de chantilly,7616600710138,/produits-laitiers-oeufs/dessert,1200.0,0.18,4.5,12.0,30.0,15.0,0.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
@@ -18182,7 +18182,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 18180,,2114385000000,/viande/produits-de-charcuterie/charcuterie-en-tranches-produits-carnes-crus-et-saucisses-de,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 18181,,7617100016904,/viande/produits-de-charcuterie/charcuterie-en-tranches-produits-carnes-crus-et-saucisses-de,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 18182,,7617100518378,/viande/produits-de-charcuterie/charcuterie-en-tranches-produits-carnes-crus-et-saucisses-de,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
-18183,,7610200280961,/petit-dejeuner/confitures,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
+18183,Electuaire de baies de geniève,7610200280961,/petit-dejeuner/confitures,1391.0,0.01,0.5,33.0,80.0,0.5,0.2,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 18184,,7617015039067,/petit-dejeuner/confitures,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 18185,GOMZ SERPENTINS À LA POMME,8413178260527,/chocolat/bonbons-chewing-gum,1520.0,0.0,0.6,55.0,84.0,2.0,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 18186,,7613269304074,/chocolat/bonbons-chewing-gum,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
@@ -18477,7 +18477,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 18475,,2186375000000,/viande,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 18476,,7617027763967,/viande,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 18477,,7617027763950,/viande,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
-18478,Bonherba  classique Bonbons aux herbes, fourrés,7610167617657,/chocolat/bonbons-chewing-gum,1620.0,0.01,0.0,0.0,95.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
+18478,Bonherba  classique Bonbons aux herbes- fourrés,7610167617657,/chocolat/bonbons-chewing-gum,1620.0,0.01,0.0,0.0,95.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 18479,,7613269294115,/chocolat/bonbons-chewing-gum,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 18480,,7610167750071,/chocolat/bonbons-chewing-gum,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 18481,,7613269294122,/chocolat/bonbons-chewing-gum,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
@@ -18638,7 +18638,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 18636,,4104420176928,/produits-surgeles/pizza,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 18637,,7617027081054,/produits-laitiers-oeufs/fromages/fromage-fondu,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 18638,,7617068007839,/produits-laitiers-oeufs/fromages/fromage-fondu,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
-18639,Anna's Best Fromage Feta, mariné,7613269412328,/plats-cuisines/pizza-menus-snacks/antipasti,1370.0,2.8,14.0,0.5,1.0,30.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
+18639,Anna's Best Fromage Feta- mariné,7613269412328,/plats-cuisines/pizza-menus-snacks/antipasti,1370.0,2.8,14.0,0.5,1.0,30.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 18640,,7613269412335,/plats-cuisines/pizza-menus-snacks/antipasti,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 18641,M Classic Compote de pommes,7616800823515,/garnitures-ingredients/fruits-en-conserve,340.0,0.0,0.5,18.0,19.0,0.5,0.0,1.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 18642,,7613269181774,/garnitures-ingredients/fruits-en-conserve,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
@@ -19029,7 +19029,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 19027,,2147535000001,/produits-laitiers-oeufs/fromages/fromages-a-pate-dure-mi-dure,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 19028,,7617067005157,/produits-laitiers-oeufs/fromages/fromages-a-pate-dure-mi-dure,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 19029,,7617068004197,/produits-laitiers-oeufs/fromages/fromages-a-pate-dure-mi-dure,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
-19030,SIMMENTHAL Insalate di Pollo Farro e verdure dell'orto Petto di Pollo con carote, ceci e piselli,8004030925021,/garnitures-ingredients/viande-en-conserve,699.0,1.3,9.0,2.0,10.0,9.5,0.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
+19030,SIMMENTHAL Insalate di Pollo Farro e verdure dell'orto Petto di Pollo con carote- ceci e piselli,8004030925021,/garnitures-ingredients/viande-en-conserve,699.0,1.3,9.0,2.0,10.0,9.5,0.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 19031,,8004030925045,/garnitures-ingredients/viande-en-conserve,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 19032,M-Budget Spirales Pâtes à la semoule de blé dur,7616700184716,/garnitures-ingredients/pates,1500.0,0.03,13.0,2.5,69.0,2.0,0.0,4.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 19033,,7613269182207,/garnitures-ingredients/pates,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
@@ -19213,7 +19213,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 19211,,7613269551287,/boulangerie/ingredients-de-boulangerie/pate-a-pizza,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 19212,,7613312030776,/boissons-chaudes-froides/the-glace/the-glace-liquide,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 19213,,7613312030783,/boissons-chaudes-froides/the-glace/the-glace-liquide,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
-19214,Thé aux herbes en poudre, instantané,7610167655017,/boissons-chaudes-froides/the/the-soluble,-1.0,-1.0,-1.0,-1.0,-1.0,-1.0,0.0,-1.0,0.0,0.0,0.0,0.0,0.0,0.0,-1.0,0.0,0.0,0.0,0.0,0.0,endline
+19214,Thé aux herbes en poudre- instantané,7610167655017,/boissons-chaudes-froides/the/the-soluble,-1.0,-1.0,-1.0,-1.0,-1.0,-1.0,0.0,-1.0,0.0,0.0,0.0,0.0,0.0,0.0,-1.0,0.0,0.0,0.0,0.0,0.0,endline
 19215,,7617015018802,/boissons-chaudes-froides/the/the-soluble,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 19216,,7610167750149,/boissons-chaudes-froides/the/the-soluble,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 19217,,7610167754079,/boissons-chaudes-froides/the/the-soluble,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
@@ -19237,7 +19237,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 19235,,7617014175551,/boissons-chaudes-froides/cafe/capsules-de-cafe,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 19236,,7617014175544,/boissons-chaudes-froides/cafe/capsules-de-cafe,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 19237,,7617014134077,/garnitures-ingredients/epices-herbes,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
-19238,Oignon, séché et granulé,7613312017500,/garnitures-ingredients/epices-herbes,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
+19238,Oignon- séché et granulé,7613312017500,/garnitures-ingredients/epices-herbes,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 19239,,7617014133308,/garnitures-ingredients/epices-herbes,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 19240,,7613312017517,/garnitures-ingredients/epices-herbes,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 19241,ALNATURA CHIPS,4104420139909,/aperitif/chips,2113.0,1.0,6.0,1.2,52.0,29.0,0.0,6.8,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
@@ -19317,7 +19317,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 19315,,7613269319504,/chocolat/chocolat/barres-chocolatees-branches,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 19316,,7610005011173,/chocolat/chocolat/barres-chocolatees-branches,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 19317,,7613269340430,/chocolat/chocolat/barres-chocolatees-branches,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
-19318,Chai, Thé noir relevé d'un mélange d'épices,4104420039483,/boissons-chaudes-froides,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
+19318,Chai- Thé noir relevé d'un mélange d'épices,4104420039483,/boissons-chaudes-froides,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 19319,,7613269434979,/boissons-chaudes-froides,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 19320,,7613269434986,/boissons-chaudes-froides,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 19321,,4104420145009,/boissons-chaudes-froides,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
@@ -19698,7 +19698,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 19696,,7617027577403,/produits-laitiers-oeufs/yogourt,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 19697,,7613269779902,/produits-laitiers-oeufs/yogourt,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 19698,,7616600805964,/produits-laitiers-oeufs/yogourt,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
-19699,Califora, au chocolat,7613269299578,/petit-dejeuner/cacao-chocolats-en-poudre,1660.0,0.5,5.0,80.0,82.0,3.5,0.0,6.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.7,0.0,endline
+19699,Califora- au chocolat,7613269299578,/petit-dejeuner/cacao-chocolats-en-poudre,1660.0,0.5,5.0,80.0,82.0,3.5,0.0,6.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.7,0.0,endline
 19700,,7610121601104,/petit-dejeuner/cacao-chocolats-en-poudre,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 19701,,7617015031641,/petit-dejeuner/cacao-chocolats-en-poudre,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 19702,,7613269299585,/petit-dejeuner/cacao-chocolats-en-poudre,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
@@ -19823,7 +19823,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 19821,,2138000000008,/produits-laitiers-oeufs/fromages/fromages-a-pate-dure-mi-dure,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 19822,,7617067002569,/produits-laitiers-oeufs/fromages/fromages-a-pate-dure-mi-dure,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 19823,,7617068001257,/produits-laitiers-oeufs/fromages/fromages-a-pate-dure-mi-dure,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
-19824,CAFFÈ LATTE, Vanilla,7610900042562,/produits-laitiers-oeufs/lait-boissons-lactees/boissons-lactees,280.0,0.15,3.0,9.0,9.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
+19824,CAFFÈ LATTE- Vanilla,7610900042562,/produits-laitiers-oeufs/lait-boissons-lactees/boissons-lactees,280.0,0.15,3.0,9.0,9.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 19825,,7610900204502,/produits-laitiers-oeufs/lait-boissons-lactees/boissons-lactees,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 19826,,7616700073812,/boulangerie/boulangerie-patisserie,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 19827,,7616700055771,/boulangerie/boulangerie-patisserie,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
@@ -20062,7 +20062,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 20060,,7617014150879,/boissons-chaudes-froides/cafe/capsules-de-cafe,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 20061,,7617014161547,/boissons-chaudes-froides/cafe/capsules-de-cafe,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 20062,,7617014158011,/boissons-chaudes-froides/cafe/capsules-de-cafe,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
-20063,M Classic Sardines sans peau ni arêtes, à l'huile d'olive,7613312063606,/garnitures-ingredients/poisson-en-conserve,1252.0,0.5,21.0,0.5,0.5,24.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
+20063,M Classic Sardines sans peau ni arêtes- à l'huile d'olive,7613312063606,/garnitures-ingredients/poisson-en-conserve,1252.0,0.5,21.0,0.5,0.5,24.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 20064,,7613312063613,/garnitures-ingredients/poisson-en-conserve,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 20065,M Classic Amandes allumettes,7610200010469,/boulangerie/ingredients-de-boulangerie/noix-fruits-secs,2460.0,0.1,21.0,4.5,14.0,53.0,0.0,10.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 20066,,7617014003229,/boulangerie/ingredients-de-boulangerie/noix-fruits-secs,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
@@ -20097,7 +20097,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 20095,,7617027599900,/viande/porc,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 20096,Mini Babybel Light,3073780917001,/produits-laitiers-oeufs/fromages/snacks-apero,870.0,1.8,25.0,0.5,0.5,12.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 20097,,7616600802550,/produits-laitiers-oeufs/fromages/snacks-apero,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
-20098,Mezzelune, mozzarella e pomodori secchi,7613269346401,/plats-cuisines/pizza-menus-snacks/pates,791.0,1.2,9.0,1.5,24.0,6.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
+20098,Mezzelune- mozzarella e pomodori secchi,7613269346401,/plats-cuisines/pizza-menus-snacks/pates,791.0,1.2,9.0,1.5,24.0,6.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 20099,,7613269346418,/plats-cuisines/pizza-menus-snacks/pates,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 20100,Alnatura - Lentilles beluga,4104420022720,/garnitures-ingredients/garnitures-bio,1283.0,0.02,23.0,1.1,41.0,1.6,0.1,17.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 20101,,7613269434399,/garnitures-ingredients/garnitures-bio,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
@@ -20208,7 +20208,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 20206,,7617027161947,/garnitures-ingredients/soupes-sauces-bouillon/ketchup,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 20207,Anna's Raviolis ricotta épinards,7613269266969,/plats-cuisines/pizza-menus-snacks/pates,907.0,1.0,8.0,1.5,27.0,8.0,0.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 20208,,7613269266976,/plats-cuisines/pizza-menus-snacks/pates,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
-20209,Juicy: pear, orange, banana, spinach, celeriac,7613269544234,/plats-cuisines/pizza-menus-snacks/jus-de-fruits,300.0,0.03,1.0,9.0,15.0,0.5,0.0,2.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
+20209,Juicy: pear- orange- banana- spinach- celeriac,7613269544234,/plats-cuisines/pizza-menus-snacks/jus-de-fruits,300.0,0.03,1.0,9.0,15.0,0.5,0.0,2.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 20210,,7613269544241,/plats-cuisines/pizza-menus-snacks/jus-de-fruits,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 20211,,7613269656791,/plats-cuisines/pizza-menus-snacks/sauces,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 20212,,7613269658108,/plats-cuisines/pizza-menus-snacks/sauces,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
@@ -20424,7 +20424,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 20422,,7613269576754,/produits-laitiers-oeufs/fromages/fromages-a-pate-dure-mi-dure,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 20423,,7613312124086,/chocolat/sain-bio,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 20424,,7613312124093,/chocolat/sain-bio,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
-20425,SOJA LINE DRINK Calcium +Vit. B2, D, B12,7616600709644,/produits-laitiers-oeufs/lait-boissons-lactees/lait-uht,220.0,0.1,3.5,4.0,5.0,2.0,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.4,0.0,0.0,0.0,0.0,0.1,0.2,endline
+20425,SOJA LINE DRINK Calcium +Vit. B2- D- B12,7616600709644,/produits-laitiers-oeufs/lait-boissons-lactees/lait-uht,220.0,0.1,3.5,4.0,5.0,2.0,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.4,0.0,0.0,0.0,0.0,0.1,0.2,endline
 20426,,7616600821650,/produits-laitiers-oeufs/lait-boissons-lactees/lait-uht,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 20427,Ice Tea Sparkling Citron,7613312130421,/boissons-chaudes-froides/the-glace/the-glace-liquide,-1.0,-1.0,-1.0,-1.0,-1.0,-1.0,-1.0,-1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 20428,,7613312130438,/boissons-chaudes-froides/the-glace/the-glace-liquide,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
@@ -20641,7 +20641,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 20639,,7613269397113,/viande/volaille,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 20640,Lait condensé non sucré,7610200010070,/petit-dejeuner/cacao-chocolats-en-poudre,568.0,0.28,6.0,10.0,10.0,8.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 20641,,7617015038961,/petit-dejeuner/cacao-chocolats-en-poudre,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
-20642,Sandwiches fromage fondu, gras,7613269251187,/produits-laitiers-oeufs/fromages/fromage-fondu,1211.0,2.5,16.0,3.0,3.0,24.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
+20642,Sandwiches fromage fondu- gras,7613269251187,/produits-laitiers-oeufs/fromages/fromage-fondu,1211.0,2.5,16.0,3.0,3.0,24.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 20643,,7613269251194,/produits-laitiers-oeufs/fromages/fromage-fondu,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 20644,Happy Hour Apéro-Rollen,7616700012774,/produits-surgeles/aperitif-dessert,1108.0,1.0,8.0,2.5,26.0,14.0,0.0,1.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 20645,,7617015027484,/produits-surgeles/aperitif-dessert,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
@@ -20900,7 +20900,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 20898,,5060194790274,/garnitures-ingredients/du-monde-entier/japon,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 20899,,50601947900900,/garnitures-ingredients/du-monde-entier/japon,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 20900,,5060194790281,/garnitures-ingredients/du-monde-entier/japon,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
-20901,M Budget BONBONS À MÂCHER aux arômes de framboise, orange et citron,7613269332664,/chocolat/bonbons-chewing-gum,1684.0,0.03,0.8,54.0,83.0,7.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
+20901,M Budget BONBONS À MÂCHER aux arômes de framboise- orange et citron,7613269332664,/chocolat/bonbons-chewing-gum,1684.0,0.03,0.8,54.0,83.0,7.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 20902,,7613312093313,/chocolat/bonbons-chewing-gum,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 20903,,7613269332671,/chocolat/bonbons-chewing-gum,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 20904,Annas Original Ginger Thins,7312220011272,/chocolat/specialites,1991.0,1.25,5.3,32.3,69.6,19.1,9.4,1.3,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
@@ -20939,7 +20939,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 20937,,7613269412359,/plats-cuisines/pizza-menus-snacks/antipasti,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 20938,Migros Cœurs de France aux noisettes,7616700013467,/boulangerie/boulangerie-patisserie/biscuits-frais,2142.0,1.3,7.0,22.0,61.0,26.0,0.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 20939,,7616700046984,/boulangerie/boulangerie-patisserie/biscuits-frais,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
-20940,Framboises - Meilleure sélection, non sucrées,7610200082121,/produits-surgeles/fruits,260.0,0.01,1.0,10.0,10.0,0.5,0.0,7.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
+20940,Framboises - Meilleure sélection- non sucrées,7610200082121,/produits-surgeles/fruits,260.0,0.01,1.0,10.0,10.0,0.5,0.0,7.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 20941,,5410355403138,/produits-surgeles/fruits,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 20942,,5410355403145,/produits-surgeles/fruits,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 20943,,7617015027545,/produits-surgeles/fruits,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
@@ -21496,7 +21496,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 21494,ZWEIFEL Paprika Original Chips,7610095013002,/aperitif/chips,2270.0,1.2,6.0,9.0,51.0,34.0,2.5,5.0,0.0,0.0,8.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 21495,,7616800570457,/aperitif/chips,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 21496,,7610095013101,/aperitif/chips,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
-21497,Bon Chef Sauce Café de Paris, déhydratée,7613269299196,/garnitures-ingredients/soupes-sauces-bouillon/sauces,890.0,1.3,4.0,6.0,11.0,17.0,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
+21497,Bon Chef Sauce Café de Paris- déhydratée,7613269299196,/garnitures-ingredients/soupes-sauces-bouillon/sauces,890.0,1.3,4.0,6.0,11.0,17.0,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 21498,,7610121400189,/garnitures-ingredients/soupes-sauces-bouillon/sauces,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 21499,,7610121931645,/garnitures-ingredients/soupes-sauces-bouillon/sauces,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 21500,,7617015030538,/garnitures-ingredients/soupes-sauces-bouillon/sauces,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
@@ -21504,7 +21504,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 21502,,7610121954361,/garnitures-ingredients/soupes-sauces-bouillon/sauces,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 21503,,7613312134368,/garnitures-ingredients/soupes-sauces-bouillon/sauces,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 21504,,7613269299202,/garnitures-ingredients/soupes-sauces-bouillon/sauces,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
-21505,Juicy: red grape, strawberry, raspberry, red currant,7613269542797,/plats-cuisines/pizza-menus-snacks/jus-de-fruits,296.0,0.0,0.8,11.0,15.0,0.5,0.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
+21505,Juicy: red grape- strawberry- raspberry- red currant,7613269542797,/plats-cuisines/pizza-menus-snacks/jus-de-fruits,296.0,0.0,0.8,11.0,15.0,0.5,0.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 21506,,7613269544005,/plats-cuisines/pizza-menus-snacks/jus-de-fruits,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 21507,,2138428000000,/viande/saucisses/salami-et-saucisses-crues-en-tranches,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 21508,,7617027552240,/viande/saucisses/salami-et-saucisses-crues-en-tranches,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
@@ -21861,7 +21861,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 21859,,7613269189343,/boissons-chaudes-froides/boissons-sucrees,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 21860,,7613269825999,/boulangerie/boulangerie-patisserie/patisserie-refrigeree,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 21861,,7613269826002,/boulangerie/boulangerie-patisserie/patisserie-refrigeree,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
-21862,FAVORIT: les suisses, Fraises suisses,27005149,/petit-dejeuner/confitures,896.0,0.03,0.5,49.0,52.0,0.0,0.0,0.8,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
+21862,FAVORIT: les suisses- Fraises suisses,27005149,/petit-dejeuner/confitures,896.0,0.03,0.5,49.0,52.0,0.0,0.0,0.8,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 21863,,7613312112090,/petit-dejeuner/confitures,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 21864,,7616800630465,/petit-dejeuner/confitures,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 21865,MIGROS : AHA : Milch halbentrahmt laktosefrei,7610200380265,/produits-laitiers-oeufs/lait-boissons-lactees/lait-uht,200.0,0.1,3.5,5.0,5.0,1.6,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
@@ -22365,7 +22365,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 22363,,7613269562429,/fruits-et-legumes/legumes/legumes-de-garde,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 22364,Pom-Bär Original,4000522006890,/aperitif/snacks,2146.0,1.8,3.1,1.2,61.0,28.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 22365,,4000522067891,/aperitif/snacks,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
-22366,Al'fez Authentic Couscous MOYEN, SEMOULE DE BLÉ DUR,5034444113632,/garnitures-ingredients/du-monde-entier/afrique-orient,1501.0,0.0,12.0,2.5,70.0,1.9,0.0,4.3,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
+22366,Al'fez Authentic Couscous MOYEN- SEMOULE DE BLÉ DUR,5034444113632,/garnitures-ingredients/du-monde-entier/afrique-orient,1501.0,0.0,12.0,2.5,70.0,1.9,0.0,4.3,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 22367,,5034444116633,/garnitures-ingredients/du-monde-entier/afrique-orient,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 22368,M Classic Lentilles toutes prêtes,7616800800189,/garnitures-ingredients/legumineuses-farce-pour-vol-au-vent,370.0,0.9,4.5,0.5,11.0,2.0,0.0,3.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 22369,,7616600201551,/garnitures-ingredients/legumineuses-farce-pour-vol-au-vent,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
@@ -22556,7 +22556,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 22554,Migros Bio Huile de lin,7613269354703,/garnitures-ingredients/ingredients-de-cuisson/vinaigre-vinaigre-balsamique,3441.0,0.0,0.0,0.0,0.0,93.0,0.0,0.0,0.0,0.0,11.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 22555,,7613312126509,/garnitures-ingredients/ingredients-de-cuisson/vinaigre-vinaigre-balsamique,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 22556,,7613269354710,/garnitures-ingredients/ingredients-de-cuisson/vinaigre-vinaigre-balsamique,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
-22557,Glace à l'arôme de vanille, de fraise et de chocolat,7617400046731,/produits-surgeles/glace-entremets,614.0,0.27,2.0,24.0,25.0,4.0,0.0,0.9,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
+22557,Glace à l'arôme de vanille- de fraise et de chocolat,7617400046731,/produits-surgeles/glace-entremets,614.0,0.27,2.0,24.0,25.0,4.0,0.0,0.9,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 22558,,7613269183723,/produits-surgeles/glace-entremets,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 22559,,7624200012231,/produits-surgeles/glace-entremets,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
 22560,,7613269183730,/produits-surgeles/glace-entremets,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,endline
