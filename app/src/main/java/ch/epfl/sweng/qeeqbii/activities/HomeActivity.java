@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
 import ch.epfl.sweng.qeeqbii.R;
-import ch.epfl.sweng.qeeqbii.activities.login.ChooserActivity;
 import ch.epfl.sweng.qeeqbii.chat.StartActivity;
 
 public class HomeActivity extends AppCompatActivity {

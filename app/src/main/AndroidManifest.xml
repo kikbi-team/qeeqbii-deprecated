@@ -172,10 +172,6 @@
             android:name=".shopping_cart.ShoppingCartStatistics"
             android:label="@string/title_activity_shopping_cart_statistics"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".activities.ChatActivity"
-            android:label="@string/title_activity_chat"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
