@@ -109,6 +109,7 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".activities.ProductComparisonActivity"
+            android:exported="true"
             android:label="@string/title_activity_product_comparison" />
     </application>
 
