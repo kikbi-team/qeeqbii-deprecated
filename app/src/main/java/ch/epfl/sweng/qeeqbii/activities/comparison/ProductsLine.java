@@ -21,4 +21,8 @@ public class ProductsLine {
         value1 = val1;
         value2 = val2;
     }
+
+    public ProductsLine copy() {
+        return new ProductsLine(criteria, value1, value2);
+    }
 }

@@ -39,7 +39,7 @@ public class ComparisonGraphAdapter extends BaseAdapter {
 
     // add a product line
     public void addLine(ProductsLine line) {
-        lines.add(line);
+        lines.add(line.copy());
     }
 
     // number of elements

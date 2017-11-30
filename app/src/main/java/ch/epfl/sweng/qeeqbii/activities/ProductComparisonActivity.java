@@ -27,6 +27,7 @@ import com.github.mikephil.charting.formatter.IAxisValueFormatter;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Map;
+import java.util.Objects;
 
 import ch.epfl.sweng.qeeqbii.R;
 import ch.epfl.sweng.qeeqbii.activities.comparison.ComparisonGraphAdapter;
@@ -34,6 +35,8 @@ import ch.epfl.sweng.qeeqbii.activities.comparison.ProductsLine;
 import ch.epfl.sweng.qeeqbii.custom_exceptions.ProductException;
 import ch.epfl.sweng.qeeqbii.open_food.Product;
 import ch.epfl.sweng.qeeqbii.open_food.RecentlyScannedProducts;
+
+import static java.lang.Double.parseDouble;
 
 
 public class ProductComparisonActivity extends AppCompatActivity {
@@ -126,6 +129,19 @@ public class ProductComparisonActivity extends AppCompatActivity {
 
             Map<String, Double> nutrients1;
             Map<String, Double> nutrients2;
+
+            String quantity1 = product1.getQuantity();
+            String quantity2 = product2.getQuantity();
+
+            Log.d("STATE", "Q1 " + quantity1 + " Q2 " + quantity2);
+
+            // Adding quantity chart
+            if(quantity1.length() > 0 && quantity2.length() > 0 &&
+                (quantity1.substring(quantity1.length() - 1).equals(quantity2.substring(quantity2.length() - 1)))) {
+                adapter.addLine(new ProductsLine("Quantity (" + quantity2.substring(quantity2.length() - 1) + ")",
+                        parseDouble(quantity1.substring(0, quantity1.length() - 1)),
+                        parseDouble(quantity2.substring(0, quantity2.length() - 1))));
+            }
 
             try {
                 nutrients1 = product1.getParsedNutrients();
