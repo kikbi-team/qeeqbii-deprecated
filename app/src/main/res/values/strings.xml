@@ -145,4 +145,5 @@
     <string name="butchery">Butchery</string>
     <string name="show_saved_products_activity">Show saved products</string>
     <string name="Chat">Chat</string>
+    <string name="title_activity_product_comparison">Compare Products</string>
 </resources>

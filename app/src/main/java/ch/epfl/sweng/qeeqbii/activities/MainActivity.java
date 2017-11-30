@@ -60,6 +60,11 @@ public class MainActivity extends AppCompatActivity {
         return mToggle.onOptionsItemSelected(item) || super.onOptionsItemSelected(item);
     }
 
+    public void productComparison(MenuItem item) {
+        Intent intent = new Intent(this, ProductComparisonActivity.class);
+        startActivity(intent);
+    }
+
     public void cancerDataBaseShow(MenuItem item) {
         Intent intent = new Intent(this, CancerDataShowActivity.class);
         startActivity(intent);
