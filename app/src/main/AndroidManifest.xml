@@ -107,7 +107,9 @@
             android:name=".activities.ChatActivity"
             android:label="@string/title_activity_chat"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".activities.ProductComparisonActivity"></activity>
+        <activity
+            android:name=".activities.ProductComparisonActivity"
+            android:label="@string/title_activity_product_comparison" />
     </application>
 
 </manifest>
