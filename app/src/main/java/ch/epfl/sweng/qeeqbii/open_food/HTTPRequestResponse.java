@@ -47,6 +47,7 @@ class HTTPRequestResponse {
 
 
     private String getProductNutrients(String language) {
+        System.out.println(resp_body);
         String str = "";
         int nutrients_ind = resp_body.indexOf("nutrients\":");
         if (nutrients_ind == -1) {
