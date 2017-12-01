@@ -51,11 +51,9 @@ public class LoginActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setTitle("Login");
 
-
         mLoginProgress = new ProgressDialog(this);
 
         mUserDatabase = FirebaseDatabase.getInstance().getReference().child("Users");
-
 
         mLoginEmail = (TextInputLayout) findViewById(R.id.login_email);
         mLoginPassword = (TextInputLayout) findViewById(R.id.login_password);
@@ -76,19 +74,12 @@ public class LoginActivity extends AppCompatActivity {
                     mLoginProgress.show();
 
                     loginUser(email, password);
-
                 }
-
             }
         });
-
-
     }
 
-
-
     private void loginUser(String email, String password) {
-
 
         mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
@@ -109,14 +100,8 @@ public class LoginActivity extends AppCompatActivity {
                             mainIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                             startActivity(mainIntent);
                             finish();
-
-
                         }
                     });
-
-
-
-
                 } else {
 
                     mLoginProgress.hide();
@@ -124,12 +109,8 @@ public class LoginActivity extends AppCompatActivity {
                     String task_result = task.getException().getMessage().toString();
 
                     Toast.makeText(LoginActivity.this, "Error : " + task_result, Toast.LENGTH_LONG).show();
-
                 }
-
             }
         });
-
-
     }
 }
