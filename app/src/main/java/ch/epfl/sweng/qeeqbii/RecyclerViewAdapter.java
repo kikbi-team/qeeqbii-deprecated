@@ -20,12 +20,22 @@ import ch.epfl.sweng.qeeqbii.open_food.Product;
 import ch.epfl.sweng.qeeqbii.shopping_cart.ShoppingCart;
 
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder> {
+    // opacity for products used in the activity
+    public static float OPACITY_NORMAL = 1.0f;
+    public static float OPACITY_CHECKED = 0.5f;
+
     private Activity activity;
     private List<Product> products;
 
     public RecyclerViewAdapter(Activity activity, List<Product> products) {
         this.activity = activity;
         this.products = products;
+    }
+
+    // set a given product checked / unchecked
+    public static void setItemChecked(Product product, Boolean doCheck) {
+        product.setChecked(doCheck);
+        product.setOpacity(doCheck ? OPACITY_CHECKED : OPACITY_NORMAL);
     }
 
     @Override
@@ -40,7 +50,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     public void onBindViewHolder(ViewHolder viewHolder, final int position) {
         viewHolder.textView.setText(products.get(position).getName());
         viewHolder.imageView.setImageResource(products.get(position).getImageId());
-        //viewHolder.isChecked.setChecked(products.get(position).getChecked());
+        //viewHolder.isChecked.setItemChecked(products.get(position).getChecked());
 
         final Product objIncome = ShoppingCart.m_items.get(position);
         //in some cases, it will prevent unwanted situations
@@ -48,18 +58,11 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
         //if true, your checkbox will be selected, else unselected
         viewHolder.isChecked.setChecked(objIncome.isChecked());
-        viewHolder.isChecked.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener()
-        {
+        viewHolder.isChecked.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
-            public void onCheckedChanged (CompoundButton buttonView, boolean isChecked){
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 //set your object's last status
-                objIncome.setChecked(isChecked);
-                if(isChecked) {
-                    objIncome.setOpacity(0.5f);
-                }
-                else {
-                    objIncome.setOpacity(1f);
-                }
+                setItemChecked(objIncome, isChecked);
             }
         });
 
@@ -73,9 +76,13 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         return products.size();
     }
 
-    public Activity getActivity() { return activity; }
+    public Activity getActivity() {
+        return activity;
+    }
 
-    public List<Product> getProducts() { return products; }
+    public List<Product> getProducts() {
+        return products;
+    }
 
     //NESTED CLASS
     class ViewHolder extends RecyclerView.ViewHolder {
@@ -94,12 +101,11 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                 @Override
                 public void onClick(View v) {
 
-                    if (((CheckBox)v).isChecked()) {
+                    if (((CheckBox) v).isChecked()) {
                         v.setAlpha(0.50f);              //CHANGES THE OPACITY OF THE VIEW
                         imageView.setAlpha(0.50f);
                         textView.setAlpha(0.50f);
-                    }
-                    else {
+                    } else {
                         v.setAlpha(1f);              //CHANGES THE OPACITY OF THE VIEW
                         imageView.setAlpha(1f);
                         textView.setAlpha(1f);
