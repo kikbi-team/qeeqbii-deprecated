@@ -30,6 +30,7 @@ import static android.support.test.espresso.intent.matcher.IntentMatchers.hasCom
 import static android.support.test.espresso.matcher.ViewMatchers.isDisplayed;
 import static android.support.test.espresso.matcher.ViewMatchers.withId;
 import static android.support.test.runner.lifecycle.Stage.RESUMED;
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
@@ -59,6 +60,12 @@ public class ShoppingListCheckingTest {
         });
 
         return currentActivity[0];
+    }
+
+    @Test
+    public void tmpTest()
+    {
+        assertEquals(true,true);
     }
 
 

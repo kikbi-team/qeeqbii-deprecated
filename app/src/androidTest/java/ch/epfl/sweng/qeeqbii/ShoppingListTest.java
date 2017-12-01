@@ -17,6 +17,7 @@ import ch.epfl.sweng.qeeqbii.activities.ShoppingListActivity;
 
 import static android.support.test.InstrumentationRegistry.getInstrumentation;
 import static junit.framework.Assert.assertNotNull;
+import static org.junit.Assert.assertEquals;
 
 
 @RunWith(AndroidJUnit4.class)
@@ -24,6 +25,12 @@ public class ShoppingListTest {
     @Rule
     public final ActivityTestRule<ShoppingListActivity> mActivityRule =
             new ActivityTestRule<>(ShoppingListActivity.class);
+
+    @Test
+    public void tmpTest()
+    {
+        assertEquals(true,true);
+    }
 
     /*@Test
     public void testCanOpenClickOnImageSaussage() throws InterruptedException {
