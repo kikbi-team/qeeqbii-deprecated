@@ -16,8 +16,12 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import ch.epfl.sweng.qeeqbii.R;
 import ch.epfl.sweng.qeeqbii.activities.GraphsActivity;
+import ch.epfl.sweng.qeeqbii.open_food.Product;
 
 public class ShoppingCartStatistics extends AppCompatActivity {
 
@@ -35,6 +39,11 @@ public class ShoppingCartStatistics extends AppCompatActivity {
      * The {@link ViewPager} that will host the section contents.
      */
     private ViewPager mViewPager;
+
+    //FOR THE FOR DIFFERENT TIME INTERVALS
+    static public List<Product> m_items_month = new ArrayList<Product>();
+    static public List<Product> m_items_trimester = new ArrayList<Product>();
+    static public List<Product> m_items_year = new ArrayList<Product>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -136,4 +145,6 @@ public class ShoppingCartStatistics extends AppCompatActivity {
         Intent intent = new Intent(this, GraphsActivity.class);
         startActivity(intent);
     }
+
+
 }

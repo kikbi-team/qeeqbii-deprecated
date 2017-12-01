@@ -47,7 +47,6 @@ public class RecentlyScannedProductsActivity extends AppCompatActivity {
 
         //System.out.println(barcode_linked_list.getLast());
 
-
         //final ArrayList<RecentlyScannedProducts> recipeList = Recipe.getRecipesFromFile("recipes.json", this);
 
         ArrayList<String> listItems = new ArrayList<>();
@@ -81,10 +80,6 @@ public class RecentlyScannedProductsActivity extends AppCompatActivity {
     }
 
     //ImageButton btn = (ImageButton) findViewById(R.id.delete_recently_scanned_product_button);
-
-
-
-
 
     public void deleteItems(View view) {
         RecentlyScannedProducts.clear();
