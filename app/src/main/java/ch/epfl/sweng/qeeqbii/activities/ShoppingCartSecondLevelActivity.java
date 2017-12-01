@@ -1,8 +1,8 @@
 package ch.epfl.sweng.qeeqbii.activities;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
@@ -17,11 +17,13 @@ import ch.epfl.sweng.qeeqbii.R;
 import ch.epfl.sweng.qeeqbii.RecyclerViewAdapter;
 import ch.epfl.sweng.qeeqbii.open_food.ClusterType;
 import ch.epfl.sweng.qeeqbii.open_food.ClusterTypeFirstLevel;
+import ch.epfl.sweng.qeeqbii.open_food.ClusterTypeSecondLevel;
 import ch.epfl.sweng.qeeqbii.shopping_cart.ClusterProductList;
 
-public class ShoppingCartFirstLevelActivity extends AppCompatActivity {
+public class ShoppingCartSecondLevelActivity extends AppCompatActivity {
 
     private ClusterProductList m_cart;
+    private ClusterTypeFirstLevel mFirstLevelCluster;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,11 +32,13 @@ public class ShoppingCartFirstLevelActivity extends AppCompatActivity {
 
         final RecyclerView recyclerView = (RecyclerView)findViewById(R.id.recycler_item_shopping_list);
 
+        mFirstLevelCluster = ClusterTypeFirstLevel.getClusterType(getIntent().getStringExtra("cluster"));
+
         //create and set layout manager for each RecyclerView
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
         //Initializing and set adapter for each RecyclerView
-        ClusterType[] clustertypes = ClusterTypeFirstLevel.values();
+        ClusterType[] clustertypes = mFirstLevelCluster.getChildren();
         m_cart = new ClusterProductList(Arrays.asList(clustertypes));
 
         View.OnClickListener onclicklistener = new View.OnClickListener() {
@@ -42,9 +46,7 @@ public class ShoppingCartFirstLevelActivity extends AppCompatActivity {
             public void onClick(View v) {
                 int itemPosition = recyclerView.getChildLayoutPosition(v);
                 String txt = m_cart.getSpecificItemInList(itemPosition).toString();
-                Intent intent = new Intent(ShoppingCartFirstLevelActivity.this, ShoppingCartSecondLevelActivity.class);
-                intent.putExtra("cluster", txt);
-                startActivity(intent);
+                ShoppingListActivity.addCluster(ClusterTypeSecondLevel.getClusterType(txt));
             }
         };
 

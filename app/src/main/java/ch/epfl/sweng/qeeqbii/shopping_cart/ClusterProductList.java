@@ -1,16 +1,12 @@
 package ch.epfl.sweng.qeeqbii.shopping_cart;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
-import java.util.Objects;
 
 import ch.epfl.sweng.qeeqbii.open_food.ClusterType;
-import ch.epfl.sweng.qeeqbii.open_food.Product;
-
 
 /**
  * Created by davidcleres on 01.11.17.
@@ -23,20 +19,16 @@ public class ClusterProductList {
 
     private List<ClusterType> m_items = new ArrayList<>();
 
-    public void addToShoppingCartList (ClusterType cluster) {
-        m_items.add(cluster);
-    }
-
-    public static void emptyList () {
+    public void emptyList () {
         m_items.clear();
     }
 
-    public ShoppingCart(){
+    public ClusterProductList(){
         //To avoid an empty list
         //addItemToCart(new Product("Please Click on + to add an item", "0 mg", "Stuff", "cool Nutrients"));
     }
 
-    public ShoppingCart(List<ClusterType> items) {
+    public ClusterProductList(List<ClusterType> items) {
 
         m_items = items;
         for (ClusterType cluster : m_items)
@@ -45,29 +37,30 @@ public class ClusterProductList {
         }
     }
 
-    public static void addItemToCart(ClusterType cluster) {
+    public void addItemToList(ClusterType cluster) {
         m_items.add(cluster);
+        is_checked_item.put(cluster,false);
     }
 
-    public static void addSpecificItemInCart(int index, ClusterType cluster) {
+    public void addSpecificItemInList(int index, ClusterType cluster) {
         m_items.add(index, cluster);
     }
 
-    public static List<ClusterType> getItems() {
+    public List<ClusterType> getItems() {
         return m_items;
     }
 
-    public static ClusterType getSpecificItemInCart(int index) {
+    public ClusterType getSpecificItemInList(int index) {
         return m_items.get(index);
     }
 
 
-    public static Boolean isCheckedItem(ClusterType cluster)
+    public Boolean isCheckedItem(ClusterType cluster)
     {
         return is_checked_item.get(cluster);
     }
 
-    public static void deleteSingleItemShoppingCartList() {
+    public void deleteSingleItem() {
         Iterator<ClusterType> element = m_items.iterator();
         //for (Product element : m_items) {
         while (element.hasNext()) {
@@ -79,7 +72,7 @@ public class ClusterProductList {
         }
     }
 
-    public static void checkItem(ClusterType cluster)
+    public void checkItem(ClusterType cluster)
     {
 
     }
@@ -103,7 +96,7 @@ public class ClusterProductList {
         }*/
     }
 
-    public static void enableMockBarcodeChecking() {
+    public void enableMockBarcodeChecking() {
         do_mock_barcode_checking = Boolean.TRUE;
     }
 }

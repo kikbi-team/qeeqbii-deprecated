@@ -4,17 +4,26 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.TextView;
 
+import com.google.firebase.appindexing.Action;
+import com.google.firebase.appindexing.FirebaseUserActions;
+import com.google.firebase.appindexing.builders.Actions;
+
+import java.util.Arrays;
+
 import ch.epfl.sweng.qeeqbii.R;
-import ch.epfl.sweng.qeeqbii.activities.GraphsActivity;
-import ch.epfl.sweng.qeeqbii.cancer.CancerDataBase;
+import ch.epfl.sweng.qeeqbii.RecyclerViewAdapter;
 import ch.epfl.sweng.qeeqbii.cancer.LevenshteinQueryCancerDB;
 import ch.epfl.sweng.qeeqbii.custom_exceptions.ProductException;
+import ch.epfl.sweng.qeeqbii.open_food.ClusterType;
+import ch.epfl.sweng.qeeqbii.open_food.ClusterTypeFirstLevel;
 import ch.epfl.sweng.qeeqbii.open_food.Product;
-import info.debatty.java.stringsimilarity.Levenshtein;
+import ch.epfl.sweng.qeeqbii.shopping_cart.ClusterProductList;
 
 /**
  * Created by guillaume on 10/10/17.
@@ -88,5 +97,10 @@ public class ShowProductActivity extends AppCompatActivity {
         Intent intent = new Intent(this, GraphsActivity.class);
         intent.putExtra("product", mProduct);
         startActivity(intent);
+    }
+
+    public void buyProduct(View view)
+    {
+        ShoppingListActivity.addProduct(mProduct);
     }
 }

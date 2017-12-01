@@ -76,9 +76,9 @@ public class AClusterProductListClassShould {
         shop.addItemToList(ClusterTypeSecondLevel.FROMAGES);
         shop.addItemToList(ClusterTypeSecondLevel.FROMAGES);
 
-        assertEquals(shop.getItems().get(0).toString(), content.get(0).toString());
-        assertEquals(shop.getItems().get(1).toString(), content.get(1).toString());
-        assertEquals(shop.getItems().get(2).toString(), content.get(2).toString());
+        assertEquals(shop.getItems().get(0).toString(), content.get(0).getCluster().toString());
+        assertEquals(shop.getItems().get(1).toString(), content.get(1).getCluster().toString());
+        assertEquals(shop.getItems().get(2).toString(), content.get(2).getCluster().toString());
     }
 
     @Test
@@ -89,6 +89,6 @@ public class AClusterProductListClassShould {
         ClusterProductList shop = new ClusterProductList(clusters);
         shop.addItemToList(item.getCluster());
         List<ClusterType> items = shop.getItems();
-        assertEquals(shop.getSpecificItemInList(items.size()-1).toString(), item.toString());
+        assertEquals(shop.getSpecificItemInList(items.size()-1).toString(), item.getCluster().toString());
     }
 }

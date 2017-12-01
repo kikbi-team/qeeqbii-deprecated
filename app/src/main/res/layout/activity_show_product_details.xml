@@ -37,5 +37,13 @@
             android:onClick="showNutrientsGraphs"
             app:srcCompat="@mipmap/graph"
             android:contentDescription="@string/graph" />
+
+        <Button
+            android:id="@+id/buyProductButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/buy_product"
+            android:onClick="buyProduct"
+            android:layout_gravity="center_horizontal"/>
     </LinearLayout>
 </ScrollView>

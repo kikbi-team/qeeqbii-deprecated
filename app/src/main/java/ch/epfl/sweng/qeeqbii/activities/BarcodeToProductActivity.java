@@ -92,4 +92,9 @@ public class BarcodeToProductActivity extends AppCompatActivity {
         intent.putExtra("barcode", barcode);
         startActivity(intent);
     }
+
+    public void buyProduct(View view)
+    {
+        ShoppingListActivity.addProduct(RecentlyScannedProducts.getProduct(barcode));
+    }
 }

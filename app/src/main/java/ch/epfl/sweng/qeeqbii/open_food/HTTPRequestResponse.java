@@ -87,7 +87,7 @@ class HTTPRequestResponse {
     Product toProduct(String language)
     {
         return new Product(getProductName(language), getProductQuantity(), getProductIngredients(language),
-                getProductNutrients(language), mBarcode, ClusterTypeSecondLevel.UNDETERMINED);
+                getProductNutrients(language), mBarcode, ClusterTypeSecondLevel.FROMAGES);
     }
 
     // By default, we get the french version
