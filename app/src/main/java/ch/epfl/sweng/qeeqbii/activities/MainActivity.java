@@ -56,6 +56,11 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void productComparison(View view) {
+        Intent intent = new Intent(this, ProductComparisonActivity.class);
+        startActivity(intent);
+    }
+
     public boolean onOptionsItemSelected(MenuItem item) {
 
         return mToggle.onOptionsItemSelected(item) || super.onOptionsItemSelected(item);

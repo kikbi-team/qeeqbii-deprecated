@@ -115,12 +115,11 @@
             android:parentActivityName=".chat.MainActivityChat"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
-
+     
 
 
         <activity
-            android:name="ch.epfl.sweng.qeeqbii.activities.CancerDataShowActivity"
-
+            android:name=".activities.CancerDataShowActivity"
             android:exported="true"
             android:parentActivityName=".activities.MainActivity">
 
@@ -131,10 +130,10 @@
         </activity>
         <activity android:name=".activities.BarcodeScannerActivity" />
         <activity
-            android:name="ch.epfl.sweng.qeeqbii.activities.CancerDataQueryActivity"
-            android:parentActivityName="ch.epfl.sweng.qeeqbii.activities.MainActivity"
+            android:name=".activities.CancerDataQueryActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
-            android:exported="true"/>
+            android:exported="true"
+            android:parentActivityName=".activities.MainActivity" />
 
         <provider
             android:name="com.facebook.FacebookContentProvider"
@@ -150,7 +149,6 @@
         <activity
             android:name=".activities.SavedProductsListActivity"
             android:exported="true" />
-
         <activity
             android:name=".activities.BarcodeToProductActivity"
             android:exported="true" />
@@ -172,6 +170,12 @@
             android:name=".shopping_cart.ShoppingCartStatistics"
             android:label="@string/title_activity_shopping_cart_statistics"
             android:theme="@style/AppTheme.NoActionBar" />
+        
+        <activity
+            android:name=".activities.ProductComparisonActivity"
+            android:exported="true"
+            android:label="@string/title_activity_product_comparison" />
+
     </application>
 
 </manifest>

@@ -162,7 +162,7 @@ public class BarcodeScannerActivity extends AppCompatActivity implements ZXingSc
     }
 
     // go to the main activity
-    private void goToMain() {
+    public void goToMain() {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
