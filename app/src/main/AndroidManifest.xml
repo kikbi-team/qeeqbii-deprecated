@@ -121,6 +121,7 @@
      
 
 
+
         <activity
             android:name=".activities.CancerDataShowActivity"
             android:exported="true"
@@ -156,7 +157,6 @@
             android:name=".activities.BarcodeToProductActivity"
             android:exported="true" />
         <activity android:name=".activities.GraphsActivity" />
-        <activity android:name=".activities.login.BaseActivity" />
         <activity
             android:name=".activities.ShoppingListActivity"
             android:label="@string/title_activity_shopping_cart"
@@ -175,9 +175,11 @@
             android:theme="@style/AppTheme.NoActionBar" />
         
         <activity
+
             android:name=".activities.ProductComparisonActivity"
             android:exported="true"
             android:label="@string/title_activity_product_comparison" />
+
 
     </application>
 
