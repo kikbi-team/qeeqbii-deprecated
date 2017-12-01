@@ -30,12 +30,6 @@ public class RecentlyScannedProductsActivityTest {
     public void canUseDeleteButton() {
         ArrayAdapter adapter = mActivityRule.getActivity().getmAdapter();
 
-        ArrayList<String> test_list = new ArrayList<>();
-        for (int i = 0; i < 50; i++) {
-            test_list.add(i, "Test");
-        }
-
-        //adapter.addAll(test_list);
         onView(withId(R.id.delete_recently_scanned_product_button)).perform(click());
 
         assertEquals(adapter.getCount(), 0);

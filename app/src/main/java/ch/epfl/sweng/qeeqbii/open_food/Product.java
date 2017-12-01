@@ -4,14 +4,14 @@ import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
 
+import ch.epfl.sweng.qeeqbii.clustering.ClusterClassifier;
+import ch.epfl.sweng.qeeqbii.custom_exceptions.NotOpenFileException;
 import ch.epfl.sweng.qeeqbii.custom_exceptions.ProductException;
+import ch.epfl.sweng.qeeqbii.clustering.NutrientVector;
 
-/**
- * Created by guillaume on 01/11/17.
- * Product class contains all informations relative to a given product.
- */
 
-public class Product implements Serializable {
+
+public class Product implements Serializable{
     private String mName = "";
     private String mQuantity = "";
     private String mIngredients = "";
@@ -22,19 +22,31 @@ public class Product implements Serializable {
     private String mBarcode = "";
     private Boolean mIsChecked = false;
     private float mOpacity = 1f;
+    private NutrientVector nutrientVector = null;
 
     public Product() {}
     
     public Product(String name, String quantity, String ingredients, String nutrients, String barcode, ClusterType type)
+            throws NotOpenFileException
     {
         mName = name;
         mQuantity = quantity;
         mIngredients = ingredients;
         mNutrients = nutrients;
         mBarcode = barcode;
-        mType = type;
         mIsChecked = false;
         mOpacity = 1f;
+
+
+        // Instantiating nutrientVector
+        try {
+            nutrientVector = new NutrientVector(getParsedNutrients());
+        }
+        catch (ProductException e) {
+            nutrientVector = new NutrientVector();
+        }
+
+        mType = ClusterClassifier.getClusterTypeFromNutrients(nutrientVector);
 
     }
 

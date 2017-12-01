@@ -13,6 +13,7 @@ import ch.epfl.sweng.qeeqbii.R;
  * First Level of clustering
  */
 
+
 public enum ClusterTypeFirstLevel implements ClusterType {
     CHOCOLAT,
     PETIT_DEJEUNER,
@@ -29,9 +30,9 @@ public enum ClusterTypeFirstLevel implements ClusterType {
     APERITIF,
     UNDETERMINED;
 
-    private static Map<ClusterTypeFirstLevel,Integer> imageIdMap = getImageIdMap();
+    private static Map<ClusterTypeFirstLevel,Integer> imageIdMap = createImageIdMap();
 
-    private static Map<ClusterTypeFirstLevel,Integer> getImageIdMap()
+    private static Map<ClusterTypeFirstLevel,Integer> createImageIdMap()
     {
         Map<ClusterTypeFirstLevel, Integer> map = new HashMap<>();
         map.put(CHOCOLAT, R.drawable.buiscuit);
@@ -52,6 +53,8 @@ public enum ClusterTypeFirstLevel implements ClusterType {
         return map;
     }
 
+    private static BiMap<ClusterTypeFirstLevel,String> stringMap = createStringMap();
+
     public static ClusterTypeFirstLevel getClusterType(String name)
     {
         if (stringMap.inverse().containsKey(name)) {
@@ -60,9 +63,7 @@ public enum ClusterTypeFirstLevel implements ClusterType {
         return UNDETERMINED;
     }
 
-    private static BiMap<ClusterTypeFirstLevel,String> stringMap = getStringMap();
-
-    private static BiMap<ClusterTypeFirstLevel,String> getStringMap()
+    private static BiMap<ClusterTypeFirstLevel,String> createStringMap()
     {
         HashBiMap<ClusterTypeFirstLevel,String> bimap = HashBiMap.create();
 
@@ -82,7 +83,6 @@ public enum ClusterTypeFirstLevel implements ClusterType {
         bimap.put(UNDETERMINED, "Undetermined");
 
         return bimap;
-
     }
 
     @Override

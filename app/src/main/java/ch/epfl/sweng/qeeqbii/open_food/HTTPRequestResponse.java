@@ -3,6 +3,8 @@ package ch.epfl.sweng.qeeqbii.open_food;
 import java.io.IOException;
 
 import ch.epfl.sweng.qeeqbii.R;
+import ch.epfl.sweng.qeeqbii.clustering.ClusterClassifier;
+import ch.epfl.sweng.qeeqbii.custom_exceptions.NotOpenFileException;
 
 /**
  * Created by guillaume on 09/10/17.
@@ -87,8 +89,18 @@ class HTTPRequestResponse {
     //Return a product from the HTTPRequestResponse
     Product toProduct(String language)
     {
-        return new Product(getProductName(language), getProductQuantity(), getProductIngredients(language),
-                getProductNutrients(language), mBarcode, ClusterTypeSecondLevel.UNDETERMINED);
+        if (!ClusterClassifier.isRead()) {
+            ClusterClassifier.readClusterNutrientCentersFile();
+        }
+        try {
+            return new Product(getProductName(language), getProductQuantity(), getProductIngredients(language),
+                    getProductNutrients(language), mBarcode, ClusterTypeSecondLevel.UNDETERMINED);
+        }
+        catch (NotOpenFileException e) {
+            System.err.print(e.getMessage());
+            return new Product();
+        }
+
     }
 
     // By default, we get the french version
