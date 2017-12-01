@@ -23,9 +23,11 @@ import static android.support.test.InstrumentationRegistry.getInstrumentation;
 import static android.support.test.InstrumentationRegistry.getTargetContext;
 import static android.support.test.espresso.Espresso.onView;
 import static android.support.test.espresso.action.ViewActions.click;
+import static android.support.test.espresso.assertion.ViewAssertions.matches;
 import static android.support.test.espresso.intent.Intents.intended;
 import static android.support.test.espresso.intent.VerificationModes.times;
 import static android.support.test.espresso.intent.matcher.IntentMatchers.hasComponent;
+import static android.support.test.espresso.matcher.ViewMatchers.isDisplayed;
 import static android.support.test.espresso.matcher.ViewMatchers.withId;
 import static android.support.test.runner.lifecycle.Stage.RESUMED;
 import static org.junit.Assert.assertFalse;
@@ -79,10 +81,12 @@ public class ShoppingListCheckingTest {
         onView(withId(R.id.scanToCheckButton)).perform(click());
         intended(hasComponent(new ComponentName(getTargetContext(), BarcodeScannerActivity.class)));
 
-
         // scanning pizza
         ((BarcodeScannerActivity) getActivityInstance()).processBarcode("4001724819905");
         intended(hasComponent(new ComponentName(getTargetContext(), ShoppingCartActivity.class)), times(2));
+
+        // check if button is visible
+        onView(withId(R.id.scanToCheckButton)).check(matches(isDisplayed()));
 
         // now it is checked
         assertTrue(ShoppingCart.m_items.get(0).isChecked());

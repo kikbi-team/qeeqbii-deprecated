@@ -149,4 +149,8 @@
     <string name="butchery">Butchery</string>
     <string name="show_saved_products_activity">Show saved products</string>
     <string name="Chat">Chat</string>
+    <string name="title_activity_product_comparison">Compare Products</string>
+    <string name="criteria">Criteria</string>
+    <string name="scan_at_least_two">Please scan at least two products for comparison</string>
+    <string name="cannot_obtain_nutrients">Cannot obtain nutrients</string>
 </resources>

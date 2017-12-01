@@ -18,9 +18,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 import ch.epfl.sweng.qeeqbii.open_food.ClusterType;
+import ch.epfl.sweng.qeeqbii.open_food.Product;
 import ch.epfl.sweng.qeeqbii.shopping_cart.ClusterProductList;
 
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder> {
+    // opacity for products used in the activity
+    public static float OPACITY_NORMAL = 1.0f;
+    public static float OPACITY_CHECKED = 0.5f;
+
     private Activity activity;
     private List<ClusterType> cluster_types;
     private List<Float> m_opacities;
@@ -62,6 +67,12 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         notifyDataSetChanged();
     }
 
+    // set a given product checked / unchecked
+    public static void setItemChecked(Product product, Boolean doCheck) {
+        product.setChecked(doCheck);
+        product.setOpacity(doCheck ? OPACITY_CHECKED : OPACITY_NORMAL);
+    }
+
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         LayoutInflater inflater = activity.getLayoutInflater();
@@ -87,9 +98,11 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         viewHolder.isChecked.setChecked(m_cluster_product_list.isCheckedItem(objIncome));
         viewHolder.isChecked.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener()
         {
+
             @Override
-            public void onCheckedChanged (CompoundButton buttonView, boolean isChecked){
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 //set your object's last status
+
                 m_cluster_product_list.isCheckedItem(objIncome);
                 if(isChecked) {
                     m_opacities.set(position,0.5f);
@@ -110,9 +123,12 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         return cluster_types.size();
     }
 
-    public Activity getActivity() { return activity; }
+    public Activity getActivity() {
+        return activity;
+    }
 
     public List<ClusterType> getClusters() { return cluster_types; }
+
 
     //NESTED CLASS
     class ViewHolder extends RecyclerView.ViewHolder {
@@ -131,12 +147,11 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                 @Override
                 public void onClick(View v) {
 
-                    if (((CheckBox)v).isChecked()) {
+                    if (((CheckBox) v).isChecked()) {
                         v.setAlpha(0.50f);              //CHANGES THE OPACITY OF THE VIEW
                         imageView.setAlpha(0.50f);
                         textView.setAlpha(0.50f);
-                    }
-                    else {
+                    } else {
                         v.setAlpha(1f);              //CHANGES THE OPACITY OF THE VIEW
                         imageView.setAlpha(1f);
                         textView.setAlpha(1f);

@@ -90,7 +90,7 @@ public class Product implements Serializable {
             return mParsedNutrients;
         }
 
-        if (mNutrients.matches("") | mNutrients.matches("Nutrients Not Found")) {
+        if (mNutrients.equals("") || mNutrients.equals("Nutrients Not Found") || mNutrients.equals("Empty nutrients")) {
             throw new ProductException("Nutrient list is empty for this product: unable to execute the parsing operation.");
         }
 
