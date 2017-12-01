@@ -177,6 +177,8 @@
     <string name="criteria">Criteria</string>
     <string name="scan_at_least_two">Please scan at least two products for comparison</string>
     <string name="cannot_obtain_nutrients">Cannot obtain nutrients</string>
+    <string name="name_1">Name 1</string>
+    <string name="name_2">Name 2</string>
 
 
 </resources>

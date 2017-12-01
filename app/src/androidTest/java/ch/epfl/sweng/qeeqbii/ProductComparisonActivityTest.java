@@ -56,8 +56,8 @@ public class ProductComparisonActivityTest {
     @Test
     public void testCanShowInsufficientProducts() {
         RecentlyScannedProducts.clear();
-        onView(withId(R.id.product_name_1)).check(matches(withText("Name 1")));
-        onView(withId(R.id.product_name_2)).check(matches(withText("Name 2")));
+        onView(withId(R.id.product_name_1)).check(matches(withText(R.string.name_1)));
+        onView(withId(R.id.product_name_2)).check(matches(withText(R.string.name_2)));
         ListView ls = (ListView) mActivityRule.getActivity().findViewById(R.id.graphs);
         assertTrue(ls.getCount() == 0);
     }
