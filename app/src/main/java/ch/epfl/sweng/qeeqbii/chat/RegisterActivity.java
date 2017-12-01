@@ -131,7 +131,7 @@ public class RegisterActivity extends AppCompatActivity {
 
                             if(task.isSuccessful()){
 
-                                mRegProgress.dismiss();
+                               // mRegProgress.dismiss();
 
                                 Intent mainIntent = new Intent(RegisterActivity.this, BarcodeScannerActivity.class);
                                 mainIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
