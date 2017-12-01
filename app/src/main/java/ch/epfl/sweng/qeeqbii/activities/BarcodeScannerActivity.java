@@ -161,7 +161,7 @@ public class BarcodeScannerActivity extends AppCompatActivity implements ZXingSc
     }
 
     // go to the main activity
-    private void goToMain() {
+    public void goToMain() {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
@@ -180,7 +180,7 @@ public class BarcodeScannerActivity extends AppCompatActivity implements ZXingSc
             startActivity(intent);
         } else if(action == ACTION_TYPE.ACTION_SHOPPING_CART) {
             Log.d("STATE", "Barcode " + barcode + " found, sending data to shopping list");
-            Intent intent = new Intent(this, ShoppingCartActivity.class);
+            Intent intent = new Intent(this, ShoppingListActivity.class);
             intent.putExtra(EXTRA_BARCODE, barcode);
             startActivity(intent);
         }
@@ -219,7 +219,7 @@ public class BarcodeScannerActivity extends AppCompatActivity implements ZXingSc
 
 
     public void showShoppingList(MenuItem view) {
-        Intent intent = new Intent(this, ShoppingCartActivity.class);
+        Intent intent = new Intent(this, ShoppingListActivity.class);
         startActivity(intent);
     }
 

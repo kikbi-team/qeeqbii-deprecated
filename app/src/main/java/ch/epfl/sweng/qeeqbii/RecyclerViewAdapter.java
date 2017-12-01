@@ -14,68 +14,121 @@ import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.util.ArrayList;
 import java.util.List;
 
+import ch.epfl.sweng.qeeqbii.open_food.ClusterType;
 import ch.epfl.sweng.qeeqbii.open_food.Product;
-import ch.epfl.sweng.qeeqbii.shopping_cart.ShoppingCart;
+import ch.epfl.sweng.qeeqbii.shopping_cart.ClusterProductList;
 
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder> {
-    private Activity activity;
-    private List<Product> products;
+    // opacity for products used in the activity
+    public static float OPACITY_NORMAL = 1.0f;
+    public static float OPACITY_CHECKED = 0.5f;
 
-    public RecyclerViewAdapter(Activity activity, List<Product> products) {
+    private Activity activity;
+    private List<ClusterType> cluster_types;
+    private List<Float> m_opacities;
+    private ClusterProductList m_cluster_product_list;
+    private final View.OnClickListener mOnClickListener;
+
+    public RecyclerViewAdapter(Activity activity, ClusterProductList cluster_product_list,
+                               View.OnClickListener oncliklistener) {
         this.activity = activity;
-        this.products = products;
+        cluster_types = cluster_product_list.getItems();
+        m_cluster_product_list = cluster_product_list;
+        m_opacities = new ArrayList<>();
+        mOnClickListener = oncliklistener;
+        for (int i = 0; i < cluster_types.size(); ++i)
+        {
+            m_opacities.add(1f);
+        }
+    }
+
+    public RecyclerViewAdapter(Activity activity, ClusterProductList cluster_product_list)
+    {
+        this.activity = activity;
+        cluster_types = cluster_product_list.getItems();
+        m_cluster_product_list = cluster_product_list;
+        m_opacities = new ArrayList<>();
+        mOnClickListener = null;
+        for (int i = 0; i < cluster_types.size(); ++i)
+        {
+            m_opacities.add(1f);
+        }
+    }
+
+    public void addItem(ClusterType cluster)
+    {
+        // It's added automatically !!!
+        //cluster_types.add(cluster);
+        m_opacities.add(1f);
+        m_cluster_product_list.addItemToList(cluster);
+        notifyDataSetChanged();
+    }
+
+    // set a given product checked / unchecked
+    public static void setItemChecked(Product product, Boolean doCheck) {
+        product.setChecked(doCheck);
+        product.setOpacity(doCheck ? OPACITY_CHECKED : OPACITY_NORMAL);
     }
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         LayoutInflater inflater = activity.getLayoutInflater();
         View view = inflater.inflate(R.layout.item_recycler_view, parent, false);
+        if (mOnClickListener != null)
+            view.setOnClickListener(mOnClickListener);
 
         return new ViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(ViewHolder viewHolder, final int position) {
-        viewHolder.textView.setText(products.get(position).getName());
-        viewHolder.imageView.setImageResource(products.get(position).getImageId());
+    public void onBindViewHolder(ViewHolder viewHolder, int pos) {
+        final int position = viewHolder.getAdapterPosition();
+        viewHolder.textView.setText(cluster_types.get(position).toString());
+        viewHolder.imageView.setImageResource(cluster_types.get(position).getImageId());
         //viewHolder.isChecked.setChecked(products.get(position).getChecked());
 
-        final Product objIncome = ShoppingCart.m_items.get(position);
+        final ClusterType objIncome = m_cluster_product_list.getSpecificItemInList(position);
         //in some cases, it will prevent unwanted situations
         viewHolder.isChecked.setOnCheckedChangeListener(null);
 
         //if true, your checkbox will be selected, else unselected
-        viewHolder.isChecked.setChecked(objIncome.isChecked());
+        viewHolder.isChecked.setChecked(m_cluster_product_list.isCheckedItem(objIncome));
         viewHolder.isChecked.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener()
         {
+
             @Override
-            public void onCheckedChanged (CompoundButton buttonView, boolean isChecked){
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 //set your object's last status
-                objIncome.setChecked(isChecked);
+
+                m_cluster_product_list.isCheckedItem(objIncome);
                 if(isChecked) {
-                    objIncome.setOpacity(0.5f);
+                    m_opacities.set(position,0.5f);
                 }
                 else {
-                    objIncome.setOpacity(1f);
+                    m_opacities.set(position,1f);
                 }
             }
         });
 
-        viewHolder.isChecked.setAlpha(objIncome.getOpacity());
-        viewHolder.textView.setAlpha(objIncome.getOpacity());
-        viewHolder.imageView.setAlpha(objIncome.getOpacity());
+        viewHolder.isChecked.setAlpha(m_opacities.get(position));
+        viewHolder.textView.setAlpha(m_opacities.get(position));
+        viewHolder.imageView.setAlpha(m_opacities.get(position));
     }
 
     @Override
     public int getItemCount() {
-        return products.size();
+        return cluster_types.size();
     }
 
-    public Activity getActivity() { return activity; }
+    public Activity getActivity() {
+        return activity;
+    }
 
-    public List<Product> getProducts() { return products; }
+    public List<ClusterType> getClusters() { return cluster_types; }
+
 
     //NESTED CLASS
     class ViewHolder extends RecyclerView.ViewHolder {
@@ -94,12 +147,11 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                 @Override
                 public void onClick(View v) {
 
-                    if (((CheckBox)v).isChecked()) {
+                    if (((CheckBox) v).isChecked()) {
                         v.setAlpha(0.50f);              //CHANGES THE OPACITY OF THE VIEW
                         imageView.setAlpha(0.50f);
                         textView.setAlpha(0.50f);
-                    }
-                    else {
+                    } else {
                         v.setAlpha(1f);              //CHANGES THE OPACITY OF THE VIEW
                         imageView.setAlpha(1f);
                         textView.setAlpha(1f);

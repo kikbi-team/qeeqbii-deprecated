@@ -100,7 +100,6 @@ class HTTPRequestResponse {
             System.err.print(e.getMessage());
             return new Product();
         }
-
     }
 
     // By default, we get the french version
