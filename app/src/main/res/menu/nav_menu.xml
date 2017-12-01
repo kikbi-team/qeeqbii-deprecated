@@ -8,6 +8,10 @@
         android:onClick="backToMain"
         android:icon="@drawable/ic_home_black_24dp"
         android:title="@string/main_activity" />
+    <item
+        android:id="@+id/nav_chat"
+        android:onClick="showChat"
+        android:title="@string/Chat" />
 
     <item
         android:id="@+id/nav_graphs"
@@ -61,4 +65,4 @@
         android:icon="@drawable/ic_chat_black_24dp"
          android:title="@string/Chat" />
 
-    </menu>
+</menu>
