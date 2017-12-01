@@ -25,12 +25,16 @@ public class ComparisonGraphAdapter extends BaseAdapter {
     // contained product lines
     private List<ProductsLine> lines = null;
 
+    // list of items
+    private ArrayList<ViewHolder> holders = null;
+
     // context (see BaseAdapter docs)
     private Context mContext = null;
 
     // create empty list
     public ComparisonGraphAdapter() {
         lines = new ArrayList<ProductsLine>();
+        holders = new ArrayList<ViewHolder>();
     }
 
     public void setContext(Context context) {
@@ -40,6 +44,7 @@ public class ComparisonGraphAdapter extends BaseAdapter {
     // add a product line
     public void addLine(ProductsLine line) {
         lines.add(line.copy());
+        holders.add(null);
     }
 
     // number of elements
@@ -48,15 +53,14 @@ public class ComparisonGraphAdapter extends BaseAdapter {
         return lines.size();
     }
 
-    // one item from the list
     @Override
     public Object getItem(int position) {
-        return lines.get(position);
+        return holders.get(position);
     }
 
     @Override
     public long getItemId(int position) {
-        return 0;
+        return position;
     }
 
     // paints one element in the list
@@ -83,6 +87,10 @@ public class ComparisonGraphAdapter extends BaseAdapter {
 
         // adding data to the chart
         ProductComparisonActivity.setData(holder.chart, lines.get(position));
+
+        // add current object to list of objects
+        holders.set(position, holder);
+
 
         return convertView;
     }
