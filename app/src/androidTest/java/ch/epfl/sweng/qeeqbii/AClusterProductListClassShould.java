@@ -9,10 +9,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 import ch.epfl.sweng.qeeqbii.activities.MainActivity;
+import ch.epfl.sweng.qeeqbii.open_food.ClusterType;
 import ch.epfl.sweng.qeeqbii.open_food.ClusterTypeSecondLevel;
 import ch.epfl.sweng.qeeqbii.open_food.Product;
-import ch.epfl.sweng.qeeqbii.shopping_cart.ShoppingCart;
-
+import ch.epfl.sweng.qeeqbii.shopping_cart.ClusterProductList;
 
 import static org.junit.Assert.assertEquals;
 
@@ -21,10 +21,12 @@ import static org.junit.Assert.assertEquals;
  * Test for the shopping cart
  */
 
-public class AShoppingCartClassShould {
+public class AClusterProductListClassShould {
     @Rule
     public final ActivityTestRule<MainActivity> mActivityRule =
             new ActivityTestRule<>(MainActivity.class);
+
+    private ClusterProductList shop;
 
     //TEST THIS
     /*
@@ -37,27 +39,27 @@ public class AShoppingCartClassShould {
 
     @Test
     public void testDefaultConstructor() throws InterruptedException {
-        ShoppingCart shop = new ShoppingCart();
-        ShoppingCart.emptyShoppingCartList();
-        assertEquals(true, shop.getItemsInCart().isEmpty());
+        shop = new ClusterProductList();
+        shop.emptyList();
+        assertEquals(true, shop.getItems().isEmpty());
     }
 
     @Test
     //be able to sense that one clicked the button
     public void addSpecificItemToList() throws InterruptedException {
         Product item = new Product("sausage", "500 mg", "Stuff", "cool Nutrients", "001", ClusterTypeSecondLevel.FROMAGES);
-        ShoppingCart shop = new ShoppingCart();
-        shop.addSpecificItemInCart(0, item);
-        assertEquals(shop.getSpecificItemInCart(0), item);
+        ClusterProductList shop = new ClusterProductList();
+        shop.addSpecificItemInList(0, item.getCluster());
+        assertEquals(shop.getSpecificItemInList(0), item.getCluster());
     }
 
     @Test
     public void addItemToList() throws InterruptedException {
         Product item = new Product("sausage", "500 mg", "Stuff", "cool Nutrients", "001", ClusterTypeSecondLevel.FROMAGES);
-        ShoppingCart shop = new ShoppingCart();
-        shop.addItemToCart(item);
-        List<Product> items = shop.getItemsInCart();
-        assertEquals(shop.getSpecificItemInCart(items.size()-1).getName(), item.getName());
+        ClusterProductList shop = new ClusterProductList();
+        shop.addItemToList(item.getCluster());
+        List<ClusterType> items = shop.getItems();
+        assertEquals(shop.getSpecificItemInList(items.size()-1).toString(), item.getCluster().toString());
     }
 
     @Test
@@ -69,24 +71,24 @@ public class AShoppingCartClassShould {
         content.add(new Product("Wine", "500 mg", "Stuff", "cool Nutrients", "001", ClusterTypeSecondLevel.FROMAGES));
         content.add(new Product("Beer", "500 mg", "Stuff", "cool Nutrients", "001", ClusterTypeSecondLevel.FROMAGES));
 
-        ShoppingCart shop = new ShoppingCart();
-        shop.addItemToCart(new Product("Cheese", "500 mg", "Stuff", "cool Nutrients", "001", ClusterTypeSecondLevel.FROMAGES));
-        shop.addItemToCart(new Product("Wine", "500 mg", "Stuff", "cool Nutrients", "001", ClusterTypeSecondLevel.FROMAGES));
-        shop.addItemToCart(new Product("Beer", "500 mg", "Stuff", "cool Nutrients", "001", ClusterTypeSecondLevel.FROMAGES));
+        ClusterProductList shop = new ClusterProductList();
+        shop.addItemToList(ClusterTypeSecondLevel.FROMAGES);
+        shop.addItemToList(ClusterTypeSecondLevel.FROMAGES);
+        shop.addItemToList(ClusterTypeSecondLevel.FROMAGES);
 
-        assertEquals(shop.getItemsInCart().get(0).getName(), content.get(0).getName());
-        assertEquals(shop.getItemsInCart().get(1).getName(), content.get(1).getName());
-        assertEquals(shop.getItemsInCart().get(2).getName(), content.get(2).getName());
+        assertEquals(shop.getItems().get(0).toString(), content.get(0).toString());
+        assertEquals(shop.getItems().get(1).toString(), content.get(1).toString());
+        assertEquals(shop.getItems().get(2).toString(), content.get(2).toString());
     }
 
     @Test
     public void testConstructor() throws InterruptedException {
         Product item = new Product("sausage", "500 mg", "Stuff", "cool Nutrients", "001", ClusterTypeSecondLevel.FROMAGES);
 
-        List<Product> products = new ArrayList<>();
-        ShoppingCart shop = new ShoppingCart(products);
-        shop.addItemToCart(item);
-        List<Product> items = shop.getItemsInCart();
-        assertEquals(shop.getSpecificItemInCart(items.size()-1).getName(), item.getName());
+        List<ClusterType> clusters = new ArrayList<>();
+        ClusterProductList shop = new ClusterProductList(clusters);
+        shop.addItemToList(item.getCluster());
+        List<ClusterType> items = shop.getItems();
+        assertEquals(shop.getSpecificItemInList(items.size()-1).toString(), item.toString());
     }
 }

@@ -2,27 +2,32 @@ package ch.epfl.sweng.qeeqbii.shopping_cart;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
 import java.util.Objects;
 
+import ch.epfl.sweng.qeeqbii.open_food.ClusterType;
 import ch.epfl.sweng.qeeqbii.open_food.Product;
 
 
 /**
  * Created by davidcleres on 01.11.17.
  */
-public class ShoppingCart {
+public class ClusterProductList {
 
-    private static Boolean do_mock_barcode_checking = Boolean.FALSE;
+    private Boolean do_mock_barcode_checking = Boolean.FALSE;
 
-    static public List<Product> m_items = new ArrayList<Product>();
+    private Map<ClusterType, Boolean> is_checked_item = new HashMap<>();
 
-    public static void addToShoppingCartList (Product product) {
-        m_items.add(product);
+    private List<ClusterType> m_items = new ArrayList<>();
+
+    public void addToShoppingCartList (ClusterType cluster) {
+        m_items.add(cluster);
     }
 
-    public static void emptyShoppingCartList () {
+    public static void emptyList () {
         m_items.clear();
     }
 
@@ -31,36 +36,52 @@ public class ShoppingCart {
         //addItemToCart(new Product("Please Click on + to add an item", "0 mg", "Stuff", "cool Nutrients"));
     }
 
-    public ShoppingCart(List<Product> items) {
+    public ShoppingCart(List<ClusterType> items) {
+
         m_items = items;
+        for (ClusterType cluster : m_items)
+        {
+            is_checked_item.put(cluster,false);
+        }
     }
 
-    public void addItemToCart(Product product) {
-        m_items.add(product);
+    public static void addItemToCart(ClusterType cluster) {
+        m_items.add(cluster);
     }
 
-    public void addSpecificItemInCart(int index, Product product) {
-        m_items.add(index, product);
+    public static void addSpecificItemInCart(int index, ClusterType cluster) {
+        m_items.add(index, cluster);
     }
 
-    public List<Product> getItemsInCart() {
+    public static List<ClusterType> getItems() {
         return m_items;
     }
 
-    public Product getSpecificItemInCart(int index) {
+    public static ClusterType getSpecificItemInCart(int index) {
         return m_items.get(index);
     }
 
+
+    public static Boolean isCheckedItem(ClusterType cluster)
+    {
+        return is_checked_item.get(cluster);
+    }
+
     public static void deleteSingleItemShoppingCartList() {
-        Iterator<Product> element = m_items.iterator();
+        Iterator<ClusterType> element = m_items.iterator();
         //for (Product element : m_items) {
         while (element.hasNext()) {
-            Product prod = element.next();
-            if (prod.isChecked())
+            ClusterType cluster = element.next();
+            if (is_checked_item.get(cluster))
             {
                 element.remove();
             }
         }
+    }
+
+    public static void checkItem(ClusterType cluster)
+    {
+
     }
 
     public void checkItemFromBarcode(String barcode) {
@@ -74,12 +95,12 @@ public class ShoppingCart {
     }
 
     private void checkItemFromBarcodeMock(String barcode) {
-        for (Product prod : m_items) {
+        /*for (Product prod : m_items) {
             if ((prod.getName().equals("Pizza") && barcode.equals("4001724819905")) ||
                 (prod.getName().equals("Wine") && barcode.equals("8437002948153")) ||
                 (prod.getName().equals("Cheese") && barcode.equals("2108726006400")))
             prod.setChecked(Boolean.TRUE);
-        }
+        }*/
     }
 
     public static void enableMockBarcodeChecking() {
