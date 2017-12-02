@@ -30,9 +30,10 @@ public class ShoppingListActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_shopping_cart);
-        final RecyclerView recyclerView = (RecyclerView)findViewById(R.id.recycler);
+        final RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recycler);
 
         //create and set layout manager for each RecyclerView
+
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
         //Initializing and set adapter for each RecyclerView
@@ -43,29 +44,27 @@ public class ShoppingListActivity extends AppCompatActivity {
                 int itemPosition = recyclerView.getChildLayoutPosition(v);
                 String txt = m_cart.getSpecificItemInList(itemPosition).toString();
                 Intent intent = new Intent(ShoppingListActivity.this, ProductListActivity.class);
-                intent.putExtra("product_list","ShoppingList");
+                intent.putExtra("product_list", "ShoppingList");
                 intent.putExtra("cluster", txt);
                 startActivity(intent);
             }
         };
 
-        mAdapter = new RecyclerViewAdapter(this, m_cart, onclicklistener);
+        mAdapter = new RecyclerViewAdapter(this.getLayoutInflater(), m_cart, onclicklistener);
         recyclerView.setAdapter(mAdapter);
 
-        // obtain action if present
-        /*Bundle extras = getIntent().getExtras();
-        if (extras != null && extras.containsKey(EXTRA_BARCODE)) {
-            String barcode = extras.getString(EXTRA_BARCODE);
-            Log.d("STATE", "Shopping cart: checking " + barcode);
-            m_cart.checkItemFromBarcode(barcode);
-        } else {
-            Log.d("STATE", "Regular onCreate()");
-        }*/
     }
 
     public static void addCluster(ClusterType cluster)
     {
-        mAdapter.addItem(cluster);
+        if (!mAdapter.getClusters().contains(cluster)) {
+            mAdapter.addItem(cluster);
+        }
+    }
+
+    public static ClusterProductList getClusterList()
+    {
+        return m_cart;
     }
 
     public static void addProduct(Product product)
@@ -93,13 +92,13 @@ public class ShoppingListActivity extends AppCompatActivity {
     }
 
     public void deleteShoppingList(View view) {
-        m_cart.emptyList();
+        mAdapter.clear();
         Intent intent = new Intent(this, ShoppingListActivity.class);
         startActivity(intent);
     }
 
     public void deleteSingleItem (View view) {
-        m_cart.deleteSingleItem();
+        mAdapter.deleteSingleItem();
         Intent intent = new Intent(this, ShoppingListActivity.class);
         startActivity(intent);
     }

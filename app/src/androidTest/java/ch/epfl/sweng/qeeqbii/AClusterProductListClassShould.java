@@ -40,7 +40,7 @@ public class AClusterProductListClassShould {
     @Test
     public void testDefaultConstructor() throws InterruptedException {
         shop = new ClusterProductList();
-        shop.emptyList();
+        shop.clear();
         assertEquals(true, shop.getItems().isEmpty());
     }
 

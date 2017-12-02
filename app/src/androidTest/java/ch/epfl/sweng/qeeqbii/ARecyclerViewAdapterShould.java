@@ -35,10 +35,11 @@ public class ARecyclerViewAdapterShould {
         clusters.add(item.getCluster());
         clusters.add(item.getCluster());
 
-        RecyclerViewAdapter adapter = new RecyclerViewAdapter(mActivityRule.getActivity(), new ClusterProductList(clusters));
+        RecyclerViewAdapter adapter = new RecyclerViewAdapter(mActivityRule.getActivity().getLayoutInflater(),
+                new ClusterProductList(clusters));
 
         assertEquals(adapter.getItemCount(), 3);
         assertEquals(adapter.getClusters(), clusters);
-        assertEquals(adapter.getActivity(), mActivityRule.getActivity());
+        assertEquals(adapter.getLayoutInflater(), mActivityRule.getActivity().getLayoutInflater());
     }
 }

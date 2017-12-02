@@ -9,7 +9,8 @@ import java.util.Map;
 import ch.epfl.sweng.qeeqbii.open_food.ClusterType;
 
 /**
- * Created by davidcleres on 01.11.17.
+ * Created by gmollard on 01.12.17.
+ *
  */
 public class ClusterProductList {
 
@@ -18,10 +19,6 @@ public class ClusterProductList {
     private Map<ClusterType, Boolean> is_checked_item = new HashMap<>();
 
     private List<ClusterType> m_items = new ArrayList<>();
-
-    public void emptyList () {
-        m_items.clear();
-    }
 
     public ClusterProductList(){
         //To avoid an empty list
@@ -71,9 +68,20 @@ public class ClusterProductList {
         }
     }
 
+    public void clear()
+    {
+        m_items.clear();
+        is_checked_item.clear();
+    }
+
     public void checkItem(ClusterType cluster)
     {
+        is_checked_item.put(cluster,true);
+    }
 
+    public int getClusterPosition(ClusterType cluster)
+    {
+        return m_items.indexOf(cluster);
     }
 
     public void checkItemFromBarcode(String barcode) {

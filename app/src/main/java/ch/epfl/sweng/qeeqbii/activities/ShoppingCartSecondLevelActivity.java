@@ -1,6 +1,5 @@
 package ch.epfl.sweng.qeeqbii.activities;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
@@ -23,7 +22,8 @@ import ch.epfl.sweng.qeeqbii.shopping_cart.ClusterProductList;
 public class ShoppingCartSecondLevelActivity extends AppCompatActivity {
 
     private ClusterProductList m_cart;
-    private ClusterTypeFirstLevel mFirstLevelCluster;
+
+    private static RecyclerViewAdapter mAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,13 +32,13 @@ public class ShoppingCartSecondLevelActivity extends AppCompatActivity {
 
         final RecyclerView recyclerView = (RecyclerView)findViewById(R.id.recycler_item_shopping_list);
 
-        mFirstLevelCluster = ClusterTypeFirstLevel.getClusterType(getIntent().getStringExtra("cluster"));
+        ClusterType first_level = ClusterTypeFirstLevel.getClusterType(getIntent().getStringExtra("cluster"));
 
         //create and set layout manager for each RecyclerView
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
         //Initializing and set adapter for each RecyclerView
-        ClusterType[] clustertypes = mFirstLevelCluster.getChildren();
+        ClusterType[] clustertypes = first_level.getChildren();
         m_cart = new ClusterProductList(Arrays.asList(clustertypes));
 
         View.OnClickListener onclicklistener = new View.OnClickListener() {
@@ -46,12 +46,25 @@ public class ShoppingCartSecondLevelActivity extends AppCompatActivity {
             public void onClick(View v) {
                 int itemPosition = recyclerView.getChildLayoutPosition(v);
                 String txt = m_cart.getSpecificItemInList(itemPosition).toString();
-                ShoppingListActivity.addCluster(ClusterTypeSecondLevel.getClusterType(txt));
+                ClusterTypeSecondLevel cluster = ClusterTypeSecondLevel.getClusterType(txt);
+                ShoppingListActivity.addCluster(cluster);
+                m_cart.checkItem(cluster);
+                mAdapter.setOpacityChecked(itemPosition);
+                mAdapter.notifyDataSetChanged();
             }
         };
 
-        RecyclerViewAdapter adapter = new RecyclerViewAdapter(this, m_cart, onclicklistener);
-        recyclerView.setAdapter(adapter);
+        mAdapter = new RecyclerViewAdapter(this.getLayoutInflater(), m_cart, onclicklistener);
+
+        for (ClusterType cluster: ShoppingListActivity.getClusterList().getItems())
+        {
+            if (m_cart.getItems().contains(cluster)) {
+                m_cart.checkItem(cluster);
+                mAdapter.setOpacityChecked(m_cart.getClusterPosition(cluster));
+            }
+        }
+
+        recyclerView.setAdapter(mAdapter);
     }
 
     /**
