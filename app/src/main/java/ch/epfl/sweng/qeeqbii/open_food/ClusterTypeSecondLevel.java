@@ -14,6 +14,7 @@ import ch.epfl.sweng.qeeqbii.R;
  */
 
 public enum ClusterTypeSecondLevel implements ClusterType {
+    // First level: CHOCOLAT
     BONBONS_CHEWING_GUM,
     CHOCOLAT,
     SAIN_BIO,
@@ -24,6 +25,7 @@ public enum ClusterTypeSecondLevel implements ClusterType {
     JOURS_DE_FETES_EVENEMENTS,
     BISCUITS_POUR_ENFANTS,
     BISCUITS_POUR_ALLERGIQUES,
+    DIVERS,
 
     CACAO_CHOCOLATS_EN_POUDRE,
     CONFITURES_PORTIONS_DE_MIEL,
@@ -33,19 +35,19 @@ public enum ClusterTypeSecondLevel implements ClusterType {
 
     BOISSONS_ENERGETIQUES,
     THE,
-    SIROPS_SODAS,
+    SIROP_SODA,
     CAFE,
     THE_GLACE,
     BOISSONS_SUCREES,
-    JUS_DE_FRUITS_LEGUMES,
+    JUS_DE_FRUITS_DE_LEGUMES,
     EAU_AROMATISEE,
-    BOISSONS_APERITIF,
+    BOISSONS_DAPERITIF,
     EAU_MINERALE,
-    BOISSONS_FAIBLES_CALORIES,
+    BOISSONS_FAIBLES_EN_CALORIES,
 
     TOMATES_EN_CONSERVE,
     DU_MONDE_ENTIER,
-    SOUPES_SAUCES_BOUILLONS,
+    SOUPES_SAUCES_BOUILLON,
     PATES,
     LEGUMES_A_SALADE,
     LEGUMES_LEGUMES_AU_VINAIGRE,
@@ -97,8 +99,9 @@ public enum ClusterTypeSecondLevel implements ClusterType {
     PAINS_LONGUE_CONSERVATION,
     PAINS_BIO_LONGUE_CONSERVATION,
     FARINES_SANS_GLUTEN,
+    BISCOTTES_PAIN_CROUSTILLANT,
 
-    PIZZAS_MENUS_SNACKS,
+    PIZZA_MENUS_SNACKS,
     AUTRES_PLATS_CUISINES,
     CONVENIENCE,
 
@@ -126,13 +129,14 @@ public enum ClusterTypeSecondLevel implements ClusterType {
     BEURRE,
     MARGARINE,
     DIVERS_PRODUITS_LAITIERS,
+    OEUFS,
 
     TRAITEUR,
     FRUITS_DE_MER_CREVETTES,
     POISSON_FRAIS,
 
     SNACKS,
-    BUISCUITS_APERITIFS,
+    BISCUITS_APERITIFS,
     CHIPS,
     NOIX_GRILLEES,
     POPCORN,
@@ -152,7 +156,7 @@ public enum ClusterTypeSecondLevel implements ClusterType {
 
         bimap.put(BONBONS_CHEWING_GUM, "Bonbons et Chewing-Gums");
         bimap.put(CHOCOLAT, "Chocolat");
-        bimap.put(SAIN_BIO, "Saint, BIO");
+        bimap.put(SAIN_BIO, "Sain, BIO");
         bimap.put(BISCUITS_GAUFRES, "Biscuits, Gaufres");
         bimap.put(DIVERS_CHOCOLAT, "Divers Chocolats");
         bimap.put(SPECIALITES, "Spécialités");
@@ -160,6 +164,7 @@ public enum ClusterTypeSecondLevel implements ClusterType {
         bimap.put(JOURS_DE_FETES_EVENEMENTS, "Jours de Fetes, Evenements");
         bimap.put(BISCUITS_POUR_ENFANTS, "Biscuits pour Enfants");
         bimap.put(BISCUITS_POUR_ALLERGIQUES, "Biscuits pour personnes allergiques");
+        bimap.put(DIVERS, "Biscuits divers");
 
         return bimap;
 
@@ -201,6 +206,7 @@ public enum ClusterTypeSecondLevel implements ClusterType {
             case JOURS_DE_FETES_EVENEMENTS:
             case BISCUITS_POUR_ENFANTS:
             case BISCUITS_POUR_ALLERGIQUES:
+            case DIVERS:
                 return ClusterTypeFirstLevel.CHOCOLAT;
 
             case CACAO_CHOCOLATS_EN_POUDRE:
@@ -212,20 +218,20 @@ public enum ClusterTypeSecondLevel implements ClusterType {
 
             case BOISSONS_ENERGETIQUES:
             case THE:
-            case SIROPS_SODAS:
+            case SIROP_SODA:
             case CAFE:
             case THE_GLACE:
             case BOISSONS_SUCREES:
-            case JUS_DE_FRUITS_LEGUMES:
+            case JUS_DE_FRUITS_DE_LEGUMES:
             case EAU_AROMATISEE:
-            case BOISSONS_APERITIF:
+            case BOISSONS_DAPERITIF:
             case EAU_MINERALE:
-            case BOISSONS_FAIBLES_CALORIES:
+            case BOISSONS_FAIBLES_EN_CALORIES:
                 return ClusterTypeFirstLevel.BOISSONS_CHAUDES_FROIDES;
 
             case TOMATES_EN_CONSERVE:
             case DU_MONDE_ENTIER:
-            case SOUPES_SAUCES_BOUILLONS:
+            case SOUPES_SAUCES_BOUILLON:
             case PATES:
             case LEGUMES_A_SALADE:
             case LEGUMES_LEGUMES_AU_VINAIGRE:
@@ -280,9 +286,10 @@ public enum ClusterTypeSecondLevel implements ClusterType {
             case PAINS_LONGUE_CONSERVATION:
             case PAINS_BIO_LONGUE_CONSERVATION:
             case FARINES_SANS_GLUTEN:
+            case BISCOTTES_PAIN_CROUSTILLANT:
                 return ClusterTypeFirstLevel.BOULANGERIE;
 
-            case PIZZAS_MENUS_SNACKS:
+            case PIZZA_MENUS_SNACKS:
             case AUTRES_PLATS_CUISINES:
             case CONVENIENCE:
                 return ClusterTypeFirstLevel.PLATS_CUISINES;
@@ -313,6 +320,7 @@ public enum ClusterTypeSecondLevel implements ClusterType {
             case BEURRE:
             case MARGARINE:
             case DIVERS_PRODUITS_LAITIERS:
+            case OEUFS:
                 return ClusterTypeFirstLevel.PRODUITS_LAITIERS_OEUFS;
 
             case TRAITEUR:
@@ -321,7 +329,7 @@ public enum ClusterTypeSecondLevel implements ClusterType {
                 return ClusterTypeFirstLevel.POISSON_FRUITS_DE_MER;
 
             case SNACKS:
-            case BUISCUITS_APERITIFS:
+            case BISCUITS_APERITIFS:
             case CHIPS:
             case NOIX_GRILLEES:
             case POPCORN:

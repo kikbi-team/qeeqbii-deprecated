@@ -37,12 +37,7 @@ public class CancerDataQueryTest {
 
     @Before
     public void Initialize() {
-        try {
-            CancerDataBase.readCSVFile(mActivityRule.getActivity().getApplicationContext());
-        }
-        catch(Exception e) {
-            System.err.println(e.getMessage());
-        }
+        CancerDataBase.readCSVFile(mActivityRule.getActivity().getApplicationContext());
     }
 
 

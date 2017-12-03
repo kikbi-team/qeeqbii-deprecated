@@ -30,7 +30,7 @@ abstract class QueryCancerDataBase {
     // distance.
     private Set<BkTreeSearcher.Match<? extends String>> levenshteinMatchFilter(String queried_substance)
             throws NotOpenFileException, NullInputException {
-        if (CancerDataBase.getOpenState() == 0) {
+        if (!CancerDataBase.isRead()) {
             throw new NotOpenFileException("Read the carcinogenic database before trying to query it.\n");
         }
         if (queried_substance == null) {

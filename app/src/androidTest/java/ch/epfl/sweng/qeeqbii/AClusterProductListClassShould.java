@@ -47,7 +47,7 @@ public class AClusterProductListClassShould {
     @Test
     //be able to sense that one clicked the button
     public void addSpecificItemToList() throws InterruptedException {
-        Product item = new Product("sausage", "500 mg", "Stuff", "cool Nutrients", "001", ClusterTypeSecondLevel.FROMAGES);
+        Product item = new Product("sausage", "500 mg", "Stuff", "Empty nutrients", "001", ClusterTypeSecondLevel.FROMAGES);
         ClusterProductList shop = new ClusterProductList();
         shop.addSpecificItemInList(0, item.getCluster());
         assertEquals(shop.getSpecificItemInList(0), item.getCluster());
@@ -55,7 +55,7 @@ public class AClusterProductListClassShould {
 
     @Test
     public void addItemToList() throws InterruptedException {
-        Product item = new Product("sausage", "500 mg", "Stuff", "cool Nutrients", "001", ClusterTypeSecondLevel.FROMAGES);
+        Product item = new Product("sausage", "500 mg", "Stuff", "Empty nutrients", "001", ClusterTypeSecondLevel.FROMAGES);
         ClusterProductList shop = new ClusterProductList();
         shop.addItemToList(item.getCluster());
         List<ClusterType> items = shop.getItems();
@@ -67,9 +67,9 @@ public class AClusterProductListClassShould {
 
         List<Product> content = new ArrayList<>();
 
-        content.add(new Product("Cheese", "500 mg", "Stuff", "cool Nutrients", "001", ClusterTypeSecondLevel.FROMAGES));
-        content.add(new Product("Wine", "500 mg", "Stuff", "cool Nutrients", "001", ClusterTypeSecondLevel.FROMAGES));
-        content.add(new Product("Beer", "500 mg", "Stuff", "cool Nutrients", "001", ClusterTypeSecondLevel.FROMAGES));
+        content.add(new Product("Cheese", "500 mg", "Stuff", "Empty nutrients", "001", ClusterTypeSecondLevel.FROMAGES));
+        content.add(new Product("Wine", "500 mg", "Stuff", "Empty nutrients", "001", ClusterTypeSecondLevel.FROMAGES));
+        content.add(new Product("Beer", "500 mg", "Stuff", "Empty nutrients", "001", ClusterTypeSecondLevel.FROMAGES));
 
         ClusterProductList shop = new ClusterProductList();
         shop.addItemToList(ClusterTypeSecondLevel.FROMAGES);
@@ -83,7 +83,7 @@ public class AClusterProductListClassShould {
 
     @Test
     public void testConstructor() throws InterruptedException {
-        Product item = new Product("sausage", "500 mg", "Stuff", "cool Nutrients", "001", ClusterTypeSecondLevel.FROMAGES);
+        Product item = new Product("sausage", "500 mg", "Stuff", "Empty nutrients", "001", ClusterTypeSecondLevel.FROMAGES);
 
         List<ClusterType> clusters = new ArrayList<>();
         ClusterProductList shop = new ClusterProductList(clusters);

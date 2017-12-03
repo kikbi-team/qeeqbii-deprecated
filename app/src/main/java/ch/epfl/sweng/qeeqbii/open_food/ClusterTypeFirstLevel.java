@@ -106,7 +106,8 @@ public enum ClusterTypeFirstLevel implements ClusterType {
                         ClusterTypeSecondLevel.BLEVITA,
                         ClusterTypeSecondLevel.JOURS_DE_FETES_EVENEMENTS,
                         ClusterTypeSecondLevel.BISCUITS_POUR_ENFANTS,
-                        ClusterTypeSecondLevel.BISCUITS_POUR_ALLERGIQUES};
+                        ClusterTypeSecondLevel.BISCUITS_POUR_ALLERGIQUES,
+                        ClusterTypeSecondLevel.DIVERS};
 
 
 
@@ -120,20 +121,20 @@ public enum ClusterTypeFirstLevel implements ClusterType {
             case BOISSONS_CHAUDES_FROIDES:
                 return new ClusterTypeSecondLevel[]{ClusterTypeSecondLevel.BOISSONS_ENERGETIQUES,
                         ClusterTypeSecondLevel.THE,
-                        ClusterTypeSecondLevel.SIROPS_SODAS,
+                        ClusterTypeSecondLevel.SIROP_SODA,
                         ClusterTypeSecondLevel.CAFE,
                         ClusterTypeSecondLevel.THE_GLACE,
                         ClusterTypeSecondLevel.BOISSONS_SUCREES,
-                        ClusterTypeSecondLevel.JUS_DE_FRUITS_LEGUMES,
+                        ClusterTypeSecondLevel.JUS_DE_FRUITS_DE_LEGUMES,
                         ClusterTypeSecondLevel.EAU_AROMATISEE,
-                        ClusterTypeSecondLevel.BOISSONS_APERITIF,
+                        ClusterTypeSecondLevel.BOISSONS_DAPERITIF,
                         ClusterTypeSecondLevel.EAU_MINERALE,
-                        ClusterTypeSecondLevel.BOISSONS_FAIBLES_CALORIES};
+                        ClusterTypeSecondLevel.BOISSONS_FAIBLES_EN_CALORIES};
 
             case GARNITURES_INGREDIENTS:
                 return new ClusterTypeSecondLevel[]{ClusterTypeSecondLevel.TOMATES_EN_CONSERVE,
                         ClusterTypeSecondLevel.DU_MONDE_ENTIER,
-                        ClusterTypeSecondLevel.SOUPES_SAUCES_BOUILLONS,
+                        ClusterTypeSecondLevel.SOUPES_SAUCES_BOUILLON,
                         ClusterTypeSecondLevel.PATES,
                         ClusterTypeSecondLevel.LEGUMES_A_SALADE,
                         ClusterTypeSecondLevel.LEGUMES_LEGUMES_AU_VINAIGRE,
@@ -187,11 +188,12 @@ public enum ClusterTypeFirstLevel implements ClusterType {
                         ClusterTypeSecondLevel.PRODUITS_SANS_GLUTEN,
                         ClusterTypeSecondLevel.PAINS_LONGUE_CONSERVATION,
                         ClusterTypeSecondLevel.PAINS_BIO_LONGUE_CONSERVATION,
-                        ClusterTypeSecondLevel.FARINES_SANS_GLUTEN
+                        ClusterTypeSecondLevel.FARINES_SANS_GLUTEN,
+                        ClusterTypeSecondLevel.BISCOTTES_PAIN_CROUSTILLANT
                 };
 
             case PLATS_CUISINES:
-                return new ClusterTypeSecondLevel[]{ClusterTypeSecondLevel.PIZZAS_MENUS_SNACKS,
+                return new ClusterTypeSecondLevel[]{ClusterTypeSecondLevel.PIZZA_MENUS_SNACKS,
                         ClusterTypeSecondLevel.AUTRES_PLATS_CUISINES,
                         ClusterTypeSecondLevel.CONVENIENCE};
 
@@ -221,7 +223,8 @@ public enum ClusterTypeFirstLevel implements ClusterType {
                         ClusterTypeSecondLevel.SERE,
                         ClusterTypeSecondLevel.BEURRE,
                         ClusterTypeSecondLevel.MARGARINE,
-                        ClusterTypeSecondLevel.DIVERS_PRODUITS_LAITIERS};
+                        ClusterTypeSecondLevel.DIVERS_PRODUITS_LAITIERS,
+                        ClusterTypeSecondLevel.OEUFS};
 
             case POISSON_FRUITS_DE_MER:
                 return new ClusterTypeSecondLevel[]{ClusterTypeSecondLevel.TRAITEUR,
@@ -230,7 +233,7 @@ public enum ClusterTypeFirstLevel implements ClusterType {
 
             case APERITIF:
                 return new ClusterTypeSecondLevel[]{ClusterTypeSecondLevel.SNACKS,
-                        ClusterTypeSecondLevel.BUISCUITS_APERITIFS,
+                        ClusterTypeSecondLevel.BISCUITS_APERITIFS,
                         ClusterTypeSecondLevel.CHIPS,
                         ClusterTypeSecondLevel.NOIX_GRILLEES,
                         ClusterTypeSecondLevel.POPCORN};

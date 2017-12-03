@@ -5,6 +5,7 @@ import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
 import android.view.MenuItem;
 
+import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -17,6 +18,8 @@ import ch.epfl.sweng.qeeqbii.activities.GraphsActivity;
 import ch.epfl.sweng.qeeqbii.activities.MainActivity;
 import ch.epfl.sweng.qeeqbii.activities.SavedProductsDatesActivity;
 import ch.epfl.sweng.qeeqbii.activities.ShoppingListActivity;
+import ch.epfl.sweng.qeeqbii.clustering.ClusterClassifier;
+import ch.epfl.sweng.qeeqbii.clustering.NutrientNameConverter;
 import ch.epfl.sweng.qeeqbii.shopping_cart.ShoppingCartStatistics;
 
 import static android.support.test.InstrumentationRegistry.getInstrumentation;
@@ -29,6 +32,7 @@ public class CancerDataShowActivityTest {
     @Rule
     public final ActivityTestRule<CancerDataShowActivity> mActivityRule =
             new ActivityTestRule<>(CancerDataShowActivity.class);
+
 
 
     @Test

@@ -49,7 +49,7 @@ class HTTPRequestResponse {
 
 
     private String getProductNutrients(String language) {
-        System.out.println(resp_body);
+        //System.out.println(resp_body);
         String str = "";
         int nutrients_ind = resp_body.indexOf("nutrients\":");
         if (nutrients_ind == -1) {
@@ -89,17 +89,8 @@ class HTTPRequestResponse {
     //Return a product from the HTTPRequestResponse
     Product toProduct(String language)
     {
-        if (!ClusterClassifier.isRead()) {
-            ClusterClassifier.readClusterNutrientCentersFile();
-        }
-        try {
-            return new Product(getProductName(language), getProductQuantity(), getProductIngredients(language),
-                    getProductNutrients(language), mBarcode, ClusterTypeSecondLevel.UNDETERMINED);
-        }
-        catch (NotOpenFileException e) {
-            System.err.print(e.getMessage());
-            return new Product();
-        }
+        return new Product(getProductName(language), getProductQuantity(), getProductIngredients(language),
+                getProductNutrients(language), mBarcode, null);
     }
 
     // By default, we get the french version

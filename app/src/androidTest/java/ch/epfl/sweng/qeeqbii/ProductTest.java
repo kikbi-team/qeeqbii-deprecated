@@ -33,13 +33,13 @@ public class ProductTest {
 
     @Test
     public void getNameIdTest() {
-        Product item = new Product("cheese", "500 mg", "Stuff", "cool Nutrients", "001", ClusterTypeSecondLevel.FROMAGES);
+        Product item = new Product("cheese", "500 mg", "Stuff", "Empty nutrients", "001", ClusterTypeSecondLevel.FROMAGES);
         assertEquals(item.getImageId(), R.drawable.cheese);
     }
 
     @Test
     public void getPaserIngredientTest() throws ProductException {
-        Product item = new Product("cheese", "500 mg", "Stuff", "cool Nutrients", "001", ClusterTypeSecondLevel.FROMAGES);
+        Product item = new Product("cheese", "500 mg", "Stuff", "Empty nutrients", "001", ClusterTypeSecondLevel.FROMAGES);
         String[] ingredients = new String[]{"beans", "tomato"};
         item.setParsedIngredients(ingredients);
         assertEquals(ingredients, item.getParsedIngredients());

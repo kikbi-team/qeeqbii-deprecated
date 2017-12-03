@@ -18,6 +18,12 @@ import android.widget.Toast;
 import com.google.zxing.Result;
 
 import ch.epfl.sweng.qeeqbii.R;
+import ch.epfl.sweng.qeeqbii.cancer.CancerDataBase;
+import ch.epfl.sweng.qeeqbii.clustering.ClusterClassifier;
+import ch.epfl.sweng.qeeqbii.clustering.NutrientNameConverter;
+import ch.epfl.sweng.qeeqbii.clustering.NutrientVector;
+import ch.epfl.sweng.qeeqbii.custom_exceptions.BadlyFormatedFile;
+import ch.epfl.sweng.qeeqbii.custom_exceptions.NotOpenFileException;
 import ch.epfl.sweng.qeeqbii.shopping_cart.ShoppingCartStatistics;
 import me.dm7.barcodescanner.zxing.ZXingScannerView;
 
@@ -95,6 +101,12 @@ public class BarcodeScannerActivity extends AppCompatActivity implements ZXingSc
         } else {
             action = ACTION_DEFAULT;
         }
+
+
+        // Reading files that are needed in the rest of the app
+        this.readCSVFiles();
+
+
 
         Log.d("STATE", "EXTRA_ACTION is " + action);
     }
@@ -199,6 +211,34 @@ public class BarcodeScannerActivity extends AppCompatActivity implements ZXingSc
 
         return super.onKeyDown(keyCode, event);
     }
+
+
+
+    public void readCSVFiles() {
+        if (!NutrientNameConverter.isRead()) {
+            NutrientNameConverter.readCSVFile(getApplicationContext());
+        }
+
+
+        if (!ClusterClassifier.isRead()) {
+            try {
+                ClusterClassifier.readClusterNutrientCentersFile(getApplicationContext());
+            }
+            catch (NotOpenFileException|BadlyFormatedFile e) {
+                System.err.println(e.getMessage());
+            }
+        }
+
+        if (!CancerDataBase.isRead()) {
+            CancerDataBase.readCSVFile(getApplicationContext());
+        }
+    }
+
+
+
+
+
+
 
     public boolean onOptionsItemSelected(MenuItem item) {
 

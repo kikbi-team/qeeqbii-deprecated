@@ -29,7 +29,7 @@ public class ARecyclerViewAdapterShould {
     @Test
     public void testConstructor() throws InterruptedException {
         Date date = new Date();
-        Product item = new Product("cheese", "500 mg", "Stuff", "cool Nutrients", "001", ClusterTypeSecondLevel.FROMAGES);
+        Product item = new Product("cheese", "500 mg", "Stuff", "Empty nutrients", "001", ClusterTypeSecondLevel.FROMAGES);
         List<ClusterType> clusters = new ArrayList<>();
         clusters.add(item.getCluster());
         clusters.add(item.getCluster());
