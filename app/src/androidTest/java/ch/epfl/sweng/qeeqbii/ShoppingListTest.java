@@ -65,5 +65,29 @@ public class ShoppingListTest {
         onView(withText(ClusterTypeSecondLevel.PATES_A_TARTINER.toString())).check(doesNotExist());
     }
 
+    @Test
+    public void deleteAll()
+    {
+        onView(withId(R.id.addButton)).perform(click());
+        onView(withText(ClusterTypeFirstLevel.PETIT_DEJEUNER.toString())).perform(click());
+        onView(withText(ClusterTypeSecondLevel.MIEL.toString())).perform(click());
+        onView(withText(ClusterTypeSecondLevel.CONFITURES.toString())).perform(click());
+        onView(withText(ClusterTypeSecondLevel.PATES_A_TARTINER.toString())).perform(click());
+        onView(withText(ClusterTypeSecondLevel.PATES_A_TARTINER.toString())).perform(click());
+        onView(withText(ClusterTypeSecondLevel.CACAO_CHOCOLATS_EN_POUDRE.toString())).perform(click());
+        pressBack();
+        onView(withText(ClusterTypeFirstLevel.BOISSONS_CHAUDES_FROIDES.toString())).perform(click());
+        onView(withText(ClusterTypeSecondLevel.SIROPS_SODAS.toString())).perform(click());
+        pressBack();
+        pressBack();
+
+        onView(withId(R.id.deleteButton)).perform(click());
+        onView(withText(ClusterTypeSecondLevel.CACAO_CHOCOLATS_EN_POUDRE.toString())).check(doesNotExist());
+        onView(withText(ClusterTypeSecondLevel.MIEL.toString())).check(doesNotExist());
+        onView(withText(ClusterTypeSecondLevel.PATES_A_TARTINER.toString())).check(doesNotExist());
+        onView(withText(ClusterTypeSecondLevel.CONFITURES.toString())).check(doesNotExist());
+        onView(withText(ClusterTypeSecondLevel.SIROPS_SODAS.toString())).check(doesNotExist());
+    }
+
 
 }
