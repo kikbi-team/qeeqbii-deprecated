@@ -107,6 +107,10 @@ public class BarcodeToProductActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void buyProduct(View view) {
+        ShoppingListActivity.addProduct(RecentlyScannedProducts.getProduct(barcode));
+    }
+
     public boolean onOptionsItemSelected(MenuItem item) {
 
         return mToggle.onOptionsItemSelected(item) || super.onOptionsItemSelected(item);
@@ -124,7 +128,7 @@ public class BarcodeToProductActivity extends AppCompatActivity {
     }
 
     public void showShoppingList(MenuItem view) {
-        Intent intent = new Intent(this, ShoppingCartActivity.class);
+        Intent intent = new Intent(this, ShoppingListActivity.class);
         startActivity(intent);
     }
 

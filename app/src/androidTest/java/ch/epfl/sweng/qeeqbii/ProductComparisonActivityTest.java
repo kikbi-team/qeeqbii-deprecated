@@ -36,6 +36,7 @@ import static android.support.test.espresso.matcher.ViewMatchers.isRoot;
 import static android.support.test.espresso.matcher.ViewMatchers.withId;
 import static android.support.test.espresso.matcher.ViewMatchers.withText;
 import static android.support.test.runner.lifecycle.Stage.RESUMED;
+import static java.lang.Thread.sleep;
 import static org.hamcrest.core.StringStartsWith.startsWith;
 import static org.junit.Assert.assertTrue;
 
@@ -99,6 +100,13 @@ public class ProductComparisonActivityTest {
 
         intended(hasComponent(new ComponentName(getTargetContext(), BarcodeScannerActivity.class)), times(1));
         ((BarcodeScannerActivity) getActivityInstance()).goToMain();
+
+        try {
+            sleep(5000);
+        } catch (Exception e)
+        {
+
+        }
 
         // go to product comparison
         onView(withId(R.id.productComparisonButton)).perform(click());

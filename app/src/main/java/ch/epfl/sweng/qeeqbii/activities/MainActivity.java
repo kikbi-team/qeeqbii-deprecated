@@ -79,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void showShoppingList(MenuItem view) {
-        Intent intent = new Intent(this, ShoppingCartActivity.class);
+        Intent intent = new Intent(this, ShoppingListActivity.class);
         startActivity(intent);
     }
 

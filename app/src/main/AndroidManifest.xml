@@ -157,17 +157,24 @@
             android:exported="true" />
         <activity android:name=".activities.GraphsActivity" />
         <activity
-            android:name=".activities.ShoppingListActivity"
+            android:name=".activities.ShoppingCartFirstLevelActivity"
             android:label="@string/title_activity_shopping_cart"
             android:theme="@style/ThemeOverlay.MyNoTitleActivity" />
         <activity
-            android:name=".activities.ShoppingCartActivity"
+            android:name=".activities.ShoppingCartSecondLevelActivity"
+            android:label="@string/title_activity_shopping_cart"
+            android:theme="@style/ThemeOverlay.MyNoTitleActivity" />
+        <activity
+            android:name=".activities.ShoppingListActivity"
             android:label="@string/title_activity_shopping_cart"
             android:theme="@style/ThemeOverlay.MyNoTitleActivity" />
         <activity
             android:name=".activities.ShowProductActivity"
             android:exported="true" />
         <activity android:name=".activities.ShareOnFacebookActivity" />
+        <activity
+            android:name=".activities.ProductListActivity"
+            android:exported="true" />
         <activity
             android:name=".shopping_cart.ShoppingCartStatistics"
             android:label="@string/title_activity_shopping_cart_statistics"

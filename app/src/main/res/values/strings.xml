@@ -39,6 +39,7 @@
     <!-- Facebook events -->
     <!-- Text and labels -->
     <string name="search_in_database">SEARCH FOR HARMFUL\nINGREDIENTS</string>
+    <string name="buy_product">Buy this product</string>
     <!-- XML -->
     <string name="levenshtein_nquery">LEVENSHTEIN\nQUERY</string>
     <string name="ratcliff_nquery">RATCLIFF\nQUERY</string>
@@ -61,8 +62,11 @@
     <string name="close"> Close </string>
     <string name="nav_header">Menu</string>
 
+    <string name="title_activity_shopping_cart_first_level">ShoppingCart</string>
+    <string name="title_activity_shopping_cart_second_level">ShoppingCart</string>
     <string name="title_activity_shopping_cart">ShoppingCart</string>
     <string name="shopping_cart">Shopping Cart</string>
+    <string name="shopping_list">Shopping List</string>
     <string name="cheese">cheese</string>
     <string name="apple">apple</string>
     <string name="chips">chips</string>

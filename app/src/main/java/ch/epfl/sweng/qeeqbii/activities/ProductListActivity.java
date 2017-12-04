@@ -12,29 +12,43 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-import java.util.Date;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 import ch.epfl.sweng.qeeqbii.R;
-import ch.epfl.sweng.qeeqbii.chat.MainActivityChat;
+import ch.epfl.sweng.qeeqbii.chat.ChatActivity;
+import ch.epfl.sweng.qeeqbii.open_food.ClusterTypeSecondLevel;
+import ch.epfl.sweng.qeeqbii.open_food.Product;
 import ch.epfl.sweng.qeeqbii.open_food.RecentlyScannedProducts;
-import ch.epfl.sweng.qeeqbii.open_food.SavedProductsDatabase;
 import ch.epfl.sweng.qeeqbii.shopping_cart.ShoppingCartStatistics;
 
 /**
- * Created by guillaume on 14/11/17.
- * This activity shows the list of products scanned at a given date.
+ * Created by guillaume on 01/12/17.
+ * A simple list of products
  */
 
-public class SavedProductsDatesActivity extends AppCompatActivity {
+public class ProductListActivity extends AppCompatActivity {
 
-    private static final String TAG = "SavedProductsDatesActiv";
+    private static final String TAG = "ProductListActivity";
+
+    private List<Product> product_list = new ArrayList<>();
+
+    private Map<String, Integer> name_to_index_map = new HashMap<>();
+
+    ArrayAdapter<String> mAdapter;
+
     private ActionBarDrawerToggle mToggle;
-    private ArrayAdapter mAdapter;
 
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recently_scanned_products);
+
+        ListView list_saved_products= (ListView) findViewById(R.id.recently_scanned_products_list_view);
+
+        String[] product_names = new String[0];
 
         DrawerLayout mDrawerLayout = (DrawerLayout) findViewById(R.id.SavedProductsLayout);
         mToggle = new ActionBarDrawerToggle(this, mDrawerLayout, R.string.open, R.string.close);
@@ -44,45 +58,50 @@ public class SavedProductsDatesActivity extends AppCompatActivity {
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        ListView dates_saved_products= (ListView) findViewById(R.id.recently_scanned_products_list_view);
-
-        Date[] dates = new Date[0];
-
         try
         {
-            if (getIntent().hasExtra("test")) {
-                SavedProductsDatabase.load(getApplicationContext()
-                        .getResources().openRawResource(getIntent().getIntExtra("test",0)));
-            } else {
-                SavedProductsDatabase.load(getApplicationContext());
+            String which_list_to_get = getIntent().getStringExtra("product_list");
+            if( which_list_to_get.equals("ShoppingList") )
+            {
+                product_list = ShoppingListActivity.getProductList(ClusterTypeSecondLevel.getClusterType(getIntent()
+                        .getStringExtra("cluster")));
             }
-            dates = SavedProductsDatabase.getDates();
 
+            product_names = new String[product_list.size()];
+            int i = 0;
+            for (Product prod : product_list)
+            {
+                product_names[i] = prod.getName();
+                name_to_index_map.put(prod.getName(), i);
+                ++i;
+            }
         } catch (Exception e)
         {
             Log.d(TAG,e.getMessage());
         }
 
-        ArrayAdapter<Date> mAdapter = new ArrayAdapter<>(this.getApplicationContext(), R.layout.list_item_recently_scanned_product,
-                R.id.recently_scanned_product_text_view, dates);
-        dates_saved_products.setAdapter(mAdapter);
+        mAdapter = new ArrayAdapter<>(this.getApplicationContext(), R.layout.list_item_recently_scanned_product,
+                R.id.recently_scanned_product_text_view, product_names);
 
-        dates_saved_products.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        list_saved_products.setAdapter(mAdapter);
+
+        list_saved_products.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
             @Override
             public void onItemClick(AdapterView<?> adapter, View view, int position,
                                     long arg3) {
-                Intent intent = new Intent(SavedProductsDatesActivity.this, SavedProductsListActivity.class);
-                Date date = (Date) adapter.getItemAtPosition(position);
-                intent.putExtra("date",date);
+                Intent intent = new Intent(ProductListActivity.this, ShowProductActivity.class);
+                String txt = (String) adapter.getItemAtPosition(position);
+                intent.putExtra("product", product_list.get(name_to_index_map.get(txt)));
                 startActivity(intent);
             }
 
         });
     }
 
+
     public void deleteItems(View view) {
-        RecentlyScannedProducts.clear();
+        product_list.clear();
         mAdapter.clear();
         mAdapter.notifyDataSetChanged();
     }
@@ -93,6 +112,10 @@ public class SavedProductsDatesActivity extends AppCompatActivity {
         view.setVisibility(View.INVISIBLE);
         ShareOnFacebookActivity.view = findViewById(R.id.recently_scanned_products);
         startActivity(intent);
+    }
+
+    public ArrayAdapter getmAdapter() {
+        return mAdapter;
     }
 
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -110,6 +133,7 @@ public class SavedProductsDatesActivity extends AppCompatActivity {
         Intent intent = new Intent(this, BarcodeScannerActivity.class);
         startActivity(intent);
     }
+
 
 
     public void showShoppingList(MenuItem view) {
@@ -148,7 +172,7 @@ public class SavedProductsDatesActivity extends AppCompatActivity {
     }
 
     public void showChat(MenuItem item) {
-        Intent intent = new Intent(this, MainActivityChat.class);
+        Intent intent = new Intent(this, ChatActivity.class);
         startActivity(intent);
     }
 }

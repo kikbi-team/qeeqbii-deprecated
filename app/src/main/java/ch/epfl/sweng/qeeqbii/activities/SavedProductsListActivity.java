@@ -50,9 +50,7 @@ public class SavedProductsListActivity extends AppCompatActivity {
         try
         {
             SavedProductsDatabase.load(getApplicationContext());
-            System.out.println("Get relative products.");
             mProducts = SavedProductsDatabase.getProductsFromDate((Date) getIntent().getSerializableExtra("date"));
-            System.out.println("mProducts initialized");
             product_names = new String[mProducts.length];
             int i = 0;
             for (Product prod : mProducts)
@@ -123,7 +121,7 @@ public class SavedProductsListActivity extends AppCompatActivity {
 
 
     public void showShoppingList(MenuItem view) {
-        Intent intent = new Intent(this, ShoppingCartActivity.class);
+        Intent intent = new Intent(this, ShoppingListActivity.class);
         startActivity(intent);
     }
 

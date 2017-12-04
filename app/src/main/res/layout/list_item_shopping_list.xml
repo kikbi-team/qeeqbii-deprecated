@@ -13,14 +13,14 @@
         android:layout_height="wrap_content">
 
         <TextView
-            android:id="@+id/label"
+            android:id="@+id/label_item_shopping_list"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@+id/label"
             android:textSize="30sp" />
 
         <android.support.v7.widget.RecyclerView
-            android:id="@+id/recycler"
+            android:id="@+id/recycler_item_shopping_list"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
     </RelativeLayout>

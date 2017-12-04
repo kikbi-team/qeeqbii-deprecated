@@ -15,7 +15,7 @@ import ch.epfl.sweng.qeeqbii.activities.CancerDataShowActivity;
 import ch.epfl.sweng.qeeqbii.activities.GraphsActivity;
 import ch.epfl.sweng.qeeqbii.activities.MainActivity;
 import ch.epfl.sweng.qeeqbii.activities.SavedProductsDatesActivity;
-import ch.epfl.sweng.qeeqbii.activities.ShoppingCartActivity;
+import ch.epfl.sweng.qeeqbii.activities.ShoppingListActivity;
 import ch.epfl.sweng.qeeqbii.chat.MainActivityChat;
 import ch.epfl.sweng.qeeqbii.shopping_cart.ShoppingCartStatistics;
 
@@ -108,7 +108,7 @@ public class barcodeScannerSliderTest {
     @Test
     public void testGoToShoppingCart() {
         // register next activity that need to be monitored.
-        Instrumentation.ActivityMonitor activityMonitor = getInstrumentation().addMonitor(ShoppingCartActivity.class.getName(), null, false);
+        Instrumentation.ActivityMonitor activityMonitor = getInstrumentation().addMonitor(ShoppingListActivity.class.getName(), null, false);
 
         // open current activity.
         BarcodeScannerActivity myActivity = mActivityRule.getActivity();
@@ -117,7 +117,7 @@ public class barcodeScannerSliderTest {
 
         //Watch for the timeout
         //example values 5000 if in ms, or 5 if it's in seconds.
-        ShoppingCartActivity nextActivity = (ShoppingCartActivity) getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 5000);
+        ShoppingListActivity nextActivity = (ShoppingListActivity) getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 5000);
         // next activity is opened and captured.
         assertNotNull(nextActivity);
         nextActivity.finish();
