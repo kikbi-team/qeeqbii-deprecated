@@ -14,7 +14,6 @@ import java.util.List;
 import ch.epfl.sweng.qeeqbii.R;
 import ch.epfl.sweng.qeeqbii.RecyclerViewAdapter;
 import ch.epfl.sweng.qeeqbii.open_food.ClusterType;
-import ch.epfl.sweng.qeeqbii.open_food.ClusterTypeSecondLevel;
 import ch.epfl.sweng.qeeqbii.open_food.Product;
 import ch.epfl.sweng.qeeqbii.shopping_cart.ClusterProductList;
 
@@ -30,7 +29,7 @@ public class ShoppingListActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_shopping_cart);
+        setContentView(R.layout.activity_shopping_list);
         final RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recycler);
 
         //create and set layout manager for each RecyclerView
@@ -98,24 +97,33 @@ public class ShoppingListActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void deleteShoppingList(View view) {
-        mAdapter.clear();
-        Intent intent = new Intent(this, ShoppingListActivity.class);
-        startActivity(intent);
+    public static void checkOrUncheckItem(ClusterType cluster)
+    {
+        m_cart.checkOrUncheckItem(cluster);
     }
 
-    public void deleteSingleItem (View view) {
+    public void deleteShoppingList(View view) {
+        List<ClusterType> clustersToDelete = new ArrayList<>();
         for (ClusterType cluster : m_cart.getItems()) {
-            if (m_cart.isCheckedItem(cluster)) {
-                deleteCluster(cluster);
-            }
-            mAdapter.notifyDataSetChanged();
+            clustersToDelete.add(cluster);
+        }
+        for (ClusterType cluster: clustersToDelete)
+        {
+            deleteCluster(cluster);
         }
     }
 
-    public static void selectItem(View view)
-    {
-        addCluster(ClusterTypeSecondLevel.FROMAGES);
+    public void deleteSingleItem (View view) {
+        List<ClusterType> clustersToDelete = new ArrayList<>();
+        for (ClusterType cluster : m_cart.getItems()) {
+            if (m_cart.isCheckedItem(cluster)) {
+                clustersToDelete.add(cluster);
+            }
+        }
+        for (ClusterType cluster: clustersToDelete)
+        {
+            deleteCluster(cluster);
+        }
     }
 
     public void scanToCheck(View view) {

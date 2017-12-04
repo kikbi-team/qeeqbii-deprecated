@@ -15,12 +15,8 @@ import ch.epfl.sweng.qeeqbii.activities.CancerDataShowActivity;
 import ch.epfl.sweng.qeeqbii.activities.GraphsActivity;
 import ch.epfl.sweng.qeeqbii.activities.MainActivity;
 import ch.epfl.sweng.qeeqbii.activities.SavedProductsDatesActivity;
-<<<<<<< HEAD
 import ch.epfl.sweng.qeeqbii.activities.ShoppingListActivity;
-=======
-import ch.epfl.sweng.qeeqbii.activities.ShoppingCartActivity;
 import ch.epfl.sweng.qeeqbii.chat.MainActivityChat;
->>>>>>> master
 import ch.epfl.sweng.qeeqbii.shopping_cart.ShoppingCartStatistics;
 import static android.support.test.InstrumentationRegistry.getInstrumentation;
 import static junit.framework.Assert.assertNotNull;

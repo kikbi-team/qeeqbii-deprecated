@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/recycler_view_shopping_list"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginBottom="8dp">
@@ -10,7 +11,7 @@
         android:layout_height="wrap_content">
 
         <ImageView
-            android:id="@+id/shoppingListImage"
+            android:id="@+id/shoppingImage"
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:src="@drawable/wine"
@@ -24,7 +25,7 @@
             android:layout_height="wrap_content"
             android:textStyle="bold"
             android:layout_centerVertical="true"
-            android:layout_toEndOf="@+id/shoppingListImage"
+            android:layout_toEndOf="@+id/shoppingImage"
             android:padding="10dp"
             tools:ignore="RelativeOverlap" />
 

@@ -28,7 +28,7 @@ public class ShoppingCartSecondLevelActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_shopping_list_new);
+        setContentView(R.layout.activity_shopping_cart_2);
 
         final RecyclerView recyclerView = (RecyclerView)findViewById(R.id.recycler_item_shopping_list);
 

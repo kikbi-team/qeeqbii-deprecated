@@ -44,19 +44,6 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         }
     }
 
-    public RecyclerViewAdapter(LayoutInflater inflater, ClusterProductList cluster_product_list, int layout)
-    {
-        mLayout = layout;
-        this.inflater = inflater;
-        m_cluster_product_list = cluster_product_list;
-        m_opacities = new ArrayList<>();
-        mOnClickListener = null;
-        for (int i = 0; i < m_cluster_product_list.getItems().size(); ++i)
-        {
-            m_opacities.add(OPACITY_NORMAL);
-        }
-    }
-
     public void addItem(ClusterType cluster)
     {
         m_opacities.add(1f);
@@ -77,6 +64,11 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         } else {
             m_opacities.set(position, OPACITY_NORMAL);
         }
+    }
+
+    public void update()
+    {
+        notifyDataSetChanged();
     }
 
 
@@ -119,9 +111,11 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                 m_cluster_product_list.isCheckedItem(objIncome);
                 if(isChecked) {
                     m_opacities.set(position,OPACITY_CHECKED);
+                    m_cluster_product_list.checkOrUncheckItem(m_cluster_product_list.getSpecificItemInList(position));
                 }
                 else {
                     m_opacities.set(position,OPACITY_NORMAL);
+                    m_cluster_product_list.checkOrUncheckItem(m_cluster_product_list.getSpecificItemInList(position));
                 }
             }
         });
@@ -157,7 +151,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         private ViewHolder(View view) {
             super(view);
             textView = (TextView) view.findViewById(R.id.text);
-            imageView = (ImageView) view.findViewById(R.id.shoppingListImage);
+            imageView = (ImageView) view.findViewById(R.id.shoppingImage);
             isChecked = (CheckBox) view.findViewById(R.id.shoppingCheckbox);
 
             if (isChecked.isClickable()) {
