@@ -29,9 +29,11 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     private ClusterProductList m_cluster_product_list;
     private final View.OnClickListener mOnClickListener;
     private LayoutInflater inflater;
+    private int mLayout;
 
     public RecyclerViewAdapter(LayoutInflater inflater, ClusterProductList cluster_product_list,
-                               View.OnClickListener oncliklistener) {
+                               int layout, View.OnClickListener oncliklistener) {
+        mLayout = layout;
         this.inflater = inflater;
         m_cluster_product_list = cluster_product_list;
         m_opacities = new ArrayList<>();
@@ -42,8 +44,9 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         }
     }
 
-    public RecyclerViewAdapter(LayoutInflater inflater, ClusterProductList cluster_product_list)
+    public RecyclerViewAdapter(LayoutInflater inflater, ClusterProductList cluster_product_list, int layout)
     {
+        mLayout = layout;
         this.inflater = inflater;
         m_cluster_product_list = cluster_product_list;
         m_opacities = new ArrayList<>();
@@ -56,8 +59,6 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     public void addItem(ClusterType cluster)
     {
-        // It's added automatically !!!
-        //cluster_types.add(cluster);
         m_opacities.add(1f);
         m_cluster_product_list.addItemToList(cluster);
         notifyDataSetChanged();
@@ -68,16 +69,28 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         m_opacities.set(position, OPACITY_CHECKED);
     }
 
-
-    public void deleteSingleItem()
+    public void changeOpacity(int position)
     {
-        m_cluster_product_list.deleteSingleItem();
+        if(m_opacities.get(position) == OPACITY_NORMAL)
+        {
+            m_opacities.set(position, OPACITY_CHECKED);
+        } else {
+            m_opacities.set(position, OPACITY_NORMAL);
+        }
+    }
+
+
+    public void deleteSingleItem(ClusterType cluster)
+    {
+        m_opacities.remove(m_cluster_product_list.getItems().indexOf(cluster));
+        m_cluster_product_list.deleteSingleItem(cluster);
+        notifyDataSetChanged();
     }
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         //LayoutInflater inflater = activity.getLayoutInflater();
-        View view = inflater.inflate(R.layout.item_recycler_view, parent, false);
+        View view = inflater.inflate(mLayout, parent, false);
         if (mOnClickListener != null)
             view.setOnClickListener(mOnClickListener);
 
@@ -147,22 +160,25 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             imageView = (ImageView) view.findViewById(R.id.shoppingListImage);
             isChecked = (CheckBox) view.findViewById(R.id.shoppingCheckbox);
 
-            /*isChecked.setOnClickListener(new View.OnClickListener() {
+            if (isChecked.isClickable()) {
 
-                @Override
-                public void onClick(View v) {
+                isChecked.setOnClickListener(new View.OnClickListener() {
 
-                    if (((CheckBox) v).isChecked()) {
-                        v.setAlpha(0.5f);              //CHANGES THE OPACITY OF THE VIEW
-                        imageView.setAlpha(0.50f);
-                        textView.setAlpha(0.50f);
-                    } else {
-                        v.setAlpha(1f);              //CHANGES THE OPACITY OF THE VIEW
-                        imageView.setAlpha(1f);
-                        textView.setAlpha(1f);
+                    @Override
+                    public void onClick(View v) {
+
+                        if (((CheckBox) v).isChecked()) {
+                            v.setAlpha(0.5f);              //CHANGES THE OPACITY OF THE VIEW
+                            imageView.setAlpha(0.50f);
+                            textView.setAlpha(0.50f);
+                        } else {
+                            v.setAlpha(1f);              //CHANGES THE OPACITY OF THE VIEW
+                            imageView.setAlpha(1f);
+                            textView.setAlpha(1f);
+                        }
                     }
-                }
-            });*/
+                });
+            }
         }
     }
 }

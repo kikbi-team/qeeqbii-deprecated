@@ -14,6 +14,7 @@ import java.util.List;
 import ch.epfl.sweng.qeeqbii.R;
 import ch.epfl.sweng.qeeqbii.RecyclerViewAdapter;
 import ch.epfl.sweng.qeeqbii.open_food.ClusterType;
+import ch.epfl.sweng.qeeqbii.open_food.ClusterTypeSecondLevel;
 import ch.epfl.sweng.qeeqbii.open_food.Product;
 import ch.epfl.sweng.qeeqbii.shopping_cart.ClusterProductList;
 
@@ -50,7 +51,8 @@ public class ShoppingListActivity extends AppCompatActivity {
             }
         };
 
-        mAdapter = new RecyclerViewAdapter(this.getLayoutInflater(), m_cart, onclicklistener);
+        mAdapter = new RecyclerViewAdapter(this.getLayoutInflater(), m_cart,
+                R.layout.item_recycler_view_shopping_list, onclicklistener);
         recyclerView.setAdapter(mAdapter);
 
     }
@@ -60,6 +62,11 @@ public class ShoppingListActivity extends AppCompatActivity {
         if (!mAdapter.getClusters().contains(cluster)) {
             mAdapter.addItem(cluster);
         }
+    }
+
+    public static void deleteCluster(ClusterType cluster)
+    {
+        mAdapter.deleteSingleItem(cluster);
     }
 
     public static ClusterProductList getClusterList()
@@ -98,9 +105,17 @@ public class ShoppingListActivity extends AppCompatActivity {
     }
 
     public void deleteSingleItem (View view) {
-        mAdapter.deleteSingleItem();
-        Intent intent = new Intent(this, ShoppingListActivity.class);
-        startActivity(intent);
+        for (ClusterType cluster : m_cart.getItems()) {
+            if (m_cart.isCheckedItem(cluster)) {
+                deleteCluster(cluster);
+            }
+            mAdapter.notifyDataSetChanged();
+        }
+    }
+
+    public static void selectItem(View view)
+    {
+        addCluster(ClusterTypeSecondLevel.FROMAGES);
     }
 
     public void scanToCheck(View view) {

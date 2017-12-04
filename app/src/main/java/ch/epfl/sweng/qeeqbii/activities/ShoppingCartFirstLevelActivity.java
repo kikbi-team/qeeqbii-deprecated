@@ -48,7 +48,8 @@ public class ShoppingCartFirstLevelActivity extends AppCompatActivity {
             }
         };
 
-        RecyclerViewAdapter adapter = new RecyclerViewAdapter(this.getLayoutInflater(), m_cart, onclicklistener);
+        RecyclerViewAdapter adapter = new RecyclerViewAdapter(this.getLayoutInflater(), m_cart,
+                R.layout.item_recycler_view_shopping_cart, onclicklistener);
         recyclerView.setAdapter(adapter);
     }
 

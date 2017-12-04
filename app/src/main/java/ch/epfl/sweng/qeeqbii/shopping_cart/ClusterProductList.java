@@ -56,16 +56,9 @@ public class ClusterProductList {
         return is_checked_item.get(cluster);
     }
 
-    public void deleteSingleItem() {
-        Iterator<ClusterType> element = m_items.iterator();
-        //for (Product element : m_items) {
-        while (element.hasNext()) {
-            ClusterType cluster = element.next();
-            if (is_checked_item.get(cluster))
-            {
-                element.remove();
-            }
-        }
+    public void deleteSingleItem(ClusterType cluster) {
+        m_items.remove(cluster);
+        is_checked_item.remove(cluster);
     }
 
     public void clear()
@@ -77,6 +70,16 @@ public class ClusterProductList {
     public void checkItem(ClusterType cluster)
     {
         is_checked_item.put(cluster,true);
+    }
+
+    public void checkOrUncheckItem(ClusterType cluster)
+    {
+        if (!isCheckedItem(cluster))
+        {
+            is_checked_item.put(cluster,true);
+        } else {
+            is_checked_item.put(cluster,false);
+        }
     }
 
     public int getClusterPosition(ClusterType cluster)

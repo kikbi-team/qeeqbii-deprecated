@@ -47,14 +47,20 @@ public class ShoppingCartSecondLevelActivity extends AppCompatActivity {
                 int itemPosition = recyclerView.getChildLayoutPosition(v);
                 String txt = m_cart.getSpecificItemInList(itemPosition).toString();
                 ClusterTypeSecondLevel cluster = ClusterTypeSecondLevel.getClusterType(txt);
-                ShoppingListActivity.addCluster(cluster);
-                m_cart.checkItem(cluster);
-                mAdapter.setOpacityChecked(itemPosition);
+                if (!ShoppingListActivity.getClusterList().getItems().contains(cluster))
+                {
+                    ShoppingListActivity.addCluster(cluster);
+                } else {
+                    ShoppingListActivity.deleteCluster(cluster);
+                }
+                m_cart.checkOrUncheckItem(cluster);
+                mAdapter.changeOpacity(itemPosition);
                 mAdapter.notifyDataSetChanged();
             }
         };
 
-        mAdapter = new RecyclerViewAdapter(this.getLayoutInflater(), m_cart, onclicklistener);
+        mAdapter = new RecyclerViewAdapter(this.getLayoutInflater(), m_cart,
+                R.layout.item_recycler_view_shopping_cart, onclicklistener);
 
         for (ClusterType cluster: ShoppingListActivity.getClusterList().getItems())
         {
