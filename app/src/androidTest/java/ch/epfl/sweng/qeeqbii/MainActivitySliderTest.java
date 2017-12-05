@@ -103,7 +103,7 @@ public class MainActivitySliderTest {
         nextActivity.finish();
     }
 
-    @Test
+    /*@Test
     public void testGoToShoppingCart() {
         // register next activity that need to be monitored.
         Instrumentation.ActivityMonitor activityMonitor = getInstrumentation().addMonitor(ShoppingListActivity.class.getName(), null, false);
@@ -119,7 +119,7 @@ public class MainActivitySliderTest {
         // next activity is opened and captured.
         assertNotNull(nextActivity);
         nextActivity.finish();
-    }
+    }*/
 
     @Test
     public void testGoToCancerQuery() {
