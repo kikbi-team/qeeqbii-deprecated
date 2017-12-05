@@ -14,6 +14,7 @@ import com.facebook.share.widget.ShareDialog;
 
 import ch.epfl.sweng.qeeqbii.R;
 import ch.epfl.sweng.qeeqbii.cancer.CancerDataBase;
+import ch.epfl.sweng.qeeqbii.chat.MainActivityChat;
 import ch.epfl.sweng.qeeqbii.open_food.SavedProductsDatabase;
 import ch.epfl.sweng.qeeqbii.shopping_cart.ShoppingCartStatistics;
 
@@ -55,6 +56,11 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void productComparison(View view) {
+        Intent intent = new Intent(this, ProductComparisonActivity.class);
+        startActivity(intent);
+    }
+
     public boolean onOptionsItemSelected(MenuItem item) {
 
         return mToggle.onOptionsItemSelected(item) || super.onOptionsItemSelected(item);
@@ -73,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void showShoppingList(MenuItem view) {
-        Intent intent = new Intent(this, ShoppingCartActivity.class);
+        Intent intent = new Intent(this, ShoppingListActivity.class);
         startActivity(intent);
     }
 
@@ -108,7 +114,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void showChat(MenuItem item) {
-        Intent intent = new Intent(this, ChatActivity.class);
+        Intent intent = new Intent(this, MainActivityChat.class);
         startActivity(intent);
     }
 }

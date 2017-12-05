@@ -15,6 +15,7 @@ import ch.epfl.sweng.qeeqbii.cancer.CancerSubstance;
 import ch.epfl.sweng.qeeqbii.R;
 import ch.epfl.sweng.qeeqbii.cancer.LevenshteinQueryCancerDB;
 import ch.epfl.sweng.qeeqbii.cancer.RatcliffQueryCancerDB;
+import ch.epfl.sweng.qeeqbii.chat.MainActivityChat;
 import ch.epfl.sweng.qeeqbii.shopping_cart.ShoppingCartStatistics;
 
 public class CancerDataQueryActivity extends AppCompatActivity {
@@ -120,7 +121,7 @@ public class CancerDataQueryActivity extends AppCompatActivity {
 
 
     public void showShoppingList(MenuItem view) {
-        Intent intent = new Intent(this, ShoppingCartActivity.class);
+        Intent intent = new Intent(this, ShoppingListActivity.class);
         startActivity(intent);
     }
 
@@ -155,7 +156,7 @@ public class CancerDataQueryActivity extends AppCompatActivity {
     }
 
     public void showChat(MenuItem item) {
-        Intent intent = new Intent(this, ChatActivity.class);
+        Intent intent = new Intent(this, MainActivityChat.class);
         startActivity(intent);
     }
 }

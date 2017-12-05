@@ -39,6 +39,7 @@
     <!-- Facebook events -->
     <!-- Text and labels -->
     <string name="search_in_database">SEARCH FOR HARMFUL\nINGREDIENTS</string>
+    <string name="buy_product">Buy this product</string>
     <!-- XML -->
     <string name="levenshtein_nquery">LEVENSHTEIN\nQUERY</string>
     <string name="ratcliff_nquery">RATCLIFF\nQUERY</string>
@@ -61,8 +62,11 @@
     <string name="close"> Close </string>
     <string name="nav_header">Menu</string>
 
+    <string name="title_activity_shopping_cart_first_level">ShoppingCart</string>
+    <string name="title_activity_shopping_cart_second_level">ShoppingCart</string>
     <string name="title_activity_shopping_cart">ShoppingCart</string>
     <string name="shopping_cart">Shopping Cart</string>
+    <string name="shopping_list">Shopping List</string>
     <string name="cheese">cheese</string>
     <string name="apple">apple</string>
     <string name="chips">chips</string>
@@ -145,4 +149,38 @@
     <string name="butchery">Butchery</string>
     <string name="show_saved_products_activity">Show saved products</string>
     <string name="Chat">Chat</string>
+
+
+    <string name="need_a_new_account">NEED A NEW ACCOUNT ?</string>
+    <string name="display_name">Display Name</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="log_out">Log Out</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="default_status">Hi there, I\'m using Qeeqbii App</string>
+    <string name="default_age">I need to enter my age</string>
+    <string name="default_allergies">I need to enter my allergies</string>
+    <string name="default_degout">I need to enter what I do not want to eat</string>
+
+    <string name="MainActivityChat">MainActivityChat</string>
+    <string name="ProfileActivity">ProfileActivity</string>
+    <string name="ActivityChat">ActivityChat</string>
+    <string name="EnterMessage">Enter Message ...</string>
+    <string name="YourAge">Your Age</string>
+    <string name="savechanges">SAVE CHANGES</string>
+    <string name="YourAllergies">Your Allergies</string>
+    <string name="donotwant">Things you don\'t want to eat</string>
+    <string name="LOGIN">LOGIN</string>
+    <string name="youraccount">Login to your Account</string>
+    <string name="YourEmail">Your Email</string>
+    <string name="PASSWORD">PASSWORD</string>
+
+    <string name="title_activity_product_comparison">Compare Products</string>
+    <string name="criteria">Criteria</string>
+    <string name="scan_at_least_two">Please scan at least two products for comparison</string>
+    <string name="cannot_obtain_nutrients">Cannot obtain nutrients</string>
+
+
 </resources>

@@ -16,6 +16,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import ch.epfl.sweng.qeeqbii.R;
+import ch.epfl.sweng.qeeqbii.chat.MainActivityChat;
 import ch.epfl.sweng.qeeqbii.open_food.RecentlyScannedProducts;
 import ch.epfl.sweng.qeeqbii.open_food.SavedProductsDatabase;
 import ch.epfl.sweng.qeeqbii.open_food.Product;
@@ -49,9 +50,7 @@ public class SavedProductsListActivity extends AppCompatActivity {
         try
         {
             SavedProductsDatabase.load(getApplicationContext());
-            System.out.println("Get relative products.");
             mProducts = SavedProductsDatabase.getProductsFromDate((Date) getIntent().getSerializableExtra("date"));
-            System.out.println("mProducts initialized");
             product_names = new String[mProducts.length];
             int i = 0;
             for (Product prod : mProducts)
@@ -122,7 +121,7 @@ public class SavedProductsListActivity extends AppCompatActivity {
 
 
     public void showShoppingList(MenuItem view) {
-        Intent intent = new Intent(this, ShoppingCartActivity.class);
+        Intent intent = new Intent(this, ShoppingListActivity.class);
         startActivity(intent);
     }
 
@@ -157,7 +156,7 @@ public class SavedProductsListActivity extends AppCompatActivity {
     }
 
     public void showChat(MenuItem item) {
-        Intent intent = new Intent(this, ChatActivity.class);
+        Intent intent = new Intent(this, MainActivityChat.class);
         startActivity(intent);
     }
 }

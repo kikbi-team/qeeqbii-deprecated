@@ -12,6 +12,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import ch.epfl.sweng.qeeqbii.cancer.RatcliffQueryCancerDB;
+import ch.epfl.sweng.qeeqbii.chat.MainActivityChat;
 import ch.epfl.sweng.qeeqbii.custom_exceptions.ProductException;
 import ch.epfl.sweng.qeeqbii.R;
 import ch.epfl.sweng.qeeqbii.open_food.OpenFoodQuery;
@@ -106,6 +107,10 @@ public class BarcodeToProductActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void buyProduct(View view) {
+        ShoppingListActivity.addProduct(RecentlyScannedProducts.getProduct(barcode));
+    }
+
     public boolean onOptionsItemSelected(MenuItem item) {
 
         return mToggle.onOptionsItemSelected(item) || super.onOptionsItemSelected(item);
@@ -123,7 +128,7 @@ public class BarcodeToProductActivity extends AppCompatActivity {
     }
 
     public void showShoppingList(MenuItem view) {
-        Intent intent = new Intent(this, ShoppingCartActivity.class);
+        Intent intent = new Intent(this, ShoppingListActivity.class);
         startActivity(intent);
     }
 
@@ -158,7 +163,7 @@ public class BarcodeToProductActivity extends AppCompatActivity {
     }
 
     public void showChat(MenuItem item) {
-        Intent intent = new Intent(this, ChatActivity.class);
+        Intent intent = new Intent(this, MainActivityChat.class);
         startActivity(intent);
     }
 }

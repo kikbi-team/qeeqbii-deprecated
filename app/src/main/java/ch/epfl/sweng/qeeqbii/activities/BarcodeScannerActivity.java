@@ -18,6 +18,7 @@ import android.widget.Toast;
 import com.google.zxing.Result;
 
 import ch.epfl.sweng.qeeqbii.R;
+import ch.epfl.sweng.qeeqbii.chat.MainActivityChat;
 import ch.epfl.sweng.qeeqbii.shopping_cart.ShoppingCartStatistics;
 import me.dm7.barcodescanner.zxing.ZXingScannerView;
 
@@ -161,7 +162,7 @@ public class BarcodeScannerActivity extends AppCompatActivity implements ZXingSc
     }
 
     // go to the main activity
-    private void goToMain() {
+    public void goToMain() {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
@@ -180,7 +181,7 @@ public class BarcodeScannerActivity extends AppCompatActivity implements ZXingSc
             startActivity(intent);
         } else if(action == ACTION_TYPE.ACTION_SHOPPING_CART) {
             Log.d("STATE", "Barcode " + barcode + " found, sending data to shopping list");
-            Intent intent = new Intent(this, ShoppingCartActivity.class);
+            Intent intent = new Intent(this, ShoppingListActivity.class);
             intent.putExtra(EXTRA_BARCODE, barcode);
             startActivity(intent);
         }
@@ -219,7 +220,7 @@ public class BarcodeScannerActivity extends AppCompatActivity implements ZXingSc
 
 
     public void showShoppingList(MenuItem view) {
-        Intent intent = new Intent(this, ShoppingCartActivity.class);
+        Intent intent = new Intent(this, ShoppingListActivity.class);
         startActivity(intent);
     }
 
@@ -254,7 +255,7 @@ public class BarcodeScannerActivity extends AppCompatActivity implements ZXingSc
     }
 
     public void showChat(MenuItem item) {
-        Intent intent = new Intent(this, ChatActivity.class);
+        Intent intent = new Intent(this, MainActivityChat.class);
         startActivity(intent);
     }
 }

@@ -12,9 +12,14 @@ import android.view.View;
 import android.widget.TextView;
 
 import ch.epfl.sweng.qeeqbii.R;
+import ch.epfl.sweng.qeeqbii.RecyclerViewAdapter;
 import ch.epfl.sweng.qeeqbii.cancer.LevenshteinQueryCancerDB;
+import ch.epfl.sweng.qeeqbii.chat.MainActivityChat;
 import ch.epfl.sweng.qeeqbii.custom_exceptions.ProductException;
+import ch.epfl.sweng.qeeqbii.open_food.ClusterType;
+import ch.epfl.sweng.qeeqbii.open_food.ClusterTypeFirstLevel;
 import ch.epfl.sweng.qeeqbii.open_food.Product;
+import ch.epfl.sweng.qeeqbii.shopping_cart.ClusterProductList;
 import ch.epfl.sweng.qeeqbii.shopping_cart.ShoppingCartStatistics;
 
 /**
@@ -100,6 +105,10 @@ public class ShowProductActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void buyProduct(View view) {
+        ShoppingListActivity.addProduct(mProduct);
+    }
+
     public boolean onOptionsItemSelected(MenuItem item) {
 
         return mToggle.onOptionsItemSelected(item) || super.onOptionsItemSelected(item);
@@ -117,7 +126,7 @@ public class ShowProductActivity extends AppCompatActivity {
     }
 
     public void showShoppingList(MenuItem view) {
-        Intent intent = new Intent(this, ShoppingCartActivity.class);
+        Intent intent = new Intent(this, ShoppingListActivity.class);
         startActivity(intent);
     }
 
@@ -152,7 +161,7 @@ public class ShowProductActivity extends AppCompatActivity {
     }
 
     public void showChat(MenuItem item) {
-        Intent intent = new Intent(this, ChatActivity.class);
+        Intent intent = new Intent(this, MainActivityChat.class);
         startActivity(intent);
     }
 }
