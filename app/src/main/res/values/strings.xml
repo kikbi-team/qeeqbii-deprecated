@@ -88,4 +88,10 @@
     <string name="change_image">CHANGE IMAGE</string>
     <string name="welcome_to_qeeqbii_n_app">Welcome to Qeeqbii   App</string>
     <string name="already_have_account">ALREADY HAVE ACCOUNT</string>
+    <string name="loading_wait">Please wait while we load the user data.</string>
+    <string name="loading_user_info">Loading User Data</string>
+    <string name="not_friends">Not Friends</string>
+    <string name="accept_friend">Accept Friend Request</string>
+    <string name="cancel_freind_request">Cancel Friend Request</string>
+    <string name="unfriend">Unfriend this Person</string>
 </resources>
