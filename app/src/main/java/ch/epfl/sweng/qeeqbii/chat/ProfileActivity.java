@@ -70,7 +70,7 @@ public class ProfileActivity extends AppCompatActivity {
         mProgressDialog.setMessage(getString(R.string.loading_wait));
         mProgressDialog.setCanceledOnTouchOutside(false);
         mProgressDialog.show();
-        
+
         mUsersDatabase.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {

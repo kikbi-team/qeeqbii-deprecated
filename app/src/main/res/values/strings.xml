@@ -94,4 +94,8 @@
     <string name="accept_friend">Accept Friend Request</string>
     <string name="cancel_freind_request">Cancel Friend Request</string>
     <string name="unfriend">Unfriend this Person</string>
+    <string name="you_have_no_requests">You have no requests</string>
+    <string name="last_seen">Last Seen</string>
+    <string name="your_status">Your Status</string>
+    <string name="save_changes">SAVE CHANGES</string>
 </resources>
