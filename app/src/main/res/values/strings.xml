@@ -6,7 +6,6 @@
     <string name="sugar_graph">Sugar</string>
     <string name="calories_graph">Calories</string>
     <string name="salt_graph">Salts</string>
-
     <!-- Facebook events -->
     <!-- Text and labels -->
     <string name="search_in_database">SEARCH FOR HARMFUL\nINGREDIENTS</string>
@@ -26,7 +25,6 @@
     <string name="open"> Open </string>
     <string name="close"> Close </string>
     <string name="nav_header">Menu</string>
-
     <string name="title_activity_shopping_cart_first_level">ShoppingCart</string>
     <string name="title_activity_shopping_cart_second_level">ShoppingCart</string>
     <string name="title_activity_shopping_cart">ShoppingCart</string>
@@ -69,11 +67,10 @@
     <string name="default_age">I need to enter my age</string>
     <string name="default_allergies">I need to enter my allergies</string>
     <string name="default_degout">I need to enter what I do not want to eat</string>
-
     <string name="MainActivityChat">MainActivityChat</string>
     <string name="ProfileActivity">ProfileActivity</string>
     <string name="ActivityChat">ActivityChat</string>
-    <string name="EnterMessage">Enter Message ...</string>
+    <string name="EnterMessage">Enter Message …</string>
     <string name="YourAge">Your Age</string>
     <string name="savechanges">SAVE CHANGES</string>
     <string name="donotwant">Things you don\'t want to eat</string>
@@ -81,11 +78,8 @@
     <string name="youraccount">Login to your Account</string>
     <string name="YourEmail">Your Email</string>
     <string name="PASSWORD">PASSWORD</string>
-
     <string name="title_activity_product_comparison">Compare Products</string>
     <string name="criteria">Criteria</string>
     <string name="scan_at_least_two">Please scan at least two products for comparison</string>
     <string name="cannot_obtain_nutrients">Cannot obtain nutrients</string>
-
-
 </resources>
