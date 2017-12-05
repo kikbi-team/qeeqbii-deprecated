@@ -21,7 +21,9 @@ import java.util.List;
 
 import ch.epfl.sweng.qeeqbii.R;
 import ch.epfl.sweng.qeeqbii.activities.GraphsActivity;
+import ch.epfl.sweng.qeeqbii.activities.RecentlyScannedProductsActivity;
 import ch.epfl.sweng.qeeqbii.open_food.Product;
+import ch.epfl.sweng.qeeqbii.open_food.RecentlyScannedProducts;
 
 public class ShoppingCartStatistics extends AppCompatActivity {
 
@@ -145,6 +147,12 @@ public class ShoppingCartStatistics extends AppCompatActivity {
         Intent intent = new Intent(this, GraphsActivity.class);
         startActivity(intent);
     }
+
+    /*public void initData() {
+        for (Product element : RecentlyScannedProductsActivity.displayed_products) {
+
+        }
+    }*/
 
 
 }

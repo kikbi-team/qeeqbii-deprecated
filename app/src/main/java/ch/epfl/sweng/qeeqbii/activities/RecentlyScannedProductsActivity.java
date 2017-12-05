@@ -75,9 +75,7 @@ public class RecentlyScannedProductsActivity extends AppCompatActivity {
                 intent.putExtra("product", RecentlyScannedProducts.getProduct(displayed_products.get(txt)));
                 startActivity(intent);
             }
-
         });
-
     }
 
     //ImageButton btn = (ImageButton) findViewById(R.id.delete_recently_scanned_product_button);
@@ -110,13 +108,10 @@ public class RecentlyScannedProductsActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-
     public void readBarcode(MenuItem item) {
         Intent intent = new Intent(this, BarcodeScannerActivity.class);
         startActivity(intent);
     }
-
-
 
     public void showShoppingList(MenuItem view) {
         Intent intent = new Intent(this, ShoppingListActivity.class);
