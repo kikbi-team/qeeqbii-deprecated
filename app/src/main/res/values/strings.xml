@@ -84,4 +84,6 @@
     <string name="cannot_obtain_nutrients">Cannot obtain nutrients</string>
     <string name="display_name_2">Display Name</string>
     <string name="user_default_status">User default Status</string>
+    <string name="message_text">Message Text</string>
+    <string name="_00_00">00:00</string>
 </resources>
