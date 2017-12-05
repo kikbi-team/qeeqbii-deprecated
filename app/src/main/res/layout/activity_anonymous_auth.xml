@@ -14,7 +14,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:contentDescription="@string/desc_firebase_lockup"
+        android:contentDescription="@string/firebase_lockup"
         android:src="@drawable/firebase_lockup_400" />
 
     <TextView
@@ -45,14 +45,14 @@
 
     <Button
         android:id="@+id/button_anonymous_sign_in"
-        android:layout_width="@dimen/field_width_standard"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/anonymous_status_email"
         android:text="@string/sign_in" />
 
     <Button
         android:id="@+id/button_anonymous_sign_out"
-        android:layout_width="@dimen/field_width_standard"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
         android:enabled="false"
@@ -64,7 +64,7 @@
     android:layout_toRightOf="@+id/button_anonymous_sign_in"-->
     <Button
         android:id="@+id/buttonSave"
-        android:layout_width="@dimen/field_width_standard"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:enabled="false"
         android:text="@string/save_and_continue"
@@ -121,11 +121,11 @@
         android:layout_below="@+id/button_anonymous_sign_in"
         android:layout_marginBottom="8dp"
         android:layout_marginTop="24dp"
-        android:text="@string/Account_Linking" />
+        android:text="@string/account_linking" />
 
     <EditText
         android:id="@+id/field_email"
-        android:layout_width="@dimen/field_width_standard"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/title_linking"
         android:hint="@string/hint_email"
@@ -133,7 +133,7 @@
 
     <EditText
         android:id="@+id/field_password"
-        android:layout_width="@dimen/field_width_standard"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:hint="@string/hint_password"
         android:inputType="textPassword"
@@ -143,10 +143,10 @@
 
     <Button
         android:id="@+id/button_link_account"
-        android:layout_width="@dimen/field_width_standard"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/field_email"
         android:enabled="false"
-        android:text="@string/Account_Linking" />
+        android:text="@string/account_linking" />
 
 </RelativeLayout>

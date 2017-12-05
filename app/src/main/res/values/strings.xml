@@ -86,4 +86,21 @@
     <string name="user_default_status">User default Status</string>
     <string name="message_text">Message Text</string>
     <string name="_00_00">00:00</string>
+    <string name="sign_in">sign in</string>
+    <string name="signed_out">signed out</string>
+    <string name="label_anonymous_auth">label anonymous auth</string>
+    <string name="sign_out">sign out</string>
+    <string name="save_and_continue">save and continue</string>
+    <string name="first_name">first name</string>
+    <string name="last_name">last name</string>
+    <string name="allergies">allergies</string>
+    <string name="aliments_proscrire">aliments proscrire</string>
+    <string name="account_linking">Account Linking</string>
+    <string name="hint_email">hint email</string>
+    <string name="hint_password">hint password</string>
+    <string name="firebase_lockup">Firebase Lockup</string>
+    <string name="email_password_title_text">email password title text</string>
+    <string name="verify_email">verify email</string>
+    <string name="facebook_title_text">facebook title text</string>
+    <string name="statistics">statistics</string>
 </resources>
