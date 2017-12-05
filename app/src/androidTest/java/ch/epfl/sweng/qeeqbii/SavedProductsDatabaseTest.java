@@ -124,8 +124,10 @@ public class SavedProductsDatabaseTest {
             mActivityRule.launchActivity(intent);
 
             onView(withText(today_date.toString())).perform(click());
-            TimeUnit.SECONDS.sleep(5);
+            //TimeUnit.SECONDS.sleep(5);
+            System.out.println("going to click on Raclette");
             onView(withText("Raclette")).perform(click());
+            System.out.println("clicked on Raclette");
             Product product3 = SavedProductsDatabase.getProductsFromDate(today_date)[0];
             onView(withText(product3.toString())).check(matches(isDisplayed()));
 

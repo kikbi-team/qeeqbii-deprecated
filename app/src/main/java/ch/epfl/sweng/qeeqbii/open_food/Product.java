@@ -40,7 +40,34 @@ public class Product implements Serializable{
         mBarcode = barcode;
         mIsChecked = false;
         mOpacity = 1f;
+        mType = type;
+        if (mType == null)
+        {
+            try {
+                nutrientVector = new NutrientVector(getParsedNutrients());
 
+                // If the type is not defined (type == null) then we call ClusterClassifier's function
+                // to get a cluster
+                // If getParsedNutrients were to throw an exception we catch the exception, we define an empty
+                // NutrientVector and we assign it an UNDEFINED cluster enum type
+
+                if (type == null) {
+                    bestClusters = ClusterClassifier.getClusterTypeFromNutrients(nutrientVector);
+                    mType = bestClusters.get(0).getCluster();
+                }
+            } catch (ProductException|NotOpenFileException e)
+            {
+                System.err.println(e.getMessage());
+                nutrientVector = null;
+                if (type == null) {
+                    mType = ClusterTypeSecondLevel.UNDETERMINED;
+                }
+                else {
+                    mType = type;
+                }
+            }
+        }
+/*
         // Instantiating nutrientVector and defining cluster type
         try {
             nutrientVector = new NutrientVector(getParsedNutrients());
@@ -67,6 +94,7 @@ public class Product implements Serializable{
                 mType = type;
             }
         }
+        */
     }
 
     public String getName()
