@@ -98,4 +98,6 @@
     <string name="last_seen">Last Seen</string>
     <string name="your_status">Your Status</string>
     <string name="save_changes">SAVE CHANGES</string>
+    <string name="all_users">All Users</string>
+    <string name="account_settings">Account Settings</string>
 </resources>
