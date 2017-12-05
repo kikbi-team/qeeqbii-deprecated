@@ -13,12 +13,10 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="5dp">
-
 
             <ImageButton
                 android:id="@+id/facebook_round_recently_scanned_product_button"
