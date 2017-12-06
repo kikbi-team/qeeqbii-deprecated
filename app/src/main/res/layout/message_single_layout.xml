@@ -19,7 +19,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/name_text_layout"
-        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
         android:layout_toEndOf="@+id/message_profile_layout"
         android:padding="0dp"
         android:text="@string/message_text"
@@ -31,7 +31,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
         android:layout_toEndOf="@+id/message_profile_layout"
         android:text="@string/display_name"
         android:textColor="@android:color/black"
@@ -43,7 +43,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="2dp"
         android:layout_toEndOf="@+id/name_text_layout"
         android:text="@string/smiley"
@@ -56,11 +56,9 @@
         android:layout_alignParentEnd="true"
         android:layout_alignStart="@+id/message_text_layout"
         android:layout_below="@+id/message_text_layout"
-        android:layout_marginLeft="0dp"
+        android:layout_marginStart="0dp"
         android:layout_toEndOf="@+id/message_profile_layout"
         android:padding="0dp"
         android:contentDescription="@string/MainActivityChat"
         android:scaleType="centerCrop" />
-
-
 </RelativeLayout>

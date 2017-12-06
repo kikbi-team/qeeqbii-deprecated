@@ -59,7 +59,4 @@
         android:onClick="showStatistics"
         android:icon="@drawable/ic_timeline_black_24dp"
         android:title="@string/statistics" />
-
-
-
 </menu>

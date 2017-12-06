@@ -48,7 +48,6 @@ public class RecentlyScannedProductsActivity extends AppCompatActivity {
 
         //System.out.println(barcode_linked_list.getLast());
 
-
         //final ArrayList<RecentlyScannedProducts> recipeList = Recipe.getRecipesFromFile("recipes.json", this);
 
         ArrayList<String> listItems = new ArrayList<>();
@@ -76,16 +75,10 @@ public class RecentlyScannedProductsActivity extends AppCompatActivity {
                 intent.putExtra("product", RecentlyScannedProducts.getProduct(displayed_products.get(txt)));
                 startActivity(intent);
             }
-
         });
-
     }
 
     //ImageButton btn = (ImageButton) findViewById(R.id.delete_recently_scanned_product_button);
-
-
-
-
 
     public void deleteItems(View view) {
         RecentlyScannedProducts.clear();
@@ -115,16 +108,13 @@ public class RecentlyScannedProductsActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-
     public void readBarcode(MenuItem item) {
         Intent intent = new Intent(this, BarcodeScannerActivity.class);
         startActivity(intent);
     }
 
-
-
     public void showShoppingList(MenuItem view) {
-        Intent intent = new Intent(this, ShoppingCartActivity.class);
+        Intent intent = new Intent(this, ShoppingListActivity.class);
         startActivity(intent);
     }
 

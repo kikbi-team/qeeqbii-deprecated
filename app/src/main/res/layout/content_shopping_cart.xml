@@ -5,8 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="ch.epfl.sweng.qeeqbii.activities.ShoppingCartActivity"
-    tools:showIn="@layout/activity_shopping_cart">
+    tools:context="ch.epfl.sweng.qeeqbii.activities.ShoppingListActivity"
+    tools:showIn="@layout/activity_shopping_list">
 
     <RelativeLayout
         android:layout_width="match_parent"

@@ -17,8 +17,14 @@ import android.widget.Toast;
 
 import com.google.zxing.Result;
 
+import org.json.JSONException;
+
+import java.io.IOException;
+import java.text.ParseException;
+
 import ch.epfl.sweng.qeeqbii.R;
 import ch.epfl.sweng.qeeqbii.chat.MainActivityChat;
+import ch.epfl.sweng.qeeqbii.open_food.SavedProductsDatabase;
 import ch.epfl.sweng.qeeqbii.shopping_cart.ShoppingCartStatistics;
 import me.dm7.barcodescanner.zxing.ZXingScannerView;
 
@@ -72,6 +78,13 @@ public class BarcodeScannerActivity extends AppCompatActivity implements ZXingSc
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LOCKED);
 
         setContentView(R.layout.activity_barcode_scanner);
+
+        try {
+            SavedProductsDatabase.load(getApplicationContext());
+            SavedProductsDatabase.getDates();
+        } catch(IOException|JSONException|ParseException e){
+            System.err.println(e.getMessage());
+        }
 
         DrawerLayout mDrawerLayout = (DrawerLayout) findViewById(R.id.barcode_scanner);
         mToggle = new ActionBarDrawerToggle(this, mDrawerLayout, R.string.open, R.string.close);
@@ -181,7 +194,7 @@ public class BarcodeScannerActivity extends AppCompatActivity implements ZXingSc
             startActivity(intent);
         } else if(action == ACTION_TYPE.ACTION_SHOPPING_CART) {
             Log.d("STATE", "Barcode " + barcode + " found, sending data to shopping list");
-            Intent intent = new Intent(this, ShoppingCartActivity.class);
+            Intent intent = new Intent(this, ShoppingListActivity.class);
             intent.putExtra(EXTRA_BARCODE, barcode);
             startActivity(intent);
         }
@@ -220,7 +233,7 @@ public class BarcodeScannerActivity extends AppCompatActivity implements ZXingSc
 
 
     public void showShoppingList(MenuItem view) {
-        Intent intent = new Intent(this, ShoppingCartActivity.class);
+        Intent intent = new Intent(this, ShoppingListActivity.class);
         startActivity(intent);
     }
 
