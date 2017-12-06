@@ -58,11 +58,4 @@
         android:onClick="showStatistics"
         android:icon="@drawable/ic_timeline_black_24dp"
         android:title="@string/statistics" />
-
-    <item
-         android:id="@+id/nav_chat"
-         android:onClick="showChat"
-        android:icon="@drawable/ic_chat_black_24dp"
-         android:title="@string/Chat" />
-
 </menu>

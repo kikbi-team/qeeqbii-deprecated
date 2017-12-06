@@ -59,7 +59,8 @@
         </activity>
 
         <service android:name="chat.FirebaseMessagingService"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/AppTheme.NoActionBar"
+            android:exported="false">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
@@ -69,7 +70,6 @@
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -118,8 +118,6 @@
             android:parentActivityName=".chat.MainActivityChat"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
-     
-
 
         <activity
             android:name=".activities.CancerDataShowActivity"
@@ -141,7 +139,7 @@
         <provider
             android:name="com.facebook.FacebookContentProvider"
             android:authorities="com.facebook.app.FacebookContentProvider1502943653129350"
-            android:exported="true" />
+            android:exported="false" />
 
         <activity
             android:name=".activities.RecentlyScannedProductsActivity"

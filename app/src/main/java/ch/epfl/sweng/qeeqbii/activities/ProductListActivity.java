@@ -32,13 +32,9 @@ import ch.epfl.sweng.qeeqbii.shopping_cart.ShoppingCartStatistics;
 public class ProductListActivity extends AppCompatActivity {
 
     private static final String TAG = "ProductListActivity";
-
     private List<Product> product_list = new ArrayList<>();
-
     private Map<String, Integer> name_to_index_map = new HashMap<>();
-
     ArrayAdapter<String> mAdapter;
-
     private ActionBarDrawerToggle mToggle;
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -98,7 +94,6 @@ public class ProductListActivity extends AppCompatActivity {
 
         });
     }
-
 
     public void deleteItems(View view) {
         product_list.clear();

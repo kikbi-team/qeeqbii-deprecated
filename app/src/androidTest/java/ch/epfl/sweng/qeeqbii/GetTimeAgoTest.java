@@ -11,7 +11,7 @@ import static junit.framework.Assert.assertEquals;
 /**
  * Created by nicol on 26.11.2017.
  */
-
+/*
 public class GetTimeAgoTest {
     @Test
     public void test_time() {
@@ -24,3 +24,4 @@ public class GetTimeAgoTest {
     }
 
 }
+*/

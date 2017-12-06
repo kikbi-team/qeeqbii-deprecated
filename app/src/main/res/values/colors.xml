@@ -3,11 +3,5 @@
     <color name="colorPrimary">#359C88</color>
     <color name="colorPrimaryDark">#226589</color>
     <color name="colorAccent">#3CA68D</color>
-    <color name="grey_300">#E0E0E0</color>
-    <color name="navyblue">#2393b9</color>
-    <color name="pastelred">#f15f45</color>
-    <color name="Green">#359c88</color>
-    <color name="bordeau">#921a26</color>
     <color name="white">#ffffff</color>
-    <color name="darkColor">#222222</color>
 </resources>

@@ -79,11 +79,8 @@ public class ChatActivity extends AppCompatActivity {
 
     //New solutions
     private int itemPos=0;
-
     private String mLastKey = "" ;
     private String mPrevKey = "" ;
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -126,15 +123,10 @@ public class ChatActivity extends AppCompatActivity {
 
         mMessagesList = (RecyclerView) findViewById(R.id.messages_list);
         mLinearLayout = new LinearLayoutManager(this);
-
         mMessagesList.setHasFixedSize(true);
         mMessagesList.setLayoutManager(mLinearLayout);
-
         mMessagesList.setAdapter(mAdapter);
-
         loadMessages();
-
-
         mTitleView.setText(userName);
 
         mRootRef.child("Users").child(mChatUser).addValueEventListener(new ValueEventListener() {
@@ -146,20 +138,14 @@ public class ChatActivity extends AppCompatActivity {
 
                 if(online.equals("true")) {
 
-                    mLastSeenView.setText("Online");
+                    mLastSeenView.setText(R.string.online);
 
                 } else {
-
                     GetTimeAgo getTimeAgo = new GetTimeAgo();
-
                     long lastTime = Long.parseLong(online);
-
-                    String lastSeenTime = getTimeAgo.getTimeAgo(lastTime, getApplicationContext());
-
+                    String lastSeenTime = GetTimeAgo.getTimeAgo(lastTime, getApplicationContext());
                     mLastSeenView.setText(lastSeenTime);
-
                 }
-
             }
 
             @Override
@@ -168,13 +154,11 @@ public class ChatActivity extends AppCompatActivity {
             }
         });
 
-
         mRootRef.child("Chat").child(mCurrentUserId).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
 
                 if(!dataSnapshot.hasChild(mChatUser)){
-
                     Map chatAddMap = new HashMap();
                     chatAddMap.put("seen", false);
                     chatAddMap.put("timestamp", ServerValue.TIMESTAMP);
@@ -186,18 +170,12 @@ public class ChatActivity extends AppCompatActivity {
                     mRootRef.updateChildren(chatUserMap, new DatabaseReference.CompletionListener() {
                         @Override
                         public void onComplete(DatabaseError databaseError, DatabaseReference databaseReference) {
-
                             if(databaseError != null){
-
                                 Log.d("CHAT_LOG", databaseError.getMessage().toString());
-
                             }
-
                         }
                     });
-
                 }
-
             }
 
             @Override
@@ -206,14 +184,10 @@ public class ChatActivity extends AppCompatActivity {
             }
         });
 
-
-
         mChatSendBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 sendMessage();
-
             }
         });
 
@@ -225,8 +199,6 @@ public class ChatActivity extends AppCompatActivity {
                 galleryIntent.setAction(Intent.ACTION_GET_CONTENT);
 
                 startActivityForResult (Intent.createChooser(galleryIntent,"SELECT IMAGE"),GALLERY_PICK);
-
-
             }
         });
 
@@ -237,11 +209,7 @@ public class ChatActivity extends AppCompatActivity {
                 itemPos =0;
                 loadMoreMesages();
             }
-
         });*/
-
-
-
     }
 
     protected void onActivityResult (int requestCode,int resultCode,Intent data){
@@ -291,15 +259,9 @@ public class ChatActivity extends AppCompatActivity {
                 }
 
             });
-
-
-
-
-
         }
 
     }
-
 
     private void loadMessages() {
 
@@ -308,10 +270,8 @@ public class ChatActivity extends AppCompatActivity {
             public void onChildAdded(DataSnapshot dataSnapshot, String s) {
 
                 Messages message = dataSnapshot.getValue(Messages.class);
-
                 messagesList.add(message);
                 mAdapter.notifyDataSetChanged();
-
             }
 
             @Override
@@ -334,12 +294,9 @@ public class ChatActivity extends AppCompatActivity {
 
             }
         });
-
     }
 
     private void sendMessage() {
-
-
         String message = mChatMessageView.getText().toString();
 
         if(!TextUtils.isEmpty(message)){
@@ -372,13 +329,9 @@ public class ChatActivity extends AppCompatActivity {
                     if(databaseError != null){
 
                         Log.d("CHAT_LOG", databaseError.getMessage().toString());
-
                     }
-
                 }
             });
-
         }
-
     }
 }

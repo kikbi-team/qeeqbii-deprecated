@@ -33,8 +33,6 @@ public class ShareOnFacebookActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_share_on_facebook);
-
-
         bmImage = (ImageView) findViewById(R.id.share_facebook_image);
 
         view.setDrawingCacheEnabled(true);
@@ -44,7 +42,6 @@ public class ShareOnFacebookActivity extends AppCompatActivity {
         int height = displayMetrics.heightPixels;
         int width = displayMetrics.widthPixels;
 
-
         view.layout(0, 0, width, height);
 
         view.buildDrawingCache(true);
@@ -52,15 +49,12 @@ public class ShareOnFacebookActivity extends AppCompatActivity {
         view.setDrawingCacheEnabled(false); // clear drawing cache
 
         bmImage.setImageBitmap(image_to_share);
-
        findViewById(R.id.button2).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 dialogue();
             }
         });
-
-
     }
 
     public void dialogue () {
@@ -73,8 +67,5 @@ public class ShareOnFacebookActivity extends AppCompatActivity {
                     .addPhoto(photo)
                     .build();
             shareDialog.show(content);
-
     }
-
-
 }
