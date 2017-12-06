@@ -12,6 +12,8 @@ import android.view.View;
 import android.widget.TextView;
 
 import ch.epfl.sweng.qeeqbii.cancer.query.RatcliffQueryCancerDB;
+import ch.epfl.sweng.qeeqbii.cancer.query.RatcliffQueryCancerDB;
+import ch.epfl.sweng.qeeqbii.chat.MainActivityChat;
 import ch.epfl.sweng.qeeqbii.custom_exceptions.ProductException;
 import ch.epfl.sweng.qeeqbii.R;
 import ch.epfl.sweng.qeeqbii.open_food.OpenFoodQuery;
@@ -173,7 +175,7 @@ public class BarcodeToProductActivity extends AppCompatActivity {
     }
 
     public void showChat(MenuItem item) {
-        Intent intent = new Intent(this, ChatActivity.class);
+        Intent intent = new Intent(this, MainActivityChat.class);
         startActivity(intent);
     }
 }

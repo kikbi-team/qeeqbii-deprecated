@@ -165,6 +165,14 @@ public enum ClusterTypeSecondLevel implements ClusterType {
         bimap.put(BISCUITS_POUR_ENFANTS, "Biscuits pour Enfants");
         bimap.put(BISCUITS_POUR_ALLERGIQUES, "Biscuits pour personnes allergiques");
         bimap.put(DIVERS, "Biscuits divers");
+        bimap.put(MIEL, "Miel");
+        bimap.put(CONFITURES, "Confitures");
+        bimap.put(CACAO_CHOCOLATS_EN_POUDRE, "Cacao, Chocolats en poudre");
+        bimap.put(PATES_A_TARTINER, "Pâtes à tartiner");
+        bimap.put(PATES_A_TARTINER, "Pâtes à tartiner");
+        bimap.put(THE, "Boissons énergétiques");
+        bimap.put(CAFE, "Café");
+        bimap.put(SIROP_SODA, "Sirops, Sodas");
 
         return bimap;
 

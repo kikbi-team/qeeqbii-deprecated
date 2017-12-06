@@ -2,14 +2,14 @@ package ch.epfl.sweng.qeeqbii.shopping_cart;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
 import ch.epfl.sweng.qeeqbii.open_food.ClusterType;
 
 /**
- * Created by davidcleres on 01.11.17.
+ * Created by gmollard on 01.12.17.
+ *
  */
 public class ClusterProductList {
 
@@ -18,10 +18,6 @@ public class ClusterProductList {
     private Map<ClusterType, Boolean> is_checked_item = new HashMap<>();
 
     private List<ClusterType> m_items = new ArrayList<>();
-
-    public void emptyList () {
-        m_items.clear();
-    }
 
     public ClusterProductList(){
         //To avoid an empty list
@@ -59,51 +55,34 @@ public class ClusterProductList {
         return is_checked_item.get(cluster);
     }
 
-    public void deleteSingleItem() {
-        Iterator<ClusterType> element = m_items.iterator();
-        //for (Product element : m_items) {
-        while (element.hasNext()) {
-            ClusterType cluster = element.next();
-            if (is_checked_item.get(cluster))
-            {
-                element.remove();
-            }
-        }
+    public void deleteSingleItem(ClusterType cluster) {
+        m_items.remove(cluster);
+        is_checked_item.remove(cluster);
+    }
+
+    public void clear()
+    {
+        m_items.clear();
+        is_checked_item.clear();
     }
 
     public void checkItem(ClusterType cluster)
     {
-
+        is_checked_item.put(cluster,true);
     }
 
-    public void checkItemFromBarcode(String barcode) {
-        if (do_mock_barcode_checking)
-            checkItemFromBarcodeMock(barcode);
-        else {
-            // TODO: write a real method
-            // instead of this mocked version
-            // use OpenFood for map (barcode -> product)
-            // and Clustering for for map (product -> category)
-            checkItemFromBarcodeMock(barcode);
+    public void checkOrUncheckItem(ClusterType cluster)
+    {
+        if (!isCheckedItem(cluster))
+        {
+            is_checked_item.put(cluster,true);
+        } else {
+            is_checked_item.put(cluster,false);
         }
     }
 
-    // mocked version of checking items from barcode
-    // includes a constant mapping barcode -> category
-    // instead of using OpenFood (barcode -> product)
-    // and Clustering (product -> category)
-    // see checkItemFromBarcode()
-    private void checkItemFromBarcodeMock(String barcode) {
-        /*for (Product prod : m_items) {
-            if ((prod.getName().equals("Pizza") && barcode.equals("4001724819905")) ||
-<<<<<<< HEAD:app/src/main/java/ch/epfl/sweng/qeeqbii/shopping_cart/ClusterProductList.java
-                (prod.getName().equals("Wine") && barcode.equals("8437002948153")) ||
-                (prod.getName().equals("Cheese") && barcode.equals("2108726006400")))
-            prod.setChecked(Boolean.TRUE);
-        }*/
-    }
-
-    public void enableMockBarcodeChecking() {
-        do_mock_barcode_checking = Boolean.TRUE;
+    public int getClusterPosition(ClusterType cluster)
+    {
+        return m_items.indexOf(cluster);
     }
 }

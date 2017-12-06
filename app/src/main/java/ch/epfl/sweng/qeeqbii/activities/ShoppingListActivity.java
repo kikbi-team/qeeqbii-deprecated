@@ -29,10 +29,11 @@ public class ShoppingListActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_shopping_cart);
-        final RecyclerView recyclerView = (RecyclerView)findViewById(R.id.recycler);
+        setContentView(R.layout.activity_shopping_list);
+        final RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recycler);
 
         //create and set layout manager for each RecyclerView
+
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
         //Initializing and set adapter for each RecyclerView
@@ -43,29 +44,33 @@ public class ShoppingListActivity extends AppCompatActivity {
                 int itemPosition = recyclerView.getChildLayoutPosition(v);
                 String txt = m_cart.getSpecificItemInList(itemPosition).toString();
                 Intent intent = new Intent(ShoppingListActivity.this, ProductListActivity.class);
-                intent.putExtra("product_list","ShoppingList");
+                intent.putExtra("product_list", "ShoppingList");
                 intent.putExtra("cluster", txt);
                 startActivity(intent);
             }
         };
 
-        mAdapter = new RecyclerViewAdapter(this, m_cart, onclicklistener);
+        mAdapter = new RecyclerViewAdapter(this.getLayoutInflater(), m_cart,
+                R.layout.item_recycler_view_shopping_list, onclicklistener);
         recyclerView.setAdapter(mAdapter);
 
-        // obtain action if present
-        /*Bundle extras = getIntent().getExtras();
-        if (extras != null && extras.containsKey(EXTRA_BARCODE)) {
-            String barcode = extras.getString(EXTRA_BARCODE);
-            Log.d("STATE", "Shopping cart: checking " + barcode);
-            m_cart.checkItemFromBarcode(barcode);
-        } else {
-            Log.d("STATE", "Regular onCreate()");
-        }*/
     }
 
     public static void addCluster(ClusterType cluster)
     {
-        mAdapter.addItem(cluster);
+        if (!mAdapter.getClusters().contains(cluster)) {
+            mAdapter.addItem(cluster);
+        }
+    }
+
+    public static void deleteCluster(ClusterType cluster)
+    {
+        mAdapter.deleteSingleItem(cluster);
+    }
+
+    public static ClusterProductList getClusterList()
+    {
+        return m_cart;
     }
 
     public static void addProduct(Product product)
@@ -92,16 +97,33 @@ public class ShoppingListActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public static void checkOrUncheckItem(ClusterType cluster)
+    {
+        m_cart.checkOrUncheckItem(cluster);
+    }
+
     public void deleteShoppingList(View view) {
-        m_cart.emptyList();
-        Intent intent = new Intent(this, ShoppingListActivity.class);
-        startActivity(intent);
+        List<ClusterType> clustersToDelete = new ArrayList<>();
+        for (ClusterType cluster : m_cart.getItems()) {
+            clustersToDelete.add(cluster);
+        }
+        for (ClusterType cluster: clustersToDelete)
+        {
+            deleteCluster(cluster);
+        }
     }
 
     public void deleteSingleItem (View view) {
-        m_cart.deleteSingleItem();
-        Intent intent = new Intent(this, ShoppingListActivity.class);
-        startActivity(intent);
+        List<ClusterType> clustersToDelete = new ArrayList<>();
+        for (ClusterType cluster : m_cart.getItems()) {
+            if (m_cart.isCheckedItem(cluster)) {
+                clustersToDelete.add(cluster);
+            }
+        }
+        for (ClusterType cluster: clustersToDelete)
+        {
+            deleteCluster(cluster);
+        }
     }
 
     public void scanToCheck(View view) {

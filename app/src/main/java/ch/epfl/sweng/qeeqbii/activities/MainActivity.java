@@ -14,6 +14,7 @@ import com.facebook.share.widget.ShareDialog;
 
 import ch.epfl.sweng.qeeqbii.R;
 import ch.epfl.sweng.qeeqbii.cancer.CancerDataBase;
+import ch.epfl.sweng.qeeqbii.chat.MainActivityChat;
 import ch.epfl.sweng.qeeqbii.open_food.SavedProductsDatabase;
 import ch.epfl.sweng.qeeqbii.shopping_cart.ShoppingCartStatistics;
 
@@ -112,7 +113,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void showChat(MenuItem item) {
-        Intent intent = new Intent(this, ChatActivity.class);
+        Intent intent = new Intent(this, MainActivityChat.class);
         startActivity(intent);
     }
 }

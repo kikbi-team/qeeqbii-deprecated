@@ -17,13 +17,19 @@ import android.widget.Toast;
 
 import com.google.zxing.Result;
 
+import org.json.JSONException;
+
+import java.io.IOException;
+import java.text.ParseException;
+
 import ch.epfl.sweng.qeeqbii.R;
 import ch.epfl.sweng.qeeqbii.cancer.CancerDataBase;
 import ch.epfl.sweng.qeeqbii.clustering.ClusterClassifier;
 import ch.epfl.sweng.qeeqbii.clustering.NutrientNameConverter;
-import ch.epfl.sweng.qeeqbii.clustering.NutrientVector;
 import ch.epfl.sweng.qeeqbii.custom_exceptions.BadlyFormatedFile;
 import ch.epfl.sweng.qeeqbii.custom_exceptions.NotOpenFileException;
+import ch.epfl.sweng.qeeqbii.chat.MainActivityChat;
+import ch.epfl.sweng.qeeqbii.open_food.SavedProductsDatabase;
 import ch.epfl.sweng.qeeqbii.shopping_cart.ShoppingCartStatistics;
 import me.dm7.barcodescanner.zxing.ZXingScannerView;
 
@@ -77,6 +83,13 @@ public class BarcodeScannerActivity extends AppCompatActivity implements ZXingSc
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LOCKED);
 
         setContentView(R.layout.activity_barcode_scanner);
+
+        try {
+            SavedProductsDatabase.load(getApplicationContext());
+            SavedProductsDatabase.getDates();
+        } catch(IOException|JSONException|ParseException e){
+            System.err.println(e.getMessage());
+        }
 
         DrawerLayout mDrawerLayout = (DrawerLayout) findViewById(R.id.barcode_scanner);
         mToggle = new ActionBarDrawerToggle(this, mDrawerLayout, R.string.open, R.string.close);
@@ -294,7 +307,7 @@ public class BarcodeScannerActivity extends AppCompatActivity implements ZXingSc
     }
 
     public void showChat(MenuItem item) {
-        Intent intent = new Intent(this, ChatActivity.class);
+        Intent intent = new Intent(this, MainActivityChat.class);
         startActivity(intent);
     }
 }

@@ -81,6 +81,16 @@ dependencies {
 
     // For google BiMap, needed for clusterType
     compile group: 'com.google.guava', name: 'guava', version: '23.5-android'
+
+
+    compile 'de.hdodenhof:circleimageview:2.1.0'
+    compile 'com.theartofdev.edmodo:android-image-cropper:2.4.0'
+    compile 'com.google.firebase:firebase-storage:11.0.4'
+    compile 'id.zelory:compressor:2.0.0'
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    compile 'com.squareup.okhttp:okhttp:2.5.0'
+    compile 'com.google.firebase:firebase-messaging:11.0.4'
+
     compile 'com.android.support:appcompat-v7:25.3.1'
     compile 'com.android.support:design:25.3.1'
     compile 'com.google.firebase:firebase-auth:11.0.4'
@@ -124,6 +134,13 @@ dependencies {
     androidTestCompile 'com.android.support.test.espresso:espresso-intents:2.2.2'
     androidTestCompile 'com.android.support.test.uiautomator:uiautomator-v18:2.1.2'
     androidTestCompile 'org.mockito:mockito-android:2.7.22'
+    /*androidTestCompile('com.android.support.test.espresso:espresso-contrib:2.2.2') {
+        exclude group: 'com.android.support', module: 'appcompat'
+        exclude group: 'com.android.support', module: 'support-v4'
+        exclude group: 'com.android.support', module: 'appcompat-v7'
+        exclude group: 'com.android.support', module: 'design'
+        exclude module: 'recyclerview-v7'
+    }*/
     compile 'com.android.support:gridlayout-v7:25.3.1'
 }
 

@@ -26,7 +26,7 @@ public class ShoppingCartFirstLevelActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_shopping_list_new);
+        setContentView(R.layout.activity_shopping_cart_2);
 
         final RecyclerView recyclerView = (RecyclerView)findViewById(R.id.recycler_item_shopping_list);
 
@@ -48,7 +48,8 @@ public class ShoppingCartFirstLevelActivity extends AppCompatActivity {
             }
         };
 
-        RecyclerViewAdapter adapter = new RecyclerViewAdapter(this, m_cart, onclicklistener);
+        RecyclerViewAdapter adapter = new RecyclerViewAdapter(this.getLayoutInflater(), m_cart,
+                R.layout.item_recycler_view_shopping_cart, onclicklistener);
         recyclerView.setAdapter(adapter);
     }
 

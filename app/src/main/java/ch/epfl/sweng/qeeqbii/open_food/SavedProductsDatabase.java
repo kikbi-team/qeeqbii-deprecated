@@ -6,6 +6,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -40,6 +41,16 @@ public class SavedProductsDatabase
     public static void load(Context context) throws IOException, JSONException
     {
         if (saved_products_json == null) {
+            String[] filelist = context.fileList();
+            Boolean exists = false;
+            for (String file : filelist)
+            {
+                if ("saved_products_database.json".equals(file))
+                    exists = true;
+            }
+            if (!exists) {
+                context.openFileOutput("saved_products_database.json",0).close();
+            }
             load(context.openFileInput("saved_products_database.json"));
         }
     }

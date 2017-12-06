@@ -27,6 +27,7 @@ import java.util.ArrayList;
 import java.util.Map;
 
 import ch.epfl.sweng.qeeqbii.R;
+import ch.epfl.sweng.qeeqbii.chat.MainActivityChat;
 import ch.epfl.sweng.qeeqbii.shopping_cart.ShoppingCartStatistics;
 import ch.epfl.sweng.qeeqbii.open_food.OpenFoodQuery;
 import ch.epfl.sweng.qeeqbii.open_food.Product;
@@ -276,7 +277,7 @@ public class GraphsActivity extends AppCompatActivity {
     }
 
     public void showChat(MenuItem item) {
-        Intent intent = new Intent(this, ChatActivity.class);
+        Intent intent = new Intent(this, MainActivityChat.class);
         startActivity(intent);
     }
 
