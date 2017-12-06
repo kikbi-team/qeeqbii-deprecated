@@ -1,5 +1,9 @@
 package ch.epfl.sweng.qeeqbii.cancer;
 
+import java.util.Locale;
+
+import static java.util.Locale.getDefault;
+
 /**
  * Created by adrien on 19.11.17.
  */
@@ -74,8 +78,8 @@ public class RatcliffObershelpSimilarity {
             return 1;
         }
 
-        s1 = s1.toLowerCase();
-        s2 = s2.toLowerCase();
+        s1 = s1.toLowerCase(Locale.getDefault());
+        s2 = s2.toLowerCase(Locale.getDefault());
 
         s1len = s1.length();
         s2len = s2.length();

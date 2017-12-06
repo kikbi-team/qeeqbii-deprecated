@@ -16,7 +16,6 @@ import com.github.mikephil.charting.components.Legend;
 
 import ch.epfl.sweng.qeeqbii.R;
 
-
 public class pieChartYearlyFrag extends SimpleFragment {
 
     public static Fragment newInstance() {

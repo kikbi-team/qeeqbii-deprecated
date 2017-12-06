@@ -48,7 +48,7 @@
                 android:layout_height="wrap_content"
                 android:onClick="showNutrientsGraphs"
                 app:srcCompat="@mipmap/graph"
-                android:contentDescription="@string/graph" />
+                android:contentDescription="@string/graphs" />
         </LinearLayout>
     </ScrollView>
 
