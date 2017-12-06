@@ -4,7 +4,7 @@
 
     <item
         android:id="@+id/main_settings_btn"
-        android:title="@string/account_settings" />
+        android:title="@string/account_setting" />
     <item
         android:id="@+id/main_all_btn"
         android:title="@string/all_users" />
