@@ -89,7 +89,7 @@ public class NutrientVectorTest {
 
         int numberOfStandardKeys = 0;
         try {
-            numberOfStandardKeys = NutrientNameConverter.getStandardNutrientNames().size();;
+            numberOfStandardKeys = NutrientNameConverter.getStandardNutrientNames().size();
         }
         catch (NotOpenFileException e) {
             System.err.println(e.getMessage());
