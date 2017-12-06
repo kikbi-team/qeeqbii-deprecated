@@ -17,7 +17,6 @@ import ch.epfl.sweng.qeeqbii.activities.BarcodeScannerActivity;
 import ch.epfl.sweng.qeeqbii.activities.GraphsActivity;
 import ch.epfl.sweng.qeeqbii.activities.MainActivity;
 import ch.epfl.sweng.qeeqbii.activities.SavedProductsDatesActivity;
-import ch.epfl.sweng.qeeqbii.activities.ShoppingCartActivity;
 import ch.epfl.sweng.qeeqbii.chat.AgeActivity;
 import ch.epfl.sweng.qeeqbii.chat.AllergiesActivity;
 import ch.epfl.sweng.qeeqbii.chat.ChatActivity;
