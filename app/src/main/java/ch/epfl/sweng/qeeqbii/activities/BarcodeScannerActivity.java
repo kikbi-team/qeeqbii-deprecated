@@ -220,6 +220,8 @@ public class BarcodeScannerActivity extends AppCompatActivity implements ZXingSc
     }
 
 
+    // slider actions below
+
     public void cancerDataBaseShow(MenuItem item) {
         Intent intent = new Intent(this, CancerDataShowActivity.class);
         startActivity(intent);
