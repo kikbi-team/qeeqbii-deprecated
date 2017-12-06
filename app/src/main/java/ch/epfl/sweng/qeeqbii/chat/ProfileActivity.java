@@ -175,7 +175,7 @@ public class ProfileActivity extends AppCompatActivity {
                                 Toast.makeText(ProfileActivity.this, "There was some error in sending request", Toast.LENGTH_SHORT).show();
                             } else {
                                 mCurrent_state = "req_sent";
-                                mProfileSendReqBtn.setText("Cancel Friend Request");
+                                mProfileSendReqBtn.setText(R.string.cancel_request);
                             }
                             mProfileSendReqBtn.setEnabled(true);
                         }
@@ -194,7 +194,7 @@ public class ProfileActivity extends AppCompatActivity {
                                 public void onSuccess(Void aVoid) {
                                     mProfileSendReqBtn.setEnabled(true);
                                     mCurrent_state = "not_friends";
-                                    mProfileSendReqBtn.setText("Send Friend Request");
+                                    mProfileSendReqBtn.setText(R.string.send_friend_request);
                                     mDeclineBtn.setVisibility(View.INVISIBLE);
                                     mDeclineBtn.setEnabled(false);
                                 }
@@ -218,7 +218,7 @@ public class ProfileActivity extends AppCompatActivity {
                             if(databaseError == null){
                                 mProfileSendReqBtn.setEnabled(true);
                                 mCurrent_state = "friends";
-                                mProfileSendReqBtn.setText("Unfriend this Person");
+                                mProfileSendReqBtn.setText(R.string.unfriend);
                                 mDeclineBtn.setVisibility(View.INVISIBLE);
                                 mDeclineBtn.setEnabled(false);
 
@@ -241,7 +241,7 @@ public class ProfileActivity extends AppCompatActivity {
 
                             if (databaseError == null) {
                                 mCurrent_state = "not_friends";
-                                mProfileSendReqBtn.setText("Send Friend Request");
+                                mProfileSendReqBtn.setText(R.string.send_friend_request);
                                 mDeclineBtn.setVisibility(View.INVISIBLE);
                                 mDeclineBtn.setEnabled(false);
 
