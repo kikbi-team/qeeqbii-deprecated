@@ -38,22 +38,22 @@
     <include layout="@layout/content_shopping_cart" />
 
     <android.support.design.widget.FloatingActionButton
-        android:id="@+id/deleteButton"
+        android:id="@+id/scanToCheckButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom|start"
+        android:layout_gravity="center_vertical|Start"
         android:layout_margin="@dimen/fab_margin"
-        android:onClick="deleteShoppingList"
+        android:onClick="scanToCheck"
         app:layout_anchor="@+id/app_bar"
-        app:layout_anchorGravity="top|right"
-        app:srcCompat="@android:drawable/ic_delete"
-        tools:onClick="deleteShoppingList" />
+        app:layout_anchorGravity="center_vertical|left"
+        app:srcCompat="@android:drawable/ic_menu_camera"
+        tools:onClick="scanToCheck" />
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/addButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom|start"
+        android:layout_gravity="center_vertical|left"
         android:layout_margin="@dimen/fab_margin"
         android:onClick="showShoppingList"
         app:layout_anchor="@+id/app_bar"
@@ -65,24 +65,24 @@
         android:id="@+id/removeButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical|End"
+        android:layout_gravity="center_vertical|left"
         android:layout_margin="@dimen/fab_margin"
         android:onClick="deleteSingleItem"
         app:layout_anchor="@+id/app_bar"
         app:layout_anchorGravity="center_vertical|center_horizontal"
-        app:srcCompat="@android:drawable/ic_delete"
+        app:srcCompat="@android:drawable/ic_menu_save"
         tools:onClick="deleteShoppingList" />
 
     <android.support.design.widget.FloatingActionButton
-        android:id="@+id/scanToCheckButton"
+        android:id="@+id/deleteButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical|Start"
+        android:layout_gravity="center_vertical|right"
         android:layout_margin="@dimen/fab_margin"
-        android:onClick="scanToCheck"
+        android:onClick="deleteShoppingList"
         app:layout_anchor="@+id/app_bar"
-        app:layout_anchorGravity="center_vertical|left"
-        app:srcCompat="@android:drawable/ic_menu_camera"
-        tools:onClick="scanToCheck" />
+        app:layout_anchorGravity="center_vertical|center_horizontal"
+        app:srcCompat="@android:drawable/ic_menu_delete"
+        tools:onClick="deleteShoppingList" />
 
 </android.support.design.widget.CoordinatorLayout>
