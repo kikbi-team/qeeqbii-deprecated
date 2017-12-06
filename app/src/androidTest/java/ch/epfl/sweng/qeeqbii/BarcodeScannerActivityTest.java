@@ -147,9 +147,9 @@ public class BarcodeScannerActivityTest {
 
         BarcodeScannerActivity activity = mActivityRule.getActivity();
         activity.processBarcode("7611654884033");
-        //intended(hasComponent(new ComponentName(getTargetContext(), BarcodeToProductActivity.class)));
+        intended(hasComponent(new ComponentName(getTargetContext(), BarcodeToProductActivity.class)));
         onView(withId(R.id.product_details)).check(matches(withText(startsWith("Chocolat au lait aux noisettes"))));
         Espresso.pressBack();
-        //intended(hasComponent(new ComponentName(getTargetContext(), MainActivity.class)));
+        activity.finish();
     }
 }
