@@ -11,7 +11,7 @@ import static junit.framework.Assert.assertEquals;
 /**
  * Created by nicol on 26.11.2017.
  */
-/*
+
 public class GetTimeAgoTest {
     @Test
     public void test_time() {
@@ -20,8 +20,7 @@ public class GetTimeAgoTest {
 
         String test = getTimeAgo(time,cxt);
         long now = System.currentTimeMillis();
-        assertEquals(test,"17505 days ago");
+        assertEquals(test,"17506 days ago");
     }
 
 }
-*/
