@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     package="ch.epfl.sweng.qeeqbii">
 
     <uses-permission android:name="android.permission.INTERNET" />
@@ -28,85 +27,83 @@
             </intent-filter>
         </activity>
 
-     <!--   <activity android:name=".activities.login.ChooserActivity" />
-        <activity
-            android:name=".activities.login.GoogleSignInActivity"
-            android:label="@string/label_google_sign_in" />-->
+        <!--   <activity android:name=".activities.login.ChooserActivity" />
+           <activity
+               android:name=".activities.login.GoogleSignInActivity"
+               android:label="@string/label_google_sign_in" />-->
         <!-- Facebook Configuration -->
-     <!--   <meta-data
-            android:name="com.facebook.sdk.ApplicationId"
-            android:value="@string/facebook_app_id"
-            tools:replace="android:value" />
+        <!--   <meta-data
+               android:name="com.facebook.sdk.ApplicationId"
+               android:value="@string/facebook_app_id"
+               tools:replace="android:value" />
 
-        <activity
-            android:name=".activities.login.FacebookLoginActivity"
-            android:label="@string/label_facebook_login" />
-        <activity
-            android:name=".activities.login.EmailPasswordActivity"
-            android:label="@string/label_emailpassword"
-            android:windowSoftInputMode="stateAlwaysHidden" />
-        <activity
-            android:name=".activities.login.AnonymousAuthActivity"
-            android:exported="true"
-            android:label="@string/label_anonymous_auth" />
-        <activity
-            android:name=".activities.login.TwitterLoginActivity"
-            android:label="@string/label_twitter_login" /> -->
+           <activity
+               android:name=".activities.login.FacebookLoginActivity"
+               android:label="@string/label_facebook_login" />
+           <activity
+               android:name=".activities.login.EmailPasswordActivity"
+               android:label="@string/label_emailpassword"
+               android:windowSoftInputMode="stateAlwaysHidden" />
+           <activity
+               android:name=".activities.login.AnonymousAuthActivity"
+               android:exported="true"
+               android:label="@string/label_anonymous_auth" />
+           <activity
+               android:name=".activities.login.TwitterLoginActivity"
+               android:label="@string/label_twitter_login" /> -->
 
         <activity
             android:name=".activities.MainActivity"
-            android:label="@string/app_name">
-        </activity>
+            android:label="@string/app_name"></activity>
 
-        <service android:name="chat.FirebaseMessagingService"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:exported="false">
+        <service
+            android:name="chat.FirebaseMessagingService"
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
 
-        <activity android:name=".chat.MainActivityChat"
-            android:theme="@style/AppTheme.NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <activity
+            android:name=".chat.MainActivityChat"
+            android:exported="true"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity android:name=".chat.StartActivity" />
         <activity
             android:name=".chat.RegisterActivity"
             android:parentActivityName=".chat.StartActivity"
-            android:theme="@style/AppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".chat.LoginActivity"
             android:parentActivityName=".chat.StartActivity"
-            android:theme="@style/AppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".chat.SettingsActivity" />
         <activity
             android:name=".chat.StatusActivity"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:parentActivityName=".chat.SettingsActivity" />
+            android:parentActivityName=".chat.SettingsActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".chat.AgeActivity"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:parentActivityName=".chat.SettingsActivity" />
+            android:parentActivityName=".chat.SettingsActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".chat.AllergiesActivity"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:parentActivityName=".chat.SettingsActivity" />
+            android:parentActivityName=".chat.SettingsActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".chat.DegoutActivity"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:parentActivityName=".chat.SettingsActivity" />
+            android:parentActivityName=".chat.SettingsActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
             android:theme="@style/Base.Theme.AppCompat" />
         <activity
             android:name=".chat.UsersActivity"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:parentActivityName=".chat.MainActivityChat" />
-        <activity android:name=".chat.ProfileActivity"
+            android:parentActivityName=".chat.MainActivityChat"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".chat.ProfileActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="ch.epfl.sweng.qeeqbii.chat.lapitchat_TARGET_NOTIFICATION" />
@@ -114,10 +111,10 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".chat.ChatActivity"
+        <activity
+            android:name=".chat.ChatActivity"
             android:parentActivityName=".chat.MainActivityChat"
-            android:theme="@style/AppTheme.NoActionBar">
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar"></activity>
 
         <activity
             android:name=".activities.CancerDataShowActivity"
@@ -177,7 +174,7 @@
             android:name=".shopping_cart.ShoppingCartStatistics"
             android:label="@string/title_activity_shopping_cart_statistics"
             android:theme="@style/AppTheme.NoActionBar" />
-        
+
         <activity
 
             android:name=".activities.ProductComparisonActivity"
