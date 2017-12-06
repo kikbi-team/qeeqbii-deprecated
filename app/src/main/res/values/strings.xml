@@ -10,7 +10,7 @@
 
     <!-- Google Sign In -->
 
-    <string name="sign_out">Sign Out</string>
+    <!--
     <string name="disconnect">Disconnect</string>
     <string name="loading">Loading…</string>
     <string name="signed_out">Signed Out</string>
@@ -34,7 +34,7 @@
     <string name="email_fmt">Email: %s</string>
 
     <string name="hint_password">password</string>
-    <string name="hint_email">email</string>
+    <string name="hint_email">email</string>-->
 
     <!-- Facebook events -->
     <!-- Text and labels -->
@@ -48,11 +48,12 @@
     <string name="set_threshold">Set threshold\nfor Ratcliff query:</string>
     <string name="default_ratcliff_theshold">0.8</string>
 
-    <string name="first_name">First_Name</string>
+    <!--<string name="first_name">First_Name</string>
     <string name="last_name">Last_Name</string>
-    <string name="allergies">Allergies:</string>
+
     <string name="aliments_proscrire">Aliments à proscrire</string>
-    <string name="save_and_continue">Save and continue</string>
+    <string name="save_and_continue">Save and continue</string>-->
+    <string name="allergies">Allergies:</string>
     <string name="search_product">search product</string>
     <string name="graphs">Graphs</string>
     <string name="scan_barcode">Scan Barcode</string>
@@ -72,41 +73,27 @@
     <string name="vegetables">vegetables</string>
 
 
-    <string name="label_google_sign_in">Firebase + Google Sign In</string>
-
+<!--    <string name="label_google_sign_in">Firebase + Google Sign In</string>
     <string name="desc_google_sign_in">Use a Google Sign In credential to authenticate with Firebase.</string>
-
     <string name="label_facebook_login">Firebase + Facebook Login</string>
-
     <string name="desc_facebook_login">Use a Facebook Login credential to authenticate with Firebase.</string>
-
     <string name="label_twitter_login">Firebase + Twitter Login</string>
-
     <string name="desc_twitter_login">Use a Twitter Login credential to authenticate with Firebase.</string>
-
     <string name="label_emailpassword">Email/Password Authentication</string>
-
     <string name="desc_emailpassword">Use an email and password to authenticate with Firebase.</string>
-
     <string name="desc_phone_auth">Use a phone number to authenticate with Firebase.</string>
-
     <string name="label_anonymous_auth">Anonymous Authentication</string>
-
     <string name="desc_anonymous_auth">Sign in anonymously and then later upgrade to a full Firebase Auth user.</string>
-
     <string name="desc_custom_auth">Use a custom token signed by your own server to authenticate with Firebase.</string>
-
     <string name="desc_firebase_ui">Use the FirebaseUI-Android library to authenticate with Firebase.</string>
 
-    <string name="sign_in">Sign In</string>
+    <string name="sign_in">Sign In</string>-->
 
     <string name="create_account">Create Account</string>
 
-    <string name="verify_email">Verify Email</string>
-
+    <!--<string name="verify_email">Verify Email</string>
     <string name="Account_Linking">Account Linking</string>
-
-    <string name="auth_failed">Authentication failed</string>
+    <string name="auth_failed">Authentication failed</string>-->
 
     <string name="empty_field">Empty field</string>
 
@@ -125,15 +112,15 @@
     <string name="title_activity_shopping_cart_statistics">ShoppingCartStatistics</string>
     <string name="action_settings">Settings</string>
     <string name="tab_1_monthly_stats">tab_1_monthly_stats</string>
-    <string name="tab_2_trimester_stats">tab_2_trimester_stats</string>
-    <string name="tab_3_yearly_stats">tab_3_yearly_stats</string>
+    <!--<string name="tab_2_trimester_stats">tab_2_trimester_stats</string>
+    <string name="tab_3_yearly_stats">tab_3_yearly_stats</string>-->
     <string name="saussage">saussage</string>
-    <string name="title_activity_chat">ChatActivity</string>
-    <string name="stats">Stats</string>
+    <!--<string name="title_activity_chat">ChatActivity</string>
+    <string name="stats">Stats</string>-->
     <string name="statistics">statistics</string>
-    <string name="show_the_statistics_for_one_month">Show the statistics for one month</string>
+  <!--  <string name="show_the_statistics_for_one_month">Show the statistics for one month</string>
     <string name="show_the_statistics_for_the_trimester">Show the statistics for the trimester</string>
-    <string name="show_the_statistics_yearly_statistics">Show the statistics yearly statistics</string>
+    <string name="show_the_statistics_yearly_statistics">Show the statistics yearly statistics</string>-->
     <string name="bottle">Bottle</string>
     <string name="water">Water</string>
     <string name="biscuit">biscuit</string>
@@ -154,7 +141,6 @@
     <string name="log_out">Log Out</string>
 
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="default_status">Hi there, I\'m using Qeeqbii App</string>
     <string name="default_age">I need to enter my age</string>
     <string name="default_allergies">I need to enter my allergies</string>
@@ -163,10 +149,9 @@
     <string name="MainActivityChat">MainActivityChat</string>
     <string name="ProfileActivity">ProfileActivity</string>
     <string name="ActivityChat">ActivityChat</string>
-    <string name="EnterMessage">Enter Message ...</string>
+    <string name="EnterMessage">Enter Message</string>
     <string name="YourAge">Your Age</string>
     <string name="savechanges">SAVE CHANGES</string>
-    <string name="YourAllergies">Your Allergies</string>
     <string name="donotwant">Things you don\'t want to eat</string>
     <string name="LOGIN">LOGIN</string>
     <string name="youraccount">Login to your Account</string>
@@ -177,6 +162,33 @@
     <string name="criteria">Criteria</string>
     <string name="scan_at_least_two">Please scan at least two products for comparison</string>
     <string name="cannot_obtain_nutrients">Cannot obtain nutrients</string>
+
+    <string name="current_user_status">Current User Status</string>
+    <string name="total_friend">Total Friends</string>
+    <string name="send_friend_request">SEND FRIEND REQUEST</string>
+    <string name="decline_friend_request">DECLINE FRIEND REQUEST</string>
+    <string name="create_new_account">Create a New Account</string>
+    <string name="set_age">SET AGE</string>
+    <string name="set_allergies">SET ALLERGIES</string>
+    <string name="set_do_not_like">SET DO NOT LIKE</string>
+    <string name="change_status">CHANGE STATUS</string>
+    <string name="change_image">CHANGE IMAGE</string>
+    <string name="welcome">Welcome to Qeeqbii \n App</string>
+    <string name="have_already">ALREADY HAVE ACCOUNT</string>
+    <string name="status">Your Status</string>
+    <string name="save_changes">SAVE CHANGES</string>
+    <string name="last_seen">Last Seen</string>
+    <string name="no_request">You have no requests</string>
+    <string name="account_setting">Account Settings</string>
+    <string name="all_users">All Users</string>
+    <string name="message_text">Message Text</string>
+    <string name="smiley">:)</string>
+    <string name="user_default">User default Status</string>
+    <string name="name1">Name 1</string>
+    <string name="name2">Name 2</string>
+
+
+
 
 
 </resources>

@@ -1,5 +1,6 @@
 package ch.epfl.sweng.qeeqbii.chat;
 
+import android.annotation.SuppressLint;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Intent;
@@ -8,6 +9,7 @@ import ch.epfl.sweng.qeeqbii.R;
 
 import com.google.firebase.messaging.RemoteMessage;
 
+@SuppressLint("Registered")
 public class FirebaseMessagingService extends com.google.firebase.messaging.FirebaseMessagingService {
 
 
