@@ -11,7 +11,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
-import ch.epfl.sweng.qeeqbii.cancer.RatcliffQueryCancerDB;
+import ch.epfl.sweng.qeeqbii.cancer.query.RatcliffQueryCancerDB;
 import ch.epfl.sweng.qeeqbii.custom_exceptions.ProductException;
 import ch.epfl.sweng.qeeqbii.R;
 import ch.epfl.sweng.qeeqbii.open_food.OpenFoodQuery;

@@ -1,7 +1,9 @@
-package ch.epfl.sweng.qeeqbii.cancer;
+package ch.epfl.sweng.qeeqbii.cancer.query;
 
 import java.util.Set;
 
+import ch.epfl.sweng.qeeqbii.cancer.CancerDataBase;
+import ch.epfl.sweng.qeeqbii.cancer.CancerSubstance;
 import ch.epfl.sweng.qeeqbii.custom_exceptions.NotOpenFileException;
 import ch.epfl.sweng.qeeqbii.custom_exceptions.NullInputException;
 import edu.gatech.gtri.bktree.BkTreeSearcher;

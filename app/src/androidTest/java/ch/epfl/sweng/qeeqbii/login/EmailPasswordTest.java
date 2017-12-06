@@ -1,8 +1,9 @@
-package ch.epfl.sweng.qeeqbii;
+package ch.epfl.sweng.qeeqbii.login;
 import android.support.test.espresso.Espresso;
 import android.support.test.espresso.IdlingResource;
 import android.support.test.espresso.NoMatchingViewException;
 import android.support.test.espresso.ViewInteraction;
+import android.support.test.espresso.matcher.ViewMatchers;
 import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
 import android.test.suitebuilder.annotation.LargeTest;
@@ -15,6 +16,8 @@ import org.junit.runner.RunWith;
 
 import java.util.Random;
 
+import ch.epfl.sweng.qeeqbii.BaseActivityIdlingResource;
+import ch.epfl.sweng.qeeqbii.R;
 import ch.epfl.sweng.qeeqbii.activities.login.EmailPasswordActivity;
 
 import static android.support.test.espresso.Espresso.onView;
@@ -81,7 +84,7 @@ public class EmailPasswordTest {
 
         // Click sign in
         ViewInteraction appCompatButton = onView(
-                allOf(withId(R.id.email_sign_in_button), withText(R.string.sign_in),
+                allOf(ViewMatchers.withId(R.id.email_sign_in_button), withText(R.string.sign_in),
                         withParent(withId(R.id.email_password_buttons)),
                         isDisplayed()));
         appCompatButton.perform(click());

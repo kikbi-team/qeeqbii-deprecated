@@ -16,7 +16,9 @@ import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.NoSuchElementException;
 import java.util.PriorityQueue;
+import java.util.concurrent.atomic.AtomicBoolean;
 
 import ch.epfl.sweng.qeeqbii.R;
 import ch.epfl.sweng.qeeqbii.custom_exceptions.BadlyFormatedFile;
@@ -39,9 +41,19 @@ public class ClusterClassifier {
     private static boolean openState = false;
 
     public static void readClusterNutrientCentersFile(Context context) throws NotOpenFileException, BadlyFormatedFile {
+        if (!NutrientNameConverter.isRead()) {
+            throw new NotOpenFileException("Open the nutrient_name_converter.csv file before reading the" +
+                    "cluster_nutrient_centers.csv file.");
+        }
         if (!openState) {
             Resources resources = context.getResources();
-            InputStream inStream = resources.openRawResource(R.raw.cluster_nutrient_centers);
+            InputStream inStream;
+            if (TestChecker.isRunningTest("ch.epfl.sweng.qeeqbii.clustering.ClusterClassifierTest")) {
+                inStream = resources.openRawResource(R.raw.cluster_nutrient_centers_test);
+            }
+            else {
+                inStream = resources.openRawResource(R.raw.cluster_nutrient_centers);
+            }
             BufferedReader reader = new BufferedReader(new InputStreamReader(inStream, Charset.forName("UTF-8")));
             try {
                 // Step over the header and get the list of nutrients available
@@ -115,6 +127,11 @@ public class ClusterClassifier {
     public static ArrayList<ComparableCluster> getClusterTypeFromNutrients(NutrientVector queriedVector) throws NotOpenFileException {
         // First we need to find the closest nutrient vector to the queried nutrientVector
         // To do so we will use the euclidean norm
+        if (!openState) {
+            throw new NotOpenFileException("Open the cluster_nutrient_centers.csv file before trying to classify" +
+                    "a product using it NutrientVector.");
+        }
+
         NutrientVector normalizedQueriedVector = normalizationWRTClusterCenters(queriedVector);
 
         double currentDistance;
@@ -139,9 +156,15 @@ public class ClusterClassifier {
         // Get the ComparableClusters that were the closest to the normalizedQueriedVector
         int nbBestClusters = 10;
         ArrayList<ComparableCluster> topClusters = new ArrayList<>();
-        ComparableCluster topComparableCluster;
-        for (int i = 0; i < nbBestClusters; i++) {
-            topClusters.add(minHeap.remove());
+        boolean emptyHeap = false;
+        for (int i = 0; i < nbBestClusters && !emptyHeap; i++) {
+            try {
+                ComparableCluster currentTopCluster = minHeap.remove();
+                topClusters.add(currentTopCluster);
+            }
+            catch (NoSuchElementException e) {
+                emptyHeap = true;
+            }
         }
 
         return topClusters;
@@ -162,5 +185,15 @@ public class ClusterClassifier {
             throws NotOpenFileException {
         return (toNormalize.diff(mean)).componentWiseDivision(std);
     }
+
+
+    public static void clear() {
+        mapCenters.clear();
+        mean = null;
+        std = null;
+        nutrientKeys.clear();
+        openState = false;
+    }
+
 
 }

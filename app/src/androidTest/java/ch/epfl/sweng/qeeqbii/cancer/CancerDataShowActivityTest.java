@@ -1,16 +1,17 @@
-package ch.epfl.sweng.qeeqbii;
+package ch.epfl.sweng.qeeqbii.cancer;
 
 import android.app.Instrumentation;
 import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
 import android.view.MenuItem;
 
+import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
+import ch.epfl.sweng.qeeqbii.R;
 import ch.epfl.sweng.qeeqbii.activities.BarcodeScannerActivity;
-import ch.epfl.sweng.qeeqbii.activities.BarcodeToProductActivity;
 import ch.epfl.sweng.qeeqbii.activities.CancerDataQueryActivity;
 import ch.epfl.sweng.qeeqbii.activities.CancerDataShowActivity;
 import ch.epfl.sweng.qeeqbii.activities.ChatActivity;
@@ -18,17 +19,22 @@ import ch.epfl.sweng.qeeqbii.activities.GraphsActivity;
 import ch.epfl.sweng.qeeqbii.activities.MainActivity;
 import ch.epfl.sweng.qeeqbii.activities.SavedProductsDatesActivity;
 import ch.epfl.sweng.qeeqbii.activities.ShoppingListActivity;
+import ch.epfl.sweng.qeeqbii.clustering.ClusterClassifier;
+import ch.epfl.sweng.qeeqbii.clustering.NutrientNameConverter;
 import ch.epfl.sweng.qeeqbii.shopping_cart.ShoppingCartStatistics;
 
 import static android.support.test.InstrumentationRegistry.getInstrumentation;
 import static junit.framework.Assert.assertNotNull;
 
+
 @RunWith(AndroidJUnit4.class)
-public class barcodeToProductSliderTest {
+public class CancerDataShowActivityTest {
 
     @Rule
-    public final ActivityTestRule<BarcodeToProductActivity> mActivityRule =
-            new ActivityTestRule<>(BarcodeToProductActivity.class);
+    public final ActivityTestRule<CancerDataShowActivity> mActivityRule =
+            new ActivityTestRule<>(CancerDataShowActivity.class);
+
+
 
     @Test
     public void testBackToMain() {
@@ -36,7 +42,7 @@ public class barcodeToProductSliderTest {
         Instrumentation.ActivityMonitor activityMonitor = getInstrumentation().addMonitor(MainActivity.class.getName(), null, false);
 
         // open current activity.
-        BarcodeToProductActivity myActivity = mActivityRule.getActivity();
+        CancerDataShowActivity myActivity = mActivityRule.getActivity();
         final MenuItem button = (MenuItem) myActivity.findViewById(R.id.nav_main);
         myActivity.backToMain(button);
 
@@ -54,7 +60,7 @@ public class barcodeToProductSliderTest {
         Instrumentation.ActivityMonitor activityMonitor = getInstrumentation().addMonitor(GraphsActivity.class.getName(), null, false);
 
         // open current activity.
-        BarcodeToProductActivity myActivity = mActivityRule.getActivity();
+        CancerDataShowActivity myActivity = mActivityRule.getActivity();
         final MenuItem button = (MenuItem) myActivity.findViewById(R.id.nav_graphs);
         myActivity.showGraphs(button);
 
@@ -72,7 +78,7 @@ public class barcodeToProductSliderTest {
         Instrumentation.ActivityMonitor activityMonitor = getInstrumentation().addMonitor(CancerDataShowActivity.class.getName(), null, false);
 
         // open current activity.
-        BarcodeToProductActivity myActivity = mActivityRule.getActivity();
+        CancerDataShowActivity myActivity = mActivityRule.getActivity();
         final MenuItem button = (MenuItem) myActivity.findViewById(R.id.nav_graphs);
         myActivity.cancerDataBaseShow(button);
 
@@ -90,7 +96,7 @@ public class barcodeToProductSliderTest {
         Instrumentation.ActivityMonitor activityMonitor = getInstrumentation().addMonitor(BarcodeScannerActivity.class.getName(), null, false);
 
         // open current activity.
-        BarcodeToProductActivity myActivity = mActivityRule.getActivity();
+        CancerDataShowActivity myActivity = mActivityRule.getActivity();
         final MenuItem button = (MenuItem) myActivity.findViewById(R.id.nav_graphs);
         myActivity.readBarcode(button);
 
@@ -108,7 +114,7 @@ public class barcodeToProductSliderTest {
         Instrumentation.ActivityMonitor activityMonitor = getInstrumentation().addMonitor(ShoppingListActivity.class.getName(), null, false);
 
         // open current activity.
-        BarcodeToProductActivity myActivity = mActivityRule.getActivity();
+        CancerDataShowActivity myActivity = mActivityRule.getActivity();
         final MenuItem button = (MenuItem) myActivity.findViewById(R.id.nav_graphs);
         myActivity.showShoppingList(button);
 
@@ -126,7 +132,7 @@ public class barcodeToProductSliderTest {
         Instrumentation.ActivityMonitor activityMonitor = getInstrumentation().addMonitor(CancerDataQueryActivity.class.getName(), null, false);
 
         // open current activity.
-        BarcodeToProductActivity myActivity = mActivityRule.getActivity();
+        CancerDataShowActivity myActivity = mActivityRule.getActivity();
         final MenuItem button = (MenuItem) myActivity.findViewById(R.id.nav_graphs);
         myActivity.cancerDataQuery(button);
 
@@ -149,7 +155,7 @@ public class barcodeToProductSliderTest {
         Instrumentation.ActivityMonitor activityMonitor = getInstrumentation().addMonitor(SavedProductsDatesActivity.class.getName(), null, false);
 
         // open current activity.
-        BarcodeToProductActivity myActivity = mActivityRule.getActivity();
+        CancerDataShowActivity myActivity = mActivityRule.getActivity();
         final MenuItem button = (MenuItem) myActivity.findViewById(R.id.nav_graphs);
         myActivity.showSavedProducts(button);
 
@@ -167,7 +173,7 @@ public class barcodeToProductSliderTest {
         Instrumentation.ActivityMonitor activityMonitor = getInstrumentation().addMonitor(ShoppingCartStatistics.class.getName(), null, false);
 
         // open current activity.
-        BarcodeToProductActivity myActivity = mActivityRule.getActivity();
+        CancerDataShowActivity myActivity = mActivityRule.getActivity();
         final MenuItem button = (MenuItem) myActivity.findViewById(R.id.nav_graphs);
         myActivity.showStatistics(button);
 
@@ -185,7 +191,7 @@ public class barcodeToProductSliderTest {
         Instrumentation.ActivityMonitor activityMonitor = getInstrumentation().addMonitor(ChatActivity.class.getName(), null, false);
 
         // open current activity.
-        BarcodeToProductActivity myActivity = mActivityRule.getActivity();
+        CancerDataShowActivity myActivity = mActivityRule.getActivity();
         final MenuItem button = (MenuItem) myActivity.findViewById(R.id.nav_graphs);
         myActivity.showChat(button);
 

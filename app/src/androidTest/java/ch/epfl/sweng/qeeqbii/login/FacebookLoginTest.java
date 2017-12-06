@@ -1,4 +1,4 @@
-package ch.epfl.sweng.qeeqbii;
+package ch.epfl.sweng.qeeqbii.login;
 
 
 /*
@@ -67,12 +67,14 @@ public class FacebookLoginTest {
 
 import android.support.test.espresso.Espresso;
 import android.support.test.espresso.intent.rule.IntentsTestRule;
+import android.support.test.espresso.matcher.ViewMatchers;
 import android.support.test.runner.AndroidJUnit4;
 
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
+import ch.epfl.sweng.qeeqbii.R;
 import ch.epfl.sweng.qeeqbii.activities.login.FacebookLoginActivity;
 
 import static android.support.test.espresso.Espresso.onView;
@@ -99,7 +101,7 @@ public class FacebookLoginTest {
         Thread.sleep(200);
         Espresso.closeSoftKeyboard();
         Thread.sleep(200);
-        onView(withId(R.id.button_facebook_login)).perform(click());
+        onView(ViewMatchers.withId(R.id.button_facebook_login)).perform(click());
 
 
     }

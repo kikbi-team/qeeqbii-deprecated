@@ -1,4 +1,4 @@
-package ch.epfl.sweng.qeeqbii;
+package ch.epfl.sweng.qeeqbii.login;
 /*
 
 import android.support.test.espresso.NoMatchingViewException;
@@ -75,12 +75,14 @@ public class GoogleSignInTest {
 */
 import android.support.test.espresso.Espresso;
 import android.support.test.espresso.intent.rule.IntentsTestRule;
+import android.support.test.espresso.matcher.ViewMatchers;
 import android.support.test.runner.AndroidJUnit4;
 
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
+import ch.epfl.sweng.qeeqbii.R;
 import ch.epfl.sweng.qeeqbii.activities.login.GoogleSignInActivity;
 
 import static android.support.test.espresso.Espresso.onView;
@@ -103,7 +105,7 @@ public class GoogleSignInTest {
         Thread.sleep(200);
         Espresso.closeSoftKeyboard();
         Thread.sleep(200);
-        onView(withId(R.id.sign_in_button)).perform(click());
+        onView(ViewMatchers.withId(R.id.sign_in_button)).perform(click());
     }
 
    /* @Test

@@ -1,4 +1,4 @@
-package ch.epfl.sweng.qeeqbii.cancer;
+package ch.epfl.sweng.qeeqbii.cancer.query;
 
 /**
  * Created by adrien on 19.11.17.

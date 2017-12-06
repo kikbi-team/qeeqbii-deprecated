@@ -12,13 +12,9 @@ import android.view.View;
 import android.widget.TextView;
 
 import ch.epfl.sweng.qeeqbii.R;
-import ch.epfl.sweng.qeeqbii.RecyclerViewAdapter;
-import ch.epfl.sweng.qeeqbii.cancer.LevenshteinQueryCancerDB;
+import ch.epfl.sweng.qeeqbii.cancer.query.LevenshteinQueryCancerDB;
 import ch.epfl.sweng.qeeqbii.custom_exceptions.ProductException;
-import ch.epfl.sweng.qeeqbii.open_food.ClusterType;
-import ch.epfl.sweng.qeeqbii.open_food.ClusterTypeFirstLevel;
 import ch.epfl.sweng.qeeqbii.open_food.Product;
-import ch.epfl.sweng.qeeqbii.shopping_cart.ClusterProductList;
 import ch.epfl.sweng.qeeqbii.shopping_cart.ShoppingCartStatistics;
 
 /**

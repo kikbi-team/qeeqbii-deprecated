@@ -1,12 +1,15 @@
-package ch.epfl.sweng.qeeqbii;
+package ch.epfl.sweng.qeeqbii.open_food;
 
 import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
+
+import junit.framework.Assert;
 
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
+import ch.epfl.sweng.qeeqbii.R;
 import ch.epfl.sweng.qeeqbii.activities.MainActivity;
 import ch.epfl.sweng.qeeqbii.custom_exceptions.ProductException;
 import ch.epfl.sweng.qeeqbii.open_food.ClusterType;
@@ -34,7 +37,7 @@ public class ProductTest {
     @Test
     public void getNameIdTest() {
         Product item = new Product("cheese", "500 mg", "Stuff", "Empty nutrients", "001", ClusterTypeSecondLevel.FROMAGES);
-        assertEquals(item.getImageId(), R.drawable.cheese);
+        Assert.assertEquals(item.getImageId(), R.drawable.cheese);
     }
 
     @Test

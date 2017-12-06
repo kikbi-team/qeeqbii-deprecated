@@ -120,7 +120,7 @@ public class CancerDataBase {
         return substanceOutput;
     }
 
-    static MutableBkTree<String> getBkTree() {
+    public static MutableBkTree<String> getBkTree() {
         return bkTree;
     }
 

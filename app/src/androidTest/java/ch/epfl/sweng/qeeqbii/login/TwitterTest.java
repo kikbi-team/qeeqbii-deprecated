@@ -1,4 +1,4 @@
-package ch.epfl.sweng.qeeqbii;
+package ch.epfl.sweng.qeeqbii.login;
 
 import android.app.Activity;
 import android.support.test.espresso.Espresso;
@@ -14,6 +14,8 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
+import ch.epfl.sweng.qeeqbii.BaseActivityIdlingResource;
+import ch.epfl.sweng.qeeqbii.R;
 import ch.epfl.sweng.qeeqbii.activities.login.TwitterLoginActivity;
 
 import static android.support.test.espresso.Espresso.onView;

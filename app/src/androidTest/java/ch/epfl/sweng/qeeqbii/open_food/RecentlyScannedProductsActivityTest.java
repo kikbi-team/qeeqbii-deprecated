@@ -1,4 +1,4 @@
-package ch.epfl.sweng.qeeqbii;
+package ch.epfl.sweng.qeeqbii.open_food;
 
 
 import android.support.test.rule.ActivityTestRule;
@@ -11,6 +11,7 @@ import org.junit.runner.RunWith;
 
 import java.util.ArrayList;
 
+import ch.epfl.sweng.qeeqbii.R;
 import ch.epfl.sweng.qeeqbii.activities.RecentlyScannedProductsActivity;
 
 import static android.support.test.espresso.Espresso.onView;

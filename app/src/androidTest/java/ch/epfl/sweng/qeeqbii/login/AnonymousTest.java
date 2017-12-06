@@ -1,9 +1,10 @@
-package ch.epfl.sweng.qeeqbii;
+package ch.epfl.sweng.qeeqbii.login;
 
 import android.support.test.espresso.Espresso;
 import android.support.test.espresso.IdlingResource;
 import android.support.test.espresso.NoMatchingViewException;
 import android.support.test.espresso.ViewInteraction;
+import android.support.test.espresso.matcher.ViewMatchers;
 import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
 import android.test.suitebuilder.annotation.LargeTest;
@@ -14,6 +15,8 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
+import ch.epfl.sweng.qeeqbii.BaseActivityIdlingResource;
+import ch.epfl.sweng.qeeqbii.R;
 import ch.epfl.sweng.qeeqbii.activities.login.AnonymousAuthActivity;
 
 import static android.support.test.espresso.Espresso.onView;
@@ -65,7 +68,7 @@ public class AnonymousTest {
         signOutIfPossible();
 
         // Click sign in
-        onView(allOf(withId(R.id.button_anonymous_sign_in),
+        onView(allOf(ViewMatchers.withId(R.id.button_anonymous_sign_in),
                 withText(R.string.sign_in), isDisplayed())).perform(click());
 
         // Make sure userID and email look right

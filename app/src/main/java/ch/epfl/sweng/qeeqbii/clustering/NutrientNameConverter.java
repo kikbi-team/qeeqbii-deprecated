@@ -80,4 +80,9 @@ public class NutrientNameConverter {
         return new HashSet<>(nameConversionMap.values());
     }
 
+    public static void clear() {
+        nameConversionMap.clear();
+        openState = false;
+    }
+
 }

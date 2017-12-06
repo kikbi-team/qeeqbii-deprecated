@@ -1,4 +1,4 @@
-package ch.epfl.sweng.qeeqbii;
+package ch.epfl.sweng.qeeqbii.clustering;
 
 import android.support.test.rule.ActivityTestRule;
 
