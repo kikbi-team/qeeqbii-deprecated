@@ -69,7 +69,7 @@
     <string name="vegetables">vegetables</string>
 
 
-<!--    <string name="label_google_sign_in">Firebase + Google Sign In</string>
+    <!--    <string name="label_google_sign_in">Firebase + Google Sign In</string>
     <string name="desc_google_sign_in">Use a Google Sign In credential to authenticate with Firebase.</string>
     <string name="label_facebook_login">Firebase + Facebook Login</string>
     <string name="desc_facebook_login">Use a Facebook Login credential to authenticate with Firebase.</string>
@@ -113,7 +113,7 @@
     <string name="saussage">saussage</string>
     <!--<string name="title_activity_chat">ChatActivity</string>
     <string name="stats">Stats</string>-->
-  <!--  <string name="show_the_statistics_for_one_month">Show the statistics for one month</string>
+    <!--  <string name="show_the_statistics_for_one_month">Show the statistics for one month</string>
     <string name="show_the_statistics_for_the_trimester">Show the statistics for the trimester</string>
     <string name="show_the_statistics_yearly_statistics">Show the statistics yearly statistics</string>-->
     <string name="bottle">Bottle</string>
@@ -156,7 +156,6 @@
     <string name="criteria">Criteria</string>
     <string name="scan_at_least_two">Please scan at least two products for comparison</string>
     <string name="cannot_obtain_nutrients">Cannot obtain nutrients</string>
-
 
 
     <string name="total_friend">Total Friends</string>
@@ -208,5 +207,15 @@
     <string name="create_a_new_account">Create a New Account</string>
     <string name="online">Online</string>
     <string name="cancel_request">Cancel Friend Request</string>
+    <string name="product_not_found_want_add">Product not found in the database. Do you want to add it?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="barcode">Barcode</string>
+    <string name="name">Name</string>
+    <string name="product_add_default_language">fr</string>
+    <string name="weight_g">Weight (g)</string>
+    <string name="brand">Brand</string>
+    <string name="view_add_process_button_text">Process</string>
+    <string name="add_missing_product">Add missing product</string>
 
 </resources>
