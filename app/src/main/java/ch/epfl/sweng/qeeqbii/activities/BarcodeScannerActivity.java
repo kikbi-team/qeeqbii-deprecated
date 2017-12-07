@@ -229,6 +229,7 @@ public class BarcodeScannerActivity extends AppCompatActivity implements ZXingSc
 
 
 
+    // slider actions below
     public void readCSVFiles() {
         if (!NutrientNameConverter.isRead()) {
             NutrientNameConverter.readCSVFile(getApplicationContext());
@@ -279,4 +280,5 @@ public class BarcodeScannerActivity extends AppCompatActivity implements ZXingSc
         Slider slider = new Slider();
         slider.goToActivity(item, getApplicationContext());
     }
+
 }
