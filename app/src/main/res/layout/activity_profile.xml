@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/gradients"
     tools:context="ch.epfl.sweng.qeeqbii.chat.ProfileActivity">
 
     <ImageView
@@ -46,7 +47,7 @@
         android:layout_above="@+id/profile_send_req_btn"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="12dp"
-        android:text="@string/total_friends"
+        android:text="@string/total_friend"
         android:textColor="@android:color/white"
         android:textSize="16sp" />
 
