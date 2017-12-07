@@ -30,8 +30,8 @@ public class ShareFacebookTest {
         Thread.sleep(200);
         Espresso.closeSoftKeyboard();
         Thread.sleep(200);
+
+
         onView(withId(R.id.button_share_on_fb_graph)).perform(click());
-
-
     }
 }

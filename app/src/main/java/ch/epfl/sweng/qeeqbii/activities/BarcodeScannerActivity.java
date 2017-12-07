@@ -73,6 +73,8 @@ public class BarcodeScannerActivity extends AppCompatActivity implements ZXingSc
     private ZXingScannerView mScannerView;
     private ActionBarDrawerToggle mToggle;
 
+    private static boolean active = false;
+
     // on activity creation
     // ask permissions and launch barcode reader
     @Override
@@ -248,7 +250,22 @@ public class BarcodeScannerActivity extends AppCompatActivity implements ZXingSc
     }
 
 
+    @Override
+    public void onStart() {
+        super.onStart();
+        active = true;
+    }
 
+    @Override
+    public void onStop() {
+        super.onStop();
+        active = false;
+    }
+
+
+    public static boolean isRunning() {
+        return active;
+    }
 
 
 

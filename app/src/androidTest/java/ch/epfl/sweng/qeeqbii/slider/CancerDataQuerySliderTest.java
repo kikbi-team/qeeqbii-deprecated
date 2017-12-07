@@ -28,7 +28,7 @@ import static junit.framework.Assert.assertNotNull;
  */
 
 @RunWith(AndroidJUnit4.class)
-public class cancerDataQuerySliderTest {
+public class CancerDataQuerySliderTest {
     @Rule
     public final ActivityTestRule<CancerDataQueryActivity> mActivityRule =
             new ActivityTestRule<>(CancerDataQueryActivity.class);

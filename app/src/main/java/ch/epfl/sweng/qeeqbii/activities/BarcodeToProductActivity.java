@@ -55,6 +55,12 @@ public class BarcodeToProductActivity extends AppCompatActivity {
         txt.setTextSize(20);
         txt.setTextColor(Color.rgb(0, 0, 0));
         //OpenFoodQuery.ShowProduct(barcode, txt, getApplicationContext());
+
+
+        OpenFoodQuery.ShowProduct(barcode, txt, getApplicationContext());
+
+
+        /*
         try {
             Product product = OpenFoodQuery.GetOrCreateProduct(barcode, null);
             txt.setText(product.toString());
@@ -63,6 +69,7 @@ public class BarcodeToProductActivity extends AppCompatActivity {
             System.err.print(e.getMessage());
             txt.setText(e.getMessage());
         }
+        */
     }
 
     @Override

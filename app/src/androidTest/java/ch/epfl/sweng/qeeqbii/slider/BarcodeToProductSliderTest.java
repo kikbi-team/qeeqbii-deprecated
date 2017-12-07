@@ -25,7 +25,7 @@ import static android.support.test.InstrumentationRegistry.getInstrumentation;
 import static junit.framework.Assert.assertNotNull;
 
 @RunWith(AndroidJUnit4.class)
-public class barcodeToProductSliderTest {
+public class BarcodeToProductSliderTest {
 
     @Rule
     public final ActivityTestRule<BarcodeToProductActivity> mActivityRule =

@@ -7,6 +7,8 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
+import java.util.concurrent.TimeUnit;
+
 import ch.epfl.sweng.qeeqbii.activities.MainActivity;
 import ch.epfl.sweng.qeeqbii.open_food.OpenFoodQuery;
 import ch.epfl.sweng.qeeqbii.open_food.Product;
@@ -38,8 +40,11 @@ public class MainActivityTest {
             testProduct = new Product();
         }
         String s = testProduct.toString();
+
+
         onView(withId(R.id.Barcode)).perform(typeText(barcode));
-        onView(withId(R.id.button)).perform(click());
+
+        onView(withId(R.id.search_product_button)).perform(click());
 
         onView(withId(R.id.product_details)).check(matches(withText(s)));
     }
