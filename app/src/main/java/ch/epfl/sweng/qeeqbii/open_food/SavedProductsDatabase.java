@@ -19,6 +19,8 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 
+import ch.epfl.sweng.qeeqbii.clustering.ClusterTypeSecondLevel;
+
 
 /**
  * Created by guillaume on 13/11/17.

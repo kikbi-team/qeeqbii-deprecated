@@ -1,4 +1,4 @@
-package ch.epfl.sweng.qeeqbii.activities.comparison;
+package ch.epfl.sweng.qeeqbii.comparison;
 
 /**
  * Created by sergei on 11/30/17.

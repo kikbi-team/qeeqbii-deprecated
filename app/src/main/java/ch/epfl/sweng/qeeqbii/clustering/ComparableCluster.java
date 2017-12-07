@@ -2,9 +2,6 @@ package ch.epfl.sweng.qeeqbii.clustering;
 
 import java.util.Comparator;
 
-import ch.epfl.sweng.qeeqbii.open_food.ClusterType;
-import ch.epfl.sweng.qeeqbii.open_food.ClusterTypeSecondLevel;
-
 
 public class ComparableCluster implements Comparator<ComparableCluster>  {
 

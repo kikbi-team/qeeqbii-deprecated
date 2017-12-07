@@ -27,12 +27,10 @@ import com.github.mikephil.charting.formatter.IAxisValueFormatter;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Map;
-import java.util.Objects;
 
 import ch.epfl.sweng.qeeqbii.R;
-import ch.epfl.sweng.qeeqbii.activities.comparison.ComparisonGraphAdapter;
-import ch.epfl.sweng.qeeqbii.activities.comparison.ProductsLine;
-import ch.epfl.sweng.qeeqbii.custom_exceptions.IllegalNutrientKeyException;
+import ch.epfl.sweng.qeeqbii.comparison.ComparisonGraphAdapter;
+import ch.epfl.sweng.qeeqbii.comparison.ProductsLine;
 import ch.epfl.sweng.qeeqbii.custom_exceptions.ProductException;
 import ch.epfl.sweng.qeeqbii.open_food.Product;
 import ch.epfl.sweng.qeeqbii.open_food.RecentlyScannedProducts;

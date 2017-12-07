@@ -12,9 +12,7 @@ import org.junit.runner.RunWith;
 import ch.epfl.sweng.qeeqbii.R;
 import ch.epfl.sweng.qeeqbii.activities.MainActivity;
 import ch.epfl.sweng.qeeqbii.custom_exceptions.ProductException;
-import ch.epfl.sweng.qeeqbii.open_food.ClusterType;
-import ch.epfl.sweng.qeeqbii.open_food.ClusterTypeSecondLevel;
-import ch.epfl.sweng.qeeqbii.open_food.Product;
+import ch.epfl.sweng.qeeqbii.clustering.ClusterTypeSecondLevel;
 
 import static junit.framework.Assert.assertEquals;
 

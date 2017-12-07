@@ -6,14 +6,11 @@ import org.junit.Rule;
 import org.junit.Test;
 
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.Set;
-import java.util.regex.Matcher;
 
 import ch.epfl.sweng.qeeqbii.activities.MainActivity;
 import ch.epfl.sweng.qeeqbii.custom_exceptions.BadlyFormatedFile;
 import ch.epfl.sweng.qeeqbii.custom_exceptions.NotOpenFileException;
-import ch.epfl.sweng.qeeqbii.open_food.ClusterTypeSecondLevel;
 
 import static junit.framework.Assert.assertEquals;
 

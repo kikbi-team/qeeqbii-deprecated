@@ -13,10 +13,9 @@ import com.facebook.CallbackManager;
 import com.facebook.share.widget.ShareDialog;
 
 import ch.epfl.sweng.qeeqbii.R;
-import ch.epfl.sweng.qeeqbii.cancer.CancerDataBase;
+import ch.epfl.sweng.qeeqbii.Slider;
 import ch.epfl.sweng.qeeqbii.chat.MainActivityChat;
 import ch.epfl.sweng.qeeqbii.open_food.SavedProductsDatabase;
-import ch.epfl.sweng.qeeqbii.shopping_cart.ShoppingCartStatistics;
 
 import static ch.epfl.sweng.qeeqbii.activities.BarcodeScannerActivity.EXTRA_BARCODE;
 
@@ -65,55 +64,8 @@ public class MainActivity extends AppCompatActivity {
         return mToggle.onOptionsItemSelected(item) || super.onOptionsItemSelected(item);
     }
 
-    public void cancerDataBaseShow(MenuItem item) {
-        Intent intent = new Intent(this, CancerDataShowActivity.class);
-        startActivity(intent);
-    }
-
-
-    public void readBarcode(MenuItem item) {
-        Intent intent = new Intent(this, BarcodeScannerActivity.class);
-        startActivity(intent);
-    }
-
-
-    public void showShoppingList(MenuItem view) {
-        Intent intent = new Intent(this, ShoppingListActivity.class);
-        startActivity(intent);
-    }
-
-    public void showGraphs(MenuItem item) {
-        Intent intent = new Intent(this, GraphsActivity.class);
-        startActivity(intent);
-    }
-
-    public void cancerDataQuery(MenuItem item) {
-        Intent intent = new Intent(this, CancerDataQueryActivity.class);
-        startActivity(intent);
-    }
-
-    public void showRecentlyScannedProductsActivity(MenuItem item) {
-        Intent intent = new Intent(this, RecentlyScannedProductsActivity.class);
-        startActivity(intent);
-    }
-
-    public void backToMain(MenuItem item) {
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
-    }
-
-    public void showSavedProducts(MenuItem item) {
-        Intent intent = new Intent(this, SavedProductsDatesActivity.class);
-        startActivity(intent);
-    }
-
-    public void showStatistics(MenuItem item) {
-        Intent intent = new Intent(this, ShoppingCartStatistics.class);
-        startActivity(intent);
-    }
-
-    public void showChat(MenuItem item) {
-        Intent intent = new Intent(this, MainActivityChat.class);
-        startActivity(intent);
+    public void sliderGoToActivity(MenuItem item) {
+        Slider slider = new Slider();
+        slider.goToActivity(item, getApplicationContext());
     }
 }

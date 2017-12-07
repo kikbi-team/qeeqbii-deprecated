@@ -19,7 +19,7 @@ import ch.epfl.sweng.qeeqbii.activities.GraphsActivity;
 import ch.epfl.sweng.qeeqbii.activities.MainActivity;
 import ch.epfl.sweng.qeeqbii.activities.SavedProductsDatesActivity;
 import ch.epfl.sweng.qeeqbii.activities.ShoppingListActivity;
-import ch.epfl.sweng.qeeqbii.shopping_cart.ShoppingCartStatistics;
+import ch.epfl.sweng.qeeqbii.activities.StatisticsActivity;
 
 import static android.support.test.InstrumentationRegistry.getInstrumentation;
 import static junit.framework.Assert.assertNotNull;
@@ -39,7 +39,7 @@ public class BarcodeToProductSliderTest {
         // open current activity.
         BarcodeToProductActivity myActivity = mActivityRule.getActivity();
         final MenuItem button = (MenuItem) myActivity.findViewById(R.id.nav_main);
-        myActivity.backToMain(button);
+        myActivity.sliderGoToActivity(button);
 
         //Watch for the timeout
         //example values 5000 if in ms, or 5 if it's in seconds.
@@ -57,7 +57,7 @@ public class BarcodeToProductSliderTest {
         // open current activity.
         BarcodeToProductActivity myActivity = mActivityRule.getActivity();
         final MenuItem button = (MenuItem) myActivity.findViewById(R.id.nav_graphs);
-        myActivity.showGraphs(button);
+        myActivity.sliderGoToActivity(button);
 
         //Watch for the timeout
         //example values 5000 if in ms, or 5 if it's in seconds.
@@ -75,7 +75,7 @@ public class BarcodeToProductSliderTest {
         // open current activity.
         BarcodeToProductActivity myActivity = mActivityRule.getActivity();
         final MenuItem button = (MenuItem) myActivity.findViewById(R.id.nav_graphs);
-        myActivity.cancerDataBaseShow(button);
+        myActivity.sliderGoToActivity(button);
 
         //Watch for the timeout
         //example values 5000 if in ms, or 5 if it's in seconds.
@@ -93,7 +93,7 @@ public class BarcodeToProductSliderTest {
         // open current activity.
         BarcodeToProductActivity myActivity = mActivityRule.getActivity();
         final MenuItem button = (MenuItem) myActivity.findViewById(R.id.nav_graphs);
-        myActivity.readBarcode(button);
+        myActivity.sliderGoToActivity(button);
 
         //Watch for the timeout
         //example values 5000 if in ms, or 5 if it's in seconds.
@@ -111,7 +111,7 @@ public class BarcodeToProductSliderTest {
         // open current activity.
         BarcodeToProductActivity myActivity = mActivityRule.getActivity();
         final MenuItem button = (MenuItem) myActivity.findViewById(R.id.nav_graphs);
-        myActivity.showShoppingList(button);
+        myActivity.sliderGoToActivity(button);
 
         //Watch for the timeout
         //example values 5000 if in ms, or 5 if it's in seconds.
@@ -129,7 +129,7 @@ public class BarcodeToProductSliderTest {
         // open current activity.
         BarcodeToProductActivity myActivity = mActivityRule.getActivity();
         final MenuItem button = (MenuItem) myActivity.findViewById(R.id.nav_graphs);
-        myActivity.cancerDataQuery(button);
+        myActivity.sliderGoToActivity(button);
 
         //Watch for the timeout
         //example values 5000 if in ms, or 5 if it's in seconds.
@@ -152,7 +152,7 @@ public class BarcodeToProductSliderTest {
         // open current activity.
         BarcodeToProductActivity myActivity = mActivityRule.getActivity();
         final MenuItem button = (MenuItem) myActivity.findViewById(R.id.nav_graphs);
-        myActivity.showSavedProducts(button);
+        myActivity.sliderGoToActivity(button);
 
         //Watch for the timeout
         //example values 5000 if in ms, or 5 if it's in seconds.
@@ -165,16 +165,16 @@ public class BarcodeToProductSliderTest {
     @Test
     public void testGoToStats() {
         // register next activity that need to be monitored.
-        Instrumentation.ActivityMonitor activityMonitor = getInstrumentation().addMonitor(ShoppingCartStatistics.class.getName(), null, false);
+        Instrumentation.ActivityMonitor activityMonitor = getInstrumentation().addMonitor(StatisticsActivity.class.getName(), null, false);
 
         // open current activity.
         BarcodeToProductActivity myActivity = mActivityRule.getActivity();
         final MenuItem button = (MenuItem) myActivity.findViewById(R.id.nav_graphs);
-        myActivity.showStatistics(button);
+        myActivity.sliderGoToActivity(button);
 
         //Watch for the timeout
         //example values 5000 if in ms, or 5 if it's in seconds.
-        ShoppingCartStatistics nextActivity = (ShoppingCartStatistics) getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 5000);
+        StatisticsActivity nextActivity = (StatisticsActivity) getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 5000);
         // next activity is opened and captured.
         assertNotNull(nextActivity);
         nextActivity.finish();
@@ -188,7 +188,7 @@ public class BarcodeToProductSliderTest {
         // open current activity.
         BarcodeToProductActivity myActivity = mActivityRule.getActivity();
         final MenuItem button = (MenuItem) myActivity.findViewById(R.id.nav_graphs);
-        myActivity.showChat(button);
+        myActivity.sliderGoToActivity(button);
 
         //Watch for the timeout
         //example values 5000 if in ms, or 5 if it's in seconds.

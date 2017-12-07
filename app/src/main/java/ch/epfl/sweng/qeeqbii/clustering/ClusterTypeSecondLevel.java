@@ -1,4 +1,4 @@
-package ch.epfl.sweng.qeeqbii.open_food;
+package ch.epfl.sweng.qeeqbii.clustering;
 
 import com.google.common.collect.BiMap;
 import com.google.common.collect.HashBiMap;

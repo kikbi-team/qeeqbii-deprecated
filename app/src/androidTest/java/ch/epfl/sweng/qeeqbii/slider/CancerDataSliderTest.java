@@ -39,7 +39,7 @@ public class CancerDataSliderTest {
         // open current activity.
         CancerDataShowActivity myActivity = mActivityRule.getActivity();
         final MenuItem button = (MenuItem) myActivity.findViewById(R.id.nav_main);
-        myActivity.backToMain(button);
+        myActivity.sliderGoToActivity(button);
 
         //Watch for the timeout
         //example values 5000 if in ms, or 5 if it's in seconds.
@@ -57,7 +57,7 @@ public class CancerDataSliderTest {
         // open current activity.
         CancerDataShowActivity myActivity = mActivityRule.getActivity();
         final MenuItem button = (MenuItem) myActivity.findViewById(R.id.nav_cancerdb);
-        myActivity.cancerDataBaseShow(button);
+        myActivity.sliderGoToActivity(button);
 
         //Watch for the timeout
         //example values 5000 if in ms, or 5 if it's in seconds.
@@ -76,7 +76,7 @@ public class CancerDataSliderTest {
         // open current activity.
         CancerDataShowActivity myActivity = mActivityRule.getActivity();
         final MenuItem button = (MenuItem) myActivity.findViewById(R.id.nav_graphs);
-        myActivity.showGraphs(button);
+        myActivity.sliderGoToActivity(button);
 
         //Watch for the timeout
         //example values 5000 if in ms, or 5 if it's in seconds.
@@ -94,7 +94,7 @@ public class CancerDataSliderTest {
         // open current activity.
         CancerDataShowActivity myActivity = mActivityRule.getActivity();
         final MenuItem button = (MenuItem) myActivity.findViewById(R.id.nav_dataquery);
-        myActivity.cancerDataQuery(button);
+        myActivity.sliderGoToActivity(button);
 
         //Watch for the timeout
         //example values 5000 if in ms, or 5 if it's in seconds.
@@ -112,7 +112,7 @@ public class CancerDataSliderTest {
         // open current activity.
         CancerDataShowActivity myActivity = mActivityRule.getActivity();
         final MenuItem button = (MenuItem) myActivity.findViewById(R.id.nav_scan);
-        myActivity.readBarcode(button);
+        myActivity.sliderGoToActivity(button);
 
         //Watch for the timeout
         //example values 5000 if in ms, or 5 if it's in seconds.
@@ -130,7 +130,7 @@ public class CancerDataSliderTest {
         // open current activity.
         CancerDataShowActivity myActivity = mActivityRule.getActivity();
         final MenuItem button = (MenuItem) myActivity.findViewById(R.id.nav_shopping_cart);
-        myActivity.showShoppingList(button);
+        myActivity.sliderGoToActivity(button);
 
         //Watch for the timeout
         //example values 5000 if in ms, or 5 if it's in seconds.
