@@ -94,8 +94,9 @@ public class SavedProductsDatabase
         for(int i = 0; i < products_json_array.length(); ++i)
         {
             JSONObject item = products_json_array.getJSONObject(i);
-            products[i] = new Product(item.getString("name"),item.getString("quantity"),item.getString("ingredients"),
-                    item.getString("nutrients"), item.getString("barcode"), ClusterTypeSecondLevel.getClusterType(item.getString("cluster type")));
+            products[i] = new Product(item.getString("name"), item.getString("quantity"), item.getString("ingredients"),
+                    item.getString("nutrients"), item.getString("barcode"),
+                    ClusterTypeSecondLevel.getClusterType(item.getString("cluster type")));
         }
         return products;
 

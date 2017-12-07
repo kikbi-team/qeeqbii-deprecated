@@ -74,9 +74,13 @@ public class SavedProductsListActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapter, View view, int position,
                                     long arg3) {
+                System.out.println("////////////////////////////////////////////////////////////CLICKED");
                 Intent intent = new Intent(SavedProductsListActivity.this, ShowProductActivity.class);
+                System.out.println("////////////////////////////////////////////////////////////INTENT CREATED");
                 String txt = (String) adapter.getItemAtPosition(position);
+                System.out.println("////////////////////////////////////////////////////////////TXT OK");
                 intent.putExtra("product", mProducts[name_to_index_map.get(txt)]);
+                System.out.println("////////////////////////////////////////////////////////////" + mProducts[name_to_index_map.get(txt)].toString());
                 startActivity(intent);
             }
 

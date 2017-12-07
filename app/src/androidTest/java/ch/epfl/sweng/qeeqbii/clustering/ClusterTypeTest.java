@@ -1,4 +1,4 @@
-package ch.epfl.sweng.qeeqbii;
+package ch.epfl.sweng.qeeqbii.clustering;
 
 import android.support.test.rule.ActivityTestRule;
 
@@ -33,7 +33,7 @@ public class ClusterTypeTest {
 
         ClusterType[] children = parent.getChildren();
 
-        assertEquals(10, children.length);
+        assertEquals(11, children.length);
 
         for (ClusterTypeFirstLevel elem_first : ClusterTypeFirstLevel.values())
         {

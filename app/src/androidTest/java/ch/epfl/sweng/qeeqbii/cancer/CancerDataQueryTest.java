@@ -1,5 +1,6 @@
-package ch.epfl.sweng.qeeqbii;
+package ch.epfl.sweng.qeeqbii.cancer;
 
+import android.support.test.espresso.matcher.ViewMatchers;
 import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
 
@@ -10,13 +11,11 @@ import org.junit.runner.RunWith;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.TimeUnit;
 
+import ch.epfl.sweng.qeeqbii.R;
 import ch.epfl.sweng.qeeqbii.activities.CancerDataQueryActivity;
-import ch.epfl.sweng.qeeqbii.cancer.CancerDataBase;
-import ch.epfl.sweng.qeeqbii.cancer.CancerSubstance;
-import ch.epfl.sweng.qeeqbii.cancer.LevenshteinQueryCancerDB;
-import ch.epfl.sweng.qeeqbii.cancer.RatcliffQueryCancerDB;
+import ch.epfl.sweng.qeeqbii.cancer.query.LevenshteinQueryCancerDB;
+import ch.epfl.sweng.qeeqbii.cancer.query.RatcliffQueryCancerDB;
 
 import static android.support.test.espresso.Espresso.onView;
 import static android.support.test.espresso.action.ViewActions.click;
@@ -37,12 +36,7 @@ public class CancerDataQueryTest {
 
     @Before
     public void Initialize() {
-        try {
-            CancerDataBase.readCSVFile(mActivityRule.getActivity().getApplicationContext());
-        }
-        catch(Exception e) {
-            System.err.println(e.getMessage());
-        }
+        CancerDataBase.readCSVFile(mActivityRule.getActivity().getApplicationContext());
     }
 
 
@@ -62,7 +56,7 @@ public class CancerDataQueryTest {
         // Apparently the replaceText method do not work with a null pointer which looks logical.
 
         for (String[] iter : query_ans_pairs) {
-            onView(withId(R.id.cancerDataQueryTextField)).perform(replaceText(iter[0]));
+            onView(ViewMatchers.withId(R.id.cancerDataQueryTextField)).perform(replaceText(iter[0]));
             onView(withId(R.id.cancerDataQueryButton)).perform(click());
             onView(withId(R.id.queryCancerDataAnswerArea)).check(matches(withText(iter[1])));
         }

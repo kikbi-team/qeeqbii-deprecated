@@ -1,4 +1,4 @@
-package ch.epfl.sweng.qeeqbii;
+package ch.epfl.sweng.qeeqbii.open_food;
 
 
 import android.support.test.rule.ActivityTestRule;
@@ -11,6 +11,7 @@ import org.junit.runner.RunWith;
 
 import java.util.ArrayList;
 
+import ch.epfl.sweng.qeeqbii.R;
 import ch.epfl.sweng.qeeqbii.activities.RecentlyScannedProductsActivity;
 
 import static android.support.test.espresso.Espresso.onView;
@@ -30,12 +31,6 @@ public class RecentlyScannedProductsActivityTest {
     public void canUseDeleteButton() {
         ArrayAdapter adapter = mActivityRule.getActivity().getmAdapter();
 
-        ArrayList<String> test_list = new ArrayList<>();
-        for (int i = 0; i < 50; i++) {
-            test_list.add(i, "Test");
-        }
-
-        //adapter.addAll(test_list);
         onView(withId(R.id.delete_recently_scanned_product_button)).perform(click());
 
         assertEquals(adapter.getCount(), 0);

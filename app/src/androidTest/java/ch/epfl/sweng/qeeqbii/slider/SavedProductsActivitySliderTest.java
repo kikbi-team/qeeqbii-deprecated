@@ -1,4 +1,4 @@
-package ch.epfl.sweng.qeeqbii;
+package ch.epfl.sweng.qeeqbii.slider;
 
 import android.app.Instrumentation;
 import android.support.test.rule.ActivityTestRule;
@@ -9,6 +9,7 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
+import ch.epfl.sweng.qeeqbii.R;
 import ch.epfl.sweng.qeeqbii.activities.BarcodeScannerActivity;
 import ch.epfl.sweng.qeeqbii.activities.CancerDataQueryActivity;
 import ch.epfl.sweng.qeeqbii.activities.CancerDataShowActivity;
@@ -27,7 +28,7 @@ import static junit.framework.Assert.assertNotNull;
  */
 
 @RunWith(AndroidJUnit4.class)
-public class savedProductsActivitySliderTest {
+public class SavedProductsActivitySliderTest {
     @Rule
     public final ActivityTestRule<SavedProductsDatesActivity> mActivityRule =
             new ActivityTestRule<>(SavedProductsDatesActivity.class);

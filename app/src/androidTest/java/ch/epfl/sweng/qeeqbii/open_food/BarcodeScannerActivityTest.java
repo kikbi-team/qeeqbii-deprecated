@@ -1,4 +1,4 @@
-package ch.epfl.sweng.qeeqbii;
+package ch.epfl.sweng.qeeqbii.open_food;
 
 import android.content.ComponentName;
 import android.content.pm.PackageManager;
@@ -6,6 +6,7 @@ import android.os.Build;
 import android.os.SystemClock;
 import android.support.test.espresso.Espresso;
 import android.support.test.espresso.intent.rule.IntentsTestRule;
+import android.support.test.espresso.matcher.ViewMatchers;
 import android.support.test.runner.AndroidJUnit4;
 import android.support.test.uiautomator.UiDevice;
 import android.support.test.uiautomator.UiObject;
@@ -25,6 +26,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.MethodSorters;
 
+import ch.epfl.sweng.qeeqbii.R;
 import ch.epfl.sweng.qeeqbii.activities.BarcodeScannerActivity;
 import ch.epfl.sweng.qeeqbii.activities.BarcodeToProductActivity;
 import ch.epfl.sweng.qeeqbii.activities.MainActivity;
@@ -130,7 +132,7 @@ public class BarcodeScannerActivityTest {
         BarcodeScannerActivity activity = mActivityRule.getActivity();
         activity.processBarcode("3068320353500");
         intended(hasComponent(new ComponentName(getTargetContext(), BarcodeToProductActivity.class)));
-        onView(withId(R.id.product_details)).check(matches(withText(startsWith("evian"))));
+        onView(ViewMatchers.withId(R.id.product_details)).check(matches(withText(startsWith("evian"))));
     }
 
     @Test

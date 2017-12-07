@@ -1,17 +1,21 @@
 package ch.epfl.sweng.qeeqbii.open_food;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
+import ch.epfl.sweng.qeeqbii.clustering.ClusterClassifier;
+import ch.epfl.sweng.qeeqbii.clustering.ComparableCluster;
+import ch.epfl.sweng.qeeqbii.clustering.NutrientNameConverter;
+import ch.epfl.sweng.qeeqbii.custom_exceptions.IllegalNutrientKeyException;
+import ch.epfl.sweng.qeeqbii.custom_exceptions.NotOpenFileException;
 import ch.epfl.sweng.qeeqbii.custom_exceptions.ProductException;
+import ch.epfl.sweng.qeeqbii.clustering.NutrientVector;
 
-/**
- * Created by guillaume on 01/11/17.
- * Product class contains all informations relative to a given product.
- */
 
-public class Product implements Serializable {
+
+public class Product implements Serializable{
     private String mName = "";
     private String mQuantity = "";
     private String mIngredients = "";
@@ -19,9 +23,11 @@ public class Product implements Serializable {
     private String[] mParsedIngredients = null;
     private Map<String, Double> mParsedNutrients = null;
     private ClusterType mType = ClusterTypeSecondLevel.UNDETERMINED;
+    private ArrayList<ComparableCluster> bestClusters = null;
     private String mBarcode = "";
     private Boolean mIsChecked = false;
     private float mOpacity = 1f;
+    private NutrientVector nutrientVector = null;
 
     public Product() {}
     
@@ -32,10 +38,63 @@ public class Product implements Serializable {
         mIngredients = ingredients;
         mNutrients = nutrients;
         mBarcode = barcode;
-        mType = type;
         mIsChecked = false;
         mOpacity = 1f;
+        mType = type;
+        if (mType == null)
+        {
+            try {
+                nutrientVector = new NutrientVector(getParsedNutrients());
 
+                // If the type is not defined (type == null) then we call ClusterClassifier's function
+                // to get a cluster
+                // If getParsedNutrients were to throw an exception we catch the exception, we define an empty
+                // NutrientVector and we assign it an UNDEFINED cluster enum type
+
+                if (type == null) {
+                    bestClusters = ClusterClassifier.getClusterTypeFromNutrients(nutrientVector);
+                    mType = bestClusters.get(0).getCluster();
+                }
+            } catch (ProductException|NotOpenFileException e)
+            {
+                System.err.println(e.getMessage());
+                nutrientVector = null;
+                if (type == null) {
+                    mType = ClusterTypeSecondLevel.UNDETERMINED;
+                }
+                else {
+                    mType = type;
+                }
+            }
+        }
+/*
+        // Instantiating nutrientVector and defining cluster type
+        try {
+            nutrientVector = new NutrientVector(getParsedNutrients());
+
+            // If the type is not defined (type == null) then we call ClusterClassifier's function
+            // to get a cluster
+            // If getParsedNutrients were to throw an exception we catch the exception, we define an empty
+            // NutrientVector and we assign it an UNDEFINED cluster enum type
+            if (type == null) {
+                bestClusters = ClusterClassifier.getClusterTypeFromNutrients(nutrientVector);
+                mType = bestClusters.get(0).getCluster();
+            }
+            else {
+                mType = type;
+            }
+        }
+        catch (ProductException|NotOpenFileException e) {
+            System.err.println(e.getMessage());
+            nutrientVector = null;
+            if (type == null) {
+                mType = ClusterTypeSecondLevel.UNDETERMINED;
+            }
+            else {
+                mType = type;
+            }
+        }
+        */
     }
 
     public String getName()
@@ -94,26 +153,53 @@ public class Product implements Serializable {
             throw new ProductException("Nutrient list is empty for this product: unable to execute the parsing operation.");
         }
 
-        String[] parsed_nutrients = mNutrients.split("\\n");
+
+
         Map<String, Double> nutrient_map = new HashMap<>();
+        try {
+            String[] parsed_nutrients = mNutrients.split("\\n");
+            String standardKey;
+            for (String nut : parsed_nutrients) {
+                int two_dots_index = nut.indexOf(':');
+                String key = nut.substring(0, two_dots_index);
+                int search_alpha = two_dots_index + 1;
 
-        for (String nut : parsed_nutrients) {
-            int two_dots_index = nut.indexOf(':');
-            String key = nut.substring(0, two_dots_index);
-            int search_alpha = two_dots_index + 1;
+                while (!Character.isLetter(nut.charAt(search_alpha))) {
+                    search_alpha += 1;
+                }
 
-            while (!Character.isLetter(nut.charAt(search_alpha))) {
-                search_alpha += 1;
+                Double value = Double.parseDouble(nut.substring(two_dots_index + 2, search_alpha));
+                String unit = nut.substring(search_alpha, nut.length());
+
+                if (!key.contains("(" + unit + ")")) {
+                    key = key + " (" + unit + ")";
+                }
+
+                // Conversion of the key in its standardKey form using NutrientNameConverter (if possible)
+                try {
+                    standardKey = NutrientNameConverter.convertToStandardName(key);
+                    nutrient_map.put(standardKey, value);
+                }
+
+                // Here what we do is that if the key specified in the nutrient list is not recognized in the
+                // nutrient_name_converter.csv file then we add it anyway to the parsedNutrients list
+                // However if the nutrient is specified as "Glucide (g)" which clearly refers to "Glucides (g)"
+                // then the program won't understand and it will set a value of 0.0 to the "Glucides (g)" entry
+                // of the product's NutrientVector, whatever value is assigned to "Glucide (g)"
+                // One of the possible ways to deal with it is to write "Glucide (g)" as a potential translation
+                // of "Glucides (g)" in nutrient_name_converter.csv
+                catch (IllegalNutrientKeyException e) {
+                    System.err.println(e.getMessage());
+                    nutrient_map.put(key, value);
+                }
             }
-
-            Double value = Double.parseDouble(nut.substring(two_dots_index + 2, search_alpha));
-            String unit = nut.substring(search_alpha, nut.length());
-
-            if (!key.contains("(" + unit + ")")) {
-                key = key + " (" + unit + ")";
-            }
-
-            nutrient_map.put(key, value);
+        }
+        catch (Exception e) {
+            //System.err.println(e.getMessage());
+            throw new ProductException(e.getMessage() +
+                    "\nThe formatting of the Product's nutrient list is not good." +
+                    "\nCheck the opening of nutrient_name_converter.csv." +
+                    "\nCheck also that all the necessary nutrient keys are specified in that file.");
         }
 
         mParsedNutrients = nutrient_map;
@@ -126,6 +212,14 @@ public class Product implements Serializable {
         s += "\n\nIngredients: " + getIngredients();
         s += "\n\nQuantity: " + getQuantity();
         s += "\n\nNutrients: (per 100g)\n" + getNutrients();
+        s += "\n\nCluster: " + getCluster().toString();
+
+        if (bestClusters != null) {
+            s += "\n\nBest clusters: ";
+            for (ComparableCluster item : bestClusters) {
+                s += item.getCluster().toString() + ", " + item.getDistance() + "\n";
+            }
+        }
 
         return s;
     }

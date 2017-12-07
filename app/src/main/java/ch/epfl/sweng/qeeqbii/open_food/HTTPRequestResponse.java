@@ -3,6 +3,8 @@ package ch.epfl.sweng.qeeqbii.open_food;
 import java.io.IOException;
 
 import ch.epfl.sweng.qeeqbii.R;
+import ch.epfl.sweng.qeeqbii.clustering.ClusterClassifier;
+import ch.epfl.sweng.qeeqbii.custom_exceptions.NotOpenFileException;
 
 /**
  * Created by guillaume on 09/10/17.
@@ -47,7 +49,7 @@ class HTTPRequestResponse {
 
 
     private String getProductNutrients(String language) {
-        System.out.println(resp_body);
+        //System.out.println(resp_body);
         String str = "";
         int nutrients_ind = resp_body.indexOf("nutrients\":");
         if (nutrients_ind == -1) {
@@ -88,7 +90,7 @@ class HTTPRequestResponse {
     Product toProduct(String language)
     {
         return new Product(getProductName(language), getProductQuantity(), getProductIngredients(language),
-                getProductNutrients(language), mBarcode, ClusterTypeSecondLevel.FROMAGES);
+                getProductNutrients(language), mBarcode, null);
     }
 
     // By default, we get the french version

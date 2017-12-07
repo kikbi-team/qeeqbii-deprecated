@@ -151,10 +151,11 @@ public class OpenFoodQuery extends AsyncTask<String, Void, Product> {
                     if (product == null)
                         throw new Exception(errorCache.get(barcode2));
 
-                    String s = product.getName();
-                    s += "\n\nIngredients: " + product.getIngredients();
-                    s += "\n\nQuantity: " + product.getQuantity();
-                    s += "\n\nNutrients: (per 100g)\n" + product.getNutrients();
+                    //String s = product.getName();
+                    //s += "\n\nIngredients: " + product.getIngredients();
+                    //s += "\n\nQuantity: " + product.getQuantity();
+                    //s += "\n\nNutrients: (per 100g)\n" + product.getNutrients();
+                    String s = product.toString();
                     Log.d("STATE", "Product found: " + s);
                     txt2.setText(s);
                     try{

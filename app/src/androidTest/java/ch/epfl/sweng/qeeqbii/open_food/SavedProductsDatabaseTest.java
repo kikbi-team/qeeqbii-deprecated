@@ -1,4 +1,4 @@
-package ch.epfl.sweng.qeeqbii;
+package ch.epfl.sweng.qeeqbii.open_food;
 
 import android.content.Intent;
 import android.content.res.AssetFileDescriptor;
@@ -14,7 +14,9 @@ import org.junit.runner.RunWith;
 import java.text.ParseException;
 import java.util.List;
 
+import ch.epfl.sweng.qeeqbii.R;
 import ch.epfl.sweng.qeeqbii.activities.SavedProductsDatesActivity;
+import ch.epfl.sweng.qeeqbii.clustering.NutrientNameConverter;
 import ch.epfl.sweng.qeeqbii.open_food.ClusterTypeSecondLevel;
 import ch.epfl.sweng.qeeqbii.open_food.Product;
 import ch.epfl.sweng.qeeqbii.open_food.Date;
@@ -43,8 +45,9 @@ public class SavedProductsDatabaseTest {
     @Before
     public void loadTestDatabase() {
         Intent intent = new Intent(mActivityRule.getActivity(), SavedProductsDatesActivity.class);
-        intent.putExtra("test",R.raw.saved_products_database_test);
+        intent.putExtra("test", R.raw.saved_products_database_test);
         mActivityRule.launchActivity(intent);
+        NutrientNameConverter.readCSVFile(mActivityRule.getActivity().getApplicationContext());
     }
 
     @Test
@@ -85,15 +88,17 @@ public class SavedProductsDatabaseTest {
     @Test
     public void addProductTest()
     {
+        System.out.println("NutrientNameConverter read: " + NutrientNameConverter.isRead());
         Product product = new Product("Raclette", "1000g", "Cheese," +
                 " Cheese ,Cheese", "Sel: 0.200g", "00055232323", ClusterTypeSecondLevel.FROMAGES);
 
         Product product2 = new Product("Fondue", "1500g", "Cheese," +
                 " Cheese ,Cheese", "Sel: 0.300g", "00055237323", ClusterTypeSecondLevel.FROMAGES);
-
         try
         {
             assertEquals(1,SavedProductsDatabase.getDates().length);
+            System.out.println(product.toString());
+            System.out.println(product2.toString());
             SavedProductsDatabase.addProduct(product);
             SavedProductsDatabase.addProduct(product2);
             Date[] dates = SavedProductsDatabase.getDates();
@@ -115,7 +120,9 @@ public class SavedProductsDatabaseTest {
 
             Intent intent = new Intent(mActivityRule.getActivity(), SavedProductsDatesActivity.class);
             mActivityRule.launchActivity(intent);
+
             onView(withText(today_date.toString())).perform(click());
+            //TimeUnit.SECONDS.sleep(5);
             onView(withText("Raclette")).perform(click());
             Product product3 = SavedProductsDatabase.getProductsFromDate(today_date)[0];
             onView(withText(product3.toString())).check(matches(isDisplayed()));

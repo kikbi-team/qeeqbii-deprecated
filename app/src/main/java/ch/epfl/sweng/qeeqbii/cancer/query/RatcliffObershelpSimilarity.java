@@ -1,4 +1,4 @@
-package ch.epfl.sweng.qeeqbii.cancer;
+package ch.epfl.sweng.qeeqbii.cancer.query;
 
 import java.util.Locale;
 

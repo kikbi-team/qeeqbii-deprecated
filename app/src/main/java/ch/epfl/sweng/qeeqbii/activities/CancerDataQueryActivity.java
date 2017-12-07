@@ -13,8 +13,8 @@ import android.widget.TextView;
 import ch.epfl.sweng.qeeqbii.cancer.CancerDataBase;
 import ch.epfl.sweng.qeeqbii.cancer.CancerSubstance;
 import ch.epfl.sweng.qeeqbii.R;
-import ch.epfl.sweng.qeeqbii.cancer.LevenshteinQueryCancerDB;
-import ch.epfl.sweng.qeeqbii.cancer.RatcliffQueryCancerDB;
+import ch.epfl.sweng.qeeqbii.cancer.query.LevenshteinQueryCancerDB;
+import ch.epfl.sweng.qeeqbii.cancer.query.RatcliffQueryCancerDB;
 import ch.epfl.sweng.qeeqbii.chat.MainActivityChat;
 import ch.epfl.sweng.qeeqbii.shopping_cart.ShoppingCartStatistics;
 

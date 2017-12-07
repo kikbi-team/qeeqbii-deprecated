@@ -49,7 +49,7 @@ public class ShoppingListTest {
         onView(withText(ClusterTypeSecondLevel.CACAO_CHOCOLATS_EN_POUDRE.toString())).perform(click());
         pressBack();
         onView(withText(ClusterTypeFirstLevel.BOISSONS_CHAUDES_FROIDES.toString())).perform(click());
-        onView(withText(ClusterTypeSecondLevel.SIROPS_SODAS.toString())).perform(click());
+        onView(withText(ClusterTypeSecondLevel.SIROP_SODA.toString())).perform(click());
         onView(withText(ClusterTypeSecondLevel.BOISSONS_ENERGETIQUES.toString())).perform(click());
         onView(withText(ClusterTypeSecondLevel.BOISSONS_ENERGETIQUES.toString())).perform(click());
         pressBack();
@@ -57,7 +57,7 @@ public class ShoppingListTest {
 
         ShoppingListActivity.checkOrUncheckItem(ClusterTypeSecondLevel.CONFITURES_PORTIONS_DE_MIEL);
         ShoppingListActivity.checkOrUncheckItem(ClusterTypeSecondLevel.CONFITURES);
-        ShoppingListActivity.checkOrUncheckItem(ClusterTypeSecondLevel.SIROPS_SODAS);
+        ShoppingListActivity.checkOrUncheckItem(ClusterTypeSecondLevel.SIROP_SODA);
 
         onView(withId(R.id.removeButton)).perform(click());
         onView(withText(ClusterTypeSecondLevel.CACAO_CHOCOLATS_EN_POUDRE.toString())).check(matches(isDisplayed()));
@@ -75,7 +75,7 @@ public class ShoppingListTest {
         onView(withText(ClusterTypeSecondLevel.CACAO_CHOCOLATS_EN_POUDRE.toString())).perform(click());
         pressBack();
         onView(withText(ClusterTypeFirstLevel.BOISSONS_CHAUDES_FROIDES.toString())).perform(click());
-        onView(withText(ClusterTypeSecondLevel.SIROPS_SODAS.toString())).perform(click());
+        onView(withText(ClusterTypeSecondLevel.SIROP_SODA.toString())).perform(click());
         onView(withText(ClusterTypeSecondLevel.BOISSONS_ENERGETIQUES.toString())).perform(click());
         onView(withText(ClusterTypeSecondLevel.BOISSONS_ENERGETIQUES.toString())).perform(click());
         pressBack();
@@ -86,7 +86,7 @@ public class ShoppingListTest {
         onView(withText(ClusterTypeSecondLevel.CONFITURES_PORTIONS_DE_MIEL.toString())).check(doesNotExist());
         onView(withText(ClusterTypeSecondLevel.BOISSONS_ENERGETIQUES.toString())).check(doesNotExist());
         onView(withText(ClusterTypeSecondLevel.CONFITURES.toString())).check(doesNotExist());
-        onView(withText(ClusterTypeSecondLevel.SIROPS_SODAS.toString())).check(doesNotExist());
+        onView(withText(ClusterTypeSecondLevel.SIROP_SODA.toString())).check(doesNotExist());
     }
 
 

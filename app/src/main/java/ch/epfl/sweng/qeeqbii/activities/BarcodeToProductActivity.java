@@ -11,11 +11,13 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
-import ch.epfl.sweng.qeeqbii.cancer.RatcliffQueryCancerDB;
+import ch.epfl.sweng.qeeqbii.cancer.query.RatcliffQueryCancerDB;
+import ch.epfl.sweng.qeeqbii.cancer.query.RatcliffQueryCancerDB;
 import ch.epfl.sweng.qeeqbii.chat.MainActivityChat;
 import ch.epfl.sweng.qeeqbii.custom_exceptions.ProductException;
 import ch.epfl.sweng.qeeqbii.R;
 import ch.epfl.sweng.qeeqbii.open_food.OpenFoodQuery;
+import ch.epfl.sweng.qeeqbii.open_food.Product;
 import ch.epfl.sweng.qeeqbii.open_food.RecentlyScannedProducts;
 import ch.epfl.sweng.qeeqbii.shopping_cart.ShoppingCartStatistics;
 
@@ -46,11 +48,28 @@ public class BarcodeToProductActivity extends AppCompatActivity {
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+
+
         // Capture the layout's; TextView and set the string as its text
         final TextView txt = (TextView) findViewById(R.id.product_details);
         txt.setTextSize(20);
         txt.setTextColor(Color.rgb(0, 0, 0));
+        //OpenFoodQuery.ShowProduct(barcode, txt, getApplicationContext());
+
+
         OpenFoodQuery.ShowProduct(barcode, txt, getApplicationContext());
+
+
+        /*
+        try {
+            Product product = OpenFoodQuery.GetOrCreateProduct(barcode, null);
+            txt.setText(product.toString());
+        }
+        catch (Exception e) {
+            System.err.print(e.getMessage());
+            txt.setText(e.getMessage());
+        }
+        */
     }
 
     @Override
