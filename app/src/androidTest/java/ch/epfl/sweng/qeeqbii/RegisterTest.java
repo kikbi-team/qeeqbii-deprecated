@@ -1,5 +1,6 @@
 package ch.epfl.sweng.qeeqbii;
 
+import android.app.ProgressDialog;
 import android.support.test.espresso.ViewInteraction;
 import android.support.test.rule.ActivityTestRule;
 
@@ -8,6 +9,7 @@ import org.junit.Test;
 
 import java.util.Random;
 
+import ch.epfl.sweng.qeeqbii.activities.BarcodeScannerActivity;
 import ch.epfl.sweng.qeeqbii.chat.RegisterActivity;
 
 import static android.support.test.espresso.Espresso.onView;
@@ -41,6 +43,27 @@ public class RegisterTest {
         // Click sign in
         ViewInteraction appCompatButton =onView(withId(R.id.reg_create_btn));
         appCompatButton.perform(click());
+
+        // Force closing the progressDialog box in order to start new activity
+        ProgressDialog progressDialog = mActivityRule.getActivity().getmRegProgress();
+        if (progressDialog!=null)
+        {
+            if (progressDialog.isShowing())
+            {
+                progressDialog.dismiss();
+            }
+        }
+
+        // Wait that BarcodeScanner activity starts (it takes a little bit of time since all the CSV files are read
+        // when this activity is launched for the first time
+        while (!BarcodeScannerActivity.isRunning()) {
+            try {
+                Thread.sleep(100);
+            }
+            catch(InterruptedException e) {
+                System.err.println(e.getMessage());
+            }
+        }
 
     }
 

@@ -15,8 +15,8 @@ import java.util.Arrays;
 
 import ch.epfl.sweng.qeeqbii.R;
 import ch.epfl.sweng.qeeqbii.RecyclerViewAdapter;
-import ch.epfl.sweng.qeeqbii.open_food.ClusterType;
-import ch.epfl.sweng.qeeqbii.open_food.ClusterTypeFirstLevel;
+import ch.epfl.sweng.qeeqbii.clustering.ClusterType;
+import ch.epfl.sweng.qeeqbii.clustering.ClusterTypeFirstLevel;
 import ch.epfl.sweng.qeeqbii.shopping_cart.ClusterProductList;
 
 public class ShoppingCartFirstLevelActivity extends AppCompatActivity {

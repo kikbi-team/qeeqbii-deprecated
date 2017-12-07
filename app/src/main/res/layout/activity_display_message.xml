@@ -49,6 +49,7 @@
         android:layout_gravity="start"
         app:headerLayout="@layout/nav_header"
         tools:layout_editor_absoluteY="8dp"
-        tools:layout_editor_absoluteX="0dp">
+        tools:layout_editor_absoluteX="0dp"
+        android:id="@+id/nav_view_cancer_data_show">
     </android.support.design.widget.NavigationView>
 </android.support.v4.widget.DrawerLayout>

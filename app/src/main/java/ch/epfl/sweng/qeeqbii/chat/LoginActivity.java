@@ -113,4 +113,9 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
     }
+
+
+    public ProgressDialog getmLoginProgress() {
+        return mLoginProgress;
+    }
 }
