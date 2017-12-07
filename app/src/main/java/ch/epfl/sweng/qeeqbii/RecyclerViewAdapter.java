@@ -5,6 +5,7 @@ package ch.epfl.sweng.qeeqbii;
  * RecyclerViewAdapter overriding.
  */
 
+import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -38,16 +39,23 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         m_cluster_product_list = cluster_product_list;
         m_opacities = new ArrayList<>();
         mOnClickListener = oncliklistener;
-        for (int i = 0; i < m_cluster_product_list.getItems().size(); ++i)
+        for (int i = 0; i < m_cluster_product_list.getClusters().size(); ++i)
         {
             m_opacities.add(OPACITY_NORMAL);
         }
     }
 
-    public void addItem(ClusterType cluster)
+    public void addClusterAndSave(ClusterType cluster, Context context, String filename)
     {
         m_opacities.add(1f);
-        m_cluster_product_list.addItemToList(cluster);
+        m_cluster_product_list.addClusterAndSave(cluster, context, filename);
+        notifyDataSetChanged();
+    }
+
+    public void addCluster(ClusterType cluster)
+    {
+        m_opacities.add(1f);
+        m_cluster_product_list.addCluster(cluster);
         notifyDataSetChanged();
     }
 
@@ -72,10 +80,17 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     }
 
 
-    public void deleteSingleItem(ClusterType cluster)
+    public void deleteCluster(ClusterType cluster)
     {
-        m_opacities.remove(m_cluster_product_list.getItems().indexOf(cluster));
-        m_cluster_product_list.deleteSingleItem(cluster);
+        m_opacities.remove(m_cluster_product_list.getClusters().indexOf(cluster));
+        m_cluster_product_list.deleteCluster(cluster);
+        notifyDataSetChanged();
+    }
+
+    public void deleteClusterAndSave(ClusterType cluster, Context context, String filename)
+    {
+        m_opacities.remove(m_cluster_product_list.getClusters().indexOf(cluster));
+        m_cluster_product_list.deleteClusterAndSave(cluster, context, filename);
         notifyDataSetChanged();
     }
 
@@ -91,8 +106,8 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     @Override
     public void onBindViewHolder(ViewHolder viewHolder, int pos) {
         final int position = viewHolder.getAdapterPosition();
-        viewHolder.textView.setText(m_cluster_product_list.getItems().get(position).toString());
-        viewHolder.imageView.setImageResource(m_cluster_product_list.getItems().get(position).getImageId());
+        viewHolder.textView.setText(m_cluster_product_list.getClusters().get(position).toString());
+        viewHolder.imageView.setImageResource(m_cluster_product_list.getClusters().get(position).getImageId());
         //viewHolder.isChecked.setChecked(products.get(position).getChecked());
 
         final ClusterType objIncome = m_cluster_product_list.getSpecificItemInList(position);
@@ -127,12 +142,12 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     @Override
     public int getItemCount() {
-        return m_cluster_product_list.getItems().size();
+        return m_cluster_product_list.getClusters().size();
     }
 
     public LayoutInflater getLayoutInflater() { return inflater; }
 
-    public List<ClusterType> getClusters() { return m_cluster_product_list.getItems(); }
+    public List<ClusterType> getClusters() { return m_cluster_product_list.getClusters(); }
 
     public void clear()
     {

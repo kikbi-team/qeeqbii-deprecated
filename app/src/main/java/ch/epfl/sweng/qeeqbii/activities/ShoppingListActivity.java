@@ -1,5 +1,6 @@
 package ch.epfl.sweng.qeeqbii.activities;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -22,9 +23,9 @@ import static ch.epfl.sweng.qeeqbii.activities.BarcodeScannerActivity.EXTRA_ACTI
 
 public class ShoppingListActivity extends AppCompatActivity {
 
-    private static ClusterProductList m_cart = new ClusterProductList();
+    private static ClusterProductList m_cart = null;
     private static RecyclerViewAdapter mAdapter;
-    private static List<Product> product_list= new ArrayList<>();
+    private static String json_file = "shopping_list.json";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,16 +57,22 @@ public class ShoppingListActivity extends AppCompatActivity {
 
     }
 
-    public static void addCluster(ClusterType cluster)
+    // To call when the app is openned.
+    public static void load(Context context)
+    {
+        m_cart = new ClusterProductList(json_file, context);
+    }
+
+    public static void addCluster(ClusterType cluster, Context context)
     {
         if (!mAdapter.getClusters().contains(cluster)) {
-            mAdapter.addItem(cluster);
+            mAdapter.addClusterAndSave(cluster, context, json_file);
         }
     }
 
-    public static void deleteCluster(ClusterType cluster)
+    public static void deleteCluster(ClusterType cluster, Context context)
     {
-        mAdapter.deleteSingleItem(cluster);
+        mAdapter.deleteClusterAndSave(cluster, context, json_file);
     }
 
     public static ClusterProductList getClusterList()
@@ -73,23 +80,20 @@ public class ShoppingListActivity extends AppCompatActivity {
         return m_cart;
     }
 
-    public static void addProduct(Product product)
+    public static void addProduct(Product product, Context context)
     {
-        product_list.add(product);
+        if (m_cart.getClusters().contains(product.getCluster()))
+        {
+            addCluster(product.getCluster(), context);
+        }
+        m_cart.addProductAndSave(product, context, json_file);
     }
+
+    public static void save(Context context) { m_cart.save( json_file, context); }
 
     public static List<Product> getProductList(ClusterType cluster)
     {
-        List<Product> cluster_product_list = new ArrayList<>();
-        for (Product prod: product_list)
-        {
-            if (prod.getCluster() == cluster)
-            {
-                cluster_product_list.add(prod);
-            }
-        }
-
-        return cluster_product_list;
+        return m_cart.getProductList(cluster);
     }
 
     public void showShoppingList(View view) {
@@ -104,25 +108,25 @@ public class ShoppingListActivity extends AppCompatActivity {
 
     public void deleteShoppingList(View view) {
         List<ClusterType> clustersToDelete = new ArrayList<>();
-        for (ClusterType cluster : m_cart.getItems()) {
+        for (ClusterType cluster : m_cart.getClusters()) {
             clustersToDelete.add(cluster);
         }
         for (ClusterType cluster: clustersToDelete)
         {
-            deleteCluster(cluster);
+            deleteCluster(cluster, getApplicationContext());
         }
     }
 
     public void deleteSingleItem (View view) {
         List<ClusterType> clustersToDelete = new ArrayList<>();
-        for (ClusterType cluster : m_cart.getItems()) {
+        for (ClusterType cluster : m_cart.getClusters()) {
             if (m_cart.isCheckedItem(cluster)) {
                 clustersToDelete.add(cluster);
             }
         }
         for (ClusterType cluster: clustersToDelete)
         {
-            deleteCluster(cluster);
+            deleteCluster(cluster, getApplicationContext());
         }
     }
 

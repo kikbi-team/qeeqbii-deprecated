@@ -1,7 +1,6 @@
 package ch.epfl.sweng.qeeqbii;
 
 import android.content.Intent;
-import android.content.res.AssetFileDescriptor;
 import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
 
@@ -157,7 +156,6 @@ public class SavedProductsDatabaseTest {
         try{
             SavedProductsDatabase.addProduct(added_product);
             List<Product> products = SavedProductsDatabase.getProductsBetweenTodayAndDate(new Date("13/11/2017"));
-            System.out.println("/////////////////" + products.size());
             for( Product elem : products)
             {
                 System.out.println(elem.toString());

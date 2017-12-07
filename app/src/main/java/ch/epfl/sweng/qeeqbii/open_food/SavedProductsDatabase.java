@@ -10,13 +10,10 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
-import java.text.DateFormat;
 import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-import java.util.Locale;
 import java.util.Map;
 
 
@@ -27,8 +24,6 @@ import java.util.Map;
 
 public class SavedProductsDatabase
 {
-    private static DateFormat formatter = new SimpleDateFormat("dd/MM/yyyy", Locale.FRANCE);
-
     private static JSONObject saved_products_json = null;
 
     private static Map<String,Integer> dates_indices = new HashMap<>();
@@ -63,6 +58,7 @@ public class SavedProductsDatabase
             while ((inputStr = streamReader.readLine()) != null) {
                 responseStrBuilder.append(inputStr);
             }
+            inStream.close();
             saved_products_json = new JSONObject(responseStrBuilder.toString());
             saved_products_json.getJSONArray("Dates");
             dates_indices = new HashMap<>();
@@ -136,17 +132,15 @@ public class SavedProductsDatabase
     }
 
     public static ArrayList<Product> getProductsBetweenTodayAndDate(Date date) {
-        ArrayList<Product> products = new ArrayList<Product>();
+        ArrayList<Product> products = new ArrayList<>();
         Date today_date = new Date();
 
         try {
             JSONArray dates_json_array = saved_products_json.getJSONArray("Dates");
             List<Integer> dates_in_between = new ArrayList<>();
-            System.out.println("//////////////////////////////////////////////////////" + (new Date().toString()));
             for (int i = 0; i < dates_json_array.length(); ++i)
             {
                 Date this_date = new Date(dates_json_array.getJSONObject(i).getString("date"));
-                System.out.println("//////////////////////////////////////////////////////" + this_date.toString());
                 if (this_date.isBefore(today_date) & this_date.isAfter(date))
                 {
                     dates_in_between.add(dates_indices.get(this_date.toString()));
@@ -155,7 +149,6 @@ public class SavedProductsDatabase
 
 
             for (Integer ind : dates_in_between) {
-                System.out.println("//////////////////////////////////////////////////////" + ind);
                 JSONArray products_json_array = saved_products_json.getJSONArray("Dates")
                         .getJSONObject(ind).getJSONArray("products");
 

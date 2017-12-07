@@ -47,11 +47,11 @@ public class ShoppingCartSecondLevelActivity extends AppCompatActivity {
                 int itemPosition = recyclerView.getChildLayoutPosition(v);
                 String txt = m_cart.getSpecificItemInList(itemPosition).toString();
                 ClusterTypeSecondLevel cluster = ClusterTypeSecondLevel.getClusterType(txt);
-                if (!ShoppingListActivity.getClusterList().getItems().contains(cluster))
+                if (!ShoppingListActivity.getClusterList().getClusters().contains(cluster))
                 {
-                    ShoppingListActivity.addCluster(cluster);
+                    ShoppingListActivity.addCluster(cluster, getApplicationContext());
                 } else {
-                    ShoppingListActivity.deleteCluster(cluster);
+                    ShoppingListActivity.deleteCluster(cluster, getApplicationContext());
                 }
                 m_cart.checkOrUncheckItem(cluster);
                 mAdapter.changeOpacity(itemPosition);
@@ -62,9 +62,9 @@ public class ShoppingCartSecondLevelActivity extends AppCompatActivity {
         mAdapter = new RecyclerViewAdapter(this.getLayoutInflater(), m_cart,
                 R.layout.item_recycler_view_shopping_cart, onclicklistener);
 
-        for (ClusterType cluster: ShoppingListActivity.getClusterList().getItems())
+        for (ClusterType cluster: ShoppingListActivity.getClusterList().getClusters())
         {
-            if (m_cart.getItems().contains(cluster)) {
+            if (m_cart.getClusters().contains(cluster)) {
                 m_cart.checkItem(cluster);
                 mAdapter.setOpacityChecked(m_cart.getClusterPosition(cluster));
             }
