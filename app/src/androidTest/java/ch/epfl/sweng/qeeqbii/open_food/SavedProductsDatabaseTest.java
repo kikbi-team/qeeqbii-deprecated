@@ -1,26 +1,25 @@
 package ch.epfl.sweng.qeeqbii.open_food;
 
 import android.content.Intent;
+import android.content.res.AssetFileDescriptor;
 import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
 
+import org.json.JSONException;
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.Locale;
-import java.util.concurrent.TimeUnit;
+import java.text.ParseException;
+import java.util.List;
 
 import ch.epfl.sweng.qeeqbii.R;
 import ch.epfl.sweng.qeeqbii.activities.SavedProductsDatesActivity;
 import ch.epfl.sweng.qeeqbii.clustering.NutrientNameConverter;
 import ch.epfl.sweng.qeeqbii.open_food.ClusterTypeSecondLevel;
 import ch.epfl.sweng.qeeqbii.open_food.Product;
+import ch.epfl.sweng.qeeqbii.open_food.Date;
 import ch.epfl.sweng.qeeqbii.open_food.SavedProductsDatabase;
 
 import static android.support.test.espresso.Espresso.onView;
@@ -51,15 +50,13 @@ public class SavedProductsDatabaseTest {
         NutrientNameConverter.readCSVFile(mActivityRule.getActivity().getApplicationContext());
     }
 
-    private DateFormat formatter = new SimpleDateFormat("dd/MM/yyyy", Locale.FRANCE);
-
     @Test
     public void loadDatabaseTest()
     {
         try
         {
             Date[] dates = SavedProductsDatabase.getDates();
-            assertEquals(formatter.parse("13/11/2017"),dates[0]);
+            assertEquals((new Date("13/11/2017")),(dates[0]));
             assertEquals(1,dates.length);
 
         } catch( Exception e)
@@ -74,7 +71,7 @@ public class SavedProductsDatabaseTest {
     {
         try
         {
-            Product[] products = SavedProductsDatabase.getProductsFromDate(formatter.parse("13/11/2017"));
+            Product[] products = SavedProductsDatabase.getProductsFromDate(new Date("13/11/2017"));
 
             assertEquals(2,products.length);
             assertEquals("Tartiflette", products[0].getName());
@@ -105,7 +102,7 @@ public class SavedProductsDatabaseTest {
             SavedProductsDatabase.addProduct(product);
             SavedProductsDatabase.addProduct(product2);
             Date[] dates = SavedProductsDatabase.getDates();
-            Date today_date = formatter.parse(formatter.format(Calendar.getInstance().getTime()));
+            Date today_date = new Date();
             assertEquals(today_date, dates[dates.length-1]);
 
             Product entered_product = SavedProductsDatabase.getProductsFromDate(today_date)[0];
@@ -146,15 +143,40 @@ public class SavedProductsDatabaseTest {
     {
         try
         {
-            onView(withText(formatter.parse("13/11/2017").toString())).perform(click());
+            onView(withText("13/11/2017")).perform(click());
             onView(withText("Tartiflette")).perform(click());
-            Product product = SavedProductsDatabase.getProductsFromDate(formatter.parse("13/11/2017"))[0];
+            Product product = SavedProductsDatabase.getProductsFromDate(new Date("13/11/2017"))[0];
             onView(withText(product.toString())).check(matches(isDisplayed()));
 
         } catch (Exception e)
         {
             fail(e.getMessage());
         }
+
+    }
+
+    @Test
+    public void getProductsBetweenTwoDates()
+    {
+        assertEquals(true, !(new Date()).isBefore(new Date("11/10/2017")).booleanValue());
+        Product added_product = new Product("Carbonara", "1kg", "lardons, fromage oignons",
+        "Sel: 250g", "032485623", ClusterTypeSecondLevel.FROMAGES);
+        try{
+            SavedProductsDatabase.addProduct(added_product);
+            List<Product> products = SavedProductsDatabase.getProductsBetweenTodayAndDate(new Date("13/11/2017"));
+            System.out.println("/////////////////" + products.size());
+            for( Product elem : products)
+            {
+                System.out.println(elem.toString());
+            }
+            assertEquals(added_product.getName(),products.get(products.size()-1).getName());
+            assertEquals("Tartiflette", products.get(0).getName());
+        } catch (JSONException|ParseException e)
+        {
+            fail(e.getMessage());
+        }
+
+
 
     }
 
