@@ -16,6 +16,8 @@ import java.util.concurrent.CountDownLatch;
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
+import ch.epfl.sweng.qeeqbii.activities.BarcodeToProductActivity;
+
 /**
  * Created by guillaume on 06/10/17.
  * Class allowing to make GET requests to openfood.
@@ -138,7 +140,7 @@ public class OpenFoodQuery extends AsyncTask<String, Void, Product> {
 
     // Passing the barcode and a textview to this method makes the GET
     // request to openFood without freezing the main thread.
-    public static void ShowProduct(String barcode, TextView txt, Context context)
+    public static void ShowProduct(final String barcode, TextView txt, Context context)
     {
         final TextView txt2 = txt;
         final String barcode2 = barcode;
@@ -170,6 +172,7 @@ public class OpenFoodQuery extends AsyncTask<String, Void, Product> {
 
                 } catch (Exception e) {
                     txt2.setText(e.getMessage());
+                    BarcodeToProductActivity.requestAddProduct(barcode);
                 }
 
             }

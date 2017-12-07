@@ -18,6 +18,7 @@ import android.view.KeyEvent;
 
 import com.google.zxing.Result;
 
+import org.junit.After;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.FixMethodOrder;
@@ -107,6 +108,17 @@ public class BarcodeScannerActivityTest {
 
         Log.d("Barcode Permission", "Granted");
         SystemClock.sleep(PERMISSIONS_DELAY);
+    }
+
+    // disable product adding for these tests
+    @Before
+    public void run_before() {
+        BarcodeToProductActivity.setProductAddingAllowed(false);
+    }
+
+    @After
+    public void run_after() {
+        BarcodeToProductActivity.setProductAddingAllowed(true);
     }
 
     @Test

@@ -12,6 +12,8 @@ import android.support.test.runner.AndroidJUnit4;
 import android.support.test.runner.lifecycle.ActivityLifecycleMonitorRegistry;
 import android.widget.ListView;
 
+import org.junit.After;
+import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -53,6 +55,17 @@ public class ProductComparisonActivityTest {
     @Rule
     public final IntentsTestRule<ProductComparisonActivity> mActivityRule =
             new IntentsTestRule<>(ProductComparisonActivity.class);
+
+    // disable product adding for these tests
+    @Before
+    public void run_before() {
+        BarcodeToProductActivity.setProductAddingAllowed(false);
+    }
+
+    @After
+    public void run_after() {
+        BarcodeToProductActivity.setProductAddingAllowed(true);
+    }
 
     @Test
     public void testCanShowInsufficientProducts() {
