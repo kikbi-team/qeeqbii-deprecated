@@ -19,24 +19,19 @@ import ch.epfl.sweng.qeeqbii.activities.SavedProductsDatesActivity;
 import ch.epfl.sweng.qeeqbii.activities.ShoppingListActivity;
 import ch.epfl.sweng.qeeqbii.chat.MainActivityChat;
 import ch.epfl.sweng.qeeqbii.activities.StatisticsActivity;
-
 import static android.support.test.InstrumentationRegistry.getInstrumentation;
 import static junit.framework.Assert.assertNotNull;
 
-/**
- * Created by antoine on 07/11/2017.
- */
 
 @RunWith(AndroidJUnit4.class)
-public class CancerDataQuerySliderTest {
+public class MainActivitySliderTest {
     @Rule
-    public final ActivityTestRule<CancerDataQueryActivity> mActivityRule =
-            new ActivityTestRule<>(CancerDataQueryActivity.class);
+    public final ActivityTestRule<MainActivity> mActivityRule =
+            new ActivityTestRule<>(MainActivity.class);
 
 
-
-    private int layoutId = R.id.cancer_query_design;
-    private int navViewId = R.id.nav_view_data_query;
+    private int layoutId = R.id.drawer_main;
+    private int navViewId = R.id.nav_view_main;
 
 
     @Test

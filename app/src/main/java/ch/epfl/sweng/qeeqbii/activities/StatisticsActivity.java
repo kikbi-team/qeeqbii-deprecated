@@ -1,4 +1,4 @@
-package ch.epfl.sweng.qeeqbii.shopping_cart;
+package ch.epfl.sweng.qeeqbii.activities;
 
 import android.content.Intent;
 import android.support.design.widget.TabLayout;
@@ -24,8 +24,11 @@ import ch.epfl.sweng.qeeqbii.activities.GraphsActivity;
 import ch.epfl.sweng.qeeqbii.activities.RecentlyScannedProductsActivity;
 import ch.epfl.sweng.qeeqbii.open_food.Product;
 import ch.epfl.sweng.qeeqbii.open_food.RecentlyScannedProducts;
+import ch.epfl.sweng.qeeqbii.shopping_cart.BarChartMonthlyFrag;
+import ch.epfl.sweng.qeeqbii.shopping_cart.pieChartTrimesterFrag;
+import ch.epfl.sweng.qeeqbii.shopping_cart.pieChartYearlyFrag;
 
-public class ShoppingCartStatistics extends AppCompatActivity {
+public class StatisticsActivity extends AppCompatActivity {
 
     /**
      * The {@link android.support.v4.view.PagerAdapter} that will provide

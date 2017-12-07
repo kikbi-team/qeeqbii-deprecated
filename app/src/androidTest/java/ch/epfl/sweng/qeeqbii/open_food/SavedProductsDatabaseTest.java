@@ -1,7 +1,6 @@
 package ch.epfl.sweng.qeeqbii.open_food;
 
 import android.content.Intent;
-import android.content.res.AssetFileDescriptor;
 import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
 
@@ -17,10 +16,7 @@ import java.util.List;
 import ch.epfl.sweng.qeeqbii.R;
 import ch.epfl.sweng.qeeqbii.activities.SavedProductsDatesActivity;
 import ch.epfl.sweng.qeeqbii.clustering.NutrientNameConverter;
-import ch.epfl.sweng.qeeqbii.open_food.ClusterTypeSecondLevel;
-import ch.epfl.sweng.qeeqbii.open_food.Product;
-import ch.epfl.sweng.qeeqbii.open_food.Date;
-import ch.epfl.sweng.qeeqbii.open_food.SavedProductsDatabase;
+import ch.epfl.sweng.qeeqbii.clustering.ClusterTypeSecondLevel;
 
 import static android.support.test.espresso.Espresso.onView;
 import static android.support.test.espresso.action.ViewActions.click;

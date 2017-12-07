@@ -6,7 +6,6 @@ import org.junit.Rule;
 import org.junit.Test;
 
 import ch.epfl.sweng.qeeqbii.activities.MainActivity;
-import ch.epfl.sweng.qeeqbii.open_food.ClusterTypeSecondLevel;
 
 import static junit.framework.Assert.assertEquals;
 

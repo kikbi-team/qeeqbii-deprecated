@@ -2,17 +2,14 @@ package ch.epfl.sweng.qeeqbii;
 
 import android.support.test.espresso.intent.rule.IntentsTestRule;
 import android.support.test.runner.AndroidJUnit4;
-import android.view.View;
 
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
-import java.security.spec.ECField;
-
 import ch.epfl.sweng.qeeqbii.activities.ShoppingListActivity;
-import ch.epfl.sweng.qeeqbii.open_food.ClusterTypeFirstLevel;
-import ch.epfl.sweng.qeeqbii.open_food.ClusterTypeSecondLevel;
+import ch.epfl.sweng.qeeqbii.clustering.ClusterTypeFirstLevel;
+import ch.epfl.sweng.qeeqbii.clustering.ClusterTypeSecondLevel;
 
 import static android.support.test.espresso.Espresso.onView;
 import static android.support.test.espresso.Espresso.pressBack;

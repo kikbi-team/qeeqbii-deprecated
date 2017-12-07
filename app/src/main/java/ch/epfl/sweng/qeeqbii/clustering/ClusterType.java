@@ -1,4 +1,4 @@
-package ch.epfl.sweng.qeeqbii.open_food;
+package ch.epfl.sweng.qeeqbii.clustering;
 
 /**
  * Created by guillaume on 14/11/17.

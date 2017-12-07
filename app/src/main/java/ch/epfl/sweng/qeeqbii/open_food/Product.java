@@ -6,6 +6,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 import ch.epfl.sweng.qeeqbii.clustering.ClusterClassifier;
+import ch.epfl.sweng.qeeqbii.clustering.ClusterType;
+import ch.epfl.sweng.qeeqbii.clustering.ClusterTypeSecondLevel;
 import ch.epfl.sweng.qeeqbii.clustering.ComparableCluster;
 import ch.epfl.sweng.qeeqbii.clustering.NutrientNameConverter;
 import ch.epfl.sweng.qeeqbii.custom_exceptions.IllegalNutrientKeyException;
