@@ -34,170 +34,62 @@ public class BarcodeScannerSliderTest {
     public final ActivityTestRule<BarcodeScannerActivity> mActivityRule =
             new ActivityTestRule<>(BarcodeScannerActivity.class);
 
+    private int layoutId = R.id.barcode_scanner;
+    private int navViewId = R.id.nav_view_barcode_scanner;
+
+
     @Test
-    public void testBackToMain() {
-        // register next activity that need to be monitored.
-        Instrumentation.ActivityMonitor activityMonitor = getInstrumentation().addMonitor(MainActivity.class.getName(), null, false);
-
-        // open current activity.
-        BarcodeScannerActivity myActivity = mActivityRule.getActivity();
-        final MenuItem button = (MenuItem) myActivity.findViewById(R.id.nav_main);
-        myActivity.sliderGoToActivity(button);
-
-        //Watch for the timeout
-        //example values 5000 if in ms, or 5 if it's in seconds.
-        MainActivity nextActivity = (MainActivity) getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 5000);
-        // next activity is opened and captured.
-        assertNotNull(nextActivity);
-        nextActivity.finish();
+    public void canGoToBarcodeScanner() {
+        SliderTest sliderTest = new SliderTest();
+        sliderTest.canGoToBarcodeScanner(layoutId, navViewId);
     }
 
     @Test
-    public void testGoToGraphs() {
-        // register next activity that need to be monitored.
-        Instrumentation.ActivityMonitor activityMonitor = getInstrumentation().addMonitor(GraphsActivity.class.getName(), null, false);
-
-        // open current activity.
-        BarcodeScannerActivity myActivity = mActivityRule.getActivity();
-        final MenuItem button = (MenuItem) myActivity.findViewById(R.id.nav_graphs);
-        myActivity.sliderGoToActivity(button);
-
-        //Watch for the timeout
-        //example values 5000 if in ms, or 5 if it's in seconds.
-        GraphsActivity nextActivity = (GraphsActivity) getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 5000);
-        // next activity is opened and captured.
-        assertNotNull(nextActivity);
-        nextActivity.finish();
+    public void canGoToCancerDataQuery() {
+        SliderTest sliderTest = new SliderTest();
+        sliderTest.canGoToCancerDataQuery(layoutId, navViewId);
     }
 
     @Test
-    public void testGoToCancerShow() {
-        // register next activity that need to be monitored.
-        Instrumentation.ActivityMonitor activityMonitor = getInstrumentation().addMonitor(CancerDataShowActivity.class.getName(), null, false);
-
-        // open current activity.
-        BarcodeScannerActivity myActivity = mActivityRule.getActivity();
-        final MenuItem button = (MenuItem) myActivity.findViewById(R.id.nav_graphs);
-        myActivity.sliderGoToActivity(button);
-
-        //Watch for the timeout
-        //example values 5000 if in ms, or 5 if it's in seconds.
-        CancerDataShowActivity nextActivity = (CancerDataShowActivity) getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 5000);
-        // next activity is opened and captured.
-        assertNotNull(nextActivity);
-        nextActivity.finish();
+    public void canGoToCancerdataShowActivity() {
+        SliderTest sliderTest = new SliderTest();
+        sliderTest.canGoToCancerdataShowActivity(layoutId, navViewId);
     }
 
     @Test
-    public void testGoToBarcodeReader() {
-        // register next activity that need to be monitored.
-        Instrumentation.ActivityMonitor activityMonitor = getInstrumentation().addMonitor(BarcodeScannerActivity.class.getName(), null, false);
-
-        // open current activity.
-        BarcodeScannerActivity myActivity = mActivityRule.getActivity();
-        final MenuItem button = (MenuItem) myActivity.findViewById(R.id.nav_graphs);
-        myActivity.sliderGoToActivity(button);
-
-        //Watch for the timeout
-        //example values 5000 if in ms, or 5 if it's in seconds.
-        BarcodeScannerActivity nextActivity = (BarcodeScannerActivity) getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 5000);
-        // next activity is opened and captured.
-        assertNotNull(nextActivity);
-        nextActivity.finish();
+    public void canGoToCancerMainActivityChat() {
+        SliderTest sliderTest = new SliderTest();
+        sliderTest.canGoToCancerMainActivityChat(layoutId, navViewId);
     }
 
     @Test
-    public void testGoToShoppingCart() {
-        // register next activity that need to be monitored.
-        Instrumentation.ActivityMonitor activityMonitor = getInstrumentation().addMonitor(ShoppingListActivity.class.getName(), null, false);
-
-        // open current activity.
-        BarcodeScannerActivity myActivity = mActivityRule.getActivity();
-        final MenuItem button = (MenuItem) myActivity.findViewById(R.id.nav_graphs);
-        myActivity.sliderGoToActivity(button);
-
-        //Watch for the timeout
-        //example values 5000 if in ms, or 5 if it's in seconds.
-        ShoppingListActivity nextActivity = (ShoppingListActivity) getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 5000);
-        // next activity is opened and captured.
-        assertNotNull(nextActivity);
-        nextActivity.finish();
+    public void canGoToGraphs() {
+        SliderTest sliderTest = new SliderTest();
+        sliderTest.canGoToGraphs(layoutId, navViewId);
     }
 
     @Test
-    public void testGoToCancerQuery() {
-        // register next activity that need to be monitored.
-        Instrumentation.ActivityMonitor activityMonitor = getInstrumentation().addMonitor(CancerDataQueryActivity.class.getName(), null, false);
-
-        // open current activity.
-        BarcodeScannerActivity myActivity = mActivityRule.getActivity();
-        final MenuItem button = (MenuItem) myActivity.findViewById(R.id.nav_graphs);
-        myActivity.sliderGoToActivity(button);
-
-        //Watch for the timeout
-        //example values 5000 if in ms, or 5 if it's in seconds.
-        CancerDataQueryActivity nextActivity = (CancerDataQueryActivity) getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 5000);
-        // next activity is opened and captured.
-        assertNotNull(nextActivity);
-        nextActivity.finish();
+    public void canGoToMain() {
+        SliderTest sliderTest = new SliderTest();
+        sliderTest.canGoToMain(layoutId, navViewId);
     }
 
     @Test
-    public void testGoToScannedProducts() {
-
+    public void canGoToShoppingList() {
+        SliderTest sliderTest = new SliderTest();
+        sliderTest.canGoToShoppingList(layoutId, navViewId);
     }
 
     @Test
-    public void testGoToSavedProducts() {
-        // register next activity that need to be monitored.
-        Instrumentation.ActivityMonitor activityMonitor = getInstrumentation().addMonitor(SavedProductsDatesActivity.class.getName(), null, false);
-
-        // open current activity.
-        BarcodeScannerActivity myActivity = mActivityRule.getActivity();
-        final MenuItem button = (MenuItem) myActivity.findViewById(R.id.nav_graphs);
-        myActivity.sliderGoToActivity(button);
-
-        //Watch for the timeout
-        //example values 5000 if in ms, or 5 if it's in seconds.
-        SavedProductsDatesActivity nextActivity = (SavedProductsDatesActivity) getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 5000);
-        // next activity is opened and captured.
-        assertNotNull(nextActivity);
-        nextActivity.finish();
+    public void canGoToStatistics() {
+        SliderTest sliderTest = new SliderTest();
+        sliderTest.canGoToStatistics(layoutId, navViewId);
     }
 
-    @Test
-    public void testGoToStats() {
-        // register next activity that need to be monitored.
-        Instrumentation.ActivityMonitor activityMonitor = getInstrumentation().addMonitor(StatisticsActivity.class.getName(), null, false);
-
-        // open current activity.
-        BarcodeScannerActivity myActivity = mActivityRule.getActivity();
-        final MenuItem button = (MenuItem) myActivity.findViewById(R.id.nav_graphs);
-        myActivity.sliderGoToActivity(button);
-
-        //Watch for the timeout
-        //example values 5000 if in ms, or 5 if it's in seconds.
-        StatisticsActivity nextActivity = (StatisticsActivity) getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 5000);
-        // next activity is opened and captured.
-        assertNotNull(nextActivity);
-        nextActivity.finish();
-    }
 
     @Test
-    public void testGoToChat() {
-        // register next activity that need to be monitored.
-        Instrumentation.ActivityMonitor activityMonitor = getInstrumentation().addMonitor(MainActivityChat.class.getName(), null, false);
-
-        // open current activity.
-        BarcodeScannerActivity myActivity = mActivityRule.getActivity();
-        final MenuItem button = (MenuItem) myActivity.findViewById(R.id.nav_graphs);
-        myActivity.sliderGoToActivity(button);
-
-        //Watch for the timeout
-        //example values 5000 if in ms, or 5 if it's in seconds.
-        MainActivityChat nextActivity = (MainActivityChat) getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 5000);
-        // next activity is opened and captured.
-        assertNotNull(nextActivity);
-        nextActivity.finish();
+    public void canGoToSavedProductsDate() {
+        SliderTest sliderTest = new SliderTest();
+        sliderTest.canGoToSavedProductsDate(layoutId, navViewId);
     }
 }
