@@ -46,17 +46,13 @@ public class BarcodeToProductActivity extends AppCompatActivity {
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-
-
         // Capture the layout's; TextView and set the string as its text
         final TextView txt = (TextView) findViewById(R.id.product_details);
         txt.setTextSize(20);
         txt.setTextColor(Color.rgb(0, 0, 0));
         //OpenFoodQuery.ShowProduct(barcode, txt, getApplicationContext());
 
-
         OpenFoodQuery.ShowProduct(barcode, txt, getApplicationContext());
-
 
         /*
         try {

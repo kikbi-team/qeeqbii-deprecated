@@ -22,8 +22,10 @@ import java.util.List;
 import ch.epfl.sweng.qeeqbii.R;
 import ch.epfl.sweng.qeeqbii.activities.GraphsActivity;
 import ch.epfl.sweng.qeeqbii.activities.RecentlyScannedProductsActivity;
+import ch.epfl.sweng.qeeqbii.open_food.Date;
 import ch.epfl.sweng.qeeqbii.open_food.Product;
 import ch.epfl.sweng.qeeqbii.open_food.RecentlyScannedProducts;
+import ch.epfl.sweng.qeeqbii.open_food.SavedProductsDatabase;
 import ch.epfl.sweng.qeeqbii.shopping_cart.BarChartMonthlyFrag;
 import ch.epfl.sweng.qeeqbii.shopping_cart.pieChartTrimesterFrag;
 import ch.epfl.sweng.qeeqbii.shopping_cart.pieChartYearlyFrag;
@@ -54,6 +56,8 @@ public class StatisticsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_shopping_cart_statistics);
+
+        fillTheStaticsVectors(); //Fills the respectives vectors
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -151,11 +155,15 @@ public class StatisticsActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    /*public void initData() {
-        for (Product element : RecentlyScannedProductsActivity.displayed_products) {
+    public void fillTheStaticsVectors() {
 
-        }
-    }*/
+        Date OneMonthAgoDate = new Date("07/11/2017");
+        m_items_month = SavedProductsDatabase.getProductsBetweenTodayAndDate(OneMonthAgoDate);
 
+        Date OneTrimesterAgoDate = new Date("07/09/2017");
+        m_items_trimester = SavedProductsDatabase.getProductsBetweenTodayAndDate(OneTrimesterAgoDate);
 
+        Date OneYearAgoDate = new Date("07/12/2016");
+        m_items_year = SavedProductsDatabase.getProductsBetweenTodayAndDate(OneMonthAgoDate);
+    }
 }

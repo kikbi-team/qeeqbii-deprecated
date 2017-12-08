@@ -17,6 +17,7 @@ import android.widget.FrameLayout;
 import com.github.mikephil.charting.charts.BarChart;
 import com.github.mikephil.charting.charts.PieChart;
 import com.github.mikephil.charting.components.Legend;
+import com.github.mikephil.charting.components.LegendEntry;
 import com.github.mikephil.charting.components.XAxis;
 import com.github.mikephil.charting.components.YAxis;
 import com.github.mikephil.charting.data.BarData;
@@ -24,11 +25,16 @@ import com.github.mikephil.charting.data.BarDataSet;
 import com.github.mikephil.charting.data.BarEntry;
 import com.github.mikephil.charting.listener.ChartTouchListener;
 import com.github.mikephil.charting.listener.OnChartGestureListener;
+import com.github.mikephil.charting.utils.ColorTemplate;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 import ch.epfl.sweng.qeeqbii.R;
+import ch.epfl.sweng.qeeqbii.activities.StatisticsActivity;
+import ch.epfl.sweng.qeeqbii.custom_exceptions.ProductException;
+import ch.epfl.sweng.qeeqbii.open_food.Product;
 
 
 public class BarChartMonthlyFrag extends SimpleFragment implements OnChartGestureListener {
@@ -39,6 +45,11 @@ public class BarChartMonthlyFrag extends SimpleFragment implements OnChartGestur
 
     private BarChart mChart;
     private PieChart mChartPie;
+
+    private List<Float> mSalts;
+    private List<Float> mGlucides;
+    private List<Float> mFats;
+    private List<Float> mCalories;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -81,16 +92,40 @@ public class BarChartMonthlyFrag extends SimpleFragment implements OnChartGestur
 
         Typeface tfBars = Typeface.createFromAsset(getActivity().getAssets(),"OpenSans-Light.ttf");
 
-        List<BarEntry> entries = new ArrayList<>();
-        entries.add(new BarEntry(0f, 30f));
-        entries.add(new BarEntry(1f, 80f));
-        entries.add(new BarEntry(2f, 60f));
-        entries.add(new BarEntry(3f, 50f));
-        // gap of 2f
-        entries.add(new BarEntry(5f, 70f));
-        entries.add(new BarEntry(6f, 60f));
+        //FOR THE FUTURE
+        /*
+        List<BarEntry> entriesFats = new ArrayList<>();
+        List<BarEntry> entriesSalts = new ArrayList<>();
+        List<BarEntry> entriesGlucides = new ArrayList<>();
+        List<BarEntry> entriesCalories = new ArrayList<>();
+        */
 
-        BarDataSet set = new BarDataSet(entries, "BarDataSet");
+        List<BarEntry> entries = new ArrayList<>();
+
+        //GIVES THE VALUES FOR THE GRAPHS
+        try {
+            fillLists();
+        } catch (ProductException e) {
+            e.printStackTrace();
+        }
+
+        // FUTURE
+        /*
+        for (Product element : StatisticsActivity.m_items_month)
+        {
+            entriesFats.add(new BarEntry(0f, 30f));
+            entriesSalts.add(new BarEntry(1f, 30f));
+            entriesGlucides.add(new BarEntry(2f, 30f));
+            entriesCalories.add(new BarEntry(3f, 30f));
+        }
+        */
+
+        entries.add(new BarEntry(0f, sumList(mCalories)));
+        entries.add(new BarEntry(1f, sumList(mFats)));
+        entries.add(new BarEntry(2f, sumList(mGlucides)));
+        entries.add(new BarEntry(3f, sumList(mSalts)));
+
+        BarDataSet set = new BarDataSet(entries, "Nutrients Intake over the last Month");
 
         BarData data = new BarData(set);
         data.setBarWidth(0.9f); // set custom bar width
@@ -103,6 +138,7 @@ public class BarChartMonthlyFrag extends SimpleFragment implements OnChartGestur
 
         Legend legend = mChart.getLegend();
         legend.setTypeface(tfBars);
+        //legend.setCustom(ColorTemplate.VORDIPLOM_COLORS, new String[] { "Set1", "Set2", "Set3", "Set4" });
 
         YAxis leftAxis = mChart.getAxisLeft();
         leftAxis.setTypeface(tf);
@@ -166,5 +202,37 @@ public class BarChartMonthlyFrag extends SimpleFragment implements OnChartGestur
         s.setSpan(new RelativeSizeSpan(2f), 0, 8, 0);
         s.setSpan(new ForegroundColorSpan(Color.GRAY), 8, s.length(), 0);
         return s;
+    }
+
+    private void fillLists() throws ProductException {
+        for (Product element : StatisticsActivity.m_items_month)
+        {
+            Map<String,Double> nutrients = element.getParsedNutrients();
+
+            if (nutrients.containsKey("Énergie (kCal)"))
+            {
+                mCalories.add(nutrients.get("Énergie (kCal)").floatValue());
+            }
+            if (nutrients.containsKey("Matières grasses (g)"))
+            {
+                mFats.add(nutrients.get("Matières grasses (g)").floatValue());
+            }
+            if (nutrients.containsKey("Sucres (g)"))
+            {
+                mGlucides.add(nutrients.get("Sucres (g)").floatValue());
+            }
+            if (nutrients.containsKey("Sel (g)")) {
+                mSalts.add(nutrients.get("Sel (g)").floatValue());
+            }
+        }
+    }
+
+    //Returns the sum of all the elements in the list
+    private Float sumList(List<Float> list) {
+        float sum = 0;
+        for (float element : list) {
+            sum += element;
+        }
+        return sum;
     }
 }

@@ -91,7 +91,6 @@ public class SavedProductsDatabase
         JSONArray products_json_array = saved_products_json.getJSONArray("Dates")
                 .getJSONObject(index).getJSONArray("products");
 
-
         Product[] products = new Product[products_json_array.length()];
         for(int i = 0; i < products_json_array.length(); ++i)
         {
