@@ -9,6 +9,7 @@ import android.support.test.runner.lifecycle.ActivityLifecycleMonitorRegistry;
 import android.view.View;
 
 import org.junit.AfterClass;
+import org.junit.BeforeClass;
 import org.junit.FixMethodOrder;
 import org.junit.Rule;
 import org.junit.Test;
@@ -18,6 +19,7 @@ import org.junit.runners.MethodSorters;
 import java.util.Collection;
 
 import ch.epfl.sweng.qeeqbii.activities.BarcodeScannerActivity;
+import ch.epfl.sweng.qeeqbii.activities.BarcodeToProductActivity;
 import ch.epfl.sweng.qeeqbii.activities.ShoppingListActivity;
 
 import static android.support.test.InstrumentationRegistry.getInstrumentation;
@@ -47,6 +49,11 @@ public class ShoppingListCheckingTest {
     public final IntentsTestRule<ShoppingListActivity> mActivityRule =
             new IntentsTestRule<>(ShoppingListActivity.class);
 
+    // disable product adding for these tests
+    @BeforeClass
+    public static void run_before() {
+        BarcodeToProductActivity.setProductAddingAllowed(false);
+    }
 
     public Activity getActivityInstance(){
         final Activity[] currentActivity = new Activity[1];

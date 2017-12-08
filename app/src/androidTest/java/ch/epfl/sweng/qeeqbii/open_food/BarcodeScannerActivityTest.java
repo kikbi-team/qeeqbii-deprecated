@@ -113,14 +113,9 @@ public class BarcodeScannerActivityTest {
     }
 
     // disable product adding for these tests
-    @Before
-    public void run_before() {
+    @BeforeClass
+    public static void run_before() {
         BarcodeToProductActivity.setProductAddingAllowed(false);
-    }
-
-    @After
-    public void run_after() {
-        BarcodeToProductActivity.setProductAddingAllowed(true);
     }
 
     @Test

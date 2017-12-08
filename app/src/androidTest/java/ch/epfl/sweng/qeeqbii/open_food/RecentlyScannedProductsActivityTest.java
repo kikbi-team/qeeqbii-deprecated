@@ -7,12 +7,14 @@ import android.support.test.runner.AndroidJUnit4;
 import android.widget.ArrayAdapter;
 
 import org.junit.AfterClass;
+import org.junit.BeforeClass;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
 import ch.epfl.sweng.qeeqbii.ActivityFinisher;
 import ch.epfl.sweng.qeeqbii.R;
+import ch.epfl.sweng.qeeqbii.activities.BarcodeToProductActivity;
 import ch.epfl.sweng.qeeqbii.activities.ProductComparisonActivity;
 import ch.epfl.sweng.qeeqbii.activities.RecentlyScannedProductsActivity;
 
@@ -32,6 +34,12 @@ public class RecentlyScannedProductsActivityTest {
     @Rule
     public final IntentsTestRule<RecentlyScannedProductsActivity> mActivityRule =
             new IntentsTestRule<>(RecentlyScannedProductsActivity.class);
+
+    // disable product adding for these tests
+    @BeforeClass
+    public static void run_before() {
+        BarcodeToProductActivity.setProductAddingAllowed(false);
+    }
 
     @Test
     public void canUseDeleteButton() {

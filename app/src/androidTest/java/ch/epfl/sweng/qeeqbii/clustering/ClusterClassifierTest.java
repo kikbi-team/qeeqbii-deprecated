@@ -3,6 +3,7 @@ package ch.epfl.sweng.qeeqbii.clustering;
 import android.support.test.rule.ActivityTestRule;
 
 import org.junit.AfterClass;
+import org.junit.BeforeClass;
 import org.junit.Rule;
 import org.junit.Test;
 
@@ -10,6 +11,7 @@ import java.util.ArrayList;
 import java.util.Set;
 
 import ch.epfl.sweng.qeeqbii.ActivityFinisher;
+import ch.epfl.sweng.qeeqbii.activities.BarcodeToProductActivity;
 import ch.epfl.sweng.qeeqbii.activities.MainActivity;
 import ch.epfl.sweng.qeeqbii.custom_exceptions.BadlyFormatedFile;
 import ch.epfl.sweng.qeeqbii.custom_exceptions.NotOpenFileException;
@@ -26,6 +28,11 @@ public class ClusterClassifierTest {
     public final ActivityTestRule<MainActivity> mActivityRule =
             new ActivityTestRule<>(MainActivity.class);
 
+    // disable product adding for these tests
+    @BeforeClass
+    public static void run_before() {
+        BarcodeToProductActivity.setProductAddingAllowed(false);
+    }
 
     @Test
     public void canThrowExceptionReadingClusterNutrientCenters() {

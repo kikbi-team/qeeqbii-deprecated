@@ -3,7 +3,10 @@ package ch.epfl.sweng.qeeqbii;
 import android.content.Context;
 
 import org.junit.AfterClass;
+import org.junit.BeforeClass;
 import org.junit.Test;
+
+import ch.epfl.sweng.qeeqbii.activities.BarcodeToProductActivity;
 
 import static ch.epfl.sweng.qeeqbii.chat.GetTimeAgo.getTimeAgo;
 import static com.facebook.FacebookSdk.getApplicationContext;
@@ -22,6 +25,12 @@ public class GetTimeAgoTest {
         String test = getTimeAgo(time,cxt);
         long now = System.currentTimeMillis();
         assertEquals(test,"17508 days ago");
+    }
+
+    // disable product adding for these tests
+    @BeforeClass
+    public static void run_before() {
+        BarcodeToProductActivity.setProductAddingAllowed(false);
     }
 
     @AfterClass

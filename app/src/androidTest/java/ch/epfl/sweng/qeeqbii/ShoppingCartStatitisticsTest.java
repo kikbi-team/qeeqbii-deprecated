@@ -10,10 +10,12 @@ import android.support.v4.app.FragmentManager;
 
 
 import org.junit.AfterClass;
+import org.junit.BeforeClass;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
+import ch.epfl.sweng.qeeqbii.activities.BarcodeToProductActivity;
 import ch.epfl.sweng.qeeqbii.activities.StatisticsActivity;
 
 import static android.support.test.espresso.action.ViewActions.click;
@@ -28,6 +30,13 @@ public class ShoppingCartStatitisticsTest {
     @Rule
     public final ActivityTestRule<StatisticsActivity> mActivityRule =
             new ActivityTestRule<>(StatisticsActivity.class);
+
+
+    // disable product adding for these tests
+    @BeforeClass
+    public static void run_before() {
+        BarcodeToProductActivity.setProductAddingAllowed(false);
+    }
 
     /*@Test
     public void testCanOpenMonthButton() throws InterruptedException {

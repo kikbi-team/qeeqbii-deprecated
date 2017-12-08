@@ -5,12 +5,14 @@ import android.support.test.espresso.ViewInteraction;
 import android.support.test.rule.ActivityTestRule;
 
 import org.junit.AfterClass;
+import org.junit.BeforeClass;
 import org.junit.Rule;
 import org.junit.Test;
 
 import java.util.Random;
 
 import ch.epfl.sweng.qeeqbii.activities.BarcodeScannerActivity;
+import ch.epfl.sweng.qeeqbii.activities.BarcodeToProductActivity;
 import ch.epfl.sweng.qeeqbii.chat.RegisterActivity;
 
 import static android.support.test.espresso.Espresso.onView;
@@ -27,6 +29,13 @@ public class RegisterTest {
     @Rule
     public final ActivityTestRule<RegisterActivity> mActivityRule =
             new ActivityTestRule<>(RegisterActivity.class);
+
+    // disable product adding for these tests
+    @BeforeClass
+    public static void run_before() {
+        BarcodeToProductActivity.setProductAddingAllowed(false);
+    }
+
     @Test
     public void login(){
 

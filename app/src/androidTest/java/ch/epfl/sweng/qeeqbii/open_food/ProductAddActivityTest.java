@@ -9,6 +9,7 @@ import android.support.test.runner.AndroidJUnit4;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
+import org.junit.BeforeClass;
 import org.junit.FixMethodOrder;
 import org.junit.Rule;
 import org.junit.Test;
@@ -55,8 +56,8 @@ public class ProductAddActivityTest {
                 };
             };
 
-    @Before
-    public void run_before() {
+    @BeforeClass
+    public static void run_before() {
         BarcodeToProductActivity.setProductAddingAllowed(true);
     }
 

@@ -4,6 +4,7 @@ import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
 
 import org.junit.AfterClass;
+import org.junit.BeforeClass;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -19,6 +20,11 @@ public class BarcodeToProductSliderTest {
     public final ActivityTestRule<BarcodeToProductActivity> mActivityRule =
             new ActivityTestRule<>(BarcodeToProductActivity.class);
 
+    // disable product adding for these tests
+    @BeforeClass
+    public static void run_before() {
+        BarcodeToProductActivity.setProductAddingAllowed(false);
+    }
 
     private int layoutId = R.id.barcode_to_product;
     private int navViewId = R.id.nav_view_barcode_to_product;

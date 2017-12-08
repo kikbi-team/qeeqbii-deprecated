@@ -6,12 +6,14 @@ import android.support.test.espresso.matcher.ViewMatchers;
 import android.support.test.rule.ActivityTestRule;
 
 import org.junit.AfterClass;
+import org.junit.BeforeClass;
 import org.junit.Rule;
 import org.junit.Test;
 
 import java.util.concurrent.TimeUnit;
 
 import ch.epfl.sweng.qeeqbii.activities.BarcodeScannerActivity;
+import ch.epfl.sweng.qeeqbii.activities.BarcodeToProductActivity;
 import ch.epfl.sweng.qeeqbii.activities.SavedProductsDatesActivity;
 import ch.epfl.sweng.qeeqbii.chat.LoginActivity;
 
@@ -31,6 +33,13 @@ public class LoginTest {
     @Rule
     public final ActivityTestRule<LoginActivity> mActivityRule =
             new ActivityTestRule<>(LoginActivity.class);
+
+    // disable product adding for these tests
+    @BeforeClass
+    public static void run_before() {
+        BarcodeToProductActivity.setProductAddingAllowed(false);
+    }
+
     @Test
     public void login(){
         String email = "nicolaslesimple@noos.fr";

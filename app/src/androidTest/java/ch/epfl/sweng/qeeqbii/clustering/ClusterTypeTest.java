@@ -3,10 +3,12 @@ package ch.epfl.sweng.qeeqbii.clustering;
 import android.support.test.rule.ActivityTestRule;
 
 import org.junit.AfterClass;
+import org.junit.BeforeClass;
 import org.junit.Rule;
 import org.junit.Test;
 
 import ch.epfl.sweng.qeeqbii.ActivityFinisher;
+import ch.epfl.sweng.qeeqbii.activities.BarcodeToProductActivity;
 import ch.epfl.sweng.qeeqbii.activities.MainActivity;
 
 import static junit.framework.Assert.assertEquals;
@@ -20,6 +22,12 @@ public class ClusterTypeTest {
     @Rule
     public final ActivityTestRule<MainActivity> mActivityRule =
             new ActivityTestRule<>(MainActivity.class);
+
+    // disable product adding for these tests
+    @BeforeClass
+    public static void run_before() {
+        BarcodeToProductActivity.setProductAddingAllowed(false);
+    }
 
     @Test
     public void getParentAndChildrenTest()

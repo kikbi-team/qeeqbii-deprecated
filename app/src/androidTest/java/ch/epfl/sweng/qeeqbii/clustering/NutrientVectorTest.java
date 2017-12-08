@@ -5,6 +5,7 @@ import android.support.test.rule.ActivityTestRule;
 
 import org.junit.AfterClass;
 import org.junit.Before;
+import org.junit.BeforeClass;
 import org.junit.Rule;
 import org.junit.Test;
 
@@ -12,6 +13,7 @@ import java.util.HashMap;
 
 import ch.epfl.sweng.qeeqbii.ActivityFinisher;
 import ch.epfl.sweng.qeeqbii.activities.BarcodeScannerActivity;
+import ch.epfl.sweng.qeeqbii.activities.BarcodeToProductActivity;
 import ch.epfl.sweng.qeeqbii.clustering.ClusterClassifier;
 import ch.epfl.sweng.qeeqbii.clustering.NutrientNameConverter;
 import ch.epfl.sweng.qeeqbii.clustering.NutrientVector;
@@ -33,6 +35,11 @@ public class NutrientVectorTest {
     private NutrientVector nutrientVectorTest2;
     private NutrientVector nutrientVectorTest3;
 
+    // disable product adding for these tests
+    @BeforeClass
+    public static void run_before() {
+        BarcodeToProductActivity.setProductAddingAllowed(false);
+    }
 
     @Before
     public void initialize() {

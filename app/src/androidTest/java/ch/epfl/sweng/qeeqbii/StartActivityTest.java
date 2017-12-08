@@ -4,9 +4,11 @@ import android.support.test.espresso.ViewInteraction;
 import android.support.test.rule.ActivityTestRule;
 
 import org.junit.AfterClass;
+import org.junit.BeforeClass;
 import org.junit.Rule;
 import org.junit.Test;
 
+import ch.epfl.sweng.qeeqbii.activities.BarcodeToProductActivity;
 import ch.epfl.sweng.qeeqbii.chat.AllergiesActivity;
 import ch.epfl.sweng.qeeqbii.chat.StartActivity;
 
@@ -25,6 +27,12 @@ public class StartActivityTest {
     @Rule
     public ActivityTestRule<StartActivity> mActivityTestRule =
             new ActivityTestRule<>(StartActivity.class);
+
+    // disable product adding for these tests
+    @BeforeClass
+    public static void run_before() {
+        BarcodeToProductActivity.setProductAddingAllowed(false);
+    }
 
     @Test
     public void button_reg () {

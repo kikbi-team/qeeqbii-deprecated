@@ -1,8 +1,10 @@
 package ch.epfl.sweng.qeeqbii;
 
 import org.junit.AfterClass;
+import org.junit.BeforeClass;
 import org.junit.Test;
 
+import ch.epfl.sweng.qeeqbii.activities.BarcodeToProductActivity;
 import ch.epfl.sweng.qeeqbii.chat.Chats;
 
 import static junit.framework.Assert.assertEquals;
@@ -19,6 +21,12 @@ public class ChatClassTest {
         assertEquals(date,chat.getDate());
         chat.setDate("december");
         assertEquals("december",chat.getDate());
+    }
+
+    // disable product adding for these tests
+    @BeforeClass
+    public static void run_before() {
+        BarcodeToProductActivity.setProductAddingAllowed(false);
     }
 
     @AfterClass

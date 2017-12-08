@@ -4,6 +4,7 @@ import android.support.test.espresso.core.deps.guava.base.Strings;
 import android.support.test.rule.ActivityTestRule;
 
 import org.junit.AfterClass;
+import org.junit.BeforeClass;
 import org.junit.Rule;
 import org.junit.Test;
 
@@ -12,6 +13,7 @@ import java.util.Set;
 
 import ch.epfl.sweng.qeeqbii.ActivityFinisher;
 import ch.epfl.sweng.qeeqbii.activities.BarcodeScannerActivity;
+import ch.epfl.sweng.qeeqbii.activities.BarcodeToProductActivity;
 import ch.epfl.sweng.qeeqbii.activities.MainActivity;
 import ch.epfl.sweng.qeeqbii.custom_exceptions.IllegalNutrientKeyException;
 import ch.epfl.sweng.qeeqbii.custom_exceptions.NotOpenFileException;
@@ -28,7 +30,11 @@ public class NutrientNameConverterTest {
     public final ActivityTestRule<MainActivity> mActivityRule =
             new ActivityTestRule<>(MainActivity.class);
 
-
+    // disable product adding for these tests
+    @BeforeClass
+    public static void run_before() {
+        BarcodeToProductActivity.setProductAddingAllowed(false);
+    }
 
     @Test
     public void nutrientNameConversionThrowsExceptions() {

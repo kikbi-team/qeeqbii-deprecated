@@ -4,10 +4,12 @@ import android.support.test.espresso.intent.rule.IntentsTestRule;
 import android.support.test.runner.AndroidJUnit4;
 
 import org.junit.AfterClass;
+import org.junit.BeforeClass;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
+import ch.epfl.sweng.qeeqbii.activities.BarcodeToProductActivity;
 import ch.epfl.sweng.qeeqbii.activities.ShoppingListActivity;
 import ch.epfl.sweng.qeeqbii.clustering.ClusterTypeFirstLevel;
 import ch.epfl.sweng.qeeqbii.clustering.ClusterTypeSecondLevel;
@@ -36,6 +38,12 @@ public class ShoppingListTest {
     @Rule
     public final IntentsTestRule<ShoppingListActivity> mActivityRule =
             new IntentsTestRule<>(ShoppingListActivity.class);
+
+    // disable product adding for these tests
+    @BeforeClass
+    public static void run_before() {
+        BarcodeToProductActivity.setProductAddingAllowed(false);
+    }
 
     @Test
     public void addClusterTest()

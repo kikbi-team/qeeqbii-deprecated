@@ -4,9 +4,11 @@ import android.support.test.rule.ActivityTestRule;
 import android.view.View;
 
 import org.junit.AfterClass;
+import org.junit.BeforeClass;
 import org.junit.Rule;
 import org.junit.Test;
 
+import ch.epfl.sweng.qeeqbii.activities.BarcodeToProductActivity;
 import ch.epfl.sweng.qeeqbii.chat.LoginActivity;
 import ch.epfl.sweng.qeeqbii.chat.RequestsFragment;
 
@@ -28,6 +30,12 @@ public class RequestFragmentTest {
        // View mview ;
         //RequestsFragment.RequestsViewHolder tmp = new RequestsFragment.RequestsViewHolder(mview);
 
+    }
+
+    // disable product adding for these tests
+    @BeforeClass
+    public static void run_before() {
+        BarcodeToProductActivity.setProductAddingAllowed(false);
     }
 
     @AfterClass

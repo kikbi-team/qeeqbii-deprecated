@@ -4,7 +4,10 @@ import android.content.Context;
 import android.support.test.InstrumentationRegistry;
 
 import org.junit.AfterClass;
+import org.junit.BeforeClass;
 import org.junit.Test;
+
+import ch.epfl.sweng.qeeqbii.activities.BarcodeToProductActivity;
 
 import static org.junit.Assert.assertEquals;
 
@@ -22,6 +25,11 @@ public class ChatTest {
         assertEquals("ch.epfl.sweng.qeeqbii", appContext.getPackageName());
     }
 
+    // disable product adding for these tests
+    @BeforeClass
+    public static void run_before() {
+        BarcodeToProductActivity.setProductAddingAllowed(false);
+    }
 
     @AfterClass
     public static void finish_all_activities() {

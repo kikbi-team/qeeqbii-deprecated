@@ -6,6 +6,7 @@ import android.support.test.runner.AndroidJUnit4;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.AfterClass;
+import org.junit.BeforeClass;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -46,14 +47,9 @@ public class OpenFoodQueryTest {
             new ActivityTestRule<>(BarcodeToProductActivity.class);
 
     // disable product adding for these tests
-    @Before
-    public void run_before() {
+    @BeforeClass
+    public static void run_before() {
         BarcodeToProductActivity.setProductAddingAllowed(false);
-    }
-
-    @After
-    public void run_after() {
-        BarcodeToProductActivity.setProductAddingAllowed(true);
     }
 
     @Test
