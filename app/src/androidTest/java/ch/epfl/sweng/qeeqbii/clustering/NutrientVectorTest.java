@@ -3,12 +3,14 @@ package ch.epfl.sweng.qeeqbii.clustering;
 import android.support.test.espresso.core.deps.guava.base.Strings;
 import android.support.test.rule.ActivityTestRule;
 
+import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
 
 import java.util.HashMap;
 
+import ch.epfl.sweng.qeeqbii.ActivityFinisher;
 import ch.epfl.sweng.qeeqbii.activities.BarcodeScannerActivity;
 import ch.epfl.sweng.qeeqbii.clustering.ClusterClassifier;
 import ch.epfl.sweng.qeeqbii.clustering.NutrientNameConverter;
@@ -243,5 +245,10 @@ public class NutrientVectorTest {
 
         assertEquals(copySelValue, selValue);
         assertEquals(copyGlucidesValue, glucidesValue);
+    }
+
+    @AfterClass
+    public static void finish_all_activities() {
+        ActivityFinisher.finishOpenActivities();
     }
 }

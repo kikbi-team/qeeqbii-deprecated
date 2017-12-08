@@ -2,9 +2,11 @@ package ch.epfl.sweng.qeeqbii.clustering;
 
 import android.support.test.rule.ActivityTestRule;
 
+import org.junit.AfterClass;
 import org.junit.Rule;
 import org.junit.Test;
 
+import ch.epfl.sweng.qeeqbii.ActivityFinisher;
 import ch.epfl.sweng.qeeqbii.activities.MainActivity;
 
 import static junit.framework.Assert.assertEquals;
@@ -35,7 +37,10 @@ public class ComparableClusterTest {
         assertEquals(cluster1.getDistance(), 1.0);
     }
 
-
+    @AfterClass
+    public static void finish_all_activities() {
+        ActivityFinisher.finishOpenActivities();
+    }
 
 
 }

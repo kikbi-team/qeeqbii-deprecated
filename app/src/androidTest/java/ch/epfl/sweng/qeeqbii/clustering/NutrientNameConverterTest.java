@@ -3,12 +3,14 @@ package ch.epfl.sweng.qeeqbii.clustering;
 import android.support.test.espresso.core.deps.guava.base.Strings;
 import android.support.test.rule.ActivityTestRule;
 
+import org.junit.AfterClass;
 import org.junit.Rule;
 import org.junit.Test;
 
 import java.util.HashSet;
 import java.util.Set;
 
+import ch.epfl.sweng.qeeqbii.ActivityFinisher;
 import ch.epfl.sweng.qeeqbii.activities.BarcodeScannerActivity;
 import ch.epfl.sweng.qeeqbii.activities.MainActivity;
 import ch.epfl.sweng.qeeqbii.custom_exceptions.IllegalNutrientKeyException;
@@ -112,5 +114,10 @@ public class NutrientNameConverterTest {
 
         assertEquals(setStandardNames.contains(standardName), true);
         assertEquals(setStandardNames.size(), 20);
+    }
+
+    @AfterClass
+    public static void finish_all_activities() {
+        ActivityFinisher.finishOpenActivities();
     }
 }
