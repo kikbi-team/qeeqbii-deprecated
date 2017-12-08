@@ -46,10 +46,10 @@ public class BarChartMonthlyFrag extends SimpleFragment implements OnChartGestur
     private BarChart mChart;
     private PieChart mChartPie;
 
-    private List<Float> mSalts;
-    private List<Float> mGlucides;
-    private List<Float> mFats;
-    private List<Float> mCalories;
+    private List<Float> mSalts = new ArrayList<>();
+    private List<Float> mGlucides = new ArrayList<>();
+    private List<Float> mFats = new ArrayList<>();
+    private List<Float> mCalories = new ArrayList<>();
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -103,24 +103,24 @@ public class BarChartMonthlyFrag extends SimpleFragment implements OnChartGestur
         List<BarEntry> entries = new ArrayList<>();
 
         //GIVES THE VALUES FOR THE GRAPHS
-        /*try {
+        try {
             fillLists();
         } catch (ProductException e) {
             e.printStackTrace();
-        }*/
+        }
 
         // FUTURE
-
-
+        /*
         entries.add(new BarEntry(0f, 30f));
         entries.add(new BarEntry(1f, 30f));
         entries.add(new BarEntry(2f, 30f));
         entries.add(new BarEntry(3f, 30f));
+        */
 
-        /*entries.add(new BarEntry(0f, sumList(mCalories)));
-        entries.add(new BarEntry(1f, sumList(mFats)));
-        entries.add(new BarEntry(2f, sumList(mGlucides)));
-        entries.add(new BarEntry(3f, sumList(mSalts)));*/
+        entries.add(new BarEntry(0f, sumList(mCalories)));
+        entries.add(new BarEntry(2f, sumList(mFats)));
+        entries.add(new BarEntry(4f, sumList(mGlucides)));
+        entries.add(new BarEntry(6f, sumList(mSalts)));
 
         BarDataSet set = new BarDataSet(entries, "Nutrients Intake over the last Month");
 
@@ -201,31 +201,47 @@ public class BarChartMonthlyFrag extends SimpleFragment implements OnChartGestur
         return s;
     }
 
+    //THE list cannot be empty
     private void fillLists() throws ProductException {
-        for (Product element : StatisticsActivity.m_items_month)
+        if(!StatisticsActivity.m_items_month.isEmpty())
         {
-            Map<String,Double> nutrients = element.getParsedNutrients();
+            for (Product element : StatisticsActivity.m_items_month)
+            {
+                Map<String,Double> nutrients = element.getParsedNutrients();
 
-            if (nutrients.containsKey("Énergie (kCal)"))
-            {
-                mCalories.add(nutrients.get("Énergie (kCal)").floatValue());
+                if (nutrients.containsKey("Énergie (kCal)"))
+                {
+                    mCalories.add(nutrients.get("Énergie (kCal)").floatValue());
+                }
+                if (nutrients.containsKey("Matières grasses (g)"))
+                {
+                    mFats.add(nutrients.get("Matières grasses (g)").floatValue());
+                }
+                if (nutrients.containsKey("Sucres (g)"))
+                {
+                    mGlucides.add(nutrients.get("Sucres (g)").floatValue());
+                }
+                if (nutrients.containsKey("Sel (g)")) {
+                    mSalts.add(nutrients.get("Sel (g)").floatValue());
+                }
             }
-            if (nutrients.containsKey("Matières grasses (g)"))
-            {
-                mFats.add(nutrients.get("Matières grasses (g)").floatValue());
-            }
-            if (nutrients.containsKey("Sucres (g)"))
-            {
-                mGlucides.add(nutrients.get("Sucres (g)").floatValue());
-            }
-            if (nutrients.containsKey("Sel (g)")) {
-                mSalts.add(nutrients.get("Sel (g)").floatValue());
-            }
+        }
+        else {
+            //In case the list is empty at the beginning by doing so we have not iterator on empyty list issue
+            //CHANGE TO ZERO AGAIN !!!
+            mSalts.add(3f);
+            mGlucides.add(8f);
+            mFats.add(4f);
+            mCalories.add(5f);
         }
     }
 
     //Returns the sum of all the elements in the list
     private Float sumList(List<Float> list) {
+        if (list.isEmpty()) {
+            return 0f;
+        }
+
         float sum = 0;
         for (float element : list) {
             sum += element;
