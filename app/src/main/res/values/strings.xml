@@ -217,5 +217,6 @@
     <string name="brand">Brand</string>
     <string name="view_add_process_button_text">Process</string>
     <string name="add_missing_product">Add missing product</string>
+    <string name="compare_products">Compare Products</string>
 
 </resources>

@@ -98,6 +98,12 @@ public class RecentlyScannedProductsActivity extends AppCompatActivity {
         return mAdapter;
     }
 
+    // go to product comparison onClick handler
+    public void productComparison(View view) {
+        Intent intent = new Intent(this, ProductComparisonActivity.class);
+        startActivity(intent);
+    }
+
     public boolean onOptionsItemSelected(MenuItem item) {
 
         return mToggle.onOptionsItemSelected(item) || super.onOptionsItemSelected(item);
@@ -105,6 +111,6 @@ public class RecentlyScannedProductsActivity extends AppCompatActivity {
 
     public void sliderGoToActivity(MenuItem item) {
         Slider slider = new Slider();
-        slider.goToActivity(item, getApplicationContext());
+        slider.goToActivity(item, this);
     }
 }

@@ -8,22 +8,21 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 
 import ch.epfl.sweng.qeeqbii.R;
-import ch.epfl.sweng.qeeqbii.activities.GraphsActivity;
+import ch.epfl.sweng.qeeqbii.activities.ProductComparisonActivity;
 
 /**
- * Created by antoine on 07/11/2017.
+ * Created by antoine on 08/12/2017.
  */
 
 @RunWith(AndroidJUnit4.class)
-public class GraphSliderTest {
+public class ProductsComparisonSliderTest {
 
     @Rule
-    public final ActivityTestRule<GraphsActivity> mActivityRule =
-            new ActivityTestRule<>(GraphsActivity.class);
+    public final ActivityTestRule<ProductComparisonActivity> mActivityRule =
+            new ActivityTestRule<>(ProductComparisonActivity.class);
 
-
-    private int layoutId = R.id.GraphsLayout;
-    private int navViewId = R.id.nav_view_graphs;
+    private int layoutId = R.id.ComparisonLayout;
+    private int navViewId = R.id.nav_view_comparison;
 
 
     @Test

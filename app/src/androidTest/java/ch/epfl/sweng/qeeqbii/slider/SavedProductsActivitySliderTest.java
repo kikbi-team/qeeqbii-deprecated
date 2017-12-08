@@ -1,14 +1,7 @@
 package ch.epfl.sweng.qeeqbii.slider;
 
-import android.app.Instrumentation;
-import android.support.test.InstrumentationRegistry;
-
-import android.support.test.espresso.contrib.DrawerActions;
-import android.support.test.espresso.contrib.NavigationViewActions;
 import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
-import android.view.Gravity;
-import android.view.MenuItem;
 
 import org.junit.Rule;
 import org.junit.Test;
@@ -82,5 +75,11 @@ public class SavedProductsActivitySliderTest {
     public void canGoToSavedProductsDate() {
         SliderTest sliderTest = new SliderTest();
         sliderTest.canGoToSavedProductsDate(layoutId, navViewId);
+    }
+
+    @Test
+    public void canGoToProductsComparisonActivity() {
+        SliderTest sliderTest = new SliderTest();
+        sliderTest.canGoToProductsComparisonActivity(layoutId, navViewId);
     }
 }

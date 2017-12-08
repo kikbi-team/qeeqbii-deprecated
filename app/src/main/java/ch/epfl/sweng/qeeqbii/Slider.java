@@ -9,11 +9,10 @@ import ch.epfl.sweng.qeeqbii.activities.CancerDataQueryActivity;
 import ch.epfl.sweng.qeeqbii.activities.CancerDataShowActivity;
 import ch.epfl.sweng.qeeqbii.activities.GraphsActivity;
 import ch.epfl.sweng.qeeqbii.activities.MainActivity;
+import ch.epfl.sweng.qeeqbii.activities.ProductComparisonActivity;
 import ch.epfl.sweng.qeeqbii.activities.RecentlyScannedProductsActivity;
 import ch.epfl.sweng.qeeqbii.activities.SavedProductsDatesActivity;
-import ch.epfl.sweng.qeeqbii.activities.SavedProductsListActivity;
 import ch.epfl.sweng.qeeqbii.activities.ShoppingListActivity;
-import ch.epfl.sweng.qeeqbii.chat.ChatActivity;
 import ch.epfl.sweng.qeeqbii.activities.StatisticsActivity;
 import ch.epfl.sweng.qeeqbii.chat.MainActivityChat;
 
@@ -65,6 +64,9 @@ public class Slider  {
             Intent intent = new Intent(context, StatisticsActivity.class);
             context.startActivity(intent);
         }
-
+        else if (item.getItemId() == R.id.nav_comparison) {
+            Intent intent = new Intent(context, ProductComparisonActivity.class);
+            context.startActivity(intent);
+        }
     }
 }

@@ -59,4 +59,10 @@
         android:onClick="sliderGoToActivity"
         android:icon="@drawable/ic_timeline_black_24dp"
         android:title="@string/statistics" />
+
+    <item
+        android:id="@+id/nav_comparison"
+        android:onClick="sliderGoToActivity"
+        android:icon="@drawable/ic_timeline_black_24dp"
+        android:title="@string/compare_products" />
 </menu>

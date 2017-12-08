@@ -1,7 +1,8 @@
 package ch.epfl.sweng.qeeqbii.open_food;
 
 
-import android.support.test.rule.ActivityTestRule;
+import android.content.ComponentName;
+import android.support.test.espresso.intent.rule.IntentsTestRule;
 import android.support.test.runner.AndroidJUnit4;
 import android.widget.ArrayAdapter;
 
@@ -9,13 +10,16 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
-import java.util.ArrayList;
-
 import ch.epfl.sweng.qeeqbii.R;
+import ch.epfl.sweng.qeeqbii.activities.ProductComparisonActivity;
 import ch.epfl.sweng.qeeqbii.activities.RecentlyScannedProductsActivity;
 
+import static android.support.test.InstrumentationRegistry.getTargetContext;
 import static android.support.test.espresso.Espresso.onView;
 import static android.support.test.espresso.action.ViewActions.click;
+import static android.support.test.espresso.intent.Intents.intended;
+import static android.support.test.espresso.intent.VerificationModes.times;
+import static android.support.test.espresso.intent.matcher.IntentMatchers.hasComponent;
 import static android.support.test.espresso.matcher.ViewMatchers.withId;
 import static org.junit.Assert.assertEquals;
 
@@ -24,8 +28,8 @@ import static org.junit.Assert.assertEquals;
 public class RecentlyScannedProductsActivityTest {
 
     @Rule
-    public final ActivityTestRule<RecentlyScannedProductsActivity> mActivityRule =
-            new ActivityTestRule<>(RecentlyScannedProductsActivity.class);
+    public final IntentsTestRule<RecentlyScannedProductsActivity> mActivityRule =
+            new IntentsTestRule<>(RecentlyScannedProductsActivity.class);
 
     @Test
     public void canUseDeleteButton() {
@@ -37,8 +41,10 @@ public class RecentlyScannedProductsActivityTest {
     }
 
 
-
-
-
-
+    @Test
+    public void testCanGoFromRecentlyScanned() {
+        // press the comparison button
+        onView(withId(R.id.productComparisonButtonOnRecentlyScanned)).perform(click());
+        intended(hasComponent(new ComponentName(getTargetContext(), ProductComparisonActivity.class)), times(1));
+    }
 }
