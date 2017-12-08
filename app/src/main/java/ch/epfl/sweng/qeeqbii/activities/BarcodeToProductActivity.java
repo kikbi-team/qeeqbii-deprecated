@@ -135,6 +135,6 @@ public class BarcodeToProductActivity extends AppCompatActivity {
 
     public void sliderGoToActivity(MenuItem item) {
         Slider slider = new Slider();
-        slider.goToActivity(item, getApplicationContext());
+        slider.goToActivity(item, this);
     }
 }
