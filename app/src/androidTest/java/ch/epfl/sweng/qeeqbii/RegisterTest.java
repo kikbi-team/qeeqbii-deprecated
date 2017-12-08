@@ -1,8 +1,9 @@
 package ch.epfl.sweng.qeeqbii;
 
-import android.app.ProgressDialog;
+import android.support.test.espresso.Espresso;
 import android.support.test.espresso.ViewInteraction;
 import android.support.test.rule.ActivityTestRule;
+import java.util.UUID;
 
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
@@ -36,12 +37,18 @@ public class RegisterTest {
         BarcodeToProductActivity.setProductAddingAllowed(false);
     }
 
+
+    @AfterClass
+    public static void finish_all_activities() {
+        ActivityFinisher.finishOpenActivities();
+    }
+
     @Test
-    public void login(){
+    public void login() {
 
         String name = "UserTest";
-        String email = "user" + randomInt() + "@example.com";
-        String password = "password" + randomInt();
+        String email = "user" + randomString() + "@example.com";
+        String password = "password" + randomString();
 
         //Enter Name
         enterName(name);
@@ -51,32 +58,13 @@ public class RegisterTest {
         enterPassword(password);
 
         // Click sign in
-        ViewInteraction appCompatButton =onView(withId(R.id.reg_create_btn));
+        ViewInteraction appCompatButton = onView(withId(R.id.reg_create_btn));
         appCompatButton.perform(click());
 
         // Force closing the progressDialog box in order to start new activity
-        ProgressDialog progressDialog = mActivityRule.getActivity().getmRegProgress();
-        if (progressDialog!=null)
-        {
-            if (progressDialog.isShowing())
-            {
-                progressDialog.dismiss();
-            }
-        }
-
-        // Wait that BarcodeScanner activity starts (it takes a little bit of time since all the CSV files are read
-        // when this activity is launched for the first time
-        while (!BarcodeScannerActivity.isRunning()) {
-            try {
-                Thread.sleep(100);
-            }
-            catch(InterruptedException e) {
-                System.err.println(e.getMessage());
-            }
-        }
+        mActivityRule.getActivity().dismissProgressDialog();
 
     }
-
 
     private void enterName(String name) {
         ViewInteraction nameField = onView(withId(R.id.register_name));
@@ -92,13 +80,9 @@ public class RegisterTest {
         ViewInteraction passwordField = onView((withId(R.id.register_password)));
         passwordField.perform(replaceText(password));
     }
-    private String randomInt() {
-        return String.valueOf(((new Random()).nextInt(100000)));
-    }
 
-    @AfterClass
-    public static void finish_all_activities() {
-        ActivityFinisher.finishOpenActivities();
+    private String randomString() {
+        return UUID.randomUUID().toString();
     }
 }
 
