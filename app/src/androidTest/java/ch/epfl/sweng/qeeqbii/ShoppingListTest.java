@@ -119,7 +119,7 @@ public class ShoppingListTest {
         onView(withText(ClusterTypeSecondLevel.CONFITURES_PORTIONS_DE_MIEL.toString())).check(doesNotExist());
         onView(withText(ClusterTypeSecondLevel.BOISSONS_ENERGETIQUES.toString())).check(doesNotExist());
         onView(withText(ClusterTypeSecondLevel.CONFITURES.toString())).check(doesNotExist());
-        onView(withText(ClusterTypeSecondLevel.SIROPS_SODAS.toString())).check(doesNotExist());
+        onView(withText(ClusterTypeSecondLevel.SIROP_SODA.toString())).check(doesNotExist());
 
         onView(withId(R.id.deleteButton)).perform(click());
     }
