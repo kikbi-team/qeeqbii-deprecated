@@ -145,8 +145,6 @@
             android:name=".chat.ChatActivity"
             android:parentActivityName=".chat.MainActivityChat"
             android:theme="@style/AppTheme.NoActionBar"></activity>
-
-
         <activity
             android:name=".chat.GoogleSignInActivity"
             android:label="@string/label_google_sign_in" />
