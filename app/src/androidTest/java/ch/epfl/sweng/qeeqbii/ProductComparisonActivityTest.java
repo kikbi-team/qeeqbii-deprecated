@@ -6,6 +6,8 @@ package ch.epfl.sweng.qeeqbii;
 
 import android.app.Activity;
 import android.content.ComponentName;
+import android.content.Context;
+import android.support.test.InstrumentationRegistry;
 import android.support.test.espresso.action.ViewActions;
 import android.support.test.espresso.intent.rule.IntentsTestRule;
 import android.support.test.runner.AndroidJUnit4;
@@ -16,9 +18,11 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
+import org.junit.FixMethodOrder;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.junit.runners.MethodSorters;
 
 import java.util.Collection;
 
@@ -52,6 +56,7 @@ import static org.junit.Assert.assertTrue;
 
 
 @RunWith(AndroidJUnit4.class)
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class ProductComparisonActivityTest {
 
     @Rule
@@ -64,11 +69,16 @@ public class ProductComparisonActivityTest {
         BarcodeToProductActivity.setProductAddingAllowed(false);
     }
 
+    private String getResourceString(int id) {
+        Context targetContext = InstrumentationRegistry.getTargetContext();
+        return targetContext.getResources().getString(id);
+    }
+
     @Test
-    public void testCanShowInsufficientProducts() {
+    public void t01_testCanShowInsufficientProducts() {
         RecentlyScannedProducts.clear();
-        onView(withId(R.id.product_name_1)).check(matches(withText(R.string.name_1)));
-        onView(withId(R.id.product_name_2)).check(matches(withText(R.string.name_2)));
+        onView(withId(R.id.product_name_1)).check(matches(withText(getResourceString(R.string.name_1))));
+        onView(withId(R.id.product_name_2)).check(matches(withText(getResourceString(R.string.name_2))));
         ListView ls = (ListView) mActivityRule.getActivity().findViewById(R.id.graphs);
         assertTrue(ls.getCount() == 0);
     }
@@ -89,7 +99,7 @@ public class ProductComparisonActivityTest {
     }
 
     @Test
-    public void testCanCompareProducts() {
+    public void t02_testCanCompareProducts() {
         RecentlyScannedProducts.clear();
 
         onView(withId(R.id.scan_button)).perform(click());
