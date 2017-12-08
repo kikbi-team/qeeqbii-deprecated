@@ -4,6 +4,7 @@ import android.app.ProgressDialog;
 import android.support.test.espresso.ViewInteraction;
 import android.support.test.rule.ActivityTestRule;
 
+import org.junit.AfterClass;
 import org.junit.Rule;
 import org.junit.Test;
 
@@ -84,6 +85,11 @@ public class RegisterTest {
     }
     private String randomInt() {
         return String.valueOf(((new Random()).nextInt(100000)));
+    }
+
+    @AfterClass
+    public static void finish_all_activities() {
+        ActivityFinisher.finishOpenActivities();
     }
 }
 

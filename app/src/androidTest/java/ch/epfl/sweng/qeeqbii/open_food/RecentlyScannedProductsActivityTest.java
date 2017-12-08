@@ -6,10 +6,12 @@ import android.support.test.espresso.intent.rule.IntentsTestRule;
 import android.support.test.runner.AndroidJUnit4;
 import android.widget.ArrayAdapter;
 
+import org.junit.AfterClass;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
+import ch.epfl.sweng.qeeqbii.ActivityFinisher;
 import ch.epfl.sweng.qeeqbii.R;
 import ch.epfl.sweng.qeeqbii.activities.ProductComparisonActivity;
 import ch.epfl.sweng.qeeqbii.activities.RecentlyScannedProductsActivity;
@@ -46,5 +48,10 @@ public class RecentlyScannedProductsActivityTest {
         // press the comparison button
         onView(withId(R.id.productComparisonButtonOnRecentlyScanned)).perform(click());
         intended(hasComponent(new ComponentName(getTargetContext(), ProductComparisonActivity.class)), times(1));
+    }
+
+    @AfterClass
+    public static void finish_all_activities() {
+        ActivityFinisher.finishOpenActivities();
     }
 }

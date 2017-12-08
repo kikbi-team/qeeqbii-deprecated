@@ -3,6 +3,7 @@ package ch.epfl.sweng.qeeqbii.open_food;
 import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
 
+import org.junit.AfterClass;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -10,6 +11,7 @@ import org.junit.runner.RunWith;
 import java.util.Map;
 import java.util.concurrent.CountDownLatch;
 
+import ch.epfl.sweng.qeeqbii.ActivityFinisher;
 import ch.epfl.sweng.qeeqbii.activities.BarcodeToProductActivity;
 import ch.epfl.sweng.qeeqbii.open_food.OpenFoodQuery;
 import ch.epfl.sweng.qeeqbii.open_food.Product;
@@ -142,5 +144,10 @@ public class OpenFoodQueryTest {
         } else {
             fail("barcode should be cached");
         }
+    }
+
+    @AfterClass
+    public static void finish_all_activities() {
+        ActivityFinisher.finishOpenActivities();
     }
 }
