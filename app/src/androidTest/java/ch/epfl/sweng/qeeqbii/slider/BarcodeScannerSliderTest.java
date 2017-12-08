@@ -1,9 +1,7 @@
 package ch.epfl.sweng.qeeqbii.slider;
 
-import android.app.Instrumentation;
 import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
-import android.view.MenuItem;
 
 import org.junit.Rule;
 import org.junit.Test;
@@ -11,17 +9,6 @@ import org.junit.runner.RunWith;
 
 import ch.epfl.sweng.qeeqbii.R;
 import ch.epfl.sweng.qeeqbii.activities.BarcodeScannerActivity;
-import ch.epfl.sweng.qeeqbii.activities.CancerDataQueryActivity;
-import ch.epfl.sweng.qeeqbii.activities.CancerDataShowActivity;
-import ch.epfl.sweng.qeeqbii.activities.GraphsActivity;
-import ch.epfl.sweng.qeeqbii.activities.MainActivity;
-import ch.epfl.sweng.qeeqbii.activities.SavedProductsDatesActivity;
-import ch.epfl.sweng.qeeqbii.activities.ShoppingListActivity;
-import ch.epfl.sweng.qeeqbii.chat.MainActivityChat;
-import ch.epfl.sweng.qeeqbii.activities.StatisticsActivity;
-
-import static android.support.test.InstrumentationRegistry.getInstrumentation;
-import static junit.framework.Assert.assertNotNull;
 
 /**
  * Created by antoine on 07/11/2017.
@@ -91,5 +78,11 @@ public class BarcodeScannerSliderTest {
     public void canGoToSavedProductsDate() {
         SliderTest sliderTest = new SliderTest();
         sliderTest.canGoToSavedProductsDate(layoutId, navViewId);
+    }
+
+    @Test
+    public void canGoToProductsComparisonActivity() {
+        SliderTest sliderTest = new SliderTest();
+        sliderTest.canGoToProductsComparisonActivity(layoutId, navViewId);
     }
 }
