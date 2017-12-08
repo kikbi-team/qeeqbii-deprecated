@@ -3,6 +3,7 @@ package ch.epfl.sweng.qeeqbii;
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
 
+import org.junit.AfterClass;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -22,5 +23,8 @@ public class ChatTest {
     }
 
 
-
+    @AfterClass
+    public static void finish_all_activities() {
+        ActivityFinisher.finishOpenActivities();
+    }
 }

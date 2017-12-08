@@ -3,6 +3,7 @@ package ch.epfl.sweng.qeeqbii;
 import android.support.test.espresso.intent.rule.IntentsTestRule;
 import android.support.test.runner.AndroidJUnit4;
 
+import org.junit.AfterClass;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -86,5 +87,8 @@ public class ShoppingListTest {
         onView(withText(ClusterTypeSecondLevel.SIROP_SODA.toString())).check(doesNotExist());
     }
 
-
+    @AfterClass
+    public static void finish_all_activities() {
+        ActivityFinisher.finishOpenActivities();
+    }
 }

@@ -2,6 +2,7 @@ package ch.epfl.sweng.qeeqbii;
 
 import android.content.Context;
 
+import org.junit.AfterClass;
 import org.junit.Test;
 
 import static ch.epfl.sweng.qeeqbii.chat.GetTimeAgo.getTimeAgo;
@@ -23,4 +24,8 @@ public class GetTimeAgoTest {
         assertEquals(test,"17508 days ago");
     }
 
+    @AfterClass
+    public static void finish_all_activities() {
+        ActivityFinisher.finishOpenActivities();
+    }
 }

@@ -3,6 +3,7 @@ package ch.epfl.sweng.qeeqbii;
 import android.support.test.rule.ActivityTestRule;
 import android.view.View;
 
+import org.junit.AfterClass;
 import org.junit.Rule;
 import org.junit.Test;
 
@@ -27,5 +28,10 @@ public class RequestFragmentTest {
        // View mview ;
         //RequestsFragment.RequestsViewHolder tmp = new RequestsFragment.RequestsViewHolder(mview);
 
+    }
+
+    @AfterClass
+    public static void finish_all_activities() {
+        ActivityFinisher.finishOpenActivities();
     }
 }

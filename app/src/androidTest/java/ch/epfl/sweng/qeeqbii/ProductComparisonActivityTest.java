@@ -14,6 +14,7 @@ import android.widget.ListView;
 
 import org.junit.After;
 import org.junit.Before;
+import org.junit.AfterClass;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -135,5 +136,10 @@ public class ProductComparisonActivityTest {
         onView(withId(R.id.scan_button)).check(matches(isDisplayed()));
 
 //        assertTrue(ls.getAdapter().getCount() > 0);
+    }
+
+    @AfterClass
+    public static void finish_all_activities() {
+        ActivityFinisher.finishOpenActivities();
     }
 }
