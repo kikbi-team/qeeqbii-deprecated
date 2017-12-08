@@ -13,9 +13,8 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
-import ch.epfl.sweng.qeeqbii.shopping_cart.ShoppingCartStatistics;
+import ch.epfl.sweng.qeeqbii.activities.StatisticsActivity;
 
-import static android.support.test.espresso.Espresso.onView;
 import static android.support.test.espresso.action.ViewActions.click;
 import static android.support.test.espresso.matcher.ViewMatchers.withId;
 import static junit.framework.Assert.assertNotNull;
@@ -26,8 +25,8 @@ import static org.junit.Assert.assertEquals;
 public class ShoppingCartStatitisticsTest {
 
     @Rule
-    public final ActivityTestRule<ShoppingCartStatistics> mActivityRule =
-            new ActivityTestRule<>(ShoppingCartStatistics.class);
+    public final ActivityTestRule<StatisticsActivity> mActivityRule =
+            new ActivityTestRule<>(StatisticsActivity.class);
 
     /*@Test
     public void testCanOpenMonthButton() throws InterruptedException {
@@ -37,24 +36,24 @@ public class ShoppingCartStatitisticsTest {
     @Test
     public void CountTest() throws InterruptedException {
         FragmentManager fm = mActivityRule.getActivity().getSupportFragmentManager();
-        ShoppingCartStatistics.SectionsPagerAdapter section;
-        section = new ShoppingCartStatistics.SectionsPagerAdapter(fm);
+        StatisticsActivity.SectionsPagerAdapter section;
+        section = new StatisticsActivity.SectionsPagerAdapter(fm);
         assertEquals(section.getCount(), 3);
     }
 
     @Test
     public void getPageTitleTest() throws InterruptedException {
         FragmentManager fm = mActivityRule.getActivity().getSupportFragmentManager();
-        ShoppingCartStatistics.SectionsPagerAdapter section;
-        section = new ShoppingCartStatistics.SectionsPagerAdapter(fm);
+        StatisticsActivity.SectionsPagerAdapter section;
+        section = new StatisticsActivity.SectionsPagerAdapter(fm);
         assertNotNull(section.getPageTitle(2));
     }
 
     @Test
     public void getPageTitleNullTest() throws InterruptedException {
         FragmentManager fm = mActivityRule.getActivity().getSupportFragmentManager();
-        ShoppingCartStatistics.SectionsPagerAdapter section;
-        section = new ShoppingCartStatistics.SectionsPagerAdapter(fm);
+        StatisticsActivity.SectionsPagerAdapter section;
+        section = new StatisticsActivity.SectionsPagerAdapter(fm);
         assertNull(section.getPageTitle(4));
     }
 }

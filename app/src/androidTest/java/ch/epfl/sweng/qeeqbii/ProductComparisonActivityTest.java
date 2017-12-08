@@ -101,12 +101,14 @@ public class ProductComparisonActivityTest {
         intended(hasComponent(new ComponentName(getTargetContext(), BarcodeScannerActivity.class)), times(1));
         ((BarcodeScannerActivity) getActivityInstance()).goToMain();
 
+        /*
         try {
             sleep(5000);
         } catch (Exception e)
         {
 
         }
+        */
 
         // go to product comparison
         onView(withId(R.id.productComparisonButton)).perform(click());

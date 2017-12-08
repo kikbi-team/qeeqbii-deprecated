@@ -27,10 +27,15 @@ import java.io.IOException;
 import java.text.ParseException;
 
 import ch.epfl.sweng.qeeqbii.R;
+import ch.epfl.sweng.qeeqbii.Slider;
+import ch.epfl.sweng.qeeqbii.cancer.CancerDataBase;
+import ch.epfl.sweng.qeeqbii.clustering.ClusterClassifier;
+import ch.epfl.sweng.qeeqbii.clustering.NutrientNameConverter;
+import ch.epfl.sweng.qeeqbii.custom_exceptions.BadlyFormatedFile;
+import ch.epfl.sweng.qeeqbii.custom_exceptions.NotOpenFileException;
 import ch.epfl.sweng.qeeqbii.chat.MainActivityChat;
 import ch.epfl.sweng.qeeqbii.chat.StartActivity;
 import ch.epfl.sweng.qeeqbii.open_food.SavedProductsDatabase;
-import ch.epfl.sweng.qeeqbii.shopping_cart.ShoppingCartStatistics;
 import me.dm7.barcodescanner.zxing.ZXingScannerView;
 
 import static android.content.ContentValues.TAG;
@@ -74,6 +79,8 @@ public class BarcodeScannerActivity extends AppCompatActivity implements ZXingSc
     private ActionBarDrawerToggle mToggle;
     private FirebaseAuth mAuth;
     private DatabaseReference mUserRef;
+
+    private static boolean active = false;
 
     // on activity creation
     // ask permissions and launch barcode reader
@@ -129,6 +136,12 @@ public class BarcodeScannerActivity extends AppCompatActivity implements ZXingSc
         } else {
             action = ACTION_DEFAULT;
         }
+
+
+        // Reading files that are needed in the rest of the app
+        this.readCSVFiles();
+
+
 
         Log.d("STATE", "EXTRA_ACTION is " + action);
     }
@@ -234,61 +247,58 @@ public class BarcodeScannerActivity extends AppCompatActivity implements ZXingSc
         return super.onKeyDown(keyCode, event);
     }
 
+
+
+    // slider actions below
+    public void readCSVFiles() {
+        if (!NutrientNameConverter.isRead()) {
+            NutrientNameConverter.readCSVFile(getApplicationContext());
+        }
+
+
+        if (!ClusterClassifier.isRead()) {
+            try {
+                ClusterClassifier.readClusterNutrientCentersFile(getApplicationContext());
+            }
+            catch (NotOpenFileException|BadlyFormatedFile e) {
+                System.err.println(e.getMessage());
+            }
+        }
+
+        if (!CancerDataBase.isRead()) {
+            CancerDataBase.readCSVFile(getApplicationContext());
+        }
+    }
+
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        active = true;
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        active = false;
+    }
+
+
+    public static boolean isRunning() {
+        return active;
+    }
+
+
+
+
     public boolean onOptionsItemSelected(MenuItem item) {
 
         return mToggle.onOptionsItemSelected(item) || super.onOptionsItemSelected(item);
     }
 
-
-    public void cancerDataBaseShow(MenuItem item) {
-        Intent intent = new Intent(this, CancerDataShowActivity.class);
-        startActivity(intent);
+    public void sliderGoToActivity(MenuItem item) {
+        Slider slider = new Slider();
+        slider.goToActivity(item, this);
     }
 
-
-    public void readBarcode(MenuItem item) {
-        Intent intent = new Intent(this, BarcodeScannerActivity.class);
-        startActivity(intent);
-    }
-
-
-    public void showShoppingList(MenuItem view) {
-        Intent intent = new Intent(this, ShoppingListActivity.class);
-        startActivity(intent);
-    }
-
-    public void showGraphs(MenuItem item) {
-        Intent intent = new Intent(this, GraphsActivity.class);
-        startActivity(intent);
-    }
-
-    public void cancerDataQuery(MenuItem item) {
-        Intent intent = new Intent(this, CancerDataQueryActivity.class);
-        startActivity(intent);
-    }
-
-    public void showRecentlyScannedProductsActivity(MenuItem item) {
-        Intent intent = new Intent(this, RecentlyScannedProductsActivity.class);
-        startActivity(intent);
-    }
-
-    public void backToMain(MenuItem item) {
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
-    }
-
-    public void showSavedProducts(MenuItem item) {
-        Intent intent = new Intent(this, SavedProductsDatesActivity.class);
-        startActivity(intent);
-    }
-
-    public void showStatistics(MenuItem item) {
-        Intent intent = new Intent(this, ShoppingCartStatistics.class);
-        startActivity(intent);
-    }
-
-    public void showChat(MenuItem item) {
-        Intent intent = new Intent(this, MainActivityChat.class);
-        startActivity(intent);
-    }
 }
