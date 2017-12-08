@@ -20,7 +20,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 77,Butterli BISCUITS AU BEURRE,7617400030044,/chocolat/biscuits-gaufres,1970.0,0.4,9.0,21.0,73.0,15.0,0.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 86,ORIGINAL Zwieback Mini,7617400036596,/boulangerie/biscottes-pain-croustillant,1750.0,11.0,11.0,15.0,73.0,8.0,0.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 88,M-Budget Fromage à pâte molle,7610200401366,/produits-laitiers-oeufs/fromages,1390.0,1.0,18.0,0.6,0.6,29.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-92,Petit pain de Sils,7613312087053,To classify,943.0,1.8,2.0,0.9,50.0,0.5,0.0,6.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+92,Petit pain de Sils,7613312087053,TO_CLASSIFY,943.0,1.8,2.0,0.9,50.0,0.5,0.0,6.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 94,YOU LOW CARB CRUNCHY ,7613312147115,/mueesli-cereales/cereales,2439.0,0.05,13.0,18.0,23.0,47.0,14.0,11.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 98,ALTANATURA Dinkel Vollkorn Mehl Bioland,4104420140684,/boulangerie/farine,1440.0,0.02,12.3,1.0,62.4,2.7,0.0,8.8,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 104,M Classic Pikant Sauce š Salade Sans Huile,7613269181644,/garnitures-ingredients/soupes-sauces-bouillon,50.0,4.3,0.9,0.5,0.8,0.6,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -97,7 +97,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 444,Patissier Orangeat en cubes,76102097,/boulangerie/ingredients-de-boulangerie,1350.0,0.0,0.5,0.0,78.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 446,Midor Varietà,7617400032406,/boulangerie/ingredients-de-boulangerie,1989.0,0.35,11.0,51.0,69.0,17.0,15.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 448,M Classic Italian Dressing,7613269268116,/garnitures-ingredients/soupes-sauces-bouillon,590.0,1.9,0.5,7.0,8.0,12.0,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-453,Alnatura Marzipan Nougat,42247104,To classify,2108.0,0.03,6.8,47.0,49.0,30.0,0.0,4.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+453,Alnatura Marzipan Nougat,42247104,TO_CLASSIFY,2108.0,0.03,6.8,47.0,49.0,30.0,0.0,4.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 457,M Budget CHOCOLAT NOIR,7613269195504,/chocolat/chocolat,2180.0,0.01,5.0,54.0,57.0,29.0,0.0,7.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 463,Homemade : Cupcakes : Vanille-Choco,7617400020847,/boulangerie/ingredients-de-boulangerie,1520.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 469,Rivella Kalorienarm Das original in light,7610097112079,/boissons-chaudes-froides/boissons-sucrees,30.0,0.03,0.0,0.5,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -110,7 +110,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 496,Edamame Suisse,7613312048429,/produits-surgeles/legumes-pommes-de-terre,582.0,0.02,11.0,2.0,10.0,5.0,0.0,5.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 498,Alnatura Rote Bete Saft,4104420070202,/boissons-chaudes-froides/jus-de-fruits-de-legumes,155.0,0.01,1.1,7.5,8.0,0.5,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 500,Knorr Bouillon de Légumes,76111488,/garnitures-ingredients/soupes-sauces-bouillon,25.0,1.1,0.5,0.5,0.5,0.5,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-508,Alnatura Bio Tomatensauce Bolognese Mit Rind- und Schweinefleisch,4104420028562,To classify,356.0,1.6,5.8,8.0,9.2,2.5,0.0,1.1,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+508,Alnatura Bio Tomatensauce Bolognese Mit Rind- und Schweinefleisch,4104420028562,TO_CLASSIFY,356.0,1.6,5.8,8.0,9.2,2.5,0.0,1.1,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 511,Cantadou Ail \u0026 Herbes de Provence ,3073780410830,/produits-laitiers-oeufs/fromages,1350.0,1.1,6.5,3.0,3.0,32.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 517,Midor Delta-Jet Glace à l'eau à l'arôme d'ananas et d'orange,7617400040531,/produits-surgeles/glace-entremets,451.0,0.0,0.5,19.0,22.0,2.0,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 522,Mélange de légumes brunoise,7613312035290,/produits-surgeles/legumes-pommes-de-terre,137.0,0.13,1.5,4.0,4.0,0.5,0.0,4.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -162,8 +162,8 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 697,Kellogg's Star Wars ,5053827155700,/mueesli-cereales/cereales,1612.0,0.78,9.0,29.0,78.0,2.5,0.0,5.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 699,M Classic Magdalenas Citron,7610200294395,/chocolat/biscuits-gaufres,1799.0,0.75,5.0,28.0,59.0,19.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 706,PHILADELPHIA Balance,7622400896170,/produits-laitiers-oeufs/fromages,336.0,0.8,11.0,5.9,5.9,2.5,0.0,0.4,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-719,Alnatura Mandel Mus weiss Purée d'amande - blanche,4104420181113,To classify,2734.0,0.01,26.0,4.5,5.0,58.0,4.4,7.6,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-721,Alnatura Purée d'amande- blanche bio,4104420034624,To classify,2772.0,0.01,22.0,3.7,3.7,61.0,0.0,8.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+719,Alnatura Mandel Mus weiss Purée d'amande - blanche,4104420181113,TO_CLASSIFY,2734.0,0.01,26.0,4.5,5.0,58.0,4.4,7.6,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+721,Alnatura Purée d'amande- blanche bio,4104420034624,TO_CLASSIFY,2772.0,0.01,22.0,3.7,3.7,61.0,0.0,8.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 725,Migros Bio Spaghettini A la semoule complète,7616700033052,/garnitures-ingredients/pates,1456.0,0.03,12.0,2.5,66.0,2.0,0.0,7.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 727,MIGROS Nougat de Montélimar,7617027055567,/chocolat/chocolat,1878.0,0.03,8.0,59.0,66.0,16.0,0.0,3.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 730,Knorr - Mix pour Escalopes forestières,7611100100588,/garnitures-ingredients/soupes-sauces-bouillon,368.0,0.55,14.0,1.1,3.0,2.0,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -172,7 +172,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 740,M-Budget Jus d'orange,7616800908656,/boissons-chaudes-froides/jus-de-fruits-de-legumes,170.0,0.03,0.0,9.0,10.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,30.0,0.0,0.0,0.0,0.0,0.0
 748,Migros Ice Tea Peach,7613269283195,/boissons-chaudes-froides/the-glace,118.0,0.01,0.5,7.0,7.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 756,Favorit Les intenses,7613312086476,/petit-dejeuner/confitures,788.0,0.07,0.9,41.0,43.0,0.5,0.0,4.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-765,M-Budget 4 Burger de boeuf,7617027979726,To classify,750.0,1.3,19.0,1.0,1.0,11.0,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+765,M-Budget 4 Burger de boeuf,7617027979726,TO_CLASSIFY,750.0,1.3,19.0,1.0,1.0,11.0,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 767,Tradition PETIT GÂTEAU aux CAROTTES,7617400038842,/chocolat/biscuits-gaufres,1907.0,0.26,10.0,31.0,50.0,23.0,5.0,4.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 769,RIO mare Tonno al Naturale,8004030341562,/garnitures-ingredients/poisson-en-conserve,97.0,1.3,23.0,0.0,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 774,ALNATURA Käse Gebäck ,4104420054882,/aperitif/biscuits-aperitifs,2.23,2.5,12.9,0.6,43.9,33.2,0.0,3.9,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -185,16 +185,16 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 798,Frey TRUFFES BLANCHES,7616500645851,/chocolat/chocolat,2310.0,0.21,5.0,45.0,47.0,38.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 803,Patissier Massepain,7613312011133,/boulangerie/ingredients-de-boulangerie,1931.0,0.0,6.0,61.0,67.0,18.0,0.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 809,Larry's Raspberry Lemon,7613269295655,/chocolat/bonbons-chewing-gum,993.0,0.0,0.0,0.5,98.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-824,Alnatura Tortelloni Dinkel Ricotta Spinat,4104420135864,To classify,1297.0,0.5,11.5,2.9,50.4,5.9,0.0,3.4,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+824,Alnatura Tortelloni Dinkel Ricotta Spinat,4104420135864,TO_CLASSIFY,1297.0,0.5,11.5,2.9,50.4,5.9,0.0,3.4,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 830,Migros Lilibiggs Galecres au maïs,7613269003434,/boulangerie/biscottes-pain-croustillant,1627.0,0.3,6.0,0.5,89.0,1.4,0.0,1.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 833,M Classic Mayonnaise Classic,7616600380102,/garnitures-ingredients/soupes-sauces-bouillon,3010.0,1.0,1.5,0.5,0.5,80.5,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 839,MIGROS BIO Orange Yogurt ,7613269696759,/produits-laitiers-oeufs/yogourt,420.0,0.1,3.5,14.0,14.0,3.2,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-841,Migros Léger VIANDE HACHEE,7617100217752,To classify,550.0,0.0,21.0,1.0,1.0,5.0,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+841,Migros Léger VIANDE HACHEE,7617100217752,TO_CLASSIFY,550.0,0.0,21.0,1.0,1.0,5.0,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 843,FARMER : Soft Choc : Orange,7613269185734,/mueesli-cereales/barres-de-cereales,1900.0,0.4,8.0,44.0,61.0,19.0,0.0,4.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 856,Farmer Plus Cranberry - Protéine,7613312093320,/mueesli-cereales/barres-de-cereales,1873.0,0.53,22.0,29.0,44.0,19.0,0.0,6.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 862,Cornets Vanille \u0026 Chocolat,7617400048322,/produits-surgeles/glace-entremets,1063.0,0.28,3.0,28.0,39.0,9.0,0.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 866,Fruttolino Frucht-Riegel,5707653001075,/mueesli-cereales/barres-de-cereales,1400.0,0.0,2.5,59.0,66.0,4.5,0.0,8.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-868,ALNATURA Spirelli à l'épeautre,4104420137202,To classify,1513.0,0.01,12.0,2.7,72.0,1.7,0.0,2.8,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+868,ALNATURA Spirelli à l'épeautre,4104420137202,TO_CLASSIFY,1513.0,0.01,12.0,2.7,72.0,1.7,0.0,2.8,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 872,Sun Queen Premium Nuts Mélange de noix au curry,7613312069950,/aperitif/noix-grillees,2610.0,1.1,12.0,6.0,17.0,56.0,0.0,6.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 874,Migros Subito Chili con carne,7616800835860,/plats-cuisines/plats-cuisines,543.0,1.0,6.0,2.0,11.0,6.0,0.0,4.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 882,M Budget Saucisse À Rôtir De Volaille,7617027959308,/viande/produits-de-charcuterie,910.0,2.0,13.0,1.0,1.5,18.0,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -222,7 +222,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 1006,Oasis,3595801901146,/boissons-chaudes-froides/jus-de-fruits-de-legumes,94.0,0.04,0.0,5.3,5.3,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 1007,Crunchy avoine,4104420017764,/mueesli-cereales/cereales,1877.0,0.39,9.5,18.0,63.0,16.0,0.0,6.6,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 1011,M Budget FROMAGE FRAIS,7617027160803,/produits-laitiers-oeufs/fromages,901.0,1.1,4.5,4.0,4.5,20.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-1017,Alantura Bio Raviolis Aux légumes Sauce Tomate,4104420020481,To classify,369.0,1.3,2.3,4.0,17.0,0.7,0.0,1.9,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+1017,Alantura Bio Raviolis Aux légumes Sauce Tomate,4104420020481,TO_CLASSIFY,369.0,1.3,2.3,4.0,17.0,0.7,0.0,1.9,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 1033,M Classic Mini petits pains au beurre,7613269553311,/boulangerie/petits-pains,1407.0,1.4,10.0,3.0,52.0,9.0,0.0,2.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 1035,Nestlé Stalden vanille,7610100024665,/boulangerie/ingredients-de-boulangerie,508.0,0.16,3.4,15.0,17.1,4.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 1039,Pelican Filets de pangasius,7613269303954,/produits-surgeles/poisson-fruits-de-mer,390.0,0.25,17.0,0.5,1.0,2.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -278,7 +278,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 1278,Alnatura Poêlée de légumes,4104420173088,/produits-surgeles/legumes-pommes-de-terre,180.0,0.88,2.0,4.7,5.4,1.0,0.0,2.2,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 1291,M-Budget Sugar Corn Flakes enrobés de sucre,7613269333791,/mueesli-cereales/cereales,1554.0,1.5,6.0,25.0,85.0,0.5,0.0,3.5,40.0,0.9,0.0,165.0,0.0,0.0,0.0,1.2,0.0,13.0,1.2,2.1
 1293,M Classic Plat de champignons,7616800833293,/garnitures-ingredients/champignons-olives-en-conserve,365.0,1.1,2.0,0.5,3.5,7.0,0.0,1.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-1297,EL MUNDO GLOBAL CUISINE RATATOUILLE GRILLED STYLE PERU,7613312081242,To classify,224.0,1.2,1.0,4.5,6.0,2.5,0.0,1.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+1297,EL MUNDO GLOBAL CUISINE RATATOUILLE GRILLED STYLE PERU,7613312081242,TO_CLASSIFY,224.0,1.2,1.0,4.5,6.0,2.5,0.0,1.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 1305,Farm Chips Rosmarin,7613312042540,/aperitif/chips,2153.0,1.2,6.0,5.0,53.0,30.0,2.0,5.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 1307,Bon Chef Mix Pour Gratin,7613269299479,/garnitures-ingredients/soupes-sauces-bouillon,1480.0,16.0,7.0,2.0,63.0,7.0,0.0,4.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 1315,MIGROS BIO Délices de pain d'épice,4006780009673,/chocolat/jours-de-fetes-evenements,1934.0,0.15,9.0,38.0,57.0,20.0,3.0,9.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -346,7 +346,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 1610,Ananas-Orange sanguine,7613269260714,/plats-cuisines/pizza-menus-snacks,213.0,0.03,0.5,10.0,12.0,0.0,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 1613,Al Natura  BIO Apéro Dragons Paprika,4104420134829,/aperitif/biscuits-aperitifs,1877.0,3.4,12.0,7.2,64.0,15.0,0.0,3.7,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 1616,Crispy poulet,7610200074515,/produits-surgeles/viande,868.0,1.3,13.0,1.0,18.0,9.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-1621,Alnatura Cashew Nougatine aux noix de cajou,42215165,To classify,2088.0,0.02,14.0,21.0,47.0,28.0,0.0,1.9,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+1621,Alnatura Cashew Nougatine aux noix de cajou,42215165,TO_CLASSIFY,2088.0,0.02,14.0,21.0,47.0,28.0,0.0,1.9,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 1625,Jumpy's Paprika Snack de pommes de terre au goût de paprika,7610200237576,/aperitif/snacks,2030.0,2.8,6.0,2.0,60.0,24.0,0.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 1635,Globi Ice tea décafféiné,7613269283324,/boissons-chaudes-froides/the-glace,118.0,0.02,0.0,0.0,7.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 1639,Alnatura Selection Chocolat au lait entier bio avec des éclats de caramel,4104420055445,/chocolat/chocolat,2357.0,0.24,7.2,50.5,52.6,35.9,0.0,1.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -383,7 +383,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 1783,M-Classic Cola,7617500197098,/boissons-chaudes-froides/sirop-soda,60.0,0.0,0.0,3.5,3.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 1787,M Budget : Préparation de fromage fondu,7617027941570,/produits-laitiers-oeufs/fromages,1137.0,3.5,15.0,4.0,4.0,22.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 1789,Migros Bio Demi-Crème Acidulée,22138040,/produits-laitiers-oeufs/creme,674.0,0.0,3.0,4.0,4.0,15.0,9.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-1792,ALTANATURA Spaghettis à l'épeautre Bioland,4104420063426,To classify,1538.0,0.03,13.0,0.5,71.0,2.1,0.0,4.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+1792,ALTANATURA Spaghettis à l'épeautre Bioland,4104420063426,TO_CLASSIFY,1538.0,0.03,13.0,0.5,71.0,2.1,0.0,4.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 1797,Bon Chef Sauce au vin blanc,7613269299332,/garnitures-ingredients/soupes-sauces-bouillon,400.0,0.97,1.0,1.5,7.0,7.0,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 1810,Cuisses inférieurs de poulets,7613269292364,/produits-surgeles/viande,720.0,0.0,18.0,1.0,1.0,11.0,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 1814,M Classic Quinches Lorraines 4 pièces,7616700007718,/produits-surgeles/aperitif-dessert,1110.0,1.1,9.0,4.0,19.0,17.0,7.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -493,13 +493,13 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 2356,Happy Hour Mini carrés,7613269373797,/produits-surgeles/aperitif-dessert,1145.0,1.3,6.0,3.5,28.0,15.0,0.0,1.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 2358,M Budget Demi-Poires au sirop,7610200182029,/garnitures-ingredients/fruits-en-conserve,270.0,0.0,0.5,15.0,15.0,0.5,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 2360,Migros Ice Tea Strawberry-Kiwi,7613312048894,/boissons-chaudes-froides/the-glace,113.0,0.02,0.0,6.0,7.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,12.0,0.0,0.0,0.0,0.0,0.0
-2371,MIGROS : SUBITO : Polenta Fixfertig,7613269353836,To classify,368.0,0.83,2.0,0.0,17.0,1.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+2371,MIGROS : SUBITO : Polenta Fixfertig,7613269353836,TO_CLASSIFY,368.0,0.83,2.0,0.0,17.0,1.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 2373,Alnatura Jus de pomme et de cassis avec de l'eau gazeuse,4104420134928,/boissons-chaudes-froides/jus-de-fruits-de-legumes,92.0,0.01,0.5,5.3,5.4,0.5,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 2378,boursin fromage à  l'ail \u0026 fines herbes,3175460000017,/produits-laitiers-oeufs/fromages,1667.0,1.3,8.0,2.5,3.0,40.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 2389,Midor Petits Macarons à la Noix de Coco,7617400030105,/chocolat/biscuits-gaufres,1840.0,0.1,4.0,49.0,55.0,22.0,0.0,2.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 2403,Crème glacée Fraise,76174100,/produits-surgeles/glace-entremets,1120.0,0.13,3.5,25.0,25.0,17.0,13.0,0.8,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 2405,Anna's Best Vegi Indian Snacks ,7613269696346,/plats-cuisines/pizza-menus-snacks,867.0,1.4,5.0,7.0,25.0,9.0,0.7,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-2407,Alnatura Popcorn Mais,4104420010765,To classify,1457.0,0.02,8.7,1.4,64.2,3.8,0.0,9.7,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+2407,Alnatura Popcorn Mais,4104420010765,TO_CLASSIFY,1457.0,0.02,8.7,1.4,64.2,3.8,0.0,9.7,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 2412,Aha Muffin au chocolat ,7613269583479,/boulangerie/boulangerie-patisserie,1897.0,0.6,4.0,33.0,52.0,25.0,3.5,2.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 2414,Migros Léger Macédoine de fruits,7617027140676,/garnitures-ingredients/fruits-en-conserve,230.0,0.0,0.5,0.0,12.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 2426,Mimare Filets de sardines à l'huile d'olive,7613269360612,/garnitures-ingredients/poisson-en-conserve,1610.0,0.2,18.0,0.5,0.5,35.0,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -520,7 +520,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 2485,M Classic Flips Snack au maïs et aux arachides,7617027788663,/aperitif/snacks,2041.0,1.9,14.0,2.0,51.0,24.0,0.0,6.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 2490,ANDROS Les Compotes Abricot,3608580707233,/plats-cuisines/pizza-menus-snacks,406.0,0.0,0.7,22.0,22.0,0.2,0.0,1.6,0.0,0.0,0.0,0.0,0.0,0.0,12.0,0.0,0.0,0.0,0.0,0.0
 2494,Cidre doux,7616800821603,/boissons-chaudes-froides/jus-de-fruits-de-legumes,231.0,0.0,0.0,13.0,13.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-2507,Twin Chai Tea Latte,7617014166955,To classify,220.0,0.08,2.0,8.0,9.0,0.9,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+2507,Twin Chai Tea Latte,7617014166955,TO_CLASSIFY,220.0,0.08,2.0,8.0,9.0,0.9,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 2509,M Classic Compote de pommes,7616800150208,/garnitures-ingredients/fruits-en-conserve,340.0,0.0,0.5,18.0,19.0,0.5,0.0,1.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 2514,MIDOR : Crème Quick au chocolat,7617400020069,/boulangerie/ingredients-de-boulangerie,503.0,0.0,3.0,16.0,18.0,3.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 2516,Sandwich avec des tomates et de la mozzarella,7613269250647,/plats-cuisines/pizza-menus-snacks,839.0,1.7,8.0,3.0,23.0,8.0,0.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -554,7 +554,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 2635,Salbisan Pastilles pour la gorge,7610167690117,/chocolat/bonbons-chewing-gum,950.0,0.1,10.0,0.5,72.0,0.5,0.0,7.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 2640,Saitaku Simply Japanese Sushi Ginger,5060194790731,/garnitures-ingredients/du-monde-entier,40.0,2.0,0.2,0.0,1.3,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 2644,ALTANATURA Tofu fumé ,4104420094864,/garnitures-ingredients/garnitures-bio,688.0,0.5,18.0,0.6,0.6,9.6,0.0,2.1,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-2658,Alnatura Bio Fine Fleur,4104420024441,To classify,1275.0,0.01,0.0,75.0,75.0,0.5,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+2658,Alnatura Bio Fine Fleur,4104420024441,TO_CLASSIFY,1275.0,0.01,0.0,75.0,75.0,0.5,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 2664,Léger fromage de brebis,3482010000473,/produits-laitiers-oeufs/fromages,675.0,2.8,19.0,0.9,0.9,9.0,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 2666,ALTANATURA Sauce soja Shoyu,4104420031722,/garnitures-ingredients/du-monde-entier,370.0,15.9,11.0,2.4,9.9,0.1,0.0,1.8,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 2670,Mozzarelline,7613269406648,/produits-laitiers-oeufs/fromages,1010.0,0.4,19.0,1.5,1.5,18.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -677,7 +677,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 3240,Frey Truffes au marc de Champagne,7616500639911,/chocolat/chocolat,2220.0,0.15,4.5,44.0,46.0,35.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 3245,Andros les Compotes,3608580004813,/plats-cuisines/pizza-menus-snacks,318.0,0.0,0.4,17.0,17.0,0.02,0.0,1.8,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 3256,Migros Bio Cipollata,7613269132271,/viande/produits-de-charcuterie,980.0,1.8,13.0,1.0,1.0,20.0,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-3258,Alnatura Streichcreme Toskana,4104420037946,To classify,1583.0,1.3,5.8,4.0,5.6,37.0,0.0,2.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+3258,Alnatura Streichcreme Toskana,4104420037946,TO_CLASSIFY,1583.0,1.3,5.8,4.0,5.6,37.0,0.0,2.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 3262,Pain d'épice fourré aux amandes,7616700026627,/boulangerie/boulangerie-patisserie,1550.0,0.1,8.0,2.0,65.0,8.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 3264,Migros Costa Crevettes Butterfly ,4008467055065,/produits-surgeles/poisson-fruits-de-mer,1177.0,1.3,8.0,0.5,17.0,20.0,0.0,1.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 3275,Migros Couronne de Sils,7616700017878,/boulangerie/pains,11.57,1.9,10.0,3.5,49.0,3.5,0.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -712,7 +712,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 3403,M-Classic Concentré de tomates,7616800250106,/garnitures-ingredients/tomates-en-conserve,482.0,1.1,6.0,19.0,19.0,1.0,0.0,2.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 3412,Bonherba Bonbons aux herbes,7610167616636,/chocolat/bonbons-chewing-gum,970.0,0.0,0.0,0.5,97.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 3419,Bur Gusto Lasagne Fiorentina Pasta all'uovo con ripieno dl spinaci e ricotta,7613312020647,/produits-surgeles/plats-cuisines,590.0,0.9,6.0,2.0,13.0,7.0,0.0,1.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-3432,Alnatura Vollkorn Farfalle Pâtes de blé complet,4104420013629,To classify,1462.0,0.03,12.2,3.0,66.9,1.7,0.0,6.8,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+3432,Alnatura Vollkorn Farfalle Pâtes de blé complet,4104420013629,TO_CLASSIFY,1462.0,0.03,12.2,3.0,66.9,1.7,0.0,6.8,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 3437,Croquettes torsadées,7616800460284,/produits-surgeles/legumes-pommes-de-terre,919.0,0.88,5.0,1.5,22.0,12.0,0.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 3443,Scotland Saumon fume,7617027744591,/poisson-fruits-de-mer/traiteur,700.0,2.8,23.0,0.5,1.0,8.0,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 3452,Mclassic Fruit fun pomme,7613312132265,/boissons-chaudes-froides/jus-de-fruits-de-legumes,60.0,0.0,0.5,3.5,3.0,0.5,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -727,7 +727,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 3500,Malbuner Party sticks original,7610200279682,/viande/viande-sechee-jambon,2064.0,5.1,35.0,1.0,1.5,39.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 3502,Muesli aux grains anciens,4104420131187,/mueesli-cereales/cereales,1576.0,0.04,12.0,14.0,58.0,8.6,0.0,8.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 3511,Creme D'or Classic Cappuccino \u0026 Chocolate,7617400034592,/produits-surgeles/glace-entremets,1010.0,0.0,0.0,20.0,23.0,14.0,0.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-3513,Alnatura Miel de fleurs,4104420024403,To classify,1284.0,0.1,0.4,75.1,75.1,0.1,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+3513,Alnatura Miel de fleurs,4104420024403,TO_CLASSIFY,1284.0,0.1,0.4,75.1,75.1,0.1,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 3520,Blévita  Sandwich Yogourt/baies de bois,7617400038903,/chocolat/blevita,1968.0,1.1,11.0,14.0,55.0,22.0,0.0,4.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 3529,M Budget Pommes de terre prêtés à rôtir,7616800905884,/garnitures-ingredients/pommes-de-terre-spaetzli,530.0,0.78,2.0,0.5,15.0,6.0,0.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 3538,M Budget ICE TEA LEMON,7613269190738,/boissons-chaudes-froides/the-glace,100.0,0.01,0.5,6.0,6.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -737,7 +737,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 3558,Migros Sélection Tourte De Linz,7613269179832,/boulangerie/boulangerie-patisserie,1840.0,0.1,6.0,23.0,64.0,17.0,0.0,2.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 3566,Anna's Best Jambon d'épaule lard salami,7613269250302,/plats-cuisines/pizza-menus-snacks,1154.0,1.7,10.0,3.5,33.0,11.0,0.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 3568,M-Classic Haricots verts séchés,7610200026729,/garnitures-ingredients/legumineuses-haricots-verts-seches,1200.0,0.3,26.0,13.0,22.0,3.0,0.0,24.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-3573,Al Natura Nouilles sautées au curry Thaï,4104420145085,To classify,817.0,1.2,5.4,1.4,28.0,6.4,0.0,1.6,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+3573,Al Natura Nouilles sautées au curry Thaï,4104420145085,TO_CLASSIFY,817.0,1.2,5.4,1.4,28.0,6.4,0.0,1.6,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 3582,Skai (Air boost),7616500913479,/chocolat/bonbons-chewing-gum,730.0,0.02,0.4,0.1,69.0,0.0,0.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 3585,Dextrose : Multi-Vitamin,42214670,/chocolat/bonbons-chewing-gum,1558.0,0.1,0.0,80.0,89.0,1.0,0.0,0.0,50.0,1.1,12.0,0.0,0.0,0.0,80.0,1.4,6.0,16.0,1.4,2.5
 3591,M Classic Moules,7613269304234,/garnitures-ingredients/poisson-en-conserve,382.0,1.8,15.0,1.0,2.0,2.5,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -760,7 +760,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 3653,Pelican Crevetten Tail-on,7613269304012,/produits-surgeles/poisson-fruits-de-mer,479.0,0.95,15.0,0.5,1.0,5.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 3668,MIGROS BIO Amandes,7613312156957,/boulangerie/ingredients-de-boulangerie,2413.0,0.0,21.0,4.5,6.0,50.0,4.0,13.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 3670,Cup Lovers Zimt Cake Cannelle,7613312138328,/boulangerie/ingredients-de-boulangerie,1337.0,1.0,6.0,29.0,48.0,11.0,3.5,1.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-3672,MIGROS SÉLECTION PRALINÉS AUX VERMICELLES,7613312094686,To classify,1931.0,0.18,4.5,48.0,52.0,26.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+3672,MIGROS SÉLECTION PRALINÉS AUX VERMICELLES,7613312094686,TO_CLASSIFY,1931.0,0.18,4.5,48.0,52.0,26.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 3674,Blévita au sésame,7617400033717,/chocolat/blevita,1940.0,1.5,13.0,3.0,50.0,21.0,0.0,12.0,0.0,0.4,0.0,80.0,0.0,0.0,0.0,0.6,0.0,6.4,0.6,0.0
 3678,Heinz Tomato Ketchup Bio,8715700407760,/garnitures-ingredients/divers,476.0,1.7,1.4,24.8,25.3,0.1,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 3683,Migros Bio Amandes,7613312022771,/boulangerie/ingredients-de-boulangerie,2420.0,0.1,21.0,4.0,9.0,49.0,0.0,12.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -798,7 +798,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 3878,M-Budget Gnocchis de pommes de terre ,7617027626804,/plats-cuisines/pizza-menus-snacks,695.0,0.85,3.5,0.5,36.0,0.5,0.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 3880,Pastelli,7616700004236,/boulangerie/pains-longue-conservation,2122.0,1.8,8.0,1.5,46.0,32.0,14.0,2.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 3887,Zweifel Snacketti Paprika Shells,7610095147004,/aperitif/snacks,1930.0,2.6,5.0,6.0,70.0,17.0,1.5,3.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-3895,ALTANATURA A la Toscane,4104420031081,To classify,118.0,0.7,1.1,3.5,4.2,0.2,0.0,2.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+3895,ALTANATURA A la Toscane,4104420031081,TO_CLASSIFY,118.0,0.7,1.1,3.5,4.2,0.2,0.0,2.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 3899,M Classic French Dressing aux herbes Au mélange équilibré de trois herbes,7613269268055,/garnitures-ingredients/soupes-sauces-bouillon,940.0,1.8,1.0,1.5,2.0,24.0,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 3901,Dulci Pica - Bonbons gelés fourrés au goût de fraise,8413178007092,/chocolat/divers,1643.0,0.18,1.4,68.0,86.0,3.9,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 3916,Délice dinde,7613269293262,/produits-surgeles/viande,1036.0,1.3,15.0,2.0,15.0,14.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -825,10 +825,10 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 4037,Zweifel JouJoux Chips Paprika,7610095085009,/aperitif/chips,2270.0,1.2,6.0,9.0,51.0,34.0,0.0,5.0,0.0,0.0,8.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 4040,Gomz Frites Acidulées,7613269336754,/chocolat/bonbons-chewing-gum,1402.0,0.03,5.0,64.0,77.0,0.5,0.5,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 4052,Petits pois extrafins,7610200266569,/produits-surgeles/legumes-pommes-de-terre,278.0,0.03,4.0,1.0,10.0,0.0,0.0,5.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-4055,Alnatura Passata,4104420031562,To classify,93.0,0.4,1.3,3.4,3.4,0.2,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+4055,Alnatura Passata,4104420031562,TO_CLASSIFY,93.0,0.4,1.3,3.4,3.4,0.2,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 4059,Fruit Ice Préparation aux fruits surgelée,7613312073926,/produits-surgeles/glace-entremets,264.0,0.0,0.6,14.0,14.0,0.5,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 4061,Ponti Aceto balsamico de modena,80723103,/garnitures-ingredients/ingredients-de-cuisson,529.0,0.05,0.2,26.0,26.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-4067,M Budget Beurre Pour Grillades,7613269429937,To classify,2440.0,3.3,1.5,1.5,9.0,61.0,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+4067,M Budget Beurre Pour Grillades,7613269429937,TO_CLASSIFY,2440.0,3.3,1.5,1.5,9.0,61.0,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 4069,Holunder au sureau PASTILLES POUR LA GORGE,7610167649115,/chocolat/bonbons-chewing-gum,1450.0,0.1,9.0,46.0,70.0,0.5,0.0,7.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 4071,Trident senses tropical mix,8416400196755,/chocolat/bonbons-chewing-gum,719.0,0.1,0.5,56.5,57.0,3.1,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 4075,Biscuits aux amandes,7617027788717,/chocolat/specialites,1816.0,0.06,12.0,25.0,55.0,17.0,0.0,6.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -901,8 +901,8 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 4414,Migros Bio Deliziosa Panzerotti Prosciutto,7613312043288,/produits-surgeles/pizza,858.0,1.3,8.0,7.0,35.0,3.0,0.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 4418,ALEXIS MEGARITIKI HUILE D'OLIVE GRECQUE,7613312080863,/garnitures-ingredients/ingredients-de-cuisson,3370.0,0.0,0.0,0.0,0.0,91.0,0.0,0.0,0.0,0.0,12.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 4422,Pâte à gâteau brisée,7616700186376,/boulangerie/ingredients-de-boulangerie,1589.0,0.8,7.0,2.5,42.0,20.0,0.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-4424,Alnatura Purée de cacahuète,4104420181144,To classify,2562.0,0.0,29.0,6.2,12.0,49.0,10.0,6.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-4426,Alnatura Purée de cacahuète,4104420021228,To classify,2497.0,0.01,29.0,6.2,12.0,49.0,0.0,6.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+4424,Alnatura Purée de cacahuète,4104420181144,TO_CLASSIFY,2562.0,0.0,29.0,6.2,12.0,49.0,10.0,6.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+4426,Alnatura Purée de cacahuète,4104420021228,TO_CLASSIFY,2497.0,0.01,29.0,6.2,12.0,49.0,0.0,6.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 4440,Aufstrich Argeta Pikant*,3838471007504,/garnitures-ingredients/du-monde-entier,1291.0,1.3,10.0,0.8,2.8,29.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 4457,Emmi Caffé Latte Espresso Extra Shot,7610900074440,/produits-laitiers-oeufs/lait-boissons-lactees,200.0,0.2,1.5,9.0,9.0,0.7,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 4467,Sanissa  Margarine au beurre,7610200398307,/produits-laitiers-oeufs/margarine,2960.0,0.5,0.5,0.5,0.5,80.0,0.0,0.0,0.0,0.0,7.2,0.0,240.0,1.5,0.0,0.0,0.0,0.0,0.0,0.0
@@ -918,7 +918,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 4522,BubbleBear Sugar-Free BUBBLE GUM,5201295120434,/chocolat/bonbons-chewing-gum,664.0,0.0,0.0,0.1,63.0,0.8,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 4524,4006780001813,4006780001813,/chocolat/jours-de-fetes-evenements,1860.0,0.18,8.0,40.0,51.0,21.0,0.0,10.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 4537,ALNATURA Eau de bouleau Fleur de sureau,4104420178892,/boissons-chaudes-froides/eau-aromatisee,12.0,0.01,0.5,0.7,0.7,0.5,0.1,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-4540,Alnatura Ragoût de pois chiches à la noix de coco,4104420142282,To classify,359.0,1.2,2.8,2.5,11.0,2.8,0.0,2.6,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+4540,Alnatura Ragoût de pois chiches à la noix de coco,4104420142282,TO_CLASSIFY,359.0,1.2,2.8,2.5,11.0,2.8,0.0,2.6,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 4551,MIGROS BIO Saumon fumé en tranches,7617027744638,/poisson-fruits-de-mer/traiteur,670.0,2.7,22.0,1.0,1.0,8.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 4556,Migros Patissier Glaçage foncé,7616500270954,/boulangerie/ingredients-de-boulangerie,2370.0,0.01,4.0,46.0,48.0,39.0,0.0,5.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 4571,M Budget Salami,7617027948999,/viande/salami-lard,1760.0,4.0,23.0,0.5,1.0,36.0,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -954,7 +954,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 4736,Kellogg's Smacks,5050083582066,/mueesli-cereales/cereales,1618.0,0.08,6.0,43.0,84.0,1.5,0.0,4.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 4743,Alnatura Galettes de riz au miel,4104420057326,/boulangerie/biscottes-pain-croustillant,1624.0,0.01,6.8,19.0,82.0,2.5,0.0,2.7,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 4747,Migros Terrasuisse Jambon paysan,7617027723206,/viande/viande-sechee-jambon,460.0,1.7,20.0,1.0,1.0,9.0,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-4751,Migros Lasagne,7613312066522,To classify,1524.0,0.0,7.0,0.5,80.0,1.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+4751,Migros Lasagne,7613312066522,TO_CLASSIFY,1524.0,0.0,7.0,0.5,80.0,1.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 4759,Muesli de base,4104420019706,/mueesli-cereales/cereales,1592.0,0.05,13.2,1.8,53.9,9.7,0.0,11.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 4763,Migros Bio Huile d'olive Grecque,7610200323712,/garnitures-ingredients/ingredients-de-cuisson,3370.0,0.0,0.0,0.0,0.0,91.0,0.0,0.0,0.0,0.0,12.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 4765,Mclassic Pommes frites,7613269180302,/produits-surgeles/legumes-pommes-de-terre,613.0,0.0,2.0,0.5,22.0,5.0,0.0,2.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -978,7 +978,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 4859,Pasta  ABC,7610145407560,/garnitures-ingredients/soupes-sauces-bouillon,1511.0,0.53,15.0,2.5,67.0,2.5,0.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 4863,Migros toast avec concombres et tomates,7617027873352,/plats-cuisines/pizza-menus-snacks,667.0,0.73,4.0,2.0,21.0,6.0,0.0,2.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 4865,Midor Mini Torsades aux Noisettes,7617400031720,/chocolat/biscuits-gaufres,2000.0,0.2,8.0,29.0,56.0,24.0,0.0,2.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-4872,Alnatura Pois chiches,4104420034167,To classify,532.0,0.35,7.1,0.4,15.0,2.7,0.0,7.1,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+4872,Alnatura Pois chiches,4104420034167,TO_CLASSIFY,532.0,0.35,7.1,0.4,15.0,2.7,0.0,7.1,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 4876,THOMY Gratin pommes de terre,7610100055669,/garnitures-ingredients/soupes-sauces-bouillon,778.0,1.4,4.5,1.6,5.9,16.2,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 4880,Migros Cake aux carottes de Mamie,7613269580942,/boulangerie/boulangerie-patisserie,1393.0,0.6,5.0,25.0,39.0,17.0,1.5,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 4882,MIGROS BIO Biscuits d'avoine,7617027876476,/chocolat/sain-bio,2042.0,1.3,7.0,34.0,66.0,21.0,0.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -996,7 +996,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 4939,Patissier Massepain,7616500902312,/boulangerie/ingredients-de-boulangerie,1890.0,0.0,10.0,49.0,49.0,23.0,2.0,5.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 4941,Podravka Rindersuppe Mit Nudeln,3850104003134,/garnitures-ingredients/du-monde-entier,1492.0,15.9,12.0,4.4,54.0,10.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 4943,Knorr Sauce de rôti liée,7611100177047,/garnitures-ingredients/soupes-sauces-bouillon,315.0,1.3,1.1,1.3,4.2,6.0,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-4950,Knorr : Risotto : Tomato,7611100350877,To classify,511.0,0.48,2.6,2.1,26.0,0.6,0.0,0.9,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+4950,Knorr : Risotto : Tomato,7611100350877,TO_CLASSIFY,511.0,0.48,2.6,2.1,26.0,0.6,0.0,0.9,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 4955,Pancho Villa Tortilla Chips Guacamole,8410076480927,/garnitures-ingredients/du-monde-entier,2045.0,1.5,6.0,1.0,65.0,22.0,0.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 4959,aproz O2 Kiwi-fruit de la passion,7613312071601,/boissons-chaudes-froides/eau-aromatisee,68.0,0.0,0.0,4.0,4.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 4961,Léger - Swiss Fit,7617027577724,/produits-laitiers-oeufs/fromages,650.0,2.5,18.0,4.5,5.0,7.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -1047,7 +1047,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 5172,Nissin Soba Nouilles Sautées,5997523324278,/garnitures-ingredients/du-monde-entier,810.0,1.2,4.4,3.2,24.7,8.1,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 5174,7610200016287,7610200016287,/viande/salami-lard,2010.0,3.4,26.0,1.0,1.0,42.0,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 5181,Anna's Best : Saladbwol Rustico : French Dressing,7613269552307,/plats-cuisines/pizza-menus-snacks,837.0,1.1,6.0,1.0,1.5,19.0,0.0,0.8,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-5190,Alnatura Bio Quitte-Birne Fruchtmark mit Banane,4104420132160,To classify,254.0,0.01,0.6,10.3,11.6,0.4,0.0,4.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+5190,Alnatura Bio Quitte-Birne Fruchtmark mit Banane,4104420132160,TO_CLASSIFY,254.0,0.01,0.6,10.3,11.6,0.4,0.0,4.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 5196,Migros Bio Aha Boisson au riz Calcium,7613269274025,/produits-laitiers-oeufs/lait-boissons-lactees,236.0,0.1,0.5,8.0,11.0,1.0,0.0,0.7,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 5198,Bischofszell ICE TEA citron,76168352,/boissons-chaudes-froides/the-glace,140.0,0.02,0.0,8.0,8.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 5204,Ailes de poulet épicées,7617023005108,/produits-surgeles/viande,720.0,1.4,18.0,1.0,1.0,11.0,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -1086,7 +1086,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 5350,Moitiés de pruneaux non sucrés,7610200069016,/produits-surgeles/fruits,198.0,0.0,0.5,9.0,9.0,0.5,0.0,2.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 5357,Farmer : Soft Choc : Brownie,7613269300328,/mueesli-cereales/barres-de-cereales,1940.0,0.45,6.0,35.0,63.0,20.0,0.0,4.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 5361,ALNATURA Jus de légumes 67 % jus de tomate PUR JUS,4104420072862,/boissons-chaudes-froides/jus-de-fruits-de-legumes,80.0,0.65,0.9,3.3,3.5,0.5,0.0,0.6,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-5369,Migros Sélection Miel de pin Grec,7613312061077,To classify,1421.0,0.03,0.5,82.0,82.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+5369,Migros Sélection Miel de pin Grec,7613312061077,TO_CLASSIFY,1421.0,0.03,0.5,82.0,82.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 5375,Migros Bio Chocolat Yogourt au lait de berbis,7617027140720,/produits-laitiers-oeufs/yogourt,500.0,0.12,4.5,12.0,13.0,5.4,3.3,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 5381,Bon Chef Boulettes de viande et vermicelles,7613269297314,/garnitures-ingredients/soupes-sauces-bouillon,110.0,0.89,1.0,0.7,4.0,0.5,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 5389,M Classic Noisettes moulues,7610200184528,/boulangerie/ingredients-de-boulangerie,2710.0,0.1,15.0,4.5,7.0,61.0,0.0,10.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -1131,7 +1131,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 5596,MIGROS BIO Joghurt drink  Mango Sanddorn,7617027971782,/produits-laitiers-oeufs/yogourt,334.0,0.11,2.3,13.8,14.7,1.2,0.0,0.2,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 5601,Homemade : Cake au Citron,7617400020151,/boulangerie/ingredients-de-boulangerie,1620.0,0.63,5.0,32.0,55.0,16.0,0.0,1.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 5605,Creme d'or Classic Crème glacée avec petits morceaux de nois et sirop d'érable,7617400044003,/produits-surgeles/glace-entremets,980.0,0.1,4.5,24.0,27.0,11.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-5610,Alnatura Barre à l'amarante,4104420144149,To classify,2020.0,0.06,7.7,33.0,50.0,26.0,0.0,9.6,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+5610,Alnatura Barre à l'amarante,4104420144149,TO_CLASSIFY,2020.0,0.06,7.7,33.0,50.0,26.0,0.0,9.6,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 5616,Nautilus Figures de Pommes de Terre,7616800834610,/produits-surgeles/legumes-pommes-de-terre,892.0,1.0,4.0,2.5,26.0,10.0,0.0,1.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 5625,Bifidus Drink Mangue,7616600711111,/produits-laitiers-oeufs/lait-boissons-lactees,300.0,0.1,2.5,12.0,12.0,1.5,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 5632,You Joghurt To Go Fraise,7613269833970,/produits-laitiers-oeufs/yogourt,380.0,0.1,3.5,12.0,12.0,3.0,1.9,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -1144,7 +1144,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 5672,Pelican Moules vertes de Nouvelle-Zélande- demi-moules,7613269301776,/produits-surgeles/poisson-fruits-de-mer,416.0,0.79,16.0,0.5,3.0,2.5,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 5676,Légumes au beurre épicé,7617027016056,/produits-surgeles/legumes-pommes-de-terre,429.0,0.64,2.5,2.5,8.0,6.0,0.0,3.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 5678,Sarasay Orange-Banane-Maracuja,7616800836416,/boissons-chaudes-froides/jus-de-fruits-de-legumes,210.0,0.03,0.5,12.0,12.0,0.0,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-5679,Alnatura Crème à tartiner,4104420038080,To classify,1595.0,1.2,6.9,4.2,5.2,37.0,0.0,2.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+5679,Alnatura Crème à tartiner,4104420038080,TO_CLASSIFY,1595.0,1.2,6.9,4.2,5.2,37.0,0.0,2.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 5682,Chop Stick Shirataki Vermicelles de Farine de Konjak,7613312040157,/garnitures-ingredients/du-monde-entier,36.0,0.04,0.5,0.5,0.5,0.5,0.0,4.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 5687,Gomz fraises,7613269293736,/chocolat/divers,1385.0,0.08,2.4,51.0,80.0,0.1,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 5691,Gauffres viennoises,7613269457886,/boulangerie/boulangerie-patisserie,1770.0,0.3,6.0,35.0,62.0,16.0,0.0,2.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -1164,7 +1164,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 5779,SUN QUEEN MELANGE RANDONNEE,7610200062413,/boulangerie/ingredients-de-boulangerie,1919.0,0.03,8.0,39.0,52.0,23.0,2.0,6.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 5781,Migros Bio Salsa di pomodoro Arrabbiata,7616800835778,/garnitures-ingredients/soupes-sauces-bouillon,335.0,1.2,2.0,7.0,10.0,3.0,0.0,2.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 5789,CHAVROUX PUR CHÈVRE,3272770003148,/produits-laitiers-oeufs/fromages,715.0,1.0,8.7,2.6,4.0,13.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-5793,Alnatura Sesam Öl nativ,4104420132047,To classify,3441.0,0.01,0.5,0.5,0.5,93.0,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+5793,Alnatura Sesam Öl nativ,4104420132047,TO_CLASSIFY,3441.0,0.01,0.5,0.5,0.5,93.0,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 5799,M Budget Yaourt sucre avec framboises- de matieres grasses dans la partie lactique,7613269540120,/produits-laitiers-oeufs/yogourt,380.0,0.1,3.0,13.0,13.0,2.9,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 5806,Migros Sélection Asperges,7613269324638,/garnitures-ingredients/legumes-a-salade,62.0,0.65,1.0,1.5,2.0,0.0,0.0,1.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 5818,Scamorzine Affumicate,7617027893565,/produits-laitiers-oeufs/fromages,1190.0,0.0,26.0,0.0,0.5,20.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -1215,7 +1215,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 6032,Migros Sélection Florentin Chocolat au lait avec fond aux amandes,7613269163862,/chocolat/chocolat,2149.0,0.13,6.0,49.0,52.0,31.0,0.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 6034,Migros Bio Biscuits à la cuillère,7617027960908,/chocolat/sain-bio,620.0,0.25,9.0,42.0,77.0,4.0,0.0,1.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 6036,Subito Pasta Broccoli-Crème,7613269300663,/plats-cuisines/plats-cuisines,1590.0,2.8,14.0,4.0,60.0,8.0,0.0,3.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-6040,ALTANATURA Cynorhodon,4104420045828,To classify,914.0,0.05,1.4,50.6,50.6,0.2,0.0,2.8,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+6040,ALTANATURA Cynorhodon,4104420045828,TO_CLASSIFY,914.0,0.05,1.4,50.6,50.6,0.2,0.0,2.8,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 6044,Giotto : Haselnuss,4008400122625,/chocolat/chocolat,2625.0,0.31,10.1,32.3,38.4,48.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 6048,Jowa Coeurs de France,7616700002010,/boulangerie/boulangerie-patisserie,2170.0,1.3,7.0,20.0,61.0,27.0,0.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 6050,Alnatura Bio Soja Schnetzel fein,4104420094703,/garnitures-ingredients/garnitures-bio,1524.0,0.25,49.2,11.4,16.3,7.6,0.0,16.2,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -1231,7 +1231,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 6094,PONTI ACETAIA VIGNOLA ACETO BALSAMICO DI MODENA Invecchiato ,80106852,/garnitures-ingredients/ingredients-de-cuisson,665.0,0.05,0.2,34.0,34.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 6100,Yupi Kiss,4003084010503,/chocolat/divers,1446.0,0.2,4.8,52.0,80.0,0.0,0.0,0.6,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 6108,Mbudget pizza Margherita,7616700142211,/plats-cuisines/pizza-menus-snacks,894.0,1.3,11.0,2.5,30.0,5.0,3.0,1.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-6110,Sélection Miel de Fleurs de Lavande,7613269273936,To classify,1421.0,0.02,0.5,82.0,82.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+6110,Sélection Miel de Fleurs de Lavande,7613269273936,TO_CLASSIFY,1421.0,0.02,0.5,82.0,82.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 6114,Panfino Spinaci Mozzarella tomates séchées- ricotta demi-crème acidulée,7613312066737,/produits-surgeles/pizza,944.0,1.5,10.0,2.5,25.0,9.0,0.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 6116,SAUCE TRADITION Sauce Balsamique,7613269580591,/plats-cuisines/pizza-menus-snacks,1160.0,1.2,0.5,10.0,10.0,40.0,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 6118,M-Classic Pois jaunes,7610200026385,/garnitures-ingredients/legumineuses-haricots-verts-seches,1500.0,0.1,21.0,3.0,57.0,1.0,0.0,17.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -1249,7 +1249,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 6170,AOP LE GRUYERE SWITZERLAND,7617067014708,/produits-laitiers-oeufs/fromages,1690.0,1.5,27.0,0.1,0.5,33.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 6172,Knorr ORIGINAL Aromat CONDIMENT EN POUDRE,7611100417280,/garnitures-ingredients/epices-herbes,602.0,57.0,13.0,8.0,16.0,3.2,0.0,0.7,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 6183,Migros Quadretti Chocolat au lait et aux noisettes,7613269211280,/chocolat/chocolat,2431.0,0.02,9.0,45.0,46.0,40.0,21.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-6185,Alnatura Ragoût de lentilles ,4104420020429,To classify,280.0,1.1,3.4,1.7,9.0,1.1,0.0,3.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+6185,Alnatura Ragoût de lentilles ,4104420020429,TO_CLASSIFY,280.0,1.1,3.4,1.7,9.0,1.1,0.0,3.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 6194,California Chili con carne avec frites ,7613312094037,/produits-surgeles/plats-cuisines,635.0,1.0,8.0,2.0,11.0,8.0,3.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 6198,De Ruijter ORIGINAL DUTCH MASTERS OF BREAD TOPPINGS Schokoladen Streusel,8710496976940,/petit-dejeuner/pates-a-tartiner,1810.0,0.02,5.0,64.0,67.0,15.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 6203,Denny's - Rösti fries,7613312023310,/produits-surgeles/legumes-pommes-de-terre,761.0,0.85,3.0,0.5,21.0,9.0,0.0,7.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -1259,7 +1259,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 6220,Migros sélection Thai Green Curry Nuts,7613312131985,/aperitif/noix-grillees,2520.0,0.9,15.0,6.0,17.0,52.0,7.0,7.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 6228,Murgella Scamorza Spizzico Affumicata,7617027705110,/produits-laitiers-oeufs/fromages,1108.0,1.0,23.0,2.5,2.5,18.0,10.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 6233,Patissier Chocolat en poudre,7613269262039,/boulangerie/ingredients-de-boulangerie,1875.0,0.0,6.0,56.0,66.0,16.0,0.0,8.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-6237,Alnatura Ricotta Sauce tomate bio avec ricotta,4104420031128,To classify,302.0,1.3,2.7,6.6,8.4,2.9,0.0,0.8,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+6237,Alnatura Ricotta Sauce tomate bio avec ricotta,4104420031128,TO_CLASSIFY,302.0,1.3,2.7,6.6,8.4,2.9,0.0,0.8,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 6240,Snickers,5000159404259,/chocolat/chocolat,2018.0,0.63,8.6,51.8,60.5,22.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 6245,HAPPY HOUR MINI SCHINKENGIPFELI fourrée au jambon,7616700084832,/produits-surgeles/aperitif-dessert,1250.0,1.3,9.0,2.0,27.0,17.0,0.0,1.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 6250,Party Pizza Crackers,7617400031942,/aperitif/biscuits-aperitifs,2000.0,1.9,13.0,4.5,51.0,24.0,0.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -1294,7 +1294,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 6403,Gomz FRUTTINI,7610167635514,/chocolat/divers,1369.0,0.03,4.5,59.0,76.0,0.0,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 6411,Migros Patisser Zestes D'oranges Râpées,7610188127135,/boulangerie/ingredients-de-boulangerie,421.0,0.18,1.0,12.0,18.0,0.7,0.0,9.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 6415,MIGROS BIO Framboise,7617027140744,/produits-laitiers-oeufs/yogourt,500.0,0.12,5.0,13.0,13.0,5.2,0.0,0.6,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-6420,Alnatura Compote de pomme argousier,4104420033948,To classify,348.0,0.03,0.6,18.0,19.0,0.5,0.0,1.8,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+6420,Alnatura Compote de pomme argousier,4104420033948,TO_CLASSIFY,348.0,0.03,0.6,18.0,19.0,0.5,0.0,1.8,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 6424,WASA : SESAM,4000611000921,/boulangerie/biscottes-pain-croustillant,1687.0,1.25,13.5,2.0,61.5,9.5,0.0,7.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 6432,M Budget LARDONS- fumés,7617027948777,/viande/produits-de-charcuterie,1320.0,2.8,16.0,1.0,1.0,28.0,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 6436,Reddy Birchermüesli Original,7610177003778,/mueesli-cereales/mueesli,1646.0,0.93,12.0,12.0,61.0,9.0,0.0,9.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -1323,7 +1323,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 6548,Migros Sélection Roulades de Saumon Fumé,7610200299499,/poisson-fruits-de-mer/traiteur,800.0,2.6,16.0,2.0,2.5,13.0,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 6552,Ballons,7616700003949,/boulangerie/produits-frais-de-boulangerie-refrigeres,1070.0,1.8,10.0,3.5,48.0,1.5,0.0,3.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 6554,Anna's BEST Margherita,7613269490456,/plats-cuisines/pizza-menus-snacks,1009.0,1.4,13.0,2.0,28.0,8.0,0.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-6558,Petits pois et carottes,4104420034181,To classify,210.0,0.35,3.3,4.5,7.2,0.5,0.0,3.9,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+6558,Petits pois et carottes,4104420034181,TO_CLASSIFY,210.0,0.35,3.3,4.5,7.2,0.5,0.0,3.9,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 6564,Migros Selection Chocolat Au Lait et Blanc avec noix et Sirop d'érable,7613269350163,/chocolat/chocolat,2313.0,0.15,6.0,51.0,51.0,36.0,0.0,1.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 6570,Migros Miel du Jura français,7613269358954,/petit-dejeuner/miel,1421.0,0.02,0.5,82.0,82.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 6575,Generoso,7616700001419,/boulangerie/boulangerie-patisserie,1541.0,0.18,4.0,36.0,45.0,19.0,0.0,0.6,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -1388,7 +1388,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 6863,Oh! Yogurt greek style,7613269501640,/produits-laitiers-oeufs/divers,242.0,0.1,10.0,4.0,4.0,0.1,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 6866,Gomz langues acidulées,7613269294764,/chocolat/divers,1473.0,0.18,3.5,50.0,78.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 6870,Fun frites,7613269180388,/produits-surgeles/legumes-pommes-de-terre,734.0,0.03,2.0,0.0,25.0,7.0,0.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-6877,Alnatura Vinaigre de vin blanc,4104420168930,To classify,0.0,0.01,0.5,0.5,0.5,0.5,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+6877,Alnatura Vinaigre de vin blanc,4104420168930,TO_CLASSIFY,0.0,0.01,0.5,0.5,0.5,0.5,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 6880,Sapori Siena Cantuccini aux amandes,8000895191250,/chocolat/specialites,1933.0,0.25,10.3,31.0,62.5,17.8,0.0,4.7,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 6887,Midor Panna Cotta,7617400020380,/boulangerie/ingredients-de-boulangerie,910.0,0.0,2.5,13.0,14.0,17.0,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 6897,Alnatura Nouilles mie,4104420142664,/garnitures-ingredients/du-monde-entier,1546.0,0.03,12.0,3.4,75.0,1.3,0.0,2.1,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -1415,9 +1415,9 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 6988,Andros Oranges Sanguines Pressées Pur Jus Pasteurisé,3045320104790,/plats-cuisines/pizza-menus-snacks,201.0,0.0,0.6,9.0,11.0,0.1,0.0,0.4,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 6990,Compote de pommes,7617027863858,/garnitures-ingredients/fruits-en-conserve,276.0,0.0,0.5,14.0,15.0,0.5,0.0,1.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 6997,Valflora Drink,22129581,/produits-laitiers-oeufs/lait-boissons-lactees,240.0,0.1,3.5,5.0,5.0,2.6,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-7009,ALTANATURA Poêlée de boulgour à la méditerranéenne 2 portions,4104420134164,To classify,414.0,0.94,3.0,2.0,18.5,0.5,0.0,3.7,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+7009,ALTANATURA Poêlée de boulgour à la méditerranéenne 2 portions,4104420134164,TO_CLASSIFY,414.0,0.94,3.0,2.0,18.5,0.5,0.0,3.7,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 7018,Rapelli SALAME Rapellino Classico,7617027792103,/viande/saucisses,1644.0,3.8,24.0,0.5,1.0,33.0,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-7022,ALNATURA Risotto aux légumes,4104420174085,To classify,363.0,0.63,1.9,0.8,19.0,0.5,0.1,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+7022,ALNATURA Risotto aux légumes,4104420174085,TO_CLASSIFY,363.0,0.63,1.9,0.8,19.0,0.5,0.1,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 7025,7up free Zero Sugar,4060800125194,/boissons-chaudes-froides/boissons-sucrees,2.0,0.05,0.1,0.0,0.1,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 7031,Migros Passaia Light Avec Du Jus De Fruit De La Passion,7610097145183,/boissons-chaudes-froides/boissons-sucrees,40.0,0.0,0.0,2.3,2.3,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,12.0,0.0,0.0,0.0,0.0,0.0
 7035,Alnavit Pur jus d'argousier,42278993,/boissons-chaudes-froides/jus-de-fruits-de-legumes,228.0,0.01,1.4,6.0,6.4,2.3,0.0,1.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -1426,15 +1426,15 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 7045,Anna's Best Potage espagnol froid aux légumes,7613269446484,/plats-cuisines/pizza-menus-snacks,152.0,0.58,0.6,2.5,3.5,2.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 7047,Amaretti Tradizionali : Biscuits aux amandes avec amandes amères,7613269191650,/chocolat/specialites,1765.0,0.1,9.0,47.0,54.0,18.0,0.0,3.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 7051,CONDY Concombres,7617027853019,/garnitures-ingredients/legumes-legumes-au-vinaigre,165.0,1.8,1.0,5.0,8.0,0.5,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-7054,Alnatura Apfelmark mit Aprikose,4104420033740,To classify,221.0,0.01,0.5,10.5,11.0,0.3,0.0,1.7,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+7054,Alnatura Apfelmark mit Aprikose,4104420033740,TO_CLASSIFY,221.0,0.01,0.5,10.5,11.0,0.3,0.0,1.7,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 7061,Jus de grenade avec extrait de thé blanc,7618500948482,/boissons-chaudes-froides/jus-de-fruits-de-legumes,192.0,0.03,0.5,10.0,11.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 7063,M Classic Papillons Pâtes aux oeufs à la semoule de blé dur,7610145406112,/garnitures-ingredients/pates,1511.0,0.53,15.0,2.5,67.0,2.5,0.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 7083,QUARK CRÈME Chocolat Truffes Crème au séré,76245015,/produits-laitiers-oeufs/sere,804.0,0.08,6.0,16.0,17.0,11.0,0.0,0.7,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 7086,Migros Bio muesli croquant amaranthe- chia et pommes,7613312045312,/mueesli-cereales/cereales,1894.0,0.5,10.0,21.0,65.0,15.0,3.5,8.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 7088,PERLDOR Hugo HOLUNDERBLÜTEN \u0026 MINZAROMA,7613312060971,/boissons-chaudes-froides/boissons-daperitif,153.0,0.0,0.0,9.0,9.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 7092,MIGROS SELECTION SAUCE AUX FRUITS AVEC MANGUE,7613312084809,/garnitures-ingredients/soupes-sauces-bouillon,410.0,1.8,0.7,20.0,23.0,0.0,0.0,0.9,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-7106,Alnatura Cashew Mus Purée de noix de cajou Bio7 Initiative ,4104420181670,To classify,2499.0,0.04,21.0,5.3,31.0,43.0,8.6,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-7108,Alnatura Purée de noix de cajou bio,4104420139862,To classify,2501.0,0.04,21.0,5.3,31.0,43.0,0.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+7106,Alnatura Cashew Mus Purée de noix de cajou Bio7 Initiative ,4104420181670,TO_CLASSIFY,2499.0,0.04,21.0,5.3,31.0,43.0,8.6,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+7108,Alnatura Purée de noix de cajou bio,4104420139862,TO_CLASSIFY,2501.0,0.04,21.0,5.3,31.0,43.0,0.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 7111,Coca Cola Vanilla,5449000051400,/boissons-chaudes-froides/boissons-sucrees,190.0,0.0,0.0,11.2,11.2,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 7113,Migros Olives grecques farcies aux poivrons,7610200324009,/garnitures-ingredients/champignons-olives-en-conserve,573.0,4.1,1.5,0.5,2.0,13.0,0.0,4.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 7126,Petits pains vital,7616700129236,/boulangerie/pains,1090.0,1.7,12.0,2.0,41.0,4.0,0.0,5.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -1462,7 +1462,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 7245,Bon Chef Bouillon de poule granulé- sans graisse,7613312037386,/garnitures-ingredients/soupes-sauces-bouillon,15.0,1.0,0.5,0.5,0.5,0.5,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 7247,Frey Truffes au lait,7616500639898,/chocolat/chocolat,1920.0,0.2,7.0,9.0,48.0,33.0,19.0,1.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 7259,Migros Royal chips Wasabi Chips de pommes de terre au goût de raifort japonais,7613312013380,/aperitif/chips,2057.0,1.8,6.0,3.0,65.0,22.0,1.5,4.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-7269,Grünkohl Chips Meerrettich \u0026 Feige ,4104420181304,To classify,2220.0,2.6,21.0,8.6,23.0,38.0,7.1,8.3,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+7269,Grünkohl Chips Meerrettich \u0026 Feige ,4104420181304,TO_CLASSIFY,2220.0,2.6,21.0,8.6,23.0,38.0,7.1,8.3,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 7272,Bio Max Havelaar Boisson au cacao,7613312049310,/petit-dejeuner/cacao-chocolats-en-poudre,1630.0,0.17,6.0,71.0,75.0,4.5,0.0,11.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 7276,Biotta VEGGIE,7618500948352,/plats-cuisines/pizza-menus-snacks,170.0,0.07,0.5,7.8,8.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 7281,Migros Cuisses de dames,7616700001747,/boulangerie/boulangerie-patisserie,2212.0,0.75,7.0,15.0,46.0,35.0,0.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -1620,7 +1620,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 8064,Carpe Diem Kurkuma Sparkling Tea ,90020544,/boissons-chaudes-froides/eau-aromatisee,80.0,0.0,0.0,4.0,4.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 8071,M Budget Lasagne Alla Bolognese,7616800833286,/produits-surgeles/plats-cuisines,601.0,0.9,7.0,2.0,13.0,7.0,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 8075,M-Budget Chocolat au lait,7613269195443,/chocolat/chocolat,2330.0,0.13,6.0,55.0,56.0,34.0,17.0,2.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-8088,Aha Pain Marguerite ,7613312041291,To classify,1025.0,1.5,4.0,1.0,50.0,2.0,0.0,4.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+8088,Aha Pain Marguerite ,7613312041291,TO_CLASSIFY,1025.0,1.5,4.0,1.0,50.0,2.0,0.0,4.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 8090,ELSA EXCELLENCE CARAMEL,22140623,/produits-laitiers-oeufs/yogourt,650.0,0.1,2.5,18.0,19.0,7.7,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 8097,Migros Bio Epeautre,7610200058508,/garnitures-ingredients/garnitures-bio,1423.0,0.0,11.0,1.0,63.0,2.5,0.0,9.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 8106,Malbuner Fromage d'Italie,22097316,/garnitures-ingredients/viande-en-conserve,650.0,0.0,16.0,0.0,1.0,10.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -1648,12 +1648,12 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 8193,M Classic Bouchéès au lait Chocolat au lait avec une fourrage crémeuse,7616500644588,/chocolat/chocolat,2580.0,0.12,4.0,46.0,47.0,46.0,0.0,1.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 8197,M Classic Haricots Borlotti,7610200048066,/garnitures-ingredients/legumes-a-salade,520.0,1.0,8.0,0.6,21.0,0.7,0.0,4.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 8200,Tic tac Fresh orange,4008400399324,/chocolat/bonbons-chewing-gum,1698.0,0.03,0.1,93.3,96.7,0.7,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-8204,Alnatura Vollkorn Linguine,4104420014022,To classify,1462.0,0.03,12.2,3.0,66.9,1.7,0.0,6.8,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+8204,Alnatura Vollkorn Linguine,4104420014022,TO_CLASSIFY,1462.0,0.03,12.2,3.0,66.9,1.7,0.0,6.8,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 8210,Soupe du chalet,7613269375456,/plats-cuisines/pizza-menus-snacks,350.0,0.0,3.0,0.8,4.0,6.0,0.0,0.9,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 8212,Anna's Best Focaccia al pomodorini,7617027888943,/plats-cuisines/pizza-menus-snacks,952.0,1.7,6.0,2.5,36.0,6.0,0.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 8215,PATTE D'OURS,7616700235913,/boulangerie/boulangerie-patisserie,1653.0,0.05,7.0,32.0,56.0,0.0,0.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 8219,Migros Light Ice Tea Peach,7613269283317,/boissons-chaudes-froides/the-glace,67.0,0.01,0.5,3.5,3.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-8224,Alnatura Tagliatelle,4104420063242,To classify,1483.0,0.0,12.0,3.2,71.0,1.2,0.0,3.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+8224,Alnatura Tagliatelle,4104420063242,TO_CLASSIFY,1483.0,0.0,12.0,3.2,71.0,1.2,0.0,3.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 8227,Alnatura Sélection Kakao Noir,4104420139787,/chocolat/chocolat,2571.0,0.02,7.4,18.0,23.8,52.6,0.0,11.8,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 8235,Pelican Coquilles St Jacques à la bretonne,7613312042847,/produits-surgeles/poisson-fruits-de-mer,532.0,0.28,12.0,1.5,6.0,6.0,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 8237,Thai Kitchen Authentic Thai Cuisine Lait noix de coco,5021047105034,/garnitures-ingredients/du-monde-entier,709.0,0.06,1.3,1.7,2.4,17.4,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -1740,10 +1740,10 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 8657,ALTANATURA Boisson à l'avoine calcium,4104420094949,/produits-laitiers-oeufs/lait-boissons-lactees,164.0,0.13,0.6,5.2,6.0,1.4,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 8668,Cornatur Quinoa balls with yoghurt,7613269530398,/plats-cuisines/pizza-menus-snacks,750.0,1.1,6.0,3.5,25.0,4.5,0.0,7.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 8673,Blévita,7617400033557,/chocolat/blevita,1730.0,1.6,11.0,2.5,59.0,12.0,0.0,12.0,0.0,0.4,0.0,80.0,0.0,0.0,0.0,0.6,0.0,6.4,0.6,0.0
-8679,Migros Sélection Miel Au Romarin,7617027091695,To classify,1421.0,0.02,0.5,82.0,82.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+8679,Migros Sélection Miel Au Romarin,7617027091695,TO_CLASSIFY,1421.0,0.02,0.5,82.0,82.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 8683,M-Classic toast rustico Terrasuisse,7616700187786,/boulangerie/pains-de-mie,1081.0,1.5,11.0,3.0,42.0,4.0,0.0,4.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 8686,tranche au lait,40084794,/produits-laitiers-oeufs/dessert,1754.0,0.61,7.9,29.5,34.0,27.9,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-8690,Alnatura Herbes,4104420031449,To classify,298.0,1.4,1.4,6.6,7.1,3.9,0.0,1.1,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+8690,Alnatura Herbes,4104420031449,TO_CLASSIFY,298.0,1.4,1.4,6.6,7.1,3.9,0.0,1.1,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 8701,Yogos Nature Cremiges Rahmjoghurt nach griechischer art,7613269287124,/produits-laitiers-oeufs/yogourt,530.0,0.1,4.0,4.5,4.5,10.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 8713,Escalope aux épinards,7613269639435,/plats-cuisines/pizza-menus-snacks,880.0,1.3,10.0,1.0,9.0,14.0,0.0,5.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 8715,ALNATURA Trauben Saft Jus de raisin non filtré,4104420071667,/boissons-chaudes-froides/jus-de-fruits-de-legumes,292.0,0.01,0.3,16.4,16.4,0.1,0.0,0.1,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -1806,14 +1806,14 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 8972,Sarasay Mangue,7613269303640,/boissons-chaudes-froides/jus-de-fruits-de-legumes,280.0,0.0,0.5,16.0,16.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,24.0,0.0,0.0,0.0,0.0,0.0
 8977,Berner Rösti Pommes de terre prêtes à rôtir au lard,7616800460383,/garnitures-ingredients/pommes-de-terre-spaetzli,544.0,0.8,3.0,0.5,15.0,6.0,0.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 8982,Crêpes Mix,7613312015339,/boulangerie/ingredients-de-boulangerie,1760.0,1.8,19.0,8.0,60.0,11.0,0.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-8991,ALNATURA Concentré de tomates,4104420031920,To classify,250.0,0.08,3.6,8.4,8.7,0.3,0.0,3.7,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+8991,ALNATURA Concentré de tomates,4104420031920,TO_CLASSIFY,250.0,0.08,3.6,8.4,8.7,0.3,0.0,3.7,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 8995,Migros M Classic Mélange de Champignons Entiers,7617027980739,/garnitures-ingredients/champignons-olives-en-conserve,50.0,1.0,1.5,0.0,0.5,0.5,0.0,2.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 8997,Reddy Birchermüesli Melange de Müesli Sans Sucres Ajoutés,7610177003785,/mueesli-cereales/mueesli,1650.0,0.08,17.0,10.0,52.0,11.0,0.0,9.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 9002,M-Budget Fromage frais nature,7617027783552,/produits-laitiers-oeufs/fromages,1053.0,0.8,4.5,3.0,3.0,25.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 9009,Bon Chef Fond de poisson,7613312063699,/garnitures-ingredients/soupes-sauces-bouillon,37.0,0.85,0.5,0.5,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 9020,Best of Dim Sum with shrimps \u0026 vegetables,7613269508052,/plats-cuisines/pizza-menus-snacks,625.0,1.1,5.0,2.5,28.0,1.5,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 9025,Choux de Bruxelles,7613269273912,/produits-surgeles/legumes-pommes-de-terre,182.0,0.02,4.0,3.0,3.5,0.5,0.0,4.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-9029,ALNATURA Spaghetti Pâtes de blé dur 100 % Blé dur,4104420063181,To classify,1483.0,0.0,12.0,3.2,71.0,1.2,0.0,3.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+9029,ALNATURA Spaghetti Pâtes de blé dur 100 % Blé dur,4104420063181,TO_CLASSIFY,1483.0,0.0,12.0,3.2,71.0,1.2,0.0,3.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 9035,Lotus Biscoff Crunchy Pâte À Tartiner,5410126726947,/petit-dejeuner/pates-a-tartiner,238.0,0.6,3.2,36.2,58.8,35.7,0.0,0.9,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 9039,Anna's Best - Pâte à tarte flambée,7613269211143,/boulangerie/ingredients-de-boulangerie,1190.0,1.8,8.0,3.0,50.0,5.0,0.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 9045,M Budget Salade de pommes de terre,7613269763604,/plats-cuisines/pizza-menus-snacks,387.0,0.93,1.5,0.5,11.0,4.5,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -1846,7 +1846,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 9170,Migros Croissants de Sils au beurre,7617027935753,/boulangerie/produits-frais-de-boulangerie-non-refrigeres,1541.0,1.0,5.0,3.5,39.0,21.0,0.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 9185,Terrasuisse Farina fleur,7617027015035,/boulangerie/farine,1497.0,0.0,12.0,0.5,72.0,1.0,0.0,4.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 9187,Frey – TOURIST – Chocolat au lait avec raisins secs- noisettes et amandes,7616500012509,/chocolat/chocolat,2230.0,0.17,7.0,50.0,53.0,32.0,0.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-9193,ALNATURA SÉLECTION Bâtonnets de gingembre enrobés de chocolat Chocolat noir,4104420055643,To classify,1711.0,0.03,3.1,52.5,55.4,18.3,0.0,4.9,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+9193,ALNATURA SÉLECTION Bâtonnets de gingembre enrobés de chocolat Chocolat noir,4104420055643,TO_CLASSIFY,1711.0,0.03,3.1,52.5,55.4,18.3,0.0,4.9,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 9197,Migros Vollmilch laktosfrei,7613269419815,/produits-laitiers-oeufs/lait-boissons-lactees,280.0,0.1,3.5,5.0,5.0,3.6,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 9199,Prunes bio- dénoyautées et séchées,4104420143906,/boulangerie/ingredients-de-boulangerie,1158.0,0.02,2.4,36.0,60.0,0.8,0.0,8.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 9205,Whaou! Crêpes Chocolat,3322680009584,/boulangerie/boulangerie-patisserie,1912.0,0.8,7.4,36.5,58.0,21.0,5.9,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -1903,7 +1903,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 9488,Coupe Chantilly Caramel Dessert au sucre caramélisé,22016485,/produits-laitiers-oeufs/dessert,530.0,0.0,3.0,16.0,19.0,4.1,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 9491,M Classic Amandes effilées,7610200104274,/boulangerie/ingredients-de-boulangerie,2640.0,0.1,21.0,4.5,14.0,53.0,0.0,10.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 9496,M-Classic Poitrine de dinde ,7617100213310,/viande/produits-de-charcuterie,400.0,1.8,21.0,1.0,1.0,1.0,1.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-9503,ALTANATURA Poêlée de millet à l'orientale,4104420134140,To classify,400.0,0.93,2.9,4.3,17.1,1.2,0.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+9503,ALTANATURA Poêlée de millet à l'orientale,4104420134140,TO_CLASSIFY,400.0,0.93,2.9,4.3,17.1,1.2,0.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 9518,Coraya Surimi Sticks,3276170011741,/poisson-fruits-de-mer/traiteur,462.0,1.9,8.0,2.3,8.8,4.2,0.0,2.6,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 9520,MClassic Beef Balls,7617100218117,/produits-surgeles/viande,1110.0,1.8,19.0,1.0,5.0,19.0,8.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 9526,Bon Chef - Champignons,7613269296737,/garnitures-ingredients/soupes-sauces-bouillon,190.0,0.9,1.0,1.5,8.0,1.0,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -1931,7 +1931,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 9628,M-Budget Farine ménagère,7610200244628,/boulangerie/farine,1472.0,0.0,12.0,1.0,71.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 9630,Patissier Massepain,7613312010808,/boulangerie/ingredients-de-boulangerie,1923.0,0.0,6.0,61.0,67.0,18.0,1.5,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 9637,MCLASSIC : Yogourt Nature,22016065,/produits-laitiers-oeufs/yogourt,270.0,0.1,3.5,5.0,5.0,3.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-9641,Alnatura sauce tomate bio au piment piquante,4104420129627,To classify,118.0,0.8,1.1,3.5,4.2,0.2,0.0,2.3,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+9641,Alnatura sauce tomate bio au piment piquante,4104420129627,TO_CLASSIFY,118.0,0.8,1.1,3.5,4.2,0.2,0.0,2.3,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 9648,Sun Queen : Tranches d'ananas : Séchées,7610200313270,/boulangerie/ingredients-de-boulangerie,1460.0,0.1,2.5,67.0,77.0,0.5,0.0,11.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 9654,M Classic Tartelettes aux oignons,7616700011630,/produits-surgeles/aperitif-dessert,932.0,1.0,7.0,3.0,21.0,12.0,0.0,1.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 9661,Soupe de courge,7613312052013,/garnitures-ingredients/soupes-sauces-bouillon,153.0,0.92,1.5,2.0,4.0,1.5,0.0,1.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -1946,7 +1946,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 9700,Terrasuisse Pain complet,7616700018660,/boulangerie/pains,1030.0,1.5,11.0,3.5,43.0,1.5,0.0,7.0,0.0,0.0,0.0,30.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 9702,M-Budget Beignets de pangasius,7613269180876,/produits-surgeles/poisson-fruits-de-mer,673.0,1.3,9.0,1.0,15.0,7.0,0.0,0.8,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 9704,Knorr Crème de bolets,7611100088640,/garnitures-ingredients/soupes-sauces-bouillon,99.0,0.85,0.7,0.5,3.8,0.6,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-9707,Alnatura Noix de coco,42143956,To classify,2245.0,0.08,4.7,36.1,38.7,38.7,0.0,9.4,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+9707,Alnatura Noix de coco,42143956,TO_CLASSIFY,2245.0,0.08,4.7,36.1,38.7,38.7,0.0,9.4,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 9710,pommes de terre à chair ferme,7610200318831,/fruits-et-legumes/legumes,300.0,0.25,2.0,0.0,15.0,0.5,0.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 9712,Migros Gusto del sol Chorizo LOMO DOUX,7617027748360,/viande/saucisses,1350.0,3.3,22.0,2.5,3.0,25.0,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 9714,Saitaku Udon Noodles ,5060194790106,/garnitures-ingredients/du-monde-entier,1480.0,0.0,12.0,0.0,73.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -1992,7 +1992,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 9894,LA PIZZA WRAP Margherita HANDGEMACHT!,7613269658887,/plats-cuisines/pizza-menus-snacks,1074.0,1.6,14.0,2.0,33.0,7.0,0.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 9902,Migros Terrasuisse Jus de pomme,7617500197487,/boissons-chaudes-froides/jus-de-fruits-de-legumes,187.0,0.01,0.0,10.0,11.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 9916,Sun Queen : Canneberges : sucrées- séchées,7613312022757,/boulangerie/ingredients-de-boulangerie,1500.0,0.1,0.5,65.0,82.0,1.5,0.0,6.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-9922,Alnatura Marzipan Barre à la pâte d'amande chocolat noir,42214458,To classify,2045.0,0.03,7.2,47.0,49.0,28.0,0.0,4.1,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+9922,Alnatura Marzipan Barre à la pâte d'amande chocolat noir,42214458,TO_CLASSIFY,2045.0,0.03,7.2,47.0,49.0,28.0,0.0,4.1,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 9926,MIGROS PARTY FLÛTES SÉSAME,7610200225993,/aperitif/biscuits-aperitifs,2121.0,1.1,15.0,3.0,46.0,28.0,0.0,6.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 9931,Farcis Avec Une Preparation Fromage Fraise,4006099655400,/garnitures-ingredients/antipasti,924.0,1.49,3.4,12.0,12.2,16.9,0.0,2.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 9935,Migros M Budget Eau de table avec de jus d'orange,7610200337719,/boissons-chaudes-froides/boissons-sucrees,17.0,0.02,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -2026,7 +2026,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 10076,Anna's Best Salade de boulgour avec dip d'hoummous,7613269552871,/plats-cuisines/pizza-menus-snacks,523.0,1.0,4.0,2.0,14.0,5.0,0.0,4.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 10082,SNICKERS MINIS,5000159473996,/chocolat/chocolat,2018.0,0.63,8.6,51.8,60.5,22.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 10088,M Budget Filets de Saumon Atlantique avec peau,7613269178781,/produits-surgeles/poisson-fruits-de-mer,750.0,0.0,20.0,0.5,0.5,11.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-10092,Subito Kartoffel-Küchlein mit Speck,7613269353812,To classify,547.0,0.88,3.5,0.5,19.0,4.0,0.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+10092,Subito Kartoffel-Küchlein mit Speck,7613269353812,TO_CLASSIFY,547.0,0.88,3.5,0.5,19.0,4.0,0.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 10094,Chop Stick Kroepoek Sweet xhili,7613269353690,/garnitures-ingredients/du-monde-entier,2182.0,3.2,3.0,10.0,70.0,25.0,0.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 10101,Migros Chaussons aux poires,7616700004076,/boulangerie/boulangerie-patisserie,1338.0,0.48,4.0,27.0,53.0,9.0,0.0,4.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 10103,Bon Chef Soupe au curry rouge,7613269263159,/garnitures-ingredients/soupes-sauces-bouillon,430.0,0.91,0.9,2.5,8.0,7.0,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -2043,8 +2043,8 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 10146,Mozzarella sticks,7613269505747,/produits-laitiers-oeufs/fromages,975.0,0.5,21.0,1.5,1.5,16.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 10148,MIGROS Yogourt Classic,22140609,/produits-laitiers-oeufs/yogourt,300.0,0.1,5.0,5.0,5.0,3.6,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 10149,Yogourt Classic,7613269779483,/produits-laitiers-oeufs/yogourt,300.0,0.1,5.0,5.0,5.0,3.6,2.1,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-10153,Twïn Cappucchino,7617014166931,To classify,150.0,0.07,2.0,4.0,4.5,1.0,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-10160,Alnatura Sélection Bâtonnets à la coco et à la mangue,4104420139602,To classify,1938.0,0.12,3.6,48.0,50.5,26.0,20.0,7.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+10153,Twïn Cappucchino,7617014166931,TO_CLASSIFY,150.0,0.07,2.0,4.0,4.5,1.0,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+10160,Alnatura Sélection Bâtonnets à la coco et à la mangue,4104420139602,TO_CLASSIFY,1938.0,0.12,3.6,48.0,50.5,26.0,20.0,7.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 10163,Créa d'Or Bretzeli No.17,7617400036039,/chocolat/biscuits-gaufres,2069.0,0.44,9.0,23.0,68.0,20.0,0.0,2.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 10171,Fun VANILLE 8x,7617400046861,/produits-surgeles/glace-entremets,1190.0,0.2,3.0,27.0,36.0,14.0,0.0,1.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 10180,7up,4060800163646,/boissons-chaudes-froides/boissons-sucrees,180.0,0.03,0.0,10.6,10.6,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -2094,7 +2094,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 10374,Emmentaler Switzerland \u0026 Le Gruyère Switzerland râpé,7610200084125,/produits-laitiers-oeufs/fromages,1680.0,0.8,29.0,0.1,0.1,32.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 10378,Alnatura Multi Barre Multi-fruits,42279655,/mueesli-cereales/barres-de-cereales,1669.0,0.03,6.3,44.0,54.0,14.0,0.0,5.2,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 10384,Mclassic Fruit Fun Multivitamin,7617027953047,/boissons-chaudes-froides/jus-de-fruits-de-legumes,187.0,0.0,0.5,10.0,11.0,0.5,0.0,0.5,8.0,0.2,1.8,30.0,0.0,0.0,25.0,0.0,0.0,0.0,0.0,0.15
-10390,ALNATURA BIO Taboulé Couscous en salade,4104420137967,To classify,484.0,1.1,4.3,1.4,21.0,0.7,0.0,3.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+10390,ALNATURA BIO Taboulé Couscous en salade,4104420137967,TO_CLASSIFY,484.0,1.1,4.3,1.4,21.0,0.7,0.0,3.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 10395,Kinder Chocofresh,4008400370521,/produits-laitiers-oeufs/dessert,2421.0,0.18,7.3,39.3,39.3,43.7,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 10397,SMAMS Mint C,7613269333609,/chocolat/bonbons-chewing-gum,1650.0,0.0,3.0,84.0,84.0,4.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 10403,Condy Câpres,7613269203117,/garnitures-ingredients/legumes-legumes-au-vinaigre,154.0,7.3,2.5,0.5,5.7,0.5,0.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -2110,7 +2110,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 10444,Figues séchées,7613312024065,/boulangerie/ingredients-de-boulangerie,1290.0,0.0,3.0,54.0,63.0,2.0,0.0,12.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 10449,Pelican Filets de cabillaud,7613312010419,/produits-surgeles/poisson-fruits-de-mer,229.0,0.6,18.0,0.6,18.0,12.0,0.0,0.6,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 10453,Mini Cake au Citron,7616700131819,/boulangerie/boulangerie-patisserie,1690.0,0.8,4.5,34.0,51.0,20.0,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-10455,ALNATURA- Huile d'olive vierge extra,4104420031050,To classify,3367.0,0.0,0.0,0.0,0.0,91.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+10455,ALNATURA- Huile d'olive vierge extra,4104420031050,TO_CLASSIFY,3367.0,0.0,0.0,0.0,0.0,91.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 10464,Crème d'or crème fraiche Special,7613312061299,/produits-surgeles/glace-entremets,937.0,0.13,4.5,20.0,22.0,13.0,0.0,0.7,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 10466,Patissier Sauce Coupe Danmark,7616500260207,/boulangerie/ingredients-de-boulangerie,2460.0,0.06,4.5,38.0,40.0,45.0,0.0,5.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 10472,Cornatur Charcuterie fine,7613269395782,/plats-cuisines/pizza-menus-snacks,780.0,2.3,16.0,0.9,6.0,10.0,0.0,4.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -2130,7 +2130,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 10534,Pelican Soupe avec saumon et crevettes,7613269291602,/produits-surgeles/poisson-fruits-de-mer,213.0,1.0,4.0,1.0,2.0,3.0,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 10542,Patissier Cerises confites,76102127,/boulangerie/ingredients-de-boulangerie,1380.0,0.0,1.0,0.0,80.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 10544,Cacarola : Haricots Noirs,5601255110176,/garnitures-ingredients/du-monde-entier,1324.0,0.03,24.1,4.1,43.6,1.5,0.0,15.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-10547,ALNATURA Streichcreme Curry Mango Papaya,4104420046023,To classify,1550.0,1.3,5.2,5.5,7.7,35.0,3.6,4.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+10547,ALNATURA Streichcreme Curry Mango Papaya,4104420046023,TO_CLASSIFY,1550.0,1.3,5.2,5.5,7.7,35.0,3.6,4.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 10553,Coco Water Pur,7616800835617,/boissons-chaudes-froides/jus-de-fruits-de-legumes,89.0,0.04,0.0,4.0,5.0,0.0,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 10556,LA PIZZA PIZZA ORIGINALE ITALIANA Siciliana,7613269568278,/plats-cuisines/pizza-menus-snacks,789.0,1.9,16.0,3.0,19.0,5.0,0.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 10560,Anna's BEST Fresh Dip all'aglio,7613269260516,/plats-cuisines/pizza-menus-snacks,1420.0,1.8,2.5,1.5,4.5,35.0,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -2156,7 +2156,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 10661,M Classic Mayonnaise citron,7616600380300,/garnitures-ingredients/soupes-sauces-bouillon,3010.0,0.8,1.0,0.5,0.5,80.6,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 10669,Ice Tea Hugo,7613312036167,/boissons-chaudes-froides/the-glace,119.0,0.0,0.0,7.0,7.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 10671,FREY Les Adorables Truffes au Lait,7616500020368,/chocolat/chocolat,2230.0,0.16,6.0,47.0,49.0,34.0,0.0,2.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-10674,Alnatura Penne ,4104420168282,To classify,1483.0,0.01,12.0,3.2,71.0,1.2,0.0,3.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+10674,Alnatura Penne ,4104420168282,TO_CLASSIFY,1483.0,0.01,12.0,3.2,71.0,1.2,0.0,3.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 10681,Chips de maïs au goût de barbecue,8410076480880,/garnitures-ingredients/du-monde-entier,2028.0,1.35,6.0,1.0,64.0,22.0,0.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 10682,Pancho Villa Authentic Mexican Tortilla Chips Ranch Chips de maïs au goût de barbecue,8410076481726,/garnitures-ingredients/du-monde-entier,2053.0,1.3,6.0,2.5,56.0,26.0,3.0,4.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 10687,AMERICAN Favorites Burger Buns,7616700199413,/boulangerie/petits-pains,1307.0,1.5,9.0,7.0,51.0,7.0,0.0,3.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -2202,7 +2202,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 10867,Migros Bio Cornflakes,7613269234210,/mueesli-cereales/cereales,1573.0,1.0,8.0,4.0,80.0,1.0,0.0,5.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 10874,M-Classic Trivelli,7613269333623,/garnitures-ingredients/pates,1495.0,0.83,16.0,2.5,64.0,3.0,0.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 10876,Migros Sélection Arrabbiata Sauce Tomate Peperoncino,7613312044582,/garnitures-ingredients/soupes-sauces-bouillon,379.0,1.5,1.5,4.5,7.0,6.0,0.0,1.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-10881,IOWA Cornettes Pâtes sans gluten,7613312035443,To classify,1550.0,0.03,7.0,1.0,79.0,1.5,0.0,4.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+10881,IOWA Cornettes Pâtes sans gluten,7613312035443,TO_CLASSIFY,1550.0,0.03,7.0,1.0,79.0,1.5,0.0,4.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 10890,TERRASUISSE Cervelas,7617100222718,/viande/saucisses,1100.0,2.0,14.0,1.0,1.0,23.0,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 10903,PONTI : Aceto Balsamico Di Modena,80228486,/garnitures-ingredients/ingredients-de-cuisson,409.0,0.05,0.2,19.0,19.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 10910,FREILANDEIER THOMY,7610100034084,/garnitures-ingredients/soupes-sauces-bouillon,3033.0,1.2,0.8,0.2,0.3,81.3,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -2235,7 +2235,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 11033,Sarasay,7613269303671,/boissons-chaudes-froides/jus-de-fruits-de-legumes,277.0,0.0,0.5,16.0,16.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,24.0,0.0,0.0,0.0,0.0,0.0
 11038,Knorr Herbmix Aux herbes,7611100100359,/garnitures-ingredients/epices-herbes,2442.0,1.1,1.5,3.4,6.6,62.0,0.0,0.8,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 11040,Andros Les Compotes,3608580004844,/plats-cuisines/pizza-menus-snacks,236.0,0.0,0.4,12.0,12.0,0.2,0.0,2.2,0.0,0.0,0.0,0.0,0.0,0.0,12.0,0.0,0.0,0.0,0.0,0.0
-11043,ALNATURA Erdbeeren ungesüßt (aus biologischer Landwirtschaft),4104420139404,To classify,125.0,0.01,0.7,5.4,5.4,0.1,0.0,2.2,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+11043,ALNATURA Erdbeeren ungesüßt (aus biologischer Landwirtschaft),4104420139404,TO_CLASSIFY,125.0,0.01,0.7,5.4,5.4,0.1,0.0,2.2,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 11049,Pancho Villa Authentic Mexican Fajita Kit Medium,8410076472304,/garnitures-ingredients/du-monde-entier,970.0,2.2,6.0,6.0,42.0,4.0,0.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 11052,M-Classic Lentilles aux lardons,7616800800165,/garnitures-ingredients/legumineuses-farce-pour-vol-au-vent,420.0,1.0,4.5,0.7,11.0,3.5,0.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 11058,Knorr Bouillon de Bœuf,7611100325882,/garnitures-ingredients/soupes-sauces-bouillon,20.0,1.2,0.5,0.8,0.8,0.5,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -2269,7 +2269,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 11205,M-Classic Thon Pain toast avec produit à base de thon cuit,7613269251095,/plats-cuisines/pizza-menus-snacks,1128.0,1.3,10.0,3.5,23.0,15.0,0.0,1.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 11222,Pelican Filets de carrelets,7613269291701,/produits-surgeles/poisson-fruits-de-mer,365.0,0.22,18.0,0.5,0.5,1.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 11233,MIGROS Séléction Riz Arborio ,7613312135938,/garnitures-ingredients/riz,1490.0,0.01,7.0,0.5,78.0,1.0,0.5,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-11234,Alnatura Apfelmark mit Mango,4104420033764,To classify,247.0,0.01,0.4,11.9,12.4,0.4,0.0,18.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+11234,Alnatura Apfelmark mit Mango,4104420033764,TO_CLASSIFY,247.0,0.01,0.4,11.9,12.4,0.4,0.0,18.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 11244,kisss party dark 20,7616500152359,/chocolat/chocolat,1670.0,0.05,3.0,59.0,64.0,14.0,0.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 11250,M BUDGET MAYONNAISE,7617027071567,/garnitures-ingredients/soupes-sauces-bouillon,2690.0,0.7,1.0,0.7,0.7,72.0,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 11252,M Classic Choco Sprits Savoureux biscuits dressés,7617027860093,/chocolat/biscuits-gaufres,2234.0,0.59,5.0,27.0,58.0,31.0,0.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -2412,7 +2412,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 11876,Denny's Classic Pommes Frites,7610200312143,/produits-surgeles/legumes-pommes-de-terre,788.0,0.25,2.0,0.5,26.0,8.0,0.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 11891,Agnesi Le Linguine N.10 Pâtes  de qualité supérieure,8001200030929,/garnitures-ingredients/pates,1521.0,0.01,13.0,2.5,72.0,1.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 11895,Migros Gateau aux noix de l'engadine,7616700001358,/boulangerie/boulangerie-patisserie,1990.0,0.1,6.0,26.0,56.0,25.0,10.0,1.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-11897,ALTANATURA Purée de pomme poire,4104420034549,To classify,250.0,0.01,0.5,11.0,12.0,0.5,0.0,2.2,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+11897,ALTANATURA Purée de pomme poire,4104420034549,TO_CLASSIFY,250.0,0.01,0.5,11.0,12.0,0.5,0.0,2.2,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 11901,Frey Pralinor Délicieux chocolat au lait fourré à la crème de noisette,7616500020344,/chocolat/chocolat,2420.0,0.16,8.0,43.0,46.0,40.0,0.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 11908,Bon Chef Bouillon de poule granulé,7613312034569,/garnitures-ingredients/soupes-sauces-bouillon,20.0,0.9,0.5,0.5,0.5,0.5,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 11912,Migros Bio 7 céréales,7613269352853,/mueesli-cereales/cereales,1852.0,0.45,9.0,19.0,64.0,15.0,0.0,7.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -2445,7 +2445,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 12025,Pelican Filets de saumon avec beurre aux herbes et légumes,7613269291466,/produits-surgeles/poisson-fruits-de-mer,750.0,0.4,10.0,0.5,3.0,14.0,0.0,1.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 12029,Sun Queen Mélange de baies- séchées,7613312076101,/boulangerie/ingredients-de-boulangerie,1410.0,0.1,3.0,62.0,75.0,1.0,0.0,6.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 12034,Yogo Drink Framboise,7617027913836,/produits-laitiers-oeufs/lait-boissons-lactees,382.0,0.1,3.0,16.0,16.0,1.5,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-12039,Migros Penne - Pâtes sans gluten,7613312035467,To classify,1550.0,0.03,7.0,1.0,79.0,1.5,0.0,4.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+12039,Migros Penne - Pâtes sans gluten,7613312035467,TO_CLASSIFY,1550.0,0.03,7.0,1.0,79.0,1.5,0.0,4.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 12041,Patissier Zestes de citron râpés,7610188127081,/boulangerie/ingredients-de-boulangerie,373.0,0.13,1.0,14.0,16.0,0.5,0.0,10.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 12043,M Classic Sauce curry,7616600706759,/garnitures-ingredients/soupes-sauces-bouillon,1410.0,1.7,1.5,0.5,3.0,36.0,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 12047,Wild Gibier Selvaggina Civet de chevreuil,7617027763509,/viande/gibier,413.0,1.8,14.0,2.0,8.0,1.0,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -2483,7 +2483,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 12240,Frey Noxana Crémant Chocolat noir avec noisettes,7616500012097,/chocolat/chocolat,2390.0,0.01,7.0,39.0,43.0,40.0,0.0,7.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 12250,Migros Léger Reblochon,7610200364005,/produits-laitiers-oeufs/fromages,910.0,1.3,26.0,0.5,0.5,13.0,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 12260,M-Budget Gomme à mâcher,7613269195382,/chocolat/bonbons-chewing-gum,720.0,0.01,0.4,0.1,70.0,0.0,0.0,0.8,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-12265,Sauces Traiteur,7617027877527,To classify,2540.0,0.0,1.5,0.0,4.5,66.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+12265,Sauces Traiteur,7617027877527,TO_CLASSIFY,2540.0,0.0,1.5,0.0,4.5,66.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 12267,Terrasuisse Jus de pomme filtré,7617500197562,/boissons-chaudes-froides/jus-de-fruits-de-legumes,187.0,0.01,0.0,10.0,11.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 12273,Bio Past Crème entière,7617027572750,/produits-laitiers-oeufs/creme,1406.0,0.09,3.0,3.5,3.5,35.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 12281,MIGROS SELECTION Roter Reis Camargue,7617027887588,/garnitures-ingredients/riz,1529.0,0.0,8.0,0.8,74.0,3.0,0.6,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -2501,7 +2501,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 12329,MONINI D.O.P. VAL DI MAZARA REGIONE SICILIA Olio Extra Vergine di Oliva,8005510001846,/garnitures-ingredients/ingredients-de-cuisson,3404.0,0.0,0.0,0.0,0.0,92.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 12331,Bio Pumpernickel,7610169013310,/boulangerie/pains-bio-longue-conservation,852.0,1.1,4.5,2.5,38.0,0.9,0.0,12.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 12333,M Classic Cervelas,7610200012913,/viande/saucisses,1080.0,1.9,13.0,1.0,1.0,23.0,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-12335,ALNATURA Himbeeren ungesüßt (aus biologischer Landwirtschaft),4104420112247,To classify,152.0,0.03,1.3,5.3,5.3,0.1,0.0,5.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+12335,ALNATURA Himbeeren ungesüßt (aus biologischer Landwirtschaft),4104420112247,TO_CLASSIFY,152.0,0.03,1.3,5.3,5.3,0.1,0.0,5.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 12337,Migros Sélection Cappucino,7613312132029,/aperitif/noix-grillees,2670.0,0.0,13.0,7.0,11.0,59.0,4.0,10.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 12342,Galbani Mozzarella,8000430133257,/produits-laitiers-oeufs/fromages,1043.0,0.0,18.0,0.0,2.0,19.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 12356,Léger Choco drink,22087164,/produits-laitiers-oeufs/lait-boissons-lactees,160.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -2519,16 +2519,16 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 12402,ICE TEA Unsweetened Citron,7613312035337,/boissons-chaudes-froides/the-glace,2.0,0.0,0.0,0.5,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 12404,Polli Bruschetta pomodori secchi,8001310120305,/garnitures-ingredients/antipasti,1396.0,0.95,2.8,3.6,4.2,33.4,0.0,5.2,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 12406,Escalopes de tofu aux herbes,7610745640237,/plats-cuisines/pizza-menus-snacks,1150.0,1.4,15.0,0.5,11.0,19.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-12408,Alnatura Nouilles animaux de la ferme,4104420143708,To classify,1528.0,0.02,12.0,0.2,73.0,1.5,0.6,3.4,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+12408,Alnatura Nouilles animaux de la ferme,4104420143708,TO_CLASSIFY,1528.0,0.02,12.0,0.2,73.0,1.5,0.6,3.4,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 12411,Red Bull Energy Drink Tropical,90415760,/boissons-chaudes-froides/boissons-energetiques,198.0,0.1,0.0,11.0,11.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,2.0,2.0,8.0,0.0,2.0
 12426,Malbuner Swiss Corned Beef,7613292105174,/garnitures-ingredients/viande-en-conserve,450.0,0.0,16.0,0.0,1.5,4.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 12430,Alnatura Apfel Chips Chips de pomme,4104420024625,/boulangerie/ingredients-de-boulangerie,1405.0,0.01,3.3,64.0,69.0,0.9,0.0,12.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 12434,Midor Milk'is,7617400042528,/produits-surgeles/glace-entremets,800.0,0.2,3.5,23.0,24.0,9.0,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-12436,Migros Produit à tartiner à l'abricot,7613312061091,To classify,796.0,0.06,0.7,41.0,45.0,0.5,0.0,1.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+12436,Migros Produit à tartiner à l'abricot,7613312061091,TO_CLASSIFY,796.0,0.06,0.7,41.0,45.0,0.5,0.0,1.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 12438,MIMARE NIÇOISE,7613269331063,/garnitures-ingredients/poisson-en-conserve,358.0,1.4,8.0,3.5,8.0,2.0,0.0,1.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 12440,Sid's MixMe Chococream,7613269451303,/produits-laitiers-oeufs/dessert,780.0,0.1,3.5,23.0,27.0,7.0,0.0,0.9,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 12442,Migros Sélection Hule de Graines de Courage de Styrie,7613269221562,/garnitures-ingredients/ingredients-de-cuisson,3367.0,0.0,0.0,0.0,0.0,91.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-12447,Migros Sélection Noix de Macadamia Au Chocolat Au Lait,7613269196365,To classify,2450.0,0.13,7.0,39.0,41.0,43.0,0.0,5.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+12447,Migros Sélection Noix de Macadamia Au Chocolat Au Lait,7613269196365,TO_CLASSIFY,2450.0,0.13,7.0,39.0,41.0,43.0,0.0,5.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 12452,Purée de pommes de terre Mifloc,7616800823706,/garnitures-ingredients/garnitures-bio,485.0,0.5,2.0,1.5,16.0,4.5,0.0,1.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 12454,Léger JOGHURT DRINK Framboise,22139771,/produits-laitiers-oeufs/lait-boissons-lactees,160.0,0.1,3.5,6.0,6.0,0.1,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 12462,Migros Namaste India Sauce froide aux oignons et menthe,7613312071014,/garnitures-ingredients/du-monde-entier,607.0,0.55,1.0,30.0,34.0,0.5,0.0,1.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -2536,7 +2536,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 12474,Alfredo Perle di Mozzarella,22135919,/produits-laitiers-oeufs/fromages,1015.0,0.4,19.0,1.5,1.5,18.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 12478,M-Classic Tartelettes ratatouille,7613312004760,/produits-surgeles/aperitif-dessert,680.0,1.1,4.0,4.0,18.0,8.0,0.0,1.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 12480,Alnatura Sélection - Assortiment de chocolats de Belgique,4104420132627,/chocolat/chocolat,2300.0,0.1,7.8,38.4,39.7,39.6,0.0,3.4,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-12484,Alnatura Aceto Balsamico di Modena,4104420030923,To classify,500.0,0.02,0.4,17.0,29.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+12484,Alnatura Aceto Balsamico di Modena,4104420030923,TO_CLASSIFY,500.0,0.02,0.4,17.0,29.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 12494,M Classic Amandes émondées,7610200010490,/boulangerie/ingredients-de-boulangerie,2640.0,0.1,21.0,4.5,14.0,53.0,0.0,10.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 12501,Fratelli Beretta Jambon de Parme,8007660473023,/viande/viande-sechee-jambon,1038.0,5.0,28.0,0.5,0.5,15.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 12503,Buon Gusto Cannelloni Fiorentina Pâtes farcies d'épinards- ricotta et brocoli,7613312020661,/produits-surgeles/plats-cuisines,550.0,1.0,6.0,2.5,15.0,5.0,0.0,0.8,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -2589,7 +2589,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 12751,Mclassic Crunchy Choco,7617027808156,/mueesli-cereales/mueesli,1800.0,0.45,8.0,22.0,63.0,14.0,0.0,9.0,0.0,0.7,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 12753,Agnesi Pesto alla calabrese,80525400,/garnitures-ingredients/soupes-sauces-bouillon,1219.0,1.2,3.6,8.3,11.0,26.0,0.0,1.1,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 12756,Migros Bio Müesli aux fruits,7613312013489,/mueesli-cereales/cereales,1403.0,0.0,8.0,22.0,60.0,4.5,0.9,10.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-12758,ALNATURA Mélange de baies non sucrées (de l'agriculture biologique),4104420112483,To classify,178.0,0.01,0.9,7.8,7.8,0.5,0.0,3.8,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+12758,ALNATURA Mélange de baies non sucrées (de l'agriculture biologique),4104420112483,TO_CLASSIFY,178.0,0.01,0.9,7.8,7.8,0.5,0.0,3.8,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 12764,Rio Mare Thon au naturel,80040446,/garnitures-ingredients/poisson-en-conserve,410.0,1.3,23.0,0.0,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 12767,Anna's BEST Gnochetti di patate,7613269259619,/plats-cuisines/pizza-menus-snacks,564.0,1.2,4.5,4.0,26.0,1.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 12770,SANPELLEGRINO ARANCIATA,8002270816475,/boissons-chaudes-froides/boissons-daperitif,153.0,0.0,0.0,8.7,8.7,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -2736,7 +2736,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 13425,Appel Hering ,4020500956412,/garnitures-ingredients/poisson-en-conserve,844.0,0.78,11.6,4.5,5.5,14.5,0.0,1.1,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 13429,M-Classic Mousse de raifort,7617027862028,/poisson-fruits-de-mer/traiteur,630.0,1.5,5.0,11.0,18.0,6.0,0.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 13431,Frey Les Délices Brownie,7616500645479,/chocolat/chocolat,2240.0,0.09,6.0,52.0,54.0,32.0,0.0,4.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-13438,Alnatura Cassolette de quinoa aux légumes,4104420142688,To classify,850.0,0.71,5.4,2.6,25.3,8.0,0.0,4.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+13438,Alnatura Cassolette de quinoa aux légumes,4104420142688,TO_CLASSIFY,850.0,0.71,5.4,2.6,25.3,8.0,0.0,4.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 13443,Calzone poulet,7613312050378,/produits-surgeles/viande,830.0,1.5,14.0,1.0,11.0,11.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 13447,Anna's Best Spatzli,7613269524519,/plats-cuisines/pizza-menus-snacks,578.0,0.85,5.0,0.5,27.0,0.8,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 13452,Chapeaux de morilles séchés,7613312016732,/garnitures-ingredients/champignons,960.0,0.1,20.0,0.8,4.0,2.5,0.6,57.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -2761,7 +2761,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 13542,Vanille : Crème Glacée,7617400040029,/produits-surgeles/glace-entremets,1123.0,0.12,3.5,23.0,23.0,18.0,0.0,0.7,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 13544,M-Classic Spearmint,7613312098356,/chocolat/bonbons-chewing-gum,730.0,0.01,0.1,0.0,71.0,0.0,0.0,0.6,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 13546,M Classic : Gomme à mâcher : Spearmint,7616500636224,/chocolat/bonbons-chewing-gum,730.0,0.0,0.1,0.0,71.0,0.0,0.0,0.6,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-13551,ALNATURA COCOS Chocolat au lait bio fourré à la noix de coco,42100522,To classify,2249.0,0.13,4.5,41.0,41.4,38.0,0.0,7.8,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+13551,ALNATURA COCOS Chocolat au lait bio fourré à la noix de coco,42100522,TO_CLASSIFY,2249.0,0.13,4.5,41.0,41.4,38.0,0.0,7.8,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 13555,Mbudget Saucisse Lyon,7617027948814,/viande/produits-de-charcuterie,1100.0,2.0,12.0,1.0,1.0,24.0,9.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 13557,M Classic CERVELAS,7610200012937,/viande/saucisses,1080.0,1.9,13.0,1.0,1.0,23.0,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 13568,Migros sirop Menthe,7613269357537,/boissons-chaudes-froides/sirop-soda,187.0,0.0,0.0,11.0,11.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -2772,7 +2772,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 13594,CANTADOU Quatre Poivres,3073780824637,/produits-laitiers-oeufs/fromages,1310.0,1.4,6.5,2.5,3.0,31.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 13596,M\u0026M's,4011100015470,/chocolat/chocolat,2140.0,0.09,9.7,53.8,59.2,25.3,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 13606,Hamburger 8 x 90g,7610200058560,/produits-surgeles/viande,880.0,1.2,16.0,1.0,3.0,15.0,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-13610,Alnatura Tortellini Pâtes bio farcies aux légumes,4104420014701,To classify,1257.0,0.88,8.3,2.5,54.0,4.6,0.0,3.4,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+13610,Alnatura Tortellini Pâtes bio farcies aux légumes,4104420014701,TO_CLASSIFY,1257.0,0.88,8.3,2.5,54.0,4.6,0.0,3.4,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 13615,M Classic Mini Tartelettes à base de pâte à gâteaux,7613269191698,/chocolat/specialites,2269.0,0.6,7.0,0.9,53.0,33.0,0.0,5.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 13619,gelvite Sucre gélifiant,7610200010186,/boulangerie/ingredients-de-boulangerie,1680.0,0.0,0.0,98.0,98.0,0.5,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 13625,PRÉSIDENT Camembert L'ORIGINAL,3228023920090,/produits-laitiers-oeufs/fromages,1100.0,1.3,19.0,0.1,0.1,21.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -2826,7 +2826,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 13868,Singapore noodles with chicken,7613269684268,/plats-cuisines/pizza-menus-snacks,561.0,1.2,7.0,2.0,12.0,6.0,0.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 13876,Migros Cristal  ,7610278042508,/boulangerie/ingredients-de-boulangerie,1700.0,0.0,0.0,100.0,100.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 13878,MIGROS PARTY BREZEL SALÉS ,7617027016322,/aperitif/biscuits-aperitifs,1630.0,3.8,12.0,4.0,74.0,4.0,0.0,2.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-13880,Twïn Milk,7617014166917,To classify,240.0,0.09,2.5,5.0,6.0,2.5,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+13880,Twïn Milk,7617014166917,TO_CLASSIFY,240.0,0.09,2.5,5.0,6.0,2.5,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 13888,Migros Millet Bio,7610200044488,/garnitures-ingredients/garnitures-bio,1514.0,0.01,10.0,2.0,69.0,4.0,0.0,4.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 13890,Pad Thaï Aux Crevettes,7640136230907,/plats-cuisines/pizza-menus-snacks,630.0,0.0,6.0,3.5,24.0,3.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 13892,Pancho Villa AUTHENTIC MEXICAN Hot Mex SAUCE,22137890,/garnitures-ingredients/du-monde-entier,168.0,1.5,0.9,1.5,7.0,0.5,0.0,3.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -2867,7 +2867,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 14034,WILD GIBIER SELVAGGINA Civet de cerf aux champignons,7617027763646,/viande/gibier,342.0,1.4,13.0,0.7,3.5,1.5,0.8,0.8,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 14036,Vegi escalope viennoise végétarienne,7613269752103,/plats-cuisines/pizza-menus-snacks,924.0,1.2,14.0,1.0,14.0,11.1,1.7,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 14038,Chop Stick Asian Food Sambal Oelek Préparation d'épices,7613269027430,/garnitures-ingredients/du-monde-entier,159.0,10.8,1.0,1.5,4.5,1.0,0.0,3.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-14067,Alnatura Conchiglie à l'épeautre,4104420063341,To classify,1518.0,0.0,11.9,2.7,72.4,1.7,0.0,2.8,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+14067,Alnatura Conchiglie à l'épeautre,4104420063341,TO_CLASSIFY,1518.0,0.0,11.9,2.7,72.4,1.7,0.0,2.8,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 14071,M-Classic Griottes,7617027071420,/garnitures-ingredients/fruits-en-conserve,415.0,0.02,0.7,22.0,23.0,0.5,0.5,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 14073,MIDOR petit beurre,7617400038644,/chocolat/biscuits-gaufres,2300.0,0.4,7.0,35.0,57.0,32.0,0.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 14075,MIDOR ICE TEA pêche,7613312031391,/produits-surgeles/glace-entremets,345.0,0.01,0.5,20.0,20.0,0.5,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -2933,16 +2933,16 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 14398,Anna's BEST Cerises,7617027631174,/plats-cuisines/pizza-menus-snacks,260.0,0.0,0.9,6.0,13.0,0.5,0.0,1.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 14400,Norway Truite saumonée fumée,7617027757706,/poisson-fruits-de-mer/traiteur,807.0,0.0,0.0,0.5,0.5,11.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 14409,Kikkoman Sesame Dressinf,8715035400306,/garnitures-ingredients/du-monde-entier,1658.0,2.8,4.4,13.0,13.0,36.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-14411,Migros Cafe De Paris Beurre,7617027582421,To classify,2383.0,2.5,1.5,2.5,3.5,62.0,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+14411,Migros Cafe De Paris Beurre,7617027582421,TO_CLASSIFY,2383.0,2.5,1.5,2.5,3.5,62.0,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 14413,Boursin Poivre noir,3175460000062,/produits-laitiers-oeufs/fromages,1680.0,1.3,8.5,2.5,3.0,40.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 14421,MIGROS BIO 4 oeufs bio suisses,7610200312075,/produits-laitiers-oeufs/oeufs,650.0,0.33,13.0,0.5,1.0,11.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 14428,MIGROS Etoiles au beurre,7617400030075,/chocolat/jours-de-fetes-evenements,2305.0,0.35,8.0,28.0,58.0,31.0,0.0,4.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 14432,MIGROS BIO Farine à l'épeautre pur complète,7610177003228,/boulangerie/farine,1457.0,0.03,16.0,2.0,60.0,2.5,0.0,9.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 14437,Feinkost Dittmann Teufli,4006099655806,/garnitures-ingredients/antipasti,768.0,2.53,3.9,3.2,3.3,16.6,0.0,2.7,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-14442,ALNATURA Spaghetti à l'épeautre complet,4104420063167,To classify,1525.0,0.01,13.0,0.8,66.0,3.1,0.0,8.4,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+14442,ALNATURA Spaghetti à l'épeautre complet,4104420063167,TO_CLASSIFY,1525.0,0.01,13.0,0.8,66.0,3.1,0.0,8.4,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 14454,ALNAVIT Grünling Bio Superriegel,42305552,/mueesli-cereales/barres-de-cereales,0.0,0.05,10.0,43.0,0.0,0.0,0.0,8.6,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 14456,Midor : Liaison pour tartes sucrées,7617400020441,/boulangerie/ingredients-de-boulangerie,572.0,0.02,3.0,16.0,23.0,3.5,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-14461,7613312013052,7613312013052,To classify,745.0,0.78,10.0,0.5,16.0,8.0,0.0,0.9,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+14461,7613312013052,7613312013052,TO_CLASSIFY,745.0,0.78,10.0,0.5,16.0,8.0,0.0,0.9,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 14468,kiri à la crème de lait,3073780792752,/produits-laitiers-oeufs/fromages,1260.0,1.5,8.0,2.0,2.0,29.5,20.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 14470,Migros Bio Pain croustillant,7617027056243,/boulangerie/biscottes-pain-croustillant,1431.0,1.3,11.0,4.0,61.0,1.5,0.0,21.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 14478,Paddy Pétales de blé complets,7610200096968,/mueesli-cereales/cereales,1605.0,0.55,8.0,36.0,75.0,3.5,0.0,8.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -2977,7 +2977,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 14610,Glacetta panna cotta ice cake,7617400047837,/produits-surgeles/glace-entremets,776.0,0.0,0.0,25.0,25.0,8.0,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 14612,torino Lait,7610008717508,/chocolat/chocolat,2407.0,0.01,8.0,47.0,51.0,37.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 14616,Migros Flan Caramel,7616600704823,/produits-laitiers-oeufs/dessert,500.0,0.1,3.0,19.0,22.0,2.0,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-14623,Alnatura Bio Ganze Nuss ,4104420144248,To classify,2524.0,0.17,8.9,36.0,40.0,45.0,0.0,3.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+14623,Alnatura Bio Ganze Nuss ,4104420144248,TO_CLASSIFY,2524.0,0.17,8.9,36.0,40.0,45.0,0.0,3.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 14634,Migros Sélection Sirup Aux Coings Et Aux Fleurs D'Oranger,7613269190950,/boissons-chaudes-froides/sirop-soda,196.0,0.0,0.5,11.0,11.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 14638,Valflora Lait,22125880,/produits-laitiers-oeufs/lait-boissons-lactees,280.0,0.1,3.5,5.0,5.0,3.6,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 14648,M Classic : Pilchards : Sardines à la sauce tomate,7610200027078,/garnitures-ingredients/poisson-en-conserve,690.0,0.0,14.0,1.0,2.5,11.0,0.0,0.8,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -2996,7 +2996,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 14707,Larry's Citrus-mix,7613269295853,/chocolat/bonbons-chewing-gum,996.0,0.0,0.0,0.5,97.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 14709,Migros Bio Schorle pomme trouble,7617500197661,/boissons-chaudes-froides/jus-de-fruits-de-legumes,136.0,0.01,0.0,7.0,8.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 14710,Bouillon - de poule (10g),7613312037423,/garnitures-ingredients/soupes-sauces-bouillon,25.0,1.0,0.5,0.5,0.5,0.5,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-14712,ALNATURA Heidelbeeren ungesüßt (aus biologischer Landwirtschaft),4104420139428,To classify,165.0,0.03,0.6,7.4,7.4,0.1,0.0,3.2,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+14712,ALNATURA Heidelbeeren ungesüßt (aus biologischer Landwirtschaft),4104420139428,TO_CLASSIFY,165.0,0.03,0.6,7.4,7.4,0.1,0.0,3.2,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 14721,Prima Ramoneur,7613269296034,/chocolat/bonbons-chewing-gum,1670.0,0.0,0.0,69.0,98.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 14724,Alnatura Obstsalat,42096238,/mueesli-cereales/barres-de-cereales,1670.0,0.05,4.7,48.5,62.7,13.2,0.0,4.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 14727,MIGROS Budget FILETS GOURMET Á LA BORDELAISE,7613269184645,/produits-surgeles/poisson-fruits-de-mer,699.0,0.75,13.0,0.6,6.0,10.0,0.0,0.8,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -3009,14 +3009,14 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 14759,M-Classic Frites au four,7613269180128,/produits-surgeles/legumes-pommes-de-terre,640.0,0.0,2.5,0.5,23.0,5.0,0.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 14772,A.Vogel : Trocomare : Sel marin aux légumes et aux fines herbes,7610313012213,/garnitures-ingredients/epices-herbes,90.0,93.6,0.5,1.0,4.5,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 14777,SANPELLECRINO CHINO,8002270956478,/boissons-chaudes-froides/boissons-daperitif,197.0,0.05,0.0,11.1,11.1,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-14781,Alnatura Mais Mini,4104420135222,To classify,1691.0,2.2,8.0,3.1,77.0,5.9,0.0,3.4,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+14781,Alnatura Mais Mini,4104420135222,TO_CLASSIFY,1691.0,2.2,8.0,3.1,77.0,5.9,0.0,3.4,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 14785,Migros Boulgour ,7610200305442,/garnitures-ingredients/garnitures-bio,1430.0,0.0,11.0,1.5,66.0,1.2,0.0,10.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 14791,Viande hachée avec cornettes,7610200383051,/plats-cuisines/pizza-menus-snacks,514.0,1.0,8.0,0.5,15.0,3.0,0.0,1.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 14793,Anna's Best Légumes à poëler,7617027633109,/plats-cuisines/pizza-menus-snacks,108.0,0.04,1.0,3.0,3.5,0.5,0.0,2.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-14797,Alnatura Origin Filets de saumon,4104420112407,To classify,836.0,0.1,21.0,0.0,0.1,12.9,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+14797,Alnatura Origin Filets de saumon,4104420112407,TO_CLASSIFY,836.0,0.1,21.0,0.0,0.1,12.9,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 14804,Longobardi Pomodori pelati Triturati ,8002510018003,/garnitures-ingredients/tomates-en-conserve,100.0,0.0,1.5,4.5,4.5,0.5,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 14809,Balance Préparation d'huile végétale ,7617300700337,/garnitures-ingredients/ingredients-de-cuisson,3370.0,0.5,0.0,0.0,0.0,91.0,0.0,0.0,0.0,0.0,36.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-14830,Migros Beurre aux Herbes,7617027582179,To classify,2375.0,1.5,1.0,0.7,3.5,62.0,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+14830,Migros Beurre aux Herbes,7617027582179,TO_CLASSIFY,2375.0,1.5,1.0,0.7,3.5,62.0,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 14835,Toast Quinoa Terrasuisse,7613269733980,/boulangerie/pains-de-mie,1110.0,1.4,10.0,4.0,46.0,3.5,0.0,3.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 14839,Léger - Frites au four,7613269179528,/produits-surgeles/legumes-pommes-de-terre,620.0,0.03,2.0,0.0,27.0,3.0,0.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 14849,M Classic Magdalenas cacao,7617027000215,/chocolat/biscuits-gaufres,1783.0,0.73,5.0,24.0,60.0,18.0,0.0,1.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -3025,7 +3025,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 14878,XL Burger  4 x 140g  viande de boeuf,7617100200334,/produits-surgeles/viande,810.0,1.9,19.0,4.0,7.0,10.0,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 14895,Alnatura Dinkel Mehl Type 1050,4104420016941,/boulangerie/farine,1.46,0.01,12.1,1.4,67.2,1.8,0.0,5.2,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 14904,M Classic Sucre de raisin au goût de framboise,7617027010481,/chocolat/bonbons-chewing-gum,1526.0,0.0,0.0,87.0,88.0,0.8,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,240.0,0.0,0.0,0.0,0.0,0.0
-14907,ALTANATURA Boules soufflées au miel,4104420057227,To classify,1561.0,0.03,10.0,0.9,75.0,1.9,0.0,5.7,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+14907,ALTANATURA Boules soufflées au miel,4104420057227,TO_CLASSIFY,1561.0,0.03,10.0,0.9,75.0,1.9,0.0,5.7,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 14911,Nissin Soba Curry Nouilles Sautées,5997523324339,/garnitures-ingredients/du-monde-entier,820.0,0.9,4.3,2.9,24.1,8.6,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 14913,Alnatura Mini galettes choco épeautre,4104420057500,/boulangerie/biscottes-pain-croustillant,2002.0,0.1,9.3,24.0,58.0,22.0,0.0,5.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 14922,Migros Mini Flûtes Beurre,7616700028805,/aperitif/biscuits-aperitifs,2000.0,2.2,13.0,6.0,55.0,22.0,0.0,3.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -3160,7 +3160,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 15497,Migros BIO Becs de plumes,7613269373452,/garnitures-ingredients/pates,1456.0,0.03,12.0,2.5,66.0,2.0,0.0,7.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 15499,Kiss big,7616500152342,/chocolat/chocolat,1690.0,0.05,3.0,59.0,63.0,15.0,0.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 15509,Gomz Oursons de gomme XL,7613269294665,/chocolat/bonbons-chewing-gum,1435.0,0.01,6.0,62.0,77.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-15516,ALNATURA Falafel sans gluten,4104420134584,To classify,581.0,0.8,8.2,1.0,18.0,2.5,0.0,5.4,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+15516,ALNATURA Falafel sans gluten,4104420134584,TO_CLASSIFY,581.0,0.8,8.2,1.0,18.0,2.5,0.0,5.4,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 15520,MIGROS : Tranche tourte kirsch,7616700094268,/boulangerie/boulangerie-patisserie,1592.0,0.2,4.5,33.0,41.0,22.0,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 15522,MIGROS BIO Limonade citron,7617500194707,/boissons-chaudes-froides/boissons-sucrees,153.0,0.0,0.0,9.0,9.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 15524,Alnatura Jus de pomme bio non filtré,4104420071728,/boissons-chaudes-froides/jus-de-fruits-de-legumes,216.0,0.01,0.2,11.5,12.0,0.1,0.0,0.1,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -3172,7 +3172,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 15556,Tourte,7616700103434,/boulangerie/boulangerie-patisserie,720.0,0.43,5.0,23.0,26.0,5.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 15567,Black Bean Burger ,7613312124239,/produits-surgeles/plats-cuisines,766.0,1.2,8.0,3.0,23.0,4.5,0.5,9.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 15569,Migros SELECTION CANTUCCI CON GOCCE DI CIOCCOLATO,7613312122662,/chocolat/specialites,1889.0,0.22,8.0,39.0,64.0,17.0,10.0,4.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-15571,Sauce tomate bio au basilic,4104420130005,To classify,149.0,0.5,1.1,3.5,4.1,1.1,0.0,2.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+15571,Sauce tomate bio au basilic,4104420130005,TO_CLASSIFY,149.0,0.5,1.1,3.5,4.1,1.1,0.0,2.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 15575,M Classic Toscana Pizza avec produit à base de viande de dinde poivrons et champignons de Paris,7616700007701,/produits-surgeles/pizza,792.0,1.3,12.0,1.5,23.0,5.0,0.0,1.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 15583,MIGROS BIO Lentilles vertes,7613269317319,/garnitures-ingredients/garnitures-bio,1380.0,0.5,24.0,1.0,50.0,1.0,0.0,11.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 15586,Stripes de poulet,7613312015742,/produits-surgeles/viande,820.0,1.3,16.0,1.0,15.0,8.0,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -3222,7 +3222,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 15814,Migros Pâtisserie en pâte brisée fourrée au citron,7616700035148,/boulangerie/boulangerie-patisserie,1772.0,0.18,2.5,49.0,71.0,14.0,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 15816,Migros Bio Raisins sultanines secs,7610200254245,/boulangerie/ingredients-de-boulangerie,1390.0,0.1,3.0,59.0,75.0,1.0,0.0,3.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 15820,Frey Cognac,7616500649668,/chocolat/chocolat,2060.0,0.2,7.0,60.0,61.0,24.0,0.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-15822,Twïn Latte Macchiato,7617014166863,To classify,160.0,0.0,0.0,3.5,5.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+15822,Twïn Latte Macchiato,7617014166863,TO_CLASSIFY,160.0,0.0,0.0,3.5,5.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 15827,SUISSE GARANTIE FLORALP,7612300010189,/produits-laitiers-oeufs/beurre,3050.0,0.1,0.5,0.0,0.5,82.0,0.0,0.0,0.0,0.0,2.0,0.0,800.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0
 15831,Originario potage,7610200010858,/garnitures-ingredients/riz,1470.0,0.0,7.0,0.0,78.0,0.5,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 15833,Optigal Cervelas de volaille,7610200098641,/viande/produits-de-charcuterie,0.0,1.7,13.0,1.5,3.0,17.0,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -3248,7 +3248,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 15947,M Budget Cottage Cheese Préparation au fromage frais quart-gras,7616600708111,/produits-laitiers-oeufs/fromages,370.0,1.0,10.0,2.0,3.0,4.0,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 15949,Anna's Best Spätzli avec oeufs d'élevage en plein air,7613269507970,/plats-cuisines/pizza-menus-snacks,698.0,1.0,7.0,0.6,29.0,2.0,0.0,1.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 15955,M-Classic Frelitta Bicolor,7613269188612,/petit-dejeuner/pates-a-tartiner,2341.0,0.23,4.0,58.0,59.0,34.0,0.0,1.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-15959,ALNATURA Raps Ol,4104420031883,To classify,3404.0,0.01,0.5,0.5,0.5,92.0,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+15959,ALNATURA Raps Ol,4104420031883,TO_CLASSIFY,3404.0,0.01,0.5,0.5,0.5,92.0,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 15963,Migros Mèlange pour panure prêt à l'emploi- assaisonné,7613312085028,/garnitures-ingredients/epices-herbes,1383.0,13.0,13.0,7.0,61.0,2.5,0.0,4.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 15965,M Classic Haricots Borlotti,7610200026347,/garnitures-ingredients/legumineuses-haricots-verts-seches,1270.0,0.1,22.0,1.5,41.0,1.5,0.0,18.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 15971,M-Classic Fraise,7610200371034,/produits-laitiers-oeufs/sere,530.0,0.1,6.0,19.0,20.0,2.4,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -3291,7 +3291,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 16133,Farmer : Soft Choc : Natural,7613269185772,/mueesli-cereales/barres-de-cereales,2030.0,0.34,10.0,40.0,57.0,23.0,0.0,5.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 16135,Namaste India Curry crémeux aux tomates et beurre,7613312071038,/garnitures-ingredients/du-monde-entier,574.0,0.8,1.5,7.0,10.0,10.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 16137,Subito Riz Casimir,7613269301202,/plats-cuisines/plats-cuisines,1570.0,3.8,7.0,5.0,75.0,4.0,0.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-16141,Alnatura Pesto Verde ,4104420031807,To classify,2510.0,2.4,7.8,2.8,8.1,60.0,11.0,2.4,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+16141,Alnatura Pesto Verde ,4104420031807,TO_CLASSIFY,2510.0,2.4,7.8,2.8,8.1,60.0,11.0,2.4,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 16145,Tofu au basilic,42315759,/plats-cuisines/pizza-menus-snacks,774.0,1.4,17.0,0.5,1.6,12.0,0.0,1.7,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 16153,Soupe de tomate,7613312051979,/garnitures-ingredients/soupes-sauces-bouillon,220.0,0.94,1.0,4.0,5.0,3.0,0.0,0.9,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 16157,SUNQUEEN MELANGE EXOTIQUE,7617027039178,/boulangerie/ingredients-de-boulangerie,1184.0,0.05,1.5,5.7,6.2,2.5,0.0,1.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -3358,7 +3358,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 16443,ELSA DESSERT TRADITION Crème Café,7613269307761,/produits-laitiers-oeufs/dessert,490.0,0.2,3.0,13.0,16.0,4.5,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 16445,Migros Chocolat Gaufrettes,7617400037951,/chocolat/biscuits-gaufres,2120.0,0.4,5.0,37.0,64.0,25.0,0.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 16449,Fromage pour salade,7613269407560,/produits-laitiers-oeufs/fromages,1240.0,3.0,20.0,0.5,0.5,24.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-16451,Alnatura Maïs,4104420034365,To classify,358.0,0.35,3.0,5.2,13.0,1.6,0.0,3.3,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+16451,Alnatura Maïs,4104420034365,TO_CLASSIFY,358.0,0.35,3.0,5.2,13.0,1.6,0.0,3.3,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 16455,Leerdammer Schwarzer Pfeffer Chili,3073781053746,/produits-laitiers-oeufs/fromages,1480.0,1.6,23.0,1.0,1.0,29.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 16463,kisss party  mousse au sucre- chocolat et gaufrette,7616500151437,/chocolat/chocolat,1670.0,0.05,3.0,54.0,64.0,14.0,0.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 16474,Hoch Past Drink,7610200373328,/produits-laitiers-oeufs/lait-boissons-lactees,240.0,0.1,3.5,5.0,5.0,2.6,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -3377,14 +3377,14 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 16517,Migros Tourte St.-Honore,7613269421696,/boulangerie/boulangerie-patisserie,1028.0,0.48,3.5,12.0,24.0,15.0,0.0,0.7,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 16519,7610097200486,7610097200486,/boissons-chaudes-froides/boissons-sucrees,90.0,0.02,0.0,5.0,5.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,12.0,0.0,0.0,0.0,0.0,0.0
 16524,ICE TEA péche,7616800204116,/boissons-chaudes-froides/the-glace,140.0,0.03,0.0,8.0,8.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-16525,Migros Sélection Confiture De Pêches Et Maracuja,7613312024553,To classify,961.0,0.0,0.5,56.0,56.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+16525,Migros Sélection Confiture De Pêches Et Maracuja,7613312024553,TO_CLASSIFY,961.0,0.0,0.5,56.0,56.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 16527,Migros Bio Citron Yogourt,7616600708906,/produits-laitiers-oeufs/yogourt,430.0,0.1,3.5,14.0,14.0,3.5,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 16531,NENDAZ Piche,7617027064378,/boissons-chaudes-froides/eau-aromatisee,68.0,0.0,0.0,4.0,4.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 16538,Délice pollo,7610200086402,/produits-surgeles/viande,770.0,1.5,15.0,3.0,13.0,8.0,0.0,0.7,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 16542,CONDY Concombres suisses,7613269333647,/garnitures-ingredients/legumes-legumes-au-vinaigre,171.0,1.8,0.6,7.0,8.0,0.5,0.0,0.8,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 16544,Migros Bio Amandes moulues,7610200319241,/boulangerie/ingredients-de-boulangerie,2420.0,0.1,21.0,4.0,9.0,49.0,0.0,12.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-16548,Alnatura Tahin Sesammus Purée de sésame,4104420177673,To classify,2716.0,0.06,21.0,0.6,6.0,59.0,9.1,9.2,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-16550,ALNATURA Tahin Purée de sésame,4104420133501,To classify,2726.0,0.03,21.0,0.6,6.0,59.0,0.0,9.2,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+16548,Alnatura Tahin Sesammus Purée de sésame,4104420177673,TO_CLASSIFY,2716.0,0.06,21.0,0.6,6.0,59.0,9.1,9.2,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+16550,ALNATURA Tahin Purée de sésame,4104420133501,TO_CLASSIFY,2726.0,0.03,21.0,0.6,6.0,59.0,0.0,9.2,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 16554,Chop Stick Asian Food Nouilles de froment à la corete potagère,7613312058367,/garnitures-ingredients/du-monde-entier,1465.0,1.5,10.0,0.9,73.0,0.7,0.0,3.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 16556,Amaretti Biscuits aux amandes,7613269458906,/boulangerie/boulangerie-patisserie,1890.0,0.0,10.0,58.0,58.0,19.0,2.0,4.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 16558,Migros Bio Mélange de graines,7613269203056,/garnitures-ingredients/ingredients-de-cuisson,2370.0,0.08,28.0,1.5,8.0,45.0,0.0,12.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -3405,7 +3405,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 16619,Rapelli SALAMI DE BOEUF 100% Viande de boeuf,7617027792127,/viande/saucisses,1314.0,3.8,26.0,1.0,1.0,23.0,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 16621,FARMER FLAKES Chocolat,7613269356929,/mueesli-cereales/cereales,1677.0,0.65,9.0,24.0,68.0,8.0,0.0,9.0,0.0,1.0,0.0,180.0,0.0,0.0,0.0,1.3,5.5,15.0,1.3,2.3
 16623,Optigal Volaille Suisse Cipollata de volaille,7610200311320,/viande/produits-de-charcuterie,900.0,2.1,12.0,1.5,2.0,18.0,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-16625,Alnatura Bio Apfelmark Purée de pomme cassis,4104420034563,To classify,229.0,0.01,0.5,11.0,11.0,0.5,0.0,2.2,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+16625,Alnatura Bio Apfelmark Purée de pomme cassis,4104420034563,TO_CLASSIFY,229.0,0.01,0.5,11.0,11.0,0.5,0.0,2.2,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 16633,M-Classic Compote de pommes sans sucre ajoutés,7617027845571,/garnitures-ingredients/fruits-en-conserve,276.0,0.0,0.5,14.0,15.0,0.5,0.0,1.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 16635,Saitaku Simply Japanes Sushi Mamenort Coloured Soy Sheets,5060194791721,/garnitures-ingredients/du-monde-entier,1780.0,3.0,37.0,1.9,14.0,23.0,3.7,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 16639,Pancho Villa Salsa Mexicana Sauce douce avec des tomates,8410076420992,/garnitures-ingredients/du-monde-entier,300.0,1.5,2.0,10.0,14.0,0.5,0.0,2.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -3460,12 +3460,12 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 16874,Melissosan PASTILLES POUR LA GORGE,7610167695006,/chocolat/bonbons-chewing-gum,940.0,0.0,9.0,0.5,70.0,0.5,0.0,7.0,0.0,0.0,0.0,0.0,0.0,0.0,128.0,0.0,0.0,0.0,0.0,0.0
 16878,M-Classic Orangensaft,7613312052358,/boissons-chaudes-froides/jus-de-fruits-de-legumes,188.0,0.0,0.5,9.0,11.0,0.5,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 16880,M Classic Fraise Joghurt,22016133,/produits-laitiers-oeufs/yogourt,400.0,0.1,3.0,14.0,14.0,3.0,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-16884,Alnatura nouilles sautées aux légumes,4104420144125,To classify,778.0,1.0,5.4,1.8,27.0,5.7,0.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-16887,Alnatura Tomates en morceaux Nature,4104420031289,To classify,108.0,0.1,1.5,4.0,4.0,0.2,0.0,0.9,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+16884,Alnatura nouilles sautées aux légumes,4104420144125,TO_CLASSIFY,778.0,1.0,5.4,1.8,27.0,5.7,0.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+16887,Alnatura Tomates en morceaux Nature,4104420031289,TO_CLASSIFY,108.0,0.1,1.5,4.0,4.0,0.2,0.0,0.9,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 16891,Extra : Confiture- Framboises,7616800101262,/petit-dejeuner/confitures,1060.0,0.05,0.5,59.0,61.0,0.5,0.0,1.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 16905,Terrasuisse Toast garniture,7613269340386,/viande/viande-sechee-jambon,460.0,2.0,17.0,1.5,1.5,4.0,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 16907,Maître Pierre cuisinier Forestière,3515750003814,/produits-surgeles/pizza,949.0,1.2,7.0,1.5,22.0,12.0,7.0,1.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-16912,Alnatura Huile de coco vierge,4104420136168,To classify,340.0,0.0,0.0,0.0,0.0,92.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+16912,Alnatura Huile de coco vierge,4104420136168,TO_CLASSIFY,340.0,0.0,0.0,0.0,0.0,92.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 16915,Coca-cola : light,54492387,/boissons-chaudes-froides/boissons-sucrees,0.8,0.02,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 16917,Carpe Diem Kombucha Tea Drink Classic,90280184,/boissons-chaudes-froides/eau-aromatisee,80.0,0.01,0.1,4.4,4.4,0.1,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 16922,Migros Bio Beurre,7610200271082,/produits-laitiers-oeufs/beurre,3051.0,0.01,0.5,0.5,0.5,82.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -3509,7 +3509,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 17125,Rio Mare Tonno all'Olio di Oliva,8004030044005,/garnitures-ingredients/poisson-en-conserve,1695.0,1.3,17.0,0.0,0.0,38.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 17131,Monini Classico Olio Extra Vergine Di Oliva,8005510005967,/garnitures-ingredients/ingredients-de-cuisson,3404.0,0.0,0.0,0.0,0.0,92.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 17135,M-Classic Noix de coco râpée,7610200010544,/boulangerie/ingredients-de-boulangerie,2770.0,0.1,7.0,7.0,7.0,65.0,0.0,16.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-17139,Alnatura Streichcreme Rote Bete Meerrettich ,4104420045866,To classify,1079.0,2.0,5.0,5.0,6.0,23.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+17139,Alnatura Streichcreme Rote Bete Meerrettich ,4104420045866,TO_CLASSIFY,1079.0,2.0,5.0,5.0,6.0,23.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 17148,CONDY Concombres,7613269303152,/garnitures-ingredients/legumes-legumes-au-vinaigre,164.0,1.7,0.6,7.0,8.0,0.5,0.0,0.8,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 17152,YOU SUPER-CRISPIES BAIES,7613312131701,/chocolat/biscuits-gaufres,2032.0,0.3,6.0,25.0,65.0,21.0,15.0,6.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 17154,Anna's Best Légumes mixtes à la chinoise,7617027633000,/plats-cuisines/pizza-menus-snacks,137.0,0.05,2.5,3.0,3.5,0.5,0.0,2.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -3599,7 +3599,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 17558,Migros Bio Oignons,7610632993224,/fruits-et-legumes/legumes,146.0,0.0,1.3,0.0,8.8,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 17560,Alnatura Noix,4104420025066,/boulangerie/ingredients-de-boulangerie,2856.0,0.01,17.0,7.0,11.0,63.0,0.0,6.1,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 17566,Anna's BEST Olives Corfu,7617027933230,/plats-cuisines/pizza-menus-snacks,826.0,3.3,1.0,0.5,1.5,20.0,0.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-17568,Alnatura Cerises griottes,4104420137042,To classify,289.0,0.01,0.9,9.0,13.0,0.5,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+17568,Alnatura Cerises griottes,4104420137042,TO_CLASSIFY,289.0,0.01,0.9,9.0,13.0,0.5,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 17584,M-Budget Mascarpone,7616600706841,/produits-laitiers-oeufs/fromages,1600.0,0.1,3.5,3.5,3.5,40.0,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 17589,M Budget Sauce Tomate,7616800909400,/garnitures-ingredients/soupes-sauces-bouillon,246.0,1.4,1.5,4.0,9.0,1.5,0.0,1.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 17598,Crispy dinde,7613269302551,/produits-surgeles/viande,886.0,1.2,17.0,2.0,13.0,10.0,0.0,0.7,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -3610,7 +3610,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 17628,Chicken Curry Sandwich,7613269250685,/plats-cuisines/pizza-menus-snacks,1052.0,1.3,8.0,6.0,29.0,11.0,0.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 17630,M Classic Noisettes,7610200010414,/boulangerie/ingredients-de-boulangerie,2710.0,0.1,15.0,4.5,7.0,61.0,0.0,10.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 17635,MIGROS  Nids aux noisettes,7613269457985,/boulangerie/boulangerie-patisserie,1735.0,0.2,6.0,53.0,69.0,12.0,0.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-17637,Alnatura Sélection Baies en chocolat,4104420055629,To classify,2296.0,0.3,8.3,45.3,45.6,36.5,0.0,3.6,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+17637,Alnatura Sélection Baies en chocolat,4104420055629,TO_CLASSIFY,2296.0,0.3,8.3,45.3,45.6,36.5,0.0,3.6,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 17644,Migros Miel de Toscane,7613312026472,/petit-dejeuner/miel,1399.0,0.2,0.5,82.0,82.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 17646,Agnesi I Fusilli N.78,8001200024249,/garnitures-ingredients/pates,1521.0,0.05,13.0,2.5,72.0,1.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 17661,Tartelette à l'abricot,7616700007732,/boulangerie/boulangerie-patisserie,1770.0,0.1,4.5,36.0,66.0,15.0,0.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -3624,7 +3624,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 17694,Yupi Marschmallows,4003084012736,/chocolat/bonbons-chewing-gum,1432.0,0.2,4.0,59.0,80.0,0.0,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 17696,M Classic Hawaii,7616700145878,/produits-surgeles/pizza,738.0,1.3,10.0,2.0,24.0,4.0,0.0,1.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 17700,Márdel Milk Caramel Spread Clásico,8425206000081,/petit-dejeuner/pates-a-tartiner,1310.0,0.4,7.0,57.0,57.0,6.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-17711,BEURRE AUX HERBES,7617027582193,To classify,2375.0,1.5,1.0,0.7,3.5,6.2,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+17711,BEURRE AUX HERBES,7617027582193,TO_CLASSIFY,2375.0,1.5,1.0,0.7,3.5,6.2,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 17715, Knorr Suprême Rüebli Carotte à l'orange et aux croûtons Soupe,7611100132985,/garnitures-ingredients/soupes-sauces-bouillon,182.0,0.93,0.8,1.8,5.1,2.1,0.0,0.8,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 17717,Kebab Hamburger,7617100208019,/plats-cuisines/convenience,950.0,1.4,20.0,1.0,3.0,15.0,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 17730,Migros Bio Crevettes,7613269359579,/produits-surgeles/poisson-fruits-de-mer,400.0,0.2,21.0,0.5,0.5,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -3711,7 +3711,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 18120,SUN QUEEN GRAINS DE MAÏS,7617027934671,/garnitures-ingredients/legumes-a-salade,380.0,0.4,3.0,4.0,12.0,2.5,0.0,4.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 18126,Sarasay Poire,7613269303558,/boissons-chaudes-froides/jus-de-fruits-de-legumes,277.0,0.0,0.5,16.0,16.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,24.0,0.0,0.0,0.0,0.0,0.0
 18135,Subito Meatballs Plat à base de purée de pomme de terre déshydratées,7613269300700,/plats-cuisines/pizza-menus-snacks,1750.0,5.7,13.0,3.0,54.0,15.0,0.0,7.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-18141,ALTANATURA Boules soufflées au millet sans gluten,4104420131828,To classify,2010.0,1.7,14.0,1.0,57.0,21.0,0.0,3.2,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+18141,ALTANATURA Boules soufflées au millet sans gluten,4104420131828,TO_CLASSIFY,2010.0,1.7,14.0,1.0,57.0,21.0,0.0,3.2,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 18144,Harry 1688 Steinofenbrot Pain de Seigle Et Froment,4071800000855,/boulangerie/pains-longue-conservation,932.0,1.2,7.1,1.7,42.0,1.5,0.0,5.2,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 18146,Ailes de poulet,7613269292340,/produits-surgeles/viande,730.0,0.0,19.0,1.0,1.0,11.0,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 18148,M Classic Original Préparation à base d'huile végétale,7610200046925,/garnitures-ingredients/ingredients-de-cuisson,3330.0,0.5,0.0,0.0,0.0,9.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -3719,7 +3719,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 18155,Alnatura – Galettes mais-amarante avec du riz et des graines de lin,4104420139565,/boulangerie/biscottes-pain-croustillant,1625.0,0.5,9.5,0.5,75.0,3.9,0.0,5.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 18158,Migros Sélection Kokos-Kakao Mandeln,7613312132043,/aperitif/noix-grillees,2490.0,0.0,19.0,11.0,19.0,48.0,4.0,9.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 18161,MIGROS BIO Pâte à gâteau,76167966,/boulangerie/ingredients-de-boulangerie,1760.0,1.8,6.0,1.0,40.0,26.0,0.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-18167,Alnatura Bio Mélange de graines pour salade,42268826,To classify,2418.0,0.13,28.2,1.9,11.9,45.3,0.0,7.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+18167,Alnatura Bio Mélange de graines pour salade,42268826,TO_CLASSIFY,2418.0,0.13,28.2,1.9,11.9,45.3,0.0,7.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 18172,JOWA Pèlerines,7613269458722,/boulangerie/boulangerie-patisserie,1675.0,0.15,11.0,45.0,77.0,4.5,0.0,1.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 18183,Electuaire de baies de geniève,7610200280961,/petit-dejeuner/confitures,1391.0,0.01,0.5,33.0,80.0,0.5,0.2,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 18185,GOMZ SERPENTINS À LA POMME,8413178260527,/chocolat/bonbons-chewing-gum,1520.0,0.0,0.6,55.0,84.0,2.0,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -3761,7 +3761,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 18366,MBudget Limonade à l'arôme de cola ,7610200337740,/boissons-chaudes-froides/boissons-sucrees,187.0,0.0,0.0,11.0,11.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 18371,M Budget Risotto Baldo - Riz,7610200010865,/garnitures-ingredients/riz,1455.0,0.03,7.0,0.5,77.0,0.5,0.5,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 18376,Leerdammer Caractère,8721800092003,/produits-laitiers-oeufs/fromages,1530.0,1.9,24.5,0.5,0.5,30.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-18379,Migros Sélection Gelée de coings,7613269185895,To classify,1017.0,0.0,0.5,58.0,58.0,0.5,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+18379,Migros Sélection Gelée de coings,7613269185895,TO_CLASSIFY,1017.0,0.0,0.5,58.0,58.0,0.5,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 18382,Florida Cornets de gaufrette,7610666002787,/chocolat/specialites,1684.0,0.31,8.0,34.0,82.0,4.0,0.0,0.7,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 18384,Ponti Dressing,8001010023036,/garnitures-ingredients/soupes-sauces-bouillon,1470.0,2.1,0.5,21.0,21.0,30.0,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 18386,American Favorites Muffin au myrtille,7613269263975,/boulangerie/boulangerie-patisserie,1755.0,1.3,6.0,27.0,49.0,22.0,0.0,0.8,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -3772,10 +3772,10 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 18403,M-Classic Compote de Pommes à la Pêche,7617027845557,/garnitures-ingredients/fruits-en-conserve,280.0,0.01,0.5,14.0,15.0,0.5,0.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 18405,Migros Bio Purée de tomate,7613312059340,/garnitures-ingredients/soupes-sauces-bouillon,175.0,0.8,1.5,7.0,7.0,0.0,0.0,1.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 18407,Casa Giuliana PIZZA SALAME CALABRESE,7613034242020,/produits-surgeles/pizza,948.0,1.7,11.0,1.3,26.6,7.8,0.0,2.3,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-18416,Subito Pasta Funghi,7613312085592,To classify,1597.0,2.7,6.0,3.5,73.0,6.0,0.0,4.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+18416,Subito Pasta Funghi,7613312085592,TO_CLASSIFY,1597.0,2.7,6.0,3.5,73.0,6.0,0.0,4.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 18422,Sticks d'ailerons de poulet,7610200108647,/produits-surgeles/viande,860.0,0.23,18.0,0.5,0.5,15.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 18428,FREY MOUSSE AU CHOCOLAT NOIR,7616500648623,/chocolat/chocolat,2400.0,2.0,7.0,42.0,51.0,37.0,21.0,5.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-18430,Alnatura Chips de maïs,4104420053847,To classify,2009.0,0.8,6.7,1.5,62.8,21.5,0.0,4.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+18430,Alnatura Chips de maïs,4104420053847,TO_CLASSIFY,2009.0,0.8,6.7,1.5,62.8,21.5,0.0,4.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 18436,M Budget PETIT SUISSE fraise,7616600705066,/produits-laitiers-oeufs/sere,580.0,0.1,5.0,18.0,21.0,3.6,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 18441,FARMER'S BEST MIXES Mélange de légumes grillés,7613269278665,/produits-surgeles/legumes-pommes-de-terre,303.0,0.02,1.5,3.0,4.0,5.0,0.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 18443, Mini-mille feuilles ,7613312022894,/produits-surgeles/glace-entremets,1171.0,0.2,2.5,26.0,40.0,12.0,0.0,0.6,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -3799,13 +3799,13 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 18525,Argeta Hühner,3838975566507,/garnitures-ingredients/du-monde-entier,1279.0,1.3,10.0,0.5,2.1,29.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 18528,Farmer Crunchy Natural,7613269187370,/mueesli-cereales/barres-de-cereales,1710.0,0.01,15.0,3.0,59.0,16.0,0.0,9.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 18533,Norway Cœur de filet de saumon,7617027744676,/poisson-fruits-de-mer/traiteur,807.0,3.0,19.0,0.5,0.5,13.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-18535,Alnatura Serpentini à l'épeautre,4104420137226,To classify,1538.0,0.03,13.0,0.5,71.0,2.1,0.0,4.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+18535,Alnatura Serpentini à l'épeautre,4104420137226,TO_CLASSIFY,1538.0,0.03,13.0,0.5,71.0,2.1,0.0,4.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 18539,M Classic Vanille,7617400040258,/produits-surgeles/glace-entremets,680.0,0.1,2.0,24.0,25.0,6.0,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-18544,ALTANATURA SÉLECTION Mandel Nougat Happen zart-nussig aus der Schweiz,4104420139626,To classify,2.53,0.1,8.9,38.7,39.2,45.2,0.0,4.4,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+18544,ALTANATURA SÉLECTION Mandel Nougat Happen zart-nussig aus der Schweiz,4104420139626,TO_CLASSIFY,2.53,0.1,8.9,38.7,39.2,45.2,0.0,4.4,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 18566,Bon Chef Premium Bouillon de boeuf,7613312034545,/garnitures-ingredients/soupes-sauces-bouillon,15.0,0.9,0.5,0.5,0.7,0.5,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 18568,Migros Bio Chips Nature,7616800816333,/aperitif/chips,2319.0,0.75,6.0,0.5,55.0,34.0,0.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 18570,Anna's Best Salade Alice,7617027631594,/plats-cuisines/pizza-menus-snacks,104.0,1.5,1.5,3.0,3.5,0.5,0.0,1.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-18576,Migros Sélection  Miel De Nectar De Fleurs D'Oranger,7613269188476,To classify,1421.0,0.02,0.5,82.0,82.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+18576,Migros Sélection  Miel De Nectar De Fleurs D'Oranger,7613269188476,TO_CLASSIFY,1421.0,0.02,0.5,82.0,82.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 18582,M-Classic Haricots blancs,7616800800455,/garnitures-ingredients/legumineuses-farce-pour-vol-au-vent,340.0,0.98,5.0,2.0,10.0,1.5,0.0,4.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 18588,Moutarde de Bénichon,7623700424407,/petit-dejeuner/pates-a-tartiner,810.0,0.0,1.5,0.0,45.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 18602,Pancho Villa Salsa MEXICANA,8410076421005,/garnitures-ingredients/du-monde-entier,187.0,1.4,1.5,5.0,8.0,0.5,0.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -3818,7 +3818,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 18627,Gold Multivitamin 13 Fruits,7613312036082,/boissons-chaudes-froides/jus-de-fruits-de-legumes,251.0,0.0,0.7,13.0,0.0,0.5,0.0,1.5,0.0,0.2,1.0,0.0,125.0,0.0,1.0,0.2,0.0,0.0,0.2,0.0
 18639,Anna's Best Fromage Feta- mariné,7613269412328,/plats-cuisines/pizza-menus-snacks,1370.0,2.8,14.0,0.5,1.0,30.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 18641,M Classic Compote de pommes,7616800823515,/garnitures-ingredients/fruits-en-conserve,340.0,0.0,0.5,18.0,19.0,0.5,0.0,1.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-18645,Alnatura Huile d'olive vierge extra italienne fruitée,4104420030220,To classify,3367.0,0.01,0.5,0.5,0.5,91.0,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+18645,Alnatura Huile d'olive vierge extra italienne fruitée,4104420030220,TO_CLASSIFY,3367.0,0.01,0.5,0.5,0.5,91.0,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 18649,Anna's Best Olives à l'ail,7617027633789,/plats-cuisines/pizza-menus-snacks,688.0,2.0,1.5,0.5,0.8,17.0,0.0,2.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 18651,M Budget Crevettes en saumure,7613269326212,/poisson-fruits-de-mer/fruits-de-mer-crevettes,299.0,2.02,15.0,0.5,1.5,0.5,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 18655,Alnatura Jus d'orange pur jus,4104420072084,/boissons-chaudes-froides/jus-de-fruits-de-legumes,202.0,0.01,1.0,10.0,10.0,0.1,0.0,0.2,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -3954,7 +3954,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 19327,Crispy poulet,7610200086419,/produits-surgeles/viande,726.0,1.5,12.0,2.5,15.0,7.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 19331,Alnatura Poudre à lever,42188346,/boulangerie/ingredients-de-boulangerie,1128.0,16.15,0.8,0.1,64.3,0.3,0.0,1.3,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 19336,M Classic Strudel épinards/feta,7613312066751,/produits-surgeles/aperitif-dessert,868.0,1.2,6.0,1.5,18.0,12.0,0.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-19338,Subito Pasta Carbonara 2 portions,7613312081228,To classify,1624.0,2.4,12.0,6.0,63.0,9.0,0.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+19338,Subito Pasta Carbonara 2 portions,7613312081228,TO_CLASSIFY,1624.0,2.4,12.0,6.0,63.0,9.0,0.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 19342,ChopStick : Lait de noix de coco,7613269248941,/garnitures-ingredients/du-monde-entier,738.0,0.1,1.5,2.0,2.5,18.0,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 19344,MIGROS BIO Farine fleur,7610177003174,/boulangerie/farine,1442.0,0.03,11.0,0.5,70.0,1.0,0.0,3.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 19347,Migros Sélection Caponata,7613312061312,/garnitures-ingredients/antipasti,659.0,1.1,0.9,6.0,6.0,14.0,0.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -3964,8 +3964,8 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 19375,Mélange de baies non sucrées,7610200337160,/produits-surgeles/fruits,180.0,0.0,1.0,5.0,5.0,0.5,0.0,7.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 19377,M Budget Muesli Croquant Yogourt à la banane avec des cornflakes au chocolat,7616600705028,/produits-laitiers-oeufs/birchermueesli,600.0,0.1,3.5,19.0,21.0,5.0,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 19379,SUN QUEEN NOIX DE PÉCAN,7610200010513,/boulangerie/ingredients-de-boulangerie,2970.0,0.1,9.0,4.0,4.5,72.0,0.0,10.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-19383,Choco-noisette de l'agriculture biologique,4104420177963,To classify,2519.0,0.08,10.0,34.0,38.0,45.0,11.0,4.7,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-19385,Alnatura Schoko-Nuss Choco-Noisette,4104420021587,To classify,2497.0,0.08,10.2,34.1,37.6,44.5,0.0,4.7,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+19383,Choco-noisette de l'agriculture biologique,4104420177963,TO_CLASSIFY,2519.0,0.08,10.0,34.0,38.0,45.0,11.0,4.7,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+19385,Alnatura Schoko-Nuss Choco-Noisette,4104420021587,TO_CLASSIFY,2497.0,0.08,10.2,34.1,37.6,44.5,0.0,4.7,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 19389,M-BUDGET CEREAL FLAKES CHOCO,7617027970556,/mueesli-cereales/cereales,1719.0,1.0,9.0,22.0,74.0,7.0,0.0,4.5,0.0,0.7,0.0,120.0,0.0,0.0,0.0,0.8,3.6,10.0,0.8,1.5
 19394,Valfora Demi-crème Homogénéisé UHT ,76102660,/produits-laitiers-oeufs/creme,1040.0,0.1,2.5,3.0,4.0,25.1,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 19397,Emmi CAFFÈ LATTE MACCHIATO,7610900041237,/produits-laitiers-oeufs/lait-boissons-lactees,340.0,0.15,3.0,8.0,8.0,4.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -4012,7 +4012,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 19630,M Budget HUILE D'OLIVE EXTRA VIERGE,7617027815697,/garnitures-ingredients/ingredients-de-cuisson,3367.0,0.0,0.0,0.0,0.0,91.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 19633,Namaste India Chutney de mangue,7613312066065,/garnitures-ingredients/du-monde-entier,1062.0,2.8,0.5,59.0,62.0,0.5,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 19635,Migros Séré maigre nature,7617027977692,/produits-laitiers-oeufs/fromages,233.0,0.09,10.0,4.0,4.0,0.1,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-19647,Migros Snack au fromage et aux oignons,7617027867931,To classify,1852.0,2.8,10.0,0.7,61.0,17.0,0.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+19647,Migros Snack au fromage et aux oignons,7617027867931,TO_CLASSIFY,1852.0,2.8,10.0,0.7,61.0,17.0,0.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 19661,Subito Polenta Bramata Quattro Formaggi,7613269300847,/plats-cuisines/plats-cuisines,1580.0,3.2,11.0,4.0,63.0,8.0,0.0,3.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 19665,Ratatouille niçoise,7610200018441,/garnitures-ingredients/legumes-legumes-au-vinaigre,271.0,1.0,1.0,3.0,7.0,3.0,0.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 19667,American Favorites Brownie,7613269437123,/boulangerie/boulangerie-patisserie,2070.0,0.0,6.0,33.0,42.0,33.0,0.0,4.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -4028,7 +4028,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 19720,Baies rouges,7613269260653,/plats-cuisines/pizza-menus-snacks,258.0,0.08,0.7,12.0,14.0,0.5,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 19730,ALNATURA Cookies chocolat noir \u0026 chocolat au lait,4104420179615,/chocolat/sain-bio,2180.0,0.34,7.2,33.0,58.0,28.0,15.0,4.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 19742,Bon Chef Sauce pour rôti,7613269298113,/garnitures-ingredients/soupes-sauces-bouillon,100.0,1.2,0.8,0.7,5.0,0.0,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-19758,Alnatura Baked Beans Haricots blancs à la sauce tomate,4104420141162,To classify,393.0,1.1,5.6,4.1,14.0,0.5,0.0,5.2,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+19758,Alnatura Baked Beans Haricots blancs à la sauce tomate,4104420141162,TO_CLASSIFY,393.0,1.1,5.6,4.1,14.0,0.5,0.0,5.2,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 19763,TARTARE Les Créations Fleur de Sel,3272770094757,/produits-laitiers-oeufs/fromages,1534.0,1.1,7.3,2.4,2.4,37.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 19766,Ice Tea mit Zitronenaroma,7610200338228,/boissons-chaudes-froides/the-glace,119.0,0.01,0.0,7.0,7.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 19767,Gnocchi di patate al basilico : idéal à poêler,7610200067654,/plats-cuisines/pizza-menus-snacks,813.0,1.1,6.0,7.0,33.0,3.5,0.0,2.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -4039,7 +4039,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 19805,Migros Bio Sirop de fleurs de sureau,7617500197005,/boissons-chaudes-froides/sirop-soda,204.0,0.0,0.0,12.0,12.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 19808,J.Bank's Food Company Rouleaux du printemps au poulet et aux légumes,7613269301653,/produits-surgeles/aperitif-dessert,864.0,1.6,5.0,7.0,20.0,11.0,0.0,4.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 19813,Migros Tartare Sauce,7617027815994,/garnitures-ingredients/soupes-sauces-bouillon,1780.0,1.5,1.5,0.5,3.0,46.0,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-19817,ALNATURA Chips de maïs,4104420054806,To classify,2009.0,1.3,6.7,1.5,62.8,21.5,0.0,4.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+19817,ALNATURA Chips de maïs,4104420054806,TO_CLASSIFY,2009.0,1.3,6.7,1.5,62.8,21.5,0.0,4.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 19824,CAFFÈ LATTE- Vanilla,7610900042562,/produits-laitiers-oeufs/lait-boissons-lactees,280.0,0.15,3.0,9.0,9.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 19828,Frey Tourist,7616500012233,/chocolat/chocolat,2350.0,0.2,7.0,47.0,50.0,37.0,0.0,1.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 19834,M-Budget Nectar multifruits,7616800833521,/boissons-chaudes-froides/jus-de-fruits-de-legumes,110.0,0.1,0.5,5.0,6.0,0.5,0.0,0.5,0.0,0.2,1.8,30.0,1.4,0.0,12.0,0.2,0.0,0.0,0.2,0.4
@@ -4125,7 +4125,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 20217,Frifrench Französische Salatsauce,9004125013151,/plats-cuisines/pizza-menus-snacks,1500.0,0.7,2.0,2.0,3.5,38.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 20222,Nobre Sabe a Portugal Saucisses de Volaille,5601119942622,/garnitures-ingredients/du-monde-entier,638.0,1.5,10.5,0.1,3.3,10.9,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 20234,MIGROS SELECTION tranches de mangues séchées,7613312129821,/boulangerie/ingredients-de-boulangerie,1365.0,0.0,1.5,64.0,77.0,0.5,0.5,1.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-20246,ALTANATURA SÉLECTION Amandes au cacao,4104420055605,To classify,2437.0,0.1,10.7,30.7,32.2,44.5,0.0,7.6,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+20246,ALTANATURA SÉLECTION Amandes au cacao,4104420055605,TO_CLASSIFY,2437.0,0.1,10.7,30.7,32.2,44.5,0.0,7.6,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 20250,Pancho Villa AUTHENTIC MEXICAN Crispy Chicken FAJITA KIT MILD,8410076471598,/garnitures-ingredients/du-monde-entier,1023.0,1.5,7.0,4.0,44.0,3.5,0.0,2.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 20254,Poulet/dinde fondue chinoise,7613312021194,/produits-surgeles/viande,480.0,0.2,24.0,1.0,1.0,1.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 20262,Migros Petite tresse,7613269479635,/boulangerie/produits-sans-gluten,1194.0,1.5,2.5,0.6,53.0,6.0,0.0,3.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -4134,7 +4134,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 20278,Alnavit Triangles aux noisettes,4260012974751,/chocolat/biscuits-pour-allergiques,2122.0,0.03,4.5,27.0,49.0,32.0,9.0,3.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 20282,Frey Napolitains,7616500656192,/chocolat/chocolat,2410.0,0.17,7.0,46.0,48.0,39.0,0.0,3.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 20284,Bischofszell Farm Pommes Chips nature,7613312014356,/aperitif/chips,2144.0,1.1,6.0,0.5,52.0,30.0,0.0,6.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-20290,Alnatura Huile de lin,4104420170698,To classify,3400.0,0.01,0.5,0.5,0.5,92.0,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+20290,Alnatura Huile de lin,4104420170698,TO_CLASSIFY,3400.0,0.01,0.5,0.5,0.5,92.0,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 20308,MIGROS : Tourte suédoise aux framboises,7616700203431,/boulangerie/boulangerie-patisserie,1318.0,0.25,5.0,32.0,44.0,13.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 20318,SICILIA JUS DE CITRON,76106057,/boissons-chaudes-froides/jus-de-fruits-de-legumes,120.0,0.01,0.5,1.7,7.2,0.2,0.0,0.3,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 20320,Migros Bio Salade betteraves rouges,7613269372134,/plats-cuisines/pizza-menus-snacks,235.0,1.0,1.0,6.0,9.0,0.9,0.0,4.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -4152,7 +4152,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 20367,M-Classic Escargots,7616700014914,/garnitures-ingredients/pates,1511.0,0.53,15.0,2.5,67.0,2.5,0.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 20380,Migros Bio Airelles rouges Plus,7618500947379,/boissons-chaudes-froides/jus-de-fruits-de-legumes,244.0,0.0,0.5,13.0,14.0,0.5,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 20381,7618500944583,7618500944583,/boissons-chaudes-froides/jus-de-fruits-de-legumes,244.0,0.01,0.0,13.0,14.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-20392,4104420179752,4104420179752,To classify,2568.0,0.01,8.6,31.0,35.0,48.0,0.0,6.4,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+20392,4104420179752,4104420179752,TO_CLASSIFY,2568.0,0.01,8.6,31.0,35.0,48.0,0.0,6.4,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 20395,Migros Ice Tea Green Tea,7613269358800,/boissons-chaudes-froides/the-glace,119.0,0.0,0.0,7.0,7.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 20398,ALTANATURA Jus multifruits 100% PUR JUS,4104420071902,/boissons-chaudes-froides/jus-de-fruits-de-legumes,206.0,0.01,0.5,10.5,11.0,0.2,0.0,0.6,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 20411,Migros Bio Tomates pelées hachées,7617027934381,/garnitures-ingredients/soupes-sauces-bouillon,127.0,0.16,1.5,4.5,4.5,0.5,0.0,0.8,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -4168,7 +4168,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 20458,100 CAL MANQUE-PASSION,7613269817994,/produits-laitiers-oeufs/yogourt,230.0,0.1,4.5,9.0,10.0,0.9,0.5,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 20460,Casa Giuliana Mozzarella 9 Mini Pizze,7613034241986,/produits-surgeles/pizza,890.0,0.9,9.1,3.1,25.5,7.8,0.0,1.7,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 20462,Sirop Pêche,7613269356035,/boissons-chaudes-froides/sirop-soda,187.0,0.0,0.0,11.0,11.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-20470,Alnatura Yaourt à la framboise,42300403,To classify,2428.0,0.39,8.5,48.0,49.0,39.0,0.0,0.9,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+20470,Alnatura Yaourt à la framboise,42300403,TO_CLASSIFY,2428.0,0.39,8.5,48.0,49.0,39.0,0.0,0.9,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 20473,MIGROS FORÊT-NOIRE Dessert à la crème aux cerises et biscuit au cacao ,7613269503712,/produits-laitiers-oeufs/dessert,1057.0,0.18,3.5,23.0,33.0,10.0,0.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 20475,SARASAY Exotic Island,7616800835969,/boissons-chaudes-froides/jus-de-fruits-de-legumes,272.0,0.02,0.6,14.0,15.0,0.5,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 20476,Emmi CAFFÈ LATTE MACCHIATO,7610900138913,/produits-laitiers-oeufs/lait-boissons-lactees,340.0,0.15,3.0,8.0,8.0,4.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -4181,7 +4181,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 20525,Buon Gusto Lasagne Verdi,7613312020623,/produits-surgeles/plats-cuisines,530.0,0.9,6.0,2.5,14.0,5.0,0.0,0.8,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 20536,Frey Risoletto Chocolat au lait avec cripsies de riz et fourré au caramel,7616500638075,/chocolat/chocolat,1900.0,0.25,3.5,62.0,69.0,18.0,12.0,0.7,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 20538,M Classic Mayonnaise herbes,7610200060938,/garnitures-ingredients/soupes-sauces-bouillon,2890.0,0.9,1.5,0.8,1.0,76.9,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-20544,Alnatura Erdnuss Krokant,42328209,To classify,2204.0,0.02,19.0,30.0,39.0,32.0,0.0,4.2,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+20544,Alnatura Erdnuss Krokant,42328209,TO_CLASSIFY,2204.0,0.02,19.0,30.0,39.0,32.0,0.0,4.2,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 20554,M Budget Japonais,7617400035797,/chocolat/biscuits-gaufres,2000.0,0.3,8.0,48.0,62.0,24.0,0.0,2.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 20560,Spécialité Suisse Grisoni,7610200015952,/viande/salami-lard,1825.0,4.7,26.0,0.5,1.0,37.0,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 20562,Anna's Best Tortilla De Patatas Española,7613269260264,/plats-cuisines/pizza-menus-snacks,544.0,1.5,5.0,1.0,13.0,6.0,1.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -4212,7 +4212,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 20671,Quadretti Chocolat noir avec orange sanguine,7613312109311,/chocolat/chocolat,2275.0,0.5,5.0,49.0,52.0,34.0,21.0,6.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 20683,Pollo alla mediterranea ,7613269685654,/plats-cuisines/pizza-menus-snacks,441.0,1.2,7.0,1.5,12.0,3.0,0.0,0.9,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 20685,MIGROS FREY Swiss Chocolate with Honey Almond Nougat,7616500660489,/chocolat/chocolat,2290.0,0.13,6.0,53.0,55.0,33.0,19.0,3.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-20692,Knorr Risotto Milanese,7611100350891,To classify,694.0,0.88,3.6,0.5,26.0,5.0,0.0,0.7,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+20692,Knorr Risotto Milanese,7611100350891,TO_CLASSIFY,694.0,0.88,3.6,0.5,26.0,5.0,0.0,0.7,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 20694,Condy Concombres à l'ail,7617027853095,/garnitures-ingredients/legumes-legumes-au-vinaigre,187.0,1.7,0.6,8.0,9.0,0.5,0.0,0.7,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 20699,Sarasay Tomate Pomodoro,7613269303695,/boissons-chaudes-froides/jus-de-fruits-de-legumes,70.0,0.75,0.0,4.0,4.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 20702,CONDY Câprons fins,7613269303213,/garnitures-ingredients/legumes-legumes-au-vinaigre,95.0,3.5,1.5,0.5,2.5,0.5,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -4228,7 +4228,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 20746,ALTANATURA Soja Drink Vanille,4104420095120,/produits-laitiers-oeufs/lait-boissons-lactees,252.0,0.12,3.4,5.9,7.0,2.0,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 20749,Midor petit beurre Blanc Croquant,7613312011034,/chocolat/biscuits-gaufres,2260.0,0.4,6.0,42.0,61.0,30.0,0.0,1.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 20751,Kellogg's : Frosties,4003994152744,/mueesli-cereales/cereales,1594.0,0.83,4.5,37.0,87.0,0.6,0.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-20755,Alnatura Pesto Rosso,4104420031784,To classify,1750.0,1.6,6.4,6.7,14.0,37.0,6.8,3.2,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+20755,Alnatura Pesto Rosso,4104420031784,TO_CLASSIFY,1750.0,1.6,6.4,6.7,14.0,37.0,6.8,3.2,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 20759,MIGROS Léger DEMI-CRÈME,7616600702539,/produits-laitiers-oeufs/creme,730.0,0.1,3.0,4.0,5.0,16.0,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 20762,Snack me Mini Coquillages,7613312074213,/chocolat/biscuits-gaufres,1732.0,0.14,7.0,39.0,63.0,14.0,0.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 20764,Heidi boisson Chocolat,7610200385031,/produits-laitiers-oeufs/lait-boissons-lactees,380.0,0.1,3.5,10.0,10.0,4.1,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -4251,7 +4251,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 20842,ICE TEA Peach,7613269283171,/boissons-chaudes-froides/the-glace,117.0,0.01,0.0,7.0,7.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 20847,Mimare Thon Yellowfin,7613269363224,/garnitures-ingredients/poisson-en-conserve,0.0,1.0,24.0,0.05,0.5,11.0,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 20854,GOLD 100% FRUIT Jus d'orange douce ,7613312043097,/boissons-chaudes-froides/jus-de-fruits-de-legumes,174.0,0.02,0.7,9.0,9.0,0.5,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-20861,Alnatura Miel de forêt,4104420024045,To classify,1331.0,0.1,0.4,77.9,77.9,0.1,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+20861,Alnatura Miel de forêt,4104420024045,TO_CLASSIFY,1331.0,0.1,0.4,77.9,77.9,0.1,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 20865,Subito Penne all'arrabbiata,7613312027226,/plats-cuisines/plats-cuisines,457.0,0.9,3.5,2.0,20.0,1.0,0.0,2.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 20867,Longobardi Pizza Sauce al Basilico,8002510500300,/garnitures-ingredients/soupes-sauces-bouillon,140.0,0.8,1.5,7.0,7.0,0.5,0.0,1.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 20869,Alnavit Petits croissants aux amendes,4260012974737,/chocolat/biscuits-pour-allergiques,2060.0,0.02,8.3,49.0,53.0,26.0,5.6,5.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -4273,7 +4273,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 20936,Anna's Antipasti mélangés,7613269412342,/plats-cuisines/pizza-menus-snacks,850.0,2.7,6.0,5.0,10.0,15.0,0.0,2.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 20938,Migros Cœurs de France aux noisettes,7616700013467,/boulangerie/boulangerie-patisserie,2142.0,1.3,7.0,22.0,61.0,26.0,0.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 20940,Framboises - Meilleure sélection- non sucrées,7610200082121,/produits-surgeles/fruits,260.0,0.01,1.0,10.0,10.0,0.5,0.0,7.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-20948,Alnatura Condimento Bianco Bio7 ,4104420030961,To classify,496.0,0.09,0.2,18.9,29.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+20948,Alnatura Condimento Bianco Bio7 ,4104420030961,TO_CLASSIFY,496.0,0.09,0.2,18.9,29.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 20953,M Classsic Haricots rouges,7616800800509,/garnitures-ingredients/legumes-a-salade,400.0,0.8,6.0,0.7,14.0,0.5,0.0,5.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 20959,Pops de poulet,7613312015766,/produits-surgeles/viande,810.0,1.0,15.0,1.0,11.0,10.0,0.0,0.7,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 20964,Migros Moscato,7613269190790,/boissons-chaudes-froides/boissons-daperitif,175.0,0.0,0.5,10.0,10.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -4336,7 +4336,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 21220,Zweifel Chips avec huile d'olive,7610095040008,/aperitif/chips,2340.0,1.9,6.0,3.5,48.0,37.0,0.0,6.0,0.0,0.0,8.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 21223,Migros Bio Sucre de canne,7617027007429,/boulangerie/ingredients-de-boulangerie,170.0,0.0,0.0,100.0,100.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 21229,M-Classic Coco/Chocolat yogourt,22114150,/produits-laitiers-oeufs/yogourt,520.0,0.1,3.0,14.0,15.0,5.8,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-21238,Twïn banago Chocolate,7617014166825,To classify,1640.0,0.8,13.0,69.0,71.0,4.5,0.0,3.9,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+21238,Twïn banago Chocolate,7617014166825,TO_CLASSIFY,1640.0,0.8,13.0,69.0,71.0,4.5,0.0,3.9,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 21256,Thomy – Sauce Tartare aux cornichons croquants,7610100011252,/garnitures-ingredients/soupes-sauces-bouillon,2391.0,0.0,1.4,0.0,1.6,61.6,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 21265,Vanille  Gum Sugarfree,7616500660298,/chocolat/bonbons-chewing-gum,800.0,0.01,0.2,0.1,71.0,1.5,1.5,0.8,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 21276,Migros Cocktail de légumes BIO,7618500940998,/boissons-chaudes-froides/jus-de-fruits-de-legumes,105.0,0.68,0.7,4.0,5.0,0.5,0.0,0.6,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -4391,7 +4391,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 21545,Nâmmèo Oreilles de Judas Séchées,6931653107010,/garnitures-ingredients/du-monde-entier,815.0,0.08,7.0,0.5,1.0,0.2,0.0,79.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 21550,Midor : Mousse : au Chocolat,7617400020090,/boulangerie/ingredients-de-boulangerie,833.0,0.24,5.0,22.0,23.0,9.0,0.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 21562,aha! Cornets Glace avec gaufrette,7617027780117,/produits-surgeles/glace-entremets,1124.0,0.06,4.0,21.0,30.0,14.0,0.0,3.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-21567,Alnatura Praliné \u0026 amande,42306436,To classify,2455.0,0.01,5.0,42.0,53.0,39.0,0.0,3.2,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+21567,Alnatura Praliné \u0026 amande,42306436,TO_CLASSIFY,2455.0,0.01,5.0,42.0,53.0,39.0,0.0,3.2,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 21572,Migros Bifidus ,7616600711395,/produits-laitiers-oeufs/yogourt,290.0,0.1,4.0,5.0,5.0,3.5,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 21574,Apéritiv Ginger Ale Limonade à l'arôme de gingembre,7610200337573,/boissons-chaudes-froides/boissons-daperitif,170.0,0.02,0.0,10.0,10.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 21575,Frey Classic Branches chocolat noir,7616500636743,/chocolat/chocolat,2240.0,0.12,7.0,51.0,53.0,32.0,0.0,4.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -4501,7 +4501,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 22096,Longobardi Gehackte Geschälte Tomaten,8002510014005,/garnitures-ingredients/tomates-en-conserve,100.0,0.0,1.5,4.5,4.5,0.5,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 22099,Le Pizza Wrap Prsciutto,7613269664109,/plats-cuisines/pizza-menus-snacks,897.0,1.7,18.0,2.5,24.0,4.5,0.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 22110,Anna's Best French Dressing,7613269393016,/plats-cuisines/pizza-menus-snacks,1760.0,2.3,1.5,1.5,1.5,46.0,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-22115,Migros Sélection Fraise Rhubarbe,7613312061114,To classify,800.0,0.03,1.0,43.0,45.0,0.5,0.0,0.8,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+22115,Migros Sélection Fraise Rhubarbe,7613312061114,TO_CLASSIFY,800.0,0.03,1.0,43.0,45.0,0.5,0.0,0.8,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 22117,Anna's Best Ravioli mozzarella e pomodoro,7613269266983,/plats-cuisines/pizza-menus-snacks,846.0,1.1,9.0,1.5,27.0,6.0,0.0,1.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 22119,Migros Classic Dattes,7610200040732,/boulangerie/ingredients-de-boulangerie,1260.0,0.1,2.0,62.0,67.0,0.5,0.5,8.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 22125,7613269270201,7613269270201,/produits-surgeles/legumes-pommes-de-terre,201.0,0.34,1.5,4.0,6.0,1.0,0.0,3.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -4536,7 +4536,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 22271,Anna's Best Tapenade Trio,7613269351764,/plats-cuisines/pizza-menus-snacks,1137.0,3.2,3.5,7.0,11.0,24.0,0.0,1.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 22273,Budget CROISSANTS PARTY ,7616700184914,/produits-surgeles/aperitif-dessert,1200.0,1.2,9.0,2.5,26.0,16.0,0.0,1.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 22280,FAVORIT les Spécialités Sauerkirschen Griottes,27002490,/petit-dejeuner/confitures,906.0,0.04,0.8,52.0,52.0,0.5,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-22285,Alnatura Bolognaise végétarienne Avec des légumes,4104420031869,To classify,349.0,0.9,4.7,6.6,8.8,2.7,0.0,2.4,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+22285,Alnatura Bolognaise végétarienne Avec des légumes,4104420031869,TO_CLASSIFY,349.0,0.9,4.7,6.6,8.8,2.7,0.0,2.4,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 22292,Sun Queen Morceaux D'Ananas,7613312044698,/garnitures-ingredients/fruits-en-conserve,237.0,0.03,0.5,12.0,12.0,0.5,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 22294,Pamplemousse rose,7613269260646,/plats-cuisines/pizza-menus-snacks,201.0,0.08,0.7,9.0,11.0,0.0,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 22299,Frey Langues de chats,7616500015609,/chocolat/chocolat,2310.0,0.25,8.0,49.0,51.0,35.0,0.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -4547,7 +4547,7 @@ id,name,barcode,category,Énergie (kJ),Sel (g),Protéines (g),Sucres (g),Glucide
 22323,Kinder Shoko-Bons,5413548280189,/chocolat/chocolat,2401.0,0.28,8.3,52.2,52.5,36.6,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 22330, Pelican Kalmare Romerinnen-Art calamars a la romaine,7613269302834,/produits-surgeles/poisson-fruits-de-mer,824.0,1.1,6.0,2.5,25.0,8.0,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 22334,MIGROS Himber-Roulade,7616700001464,/boulangerie/boulangerie-patisserie,1457.0,0.28,4.5,38.0,59.0,10.0,0.0,0.9,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-22338,Alnatura Vollkorn Spaghetti  100% Hartweizen,4104420063204,To classify,1449.0,0.0,13.1,4.3,64.7,1.9,0.6,7.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+22338,Alnatura Vollkorn Spaghetti  100% Hartweizen,4104420063204,TO_CLASSIFY,1449.0,0.0,13.1,4.3,64.7,1.9,0.6,7.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 22345,Longobardi Pomodori pelati,8002510005003,/garnitures-ingredients/tomates-en-conserve,100.0,0.0,1.5,4.5,4.5,0.5,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 22349,Alnavit Bio pur jus d'aloe vera,42278900,/boissons-chaudes-froides/jus-de-fruits-de-legumes,8.0,0.01,0.2,0.1,0.2,0.01,0.0,0.2,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 22352,M Classic Pâtes aux œufs farcies à la viande à la sauce tomate,7616800705156,/garnitures-ingredients/viande-en-conserve,420.0,1.0,3.0,3.5,12.0,4.0,0.0,1.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0

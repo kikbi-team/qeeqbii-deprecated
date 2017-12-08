@@ -208,6 +208,7 @@
     <string name="create_a_new_account">Create a New Account</string>
     <string name="online">Online</string>
     <string name="cancel_request">Cancel Friend Request</string>
+    <string name="compare_products">Compare Products</string>
 
 
     <string name="label_google_sign_in">Firebase + Google Sign In</string>

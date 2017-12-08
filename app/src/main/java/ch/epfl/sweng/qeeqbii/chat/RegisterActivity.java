@@ -155,4 +155,10 @@ public class RegisterActivity extends AppCompatActivity {
         });
 
     }
+
+
+
+    public ProgressDialog getmRegProgress() {
+        return mRegProgress;
+    }
 }

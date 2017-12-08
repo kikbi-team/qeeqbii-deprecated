@@ -30,6 +30,18 @@
                 android:contentDescription="@string/facebook_share_button"
                 android:background="@color/white"/>
 
+            <Button
+                android:id="@+id/productComparisonButtonOnRecentlyScanned"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="productComparison"
+                android:layout_toRightOf="@+id/facebook_round_recently_scanned_product_button"
+                android:layout_toLeftOf="@+id/delete_recently_scanned_product_button"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/title_activity_product_comparison" />
+
             <android.support.v7.widget.AppCompatImageButton
                 android:id="@+id/delete_recently_scanned_product_button"
                 android:layout_width="60dip"
@@ -58,7 +70,8 @@
         android:layout_gravity="start"
         app:headerLayout="@layout/nav_header"
         tools:layout_editor_absoluteY="8dp"
-        tools:layout_editor_absoluteX="0dp">
+        tools:layout_editor_absoluteX="0dp"
+        android:id="@+id/nav_view_recently_scanned_products">
     </android.support.design.widget.NavigationView>
 
 </android.support.v4.widget.DrawerLayout>

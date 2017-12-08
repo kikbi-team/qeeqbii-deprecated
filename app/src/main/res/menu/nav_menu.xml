@@ -5,58 +5,64 @@
 
     <item
         android:id="@+id/nav_main"
-        android:onClick="backToMain"
+        android:onClick="sliderGoToActivity"
         android:icon="@drawable/ic_home_black_24dp"
         android:title="@string/main_activity" />
     <item
         android:id="@+id/nav_chat"
-        android:onClick="showChat"
+        android:onClick="sliderGoToActivity"
         android:icon="@drawable/ic_chat_black_24dp"
         android:title="@string/Chat" />
 
     <item
         android:id="@+id/nav_graphs"
-        android:onClick="showGraphs"
+        android:onClick="sliderGoToActivity"
         android:icon="@drawable/ic_data_usage_black_24dp"
         android:title="@string/graphs" />
 
     <item android:id="@+id/nav_cancerdb"
-        android:onClick="cancerDataBaseShow"
+        android:onClick="sliderGoToActivity"
         android:icon="@drawable/ic_warning_black_24dp"
         android:title="@string/cancer_database"/>
 
     <item
         android:id="@+id/nav_scan"
-        android:onClick="readBarcode"
+        android:onClick="sliderGoToActivity"
         android:icon="@drawable/ic_flip_black_24dp"
         android:title="@string/scan_barcode" />
 
     <item
         android:id="@+id/nav_shopping_cart"
-        android:onClick="showShoppingList"
+        android:onClick="sliderGoToActivity"
         android:icon="@drawable/ic_list_black_24dp"
         android:title="@string/shopping_cart" />
     <item
         android:id="@+id/nav_dataquery"
-        android:onClick="cancerDataQuery"
+        android:onClick="sliderGoToActivity"
         android:icon="@drawable/ic_search_black_24dp"
         android:title="@string/cancer_data_query" />
 
     <item
         android:id="@+id/nav_scannedProducts"
-        android:onClick="showRecentlyScannedProductsActivity"
+        android:onClick="sliderGoToActivity"
         android:icon="@drawable/ic_shopping_cart_black_24dp"
         android:title="@string/scanned_products" />
 
     <item
-        android:id="@+id/scanning_history"
-        android:onClick="showSavedProducts"
+        android:id="@+id/nav_scanning_history"
+        android:onClick="sliderGoToActivity"
         android:icon="@drawable/ic_youtube_searched_for_black_24dp"
         android:title="@string/show_saved_products_activity" />
 
     <item
         android:id="@+id/nav_stats"
-        android:onClick="showStatistics"
+        android:onClick="sliderGoToActivity"
         android:icon="@drawable/ic_timeline_black_24dp"
         android:title="@string/statistics" />
+
+    <item
+        android:id="@+id/nav_comparison"
+        android:onClick="sliderGoToActivity"
+        android:icon="@drawable/ic_timeline_black_24dp"
+        android:title="@string/compare_products" />
 </menu>
