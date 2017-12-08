@@ -34,6 +34,8 @@ public class ClusterProductList {
 
     private JSONObject json = null;
 
+    private String mFilename = null;
+
     public ClusterProductList(){
         //To avoid an empty list
         //addItemToCart(new Product("Please Click on + to add an item", "0 mg", "Stuff", "cool Nutrients"));
@@ -49,25 +51,37 @@ public class ClusterProductList {
     }
 
     public ClusterProductList(String filename, Context context) {
+        is_checked_item = new HashMap<>();
+        m_items = new ArrayList<>();
+        product_list= new ArrayList<>();
+        json = null;
         String[] filelist = context.fileList();
+        mFilename = filename;
         Boolean exists = false;
         for (String file : filelist) {
             if (filename.equals(file))
                 exists = true;
         }
         try {
-            if (!exists)
+            if (!exists) {
                 context.openFileOutput(filename, 0).close();
-
-            load(filename, context);
+                json = new JSONObject();
+                json.put("Clusters", new JSONArray());
+            } else {
+                load(context);
+            }
         } catch (IOException|JSONException e) {
-
+            System.err.println(e.getMessage());
+        }
+        for (ClusterType cluster : m_items)
+        {
+            is_checked_item.put(cluster,false);
         }
     }
 
-    private void load(String filename, Context context) throws IOException, JSONException
+    private void load(Context context) throws IOException, JSONException
     {
-        InputStream in = context.openFileInput(filename);
+        InputStream in = context.openFileInput(mFilename);
         BufferedReader streamReader = new BufferedReader(new InputStreamReader(in, "UTF-8"));
         StringBuilder responseStrBuilder = new StringBuilder();
 
@@ -83,24 +97,25 @@ public class ClusterProductList {
             ClusterTypeSecondLevel cluster = ClusterTypeSecondLevel.getClusterType(clusters.getJSONObject(i).getString("cluster"));
             m_items.add(cluster);
             JSONArray products = clusters.getJSONObject(i).getJSONArray("products");
+            System.out.println("//////////////////////////////////////////////////" + products.length() + products.toString());
             for (int j = 0; j < products.length(); ++j) {
-                JSONObject product = products.getJSONObject(i);
+                JSONObject product = products.getJSONObject(j);
                 product_list.add(new Product(product.getString("name"), product.getString("quantity"),
-                        product.getString("ingredients"),product.getString("nutrient"),product.getString("barcode"), cluster));
+                        product.getString("ingredients"),product.getString("nutrients"),product.getString("barcode"), cluster));
             }
         }
-
     }
 
 
-    public void addClusterAndSave(ClusterType cluster, Context context, String filename)
+    public void addClusterAndSave(ClusterType cluster, Context context)
     {
         addCluster(cluster);
-        save(filename, context);
+        save(mFilename, context);
     }
 
     public void addCluster(ClusterType cluster) {
         m_items.add(cluster);
+        is_checked_item.put(cluster,false);
         if (json != null)
         {
             try
@@ -117,7 +132,6 @@ public class ClusterProductList {
             }
 
         }
-        is_checked_item.put(cluster,false);
     }
 
     public void addSpecificItemInList(int index, ClusterType cluster) {
@@ -139,6 +153,16 @@ public class ClusterProductList {
 
     public void deleteCluster(ClusterType cluster) {
         m_items.remove(cluster);
+        is_checked_item.remove(cluster);
+
+        for (int i = 0; i < product_list.size(); ++i)
+        {
+            if (product_list.get(i).getCluster() == cluster)
+            {
+                product_list.remove(i);
+                i -= 1;
+            }
+        }
         if (json != null) {
             try {
                 JSONArray clusters = json.getJSONArray("Clusters");
@@ -156,12 +180,11 @@ public class ClusterProductList {
                 System.err.println(e.getMessage());
             }
         }
-        is_checked_item.remove(cluster);
     }
 
-    public void deleteClusterAndSave(ClusterType cluster, Context context, String filename) {
+    public void deleteClusterAndSave(ClusterType cluster, Context context) {
         deleteCluster(cluster);
-        save(filename,context);
+        save(mFilename,context);
     }
 
     public void clear()
@@ -206,6 +229,7 @@ public class ClusterProductList {
 
                 JSONObject json_product = new JSONObject();
                 json_product.put("name", product.getName());
+                json_product.put("barcode", product.getBarcode());
                 json_product.put("quantity", product.getQuantity());
                 json_product.put("ingredients", product.getIngredients());
                 json_product.put("nutrients", product.getNutrients());
@@ -215,16 +239,16 @@ public class ClusterProductList {
 
             } catch (JSONException e)
             {
-                System.err.println(e.getMessage());
+                System.err.println("ClusterProductList: AddProduct: " + e.getMessage());
             }
 
         }
     }
 
-    public void addProductAndSave(Product product, Context context, String filename)
+    public void addProductAndSave(Product product, Context context)
     {
         addProduct(product);
-        save(filename, context);
+        save(mFilename, context);
     }
 
     public List<Product> getProductList(ClusterType cluster)
@@ -240,6 +264,13 @@ public class ClusterProductList {
 
         return cluster_product_list;
     }
+
+    public List<Product> getProductList()
+    {
+        return product_list;
+    }
+
+
 
     public void save(String filename, Context context)
     {

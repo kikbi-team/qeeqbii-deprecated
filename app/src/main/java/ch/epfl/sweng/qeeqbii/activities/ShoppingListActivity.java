@@ -24,7 +24,7 @@ import static ch.epfl.sweng.qeeqbii.activities.BarcodeScannerActivity.EXTRA_ACTI
 public class ShoppingListActivity extends AppCompatActivity {
 
     private static ClusterProductList m_cart = null;
-    private static RecyclerViewAdapter mAdapter;
+    private static RecyclerViewAdapter mAdapter = null;
     private static String json_file = "shopping_list.json";
 
     @Override
@@ -32,6 +32,9 @@ public class ShoppingListActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_shopping_list);
         final RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recycler);
+
+         if (m_cart == null)
+            load(getApplicationContext());
 
         //create and set layout manager for each RecyclerView
 
@@ -63,30 +66,36 @@ public class ShoppingListActivity extends AppCompatActivity {
         m_cart = new ClusterProductList(json_file, context);
     }
 
+    public static void load(Context context, String filename)
+    {
+        mAdapter = null;
+        m_cart = new ClusterProductList(filename, context);
+    }
+
     public static void addCluster(ClusterType cluster, Context context)
     {
-        if (!mAdapter.getClusters().contains(cluster)) {
-            mAdapter.addClusterAndSave(cluster, context, json_file);
+        if (!(mAdapter.getClusters().contains(cluster))) {
+            mAdapter.addClusterAndSave(cluster, context);
         }
     }
 
     public static void deleteCluster(ClusterType cluster, Context context)
     {
-        mAdapter.deleteClusterAndSave(cluster, context, json_file);
+        mAdapter.deleteClusterAndSave(cluster, context);
     }
 
-    public static ClusterProductList getClusterList()
+    public static ClusterProductList getClusterProductList()
     {
         return m_cart;
     }
 
     public static void addProduct(Product product, Context context)
     {
-        if (m_cart.getClusters().contains(product.getCluster()))
+        if (!(m_cart.getClusters().contains(product.getCluster())))
         {
             addCluster(product.getCluster(), context);
         }
-        m_cart.addProductAndSave(product, context, json_file);
+        m_cart.addProductAndSave(product, context);
     }
 
     public static void save(Context context) { m_cart.save( json_file, context); }

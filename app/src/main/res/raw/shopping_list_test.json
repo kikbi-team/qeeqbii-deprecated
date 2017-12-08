@@ -24,7 +24,7 @@
       "products" : [
         {
           "name": "Milka tendre au lait",
-          "barcode": "0000000001",
+          "barcode": "0000000002",
           "ingredients": "Chacolat, lait",
           "nutrients": "Sucres: 0.65g",
           "quantity": "100g"

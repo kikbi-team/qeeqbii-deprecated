@@ -45,10 +45,10 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         }
     }
 
-    public void addClusterAndSave(ClusterType cluster, Context context, String filename)
+    public void addClusterAndSave(ClusterType cluster, Context context)
     {
         m_opacities.add(1f);
-        m_cluster_product_list.addClusterAndSave(cluster, context, filename);
+        m_cluster_product_list.addClusterAndSave(cluster, context);
         notifyDataSetChanged();
     }
 
@@ -87,10 +87,10 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         notifyDataSetChanged();
     }
 
-    public void deleteClusterAndSave(ClusterType cluster, Context context, String filename)
+    public void deleteClusterAndSave(ClusterType cluster, Context context)
     {
         m_opacities.remove(m_cluster_product_list.getClusters().indexOf(cluster));
-        m_cluster_product_list.deleteClusterAndSave(cluster, context, filename);
+        m_cluster_product_list.deleteClusterAndSave(cluster, context);
         notifyDataSetChanged();
     }
 
