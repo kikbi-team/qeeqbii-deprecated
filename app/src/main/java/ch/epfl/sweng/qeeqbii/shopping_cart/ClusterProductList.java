@@ -16,8 +16,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import ch.epfl.sweng.qeeqbii.open_food.ClusterType;
-import ch.epfl.sweng.qeeqbii.open_food.ClusterTypeSecondLevel;
+import ch.epfl.sweng.qeeqbii.clustering.ClusterType;
+import ch.epfl.sweng.qeeqbii.clustering.ClusterTypeSecondLevel;
 import ch.epfl.sweng.qeeqbii.open_food.Product;
 
 /**

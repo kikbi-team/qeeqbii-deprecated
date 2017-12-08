@@ -18,7 +18,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
-import ch.epfl.sweng.qeeqbii.open_food.ClusterType;
+import ch.epfl.sweng.qeeqbii.clustering.ClusterType;
 import ch.epfl.sweng.qeeqbii.shopping_cart.ClusterProductList;
 
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder> {

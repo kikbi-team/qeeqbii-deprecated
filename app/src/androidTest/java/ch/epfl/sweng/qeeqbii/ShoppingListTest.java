@@ -1,25 +1,18 @@
 package ch.epfl.sweng.qeeqbii;
 
-import android.app.Activity;
-import android.content.Intent;
 import android.support.test.espresso.intent.rule.IntentsTestRule;
 import android.support.test.runner.AndroidJUnit4;
-import android.view.View;
 
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
-import java.security.spec.ECField;
-import java.util.concurrent.CountDownLatch;
 
-import ch.epfl.sweng.qeeqbii.activities.SavedProductsDatesActivity;
-import ch.epfl.sweng.qeeqbii.activities.ShoppingCartSecondLevelActivity;
+import java.util.concurrent.CountDownLatch;
 import ch.epfl.sweng.qeeqbii.activities.ShoppingListActivity;
-import ch.epfl.sweng.qeeqbii.open_food.ClusterType;
-import ch.epfl.sweng.qeeqbii.open_food.ClusterTypeFirstLevel;
-import ch.epfl.sweng.qeeqbii.open_food.ClusterTypeSecondLevel;
+import ch.epfl.sweng.qeeqbii.clustering.ClusterTypeFirstLevel;
+import ch.epfl.sweng.qeeqbii.clustering.ClusterTypeSecondLevel;
 import ch.epfl.sweng.qeeqbii.open_food.Product;
 
 import static android.support.test.espresso.Espresso.onView;
@@ -30,10 +23,7 @@ import static android.support.test.espresso.assertion.ViewAssertions.matches;
 import static android.support.test.espresso.matcher.ViewMatchers.isDisplayed;
 import static android.support.test.espresso.matcher.ViewMatchers.withId;
 import static android.support.test.espresso.matcher.ViewMatchers.withText;
-import static java.lang.Thread.sleep;
 import static junit.framework.Assert.assertEquals;
-import static junit.framework.Assert.assertNotNull;
-import static junit.framework.Assert.assertNull;
 import static junit.framework.Assert.fail;
 
 /**
@@ -90,7 +80,7 @@ public class ShoppingListTest {
         onView(withText(ClusterTypeSecondLevel.CACAO_CHOCOLATS_EN_POUDRE.toString())).perform(click());
         pressBack();
         onView(withText(ClusterTypeFirstLevel.BOISSONS_CHAUDES_FROIDES.toString())).perform(click());
-        onView(withText(ClusterTypeSecondLevel.SIROPS_SODAS.toString())).perform(click());
+        onView(withText(ClusterTypeSecondLevel.SIROP_SODA.toString())).perform(click());
         onView(withText(ClusterTypeSecondLevel.BOISSONS_ENERGETIQUES.toString())).perform(click());
         onView(withText(ClusterTypeSecondLevel.BOISSONS_ENERGETIQUES.toString())).perform(click());
         pressBack();
@@ -98,7 +88,7 @@ public class ShoppingListTest {
 
         ShoppingListActivity.checkOrUncheckItem(ClusterTypeSecondLevel.CONFITURES_PORTIONS_DE_MIEL);
         ShoppingListActivity.checkOrUncheckItem(ClusterTypeSecondLevel.CONFITURES);
-        ShoppingListActivity.checkOrUncheckItem(ClusterTypeSecondLevel.SIROPS_SODAS);
+        ShoppingListActivity.checkOrUncheckItem(ClusterTypeSecondLevel.SIROP_SODA);
 
         onView(withId(R.id.removeButton)).perform(click());
         onView(withText(ClusterTypeSecondLevel.CACAO_CHOCOLATS_EN_POUDRE.toString())).check(matches(isDisplayed()));
@@ -118,7 +108,7 @@ public class ShoppingListTest {
         onView(withText(ClusterTypeSecondLevel.CACAO_CHOCOLATS_EN_POUDRE.toString())).perform(click());
         pressBack();
         onView(withText(ClusterTypeFirstLevel.BOISSONS_CHAUDES_FROIDES.toString())).perform(click());
-        onView(withText(ClusterTypeSecondLevel.SIROPS_SODAS.toString())).perform(click());
+        onView(withText(ClusterTypeSecondLevel.SIROP_SODA.toString())).perform(click());
         onView(withText(ClusterTypeSecondLevel.BOISSONS_ENERGETIQUES.toString())).perform(click());
         onView(withText(ClusterTypeSecondLevel.BOISSONS_ENERGETIQUES.toString())).perform(click());
         pressBack();
@@ -202,9 +192,6 @@ public class ShoppingListTest {
 
         assertEquals(ShoppingListActivity.getClusterProductList().getClusters().size(),0);
         assertEquals(ShoppingListActivity.getClusterProductList().getProductList().size(),0);
-
-
-
     }
 
 

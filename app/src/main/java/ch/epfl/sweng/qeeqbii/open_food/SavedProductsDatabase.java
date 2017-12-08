@@ -16,6 +16,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import ch.epfl.sweng.qeeqbii.clustering.ClusterTypeSecondLevel;
+
 
 /**
  * Created by guillaume on 13/11/17.
@@ -90,8 +92,9 @@ public class SavedProductsDatabase
         for(int i = 0; i < products_json_array.length(); ++i)
         {
             JSONObject item = products_json_array.getJSONObject(i);
-            products[i] = new Product(item.getString("name"),item.getString("quantity"),item.getString("ingredients"),
-                    item.getString("nutrients"), item.getString("barcode"), ClusterTypeSecondLevel.getClusterType(item.getString("cluster type")));
+            products[i] = new Product(item.getString("name"), item.getString("quantity"), item.getString("ingredients"),
+                    item.getString("nutrients"), item.getString("barcode"),
+                    ClusterTypeSecondLevel.getClusterType(item.getString("cluster type")));
         }
         return products;
 

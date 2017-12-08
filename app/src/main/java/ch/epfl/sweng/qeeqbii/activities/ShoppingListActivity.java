@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 
 import java.util.ArrayList;
@@ -14,7 +15,8 @@ import java.util.List;
 
 import ch.epfl.sweng.qeeqbii.R;
 import ch.epfl.sweng.qeeqbii.RecyclerViewAdapter;
-import ch.epfl.sweng.qeeqbii.open_food.ClusterType;
+import ch.epfl.sweng.qeeqbii.Slider;
+import ch.epfl.sweng.qeeqbii.clustering.ClusterType;
 import ch.epfl.sweng.qeeqbii.open_food.Product;
 import ch.epfl.sweng.qeeqbii.shopping_cart.ClusterProductList;
 
@@ -144,5 +146,11 @@ public class ShoppingListActivity extends AppCompatActivity {
         Intent intent = new Intent(this, BarcodeScannerActivity.class);
         intent.putExtra(EXTRA_ACTION, ACTION_SHOPPING_CART);
         startActivity(intent);
+    }
+
+
+    public void sliderGoToActivity(MenuItem item) {
+        Slider slider = new Slider();
+        slider.goToActivity(item, this);
     }
 }

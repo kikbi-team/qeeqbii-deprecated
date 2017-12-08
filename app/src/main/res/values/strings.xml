@@ -208,5 +208,6 @@
     <string name="create_a_new_account">Create a New Account</string>
     <string name="online">Online</string>
     <string name="cancel_request">Cancel Friend Request</string>
+    <string name="compare_products">Compare Products</string>
 
 </resources>
