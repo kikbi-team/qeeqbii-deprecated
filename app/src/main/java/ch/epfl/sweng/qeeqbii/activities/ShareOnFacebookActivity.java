@@ -49,7 +49,7 @@ public class ShareOnFacebookActivity extends AppCompatActivity {
         view.setDrawingCacheEnabled(false); // clear drawing cache
 
         bmImage.setImageBitmap(image_to_share);
-       findViewById(R.id.button2).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.button2).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 dialogue();
@@ -66,6 +66,6 @@ public class ShareOnFacebookActivity extends AppCompatActivity {
             SharePhotoContent content = new SharePhotoContent.Builder()
                     .addPhoto(photo)
                     .build();
-            shareDialog.show(content);
+           shareDialog.show(content);
     }
 }

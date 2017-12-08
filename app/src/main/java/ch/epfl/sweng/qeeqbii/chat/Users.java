@@ -16,6 +16,9 @@ public class Users {
     public Users(){
 
     }
+    public Users(String name){
+        this.name = name;
+    }
 
     public Users(String name, String image, String status, String thumb_image, String age, String allergies, String degout) {
         this.name = name;

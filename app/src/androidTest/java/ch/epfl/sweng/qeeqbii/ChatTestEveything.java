@@ -8,6 +8,9 @@ import android.support.test.espresso.ViewInteraction;
 import android.support.test.rule.ActivityTestRule;
 import android.view.MenuItem;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+
 import org.junit.Rule;
 import org.junit.Test;
 
@@ -30,6 +33,7 @@ import ch.epfl.sweng.qeeqbii.chat.StartActivity;
 import ch.epfl.sweng.qeeqbii.chat.StatusActivity;
 
 
+import static android.os.SystemClock.sleep;
 import static android.support.test.InstrumentationRegistry.getInstrumentation;
 import static android.support.test.espresso.Espresso.onView;
 import static android.support.test.espresso.Espresso.openActionBarOverflowOrOptionsMenu;
@@ -48,12 +52,14 @@ import static junit.framework.Assert.assertNotNull;
 
 public class ChatTestEveything {
 
+   private FirebaseAuth mAuth;
     @Rule
     public final ActivityTestRule<StartActivity> mActivityRule =
             new ActivityTestRule<>(StartActivity.class);
 
     @Test
     public void changeImage() {
+
         // Click sign in
         ViewInteraction appCompatButton = onView(withId(R.id.start_login_btn));
         appCompatButton.perform(click());
@@ -69,17 +75,19 @@ public class ChatTestEveything {
         passwordField.perform(replaceText(password));
 
         // Click sign in
-        ViewInteraction appCompatButton2 = onView(withId(R.id.login_btn));
-        appCompatButton2.perform(click());
 
         // Click chat on slider
-
         Intent intent = new Intent(mActivityRule.getActivity(), MainActivityChat.class);
         mActivityRule.launchActivity(intent);
         Intent intent2 = new Intent(mActivityRule.getActivity(), SettingsActivity.class);
         mActivityRule.launchActivity(intent2);
-        Intent intent3 = new Intent(mActivityRule.getActivity(), AgeActivity.class);
-        mActivityRule.launchActivity(intent3);
+        //onView(withId(R.id.facebook)).perform(click());
+        //onView(withId(R.id.settings_age_btn)).perform(click());
+        //onView(withId(R.id.age_save_btn)).perform(click());
+        //Intent intent3 = new Intent(mActivityRule.getActivity(), SettingsActivity.class);
+        //mActivityRule.launchActivity(intent3);
+        //onView(withId(R.id.settings_allergies_btn)).perform(click());
+        //onView(withId(R.id.allergies_save_btn)).perform(click());
         Intent intent4 = new Intent(mActivityRule.getActivity(), AllergiesActivity.class);
         mActivityRule.launchActivity(intent4);
         Intent intent5 = new Intent(mActivityRule.getActivity(), DegoutActivity.class);
