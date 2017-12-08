@@ -103,27 +103,24 @@ public class BarChartMonthlyFrag extends SimpleFragment implements OnChartGestur
         List<BarEntry> entries = new ArrayList<>();
 
         //GIVES THE VALUES FOR THE GRAPHS
-        try {
+        /*try {
             fillLists();
         } catch (ProductException e) {
             e.printStackTrace();
-        }
+        }*/
 
         // FUTURE
-        /*
-        for (Product element : StatisticsActivity.m_items_month)
-        {
-            entriesFats.add(new BarEntry(0f, 30f));
-            entriesSalts.add(new BarEntry(1f, 30f));
-            entriesGlucides.add(new BarEntry(2f, 30f));
-            entriesCalories.add(new BarEntry(3f, 30f));
-        }
-        */
 
-        entries.add(new BarEntry(0f, sumList(mCalories)));
+
+        entries.add(new BarEntry(0f, 30f));
+        entries.add(new BarEntry(1f, 30f));
+        entries.add(new BarEntry(2f, 30f));
+        entries.add(new BarEntry(3f, 30f));
+
+        /*entries.add(new BarEntry(0f, sumList(mCalories)));
         entries.add(new BarEntry(1f, sumList(mFats)));
         entries.add(new BarEntry(2f, sumList(mGlucides)));
-        entries.add(new BarEntry(3f, sumList(mSalts)));
+        entries.add(new BarEntry(3f, sumList(mSalts)));*/
 
         BarDataSet set = new BarDataSet(entries, "Nutrients Intake over the last Month");
 
