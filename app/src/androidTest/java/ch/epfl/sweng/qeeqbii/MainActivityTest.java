@@ -3,6 +3,7 @@ package ch.epfl.sweng.qeeqbii;
 import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
 
+import org.junit.AfterClass;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -31,6 +32,11 @@ public class MainActivityTest {
     @Test
     public void DisplayProductTest() {
         String barcode = "7610848337010";
+
+        onView(withId(R.id.Barcode)).perform(typeText(barcode));
+
+        onView(withId(R.id.search_product_button)).perform(click());
+
         Product testProduct;
         try {
             testProduct = OpenFoodQuery.GetOrCreateProduct(barcode, null);
@@ -41,11 +47,11 @@ public class MainActivityTest {
         }
         String s = testProduct.toString();
 
-
-        onView(withId(R.id.Barcode)).perform(typeText(barcode));
-
-        onView(withId(R.id.search_product_button)).perform(click());
-
         onView(withId(R.id.product_details)).check(matches(withText(s)));
+    }
+
+    @AfterClass
+    public static void finish_all_activities() {
+        ActivityFinisher.finishOpenActivities();
     }
 }
