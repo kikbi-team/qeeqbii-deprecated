@@ -14,6 +14,7 @@ import com.facebook.share.model.ShareLinkContent;
 import com.facebook.share.model.SharePhoto;
 import com.facebook.share.model.SharePhotoContent;
 import com.facebook.share.widget.ShareDialog;
+import com.facebook.FacebookSdk;
 
 import ch.epfl.sweng.qeeqbii.R;
 
