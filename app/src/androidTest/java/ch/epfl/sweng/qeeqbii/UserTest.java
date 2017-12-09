@@ -1,5 +1,6 @@
 package ch.epfl.sweng.qeeqbii;
 
+import org.junit.AfterClass;
 import org.junit.Test;
 
 import ch.epfl.sweng.qeeqbii.chat.Users;
@@ -38,5 +39,10 @@ public class UserTest {
         assertEquals(user.getAllergies(),"fruits");
         assertEquals(user.getDegout(),"meat");
 
+    }
+
+    @AfterClass
+    public static void finish_all_activities() {
+        ActivityFinisher.finishOpenActivities();
     }
 }

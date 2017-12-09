@@ -9,6 +9,7 @@ import android.support.test.runner.AndroidJUnit4;
 import android.support.v4.app.FragmentManager;
 
 
+import org.junit.AfterClass;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -55,5 +56,10 @@ public class ShoppingCartStatitisticsTest {
         StatisticsActivity.SectionsPagerAdapter section;
         section = new StatisticsActivity.SectionsPagerAdapter(fm);
         assertNull(section.getPageTitle(4));
+    }
+
+    @AfterClass
+    public static void finish_all_activities() {
+        ActivityFinisher.finishOpenActivities();
     }
 }
