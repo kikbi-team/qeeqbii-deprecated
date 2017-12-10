@@ -44,7 +44,10 @@ public class BarChartMonthlyFrag extends SimpleFragment implements OnChartGestur
     }
 
     private BarChart mChart;
-    private PieChart mChartPie;
+    private PieChart mChartPie; //For calories
+    private PieChart mChartPieSalt;
+    private PieChart mChartPieFats;
+    private PieChart mChartPieGlucides;
 
     private List<Float> mSalts = new ArrayList<>();
     private List<Float> mGlucides = new ArrayList<>();
@@ -55,7 +58,7 @@ public class BarChartMonthlyFrag extends SimpleFragment implements OnChartGestur
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.tab_1_statistics_month, container, false);
 
-        //FIRST GRAPH
+        //GRAPH CONTAINS THE INFORMATION ABOUT THE CALORIES
         mChartPie = (PieChart) v.findViewById(R.id.idPieChartTabMonth);
         mChartPie.getDescription().setEnabled(false);
 
@@ -78,7 +81,7 @@ public class BarChartMonthlyFrag extends SimpleFragment implements OnChartGestur
 
         mChartPie.setData(generatePieData());
 
-        // create a new chart object
+        ////// NEW BAR CHART
         mChart = new BarChart(getActivity());
         mChart.getDescription().setEnabled(false);
         mChart.setOnChartGestureListener(this);
@@ -149,6 +152,75 @@ public class BarChartMonthlyFrag extends SimpleFragment implements OnChartGestur
         //programatically add the chart
         FrameLayout parent = (FrameLayout) v.findViewById(R.id.barChartMonth);
         parent.addView(mChart);
+
+        //GRAPH CONTAINS THE INFORMATION ABOUT THE CALORIES
+        mChartPieSalt = (PieChart) v.findViewById(R.id.idPieChartSaltTabMonth);
+        mChartPieSalt.getDescription().setEnabled(false);
+
+        Typeface tfSalt = Typeface.createFromAsset(getActivity().getAssets(), "OpenSans-Light.ttf");
+
+        mChartPieSalt.setCenterTextTypeface(tfSalt);
+        mChartPieSalt.setCenterText(generateCenterText());
+        mChartPieSalt.setCenterTextSize(10f);
+        mChartPieSalt.setCenterTextTypeface(tfSalt);
+
+        // radius of the center hole in percent of maximum radius
+        mChartPieSalt.setHoleRadius(45f);
+        mChartPieSalt.setTransparentCircleRadius(50f);
+
+        Legend legendSalt = mChartPieSalt.getLegend();
+        legendSalt.setVerticalAlignment(Legend.LegendVerticalAlignment.TOP);
+        legendSalt.setHorizontalAlignment(Legend.LegendHorizontalAlignment.RIGHT);
+        legendSalt.setOrientation(Legend.LegendOrientation.VERTICAL);
+        legendSalt.setDrawInside(false);
+
+        mChartPieSalt.setData(generatePieData());
+
+        //GRAPH CONTAINS THE INFORMATION ABOUT THE CALORIES
+        mChartPieFats = (PieChart) v.findViewById(R.id.idPieChartFatTabMonth);
+        mChartPieFats.getDescription().setEnabled(false);
+
+        Typeface tfFat = Typeface.createFromAsset(getActivity().getAssets(), "OpenSans-Light.ttf");
+
+        mChartPieFats.setCenterTextTypeface(tfFat);
+        mChartPieFats.setCenterText(generateCenterText());
+        mChartPieFats.setCenterTextSize(10f);
+        mChartPieFats.setCenterTextTypeface(tfFat);
+
+        // radius of the center hole in percent of maximum radius
+        mChartPieFats.setHoleRadius(45f);
+        mChartPieFats.setTransparentCircleRadius(50f);
+
+        Legend lFat = mChartPieFats.getLegend();
+        lFat.setVerticalAlignment(Legend.LegendVerticalAlignment.TOP);
+        lFat.setHorizontalAlignment(Legend.LegendHorizontalAlignment.RIGHT);
+        lFat.setOrientation(Legend.LegendOrientation.VERTICAL);
+        lFat.setDrawInside(false);
+
+        mChartPieFats.setData(generatePieData());
+
+        //GRAPH CONTAINS THE INFORMATION ABOUT THE CALORIES
+        mChartPieGlucides = (PieChart) v.findViewById(R.id.idPieChartGlucideTabMonth);
+        mChartPieGlucides.getDescription().setEnabled(false);
+
+        Typeface tfGlucides = Typeface.createFromAsset(getActivity().getAssets(), "OpenSans-Light.ttf");
+
+        mChartPieGlucides.setCenterTextTypeface(tfGlucides);
+        mChartPieGlucides.setCenterText(generateCenterText());
+        mChartPieGlucides.setCenterTextSize(10f);
+        mChartPieGlucides.setCenterTextTypeface(tfGlucides);
+
+        // radius of the center hole in percent of maximum radius
+        mChartPieGlucides.setHoleRadius(45f);
+        mChartPieGlucides.setTransparentCircleRadius(50f);
+
+        Legend lGlucides = mChartPieGlucides.getLegend();
+        lGlucides.setVerticalAlignment(Legend.LegendVerticalAlignment.TOP);
+        lGlucides.setHorizontalAlignment(Legend.LegendHorizontalAlignment.RIGHT);
+        lGlucides.setOrientation(Legend.LegendOrientation.VERTICAL);
+        lGlucides.setDrawInside(false);
+
+        mChartPieGlucides.setData(generatePieData());
 
         return v;
     }
