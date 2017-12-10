@@ -157,13 +157,14 @@ public class StatisticsActivity extends AppCompatActivity {
 
     public void fillTheStaticsVectors() {
 
-        Date OneMonthAgoDate = new Date("07/11/2017");
+        Date todaysDate = new Date();
+        Date OneMonthAgoDate = new Date(todaysDate.getDateMonthBefore());
         m_items_month = SavedProductsDatabase.getProductsBetweenTodayAndDate(OneMonthAgoDate);
 
-        Date OneTrimesterAgoDate = new Date("07/09/2017");
+        Date OneTrimesterAgoDate = new Date(todaysDate.getDateThreeMonthsBefore());
         m_items_trimester = SavedProductsDatabase.getProductsBetweenTodayAndDate(OneTrimesterAgoDate);
 
-        Date OneYearAgoDate = new Date("07/12/2016");
+        Date OneYearAgoDate = new Date(todaysDate.getDateYearBefore());
         m_items_year = SavedProductsDatabase.getProductsBetweenTodayAndDate(OneMonthAgoDate);
     }
 }
