@@ -229,10 +229,10 @@ public class BarChartMonthlyFrag extends SimpleFragment implements OnChartGestur
         else {
             //In case the list is empty at the beginning by doing so we have not iterator on empyty list issue
             //CHANGE TO ZERO AGAIN !!!
-            mSalts.add(3f);
-            mGlucides.add(8f);
-            mFats.add(4f);
-            mCalories.add(5f);
+            mSalts.add(0f);
+            mGlucides.add(0f);
+            mFats.add(0f);
+            mCalories.add(0f);
         }
     }
 
