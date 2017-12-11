@@ -3,10 +3,12 @@ package ch.epfl.sweng.qeeqbii.slider;
 import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
 
+import org.junit.AfterClass;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
+import ch.epfl.sweng.qeeqbii.ActivityFinisher;
 import ch.epfl.sweng.qeeqbii.R;
 import ch.epfl.sweng.qeeqbii.activities.CancerDataShowActivity;
 
@@ -85,5 +87,10 @@ public class CancerDataSliderTest {
     public void canGoToProductsComparisonActivity() {
         SliderTest sliderTest = new SliderTest();
         sliderTest.canGoToProductsComparisonActivity(layoutId, navViewId);
+    }
+
+    @AfterClass
+    public static void finish_all_activities() {
+        ActivityFinisher.finishOpenActivities();
     }
 }

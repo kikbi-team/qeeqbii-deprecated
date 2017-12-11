@@ -4,6 +4,7 @@ import android.support.test.espresso.intent.rule.IntentsTestRule;
 import android.support.test.runner.AndroidJUnit4;
 
 import org.junit.Before;
+import org.junit.AfterClass;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -194,5 +195,8 @@ public class ShoppingListTest {
         assertEquals(ShoppingListActivity.getClusterProductList().getProductList().size(),0);
     }
 
-
+    @AfterClass
+    public static void finish_all_activities() {
+        ActivityFinisher.finishOpenActivities();
+    }
 }

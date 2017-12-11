@@ -18,6 +18,7 @@ import android.view.KeyEvent;
 
 import com.google.zxing.Result;
 
+import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.FixMethodOrder;
@@ -26,6 +27,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.MethodSorters;
 
+import ch.epfl.sweng.qeeqbii.ActivityFinisher;
 import ch.epfl.sweng.qeeqbii.R;
 import ch.epfl.sweng.qeeqbii.activities.BarcodeScannerActivity;
 import ch.epfl.sweng.qeeqbii.activities.BarcodeToProductActivity;
@@ -153,5 +155,10 @@ public class BarcodeScannerActivityTest {
         onView(withId(R.id.product_details)).check(matches(withText(startsWith("Chocolat au lait aux noisettes"))));
         Espresso.pressBack();
         activity.finish();
+    }
+
+    @AfterClass
+    public static void finish_all_activities() {
+        ActivityFinisher.finishOpenActivities();
     }
 }
