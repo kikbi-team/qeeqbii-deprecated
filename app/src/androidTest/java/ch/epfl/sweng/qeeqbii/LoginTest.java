@@ -57,14 +57,7 @@ public class LoginTest {
 
 
         // Force closing the progressDialog box in order to start new activity
-        ProgressDialog progressDialog = mActivityRule.getActivity().getmLoginProgress();
-        if (progressDialog!=null)
-        {
-            if (progressDialog.isShowing())
-            {
-                progressDialog.dismiss();
-            }
-        }
+        mActivityRule.getActivity().dismissProgressDialog();
 
         // Wait that BarcodeScanner activity starts (it takes a little bit of time since all the CSV files are read
         // when this activity is launched for the first time

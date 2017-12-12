@@ -116,6 +116,14 @@ public class ProductComparisonActivity extends AppCompatActivity {
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+        // load list from recently scanned
+        updateData();
+
+    }
+
+    // update data from recently scanned products
+    public void updateData() {
+
         // creating list adapter
         adapter = new ComparisonGraphAdapter();
         adapter.setContext(getApplicationContext());

@@ -39,7 +39,7 @@ public class RecentlyScannedProducts {
     }
 
 
-    static void add(String barcode, Product product)
+    public static void add(String barcode, Product product)
     {
         mProductMap.put(barcode,product);
         mBarcodeList.addLast(barcode);

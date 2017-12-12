@@ -17,24 +17,25 @@ import static junit.framework.Assert.assertEquals;
  */
 
 public class GetTimeAgoTest {
+    @AfterClass
+    public static void finish_all_activities() {
+        ActivityFinisher.finishOpenActivities();
+    }
+
     @Test
     public void test_time() {
         long time = 100;
-        Context cxt= getApplicationContext();
+        Context cxt = getApplicationContext();
 
-        String test = getTimeAgo(time,cxt);
+        String test = getTimeAgo(time, cxt);
         long now = System.currentTimeMillis();
-        assertEquals(test,"17508 days ago");
+        final int DAY_MILLIS = 24 * 60 * 60 * 1000;
+        assertEquals(test, ((now - time * 1000) / DAY_MILLIS) + " days ago");
     }
 
     // disable product adding for these tests
     @BeforeClass
     public static void run_before() {
         BarcodeToProductActivity.setProductAddingAllowed(false);
-    }
-
-    @AfterClass
-    public static void finish_all_activities() {
-        ActivityFinisher.finishOpenActivities();
     }
 }
