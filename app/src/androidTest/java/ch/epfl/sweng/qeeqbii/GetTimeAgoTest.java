@@ -14,18 +14,19 @@ import static junit.framework.Assert.assertEquals;
  */
 
 public class GetTimeAgoTest {
-    @Test
-    public void test_time() {
-        long time = 100;
-        Context cxt= getApplicationContext();
-
-        String test = getTimeAgo(time,cxt);
-        long now = System.currentTimeMillis();
-        assertEquals(test,"1711 days ago");
-    }
-
     @AfterClass
     public static void finish_all_activities() {
         ActivityFinisher.finishOpenActivities();
+    }
+
+    @Test
+    public void test_time() {
+        long time = 100;
+        Context cxt = getApplicationContext();
+
+        String test = getTimeAgo(time, cxt);
+        long now = System.currentTimeMillis();
+        final int DAY_MILLIS = 24 * 60 * 60 * 1000;
+        assertEquals(test, ((now - time * 1000) / DAY_MILLIS) + " days ago");
     }
 }

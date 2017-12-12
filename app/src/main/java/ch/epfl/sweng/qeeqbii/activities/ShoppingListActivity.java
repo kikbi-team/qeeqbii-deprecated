@@ -20,8 +20,7 @@ import ch.epfl.sweng.qeeqbii.clustering.ClusterType;
 import ch.epfl.sweng.qeeqbii.open_food.Product;
 import ch.epfl.sweng.qeeqbii.shopping_cart.ClusterProductList;
 
-import static ch.epfl.sweng.qeeqbii.activities.BarcodeScannerActivity.ACTION_TYPE.ACTION_SHOPPING_CART;
-import static ch.epfl.sweng.qeeqbii.activities.BarcodeScannerActivity.EXTRA_ACTION;
+import static ch.epfl.sweng.qeeqbii.activities.BarcodeScannerActivity.EXTRA_NEXT;
 
 public class ShoppingListActivity extends AppCompatActivity {
 
@@ -144,7 +143,7 @@ public class ShoppingListActivity extends AppCompatActivity {
     public void scanToCheck(View view) {
         Log.d("STATE", "Going to scan barcode");
         Intent intent = new Intent(this, BarcodeScannerActivity.class);
-        intent.putExtra(EXTRA_ACTION, ACTION_SHOPPING_CART);
+        intent.putExtra(EXTRA_NEXT, this.getClass().getName());
         startActivity(intent);
     }
 
