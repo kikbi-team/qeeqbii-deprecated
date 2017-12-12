@@ -102,7 +102,8 @@ public class BarcodeScannerActivity extends AppCompatActivity implements ZXingSc
         try {
             SavedProductsDatabase.load(getApplicationContext());
             SavedProductsDatabase.getDates();
-        } catch (IOException | JSONException | ParseException e) {
+            ShoppingListActivity.load(getApplicationContext());
+        } catch(IOException|JSONException|ParseException e){
             System.err.println(e.getMessage());
         }
 

@@ -4,9 +4,11 @@ import java.io.Serializable;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Locale;
 
 /**
  * Created by davidcleres on 13.11.17.
+ * Definition of Date only with a day/month/year scale.
  */
 
 
@@ -66,7 +68,7 @@ public class Date implements Serializable {
 
     public Boolean isBefore(Date date)
     {
-        SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
+        SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy", Locale.FRANCE);
         try {
             java.util.Date date_to_compare = formatter.parse(date.toString());
             java.util.Date current_date = formatter.parse(toString());

@@ -102,7 +102,7 @@ public class ShowProductActivity extends AppCompatActivity {
     }
 
     public void buyProduct(View view) {
-        ShoppingListActivity.addProduct(mProduct);
+        ShoppingListActivity.addProduct(mProduct, getApplicationContext());
     }
 
     public boolean onOptionsItemSelected(MenuItem item) {
