@@ -4,13 +4,13 @@ import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
-import android.view.KeyEvent;
 import android.view.MenuItem;
 import android.view.ViewGroup;
 import android.widget.Toast;
@@ -29,7 +29,6 @@ import ch.epfl.sweng.qeeqbii.clustering.ClusterClassifier;
 import ch.epfl.sweng.qeeqbii.clustering.NutrientNameConverter;
 import ch.epfl.sweng.qeeqbii.custom_exceptions.BadlyFormatedFile;
 import ch.epfl.sweng.qeeqbii.custom_exceptions.NotOpenFileException;
-import ch.epfl.sweng.qeeqbii.chat.MainActivityChat;
 import ch.epfl.sweng.qeeqbii.open_food.SavedProductsDatabase;
 import me.dm7.barcodescanner.zxing.ZXingScannerView;
 
@@ -40,28 +39,22 @@ import static android.content.ContentValues.TAG;
  * Activity which uses the ZXing library with the me.dm7 wrapper
  * In order to scan barcodes
  * Each scanned barcode is then sent to the BarcodeToProductActivity via an intent
- * If the barcode is invalid or the back button was pressed
- * MainActivity is started via an intent
+ * If the barcode is invalid, activity is finished
  */
 
 public class BarcodeScannerActivity extends AppCompatActivity implements ZXingScannerView.ResultHandler {
 
-    // different actions after barcode result:
-    // OPENFOOD -- go to product description
-    // SHOPPING_CART -- send barcode to shopping cart
-    public static enum ACTION_TYPE {ACTION_OPENFOOD, ACTION_SHOPPING_CART};
+    // default next activity
+    public static final String DEFAULT_NEXT_ACTIVITY = BarcodeToProductActivity.class.getName();
 
-    // default action
-    public static final ACTION_TYPE ACTION_DEFAULT = ACTION_TYPE.ACTION_OPENFOOD;
+    // dummy next activity doing nothing
+    public static final String NEXT_DUMMY = "ch.epfl.sweng.qeeqbii.BarcodeScannerActivity.next.dummy";
 
     // Extra name for barcode
     public static final String EXTRA_BARCODE = "ch.epfl.sweng.qeeqbii.BarcodeScannerActivity.barcode";
 
-    // Extra name for action
-    public static final String EXTRA_ACTION = "ch.epfl.sweng.qeeqbii.BarcodeScannerActivity.action";
-
-    // action obtained on start
-    private ACTION_TYPE action;
+    // Extra name for next activity
+    public static final String EXTRA_NEXT = "ch.epfl.sweng.qeeqbii.BarcodeScannerActivity.next";
 
     // name of the permission
     public static final String CAMERA_PERMISSION = android.Manifest.permission.CAMERA;
@@ -69,11 +62,31 @@ public class BarcodeScannerActivity extends AppCompatActivity implements ZXingSc
     // code for permission call
     private static final int ZXING_CAMERA_PERMISSION = 1;
 
-    // zxing library object
-    private ZXingScannerView mScannerView;
-    private ActionBarDrawerToggle mToggle;
+    // next activity
+    public static String mNextActivity = null;
 
     private static boolean active = false;
+
+    // zxing library object
+    private ZXingScannerView mScannerView;
+
+    private ActionBarDrawerToggle mToggle;
+
+    // last received barcode
+    private String mLastBarcode = null;
+
+    public static boolean isRunning() {
+        return active;
+    }
+
+    // returns last scanned barcode
+    public String getLastBarcode() {
+        return mLastBarcode;
+    }
+
+    public void setNextActivity(String nextActivity) {
+        mNextActivity = nextActivity;
+    }
 
     // on activity creation
     // ask permissions and launch barcode reader
@@ -89,6 +102,7 @@ public class BarcodeScannerActivity extends AppCompatActivity implements ZXingSc
         try {
             SavedProductsDatabase.load(getApplicationContext());
             SavedProductsDatabase.getDates();
+            ShoppingListActivity.load(getApplicationContext());
         } catch(IOException|JSONException|ParseException e){
             System.err.println(e.getMessage());
         }
@@ -111,10 +125,10 @@ public class BarcodeScannerActivity extends AppCompatActivity implements ZXingSc
 
         // obtain action if present
         Bundle extras = getIntent().getExtras();
-        if (extras != null && extras.containsKey(EXTRA_ACTION)) {
-            action = (ACTION_TYPE) extras.getSerializable(EXTRA_ACTION);
+        if (extras != null && extras.containsKey(EXTRA_NEXT)) {
+            mNextActivity = (String) extras.getSerializable(EXTRA_NEXT);
         } else {
-            action = ACTION_DEFAULT;
+            mNextActivity = DEFAULT_NEXT_ACTIVITY;
         }
 
 
@@ -122,8 +136,7 @@ public class BarcodeScannerActivity extends AppCompatActivity implements ZXingSc
         this.readCSVFiles();
 
 
-
-        Log.d("STATE", "EXTRA_ACTION is " + action);
+        Log.d("STATE", "NEXT activity is " + mNextActivity);
     }
 
     // check if the camera permission is given
@@ -138,7 +151,7 @@ public class BarcodeScannerActivity extends AppCompatActivity implements ZXingSc
 
     // this method is called when system gives (or not gives) the permission to use camera
     @Override
-    public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults) {
+    public void onRequestPermissionsResult(int requestCode, @NonNull String permissions[], @NonNull int[] grantResults) {
         switch (requestCode) {
             case ZXING_CAMERA_PERMISSION:
                 if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
@@ -187,47 +200,34 @@ public class BarcodeScannerActivity extends AppCompatActivity implements ZXingSc
         processBarcode(barcode);
     }
 
-    // go to the main activity
-    public void goToMain() {
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
+    // go back
+    public void goBack() {
+        finish();
     }
 
     // process the barcode given as a string
     public void processBarcode(String barcode) {
-        // go back to main activity if the barcode was invalid
+        mLastBarcode = barcode;
+        // go back if the barcode was invalid
         // or the scan was interrupted
         if (barcode == null || barcode.equals("")) {
-            Log.d("STATE", "Barcode is invalid, going back to main");
-            goToMain();
-        } else if(action == ACTION_TYPE.ACTION_OPENFOOD) {
+            Log.d("STATE", "Barcode is invalid, going back");
+            goBack();
+        } else if (mNextActivity.equals(NEXT_DUMMY)) {
+            Log.d("STATE", "Doing nothing");
+        } else {
             Log.d("STATE", "Barcode " + barcode + " found, going to OpenFood");
-            Intent intent = new Intent(this, BarcodeToProductActivity.class);
-            intent.putExtra(EXTRA_BARCODE, barcode);
-            startActivity(intent);
-        } else if(action == ACTION_TYPE.ACTION_SHOPPING_CART) {
-            Log.d("STATE", "Barcode " + barcode + " found, sending data to shopping list");
-            Intent intent = new Intent(this, ShoppingListActivity.class);
+            Intent intent = null;
+            try {
+                intent = new Intent(this, Class.forName(mNextActivity));
+            } catch (ClassNotFoundException e) {
+                e.printStackTrace();
+                throw new Error("Barcode activity got invalid next activity: " + mNextActivity);
+            }
             intent.putExtra(EXTRA_BARCODE, barcode);
             startActivity(intent);
         }
-        // no other actions now
     }
-
-    @Override
-    public boolean onKeyDown(int keyCode, KeyEvent event) {
-        if (keyCode == KeyEvent.KEYCODE_BACK) {
-            // go back to main activity after BACK button was pressed
-            Intent intent = new Intent(this, MainActivity.class);
-            startActivity(intent);
-
-            return true;
-        }
-
-        return super.onKeyDown(keyCode, event);
-    }
-
-
 
     // slider actions below
     public void readCSVFiles() {
@@ -239,8 +239,7 @@ public class BarcodeScannerActivity extends AppCompatActivity implements ZXingSc
         if (!ClusterClassifier.isRead()) {
             try {
                 ClusterClassifier.readClusterNutrientCentersFile(getApplicationContext());
-            }
-            catch (NotOpenFileException|BadlyFormatedFile e) {
+            } catch (NotOpenFileException | BadlyFormatedFile e) {
                 System.err.println(e.getMessage());
             }
         }
@@ -249,7 +248,6 @@ public class BarcodeScannerActivity extends AppCompatActivity implements ZXingSc
             CancerDataBase.readCSVFile(getApplicationContext());
         }
     }
-
 
     @Override
     public void onStart() {
@@ -262,14 +260,6 @@ public class BarcodeScannerActivity extends AppCompatActivity implements ZXingSc
         super.onStop();
         active = false;
     }
-
-
-    public static boolean isRunning() {
-        return active;
-    }
-
-
-
 
     public boolean onOptionsItemSelected(MenuItem item) {
 
