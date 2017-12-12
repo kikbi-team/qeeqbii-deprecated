@@ -29,7 +29,6 @@ import ch.epfl.sweng.qeeqbii.clustering.ClusterClassifier;
 import ch.epfl.sweng.qeeqbii.clustering.NutrientNameConverter;
 import ch.epfl.sweng.qeeqbii.custom_exceptions.BadlyFormatedFile;
 import ch.epfl.sweng.qeeqbii.custom_exceptions.NotOpenFileException;
-import ch.epfl.sweng.qeeqbii.chat.MainActivityChat;
 import ch.epfl.sweng.qeeqbii.open_food.SavedProductsDatabase;
 import me.dm7.barcodescanner.zxing.ZXingScannerView;
 
@@ -40,8 +39,7 @@ import static android.content.ContentValues.TAG;
  * Activity which uses the ZXing library with the me.dm7 wrapper
  * In order to scan barcodes
  * Each scanned barcode is then sent to the BarcodeToProductActivity via an intent
- * If the barcode is invalid or the back button was pressed
- * MainActivity is started via an intent
+ * If the barcode is invalid, activity is finished
  */
 
 public class BarcodeScannerActivity extends AppCompatActivity implements ZXingScannerView.ResultHandler {
@@ -187,19 +185,18 @@ public class BarcodeScannerActivity extends AppCompatActivity implements ZXingSc
         processBarcode(barcode);
     }
 
-    // go to the main activity
-    public void goToMain() {
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
+    // go back
+    public void goBack() {
+        finish();
     }
 
     // process the barcode given as a string
     public void processBarcode(String barcode) {
-        // go back to main activity if the barcode was invalid
+        // go back if the barcode was invalid
         // or the scan was interrupted
         if (barcode == null || barcode.equals("")) {
-            Log.d("STATE", "Barcode is invalid, going back to main");
-            goToMain();
+            Log.d("STATE", "Barcode is invalid, going back");
+            goBack();
         } else if(action == ACTION_TYPE.ACTION_OPENFOOD) {
             Log.d("STATE", "Barcode " + barcode + " found, going to OpenFood");
             Intent intent = new Intent(this, BarcodeToProductActivity.class);
@@ -213,20 +210,6 @@ public class BarcodeScannerActivity extends AppCompatActivity implements ZXingSc
         }
         // no other actions now
     }
-
-    @Override
-    public boolean onKeyDown(int keyCode, KeyEvent event) {
-        if (keyCode == KeyEvent.KEYCODE_BACK) {
-            // go back to main activity after BACK button was pressed
-            Intent intent = new Intent(this, MainActivity.class);
-            startActivity(intent);
-
-            return true;
-        }
-
-        return super.onKeyDown(keyCode, event);
-    }
-
 
 
     // slider actions below

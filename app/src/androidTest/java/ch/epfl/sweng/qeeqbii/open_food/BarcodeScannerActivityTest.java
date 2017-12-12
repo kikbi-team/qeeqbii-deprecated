@@ -43,6 +43,7 @@ import static android.support.test.espresso.matcher.ViewMatchers.withId;
 import static android.support.test.espresso.matcher.ViewMatchers.withText;
 import static com.google.zxing.BarcodeFormat.QR_CODE;
 import static java.lang.Thread.sleep;
+import static junit.framework.Assert.assertFalse;
 import static org.hamcrest.core.StringStartsWith.startsWith;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
@@ -121,10 +122,9 @@ public class BarcodeScannerActivityTest {
     }
 
     @Test
-    public void t02_barcodeBackLeadsToMain() throws Exception {
+    public void t02_barcodeBackDoesNothing() throws Exception {
         BarcodeScannerActivity activity = mActivityRule.getActivity();
-        activity.onKeyDown(KeyEvent.KEYCODE_BACK, new KeyEvent(0, KeyEvent.KEYCODE_BACK));
-        intended(hasComponent(new ComponentName(getTargetContext(), MainActivity.class)));
+        assertFalse(mActivityRule.getActivity().isFinishing());
     }
 
     @Test
@@ -138,23 +138,21 @@ public class BarcodeScannerActivityTest {
     }
 
     @Test
-    public void t04_barcodeInvalidLeadsToMain() throws Exception {
-        BarcodeScannerActivity activity = mActivityRule.getActivity();
-        Result x = new Result("", null, null, QR_CODE);
-        activity.handleResult(x);
-        intended(hasComponent(new ComponentName(getTargetContext(), MainActivity.class)));
-    }
-
-    @Test
-    public void t05_barcodeLeadsToProduct() throws Exception {
+    public void t04_barcodeLeadsToProduct() throws Exception {
         // https://www.openfood.ch/en/products/972
 
         BarcodeScannerActivity activity = mActivityRule.getActivity();
         activity.processBarcode("7611654884033");
         intended(hasComponent(new ComponentName(getTargetContext(), BarcodeToProductActivity.class)));
         onView(withId(R.id.product_details)).check(matches(withText(startsWith("Chocolat au lait aux noisettes"))));
-        Espresso.pressBack();
-        activity.finish();
+    }
+
+    @Test
+    public void t05_barcodeInvalidLeadsToMain() throws Exception {
+        BarcodeScannerActivity activity = mActivityRule.getActivity();
+        Result x = new Result("", null, null, QR_CODE);
+        activity.handleResult(x);
+        assertTrue(mActivityRule.getActivity().isFinishing());
     }
 
     @AfterClass
