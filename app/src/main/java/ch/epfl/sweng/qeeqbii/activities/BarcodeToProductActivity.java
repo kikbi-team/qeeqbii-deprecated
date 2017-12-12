@@ -121,7 +121,7 @@ public class BarcodeToProductActivity extends AppCompatActivity {
     }
 
     public void buyProduct(View view) {
-        ShoppingListActivity.addProduct(RecentlyScannedProducts.getProduct(barcode));
+        ShoppingListActivity.addProduct(RecentlyScannedProducts.getProduct(barcode), getApplicationContext());
     }
 
     public boolean onOptionsItemSelected(MenuItem item) {
