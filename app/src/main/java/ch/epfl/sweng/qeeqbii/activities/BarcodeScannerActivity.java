@@ -44,22 +44,17 @@ import static android.content.ContentValues.TAG;
 
 public class BarcodeScannerActivity extends AppCompatActivity implements ZXingScannerView.ResultHandler {
 
-    // different actions after barcode result:
-    // OPENFOOD -- go to product description
-    // SHOPPING_CART -- send barcode to shopping cart
-    public static enum ACTION_TYPE {ACTION_OPENFOOD, ACTION_SHOPPING_CART};
+    // default next activity
+    public static final String DEFAULT_NEXT_ACTIVITY = BarcodeToProductActivity.class.getName();
 
-    // default action
-    public static final ACTION_TYPE ACTION_DEFAULT = ACTION_TYPE.ACTION_OPENFOOD;
+    // next activity
+    public static String mNextActivity = null;
 
     // Extra name for barcode
     public static final String EXTRA_BARCODE = "ch.epfl.sweng.qeeqbii.BarcodeScannerActivity.barcode";
 
-    // Extra name for action
-    public static final String EXTRA_ACTION = "ch.epfl.sweng.qeeqbii.BarcodeScannerActivity.action";
-
-    // action obtained on start
-    private ACTION_TYPE action;
+    // Extra name for next activity
+    public static final String EXTRA_NEXT = "ch.epfl.sweng.qeeqbii.BarcodeScannerActivity.next";
 
     // name of the permission
     public static final String CAMERA_PERMISSION = android.Manifest.permission.CAMERA;
@@ -109,10 +104,10 @@ public class BarcodeScannerActivity extends AppCompatActivity implements ZXingSc
 
         // obtain action if present
         Bundle extras = getIntent().getExtras();
-        if (extras != null && extras.containsKey(EXTRA_ACTION)) {
-            action = (ACTION_TYPE) extras.getSerializable(EXTRA_ACTION);
+        if (extras != null && extras.containsKey(EXTRA_NEXT)) {
+            mNextActivity = (String) extras.getSerializable(EXTRA_NEXT);
         } else {
-            action = ACTION_DEFAULT;
+            mNextActivity = DEFAULT_NEXT_ACTIVITY;
         }
 
 
@@ -121,7 +116,7 @@ public class BarcodeScannerActivity extends AppCompatActivity implements ZXingSc
 
 
 
-        Log.d("STATE", "EXTRA_ACTION is " + action);
+        Log.d("STATE", "NEXT activity is " + mNextActivity);
     }
 
     // check if the camera permission is given
@@ -197,18 +192,18 @@ public class BarcodeScannerActivity extends AppCompatActivity implements ZXingSc
         if (barcode == null || barcode.equals("")) {
             Log.d("STATE", "Barcode is invalid, going back");
             goBack();
-        } else if(action == ACTION_TYPE.ACTION_OPENFOOD) {
+        } else {
             Log.d("STATE", "Barcode " + barcode + " found, going to OpenFood");
-            Intent intent = new Intent(this, BarcodeToProductActivity.class);
-            intent.putExtra(EXTRA_BARCODE, barcode);
-            startActivity(intent);
-        } else if(action == ACTION_TYPE.ACTION_SHOPPING_CART) {
-            Log.d("STATE", "Barcode " + barcode + " found, sending data to shopping list");
-            Intent intent = new Intent(this, ShoppingListActivity.class);
+            Intent intent = null;
+            try {
+                intent = new Intent(this, Class.forName(mNextActivity));
+            } catch (ClassNotFoundException e) {
+                e.printStackTrace();
+                throw new Error("Barcode activity got invalid next activity: " + mNextActivity);
+            }
             intent.putExtra(EXTRA_BARCODE, barcode);
             startActivity(intent);
         }
-        // no other actions now
     }
 
 
