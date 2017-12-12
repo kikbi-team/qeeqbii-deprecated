@@ -122,33 +122,27 @@ public class BarcodeScannerActivityTest {
     }
 
     @Test
-    public void t02_barcodeBackDoesNothing() throws Exception {
-        BarcodeScannerActivity activity = mActivityRule.getActivity();
-        assertFalse(mActivityRule.getActivity().isFinishing());
-    }
-
-    @Test
-    public void t03_barcodeBuggyLeadsToWater() throws Exception {
+    public void t01_testCanObtainBarcode() throws Exception {
         // evian water, see #85
 
         BarcodeScannerActivity activity = mActivityRule.getActivity();
+        activity.setNextActivity(BarcodeScannerActivity.NEXT_DUMMY);
         activity.processBarcode("3068320353500");
-        intended(hasComponent(new ComponentName(getTargetContext(), BarcodeToProductActivity.class)));
-        onView(ViewMatchers.withId(R.id.product_details)).check(matches(withText(startsWith("evian"))));
+        assertTrue(activity.getLastBarcode().equals("3068320353500"));
     }
 
     @Test
-    public void t04_barcodeLeadsToProduct() throws Exception {
+    public void t02_testCanStartActivity() throws Exception {
         // https://www.openfood.ch/en/products/972
 
         BarcodeScannerActivity activity = mActivityRule.getActivity();
+        activity.setNextActivity(BarcodeToProductActivity.class.getName());
         activity.processBarcode("7611654884033");
         intended(hasComponent(new ComponentName(getTargetContext(), BarcodeToProductActivity.class)));
-        onView(withId(R.id.product_details)).check(matches(withText(startsWith("Chocolat au lait aux noisettes"))));
     }
 
     @Test
-    public void t05_barcodeInvalidLeadsToMain() throws Exception {
+    public void t03_testCanFinishOnInvalid() throws Exception {
         BarcodeScannerActivity activity = mActivityRule.getActivity();
         Result x = new Result("", null, null, QR_CODE);
         activity.handleResult(x);
