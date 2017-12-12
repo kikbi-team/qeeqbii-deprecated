@@ -11,8 +11,6 @@ import java.util.Locale;
  * Definition of Date only with a day/month/year scale.
  */
 
-
-
 public class Date implements Serializable {
 
     private int mScanningDay;
@@ -22,7 +20,7 @@ public class Date implements Serializable {
     public Date() {
         Calendar calendar = Calendar.getInstance();
         mScanningDay = calendar.get(Calendar.DAY_OF_MONTH);
-        mScanningMonth = calendar.get(Calendar.MONTH) +1;
+        mScanningMonth = calendar.get(Calendar.MONTH); //+1;
         mScanningYear = calendar.get(Calendar.YEAR);
     }
 
@@ -94,5 +92,28 @@ public class Date implements Serializable {
             System.err.println(e.getMessage());
         }
         return false;
+    }
+
+    public String getDateMonthBefore() {
+        if (mScanningMonth == 1) {
+            mScanningMonth = 12;
+        } else {
+            mScanningMonth -= 1;
+        }
+        return toString();
+    }
+
+    public String getDateThreeMonthsBefore() {
+        if (mScanningMonth < 4) {
+            mScanningMonth += 9;
+        } else {
+            mScanningMonth -= 3;
+        }
+        return toString();
+    }
+
+    public String getDateYearBefore() {
+        mScanningYear -= 1;
+        return toString();
     }
 }

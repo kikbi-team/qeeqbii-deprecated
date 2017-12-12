@@ -61,7 +61,6 @@ public class ShowProductActivity extends AppCompatActivity {
 
             return true;
         }
-
         return super.onKeyDown(keyCode, event);
     }
 
@@ -89,9 +88,7 @@ public class ShowProductActivity extends AppCompatActivity {
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
-
         txt_harmfull_ing.setText(str);
-
     }
 
     // Call the Graphs activity to make generate plots from the nutrients of the product.
