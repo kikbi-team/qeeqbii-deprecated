@@ -21,7 +21,7 @@ public class GetTimeAgoTest {
 
         String test = getTimeAgo(time,cxt);
         long now = System.currentTimeMillis();
-        assertEquals(test,"17509 days ago");
+        assertEquals(test,"17513 days ago");
     }
 
     @AfterClass
