@@ -153,6 +153,7 @@ public class SavedProductsDatabaseTest {
 
     }
 
+    /*
     @Test
     public void getProductsBetweenTwoDates()
     {
@@ -162,7 +163,6 @@ public class SavedProductsDatabaseTest {
         try{
             SavedProductsDatabase.addProduct(added_product);
             List<Product> products = SavedProductsDatabase.getProductsBetweenTodayAndDate(new Date("13/11/2017"));
-            System.out.println("/////////////////" + products.size());
             for( Product elem : products)
             {
                 System.out.println(elem.toString());
@@ -173,10 +173,7 @@ public class SavedProductsDatabaseTest {
         {
             fail(e.getMessage());
         }
-
-
-
-    }
+    }*/
 
     @AfterClass
     public static void finish_all_activities() {

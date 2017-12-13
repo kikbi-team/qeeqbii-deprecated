@@ -79,6 +79,18 @@ public class LoginActivity extends AppCompatActivity {
         });
     }
 
+    @Override
+    protected void onDestroy() {
+        dismissProgressDialog();
+        super.onDestroy();
+    }
+
+    public void dismissProgressDialog() {
+        if (mLoginProgress != null && mLoginProgress.isShowing()) {
+            mLoginProgress.dismiss();
+        }
+    }
+
     private void loginUser(String email, String password) {
 
         mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
@@ -87,7 +99,7 @@ public class LoginActivity extends AppCompatActivity {
 
                 if(task.isSuccessful()){
 
-                    mLoginProgress.dismiss();
+                    dismissProgressDialog();
 
                     String current_user_id = mAuth.getCurrentUser().getUid();
                     String deviceToken = FirebaseInstanceId.getInstance().getToken();
@@ -104,7 +116,7 @@ public class LoginActivity extends AppCompatActivity {
                     });
                 } else {
 
-                    mLoginProgress.hide();
+                    dismissProgressDialog();
 
                     String task_result = task.getException().getMessage().toString();
 
@@ -112,10 +124,5 @@ public class LoginActivity extends AppCompatActivity {
                 }
             }
         });
-    }
-
-
-    public ProgressDialog getmLoginProgress() {
-        return mLoginProgress;
     }
 }

@@ -209,6 +209,7 @@
         <activity
             android:name=".activities.ShoppingListActivity"
             android:label="@string/title_activity_shopping_cart"
+            android:exported="true"
             android:theme="@style/ThemeOverlay.MyNoTitleActivity" />
         <activity
             android:name=".activities.ShowProductActivity"
