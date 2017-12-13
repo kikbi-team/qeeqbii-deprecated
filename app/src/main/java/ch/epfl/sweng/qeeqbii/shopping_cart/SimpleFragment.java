@@ -44,12 +44,11 @@ public abstract class SimpleFragment extends Fragment {
     protected BarData generateBarData(int dataSets, float range, int count) {
 
         ArrayList<IBarDataSet> sets = new ArrayList<IBarDataSet>();
-
         for(int i = 0; i < dataSets; i++) {
 
             ArrayList<BarEntry> entries = new ArrayList<BarEntry>();
 
-//            entries = FileUtils.loadEntriesFromAssets(getActivity().getAssets(), "stacked_bars.txt");
+//          entries = FileUtils.loadEntriesFromAssets(getActivity().getAssets(), "stacked_bars.txt");
 
             for(int j = 0; j < count; j++) {
                 entries.add(new BarEntry(j, (float) (Math.random() * range) + range / 4));
@@ -171,8 +170,7 @@ public abstract class SimpleFragment extends Fragment {
         ds4.setLineWidth(2.5f);
         ds4.setCircleRadius(3f);
 
-
-        // load DataSets from textfiles in assets folders
+        //load DataSets from textfiles in assets folders
         sets.add(ds1);
         sets.add(ds2);
         sets.add(ds3);
