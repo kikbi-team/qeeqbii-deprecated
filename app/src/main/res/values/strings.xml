@@ -209,5 +209,6 @@
     <string name="online">Online</string>
     <string name="cancel_request">Cancel Friend Request</string>
     <string name="compare_products">Compare Products</string>
+    <string name="consumption">Consumption</string>
 
 </resources>

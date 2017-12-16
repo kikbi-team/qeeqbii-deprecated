@@ -61,7 +61,6 @@ public class SavedProductsDatabaseTest {
         {
             fail(e.getMessage());
         }
-
     }
 
     @Test
