@@ -6,37 +6,6 @@
     <string name="sugar_graph">Sugar</string>
     <string name="calories_graph">Calories</string>
     <string name="salt_graph">Salts</string>
-
-
-    <!-- Google Sign In -->
-
-    <!--
-    <string name="disconnect">Disconnect</string>
-    <string name="loading">Loading…</string>
-    <string name="signed_out">Signed Out</string>
-
-    <string name="desc_firebase_lockup">Firebase logo and name</string>
-    <string name="firebase_status_fmt">Firebase User: %s</string>
-    <string name="google_status_fmt">Google User: %s</string>
-    <string name="google_title_text">Google Sign In</string>
-
-
-    <string name="facebook_status_fmt">Facebook User: %s</string>
-    <string name="facebook_title_text">Facebook Login</string>
-
-    <string name="emailpassword_status_fmt">Email User: %1$s (verified: %2$b)</string>
-    <string name="emailpassword_title_text">Email and Password</string>
-
-    <string name="twitter_status_fmt">Twitter User: %s</string>
-    <string name="twitter_title_text">Twitter Login</string>
-
-    <string name="id_fmt">User ID: %s</string>
-    <string name="email_fmt">Email: %s</string>
-
-    <string name="hint_password">password</string>
-    <string name="hint_email">email</string>-->
-
-
     <!-- Facebook events -->
     <!-- Text and labels -->
     <string name="search_in_database">SEARCH FOR HARMFUL\nINGREDIENTS</string>
