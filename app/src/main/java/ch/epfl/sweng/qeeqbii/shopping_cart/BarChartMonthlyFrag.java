@@ -16,6 +16,7 @@ import android.widget.FrameLayout;
 
 import com.github.mikephil.charting.charts.BarChart;
 import com.github.mikephil.charting.charts.PieChart;
+import com.github.mikephil.charting.components.Description;
 import com.github.mikephil.charting.components.Legend;
 import com.github.mikephil.charting.components.LegendEntry;
 import com.github.mikephil.charting.components.XAxis;
@@ -23,10 +24,14 @@ import com.github.mikephil.charting.components.YAxis;
 import com.github.mikephil.charting.data.BarData;
 import com.github.mikephil.charting.data.BarDataSet;
 import com.github.mikephil.charting.data.BarEntry;
+import com.github.mikephil.charting.data.PieData;
+import com.github.mikephil.charting.data.PieDataSet;
+import com.github.mikephil.charting.data.PieEntry;
 import com.github.mikephil.charting.listener.ChartTouchListener;
 import com.github.mikephil.charting.listener.OnChartGestureListener;
 import com.github.mikephil.charting.utils.ColorTemplate;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -48,6 +53,11 @@ public class BarChartMonthlyFrag extends SimpleFragment implements OnChartGestur
     private PieChart mChartPieSalt;
     private PieChart mChartPieFats;
     private PieChart mChartPieGlucides;
+
+    private final float[] yDataCalories = {0, 2000};
+    private final float[] yDataFats= {0, 70};
+    private final float[] yDataSugars = {0, 55};
+    private final float[] yDataSalts = {0, 5};
 
     private List<Float> mSalts = new ArrayList<>();
     private List<Float> mGlucides = new ArrayList<>();
@@ -220,7 +230,54 @@ public class BarChartMonthlyFrag extends SimpleFragment implements OnChartGestur
         lGlucides.setOrientation(Legend.LegendOrientation.VERTICAL);
         lGlucides.setDrawInside(false);
 
-        mChartPieGlucides.setData(generatePieData());
+        //mChartPieGlucides.setData(generatePieData());
+
+        ArrayList<PieEntry> yEntrys = new ArrayList<>();
+        //ArrayList<String> xEntrys = new ArrayList<>();
+
+        for (int i = 0; i < yDataSugars.length; i++) {
+            yEntrys.add(new PieEntry(yDataSugars[i], i));
+        }
+
+        /*for (int i = 1; i < xData.length; i++) {
+            xEntrys.add(xData[i]);
+        }*/
+
+        String nameGraph = "glucides";
+
+        //create the data set
+        PieDataSet pieDataSet = new PieDataSet(yEntrys, nameGraph + " in 100g / daily needs");
+        pieDataSet.setSliceSpace(0); //sets the size of the yEntrys on the graph
+        pieDataSet.setValueTextSize(0);
+
+        //add colors to dataset
+        ArrayList<Integer> colors = new ArrayList<>();
+        colors.add(Color.GREEN);
+        colors.add(Color.GRAY);
+        /*colors.add(Color.RED);
+        colors.add(Color.GREEN);
+        colors.add(Color.CYAN);
+        colors.add(Color.YELLOW);
+        colors.add(Color.MAGENTA);*/
+
+        pieDataSet.setColors(colors);
+
+
+        //add legend to chart
+        Legend legendGlucides = mChartPieGlucides.getLegend();
+        legend.setForm(Legend.LegendForm.SQUARE);
+
+        Description description = mChartPieGlucides.getDescription();
+        float percentage = yDataSugars[0]/yDataSugars[1]*100;
+        DecimalFormat numberFormat = new DecimalFormat("#.00");
+        String str_per = numberFormat.format(percentage);
+        description.setText( str_per + "% of your daily need in " + nameGraph + ".          ");
+
+        //create pie data object
+        PieData pieData = new PieData(pieDataSet);
+        mChartPieGlucides.setData(pieData);
+        //pieChart.invalidate();
+        mChartPieGlucides.setEnabled(true);
 
         return v;
     }
