@@ -119,12 +119,8 @@ public class BarChartMonthlyFrag extends SimpleFragment implements OnChartGestur
         mChart.setFitBars(true); // make the x-axis fit exactly all bars
         mChart.invalidate(); // refresh
 
-        //mChart.setData(generateBarData(1, 20000, 12)); //If you want to change this file you have to
-        //take the files from git hub and to change it locally here to get a better graph.
-
         Legend legend = mChart.getLegend();
         legend.setTypeface(tf);
-        //legend.setCustom(ColorTemplate.VORDIPLOM_COLORS, new String[] { "Set1", "Set2", "Set3", "Set4" });
 
         YAxis leftAxis = mChart.getAxisLeft();
         leftAxis.setTypeface(tf);
@@ -149,7 +145,7 @@ public class BarChartMonthlyFrag extends SimpleFragment implements OnChartGestur
         mChartPie.getDescription().setEnabled(false);
 
         mChartPie.setCenterTextTypeface(tf);
-        mChartPie.setCenterText(generateCenterText());
+        mChartPie.setCenterText(generateCenterText("Calories"));
         mChartPie.setCenterTextSize(10f);
         mChartPie.setCenterTextTypeface(tf);
 
@@ -170,7 +166,7 @@ public class BarChartMonthlyFrag extends SimpleFragment implements OnChartGestur
         mChartPieSalt.getDescription().setEnabled(false);
 
         mChartPieSalt.setCenterTextTypeface(tf);
-        mChartPieSalt.setCenterText(generateCenterText());
+        mChartPieSalt.setCenterText(generateCenterText("Salts"));
         mChartPieSalt.setCenterTextSize(10f);
         mChartPieSalt.setCenterTextTypeface(tf);
 
@@ -191,7 +187,7 @@ public class BarChartMonthlyFrag extends SimpleFragment implements OnChartGestur
         mChartPieFats.getDescription().setEnabled(false);
 
         mChartPieFats.setCenterTextTypeface(tf);
-        mChartPieFats.setCenterText(generateCenterText());
+        mChartPieFats.setCenterText(generateCenterText("Fats"));
         mChartPieFats.setCenterTextSize(10f);
         mChartPieFats.setCenterTextTypeface(tf);
 
@@ -212,7 +208,7 @@ public class BarChartMonthlyFrag extends SimpleFragment implements OnChartGestur
         mChartPieGlucides.getDescription().setEnabled(false);
 
         mChartPieGlucides.setCenterTextTypeface(tf);
-        mChartPieGlucides.setCenterText(generateCenterText());
+        mChartPieGlucides.setCenterText(generateCenterText("Glucides"));
         mChartPieGlucides.setCenterTextSize(10f);
         mChartPieGlucides.setCenterTextTypeface(tf);
 
@@ -272,8 +268,8 @@ public class BarChartMonthlyFrag extends SimpleFragment implements OnChartGestur
         Log.i("Translate / Move", "dX: " + dX + ", dY: " + dY);
     }
 
-    private SpannableString generateCenterText() {
-        SpannableString s = new SpannableString("Past\nMonth");
+    private SpannableString generateCenterText(String name) {
+        SpannableString s = new SpannableString(name + "\n  " + "\n Month");
         s.setSpan(new RelativeSizeSpan(2f), 0, 8, 0);
         s.setSpan(new ForegroundColorSpan(Color.GRAY), 8, s.length(), 0);
         return s;
@@ -336,7 +332,7 @@ public class BarChartMonthlyFrag extends SimpleFragment implements OnChartGestur
         }
 
         //create the data set
-        PieDataSet pieDataSet = new PieDataSet(yEntrys, nameGraph + " in 100g / daily needs");
+        PieDataSet pieDataSet = new PieDataSet(yEntrys, nameGraph + " in 100g / Monthly needs");
         pieDataSet.setSliceSpace(0); //sets the size of the yEntrys on the graph
         pieDataSet.setValueTextSize(0);
 
@@ -354,7 +350,7 @@ public class BarChartMonthlyFrag extends SimpleFragment implements OnChartGestur
         float percentage = yData[0]/yData[1]*100;
         DecimalFormat numberFormat = new DecimalFormat("#.00");
         String str_per = numberFormat.format(percentage);
-        description.setText(str_per + "% of your daily need in " + nameGraph + ".          ");
+        description.setText(str_per + "% of your Monthly need in " + nameGraph + ".          ");
 
         //create pie data object
         PieData pieData = new PieData(pieDataSet);
