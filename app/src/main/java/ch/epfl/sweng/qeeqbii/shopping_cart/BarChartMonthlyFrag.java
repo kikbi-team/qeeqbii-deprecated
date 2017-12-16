@@ -80,7 +80,7 @@ public class BarChartMonthlyFrag extends SimpleFragment implements OnChartGestur
         mChartPie.setCenterTextTypeface(tf);
 
         // radius of the center hole in percent of maximum radius
-        mChartPie.setHoleRadius(45f);
+        mChartPie.setHoleRadius(70f);
         mChartPie.setTransparentCircleRadius(50f);
 
         Legend l = mChartPie.getLegend();
@@ -89,7 +89,8 @@ public class BarChartMonthlyFrag extends SimpleFragment implements OnChartGestur
         l.setOrientation(Legend.LegendOrientation.VERTICAL);
         l.setDrawInside(false);
 
-        mChartPie.setData(generatePieData());
+        generateGraph(yDataCalories, mChartPie, "Calories");
+
 
         ////// NEW BAR CHART
         mChart = new BarChart(getActivity());
@@ -175,7 +176,7 @@ public class BarChartMonthlyFrag extends SimpleFragment implements OnChartGestur
         mChartPieSalt.setCenterTextTypeface(tfSalt);
 
         // radius of the center hole in percent of maximum radius
-        mChartPieSalt.setHoleRadius(45f);
+        mChartPieSalt.setHoleRadius(70f);
         mChartPieSalt.setTransparentCircleRadius(50f);
 
         Legend legendSalt = mChartPieSalt.getLegend();
@@ -184,7 +185,7 @@ public class BarChartMonthlyFrag extends SimpleFragment implements OnChartGestur
         legendSalt.setOrientation(Legend.LegendOrientation.VERTICAL);
         legendSalt.setDrawInside(false);
 
-        mChartPieSalt.setData(generatePieData());
+        generateGraph(yDataSalts, mChartPieSalt, "Salts");
 
         //GRAPH CONTAINS THE INFORMATION ABOUT THE CALORIES
         mChartPieFats = (PieChart) v.findViewById(R.id.idPieChartFatTabMonth);
@@ -198,7 +199,7 @@ public class BarChartMonthlyFrag extends SimpleFragment implements OnChartGestur
         mChartPieFats.setCenterTextTypeface(tfFat);
 
         // radius of the center hole in percent of maximum radius
-        mChartPieFats.setHoleRadius(45f);
+        mChartPieFats.setHoleRadius(70f);
         mChartPieFats.setTransparentCircleRadius(50f);
 
         Legend lFat = mChartPieFats.getLegend();
@@ -207,7 +208,7 @@ public class BarChartMonthlyFrag extends SimpleFragment implements OnChartGestur
         lFat.setOrientation(Legend.LegendOrientation.VERTICAL);
         lFat.setDrawInside(false);
 
-        mChartPieFats.setData(generatePieData());
+        generateGraph(yDataFats, mChartPieFats, "Fats");
 
         //GRAPH CONTAINS THE INFORMATION ABOUT THE CALORIES
         mChartPieGlucides = (PieChart) v.findViewById(R.id.idPieChartGlucideTabMonth);
@@ -221,7 +222,7 @@ public class BarChartMonthlyFrag extends SimpleFragment implements OnChartGestur
         mChartPieGlucides.setCenterTextTypeface(tfGlucides);
 
         // radius of the center hole in percent of maximum radius
-        mChartPieGlucides.setHoleRadius(45f);
+        mChartPieGlucides.setHoleRadius(70f);
         mChartPieGlucides.setTransparentCircleRadius(50f);
 
         Legend lGlucides = mChartPieGlucides.getLegend();
@@ -230,54 +231,7 @@ public class BarChartMonthlyFrag extends SimpleFragment implements OnChartGestur
         lGlucides.setOrientation(Legend.LegendOrientation.VERTICAL);
         lGlucides.setDrawInside(false);
 
-        //mChartPieGlucides.setData(generatePieData());
-
-        ArrayList<PieEntry> yEntrys = new ArrayList<>();
-        //ArrayList<String> xEntrys = new ArrayList<>();
-
-        for (int i = 0; i < yDataSugars.length; i++) {
-            yEntrys.add(new PieEntry(yDataSugars[i], i));
-        }
-
-        /*for (int i = 1; i < xData.length; i++) {
-            xEntrys.add(xData[i]);
-        }*/
-
-        String nameGraph = "glucides";
-
-        //create the data set
-        PieDataSet pieDataSet = new PieDataSet(yEntrys, nameGraph + " in 100g / daily needs");
-        pieDataSet.setSliceSpace(0); //sets the size of the yEntrys on the graph
-        pieDataSet.setValueTextSize(0);
-
-        //add colors to dataset
-        ArrayList<Integer> colors = new ArrayList<>();
-        colors.add(Color.GREEN);
-        colors.add(Color.GRAY);
-        /*colors.add(Color.RED);
-        colors.add(Color.GREEN);
-        colors.add(Color.CYAN);
-        colors.add(Color.YELLOW);
-        colors.add(Color.MAGENTA);*/
-
-        pieDataSet.setColors(colors);
-
-
-        //add legend to chart
-        Legend legendGlucides = mChartPieGlucides.getLegend();
-        legend.setForm(Legend.LegendForm.SQUARE);
-
-        Description description = mChartPieGlucides.getDescription();
-        float percentage = yDataSugars[0]/yDataSugars[1]*100;
-        DecimalFormat numberFormat = new DecimalFormat("#.00");
-        String str_per = numberFormat.format(percentage);
-        description.setText( str_per + "% of your daily need in " + nameGraph + ".          ");
-
-        //create pie data object
-        PieData pieData = new PieData(pieDataSet);
-        mChartPieGlucides.setData(pieData);
-        //pieChart.invalidate();
-        mChartPieGlucides.setEnabled(true);
+        generateGraph(yDataSugars, mChartPieGlucides, "Glucides");
 
         return v;
     }
@@ -376,5 +330,40 @@ public class BarChartMonthlyFrag extends SimpleFragment implements OnChartGestur
             sum += element;
         }
         return sum;
+    }
+
+    private void generateGraph(float[] yData, PieChart pie, String nameGraph) {
+
+        ArrayList<PieEntry> yEntrys = new ArrayList<>();
+
+        for (int i = 0; i < yData.length; i++) {
+            yEntrys.add(new PieEntry(yData[i], i));
+        }
+
+        //create the data set
+        PieDataSet pieDataSet = new PieDataSet(yEntrys, nameGraph + " in 100g / daily needs");
+        pieDataSet.setSliceSpace(0); //sets the size of the yEntrys on the graph
+        pieDataSet.setValueTextSize(0);
+
+        //add colors to dataset
+        ArrayList<Integer> colors = new ArrayList<>();
+        colors.add(Color.rgb(0, 153, 153));
+        colors.add(Color.DKGRAY);
+        pieDataSet.setColors(colors);
+
+        //add legend to chart
+        Legend legendPie = pie.getLegend();
+        legendPie.setForm(Legend.LegendForm.SQUARE);
+
+        Description description = pie.getDescription();
+        float percentage = yData[0]/yData[1]*100;
+        DecimalFormat numberFormat = new DecimalFormat("#.00");
+        String str_per = numberFormat.format(percentage);
+        description.setText(str_per + "% of your daily need in " + nameGraph + ".          ");
+
+        //create pie data object
+        PieData pieData = new PieData(pieDataSet);
+        pie.setData(pieData);
+        pie.setEnabled(true);
     }
 }
