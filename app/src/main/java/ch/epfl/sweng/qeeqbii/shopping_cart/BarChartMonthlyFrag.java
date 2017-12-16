@@ -54,10 +54,10 @@ public class BarChartMonthlyFrag extends SimpleFragment implements OnChartGestur
     private PieChart mChartPieFats;
     private PieChart mChartPieGlucides;
 
-    private final float[] yDataCalories = {0, 2000};
-    private final float[] yDataFats= {0, 70};
-    private final float[] yDataSugars = {0, 55};
-    private final float[] yDataSalts = {0, 5};
+    private final float[] yDataCalories = {0, 2000*30};
+    private final float[] yDataFats= {0, 70*30};
+    private final float[] yDataSugars = {0, 55*30};
+    private final float[] yDataSalts = {0, 5*30};
 
     private List<Float> mSalts = new ArrayList<>();
     private List<Float> mGlucides = new ArrayList<>();
@@ -67,30 +67,7 @@ public class BarChartMonthlyFrag extends SimpleFragment implements OnChartGestur
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.tab_1_statistics_month, container, false);
-
-        //GRAPH CONTAINS THE INFORMATION ABOUT THE CALORIES
-        mChartPie = (PieChart) v.findViewById(R.id.idPieChartTabMonth);
-        mChartPie.getDescription().setEnabled(false);
-
         Typeface tf = Typeface.createFromAsset(getActivity().getAssets(), "OpenSans-Light.ttf");
-
-        mChartPie.setCenterTextTypeface(tf);
-        mChartPie.setCenterText(generateCenterText());
-        mChartPie.setCenterTextSize(10f);
-        mChartPie.setCenterTextTypeface(tf);
-
-        // radius of the center hole in percent of maximum radius
-        mChartPie.setHoleRadius(70f);
-        mChartPie.setTransparentCircleRadius(50f);
-
-        Legend l = mChartPie.getLegend();
-        l.setVerticalAlignment(Legend.LegendVerticalAlignment.TOP);
-        l.setHorizontalAlignment(Legend.LegendHorizontalAlignment.RIGHT);
-        l.setOrientation(Legend.LegendOrientation.VERTICAL);
-        l.setDrawInside(false);
-
-        generateGraph(yDataCalories, mChartPie, "Calories");
-
 
         ////// NEW BAR CHART
         mChart = new BarChart(getActivity());
@@ -103,8 +80,6 @@ public class BarChartMonthlyFrag extends SimpleFragment implements OnChartGestur
 
         mChart.setDrawGridBackground(false);
         mChart.setDrawBarShadow(false);
-
-        Typeface tfBars = Typeface.createFromAsset(getActivity().getAssets(),"OpenSans-Light.ttf");
 
         //FOR THE FUTURE
         /*
@@ -148,7 +123,7 @@ public class BarChartMonthlyFrag extends SimpleFragment implements OnChartGestur
         //take the files from git hub and to change it locally here to get a better graph.
 
         Legend legend = mChart.getLegend();
-        legend.setTypeface(tfBars);
+        legend.setTypeface(tf);
         //legend.setCustom(ColorTemplate.VORDIPLOM_COLORS, new String[] { "Set1", "Set2", "Set3", "Set4" });
 
         YAxis leftAxis = mChart.getAxisLeft();
@@ -164,16 +139,40 @@ public class BarChartMonthlyFrag extends SimpleFragment implements OnChartGestur
         FrameLayout parent = (FrameLayout) v.findViewById(R.id.barChartMonth);
         parent.addView(mChart);
 
+        yDataSugars[0] = sumList(mGlucides);
+        yDataSalts[0] = sumList(mSalts);
+        yDataFats[0] = sumList(mFats);
+        yDataCalories[0] = sumList(mCalories);
+
+        //GRAPH CONTAINS THE INFORMATION ABOUT THE CALORIES
+        mChartPie = (PieChart) v.findViewById(R.id.idPieChartTabMonth);
+        mChartPie.getDescription().setEnabled(false);
+
+        mChartPie.setCenterTextTypeface(tf);
+        mChartPie.setCenterText(generateCenterText());
+        mChartPie.setCenterTextSize(10f);
+        mChartPie.setCenterTextTypeface(tf);
+
+        // radius of the center hole in percent of maximum radius
+        mChartPie.setHoleRadius(70f);
+        mChartPie.setTransparentCircleRadius(50f);
+
+        Legend l = mChartPie.getLegend();
+        l.setVerticalAlignment(Legend.LegendVerticalAlignment.TOP);
+        l.setHorizontalAlignment(Legend.LegendHorizontalAlignment.RIGHT);
+        l.setOrientation(Legend.LegendOrientation.VERTICAL);
+        l.setDrawInside(false);
+
+        generateGraph(yDataCalories, mChartPie, "Calories");
+
         //GRAPH CONTAINS THE INFORMATION ABOUT THE CALORIES
         mChartPieSalt = (PieChart) v.findViewById(R.id.idPieChartSaltTabMonth);
         mChartPieSalt.getDescription().setEnabled(false);
 
-        Typeface tfSalt = Typeface.createFromAsset(getActivity().getAssets(), "OpenSans-Light.ttf");
-
-        mChartPieSalt.setCenterTextTypeface(tfSalt);
+        mChartPieSalt.setCenterTextTypeface(tf);
         mChartPieSalt.setCenterText(generateCenterText());
         mChartPieSalt.setCenterTextSize(10f);
-        mChartPieSalt.setCenterTextTypeface(tfSalt);
+        mChartPieSalt.setCenterTextTypeface(tf);
 
         // radius of the center hole in percent of maximum radius
         mChartPieSalt.setHoleRadius(70f);
@@ -191,12 +190,10 @@ public class BarChartMonthlyFrag extends SimpleFragment implements OnChartGestur
         mChartPieFats = (PieChart) v.findViewById(R.id.idPieChartFatTabMonth);
         mChartPieFats.getDescription().setEnabled(false);
 
-        Typeface tfFat = Typeface.createFromAsset(getActivity().getAssets(), "OpenSans-Light.ttf");
-
-        mChartPieFats.setCenterTextTypeface(tfFat);
+        mChartPieFats.setCenterTextTypeface(tf);
         mChartPieFats.setCenterText(generateCenterText());
         mChartPieFats.setCenterTextSize(10f);
-        mChartPieFats.setCenterTextTypeface(tfFat);
+        mChartPieFats.setCenterTextTypeface(tf);
 
         // radius of the center hole in percent of maximum radius
         mChartPieFats.setHoleRadius(70f);
@@ -214,12 +211,10 @@ public class BarChartMonthlyFrag extends SimpleFragment implements OnChartGestur
         mChartPieGlucides = (PieChart) v.findViewById(R.id.idPieChartGlucideTabMonth);
         mChartPieGlucides.getDescription().setEnabled(false);
 
-        Typeface tfGlucides = Typeface.createFromAsset(getActivity().getAssets(), "OpenSans-Light.ttf");
-
-        mChartPieGlucides.setCenterTextTypeface(tfGlucides);
+        mChartPieGlucides.setCenterTextTypeface(tf);
         mChartPieGlucides.setCenterText(generateCenterText());
         mChartPieGlucides.setCenterTextSize(10f);
-        mChartPieGlucides.setCenterTextTypeface(tfGlucides);
+        mChartPieGlucides.setCenterTextTypeface(tf);
 
         // radius of the center hole in percent of maximum radius
         mChartPieGlucides.setHoleRadius(70f);
