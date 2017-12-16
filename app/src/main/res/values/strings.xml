@@ -91,7 +91,7 @@
     <string name="Account_Linking">Account Linking</string>
     <string name="auth_failed">Authentication failed</string>-->
 
-    <string name="shopping_list">Shopping List</string>
+    <string name="shopping_list">\n Shopping List</string>
 
     <string name="empty_field">Empty field</string>
     <string name="scanned_products">Scanned Products</string>
@@ -210,5 +210,6 @@
     <string name="cancel_request">Cancel Friend Request</string>
     <string name="compare_products">Compare Products</string>
     <string name="consumption">Consumption</string>
+    <string name="shopping_list_n">\n Shopping list</string>
 
 </resources>
