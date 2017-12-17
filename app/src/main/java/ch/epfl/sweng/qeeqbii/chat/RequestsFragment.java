@@ -63,7 +63,7 @@ public class RequestsFragment extends Fragment {
          //if (FirebaseDatabase.getInstance().getReference().child("Friend_req").child(mCurrent_user_id).child("request_type").toString() != ("received") ) {
 
 
-        // }else {
+//         }else {
 
             mRequestsList = (RecyclerView) mMainView.findViewById(R.id.requests_list);
             mRequestsDatabase = FirebaseDatabase.getInstance().getReference().child("Friend_req").child(mCurrent_user_id);
@@ -74,7 +74,7 @@ public class RequestsFragment extends Fragment {
             mRequestsList.setHasFixedSize(true);
             mRequestsList.setLayoutManager(new LinearLayoutManager(getContext()));
 
-      //  }
+  //      }
 
 
         // Inflate the layout for this fragment

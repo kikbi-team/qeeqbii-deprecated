@@ -16,15 +16,20 @@ import android.widget.FrameLayout;
 
 import com.github.mikephil.charting.charts.BarChart;
 import com.github.mikephil.charting.charts.PieChart;
+import com.github.mikephil.charting.components.Description;
 import com.github.mikephil.charting.components.Legend;
 import com.github.mikephil.charting.components.XAxis;
 import com.github.mikephil.charting.components.YAxis;
 import com.github.mikephil.charting.data.BarData;
 import com.github.mikephil.charting.data.BarDataSet;
 import com.github.mikephil.charting.data.BarEntry;
+import com.github.mikephil.charting.data.PieData;
+import com.github.mikephil.charting.data.PieDataSet;
+import com.github.mikephil.charting.data.PieEntry;
 import com.github.mikephil.charting.listener.ChartTouchListener;
 import com.github.mikephil.charting.listener.OnChartGestureListener;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -41,7 +46,15 @@ public class pieChartYearlyFrag extends SimpleFragment implements OnChartGesture
     }
 
     private BarChart mChart;
-    private PieChart mChartPie;
+    private PieChart mChartPie; //For calories
+    private PieChart mChartPieSalt;
+    private PieChart mChartPieFats;
+    private PieChart mChartPieGlucides;
+
+    private final float[] yDataCalories = {0, 2000*365};
+    private final float[] yDataFats= {0, 70*365};
+    private final float[] yDataSugars = {0, 55*365};
+    private final float[] yDataSalts = {0, 5*365};
 
     private List<Float> mSalts = new ArrayList<>();
     private List<Float> mGlucides = new ArrayList<>();
@@ -51,31 +64,9 @@ public class pieChartYearlyFrag extends SimpleFragment implements OnChartGesture
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.tab_3_shopping_cart_statistics, container, false);
-
-        //FIRST GRAPH
-        mChartPie = (PieChart) v.findViewById(R.id.idPieChartTabYear);
-        mChartPie.getDescription().setEnabled(false);
-
         Typeface tf = Typeface.createFromAsset(getActivity().getAssets(), "OpenSans-Light.ttf");
 
-        mChartPie.setCenterTextTypeface(tf);
-        mChartPie.setCenterText(generateCenterText());
-        mChartPie.setCenterTextSize(10f);
-        mChartPie.setCenterTextTypeface(tf);
-
-        // radius of the center hole in percent of maximum radius
-        mChartPie.setHoleRadius(45f);
-        mChartPie.setTransparentCircleRadius(50f);
-
-        Legend l = mChartPie.getLegend();
-        l.setVerticalAlignment(Legend.LegendVerticalAlignment.TOP);
-        l.setHorizontalAlignment(Legend.LegendHorizontalAlignment.RIGHT);
-        l.setOrientation(Legend.LegendOrientation.VERTICAL);
-        l.setDrawInside(false);
-
-        mChartPie.setData(generatePieData());
-
-        // create a new chart object
+        ////// NEW BAR CHART
         mChart = new BarChart(getActivity());
         mChart.getDescription().setEnabled(false);
         mChart.setOnChartGestureListener(this);
@@ -86,8 +77,6 @@ public class pieChartYearlyFrag extends SimpleFragment implements OnChartGesture
 
         mChart.setDrawGridBackground(false);
         mChart.setDrawBarShadow(false);
-
-        Typeface tfBars = Typeface.createFromAsset(getActivity().getAssets(),"OpenSans-Light.ttf");
 
         //FOR THE FUTURE
         /*
@@ -131,7 +120,7 @@ public class pieChartYearlyFrag extends SimpleFragment implements OnChartGesture
         //take the files from git hub and to change it locally here to get a better graph.
 
         Legend legend = mChart.getLegend();
-        legend.setTypeface(tfBars);
+        legend.setTypeface(tf);
         //legend.setCustom(ColorTemplate.VORDIPLOM_COLORS, new String[] { "Set1", "Set2", "Set3", "Set4" });
 
         YAxis leftAxis = mChart.getAxisLeft();
@@ -146,6 +135,95 @@ public class pieChartYearlyFrag extends SimpleFragment implements OnChartGesture
         //programatically add the chart
         FrameLayout parent = (FrameLayout) v.findViewById(R.id.barChartYear);
         parent.addView(mChart);
+
+        yDataSugars[0] = sumList(mGlucides);
+        yDataSalts[0] = sumList(mSalts);
+        yDataFats[0] = sumList(mFats);
+        yDataCalories[0] = sumList(mCalories);
+
+        //GRAPH CONTAINS THE INFORMATION ABOUT THE CALORIES
+        mChartPie = (PieChart) v.findViewById(R.id.idPieChartTabYear);
+        mChartPie.getDescription().setEnabled(false);
+
+        mChartPie.setCenterTextTypeface(tf);
+        mChartPie.setCenterText(generateCenterText("Calories"));
+        mChartPie.setCenterTextSize(10f);
+        mChartPie.setCenterTextTypeface(tf);
+
+        // radius of the center hole in percent of maximum radius
+        mChartPie.setHoleRadius(70f);
+        mChartPie.setTransparentCircleRadius(50f);
+
+        Legend l = mChartPie.getLegend();
+        l.setVerticalAlignment(Legend.LegendVerticalAlignment.TOP);
+        l.setHorizontalAlignment(Legend.LegendHorizontalAlignment.RIGHT);
+        l.setOrientation(Legend.LegendOrientation.VERTICAL);
+        l.setDrawInside(false);
+
+        generateGraph(yDataCalories, mChartPie, "Calories");
+
+        //GRAPH CONTAINS THE INFORMATION ABOUT THE CALORIES
+        mChartPieSalt = (PieChart) v.findViewById(R.id.idPieChartSaltTabYear);
+        mChartPieSalt.getDescription().setEnabled(false);
+
+        mChartPieSalt.setCenterTextTypeface(tf);
+        mChartPieSalt.setCenterText(generateCenterText("Salts"));
+        mChartPieSalt.setCenterTextSize(10f);
+        mChartPieSalt.setCenterTextTypeface(tf);
+
+        // radius of the center hole in percent of maximum radius
+        mChartPieSalt.setHoleRadius(70f);
+        mChartPieSalt.setTransparentCircleRadius(50f);
+
+        Legend legendSalt = mChartPieSalt.getLegend();
+        legendSalt.setVerticalAlignment(Legend.LegendVerticalAlignment.TOP);
+        legendSalt.setHorizontalAlignment(Legend.LegendHorizontalAlignment.RIGHT);
+        legendSalt.setOrientation(Legend.LegendOrientation.VERTICAL);
+        legendSalt.setDrawInside(false);
+
+        generateGraph(yDataSalts, mChartPieSalt, "Salts");
+
+        //GRAPH CONTAINS THE INFORMATION ABOUT THE CALORIES
+        mChartPieFats = (PieChart) v.findViewById(R.id.idPieChartFatTabYear);
+        mChartPieFats.getDescription().setEnabled(false);
+
+        mChartPieFats.setCenterTextTypeface(tf);
+        mChartPieFats.setCenterText(generateCenterText("Fats"));
+        mChartPieFats.setCenterTextSize(10f);
+        mChartPieFats.setCenterTextTypeface(tf);
+
+        // radius of the center hole in percent of maximum radius
+        mChartPieFats.setHoleRadius(70f);
+        mChartPieFats.setTransparentCircleRadius(50f);
+
+        Legend lFat = mChartPieFats.getLegend();
+        lFat.setVerticalAlignment(Legend.LegendVerticalAlignment.TOP);
+        lFat.setHorizontalAlignment(Legend.LegendHorizontalAlignment.RIGHT);
+        lFat.setOrientation(Legend.LegendOrientation.VERTICAL);
+        lFat.setDrawInside(false);
+
+        generateGraph(yDataFats, mChartPieFats, "Fats");
+
+        //GRAPH CONTAINS THE INFORMATION ABOUT THE CALORIES
+        mChartPieGlucides = (PieChart) v.findViewById(R.id.idPieChartGlucideTabYear);
+        mChartPieGlucides.getDescription().setEnabled(false);
+
+        mChartPieGlucides.setCenterTextTypeface(tf);
+        mChartPieGlucides.setCenterText(generateCenterText("Glucides"));
+        mChartPieGlucides.setCenterTextSize(10f);
+        mChartPieGlucides.setCenterTextTypeface(tf);
+
+        // radius of the center hole in percent of maximum radius
+        mChartPieGlucides.setHoleRadius(70f);
+        mChartPieGlucides.setTransparentCircleRadius(50f);
+
+        Legend lGlucides = mChartPieGlucides.getLegend();
+        lGlucides.setVerticalAlignment(Legend.LegendVerticalAlignment.TOP);
+        lGlucides.setHorizontalAlignment(Legend.LegendHorizontalAlignment.RIGHT);
+        lGlucides.setOrientation(Legend.LegendOrientation.VERTICAL);
+        lGlucides.setDrawInside(false);
+
+        generateGraph(yDataSugars, mChartPieGlucides, "Glucides");
 
         return v;
     }
@@ -191,8 +269,8 @@ public class pieChartYearlyFrag extends SimpleFragment implements OnChartGesture
         Log.i("Translate / Move", "dX: " + dX + ", dY: " + dY);
     }
 
-    private SpannableString generateCenterText() {
-        SpannableString s = new SpannableString("Past\nMonth");
+    private SpannableString generateCenterText(String name) {
+        SpannableString s = new SpannableString(name + "\n  " + "\n Year");
         s.setSpan(new RelativeSizeSpan(2f), 0, 8, 0);
         s.setSpan(new ForegroundColorSpan(Color.GRAY), 8, s.length(), 0);
         return s;
@@ -244,5 +322,40 @@ public class pieChartYearlyFrag extends SimpleFragment implements OnChartGesture
             sum += element;
         }
         return sum;
+    }
+
+    private void generateGraph(float[] yData, PieChart pie, String nameGraph) {
+
+        ArrayList<PieEntry> yEntrys = new ArrayList<>();
+
+        for (int i = 0; i < yData.length; i++) {
+            yEntrys.add(new PieEntry(yData[i], i));
+        }
+
+        //create the data set
+        PieDataSet pieDataSet = new PieDataSet(yEntrys, nameGraph + " in 100g / 3 months needs");
+        pieDataSet.setSliceSpace(0); //sets the size of the yEntrys on the graph
+        pieDataSet.setValueTextSize(0);
+
+        //add colors to dataset
+        ArrayList<Integer> colors = new ArrayList<>();
+        colors.add(Color.rgb(0, 153, 153));
+        colors.add(Color.DKGRAY);
+        pieDataSet.setColors(colors);
+
+        //add legend to chart
+        Legend legendPie = pie.getLegend();
+        legendPie.setForm(Legend.LegendForm.SQUARE);
+
+        Description description = pie.getDescription();
+        float percentage = yData[0]/yData[1]*100;
+        DecimalFormat numberFormat = new DecimalFormat("#.00");
+        String str_per = numberFormat.format(percentage);
+        description.setText(str_per + "% of your 3-Monthly needs in " + nameGraph + ".          ");
+
+        //create pie data object
+        PieData pieData = new PieData(pieDataSet);
+        pie.setData(pieData);
+        pie.setEnabled(true);
     }
 }
