@@ -15,9 +15,8 @@ import ch.epfl.sweng.qeeqbii.custom_exceptions.NotOpenFileException;
 import ch.epfl.sweng.qeeqbii.custom_exceptions.ProductException;
 import ch.epfl.sweng.qeeqbii.clustering.NutrientVector;
 
+public class Product implements Serializable{
 
-
-public class Product implements Serializable {
     private String mName = "";
     private String mQuantity = "";
     private String mIngredients = "";
@@ -43,6 +42,7 @@ public class Product implements Serializable {
 //        mIsChecked = false;
 //        mOpacity = 1f;
         mType = type;
+
         if (mType == null)
         {
             try {
@@ -155,8 +155,6 @@ public class Product implements Serializable {
             throw new ProductException("Nutrient list is empty for this product: unable to execute the parsing operation.");
         }
 
-
-
         Map<String, Double> nutrient_map = new HashMap<>();
         try {
             String[] parsed_nutrients = mNutrients.split("\\n");
@@ -222,13 +220,13 @@ public class Product implements Serializable {
                 s += item.getCluster().toString() + ", " + item.getDistance() + "\n";
             }
         }
-
         return s;
     }
 
     public void setParsedIngredients(String[] parsedIngredients) {
         this.mParsedIngredients = parsedIngredients;
     }
+
 
 //    public boolean isChecked() {
 //        return mIsChecked;

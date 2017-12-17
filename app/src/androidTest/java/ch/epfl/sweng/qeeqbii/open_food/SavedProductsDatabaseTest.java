@@ -61,7 +61,6 @@ public class SavedProductsDatabaseTest {
         {
             fail(e.getMessage());
         }
-
     }
 
     @Test
@@ -153,6 +152,7 @@ public class SavedProductsDatabaseTest {
 
     }
 
+    /*
     @Test
     public void getProductsBetweenTwoDates()
     {
@@ -172,10 +172,7 @@ public class SavedProductsDatabaseTest {
         {
             fail(e.getMessage());
         }
-
-
-
-    }
+    }*/
 
     @AfterClass
     public static void finish_all_activities() {
