@@ -58,6 +58,7 @@
 
         <service
             android:name="chat.FirebaseMessagingService"
+            android:exported="false"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
@@ -66,13 +67,8 @@
 
         <activity
             android:name=".chat.MainActivityChat"
-            android:theme="@style/AppTheme.NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:exported="true"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity android:name=".chat.StartActivity" />
         <activity
             android:name=".chat.RegisterActivity"
@@ -120,7 +116,6 @@
             android:parentActivityName=".chat.MainActivityChat"
             android:theme="@style/AppTheme.NoActionBar"></activity>
 
-
         <activity
             android:name=".activities.CancerDataShowActivity"
             android:exported="true"
@@ -143,7 +138,7 @@
         <provider
             android:name="com.facebook.FacebookContentProvider"
             android:authorities="com.facebook.app.FacebookContentProvider1502943653129350"
-            android:exported="true" />
+            android:exported="false" />
 
         <activity
             android:name=".activities.RecentlyScannedProductsActivity"
@@ -159,19 +154,27 @@
             android:exported="true" />
         <activity android:name=".activities.GraphsActivity" />
         <activity
-            android:name=".activities.ShoppingListActivity"
+            android:name=".activities.ShoppingCartFirstLevelActivity"
             android:label="@string/title_activity_shopping_cart"
             android:theme="@style/ThemeOverlay.MyNoTitleActivity" />
         <activity
-            android:name=".activities.ShoppingCartActivity"
+            android:name=".activities.ShoppingCartSecondLevelActivity"
             android:label="@string/title_activity_shopping_cart"
+            android:theme="@style/ThemeOverlay.MyNoTitleActivity" />
+        <activity
+            android:name=".activities.ShoppingListActivity"
+            android:label="@string/title_activity_shopping_cart"
+            android:exported="true"
             android:theme="@style/ThemeOverlay.MyNoTitleActivity" />
         <activity
             android:name=".activities.ShowProductActivity"
             android:exported="true" />
         <activity android:name=".activities.ShareOnFacebookActivity" />
         <activity
-            android:name=".shopping_cart.ShoppingCartStatistics"
+            android:name=".activities.ProductListActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activities.StatisticsActivity"
             android:label="@string/title_activity_shopping_cart_statistics"
             android:theme="@style/AppTheme.NoActionBar" />
 

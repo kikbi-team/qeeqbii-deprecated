@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimary"
+    android:background="@drawable/gradients"
     tools:context="ch.epfl.sweng.qeeqbii.chat.StartActivity">
 
     <TextView
@@ -14,7 +14,7 @@
         android:layout_above="@+id/start_login_btn"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="50dp"
-        android:text="Welcome to Qeeqbii \n App"
+        android:text="@string/welcome"
         android:textAlignment="center"
         android:textColor="@android:color/white"
         android:textSize="22sp"
@@ -43,6 +43,24 @@
         android:backgroundTint="@color/colorAccent"
         android:paddingLeft="20dp"
         android:paddingRight="20dp"
-        android:text="ALREADY HAVE ACCOUNT"
+        android:text="@string/have_already"
         android:textColor="@android:color/white" />
+
+    <Button
+        android:id="@+id/google"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="78dp"
+        android:text="G"
+        android:layout_alignParentTop="true"
+        android:layout_toStartOf="@+id/start_reg_btn" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView"
+        android:layout_alignTop="@+id/google"
+        android:layout_marginStart="17dp"
+        android:text="Button" />
 </RelativeLayout>

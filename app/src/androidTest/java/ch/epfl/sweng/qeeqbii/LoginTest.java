@@ -1,12 +1,17 @@
 package ch.epfl.sweng.qeeqbii;
 
+import android.app.ProgressDialog;
 import android.support.test.espresso.ViewInteraction;
 import android.support.test.espresso.matcher.ViewMatchers;
 import android.support.test.rule.ActivityTestRule;
 
+import org.junit.AfterClass;
 import org.junit.Rule;
 import org.junit.Test;
 
+import java.util.concurrent.TimeUnit;
+
+import ch.epfl.sweng.qeeqbii.activities.BarcodeScannerActivity;
 import ch.epfl.sweng.qeeqbii.activities.SavedProductsDatesActivity;
 import ch.epfl.sweng.qeeqbii.chat.LoginActivity;
 
@@ -41,6 +46,20 @@ public class LoginTest {
         ViewInteraction appCompatButton =onView(withId(R.id.login_btn));
         appCompatButton.perform(click());
 
+
+        // Force closing the progressDialog box in order to start new activity
+        mActivityRule.getActivity().dismissProgressDialog();
+
+        // Wait that BarcodeScanner activity starts (it takes a little bit of time since all the CSV files are read
+        // when this activity is launched for the first time
+        while (!BarcodeScannerActivity.isRunning()) {
+            try {
+                Thread.sleep(100);
+            }
+            catch(InterruptedException e) {
+                System.err.println(e.getMessage());
+            }
+        }
     }
 
 
@@ -55,4 +74,8 @@ public class LoginTest {
         passwordField.perform(replaceText(password));
     }
 
+    @AfterClass
+    public static void finish_all_activities() {
+        ActivityFinisher.finishOpenActivities();
+    }
 }

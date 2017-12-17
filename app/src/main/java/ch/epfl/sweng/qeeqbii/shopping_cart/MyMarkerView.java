@@ -1,6 +1,8 @@
 package ch.epfl.sweng.qeeqbii.shopping_cart;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
+import android.util.AttributeSet;
 import android.widget.TextView;
 
 import com.github.mikephil.charting.components.MarkerView;
@@ -17,13 +19,13 @@ import ch.epfl.sweng.qeeqbii.R;
  *
  * @author Philipp Jahoda
  */
+@SuppressLint("ViewConstructor")
 public class MyMarkerView extends MarkerView {
 
     private TextView tvContent;
 
     public MyMarkerView(Context context, int layoutResource) {
         super(context, layoutResource);
-
         tvContent = (TextView) findViewById(R.id.tvContent);
     }
 
@@ -36,10 +38,10 @@ public class MyMarkerView extends MarkerView {
 
             CandleEntry ce = (CandleEntry) e;
 
-            tvContent.setText("" + Utils.formatNumber(ce.getHigh(), 0, true));
+            tvContent.setText(Utils.formatNumber(ce.getHigh(), 0, true));
         } else {
 
-            tvContent.setText("" + Utils.formatNumber(e.getY(), 0, true));
+            tvContent.setText(Utils.formatNumber(e.getY(), 0, true));
         }
 
         super.refreshContent(e, highlight);

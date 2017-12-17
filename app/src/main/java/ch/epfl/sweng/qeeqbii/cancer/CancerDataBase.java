@@ -33,7 +33,7 @@ public class CancerDataBase {
     static private final HashMap<String, CancerSubstance> substanceMap = new HashMap<>();
     // mopen_state takes value 0 if no file have been read and takes value 1 if readCSVfile() have
     // been called and succeeded in reading a CSV file
-    static private int openState = 0;
+    static private boolean openState = false;
     // Definition of the hamming distance that will be used to query the database
     // The Levenshtein distance is chosen here
     static private final Metric<String> hammingLevenshtein = new Metric<String>() {
@@ -48,8 +48,8 @@ public class CancerDataBase {
 
 
     // Method that reads a CSVFile
-    public static void readCSVFile(Context context) throws AlreadyOpenException {
-        if (openState == 0) {
+    public static void readCSVFile(Context context) {
+        if (!openState) {
 
             Resources resources = context.getResources();
             InputStream inStream = resources.openRawResource(R.raw.clean_classification_iarc_french);
@@ -87,16 +87,13 @@ public class CancerDataBase {
             }
 
             // Change the mopen_state to value 1 because the file is read
-            openState = 1;
-        }
-        else {
-            throw new AlreadyOpenException("Error: the carcinogenic database has already been opened.\n");
+            openState = true;
         }
     }
 
     // Method that outputs a string containing a summary of all the substances and their categorization
     public static String sendOutputReadyToPrint() throws NotOpenFileException {
-        if (openState == 1) {
+        if (openState) {
             String output = " id\tAgent\t\tGroup\n";
             for (CancerSubstance element : substanceList) {
                 output += element.toString();
@@ -110,7 +107,7 @@ public class CancerDataBase {
 
     // Setters and getters
 
-    static int getOpenState() {
+    public static boolean isRead() {
         return openState;
     }
 
@@ -123,7 +120,7 @@ public class CancerDataBase {
         return substanceOutput;
     }
 
-    static MutableBkTree<String> getBkTree() {
+    public static MutableBkTree<String> getBkTree() {
         return bkTree;
     }
 

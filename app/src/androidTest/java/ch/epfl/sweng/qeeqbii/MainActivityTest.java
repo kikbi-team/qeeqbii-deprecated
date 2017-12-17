@@ -3,11 +3,16 @@ package ch.epfl.sweng.qeeqbii;
 import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
 
+import org.junit.AfterClass;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
+import java.util.concurrent.TimeUnit;
+
 import ch.epfl.sweng.qeeqbii.activities.MainActivity;
+import ch.epfl.sweng.qeeqbii.open_food.OpenFoodQuery;
+import ch.epfl.sweng.qeeqbii.open_food.Product;
 
 import static android.support.test.espresso.Espresso.onView;
 import static android.support.test.espresso.action.ViewActions.click;
@@ -27,22 +32,26 @@ public class MainActivityTest {
     @Test
     public void DisplayProductTest() {
         String barcode = "7610848337010";
-        String string_nutrients = "Sel: 0.0g\nProtéines: 0.5g\nFibres alimentaires: 1.5g\nSucres: 15.0g\n" +
-                "Glucides: 15.0g\nAcides gras saturées: 0.0g\nMatières grasses: 0.0g\nÉnergie (kCal): 67.0kCal\nÉnergie: 280.0kJ\n";
 
-        String string_ingredients = "mangue (Thaïlande), eau, sucre, acidifiant (E330)";
-
-        String string_name = "Mangue : en tranches";
-
-        String string_quantity = "245.0g";
-
-        String s = string_name;
-        s += "\n\nIngredients: " + string_ingredients;
-        s += "\n\nQuantity: " + string_quantity;
-        s += "\n\nNutrients: (per 100g)\n" + string_nutrients;
         onView(withId(R.id.Barcode)).perform(typeText(barcode));
-        onView(withId(R.id.button)).perform(click());
+
+        onView(withId(R.id.search_product_button)).perform(click());
+
+        Product testProduct;
+        try {
+            testProduct = OpenFoodQuery.GetOrCreateProduct(barcode, null);
+        }
+        catch (Exception e) {
+            System.err.println(e.getMessage());
+            testProduct = new Product();
+        }
+        String s = testProduct.toString();
 
         onView(withId(R.id.product_details)).check(matches(withText(s)));
+    }
+
+    @AfterClass
+    public static void finish_all_activities() {
+        ActivityFinisher.finishOpenActivities();
     }
 }

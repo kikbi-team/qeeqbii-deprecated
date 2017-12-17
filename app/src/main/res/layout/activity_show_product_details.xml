@@ -15,6 +15,13 @@
             android:padding="8dp"
             android:orientation="vertical"
             android:gravity="center">
+        <Button
+            android:id="@+id/buyProductButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/buy_product"
+            android:onClick="buyProduct"
+            android:layout_gravity="center_horizontal"/>
 
             <TextView
                 android:id="@+id/product_details"
@@ -41,7 +48,7 @@
                 android:layout_height="wrap_content"
                 android:onClick="showNutrientsGraphs"
                 app:srcCompat="@mipmap/graph"
-                android:contentDescription="@string/graph" />
+                android:contentDescription="@string/graphs" />
         </LinearLayout>
     </ScrollView>
 
@@ -53,7 +60,8 @@
         android:layout_gravity="start"
         app:headerLayout="@layout/nav_header"
         tools:layout_editor_absoluteY="8dp"
-        tools:layout_editor_absoluteX="0dp">
+        tools:layout_editor_absoluteX="0dp"
+        android:id="@+id/nav_view_barcode_to_product">
     </android.support.design.widget.NavigationView>
 
 </android.support.v4.widget.DrawerLayout>

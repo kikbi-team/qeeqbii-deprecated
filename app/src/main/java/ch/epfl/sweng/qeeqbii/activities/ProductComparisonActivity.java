@@ -9,8 +9,11 @@ This class implements a product comparison activity
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -27,11 +30,11 @@ import com.github.mikephil.charting.formatter.IAxisValueFormatter;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Map;
-import java.util.Objects;
 
 import ch.epfl.sweng.qeeqbii.R;
-import ch.epfl.sweng.qeeqbii.activities.comparison.ComparisonGraphAdapter;
-import ch.epfl.sweng.qeeqbii.activities.comparison.ProductsLine;
+import ch.epfl.sweng.qeeqbii.Slider;
+import ch.epfl.sweng.qeeqbii.comparison.ComparisonGraphAdapter;
+import ch.epfl.sweng.qeeqbii.comparison.ProductsLine;
 import ch.epfl.sweng.qeeqbii.custom_exceptions.ProductException;
 import ch.epfl.sweng.qeeqbii.open_food.Product;
 import ch.epfl.sweng.qeeqbii.open_food.RecentlyScannedProducts;
@@ -42,6 +45,7 @@ import static java.lang.Double.parseDouble;
 public class ProductComparisonActivity extends AppCompatActivity {
 
     private ComparisonGraphAdapter adapter = null;
+    private ActionBarDrawerToggle mToggle;
 
     // add data to a bar chart
     public static void setData(HorizontalBarChart chart, ProductsLine line) {
@@ -103,6 +107,22 @@ public class ProductComparisonActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_product_comparison);
+
+        DrawerLayout mDrawerLayout = (DrawerLayout) findViewById(R.id.ComparisonLayout);
+        mToggle = new ActionBarDrawerToggle(this, mDrawerLayout, R.string.open, R.string.close);
+
+        mDrawerLayout.addDrawerListener(mToggle);
+        mToggle.syncState();
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        // load list from recently scanned
+        updateData();
+
+    }
+
+    // update data from recently scanned products
+    public void updateData() {
 
         // creating list adapter
         adapter = new ComparisonGraphAdapter();
@@ -190,5 +210,15 @@ public class ProductComparisonActivity extends AppCompatActivity {
                 return mLabels.get(idx);
             else return "";
         }
+    }
+
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        return mToggle.onOptionsItemSelected(item) || super.onOptionsItemSelected(item);
+    }
+
+    public void sliderGoToActivity(MenuItem item) {
+        Slider slider = new Slider();
+        slider.goToActivity(item, getApplicationContext());
     }
 }

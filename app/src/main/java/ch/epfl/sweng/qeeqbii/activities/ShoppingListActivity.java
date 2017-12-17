@@ -1,188 +1,164 @@
 package ch.epfl.sweng.qeeqbii.activities;
 
+import android.content.Context;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 
-import com.google.firebase.appindexing.Action;
-import com.google.firebase.appindexing.FirebaseUserActions;
-import com.google.firebase.appindexing.builders.Actions;
+import java.util.ArrayList;
+import java.util.List;
 
 import ch.epfl.sweng.qeeqbii.R;
-import ch.epfl.sweng.qeeqbii.open_food.ClusterTypeSecondLevel;
-import ch.epfl.sweng.qeeqbii.shopping_cart.ShoppingCart;
+import ch.epfl.sweng.qeeqbii.RecyclerViewAdapter;
+import ch.epfl.sweng.qeeqbii.Slider;
+import ch.epfl.sweng.qeeqbii.clustering.ClusterType;
 import ch.epfl.sweng.qeeqbii.open_food.Product;
+import ch.epfl.sweng.qeeqbii.shopping_cart.ClusterProductList;
+
+import static ch.epfl.sweng.qeeqbii.activities.BarcodeScannerActivity.EXTRA_NEXT;
 
 public class ShoppingListActivity extends AppCompatActivity {
+
+    private static ClusterProductList m_cart = null;
+    private static RecyclerViewAdapter mAdapter = null;
+    private static String json_file = "shopping_list.json";
+    private static List<Product> tmpProductList = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_shopping_list);
+        final RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recycler);
+
+         if (m_cart == null)
+            load(getApplicationContext());
+
+        //create and set layout manager for each RecyclerView
+
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
+        recyclerView.setLayoutManager(layoutManager);
+        //Initializing and set adapter for each RecyclerView
+
+        View.OnClickListener onclicklistener = new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int itemPosition = recyclerView.getChildLayoutPosition(v);
+                String txt = m_cart.getSpecificItemInList(itemPosition).toString();
+                Intent intent = new Intent(ShoppingListActivity.this, ProductListActivity.class);
+                intent.putExtra("product_list", "ShoppingList");
+                intent.putExtra("cluster", txt);
+                startActivity(intent);
+            }
+        };
+
+        mAdapter = new RecyclerViewAdapter(this.getLayoutInflater(), m_cart,
+                R.layout.item_recycler_view_shopping_list, onclicklistener);
+        recyclerView.setAdapter(mAdapter);
+        for (Product product: tmpProductList)
+        {
+            addProduct(product, getApplicationContext());
+        }
+
     }
 
-    public void addCheese(View view) {
-        Product prod = new Product("Cheese", "500 mg", "Stuff", "cool Nutrients", "001", ClusterTypeSecondLevel.FROMAGES);
-        ShoppingCart.addToShoppingCartList(prod);
-        Intent intent = new Intent(this, ShoppingCartActivity.class);
+    // To call when the app is openned.
+    public static void load(Context context)
+    {
+        m_cart = new ClusterProductList(json_file, context);
+    }
+
+    public static void load(Context context, String filename)
+    {
+        mAdapter = null;
+        m_cart = new ClusterProductList(filename, context);
+    }
+
+    public static void addCluster(ClusterType cluster, Context context)
+    {
+        if (!(mAdapter.getClusters().contains(cluster))) {
+            mAdapter.addClusterAndSave(cluster, context);
+        }
+    }
+
+    public static void deleteCluster(ClusterType cluster, Context context)
+    {
+        mAdapter.deleteClusterAndSave(cluster, context);
+    }
+
+    public static ClusterProductList getClusterProductList()
+    {
+        return m_cart;
+    }
+
+    public static void addProduct(Product product, Context context)
+    {
+        if (mAdapter == null) {
+            tmpProductList.add(product);
+            return;
+        }
+        if (!(m_cart.getClusters().contains(product.getCluster())))
+        {
+            addCluster(product.getCluster(), context);
+        }
+        m_cart.addProductAndSave(product, context);
+    }
+
+    public static void save(Context context) { m_cart.save( json_file, context); }
+
+    public static List<Product> getProductList(ClusterType cluster)
+    {
+        return m_cart.getProductList(cluster);
+    }
+
+    public void showShoppingList(View view) {
+        Intent intent = new Intent(this, ShoppingCartFirstLevelActivity.class);
         startActivity(intent);
     }
 
-    public void addWine(View view) {
-        Product prod = new Product("Wine", "500 mg", "Stuff", "cool Nutrients","001", ClusterTypeSecondLevel.BOISSONS_APERITIF);
-        ShoppingCart.addToShoppingCartList(prod);
-        Intent intent = new Intent(this, ShoppingCartActivity.class);
+    public static void checkOrUncheckItem(ClusterType cluster)
+    {
+        m_cart.checkOrUncheckItem(cluster);
+    }
+
+    public void deleteShoppingList(View view) {
+        List<ClusterType> clustersToDelete = new ArrayList<>();
+        for (ClusterType cluster : m_cart.getClusters()) {
+            clustersToDelete.add(cluster);
+        }
+        for (ClusterType cluster: clustersToDelete)
+        {
+            deleteCluster(cluster, getApplicationContext());
+        }
+    }
+
+    public void deleteSingleItem (View view) {
+        List<ClusterType> clustersToDelete = new ArrayList<>();
+        for (ClusterType cluster : m_cart.getClusters()) {
+            if (m_cart.isCheckedItem(cluster)) {
+                clustersToDelete.add(cluster);
+            }
+        }
+        for (ClusterType cluster: clustersToDelete)
+        {
+            deleteCluster(cluster, getApplicationContext());
+        }
+    }
+
+    public void scanToCheck(View view) {
+        Log.d("STATE", "Going to scan barcode");
+        Intent intent = new Intent(this, BarcodeScannerActivity.class);
+        intent.putExtra(EXTRA_NEXT, this.getClass().getName());
         startActivity(intent);
     }
 
-    public void addMeat(View view) {
-        Product prod = new Product("Meat", "500 mg", "Stuff", "cool Nutrients", "001", ClusterTypeSecondLevel.BOEUF);
-        ShoppingCart.addToShoppingCartList(prod);
-        Intent intent = new Intent(this, ShoppingCartActivity.class);
-        startActivity(intent);
-    }
 
-    public void addChip(View view) {
-        Product prod = new Product("Chips", "500 mg", "Stuff", "cool Nutrients", "001", ClusterTypeSecondLevel.BARRES_DE_CEREALES);
-        ShoppingCart.addToShoppingCartList(prod);
-        Intent intent = new Intent(this, ShoppingCartActivity.class);
-        startActivity(intent);
-    }
-
-    public void addVegetable(View view) {
-        Product prod = new Product("Vegetable", "500 mg", "Stuff", "cool Nutrients", "001", ClusterTypeSecondLevel.EPICES_HERBES);
-        ShoppingCart.addToShoppingCartList(prod);
-        Intent intent = new Intent(this, ShoppingCartActivity.class);
-        startActivity(intent);
-    }
-
-    public void addApple(View view) {
-        Product prod = new Product("Apple", "500 mg", "Stuff", "cool Nutrients", "001", ClusterTypeSecondLevel.FRUITS);
-        ShoppingCart.addToShoppingCartList(prod);
-        Intent intent = new Intent(this, ShoppingCartActivity.class);
-        startActivity(intent);
-    }
-
-    public void addGrossery(View view) {
-        Product prod = new Product("Grossery", "500 mg", "Stuff", "cool Nutrients", "001", ClusterTypeSecondLevel.PAINS_DE_MIE);
-        ShoppingCart.addToShoppingCartList(prod);
-        Intent intent = new Intent(this, ShoppingCartActivity.class);
-        startActivity(intent);
-    }
-
-    public void addSauce(View view) {
-        Product prod = new Product("Sauce", "500 mg", "Stuff", "cool Nutrients", "001", ClusterTypeSecondLevel.SOUPES_SAUCES_BOUILLONS);
-        ShoppingCart.addToShoppingCartList(prod);
-        Intent intent = new Intent(this, ShoppingCartActivity.class);
-        startActivity(intent);
-    }
-
-    public void addPizza(View view) {
-        Product prod = new Product("Pizza", "500 mg", "Stuff", "cool Nutrients", "001", ClusterTypeSecondLevel.PIZZAS_MENUS_SNACKS);
-        ShoppingCart.addToShoppingCartList(prod);
-        Intent intent = new Intent(this, ShoppingCartActivity.class);
-        startActivity(intent);
-    }
-
-    public void addCarrot(View view) {
-        Product prod = new Product("Carrot", "500 mg", "Stuff", "cool Nutrients", "001", ClusterTypeSecondLevel.BIO);
-        ShoppingCart.addToShoppingCartList(prod);
-        Intent intent = new Intent(this, ShoppingCartActivity.class);
-        startActivity(intent);
-    }
-
-    public void addBottle(View view) {
-        Product prod = new Product("Bottle", "500 mg", "Stuff", "cool Nutrients", "001", ClusterTypeSecondLevel.BOISSONS_SUCREES);
-        ShoppingCart.addToShoppingCartList(prod);
-        Intent intent = new Intent(this, ShoppingCartActivity.class);
-        startActivity(intent);
-    }
-
-    public void addWater(View view) {
-        Product prod = new Product("Water", "500 mg", "Stuff", "cool Nutrients", "001",  ClusterTypeSecondLevel.BOISSONS_SUCREES);
-        ShoppingCart.addToShoppingCartList(prod);
-        Intent intent = new Intent(this, ShoppingCartActivity.class);
-        startActivity(intent);
-    }
-
-    public void addBiscuit(View view) {
-        Product prod = new Product("Biscuit", "500 mg", "Stuff", "cool Nutrients", "001", ClusterTypeSecondLevel.BISCUITS_POUR_ENFANTS);
-        ShoppingCart.addToShoppingCartList(prod);
-        Intent intent = new Intent(this, ShoppingCartActivity.class);
-        startActivity(intent);
-    }
-
-    public void addAlcohol(View view) {
-        Product prod = new Product("Cocktail", "500 mg", "Stuff", "cool Nutrients", "001", ClusterTypeSecondLevel.APERITIF_DESSERT);
-        ShoppingCart.addToShoppingCartList(prod);
-        Intent intent = new Intent(this, ShoppingCartActivity.class);
-        startActivity(intent);
-    }
-
-    public void addDonut(View view) {
-        Product prod = new Product("Donut", "500 mg", "Stuff", "cool Nutrients", "001", ClusterTypeSecondLevel.SNACKS);
-        ShoppingCart.addToShoppingCartList(prod);
-        Intent intent = new Intent(this, ShoppingCartActivity.class);
-        startActivity(intent);
-    }
-
-    public void addFruit(View view) {
-        Product prod = new Product("Fruit", "500 mg", "Stuff", "cool Nutrients", "001", ClusterTypeSecondLevel.FRUITS);
-        ShoppingCart.addToShoppingCartList(prod);
-        Intent intent = new Intent(this, ShoppingCartActivity.class);
-        startActivity(intent);
-    }
-
-    public void addExoticFruit(View view) {
-        Product prod = new Product("Exotic Fruit", "500 mg", "Stuff", "cool Nutrients", "001", ClusterTypeSecondLevel.FRUITS);
-        ShoppingCart.addToShoppingCartList(prod);
-        Intent intent = new Intent(this, ShoppingCartActivity.class);
-        startActivity(intent);
-    }
-
-    public void addHotDrink(View view) {
-        Product prod = new Product("Hot Drinks", "500 mg", "Stuff", "cool Nutrients", "001", ClusterTypeSecondLevel.BOISSONS_SUCREES);
-        ShoppingCart.addToShoppingCartList(prod);
-        Intent intent = new Intent(this, ShoppingCartActivity.class);
-        startActivity(intent);
-    }
-
-    public void addWing(View view) {
-        Product prod = new Product("Meat", "500 mg", "Stuff", "cool Nutrients", "001", ClusterTypeSecondLevel.VIANDE);
-        ShoppingCart.addToShoppingCartList(prod);
-        Intent intent = new Intent(this, ShoppingCartActivity.class);
-        startActivity(intent);
-    }
-
-    public void addSaussage(View view) {
-        Product prod = new Product("Saussage", "500 mg", "Stuff", "cool Nutrients", "001", ClusterTypeSecondLevel.SAUCISSES);
-        ShoppingCart.addToShoppingCartList(prod);
-        Intent intent = new Intent(this, ShoppingCartActivity.class);
-        startActivity(intent);
-    }
-
-    /**
-     * ATTENTION: This was auto-generated to implement the App Indexing API.
-     * See https://g.co/AppIndexing/AndroidStudio for more information.
-     */
-    public Action getIndexApiAction() {
-        return Actions.newView("ShoppingList", "http://[ENTER-YOUR-URL-HERE]");
-    }
-
-    @Override
-    public void onStart() {
-        super.onStart();
-        // ATTENTION: This was auto-generated to implement the App Indexing API.
-        // See https://g.co/AppIndexing/AndroidStudio for more information.
-        FirebaseUserActions.getInstance().start(getIndexApiAction());
-    }
-
-    @Override
-    public void onStop() {
-        // ATTENTION: This was auto-generated to implement the App Indexing API.
-        // See https://g.co/AppIndexing/AndroidStudio for more information.
-        FirebaseUserActions.getInstance().end(getIndexApiAction());
-        super.onStop();
+    public void sliderGoToActivity(MenuItem item) {
+        Slider slider = new Slider();
+        slider.goToActivity(item, this);
     }
 }

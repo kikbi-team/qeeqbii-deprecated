@@ -3,6 +3,7 @@ package ch.epfl.sweng.qeeqbii;
 import android.support.test.espresso.ViewInteraction;
 import android.support.test.rule.ActivityTestRule;
 
+import org.junit.AfterClass;
 import org.junit.Rule;
 import org.junit.Test;
 
@@ -45,6 +46,11 @@ public class StartActivityTest {
         ViewInteraction appCompatButton = onView(
                 allOf(withId(R.id.textView),
                         isDisplayed()));
+    }
+
+    @AfterClass
+    public static void finish_all_activities() {
+        ActivityFinisher.finishOpenActivities();
     }
 }
 

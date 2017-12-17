@@ -1,5 +1,6 @@
 package ch.epfl.sweng.qeeqbii;
 
+import org.junit.AfterClass;
 import org.junit.Test;
 
 import ch.epfl.sweng.qeeqbii.chat.Chats;
@@ -19,5 +20,10 @@ public class FriendsClassTest {
         assertEquals(date,friends.getDate());
         friends.setDate("december");
         assertEquals("december",friends.getDate());
+    }
+
+    @AfterClass
+    public static void finish_all_activities() {
+        ActivityFinisher.finishOpenActivities();
     }
 }

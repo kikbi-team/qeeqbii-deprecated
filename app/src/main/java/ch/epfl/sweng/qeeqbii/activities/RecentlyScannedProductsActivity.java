@@ -17,11 +17,11 @@ import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.Map;
 
+import ch.epfl.sweng.qeeqbii.Slider;
 import ch.epfl.sweng.qeeqbii.chat.MainActivityChat;
 import ch.epfl.sweng.qeeqbii.open_food.Product;
 import ch.epfl.sweng.qeeqbii.R;
 import ch.epfl.sweng.qeeqbii.open_food.RecentlyScannedProducts;
-import ch.epfl.sweng.qeeqbii.shopping_cart.ShoppingCartStatistics;
 
 public class RecentlyScannedProductsActivity extends AppCompatActivity {
 
@@ -47,7 +47,6 @@ public class RecentlyScannedProductsActivity extends AppCompatActivity {
         LinkedList<String> barcode_linked_list = RecentlyScannedProducts.getBarcodeList();
 
         //System.out.println(barcode_linked_list.getLast());
-
 
         //final ArrayList<RecentlyScannedProducts> recipeList = Recipe.getRecipesFromFile("recipes.json", this);
 
@@ -76,16 +75,10 @@ public class RecentlyScannedProductsActivity extends AppCompatActivity {
                 intent.putExtra("product", RecentlyScannedProducts.getProduct(displayed_products.get(txt)));
                 startActivity(intent);
             }
-
         });
-
     }
 
     //ImageButton btn = (ImageButton) findViewById(R.id.delete_recently_scanned_product_button);
-
-
-
-
 
     public void deleteItems(View view) {
         RecentlyScannedProducts.clear();
@@ -105,61 +98,19 @@ public class RecentlyScannedProductsActivity extends AppCompatActivity {
         return mAdapter;
     }
 
+    // go to product comparison onClick handler
+    public void productComparison(View view) {
+        Intent intent = new Intent(this, ProductComparisonActivity.class);
+        startActivity(intent);
+    }
+
     public boolean onOptionsItemSelected(MenuItem item) {
 
         return mToggle.onOptionsItemSelected(item) || super.onOptionsItemSelected(item);
     }
 
-    public void cancerDataBaseShow(MenuItem item) {
-        Intent intent = new Intent(this, CancerDataShowActivity.class);
-        startActivity(intent);
-    }
-
-
-    public void readBarcode(MenuItem item) {
-        Intent intent = new Intent(this, BarcodeScannerActivity.class);
-        startActivity(intent);
-    }
-
-
-
-    public void showShoppingList(MenuItem view) {
-        Intent intent = new Intent(this, ShoppingCartActivity.class);
-        startActivity(intent);
-    }
-
-    public void showGraphs(MenuItem item) {
-        Intent intent = new Intent(this, GraphsActivity.class);
-        startActivity(intent);
-    }
-
-    public void cancerDataQuery(MenuItem item) {
-        Intent intent = new Intent(this, CancerDataQueryActivity.class);
-        startActivity(intent);
-    }
-
-    public void showRecentlyScannedProductsActivity(MenuItem item) {
-        Intent intent = new Intent(this, RecentlyScannedProductsActivity.class);
-        startActivity(intent);
-    }
-
-    public void backToMain(MenuItem item) {
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
-    }
-
-    public void showSavedProducts(MenuItem item) {
-        Intent intent = new Intent(this, SavedProductsDatesActivity.class);
-        startActivity(intent);
-    }
-
-    public void showStatistics(MenuItem item) {
-        Intent intent = new Intent(this, ShoppingCartStatistics.class);
-        startActivity(intent);
-    }
-
-    public void showChat(MenuItem item) {
-        Intent intent = new Intent(this, MainActivityChat.class);
-        startActivity(intent);
+    public void sliderGoToActivity(MenuItem item) {
+        Slider slider = new Slider();
+        slider.goToActivity(item, this);
     }
 }

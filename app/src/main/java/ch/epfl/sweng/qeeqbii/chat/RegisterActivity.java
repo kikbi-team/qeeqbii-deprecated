@@ -38,10 +38,22 @@ public class RegisterActivity extends AppCompatActivity {
     private DatabaseReference mDatabase;
 
     //ProgressDialog
-    private ProgressDialog mRegProgress;
+    private ProgressDialog mRegProgress = null;
 
     //Firebase Auth
     private FirebaseAuth mAuth;
+
+    @Override
+    protected void onDestroy() {
+        dismissProgressDialog();
+        super.onDestroy();
+    }
+
+    public void dismissProgressDialog() {
+        if (mRegProgress != null && mRegProgress.isShowing()) {
+            mRegProgress.dismiss();
+        }
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -131,7 +143,7 @@ public class RegisterActivity extends AppCompatActivity {
 
                             if(task.isSuccessful()){
 
-                               // mRegProgress.dismiss();
+                                dismissProgressDialog();
 
                                 Intent mainIntent = new Intent(RegisterActivity.this, BarcodeScannerActivity.class);
                                 mainIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
@@ -146,7 +158,7 @@ public class RegisterActivity extends AppCompatActivity {
 
                 } else {
 
-                    mRegProgress.hide();
+                    dismissProgressDialog();
                     Toast.makeText(RegisterActivity.this, "Cannot Sign in. Please check the form and try again.", Toast.LENGTH_LONG).show();
 
                 }
@@ -154,5 +166,11 @@ public class RegisterActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+
+
+    public ProgressDialog getmRegProgress() {
+        return mRegProgress;
     }
 }
