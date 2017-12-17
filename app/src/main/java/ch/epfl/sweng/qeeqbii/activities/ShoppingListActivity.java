@@ -27,6 +27,7 @@ public class ShoppingListActivity extends AppCompatActivity {
     private static ClusterProductList m_cart = null;
     private static RecyclerViewAdapter mAdapter = null;
     private static String json_file = "shopping_list.json";
+    private static List<Product> tmpProductList = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,6 +59,10 @@ public class ShoppingListActivity extends AppCompatActivity {
         mAdapter = new RecyclerViewAdapter(this.getLayoutInflater(), m_cart,
                 R.layout.item_recycler_view_shopping_list, onclicklistener);
         recyclerView.setAdapter(mAdapter);
+        for (Product product: tmpProductList)
+        {
+            addProduct(product, getApplicationContext());
+        }
 
     }
 
@@ -92,6 +97,10 @@ public class ShoppingListActivity extends AppCompatActivity {
 
     public static void addProduct(Product product, Context context)
     {
+        if (mAdapter == null) {
+            tmpProductList.add(product);
+            return;
+        }
         if (!(m_cart.getClusters().contains(product.getCluster())))
         {
             addCluster(product.getCluster(), context);

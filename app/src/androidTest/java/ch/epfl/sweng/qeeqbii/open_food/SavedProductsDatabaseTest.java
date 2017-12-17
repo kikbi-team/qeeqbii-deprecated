@@ -156,7 +156,7 @@ public class SavedProductsDatabaseTest {
     @Test
     public void getProductsBetweenTwoDates()
     {
-        assertEquals(true, !(new Date()).isBefore(new Date("11/10/2017")).booleanValue());
+        assertEquals(true, !new Date().isBefore(new Date("11/10/2017")));
         Product added_product = new Product("Carbonara", "1kg", "lardons, fromage oignons",
         "Sel: 250g", "032485623", ClusterTypeSecondLevel.FROMAGES);
         try{
