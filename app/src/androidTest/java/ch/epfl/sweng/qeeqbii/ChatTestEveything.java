@@ -72,7 +72,7 @@ public class ChatTestEveything {
     @Test
     public void allUsers() {
 
-        // Click sign in
+      /*  // Click sign in
         ViewInteraction appCompatButton = onView(withId(R.id.start_login_btn));
         appCompatButton.perform(click());
 
@@ -112,12 +112,12 @@ public class ChatTestEveything {
         // register next activity that need to be monitored.
         openActionBarOverflowOrOptionsMenu(getInstrumentation().getTargetContext());
         onView(withText("All Users")).perform(click());
-        sleep(500);
+        sleep(500);*/
     }
     @Test
     public void changeImage() {
 
-        // Click sign in
+      /*  // Click sign in
         ViewInteraction appCompatButton = onView(withId(R.id.start_login_btn));
         appCompatButton.perform(click());
 
@@ -183,184 +183,9 @@ public class ChatTestEveything {
         onView(withId(R.id.degout_save_btn)).perform(click());
         pressBack();
         pressBack();
-        //onView(withId(R.id.settings_image_btn)).perform(click());
+        //onView(withId(R.id.settings_image_btn)).perform(click());*/
     }
 
-
-
-
-
-
-
-
-
-
-
-
-       // Intent intent = new Intent(mActivityRule.getActivity(), MainActivityChat.class);
-        /*mActivityRule.launchActivity(intent);
-        Intent intent2 = new Intent(mActivityRule.getActivity(), SettingsActivity.class);
-        mActivityRule.launchActivity(intent2);
-        //onView(withId(R.id.facebook)).perform(click());
-        //onView(withId(R.id.settings_age_btn)).perform(click());
-        //onView(withId(R.id.age_save_btn)).perform(click());
-        //Intent intent3 = new Intent(mActivityRule.getActivity(), SettingsActivity.class);
-        //mActivityRule.launchActivity(intent3);
-        //onView(withId(R.id.settings_allergies_btn)).perform(click());
-        //onView(withId(R.id.allergies_save_btn)).perform(click());
-        Intent intent4 = new Intent(mActivityRule.getActivity(), AllergiesActivity.class);
-        mActivityRule.launchActivity(intent4);
-        Intent intent5 = new Intent(mActivityRule.getActivity(), DegoutActivity.class);
-        mActivityRule.launchActivity(intent5);
-        Intent intent6 = new Intent(mActivityRule.getActivity(), StatusActivity.class);
-        mActivityRule.launchActivity(intent6);
-        Intent intent7 = new Intent(mActivityRule.getActivity(), ProfileActivity.class);
-        mActivityRule.launchActivity(intent7);
-        Intent intent8 = new Intent(mActivityRule.getActivity(), ChatActivity.class);
-        mActivityRule.launchActivity(intent8);*/
-
-
-
-
-
-
-       // openActionBarOverflowOrOptionsMenu(getInstrumentation().getTargetContext());
-        //ViewInteraction appCompatButton3 = onView(withText(R.string.Chat));
-        //appCompatButton3.perform(click());
-
-
-
-
-        // Click on the right top button
-       // openActionBarOverflowOrOptionsMenu(getInstrumentation().getTargetContext());
-        //ViewInteraction appCompatButton4 = onView(withText(R.string.AccountSettings));
-        //appCompatButton4.perform(click());
-
-
-
-        // Click settings
-      //  ViewInteraction appCompatButton5 = onView(withId(R.id.settings_image_btn));
-        //appCompatButton5.perform(click());
-
-
-   /* @Test
-    public void changeStatus() {
-        // Click sign in
-        ViewInteraction appCompatButton = onView(withId(R.id.start_login_btn));
-        appCompatButton.perform(click());
-
-        String email = "nicolaslesimple@noos.fr";
-        String password = "123456";
-        //Enter email
-        ViewInteraction emailField = onView(withId(R.id.email_login_chat));
-        emailField.perform(replaceText(email));
-
-        // Enter password
-        ViewInteraction passwordField = onView((withId(R.id.password_login_chat)));
-        passwordField.perform(replaceText(password));
-
-        // Click sign in
-        ViewInteraction appCompatButton2 = onView(withId(R.id.login_btn));
-        appCompatButton2.perform(click());
-
-        // Click settings
-        Context appContext = InstrumentationRegistry.getTargetContext();
-        openActionBarOverflowOrOptionsMenu(appContext);
-        ViewInteraction appCompatButton3 = onView(withId(R.id.main_settings_btn));
-        appCompatButton3.perform(click());
-
-        // Click settings
-        ViewInteraction appCompatButton4 = onView(withId(R.id.settings_status_btn));
-        appCompatButton4.perform(click());
-    }
-/*
-    @Test
-    public void changeAllergie() {
-        // Click sign in
-        ViewInteraction appCompatButton = onView(withId(R.id.start_login_btn));
-        appCompatButton.perform(click());
-
-        String email = "nicolaslesimple@noos.fr";
-        String password = "123456";
-        //Enter email
-        ViewInteraction emailField = onView(withId(R.id.email_login_chat));
-        emailField.perform(replaceText(email));
-
-        // Enter password
-        ViewInteraction passwordField = onView((withId(R.id.password_login_chat)));
-        passwordField.perform(replaceText(password));
-
-        // Click sign in
-        ViewInteraction appCompatButton2 = onView(withId(R.id.login_btn));
-        appCompatButton2.perform(click());
-
-        // Click settings
-        ViewInteraction appCompatButton3 = onView(withId(R.id.main_settings_btn));
-        appCompatButton3.perform(click());
-
-        // Click settings
-        ViewInteraction appCompatButton4 = onView(withId(R.id.));
-        appCompatButton4.perform(click());
-    }
-
-    @Test
-    public void changeStatus() {
-        // Click sign in
-        ViewInteraction appCompatButton = onView(withId(R.id.start_login_btn));
-        appCompatButton.perform(click());
-
-        String email = "nicolaslesimple@noos.fr";
-        String password = "123456";
-        //Enter email
-        ViewInteraction emailField = onView(withId(R.id.email_login_chat));
-        emailField.perform(replaceText(email));
-
-        // Enter password
-        ViewInteraction passwordField = onView((withId(R.id.password_login_chat)));
-        passwordField.perform(replaceText(password));
-
-        // Click sign in
-        ViewInteraction appCompatButton2 = onView(withId(R.id.login_btn));
-        appCompatButton2.perform(click());
-
-        // Click settings
-        ViewInteraction appCompatButton3 = onView(withId(R.id.main_settings_btn));
-        appCompatButton3.perform(click());
-
-        // Click settings
-        ViewInteraction appCompatButton4 = onView(withId(R.id.settings_status_btn));
-        appCompatButton4.perform(click());
-    }
-
-    @Test
-    public void changeStatus() {
-        // Click sign in
-        ViewInteraction appCompatButton = onView(withId(R.id.start_login_btn));
-        appCompatButton.perform(click());
-
-        String email = "nicolaslesimple@noos.fr";
-        String password = "123456";
-        //Enter email
-        ViewInteraction emailField = onView(withId(R.id.email_login_chat));
-        emailField.perform(replaceText(email));
-
-        // Enter password
-        ViewInteraction passwordField = onView((withId(R.id.password_login_chat)));
-        passwordField.perform(replaceText(password));
-
-        // Click sign in
-        ViewInteraction appCompatButton2 = onView(withId(R.id.login_btn));
-        appCompatButton2.perform(click());
-
-        // Click settings
-        ViewInteraction appCompatButton3 = onView(withId(R.id.main_settings_btn));
-        appCompatButton3.perform(click());
-
-        // Click settings
-        ViewInteraction appCompatButton4 = onView(withId(R.id.settings_status_btn));
-        appCompatButton4.perform(click());
-    }
-*/
 
     @AfterClass
     public static void finish_all_activities() {
