@@ -1,5 +1,6 @@
 package ch.epfl.sweng.qeeqbii.clustering;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
@@ -9,7 +10,7 @@ import ch.epfl.sweng.qeeqbii.custom_exceptions.IllegalNutrientKeyException;
 import ch.epfl.sweng.qeeqbii.custom_exceptions.NotOpenFileException;
 
 
-public class NutrientVector implements Cloneable {
+public class NutrientVector implements Cloneable, Serializable {
 
     private Map<String,Double> nutrientMap;
 
