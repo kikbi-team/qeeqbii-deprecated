@@ -16,6 +16,7 @@ import ch.epfl.sweng.qeeqbii.custom_exceptions.ProductException;
 import ch.epfl.sweng.qeeqbii.clustering.NutrientVector;
 
 public class Product implements Serializable{
+
     private String mName = "";
     private String mQuantity = "";
     private String mIngredients = "";
@@ -25,8 +26,8 @@ public class Product implements Serializable{
     private ClusterType mType = ClusterTypeSecondLevel.UNDETERMINED;
     private ArrayList<ComparableCluster> bestClusters = null;
     private String mBarcode = "";
-    private Boolean mIsChecked = false;
-    private float mOpacity = 1f;
+//    private Boolean mIsChecked = false;
+//    private float mOpacity = 1f;
     private NutrientVector nutrientVector = null;
 
     public Product() {}
@@ -38,8 +39,8 @@ public class Product implements Serializable{
         mIngredients = ingredients;
         mNutrients = nutrients;
         mBarcode = barcode;
-        mIsChecked = false;
-        mOpacity = 1f;
+//        mIsChecked = false;
+//        mOpacity = 1f;
         mType = type;
 
         if (mType == null)
@@ -226,19 +227,20 @@ public class Product implements Serializable{
         this.mParsedIngredients = parsedIngredients;
     }
 
-    public boolean isChecked() {
-        return mIsChecked;
-    }
 
-    public void setChecked(Boolean isChecked) {
-        mIsChecked = isChecked;
-    }
-
-    public float getOpacity () {
-        return mOpacity;
-    }
-
-    public void setOpacity (float opacity){
-        mOpacity = opacity;
-    }
+//    public boolean isChecked() {
+//        return mIsChecked;
+//    }
+//
+//    public void setChecked(Boolean isChecked) {
+//        mIsChecked = isChecked;
+//    }
+//
+//    public float getOpacity () {
+//        return mOpacity;
+//    }
+//
+//    public void setOpacity (float opacity){
+//        mOpacity = opacity;
+//    }
 }
