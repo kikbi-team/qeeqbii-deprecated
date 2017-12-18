@@ -85,25 +85,31 @@ public class BarcodeScannerSliderTest {
 
     @Test
     public void canGoToSavedProductsDate() {
-        // Click sign in
-        ViewInteraction appCompatButton = onView(withId(R.id.start_login_btn));
-        appCompatButton.perform(click());
+        try {
+            // Click sign in
+            ViewInteraction appCompatButton = onView(withId(R.id.start_login_btn));
+            appCompatButton.perform(click());
 
-        String email = "nicolaslesimple@noos.fr";
-        String password = "123456";
-        //Enter email
-        ViewInteraction emailField = onView(withId(R.id.email_login_chat));
-        emailField.perform(replaceText(email));
+            String email = "nicolaslesimple@noos.fr";
+            String password = "123456";
+            //Enter email
+            ViewInteraction emailField = onView(withId(R.id.email_login_chat));
+            emailField.perform(replaceText(email));
 
-        // Enter password
-        ViewInteraction passwordField = onView((withId(R.id.password_login_chat)));
-        passwordField.perform(replaceText(password));
+            // Enter password
+            ViewInteraction passwordField = onView((withId(R.id.password_login_chat)));
+            passwordField.perform(replaceText(password));
 
-        // Click sign in
-        ViewInteraction appCompatButton2 = onView(withId(R.id.login_btn));
-        appCompatButton2.perform(click());
+            // Click sign in
+            ViewInteraction appCompatButton2 = onView(withId(R.id.login_btn));
+            appCompatButton2.perform(click());
 
-        sleep(5000);
+            sleep(5000);
+        }
+        catch(Exception e)
+        {
+            e.printStackTrace();
+        }
 
         SliderTest sliderTest = new SliderTest();
         sliderTest.canGoToSavedProductsDate(layoutId, navViewId);
