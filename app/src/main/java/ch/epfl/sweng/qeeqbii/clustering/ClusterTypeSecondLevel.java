@@ -3,6 +3,7 @@ package ch.epfl.sweng.qeeqbii.clustering;
 import com.google.common.collect.BiMap;
 import com.google.common.collect.HashBiMap;
 
+import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -13,7 +14,7 @@ import ch.epfl.sweng.qeeqbii.R;
  * Second Level of Clustering
  */
 
-public enum ClusterTypeSecondLevel implements ClusterType {
+public enum ClusterTypeSecondLevel implements ClusterType, Serializable {
     // First level: CHOCOLAT
     BONBONS_CHEWING_GUM,
     CHOCOLAT,

@@ -3,6 +3,7 @@ package ch.epfl.sweng.qeeqbii.clustering;
 import com.google.common.collect.BiMap;
 import com.google.common.collect.HashBiMap;
 
+import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -14,7 +15,7 @@ import ch.epfl.sweng.qeeqbii.R;
  */
 
 
-public enum ClusterTypeFirstLevel implements ClusterType {
+public enum ClusterTypeFirstLevel implements ClusterType, Serializable {
     CHOCOLAT,
     PETIT_DEJEUNER,
     BOISSONS_CHAUDES_FROIDES,

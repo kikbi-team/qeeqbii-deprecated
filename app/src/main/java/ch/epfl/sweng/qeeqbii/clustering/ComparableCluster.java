@@ -1,9 +1,10 @@
 package ch.epfl.sweng.qeeqbii.clustering;
 
+import java.io.Serializable;
 import java.util.Comparator;
 
 
-public class ComparableCluster implements Comparator<ComparableCluster>  {
+public class ComparableCluster implements Comparator<ComparableCluster>, Serializable {
 
     private double distance;
     private ClusterTypeSecondLevel cluster;
