@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="ch.epfl.sweng.qeeqbii">
 
     <uses-permission android:name="android.permission.INTERNET" />
@@ -7,6 +8,8 @@
 
     <uses-feature android:name="android.hardware.camera" />
     <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
@@ -32,6 +35,35 @@
                android:name=".activities.login.GoogleSignInActivity"
                android:label="@string/label_google_sign_in" />-->
         <!-- Facebook Configuration -->
+
+     <!--   <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id"
+            tools:replace="android:value" />
+
+
+        <activity
+            android:name=".activities.login.EmailPasswordActivity"
+            android:label="@string/label_emailpassword"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".activities.login.AnonymousAuthActivity"
+            android:exported="true"
+            android:label="@string/label_anonymous_auth" />-->
+
+        <!-- Facebook Configuration -->
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id"
+            tools:replace="android:value" />
+
+        <activity
+            android:name=".chat.TwitterLoginActivity"
+            android:label="@string/label_twitter_login" />
+        <activity
+            android:name=".chat.FacebookLoginActivity"
+            android:label="@string/label_facebook_login" />
+
         <!--   <meta-data
                android:name="com.facebook.sdk.ApplicationId"
                android:value="@string/facebook_app_id"
@@ -115,13 +147,28 @@
             android:name=".chat.ChatActivity"
             android:parentActivityName=".chat.MainActivityChat"
             android:theme="@style/AppTheme.NoActionBar"></activity>
-
         <activity
-            android:name=".activities.CancerDataShowActivity"
-            android:exported="true"
-            android:parentActivityName=".activities.MainActivity">
+            android:name=".chat.GoogleSignInActivity"
+            android:label="@string/label_google_sign_in" />
 
-            <!-- The meta-data tag is required if you support API level 15 and lower -->
+
+
+
+         <service android:name="chat.FirebaseMessagingService"
+             android:theme="@style/AppTheme.NoActionBar"
+             android:exported="false">
+             <intent-filter>
+                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
+             </intent-filter>
+         </service>
+        
+
+         <activity
+             android:name=".activities.CancerDataShowActivity"
+             android:exported="true"
+             android:parentActivityName=".activities.MainActivity">
+
+             <!-- The meta-data tag is required if you support API level 15 and lower -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="ch.epfl.sweng.qeeqbii.activities.MainActivity" />

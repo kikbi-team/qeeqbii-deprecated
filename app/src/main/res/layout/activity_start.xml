@@ -46,21 +46,31 @@
         android:text="@string/have_already"
         android:textColor="@android:color/white" />
 
-    <Button
+    <android.support.design.widget.FloatingActionButton
         android:id="@+id/google"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="78dp"
+        app:srcCompat="@mipmap/if_80_google_plus_104424"
         android:text="G"
+        android:layout_marginTop="99dp"
         android:layout_alignParentTop="true"
-        android:layout_toStartOf="@+id/start_reg_btn" />
+        android:layout_alignStart="@+id/textView" />
 
-    <Button
-        android:id="@+id/button4"
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/facebook"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/textView"
+        app:srcCompat="@mipmap/facebook_round"
         android:layout_alignTop="@+id/google"
-        android:layout_marginStart="17dp"
-        android:text="Button" />
+        android:layout_centerHorizontal="true" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/twitter"
+        app:srcCompat="@mipmap/if_twitter_six_black_107071"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/facebook"
+        android:layout_marginStart="36dp"
+        android:layout_toEndOf="@+id/facebook"
+        android:text="T" />
 </RelativeLayout>

@@ -17,7 +17,7 @@ public class HomeActivity extends AppCompatActivity {
             public void run() {
                 try {
                     sleep(3000);
-                    Intent intent = new Intent(getApplicationContext(), StartActivity.class);
+                    Intent intent = new Intent(getApplicationContext(), BarcodeScannerActivity.class);
                     startActivity(intent);
                     finish();
                 } catch (InterruptedException e) {
