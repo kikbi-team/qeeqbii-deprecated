@@ -26,46 +26,57 @@ public class Slider  {
     public void goToActivity(MenuItem item, Context context) {
         if (item.getItemId() == R.id.nav_main) {
             Intent intent = new Intent(context, MainActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
             context.startActivity(intent);
         }
         else if (item.getItemId() == R.id.nav_chat) {
             Intent intent = new Intent(context, MainActivityChat.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
             context.startActivity(intent);
         }
         else if (item.getItemId() == R.id.nav_graphs) {
             Intent intent = new Intent(context, GraphsActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
             context.startActivity(intent);
         }
         else if (item.getItemId() == R.id.nav_cancerdb) {
             Intent intent = new Intent(context, CancerDataShowActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
             context.startActivity(intent);
         }
         else if (item.getItemId() == R.id.nav_scan) {
             Intent intent = new Intent(context, BarcodeScannerActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
             context.startActivity(intent);
         }
         else if (item.getItemId() == R.id.nav_shopping_cart) {
             Intent intent = new Intent(context, ShoppingListActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
             context.startActivity(intent);
         }
         else if (item.getItemId() == R.id.nav_dataquery) {
             Intent intent = new Intent(context, CancerDataQueryActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
             context.startActivity(intent);
         }
         else if (item.getItemId() == R.id.nav_scannedProducts) {
             Intent intent = new Intent(context, RecentlyScannedProductsActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
             context.startActivity(intent);
         }
         else if (item.getItemId() == R.id.nav_scanning_history) {
             Intent intent = new Intent(context, SavedProductsDatesActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
             context.startActivity(intent);
         }
         else if (item.getItemId() == R.id.nav_stats) {
             Intent intent = new Intent(context, StatisticsActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
             context.startActivity(intent);
         }
         else if (item.getItemId() == R.id.nav_comparison) {
             Intent intent = new Intent(context, ProductComparisonActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
             context.startActivity(intent);
         }
     }
