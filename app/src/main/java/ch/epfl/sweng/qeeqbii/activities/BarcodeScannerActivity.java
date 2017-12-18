@@ -15,6 +15,10 @@ import android.view.MenuItem;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.google.zxing.Result;
 
 import org.json.JSONException;
@@ -29,6 +33,10 @@ import ch.epfl.sweng.qeeqbii.clustering.ClusterClassifier;
 import ch.epfl.sweng.qeeqbii.clustering.NutrientNameConverter;
 import ch.epfl.sweng.qeeqbii.custom_exceptions.BadlyFormatedFile;
 import ch.epfl.sweng.qeeqbii.custom_exceptions.NotOpenFileException;
+
+import ch.epfl.sweng.qeeqbii.chat.MainActivityChat;
+import ch.epfl.sweng.qeeqbii.chat.StartActivity;
+
 import ch.epfl.sweng.qeeqbii.open_food.SavedProductsDatabase;
 import me.dm7.barcodescanner.zxing.ZXingScannerView;
 
@@ -71,6 +79,8 @@ public class BarcodeScannerActivity extends AppCompatActivity implements ZXingSc
     private ZXingScannerView mScannerView;
 
     private ActionBarDrawerToggle mToggle;
+    private FirebaseAuth mAuth;
+    private DatabaseReference mUserRef;
 
     // last received barcode
     private String mLastBarcode = null;
@@ -93,6 +103,19 @@ public class BarcodeScannerActivity extends AppCompatActivity implements ZXingSc
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //Make the user stayed login between using
+        mAuth = FirebaseAuth.getInstance();
+       // if (mAuth.getCurrentUser() != null) {
+       //     mUserRef = FirebaseDatabase.getInstance().getReference().child("Users").child(mAuth.getCurrentUser().getUid());
+       // }
+        FirebaseUser currentUser = mAuth.getCurrentUser();
+
+        if(currentUser == null){
+            Intent startIntent = new Intent(BarcodeScannerActivity.this, StartActivity.class);
+            startActivity(startIntent);
+            finish();
+        }
+
 
         // disable autorotate if it was enabled
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LOCKED);

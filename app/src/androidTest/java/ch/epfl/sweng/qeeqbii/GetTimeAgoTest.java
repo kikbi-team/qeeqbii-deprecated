@@ -26,6 +26,7 @@ public class GetTimeAgoTest {
 
         String test = getTimeAgo(time, cxt);
         long now = System.currentTimeMillis();
+       // assertEquals(test,"17513 days ago");
         final int DAY_MILLIS = 24 * 60 * 60 * 1000;
         assertEquals(test, ((now - time * 1000) / DAY_MILLIS) + " days ago");
     }
