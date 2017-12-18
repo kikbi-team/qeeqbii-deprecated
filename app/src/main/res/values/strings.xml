@@ -108,5 +108,6 @@
     <string name="consumption">Consumption</string>
     <string name="shopping_list_n">\n Shopping list</string>
     <string name="no_request">no request</string>
+    <string name="vs">VS</string>
 
 </resources>
