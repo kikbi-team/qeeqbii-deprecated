@@ -173,7 +173,9 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="ch.epfl.sweng.qeeqbii.activities.MainActivity" />
         </activity>
-        <activity android:name=".activities.BarcodeScannerActivity" />
+        <activity
+            android:name=".activities.BarcodeScannerActivity"
+            android:exported="true" />
         <activity
             android:name=".activities.CancerDataQueryActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"

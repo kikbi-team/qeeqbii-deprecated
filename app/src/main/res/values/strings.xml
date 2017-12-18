@@ -108,6 +108,7 @@
     <string name="consumption">Consumption</string>
     <string name="shopping_list_n">\n Shopping list</string>
     <string name="no_request">no request</string>
+    <string name="vs">VS</string>
 
 
     <string name="label_google_sign_in">Firebase + Google Sign In</string>
