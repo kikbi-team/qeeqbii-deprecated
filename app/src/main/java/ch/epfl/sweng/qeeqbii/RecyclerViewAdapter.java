@@ -47,6 +47,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     public void addClusterAndSave(ClusterType cluster, Context context)
     {
+        System.out.println("///////////////////////////////////////////::: madapter up to date");
         m_opacities.add(1f);
         m_cluster_product_list.addClusterAndSave(cluster, context);
         notifyDataSetChanged();

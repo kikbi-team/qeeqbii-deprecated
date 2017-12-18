@@ -37,6 +37,7 @@ import ch.epfl.sweng.qeeqbii.custom_exceptions.NotOpenFileException;
 import ch.epfl.sweng.qeeqbii.chat.MainActivityChat;
 import ch.epfl.sweng.qeeqbii.chat.StartActivity;
 
+import ch.epfl.sweng.qeeqbii.open_food.OpenFoodQuery;
 import ch.epfl.sweng.qeeqbii.open_food.SavedProductsDatabase;
 import me.dm7.barcodescanner.zxing.ZXingScannerView;
 
@@ -125,7 +126,8 @@ public class BarcodeScannerActivity extends AppCompatActivity implements ZXingSc
         try {
             SavedProductsDatabase.load(getApplicationContext());
             SavedProductsDatabase.getDates();
-            ShoppingListActivity.load(getApplicationContext());
+            if (ShoppingListActivity.getClusterProductList() == null)
+                ShoppingListActivity.load(getApplicationContext());
         } catch(IOException|JSONException|ParseException e){
             System.err.println(e.getMessage());
         }
@@ -243,10 +245,22 @@ public class BarcodeScannerActivity extends AppCompatActivity implements ZXingSc
             Intent intent = null;
             try {
                 intent = new Intent(this, Class.forName(mNextActivity));
+                if (Class.forName(mNextActivity) == ShoppingListActivity.class)
+                {
+                    ShoppingListActivity.addProduct(OpenFoodQuery.GetOrCreateProduct(mLastBarcode,
+                            getApplicationContext()), getApplicationContext());
+                    this.finish();
+                    return;
+                }
             } catch (ClassNotFoundException e) {
                 e.printStackTrace();
                 throw new Error("Barcode activity got invalid next activity: " + mNextActivity);
+            } catch (Exception e)
+            {
+                e.printStackTrace();
+                System.err.println(e.getMessage());
             }
+
             intent.putExtra(EXTRA_BARCODE, barcode);
             startActivity(intent);
         }
