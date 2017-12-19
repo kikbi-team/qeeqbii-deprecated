@@ -63,6 +63,7 @@ public class ShoppingListActivity extends AppCompatActivity {
         {
             addProduct(product, getApplicationContext());
         }
+        tmpProductList = new ArrayList<>();
 
     }
 

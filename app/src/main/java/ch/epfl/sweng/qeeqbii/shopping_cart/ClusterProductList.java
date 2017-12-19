@@ -64,13 +64,21 @@ public class ClusterProductList {
         }
         try {
             if (!exists) {
-                context.openFileOutput(filename, 0).close();
                 json = new JSONObject();
                 json.put("Clusters", new JSONArray());
+                context.openFileOutput(filename, 0).close();
             } else {
                 load(context);
             }
-        } catch (IOException|JSONException e) {
+        } catch (JSONException e) {
+            json = new JSONObject();
+            try {
+                json.put("Clusters", new JSONArray());
+            } catch (JSONException ee) {
+                System.err.println(ee.getMessage());
+            }
+        } catch (IOException e)
+        {
             System.err.println(e.getMessage());
         }
         for (ClusterType cluster : m_items)
@@ -115,6 +123,7 @@ public class ClusterProductList {
 
     public void addCluster(ClusterType cluster) {
         m_items.add(cluster);
+        System.out.println( "Cluster:" + cluster.getClass().toString() + cluster.toString() + "ADDED IN M_CART");
         is_checked_item.put(cluster,false);
         if (json != null)
         {
