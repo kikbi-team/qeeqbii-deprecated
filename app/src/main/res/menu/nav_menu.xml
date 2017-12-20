@@ -8,6 +8,13 @@
         android:onClick="sliderGoToActivity"
         android:icon="@drawable/ic_home_black_24dp"
         android:title="@string/main_activity" />
+
+    <item
+        android:id="@+id/nav_didyouknow"
+        android:onClick="sliderGoToActivity"
+        android:icon="@drawable/ic_add_black_24dp"
+        android:title="@string/did_you_know" />
+
     <item
         android:id="@+id/nav_chat"
         android:onClick="sliderGoToActivity"

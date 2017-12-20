@@ -13,6 +13,7 @@ import java.util.Map;
 import ch.epfl.sweng.qeeqbii.activities.BarcodeScannerActivity;
 import ch.epfl.sweng.qeeqbii.activities.CancerDataQueryActivity;
 import ch.epfl.sweng.qeeqbii.activities.CancerDataShowActivity;
+import ch.epfl.sweng.qeeqbii.activities.DidYouKnowActivity;
 import ch.epfl.sweng.qeeqbii.activities.GraphsActivity;
 import ch.epfl.sweng.qeeqbii.activities.MainActivity;
 import ch.epfl.sweng.qeeqbii.activities.ProductComparisonActivity;
@@ -45,6 +46,7 @@ public class Slider {
 
             // adding activity names to their slider ids
             activityNames.put(R.id.nav_main, MainActivity.class);
+            activityNames.put(R.id.nav_didyouknow, DidYouKnowActivity.class);
             activityNames.put(R.id.nav_chat, MainActivityChat.class);
             activityNames.put(R.id.nav_graphs, GraphsActivity.class);
             activityNames.put(R.id.nav_cancerdb, CancerDataShowActivity.class);
@@ -55,7 +57,6 @@ public class Slider {
             activityNames.put(R.id.nav_scanning_history, SavedProductsDatesActivity.class);
             activityNames.put(R.id.nav_stats, StatisticsActivity.class);
             activityNames.put(R.id.nav_comparison, ProductComparisonActivity.class);
-
 
             // adding slider drawer ids
             drawerIds.put(MainActivity.class, R.id.drawer_main);

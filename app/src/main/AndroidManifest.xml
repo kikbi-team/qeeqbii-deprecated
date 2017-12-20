@@ -9,8 +9,7 @@
     <uses-feature android:name="android.hardware.camera" />
     <uses-feature android:name="android.hardware.camera.autofocus" />
 
-    <uses-permission android:name="android.permission.INTERNET"/>
-
+    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
@@ -30,13 +29,17 @@
             </intent-filter>
         </activity>
 
-        <!--   <activity android:name=".activities.login.ChooserActivity" />
+        <!--
+           <activity android:name=".activities.login.ChooserActivity" />
            <activity
                android:name=".activities.login.GoogleSignInActivity"
-               android:label="@string/label_google_sign_in" />-->
+               android:label="@string/label_google_sign_in" />
+        -->
         <!-- Facebook Configuration -->
 
-     <!--   <meta-data
+
+        <!--
+        <meta-data
             android:name="com.facebook.sdk.ApplicationId"
             android:value="@string/facebook_app_id"
             tools:replace="android:value" />
@@ -49,7 +52,9 @@
         <activity
             android:name=".activities.login.AnonymousAuthActivity"
             android:exported="true"
-            android:label="@string/label_anonymous_auth" />-->
+            android:label="@string/label_anonymous_auth" />
+        -->
+
 
         <!-- Facebook Configuration -->
         <meta-data
@@ -64,7 +69,8 @@
             android:name=".chat.FacebookLoginActivity"
             android:label="@string/label_facebook_login" />
 
-        <!--   <meta-data
+        <!--
+           <meta-data
                android:name="com.facebook.sdk.ApplicationId"
                android:value="@string/facebook_app_id"
                tools:replace="android:value" />
@@ -82,11 +88,12 @@
                android:label="@string/label_anonymous_auth" />
            <activity
                android:name=".activities.login.TwitterLoginActivity"
-               android:label="@string/label_twitter_login" /> -->
+               android:label="@string/label_twitter_login" />
+        -->
 
         <activity
             android:name=".activities.MainActivity"
-            android:label="@string/app_name"></activity>
+            android:label="@string/app_name" />
 
         <service
             android:name="chat.FirebaseMessagingService"
@@ -100,7 +107,7 @@
         <activity
             android:name=".chat.MainActivityChat"
             android:exported="true"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".chat.StartActivity" />
         <activity
             android:name=".chat.RegisterActivity"
@@ -146,29 +153,26 @@
         <activity
             android:name=".chat.ChatActivity"
             android:parentActivityName=".chat.MainActivityChat"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".chat.GoogleSignInActivity"
             android:label="@string/label_google_sign_in" />
 
+        <service
+            android:name="chat.FirebaseMessagingService"
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
 
+        <activity
+            android:name=".activities.CancerDataShowActivity"
+            android:exported="true"
+            android:parentActivityName=".activities.MainActivity">
 
-
-         <service android:name="chat.FirebaseMessagingService"
-             android:theme="@style/AppTheme.NoActionBar"
-             android:exported="false">
-             <intent-filter>
-                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
-             </intent-filter>
-         </service>
-        
-
-         <activity
-             android:name=".activities.CancerDataShowActivity"
-             android:exported="true"
-             android:parentActivityName=".activities.MainActivity">
-
-             <!-- The meta-data tag is required if you support API level 15 and lower -->
+            <!-- The meta-data tag is required if you support API level 15 and lower -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="ch.epfl.sweng.qeeqbii.activities.MainActivity" />
@@ -210,8 +214,8 @@
             android:theme="@style/ThemeOverlay.MyNoTitleActivity" />
         <activity
             android:name=".activities.ShoppingListActivity"
-            android:label="@string/title_activity_shopping_cart"
             android:exported="true"
+            android:label="@string/title_activity_shopping_cart"
             android:theme="@style/ThemeOverlay.MyNoTitleActivity" />
         <activity
             android:name=".activities.ShowProductActivity"
@@ -224,14 +228,11 @@
             android:name=".activities.StatisticsActivity"
             android:label="@string/title_activity_shopping_cart_statistics"
             android:theme="@style/AppTheme.NoActionBar" />
-
         <activity
-
             android:name=".activities.ProductComparisonActivity"
             android:exported="true"
             android:label="@string/title_activity_product_comparison" />
-
-
+        <activity android:name=".activities.DidYouKnowActivity"></activity>
     </application>
 
 </manifest>
