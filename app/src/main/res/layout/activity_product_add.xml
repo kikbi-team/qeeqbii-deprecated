@@ -130,7 +130,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.2"
-                android:text="@string/name" />
+                android:text="@string/language" />
 
             <EditText
                 android:id="@+id/view_add_language"

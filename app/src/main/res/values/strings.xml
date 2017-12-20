@@ -202,4 +202,5 @@
     <string name="gives_information_about_cancer">Gives information about cancer</string>
     <string name="did_you_know">Did You Know?</string>
     <string name="gives_information_about_salt">Gives information about salt</string>
+    <string name="language">Language</string>
 </resources>
