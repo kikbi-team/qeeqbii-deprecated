@@ -78,14 +78,6 @@ public class pieChartYearlyFrag extends SimpleFragment implements OnChartGesture
         mChart.setDrawGridBackground(false);
         mChart.setDrawBarShadow(false);
 
-        //FOR THE FUTURE
-        /*
-        List<BarEntry> entriesFats = new ArrayList<>();
-        List<BarEntry> entriesSalts = new ArrayList<>();
-        List<BarEntry> entriesGlucides = new ArrayList<>();
-        List<BarEntry> entriesCalories = new ArrayList<>();
-        */
-
         List<BarEntry> entries = new ArrayList<>();
 
         //GIVES THE VALUES FOR THE GRAPHS
@@ -94,14 +86,6 @@ public class pieChartYearlyFrag extends SimpleFragment implements OnChartGesture
         } catch (ProductException e) {
             e.printStackTrace();
         }
-
-        // FUTURE
-        /*
-        entries.add(new BarEntry(0f, 30f));
-        entries.add(new BarEntry(1f, 30f));
-        entries.add(new BarEntry(2f, 30f));
-        entries.add(new BarEntry(3f, 30f));
-        */
 
         entries.add(new BarEntry(0f, sumList(mCalories)));
         entries.add(new BarEntry(2f, sumList(mFats)));

@@ -54,10 +54,10 @@ public class BarChartMonthlyFrag extends SimpleFragment implements OnChartGestur
     private PieChart mChartPieFats;
     private PieChart mChartPieGlucides;
 
-    private final float[] yDataCalories = {0, 2000*30};
-    private final float[] yDataFats= {0, 70*30};
-    private final float[] yDataSugars = {0, 55*30};
-    private final float[] yDataSalts = {0, 5*30};
+    private final float[] yDataCalories = {0, 2000*7};
+    private final float[] yDataFats= {0, 70*7};
+    private final float[] yDataSugars = {0, 55*7};
+    private final float[] yDataSalts = {0, 5*7};
 
     private List<Float> mSalts = new ArrayList<>();
     private List<Float> mGlucides = new ArrayList<>();
@@ -81,14 +81,6 @@ public class BarChartMonthlyFrag extends SimpleFragment implements OnChartGestur
         mChart.setDrawGridBackground(false);
         mChart.setDrawBarShadow(false);
 
-        //FOR THE FUTURE
-        /*
-        List<BarEntry> entriesFats = new ArrayList<>();
-        List<BarEntry> entriesSalts = new ArrayList<>();
-        List<BarEntry> entriesGlucides = new ArrayList<>();
-        List<BarEntry> entriesCalories = new ArrayList<>();
-        */
-
         List<BarEntry> entries = new ArrayList<>();
 
         //GIVES THE VALUES FOR THE GRAPHS
@@ -97,14 +89,6 @@ public class BarChartMonthlyFrag extends SimpleFragment implements OnChartGestur
         } catch (ProductException e) {
             e.printStackTrace();
         }
-
-        // FUTURE
-        /*
-        entries.add(new BarEntry(0f, 30f));
-        entries.add(new BarEntry(1f, 30f));
-        entries.add(new BarEntry(2f, 30f));
-        entries.add(new BarEntry(3f, 30f));
-        */
 
         entries.add(new BarEntry(0f, sumList(mCalories)));
         entries.add(new BarEntry(2f, sumList(mFats)));
