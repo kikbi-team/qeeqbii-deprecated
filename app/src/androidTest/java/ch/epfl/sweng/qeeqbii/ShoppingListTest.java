@@ -77,8 +77,6 @@ public class ShoppingListTest {
 
     }
 
-
->>>>>>> b17b0839dac28e07ff2ee12105d2a0dadb164731
     @Test
     public void addClusterTest()
     {

@@ -73,16 +73,12 @@ public class ProductComparisonActivityTest {
     @BeforeClass
     public static void run_before() {
         BarcodeToProductActivity.setProductAddingAllowed(false);
+        RecentlyScannedProducts.clear();
     }
 
     private String getResourceString(int id) {
         Context targetContext = InstrumentationRegistry.getTargetContext();
         return targetContext.getResources().getString(id);
-    }
-
-    @BeforeClass
-    public static void clearProducts() {
-        RecentlyScannedProducts.clear();
     }
 
     @Test
