@@ -3,7 +3,10 @@ package ch.epfl.sweng.qeeqbii.open_food;
 import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
 
+import org.junit.After;
+import org.junit.Before;
 import org.junit.AfterClass;
+import org.junit.BeforeClass;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -42,6 +45,12 @@ public class OpenFoodQueryTest {
     @Rule
     public final ActivityTestRule<BarcodeToProductActivity> mActivityRule =
             new ActivityTestRule<>(BarcodeToProductActivity.class);
+
+    // disable product adding for these tests
+    @BeforeClass
+    public static void run_before() {
+        BarcodeToProductActivity.setProductAddingAllowed(false);
+    }
 
     @Test
     public void QueryOfExistingProduct() {

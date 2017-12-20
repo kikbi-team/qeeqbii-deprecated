@@ -101,6 +101,12 @@ public class SavedProductsListActivity extends AppCompatActivity {
         mAdapter.notifyDataSetChanged();
     }
 
+    // go to product comparison onClick handler
+    public void productComparison(View view) {
+        Intent intent = new Intent(this, ProductComparisonActivity.class);
+        startActivity(intent);
+    }
+
     public ArrayAdapter getmAdapter() {
         return mAdapter;
     }

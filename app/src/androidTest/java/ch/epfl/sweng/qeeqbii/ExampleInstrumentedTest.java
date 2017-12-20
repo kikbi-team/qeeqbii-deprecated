@@ -5,8 +5,11 @@ import android.support.test.InstrumentationRegistry;
 import android.support.test.runner.AndroidJUnit4;
 
 import org.junit.AfterClass;
+import org.junit.BeforeClass;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+
+import ch.epfl.sweng.qeeqbii.activities.BarcodeToProductActivity;
 
 import static org.junit.Assert.assertEquals;
 
@@ -23,6 +26,12 @@ public class ExampleInstrumentedTest {
         Context appContext = InstrumentationRegistry.getTargetContext();
 
         assertEquals("ch.epfl.sweng.qeeqbii", appContext.getPackageName());
+    }
+
+    // disable product adding for these tests
+    @BeforeClass
+    public static void run_before() {
+        BarcodeToProductActivity.setProductAddingAllowed(false);
     }
 
     @AfterClass

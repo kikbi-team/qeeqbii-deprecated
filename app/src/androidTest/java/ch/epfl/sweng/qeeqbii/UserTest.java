@@ -1,8 +1,10 @@
 package ch.epfl.sweng.qeeqbii;
 
 import org.junit.AfterClass;
+import org.junit.BeforeClass;
 import org.junit.Test;
 
+import ch.epfl.sweng.qeeqbii.activities.BarcodeToProductActivity;
 import ch.epfl.sweng.qeeqbii.chat.Users;
 
 import static junit.framework.Assert.assertEquals;
@@ -20,6 +22,13 @@ public class UserTest {
     String age="22";
     String allergies="nothing";
     String degout="cacahete";
+
+    // disable product adding for these tests
+    @BeforeClass
+    public static void run_before() {
+        BarcodeToProductActivity.setProductAddingAllowed(false);
+    }
+
     @Test
     public void test(){
         Users jonnie = new Users();

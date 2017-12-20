@@ -5,11 +5,12 @@ import android.support.test.runner.AndroidJUnit4;
 
 import org.junit.Before;
 import org.junit.AfterClass;
+import org.junit.BeforeClass;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
-
+import ch.epfl.sweng.qeeqbii.activities.BarcodeToProductActivity;
 import java.util.concurrent.CountDownLatch;
 import ch.epfl.sweng.qeeqbii.activities.ShoppingListActivity;
 import ch.epfl.sweng.qeeqbii.clustering.ClusterTypeFirstLevel;
@@ -38,6 +39,12 @@ public class ShoppingListTest {
     @Rule
     public IntentsTestRule<ShoppingListActivity> mActivityRule =
             new IntentsTestRule<>(ShoppingListActivity.class);
+
+    // disable product adding for these tests
+    @BeforeClass
+    public static void run_before() {
+        BarcodeToProductActivity.setProductAddingAllowed(false);
+    }
 
     @Before
     public void loadTestDatabase() {
@@ -69,7 +76,6 @@ public class ShoppingListTest {
         }
 
     }
-
 
     @Test
     public void addClusterTest()

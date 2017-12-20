@@ -27,6 +27,32 @@
     <string name="nav_header">Menu</string>
     <string name="title_activity_shopping_cart">ShoppingCart</string>
     <string name="shopping_cart">Shopping Cart</string>
+
+    <string name="cheese">cheese</string>
+    <string name="apple">apple</string>
+    <string name="chips">chips</string>
+    <string name="wine">wine</string>
+    <string name="graph">graph</string>
+    <string name="meat">meat</string>
+    <string name="vegetables">vegetables</string>
+
+
+<!--    <string name="label_google_sign_in">Firebase + Google Sign In</string>
+    <string name="desc_google_sign_in">Use a Google Sign In credential to authenticate with Firebase.</string>
+    <string name="label_facebook_login">Firebase + Facebook Login</string>
+    <string name="desc_facebook_login">Use a Facebook Login credential to authenticate with Firebase.</string>
+    <string name="label_twitter_login">Firebase + Twitter Login</string>
+    <string name="desc_twitter_login">Use a Twitter Login credential to authenticate with Firebase.</string>
+    <string name="label_emailpassword">Email/Password Authentication</string>
+    <string name="desc_emailpassword">Use an email and password to authenticate with Firebase.</string>
+    <string name="desc_phone_auth">Use a phone number to authenticate with Firebase.</string>
+    <string name="label_anonymous_auth">Anonymous Authentication</string>
+    <string name="desc_anonymous_auth">Sign in anonymously and then later upgrade to a full Firebase Auth user.</string>
+    <string name="desc_custom_auth">Use a custom token signed by your own server to authenticate with Firebase.</string>
+    <string name="desc_firebase_ui">Use the FirebaseUI-Android library to authenticate with Firebase.</string>
+
+    <string name="sign_in">Sign In</string>-->
+
     <string name="create_account">Create Account</string>
     <string name="empty_field">Empty field</string>
     <string name="scanned_products">Scanned Products</string>
@@ -101,6 +127,16 @@
     <string name="name_1">Name 1</string>
     <string name="online">Online</string>
     <string name="cancel_request">Cancel Friend Request</string>
+    <string name="product_not_found_want_add">Product not found in the database. Do you want to add it?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="barcode">Barcode</string>
+    <string name="name">Name</string>
+    <string name="product_add_default_language">fr</string>
+    <string name="weight_g">Weight (g)</string>
+    <string name="brand">Brand</string>
+    <string name="view_add_process_button_text">Process</string>
+    <string name="add_missing_product">Add missing product</string>
     <string name="compare_products">Compare Products</string>
     <string name="consumption">Consumption</string>
     <string name="shopping_list_n">\n Shopping list</string>

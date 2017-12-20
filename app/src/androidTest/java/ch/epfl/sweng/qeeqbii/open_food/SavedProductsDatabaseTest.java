@@ -7,6 +7,7 @@ import android.support.test.runner.AndroidJUnit4;
 import org.json.JSONException;
 import org.junit.AfterClass;
 import org.junit.Before;
+import org.junit.BeforeClass;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -16,6 +17,7 @@ import java.util.List;
 
 import ch.epfl.sweng.qeeqbii.ActivityFinisher;
 import ch.epfl.sweng.qeeqbii.R;
+import ch.epfl.sweng.qeeqbii.activities.BarcodeToProductActivity;
 import ch.epfl.sweng.qeeqbii.activities.SavedProductsDatesActivity;
 import ch.epfl.sweng.qeeqbii.clustering.NutrientNameConverter;
 import ch.epfl.sweng.qeeqbii.clustering.ClusterTypeSecondLevel;
@@ -39,6 +41,12 @@ public class SavedProductsDatabaseTest {
     @Rule
     public final ActivityTestRule<SavedProductsDatesActivity> mActivityRule =
             new ActivityTestRule<>(SavedProductsDatesActivity.class);
+
+    // disable product adding for these tests
+    @BeforeClass
+    public static void run_before() {
+        BarcodeToProductActivity.setProductAddingAllowed(false);
+    }
 
     @Before
     public void loadTestDatabase() {

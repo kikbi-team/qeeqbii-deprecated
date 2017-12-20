@@ -1,4 +1,4 @@
-package ch.epfl.sweng.qeeqbii.open_food;
+package ch.epfl.sweng.qeeqbii;
 
 import android.content.ComponentName;
 import android.content.pm.PackageManager;
@@ -18,6 +18,7 @@ import android.view.KeyEvent;
 
 import com.google.zxing.Result;
 
+import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
@@ -54,10 +55,15 @@ import static org.junit.Assert.fail;
  * @see <a href="http://d.android.com/tools/testing">Testing documentation</a>
  */
 
+// DO NOT RENAME THIS FILE
+// THIS TEST MUST RUN FIRST!
+// SINCE BARCODE MIGHT DISPLAY
+// A POPUP REQUESTING FOR PERMISSIONS!
+
 
 @RunWith(AndroidJUnit4.class)
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
-public class BarcodeScannerActivityTest {
+public class A00_BarcodeScannerActivityTest_DO_NOT_RENAME_SEE_INSIDE {
     private static final int GRANT_BUTTON_INDEX = 1;
     private static final long PERMISSIONS_DELAY = 1000;
 
@@ -110,6 +116,12 @@ public class BarcodeScannerActivityTest {
 
         Log.d("Barcode Permission", "Granted");
         SystemClock.sleep(PERMISSIONS_DELAY);
+    }
+
+    // disable product adding for these tests
+    @BeforeClass
+    public static void run_before() {
+        BarcodeToProductActivity.setProductAddingAllowed(false);
     }
 
     @Test

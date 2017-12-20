@@ -1,8 +1,10 @@
 package ch.epfl.sweng.qeeqbii;
 
 import org.junit.AfterClass;
+import org.junit.BeforeClass;
 import org.junit.Test;
 
+import ch.epfl.sweng.qeeqbii.activities.BarcodeToProductActivity;
 import ch.epfl.sweng.qeeqbii.chat.Messages;
 
 import static junit.framework.Assert.assertEquals;
@@ -26,6 +28,12 @@ public class MessagesTest {
         assertEquals(message2.getType(),"image");
         assertEquals(message2.getTime(),1);
         assertEquals(message2.isSeen(),false);
+    }
+
+    // disable product adding for these tests
+    @BeforeClass
+    public static void run_before() {
+        BarcodeToProductActivity.setProductAddingAllowed(false);
     }
 
     @AfterClass

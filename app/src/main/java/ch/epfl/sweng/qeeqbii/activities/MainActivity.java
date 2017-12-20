@@ -59,6 +59,15 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    // launch ProductAdd activity with the barcode from EditText
+    public void productAdd(View view) {
+        Intent intent = new Intent(this, ProductAddActivity.class);
+        EditText editText = (EditText) findViewById(R.id.Barcode);
+        String barcode = editText.getText().toString();
+        intent.putExtra(EXTRA_BARCODE, barcode);
+        startActivity(intent);
+    }
+
     public boolean onOptionsItemSelected(MenuItem item) {
 
         return mToggle.onOptionsItemSelected(item) || super.onOptionsItemSelected(item);

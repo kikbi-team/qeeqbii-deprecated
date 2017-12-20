@@ -6,6 +6,7 @@ import android.support.test.runner.AndroidJUnit4;
 
 import org.junit.AfterClass;
 import org.junit.Before;
+import org.junit.BeforeClass;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -15,6 +16,7 @@ import java.util.List;
 
 import ch.epfl.sweng.qeeqbii.ActivityFinisher;
 import ch.epfl.sweng.qeeqbii.R;
+import ch.epfl.sweng.qeeqbii.activities.BarcodeToProductActivity;
 import ch.epfl.sweng.qeeqbii.activities.CancerDataQueryActivity;
 import ch.epfl.sweng.qeeqbii.cancer.query.LevenshteinQueryCancerDB;
 import ch.epfl.sweng.qeeqbii.cancer.query.RatcliffQueryCancerDB;
@@ -35,6 +37,11 @@ public class CancerDataQueryTest {
     public final ActivityTestRule<CancerDataQueryActivity> mActivityRule =
               new ActivityTestRule<>(CancerDataQueryActivity.class);
 
+    // disable product adding for these tests
+    @BeforeClass
+    public static void run_before() {
+        BarcodeToProductActivity.setProductAddingAllowed(false);
+    }
 
     @Before
     public void Initialize() {

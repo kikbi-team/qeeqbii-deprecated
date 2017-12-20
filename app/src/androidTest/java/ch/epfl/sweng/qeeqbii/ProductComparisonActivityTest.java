@@ -6,6 +6,10 @@ package ch.epfl.sweng.qeeqbii;
 
 import android.app.Activity;
 import android.content.ComponentName;
+import android.content.Context;
+import android.support.test.InstrumentationRegistry;
+import android.support.test.espresso.action.ViewActions;
+import android.support.test.espresso.action.ViewActions;
 import android.support.test.espresso.intent.rule.IntentsTestRule;
 import android.support.test.runner.AndroidJUnit4;
 import android.support.test.runner.lifecycle.ActivityLifecycleMonitor;
@@ -13,6 +17,8 @@ import android.support.test.runner.lifecycle.ActivityLifecycleMonitorRegistry;
 import android.support.test.runner.lifecycle.Stage;
 import android.widget.ListView;
 
+import org.junit.After;
+import org.junit.Before;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.FixMethodOrder;
@@ -27,6 +33,7 @@ import java.util.Objects;
 import java.util.concurrent.CountDownLatch;
 
 import ch.epfl.sweng.qeeqbii.activities.BarcodeScannerActivity;
+import ch.epfl.sweng.qeeqbii.activities.BarcodeToProductActivity;
 import ch.epfl.sweng.qeeqbii.activities.ProductComparisonActivity;
 import ch.epfl.sweng.qeeqbii.clustering.NutrientNameConverter;
 import ch.epfl.sweng.qeeqbii.open_food.Product;
@@ -62,14 +69,16 @@ public class ProductComparisonActivityTest {
     public final IntentsTestRule<ProductComparisonActivity> mActivityRule =
             new IntentsTestRule<>(ProductComparisonActivity.class);
 
+    // disable product adding for these tests
     @BeforeClass
-    public static void clearProducts() {
+    public static void run_before() {
+        BarcodeToProductActivity.setProductAddingAllowed(false);
         RecentlyScannedProducts.clear();
     }
 
-    @AfterClass
-    public static void finish_all_activities() {
-        ActivityFinisher.finishOpenActivities();
+    private String getResourceString(int id) {
+        Context targetContext = InstrumentationRegistry.getTargetContext();
+        return targetContext.getResources().getString(id);
     }
 
     @Test
@@ -79,6 +88,12 @@ public class ProductComparisonActivityTest {
         ListView ls = (ListView) mActivityRule.getActivity().findViewById(R.id.graphs);
         assertTrue(ls.getCount() == 0);
     }
+
+    @AfterClass
+    public static void finish_all_activities() {
+        ActivityFinisher.finishOpenActivities();
+    }
+
 
     public Activity getActivityInstance(final String className) {
         final Activity[] currentActivity = new Activity[1];

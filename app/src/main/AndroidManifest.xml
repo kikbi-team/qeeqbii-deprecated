@@ -37,7 +37,6 @@
         -->
         <!-- Facebook Configuration -->
 
-
         <!--
         <meta-data
             android:name="com.facebook.sdk.ApplicationId"
@@ -232,6 +231,7 @@
             android:name=".activities.ProductComparisonActivity"
             android:exported="true"
             android:label="@string/title_activity_product_comparison" />
+        <activity android:name=".activities.ProductAddActivity"></activity>
         <activity android:name=".activities.DidYouKnowActivity"></activity>
     </application>
 
