@@ -255,7 +255,7 @@ public class ProfileActivity extends AppCompatActivity {
 
                                     mProfileSendReqBtn.setEnabled(true);
                                     mCurrent_state = "not_friends";
-                                    mProfileSendReqBtn.setText("Send Friend Request");
+                                    mProfileSendReqBtn.setText(R.string.friend_request);
 
                                     mDeclineBtn.setVisibility(View.INVISIBLE);
                                     mDeclineBtn.setEnabled(false);
@@ -280,7 +280,6 @@ public class ProfileActivity extends AppCompatActivity {
                     friendsMap.put("Friends/" + mCurrent_user.getUid() + "/" + user_id + "/date", currentDate);
                     friendsMap.put("Friends/" + user_id + "/"  + mCurrent_user.getUid() + "/date", currentDate);
 
-
                     friendsMap.put("Friend_req/" + mCurrent_user.getUid() + "/" + user_id, null);
                     friendsMap.put("Friend_req/" + user_id + "/" + mCurrent_user.getUid(), null);
 
@@ -304,15 +303,11 @@ public class ProfileActivity extends AppCompatActivity {
                                 String error = databaseError.getMessage();
 
                                 Toast.makeText(ProfileActivity.this, error, Toast.LENGTH_SHORT).show();
-
-
+                                
                             }
-
                         }
                     });
-
                 }
-
 
                 // ------------ UNFRIENDS ---------
 
@@ -345,18 +340,10 @@ public class ProfileActivity extends AppCompatActivity {
                             }
 
                             mProfileSendReqBtn.setEnabled(true);
-
                         }
                     });
-
                 }
-
-
             }
         });
-
-
     }
-
-
 }

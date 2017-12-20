@@ -203,4 +203,7 @@
     <string name="did_you_know">Did You Know?</string>
     <string name="gives_information_about_salt">Gives information about salt</string>
     <string name="language">Language</string>
+    <string name="g">G</string>
+    <string name="t">T</string>
+    <string name="friend_request">Send Friend Request</string>
 </resources>
