@@ -16,10 +16,12 @@ import java.util.concurrent.CountDownLatch;
 
 import ch.epfl.sweng.qeeqbii.ActivityFinisher;
 import ch.epfl.sweng.qeeqbii.activities.BarcodeToProductActivity;
+import ch.epfl.sweng.qeeqbii.clustering.NutrientNameConverter;
 import ch.epfl.sweng.qeeqbii.open_food.OpenFoodQuery;
 import ch.epfl.sweng.qeeqbii.open_food.Product;
 import ch.epfl.sweng.qeeqbii.open_food.RecentlyScannedProducts;
 
+import static android.support.test.InstrumentationRegistry.getTargetContext;
 import static junit.framework.TestCase.fail;
 import static org.junit.Assert.assertEquals;
 
@@ -50,6 +52,12 @@ public class OpenFoodQueryTest {
     @BeforeClass
     public static void run_before() {
         BarcodeToProductActivity.setProductAddingAllowed(false);
+    }
+
+    @Before
+    public void readCSV() {
+        // reading csv file if it was not read before
+        NutrientNameConverter.readCSVFile(getTargetContext());
     }
 
     @Test

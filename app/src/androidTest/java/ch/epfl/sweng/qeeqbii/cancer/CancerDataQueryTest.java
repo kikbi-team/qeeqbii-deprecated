@@ -49,7 +49,6 @@ public class CancerDataQueryTest {
     }
 
 
-
     @Test
     public void testPerfectMatchCancerDataBase() {
         // Useful way of accessing resources
