@@ -39,7 +39,7 @@ public class MainActivityChat extends AppCompatActivity {
         setSupportActionBar(mToolbar);
         getSupportActionBar().setTitle("Qeeqbii Chat");
 
-        if (mAuth.getCurrentUser() != null) {
+       if (mAuth.getCurrentUser() != null) {
 
 
             mUserRef = FirebaseDatabase.getInstance().getReference().child("Users").child(mAuth.getCurrentUser().getUid());

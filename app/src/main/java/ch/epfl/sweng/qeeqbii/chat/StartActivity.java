@@ -1,6 +1,7 @@
 package ch.epfl.sweng.qeeqbii.chat;
 
 import android.content.Intent;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -9,17 +10,23 @@ import ch.epfl.sweng.qeeqbii.R;
 
 public class StartActivity extends AppCompatActivity {
 
-
+    private FloatingActionButton mGoogleBtn;
     private Button mRegBtn;
     private Button mLoginBtn;
+    private FloatingActionButton mFacebookBtn;
+    private FloatingActionButton mTwitterBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start);
 
+        mGoogleBtn= (FloatingActionButton)  findViewById(R.id.google);
         mRegBtn = (Button) findViewById(R.id.start_reg_btn);
         mLoginBtn = (Button) findViewById(R.id.start_login_btn);
+        mFacebookBtn = (FloatingActionButton) findViewById(R.id.facebook);
+        mTwitterBtn = (FloatingActionButton) findViewById(R.id.twitter);
+
 
         mRegBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -31,12 +38,43 @@ public class StartActivity extends AppCompatActivity {
             }
         });
 
+
+
         mLoginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
                 Intent login_intent = new Intent(StartActivity.this, LoginActivity.class);
                 startActivity(login_intent);
+
+            }
+        });
+        mGoogleBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent login_intent_google = new Intent(StartActivity.this, GoogleSignInActivity.class);
+                startActivity(login_intent_google);
+
+            }
+        });
+
+        mFacebookBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent reg_intent = new Intent(StartActivity.this, FacebookLoginActivity.class);
+                startActivity(reg_intent);
+
+            }
+        });
+
+        mTwitterBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent reg_intent = new Intent(StartActivity.this, TwitterLoginActivity.class);
+                startActivity(reg_intent);
 
             }
         });

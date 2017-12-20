@@ -87,7 +87,6 @@ public class SavedProductsListActivity extends AppCompatActivity {
         });
     }
 
-
     public void shareOnFacebookRecentlyScanned(View view)
     {
         Intent intent = new Intent(this, ShareOnFacebookActivity.class);
