@@ -28,15 +28,6 @@
     <string name="title_activity_shopping_cart">ShoppingCart</string>
     <string name="shopping_cart">Shopping Cart</string>
 
-    <string name="cheese">cheese</string>
-    <string name="apple">apple</string>
-    <string name="chips">chips</string>
-    <string name="wine">wine</string>
-    <string name="graph">graph</string>
-    <string name="meat">meat</string>
-    <string name="vegetables">vegetables</string>
-
-
 <!--    <string name="label_google_sign_in">Firebase + Google Sign In</string>
     <string name="desc_google_sign_in">Use a Google Sign In credential to authenticate with Firebase.</string>
     <string name="label_facebook_login">Firebase + Facebook Login</string>
@@ -206,4 +197,5 @@
     <string name="g">G</string>
     <string name="t">T</string>
     <string name="friend_request">Send Friend Request</string>
+    <string name="cancel_friend">Cancel Friend Request</string>
 </resources>
