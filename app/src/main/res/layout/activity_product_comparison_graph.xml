@@ -6,7 +6,6 @@
     android:layout_height="fill_parent">
 
     <TableRow
-        android:id="@+id/row"
         android:layout_width="fill_parent"
         android:layout_height="500dp"
         tools:ignore="UselessParent">

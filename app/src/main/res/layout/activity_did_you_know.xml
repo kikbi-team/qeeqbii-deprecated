@@ -7,7 +7,6 @@
     tools:context="ch.epfl.sweng.qeeqbii.activities.DidYouKnowActivity">
 
     <ImageView
-        android:id="@+id/imageView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"

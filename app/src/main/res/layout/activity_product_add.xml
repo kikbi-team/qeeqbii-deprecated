@@ -35,12 +35,10 @@
         app:layout_constraintTop_toBottomOf="@+id/view_add_label">
 
         <TableRow
-            android:id="@+id/row_barcode"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
             <TextView
-                android:id="@+id/barcode_label"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.2"
@@ -56,19 +54,16 @@
         </TableRow>
 
         <TableRow
-            android:id="@+id/row_name"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
             <TextView
-                android:id="@+id/name_label"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.2"
                 android:text="@string/name" />
 
             <EditText
-                android:id="@+id/view_add_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.8"
@@ -78,19 +73,16 @@
         </TableRow>
 
         <TableRow
-            android:id="@+id/row_brand"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
             <TextView
-                android:id="@+id/brand_label"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.2"
                 android:text="@string/brand" />
 
             <EditText
-                android:id="@+id/view_add_brand"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.8"
@@ -99,19 +91,16 @@
         </TableRow>
 
         <TableRow
-            android:id="@+id/row_weight_g"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
             <TextView
-                android:id="@+id/weight_g_label"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.2"
                 android:text="@string/weight_g" />
 
             <EditText
-                android:id="@+id/view_add_weight_g"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.8"
@@ -121,19 +110,16 @@
         </TableRow>
 
         <TableRow
-            android:id="@+id/row_language"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
             <TextView
-                android:id="@+id/language_label"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.2"
                 android:text="@string/language" />
 
             <EditText
-                android:id="@+id/view_add_language"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.8"
@@ -142,14 +128,12 @@
         </TableRow>
 
         <TableRow
-            android:id="@+id/row_submit"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
             android:weightSum="2">
 
             <Button
-                android:id="@+id/view_add_process_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/view_add_process_button_text" />

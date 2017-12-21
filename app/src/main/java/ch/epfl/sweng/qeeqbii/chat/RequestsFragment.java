@@ -33,23 +33,18 @@ import de.hdodenhof.circleimageview.CircleImageView;
  */
 public class RequestsFragment extends Fragment {
 
-
     private RecyclerView mRequestsList;
 
     private DatabaseReference mRequestsDatabase;
     private DatabaseReference mUsersDatabase;
 
     private FirebaseAuth mAuth;
-
     private String mCurrent_user_id;
-
     private View mMainView;
-
 
     public RequestsFragment() {
         // Required empty public constructor
     }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -59,23 +54,14 @@ public class RequestsFragment extends Fragment {
         mAuth = FirebaseAuth.getInstance();
 
         mCurrent_user_id = mAuth.getCurrentUser().getUid();
+        mRequestsList = (RecyclerView) mMainView.findViewById(R.id.requests_list);
+        mRequestsDatabase = FirebaseDatabase.getInstance().getReference().child("Friend_req").child(mCurrent_user_id);
+        mRequestsDatabase.keepSynced(true);
+        mUsersDatabase = FirebaseDatabase.getInstance().getReference().child("Users");
+        mUsersDatabase.keepSynced(true);
 
-         //if (FirebaseDatabase.getInstance().getReference().child("Friend_req").child(mCurrent_user_id).child("request_type").toString() != ("received") ) {
-
-
-//         }else {
-
-            mRequestsList = (RecyclerView) mMainView.findViewById(R.id.requests_list);
-            mRequestsDatabase = FirebaseDatabase.getInstance().getReference().child("Friend_req").child(mCurrent_user_id);
-            mRequestsDatabase.keepSynced(true);
-            mUsersDatabase = FirebaseDatabase.getInstance().getReference().child("Users");
-            mUsersDatabase.keepSynced(true);
-
-            mRequestsList.setHasFixedSize(true);
-            mRequestsList.setLayoutManager(new LinearLayoutManager(getContext()));
-
-  //      }
-
+        mRequestsList.setHasFixedSize(true);
+        mRequestsList.setLayoutManager(new LinearLayoutManager(getContext()));
 
         // Inflate the layout for this fragment
         return mMainView;
@@ -92,8 +78,6 @@ public class RequestsFragment extends Fragment {
                 R.layout.users_single_layout,
                 RequestsViewHolder.class,
                 mRequestsDatabase
-
-
         ) {
             @Override
             protected void populateViewHolder(final RequestsViewHolder RequestsViewHolder, Request requests, int i) {
@@ -113,7 +97,6 @@ public class RequestsFragment extends Fragment {
 
                             String userOnline = dataSnapshot.child("online").getValue().toString();
                             RequestsViewHolder.setUserOnline(userOnline);
-
                         }
 
                         RequestsViewHolder.setName(userName);
@@ -138,7 +121,6 @@ public class RequestsFragment extends Fragment {
                                             Intent profileIntent = new Intent(getContext(), ProfileActivity.class);
                                             profileIntent.putExtra("user_id", list_user_id);
                                             startActivity(profileIntent);
-
                                         }
 
                                         if(i == 1){
@@ -149,16 +131,11 @@ public class RequestsFragment extends Fragment {
                                             startActivity(chatIntent);
 
                                         }
-
                                     }
                                 });
-
                                 builder.show();
-
                             }
                         });
-
-
                     }
 
                     @Override
@@ -166,13 +143,10 @@ public class RequestsFragment extends Fragment {
 
                     }
                 });
-
             }
         };
 
         mRequestsList.setAdapter(friendsRecyclerViewAdapter);
-
-
     }
 
 
@@ -184,28 +158,24 @@ public class RequestsFragment extends Fragment {
             super(itemView);
 
             mView = itemView;
-
         }
 
         public void setDate(String date){
 
             TextView userStatusView = (TextView) mView.findViewById(R.id.user_single_status);
             userStatusView.setText(date);
-
         }
 
         public void setName(String name){
 
             TextView userNameView = (TextView) mView.findViewById(R.id.user_single_name);
             userNameView.setText(name);
-
         }
 
         public void setUserImage(String thumb_image, Context ctx){
 
             CircleImageView userImageView = (CircleImageView) mView.findViewById(R.id.user_single_image);
             Picasso.with(ctx).load(thumb_image).placeholder(R.drawable.default_avatar).into(userImageView);
-
         }
 
         public void setUserOnline(String online_status) {
@@ -219,12 +189,8 @@ public class RequestsFragment extends Fragment {
             } else {
 
                 userOnlineView.setVisibility(View.INVISIBLE);
-
             }
-
         }
-
-
     }
 
 
