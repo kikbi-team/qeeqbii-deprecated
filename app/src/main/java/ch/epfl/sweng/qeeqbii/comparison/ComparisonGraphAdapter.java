@@ -50,8 +50,8 @@ public class ComparisonGraphAdapter extends BaseAdapter {
         ArrayList<BarEntry> valueSet2 = new ArrayList<>();
 
         // adding nutrient values to valuesets
-        valueSet1.add(new BarEntry(0, line.value1.floatValue()));
-        valueSet2.add(new BarEntry(1, line.value2.floatValue()));
+        valueSet1.add(new BarEntry(1, line.value1.floatValue()));
+        valueSet2.add(new BarEntry(0, line.value2.floatValue()));
 
         // creating two datasets, each valueset goes to its own dataset
         BarDataSet barDataSet1 = new BarDataSet(valueSet1, "Product 1");
