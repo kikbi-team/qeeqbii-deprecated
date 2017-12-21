@@ -47,17 +47,6 @@ public class BarcodeScannerSliderTest {
         sliderTest.canGoToBarcodeScanner(layoutId, navViewId);
     }
 
-    @Test
-    public void canGoToCancerDataQuery() {
-        SliderTest sliderTest = new SliderTest();
-        sliderTest.canGoToCancerDataQuery(layoutId, navViewId);
-    }
-
-    @Test
-    public void canGoToCancerdataShowActivity() {
-        SliderTest sliderTest = new SliderTest();
-        sliderTest.canGoToCancerdataShowActivity(layoutId, navViewId);
-    }
 
     @Test
     public void canGoToCancerMainActivityChat() {
@@ -65,17 +54,6 @@ public class BarcodeScannerSliderTest {
         sliderTest.canGoToCancerMainActivityChat(layoutId, navViewId);
     }
 
-    @Test
-    public void canGoToGraphs() {
-        SliderTest sliderTest = new SliderTest();
-        sliderTest.canGoToGraphs(layoutId, navViewId);
-    }
-
-    @Test
-    public void canGoToMain() {
-        SliderTest sliderTest = new SliderTest();
-        sliderTest.canGoToMain(layoutId, navViewId);
-    }
 
     @Test
     public void canGoToShoppingList() {
@@ -92,32 +70,6 @@ public class BarcodeScannerSliderTest {
 
     @Test
     public void canGoToSavedProductsDate() {
-        try {
-            // Click sign in
-            ViewInteraction appCompatButton = onView(withId(R.id.start_login_btn));
-            appCompatButton.perform(click());
-
-            String email = "nicolaslesimple@noos.fr";
-            String password = "123456";
-            //Enter email
-            ViewInteraction emailField = onView(withId(R.id.email_login_chat));
-            emailField.perform(replaceText(email));
-
-            // Enter password
-            ViewInteraction passwordField = onView((withId(R.id.password_login_chat)));
-            passwordField.perform(replaceText(password));
-
-            // Click sign in
-            ViewInteraction appCompatButton2 = onView(withId(R.id.login_btn));
-            appCompatButton2.perform(click());
-
-            sleep(5000);
-        }
-        catch(Exception e)
-        {
-            e.printStackTrace();
-        }
-
         SliderTest sliderTest = new SliderTest();
         sliderTest.canGoToSavedProductsDate(layoutId, navViewId);
     }
@@ -126,6 +78,25 @@ public class BarcodeScannerSliderTest {
     public void canGoToProductsComparisonActivity() {
         SliderTest sliderTest = new SliderTest();
         sliderTest.canGoToProductsComparisonActivity(layoutId, navViewId);
+    }
+
+    @Test
+    public void canGoToDidYouKnowActivity() {
+        SliderTest sliderTest = new SliderTest();
+        sliderTest.canGoToDidYouKnowActivity(layoutId, navViewId);
+    }
+
+
+    @Test
+    public void canGoToUsersActivityActivity() {
+        SliderTest sliderTest = new SliderTest();
+        sliderTest.canGoToUsersActivityActivity(layoutId, navViewId);
+    }
+
+    @Test
+    public void canGoToOtherActivity() {
+        SliderTest sliderTest = new SliderTest();
+        sliderTest.canGoToOtherActivity(layoutId, navViewId);
     }
 
     @AfterClass

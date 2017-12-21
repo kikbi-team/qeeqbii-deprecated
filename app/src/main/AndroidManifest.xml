@@ -231,8 +231,12 @@
             android:name=".activities.ProductComparisonActivity"
             android:exported="true"
             android:label="@string/title_activity_product_comparison" />
-        <activity android:name=".activities.ProductAddActivity"></activity>
-        <activity android:name=".activities.DidYouKnowActivity"></activity>
+        <activity
+            android:name=".activities.ProductAddActivity"/>
+        <activity
+            android:name=".activities.DidYouKnowActivity"/>
+        <activity
+            android:name=".activities.OtherActivity"/>
     </application>
 
 </manifest>

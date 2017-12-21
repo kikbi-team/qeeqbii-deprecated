@@ -54,7 +54,7 @@ public class GraphActivityTest extends ActivityInstrumentationTestCase2<MainActi
 
         // Click the menu option
         getInstrumentation().sendKeyDownUpSync(KeyEvent.KEYCODE_MENU);
-        getInstrumentation().invokeMenuActionSync(activity, R.id.nav_graphs, 0);
+        //getInstrumentation().invokeMenuActionSync(activity, R.id.nav_graphs, 0);
 
         //Activity a = getInstrumentation().waitForMonitorWithTimeout(am, 1000);
         //assertEquals(true, getInstrumentation().checkMonitorHit(am, 1));
