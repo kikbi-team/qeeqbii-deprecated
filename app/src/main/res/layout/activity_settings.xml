@@ -24,7 +24,7 @@
         android:textColor="@android:color/white"
         android:textSize="24sp"
         android:layout_below="@+id/settings_image"
-        android:layout_alignStart="@+id/settings_status" />
+        android:layout_centerHorizontal="true" />
 
     <Button
         android:id="@+id/settings_age_btn"
