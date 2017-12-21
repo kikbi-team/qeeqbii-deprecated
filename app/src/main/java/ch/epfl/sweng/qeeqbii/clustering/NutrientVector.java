@@ -1,10 +1,8 @@
 package ch.epfl.sweng.qeeqbii.clustering;
 
 import java.io.Serializable;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Set;
 
 import ch.epfl.sweng.qeeqbii.custom_exceptions.IllegalNutrientKeyException;
 import ch.epfl.sweng.qeeqbii.custom_exceptions.NotOpenFileException;

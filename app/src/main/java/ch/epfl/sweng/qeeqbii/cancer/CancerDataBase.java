@@ -12,18 +12,13 @@ import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-import java.util.Set;
 
-import ch.epfl.sweng.qeeqbii.custom_exceptions.AlreadyOpenException;
 import ch.epfl.sweng.qeeqbii.custom_exceptions.NotOpenFileException;
-import ch.epfl.sweng.qeeqbii.custom_exceptions.NullInputException;
 import ch.epfl.sweng.qeeqbii.R;
-import edu.gatech.gtri.bktree.BkTreeSearcher;
 import edu.gatech.gtri.bktree.Metric;
 import edu.gatech.gtri.bktree.MutableBkTree;
 import info.debatty.java.stringsimilarity.Levenshtein;
 
-import static java.lang.Integer.MAX_VALUE;
 
 
 public class CancerDataBase {

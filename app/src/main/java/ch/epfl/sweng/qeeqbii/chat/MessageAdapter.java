@@ -1,8 +1,5 @@
 package ch.epfl.sweng.qeeqbii.chat;
 
-import android.content.Context;
-import android.graphics.Color;
-import android.os.Message;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,7 +8,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import ch.epfl.sweng.qeeqbii.R;
 
-import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;

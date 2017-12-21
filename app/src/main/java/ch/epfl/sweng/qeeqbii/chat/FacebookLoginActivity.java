@@ -42,7 +42,7 @@ import java.util.HashMap;
 
 import ch.epfl.sweng.qeeqbii.R;
 import ch.epfl.sweng.qeeqbii.activities.BarcodeScannerActivity;
-import ch.epfl.sweng.qeeqbii.chat.Users;
+
 
 /**
  * Demonstrate Firebase Authentication using a Facebook access token.

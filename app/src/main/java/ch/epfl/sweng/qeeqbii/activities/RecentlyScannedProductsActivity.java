@@ -18,7 +18,6 @@ import java.util.LinkedList;
 import java.util.Map;
 
 import ch.epfl.sweng.qeeqbii.Slider;
-import ch.epfl.sweng.qeeqbii.chat.MainActivityChat;
 import ch.epfl.sweng.qeeqbii.open_food.Product;
 import ch.epfl.sweng.qeeqbii.R;
 import ch.epfl.sweng.qeeqbii.open_food.RecentlyScannedProducts;

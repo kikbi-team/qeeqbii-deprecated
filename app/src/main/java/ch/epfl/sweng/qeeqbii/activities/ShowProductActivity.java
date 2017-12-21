@@ -14,7 +14,6 @@ import android.widget.TextView;
 import ch.epfl.sweng.qeeqbii.R;
 import ch.epfl.sweng.qeeqbii.Slider;
 import ch.epfl.sweng.qeeqbii.cancer.query.LevenshteinQueryCancerDB;
-import ch.epfl.sweng.qeeqbii.chat.MainActivityChat;
 import ch.epfl.sweng.qeeqbii.custom_exceptions.ProductException;
 import ch.epfl.sweng.qeeqbii.open_food.Product;
 

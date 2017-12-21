@@ -34,7 +34,6 @@ import java.util.HashMap;
 
 import ch.epfl.sweng.qeeqbii.R;
 import ch.epfl.sweng.qeeqbii.activities.BarcodeScannerActivity;
-import ch.epfl.sweng.qeeqbii.chat.Users;
 
 public class TwitterLoginActivity extends BaseActivity
         implements View.OnClickListener {
