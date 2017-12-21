@@ -77,16 +77,15 @@
 
         <android.support.design.widget.FloatingActionButton
             android:id="@+id/fab1"
-            android:layout_width="33dp"
-            android:layout_height="33dp"
-            android:layout_gravity="end|bottom"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
             app:backgroundTint="@color/cardview_light_background"
             app:rippleColor="@color/cardview_light_background"
             app:srcCompat="@drawable/facebook"
             android:onClick="shareOnFacebook"
             app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginTop="0dp"
-            android:layout_marginLeft="0dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginLeft="2dp"
             app:layout_constraintLeft_toLeftOf="parent" />
 
     </android.support.constraint.ConstraintLayout>
