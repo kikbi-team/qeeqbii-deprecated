@@ -67,6 +67,7 @@ public class SettingsActivity extends AppCompatActivity {
     private Button mAgeBtn;
     private Button mAllergiesBtn;
     private Button mDegoutBtn;
+    private Button mBackBtn;
 
 
     private static final int GALLERY_PICK = 1;
@@ -94,6 +95,8 @@ public class SettingsActivity extends AppCompatActivity {
         mAgeBtn = (Button) findViewById(R.id.settings_age_btn);
         mAllergiesBtn = (Button) findViewById(R.id.settings_allergies_btn);
         mDegoutBtn = (Button) findViewById(R.id.settings_degout_btn);
+        mBackBtn = (Button) findViewById(R.id.back);
+
 
         mImageStorage = FirebaseStorage.getInstance().getReference();
 
@@ -155,6 +158,15 @@ public class SettingsActivity extends AppCompatActivity {
         });
 
 
+        mBackBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent status_intent = new Intent(SettingsActivity.this, MainActivityChat.class);
+                startActivity(status_intent);
+
+            }
+        });
         mStatusBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

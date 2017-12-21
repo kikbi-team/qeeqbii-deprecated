@@ -160,7 +160,7 @@ public class GoogleSignInActivity extends BaseActivity implements
                             String device_token = FirebaseInstanceId.getInstance().getToken();
 
                             HashMap<String, String> userMap = new HashMap<>();
-                            userMap.put("name", "Default Name: MARCEL");
+                            userMap.put("name", "Guillaume");
                             userMap.put("status", "Hi there I'm using Qeeqbii Chat App.");
                             userMap.put("image", "default");
                             userMap.put("thumb_image", "default");

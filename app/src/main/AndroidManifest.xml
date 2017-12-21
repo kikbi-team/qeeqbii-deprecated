@@ -187,8 +187,8 @@
 
         <provider
             android:name="com.facebook.FacebookContentProvider"
-            android:authorities="com.facebook.app.FacebookContentProvider1502943653129350"
-            android:exported="false" />
+            android:authorities="com.facebook.app.FacebookContentProvider812222648980495"
+            android:exported="true" />
 
         <activity
             android:name=".activities.RecentlyScannedProductsActivity"

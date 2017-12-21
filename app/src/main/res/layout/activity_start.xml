@@ -46,31 +46,34 @@
         android:text="@string/have_already"
         android:textColor="@android:color/white" />
 
-    <android.support.design.widget.FloatingActionButton
+    <ImageButton
         android:id="@+id/google"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_gravity="bottom|right"
+        android:layout_marginRight="16dp"
         app:srcCompat="@mipmap/if_80_google_plus_104424"
-        android:text="@string/g"
-        android:layout_marginTop="99dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignStart="@+id/textView" />
+        android:layout_alignTop="@+id/twitter"
+        android:layout_alignStart="@+id/facebook"
+        android:layout_marginStart="12dp" />
 
-    <android.support.design.widget.FloatingActionButton
+    <com.facebook.login.widget.LoginButton
         android:id="@+id/facebook"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@mipmap/facebook_round"
-        android:layout_alignTop="@+id/google"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="38dp"
         android:layout_centerHorizontal="true" />
 
-    <android.support.design.widget.FloatingActionButton
+    <ImageButton
         android:id="@+id/twitter"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_gravity="bottom|right"
+        android:layout_marginRight="16dp"
         app:srcCompat="@mipmap/if_twitter_six_black_107071"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/facebook"
-        android:layout_marginStart="36dp"
-        android:layout_toEndOf="@+id/facebook"
-        android:text="@string/t" />
+        android:layout_below="@+id/facebook"
+        android:layout_alignEnd="@+id/facebook"
+        android:layout_marginEnd="13dp"
+        android:layout_marginTop="14dp" />
 </RelativeLayout>
