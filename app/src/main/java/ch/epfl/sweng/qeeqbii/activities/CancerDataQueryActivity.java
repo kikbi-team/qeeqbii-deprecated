@@ -1,6 +1,5 @@
 package ch.epfl.sweng.qeeqbii.activities;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -16,7 +15,6 @@ import ch.epfl.sweng.qeeqbii.cancer.CancerSubstance;
 import ch.epfl.sweng.qeeqbii.R;
 import ch.epfl.sweng.qeeqbii.cancer.query.LevenshteinQueryCancerDB;
 import ch.epfl.sweng.qeeqbii.cancer.query.RatcliffQueryCancerDB;
-import ch.epfl.sweng.qeeqbii.chat.MainActivityChat;
 
 public class CancerDataQueryActivity extends AppCompatActivity {
 

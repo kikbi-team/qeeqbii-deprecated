@@ -7,7 +7,6 @@ package ch.epfl.sweng.qeeqbii.open_food;
  */
 
 import android.content.Context;
-import android.graphics.Color;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -24,10 +23,8 @@ import com.github.mikephil.charting.data.BarDataSet;
 import com.github.mikephil.charting.data.BarEntry;
 
 import java.util.ArrayList;
-import java.util.List;
 
 import ch.epfl.sweng.qeeqbii.R;
-import ch.epfl.sweng.qeeqbii.comparison.ProductsLine;
 
 public class ProductItemAdapter extends BaseAdapter {
     public static class ProductItem {

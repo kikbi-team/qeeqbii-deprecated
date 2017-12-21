@@ -8,10 +8,6 @@ import android.view.View;
 
 import ch.epfl.sweng.qeeqbii.R;
 
-/**
- * Created by adrien on 21.12.17.
- */
-
 public class OtherActivity extends AppCompatActivity {
 
     @Override

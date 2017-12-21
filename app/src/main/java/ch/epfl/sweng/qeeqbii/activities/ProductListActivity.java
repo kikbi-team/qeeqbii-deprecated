@@ -19,7 +19,6 @@ import java.util.Map;
 
 import ch.epfl.sweng.qeeqbii.R;
 import ch.epfl.sweng.qeeqbii.Slider;
-import ch.epfl.sweng.qeeqbii.chat.ChatActivity;
 import ch.epfl.sweng.qeeqbii.clustering.ClusterTypeSecondLevel;
 import ch.epfl.sweng.qeeqbii.open_food.Product;
 

@@ -2,7 +2,6 @@ package ch.epfl.sweng.qeeqbii.cancer.query;
 
 import java.util.Locale;
 
-import static java.util.Locale.getDefault;
 
 /**
  * Created by adrien on 19.11.17.

@@ -11,7 +11,6 @@ import java.net.HttpURLConnection;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.concurrent.CountDownLatch;
 
 import java.net.URL;
 import java.util.concurrent.TimeUnit;

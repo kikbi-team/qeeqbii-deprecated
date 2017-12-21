@@ -20,11 +20,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import ch.epfl.sweng.qeeqbii.R;
-import ch.epfl.sweng.qeeqbii.activities.GraphsActivity;
-import ch.epfl.sweng.qeeqbii.activities.RecentlyScannedProductsActivity;
 import ch.epfl.sweng.qeeqbii.open_food.Date;
 import ch.epfl.sweng.qeeqbii.open_food.Product;
-import ch.epfl.sweng.qeeqbii.open_food.RecentlyScannedProducts;
 import ch.epfl.sweng.qeeqbii.open_food.SavedProductsDatabase;
 import ch.epfl.sweng.qeeqbii.shopping_cart.BarChartMonthlyFrag;
 import ch.epfl.sweng.qeeqbii.shopping_cart.pieChartTrimesterFrag;

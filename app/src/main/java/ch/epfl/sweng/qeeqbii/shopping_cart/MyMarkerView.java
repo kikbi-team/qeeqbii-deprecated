@@ -2,7 +2,6 @@ package ch.epfl.sweng.qeeqbii.shopping_cart;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
-import android.util.AttributeSet;
 import android.widget.TextView;
 
 import com.github.mikephil.charting.components.MarkerView;

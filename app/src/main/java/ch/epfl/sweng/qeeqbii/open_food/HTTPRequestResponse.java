@@ -2,9 +2,6 @@ package ch.epfl.sweng.qeeqbii.open_food;
 
 import java.io.IOException;
 
-import ch.epfl.sweng.qeeqbii.R;
-import ch.epfl.sweng.qeeqbii.clustering.ClusterClassifier;
-import ch.epfl.sweng.qeeqbii.custom_exceptions.NotOpenFileException;
 
 /**
  * Created by guillaume on 09/10/17.

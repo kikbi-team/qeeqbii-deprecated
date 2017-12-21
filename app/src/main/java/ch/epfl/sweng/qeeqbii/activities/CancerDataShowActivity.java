@@ -1,6 +1,5 @@
 package ch.epfl.sweng.qeeqbii.activities;
 
-import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.widget.DrawerLayout;
@@ -12,7 +11,7 @@ import android.widget.TextView;
 import ch.epfl.sweng.qeeqbii.Slider;
 import ch.epfl.sweng.qeeqbii.cancer.CancerDataBase;
 import ch.epfl.sweng.qeeqbii.R;
-import ch.epfl.sweng.qeeqbii.chat.MainActivityChat;
+
 
 
 public class CancerDataShowActivity extends AppCompatActivity {

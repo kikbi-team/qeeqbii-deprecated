@@ -16,7 +16,6 @@ import ch.epfl.sweng.qeeqbii.Slider;
 import ch.epfl.sweng.qeeqbii.open_food.Date;
 
 import ch.epfl.sweng.qeeqbii.R;
-import ch.epfl.sweng.qeeqbii.chat.MainActivityChat;
 import ch.epfl.sweng.qeeqbii.open_food.RecentlyScannedProducts;
 import ch.epfl.sweng.qeeqbii.open_food.SavedProductsDatabase;
 
