@@ -222,7 +222,7 @@ public class GraphsActivity extends AppCompatActivity {
     protected void onResume()
     {
         super.onResume();
-        findViewById(R.id.button_share_on_fb_graph).setVisibility(View.VISIBLE);
+        findViewById(R.id.fab1).setVisibility(View.VISIBLE);
     }
 
     public boolean onOptionsItemSelected(MenuItem item) {
