@@ -7,6 +7,7 @@ import android.support.v4.widget.DrawerLayout;
 import android.util.Log;
 import android.view.MenuItem;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -37,6 +38,9 @@ public class Slider {
     // mapping current activity class -> slider drawer id
     private static Map<Class, Integer> drawerIds;
 
+    // mapping current activity class -> slider drawer id
+    private static ArrayList<Class> doNotReuse;
+
     // true if mappings are filled
     private static Boolean mIsInisizlied = false;
 
@@ -45,8 +49,11 @@ public class Slider {
         if (!mIsInisizlied) {
             activityNames = new HashMap<>();
             drawerIds = new HashMap<>();
+            doNotReuse = new ArrayList<>();
 
-            // New slider conten
+            doNotReuse.add(ProductComparisonActivity.class);
+
+            // New slider content
 
 
             activityNames.put(R.id.nav_scan, BarcodeScannerActivity.class);
@@ -121,7 +128,10 @@ public class Slider {
             Intent intent = new Intent(context, activity_class);
 
             // if the activity exists, just bring it to front
-            intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+            // unless it is in doNotReuse
+            if(!doNotReuse.contains(activity_class)) {
+                intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+            }
 
             // start activity
             context.startActivity(intent);
