@@ -100,7 +100,6 @@ public class StatisticsActivity extends AppCompatActivity {
         if (id == R.id.action_settings) {
             return true;
         }
-
         return super.onOptionsItemSelected(item);
     }
 
@@ -140,9 +139,9 @@ public class StatisticsActivity extends AppCompatActivity {
         public CharSequence getPageTitle(int position) {
             switch (position) {
                 case 0:
-                    return "MONTH";
+                    return "WEEK";
                 case 1:
-                    return "TRIMESTER";
+                    return "MONTH";
                 case 2:
                     return "YEAR";
             }
@@ -161,8 +160,10 @@ public class StatisticsActivity extends AppCompatActivity {
         Date OneMonthAgoDate = new Date(todaysDate.getDateMonthBefore());
         m_items_month = SavedProductsDatabase.getProductsBetweenTodayAndDate(OneMonthAgoDate);
 
-        Date OneTrimesterAgoDate = new Date(todaysDate.getDateThreeMonthsBefore());
-        m_items_trimester = SavedProductsDatabase.getProductsBetweenTodayAndDate(OneTrimesterAgoDate);
+        //Date OneTrimesterAgoDate = new Date(todaysDate.getDateThreeMonthsBefore());
+        Date OneWeekAgoDate = new Date(todaysDate.getDateWeekBefore());
+        //m_items_trimester = SavedProductsDatabase.getProductsBetweenTodayAndDate(OneTrimesterAgoDate);
+        m_items_trimester = SavedProductsDatabase.getProductsBetweenTodayAndDate(OneWeekAgoDate);
 
         Date OneYearAgoDate = new Date(todaysDate.getDateYearBefore());
         m_items_year = SavedProductsDatabase.getProductsBetweenTodayAndDate(OneMonthAgoDate);

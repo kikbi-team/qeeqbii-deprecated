@@ -71,12 +71,10 @@ public class ProfileActivity extends AppCompatActivity {
         mProfileSendReqBtn = (Button) findViewById(R.id.profile_send_req_btn);
         mDeclineBtn = (Button) findViewById(R.id.profile_decline_btn);
 
-
         mCurrent_state = "not_friends";
 
         mDeclineBtn.setVisibility(View.INVISIBLE);
         mDeclineBtn.setEnabled(false);
-
 
         mProgressDialog = new ProgressDialog(this);
         mProgressDialog.setTitle("Loading User Data");
@@ -109,7 +107,6 @@ public class ProfileActivity extends AppCompatActivity {
 
                 }
 
-
                 //--------------- FRIENDS LIST / REQUEST FEATURE -----
 
                 mFriendReqDatabase.child(mCurrent_user.getUid()).addListenerForSingleValueEvent(new ValueEventListener() {
@@ -136,11 +133,9 @@ public class ProfileActivity extends AppCompatActivity {
 
                                 mDeclineBtn.setVisibility(View.INVISIBLE);
                                 mDeclineBtn.setEnabled(false);
-
                             }
 
                             mProgressDialog.dismiss();
-
 
                         } else {
 
@@ -156,25 +151,18 @@ public class ProfileActivity extends AppCompatActivity {
 
                                         mDeclineBtn.setVisibility(View.INVISIBLE);
                                         mDeclineBtn.setEnabled(false);
-
                                     }
 
                                     mProgressDialog.dismiss();
-
                                 }
 
                                 @Override
                                 public void onCancelled(DatabaseError databaseError) {
 
                                     mProgressDialog.dismiss();
-
                                 }
                             });
-
                         }
-
-
-
                     }
 
                     @Override
@@ -227,7 +215,7 @@ public class ProfileActivity extends AppCompatActivity {
                             } else {
 
                                 mCurrent_state = "req_sent";
-                                mProfileSendReqBtn.setText("Cancel Friend Request");
+                                mProfileSendReqBtn.setText(R.string.cancel_friend);
 
                             }
 
@@ -252,23 +240,17 @@ public class ProfileActivity extends AppCompatActivity {
                                 @Override
                                 public void onSuccess(Void aVoid) {
 
-
                                     mProfileSendReqBtn.setEnabled(true);
-                                    mCurrent_state = "not_friends";
-                                    mProfileSendReqBtn.setText("Send Friend Request");
+                                    mCurrent_state = getString(R.string.not_friends);
+                                    mProfileSendReqBtn.setText(R.string.friend_request);
 
                                     mDeclineBtn.setVisibility(View.INVISIBLE);
                                     mDeclineBtn.setEnabled(false);
-
-
                                 }
                             });
-
                         }
                     });
-
                 }
-
 
                 // ------------ REQ RECEIVED STATE ----------
 
@@ -280,7 +262,6 @@ public class ProfileActivity extends AppCompatActivity {
                     friendsMap.put("Friends/" + mCurrent_user.getUid() + "/" + user_id + "/date", currentDate);
                     friendsMap.put("Friends/" + user_id + "/"  + mCurrent_user.getUid() + "/date", currentDate);
 
-
                     friendsMap.put("Friend_req/" + mCurrent_user.getUid() + "/" + user_id, null);
                     friendsMap.put("Friend_req/" + user_id + "/" + mCurrent_user.getUid(), null);
 
@@ -288,7 +269,6 @@ public class ProfileActivity extends AppCompatActivity {
                     mRootRef.updateChildren(friendsMap, new DatabaseReference.CompletionListener() {
                         @Override
                         public void onComplete(DatabaseError databaseError, DatabaseReference databaseReference) {
-
 
                             if(databaseError == null){
 
@@ -305,14 +285,10 @@ public class ProfileActivity extends AppCompatActivity {
 
                                 Toast.makeText(ProfileActivity.this, error, Toast.LENGTH_SHORT).show();
 
-
                             }
-
                         }
                     });
-
                 }
-
 
                 // ------------ UNFRIENDS ---------
 
@@ -345,18 +321,10 @@ public class ProfileActivity extends AppCompatActivity {
                             }
 
                             mProfileSendReqBtn.setEnabled(true);
-
                         }
                     });
-
                 }
-
-
             }
         });
-
-
     }
-
-
 }

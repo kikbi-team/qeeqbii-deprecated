@@ -51,7 +51,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:srcCompat="@mipmap/if_80_google_plus_104424"
-        android:text="G"
+        android:text="@string/g"
         android:layout_marginTop="99dp"
         android:layout_alignParentTop="true"
         android:layout_alignStart="@+id/textView" />
@@ -72,5 +72,5 @@
         android:layout_alignBottom="@+id/facebook"
         android:layout_marginStart="36dp"
         android:layout_toEndOf="@+id/facebook"
-        android:text="T" />
+        android:text="@string/t" />
 </RelativeLayout>

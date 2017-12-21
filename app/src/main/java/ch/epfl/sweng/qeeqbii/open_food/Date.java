@@ -15,6 +15,7 @@ public class Date implements Serializable {
 
     private int mScanningDay;
     private int mScanningMonth;
+    private int mScanningWeek;
     private int mScanningYear;
 
     public Date() {
@@ -114,6 +115,21 @@ public class Date implements Serializable {
 
     public String getDateYearBefore() {
         mScanningYear -= 1;
+        return toString();
+    }
+
+    public String getDateWeekBefore() {
+        if (mScanningDay < 7 && mScanningMonth == 1){
+            mScanningDay = mScanningDay + 30 - 7;
+            mScanningMonth = 12;
+        }
+        else if (mScanningDay < 7) {
+            mScanningDay = mScanningDay + 30 - 7;
+        }
+        else
+        {
+            mScanningDay -= 7;
+        }
         return toString();
     }
 }

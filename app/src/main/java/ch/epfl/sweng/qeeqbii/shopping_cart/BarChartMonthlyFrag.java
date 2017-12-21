@@ -16,6 +16,7 @@ import android.widget.FrameLayout;
 
 import com.github.mikephil.charting.charts.BarChart;
 import com.github.mikephil.charting.charts.PieChart;
+import com.github.mikephil.charting.components.AxisBase;
 import com.github.mikephil.charting.components.Description;
 import com.github.mikephil.charting.components.Legend;
 import com.github.mikephil.charting.components.LegendEntry;
@@ -27,6 +28,7 @@ import com.github.mikephil.charting.data.BarEntry;
 import com.github.mikephil.charting.data.PieData;
 import com.github.mikephil.charting.data.PieDataSet;
 import com.github.mikephil.charting.data.PieEntry;
+import com.github.mikephil.charting.formatter.IAxisValueFormatter;
 import com.github.mikephil.charting.listener.ChartTouchListener;
 import com.github.mikephil.charting.listener.OnChartGestureListener;
 import com.github.mikephil.charting.utils.ColorTemplate;
@@ -54,10 +56,10 @@ public class BarChartMonthlyFrag extends SimpleFragment implements OnChartGestur
     private PieChart mChartPieFats;
     private PieChart mChartPieGlucides;
 
-    private final float[] yDataCalories = {0, 2000*30};
-    private final float[] yDataFats= {0, 70*30};
-    private final float[] yDataSugars = {0, 55*30};
-    private final float[] yDataSalts = {0, 5*30};
+    private final float[] yDataCalories = {0, 2000*7};
+    private final float[] yDataFats= {0, 70*7};
+    private final float[] yDataSugars = {0, 55*7};
+    private final float[] yDataSalts = {0, 5*7};
 
     private List<Float> mSalts = new ArrayList<>();
     private List<Float> mGlucides = new ArrayList<>();
@@ -81,14 +83,6 @@ public class BarChartMonthlyFrag extends SimpleFragment implements OnChartGestur
         mChart.setDrawGridBackground(false);
         mChart.setDrawBarShadow(false);
 
-        //FOR THE FUTURE
-        /*
-        List<BarEntry> entriesFats = new ArrayList<>();
-        List<BarEntry> entriesSalts = new ArrayList<>();
-        List<BarEntry> entriesGlucides = new ArrayList<>();
-        List<BarEntry> entriesCalories = new ArrayList<>();
-        */
-
         List<BarEntry> entries = new ArrayList<>();
 
         //GIVES THE VALUES FOR THE GRAPHS
@@ -97,14 +91,6 @@ public class BarChartMonthlyFrag extends SimpleFragment implements OnChartGestur
         } catch (ProductException e) {
             e.printStackTrace();
         }
-
-        // FUTURE
-        /*
-        entries.add(new BarEntry(0f, 30f));
-        entries.add(new BarEntry(1f, 30f));
-        entries.add(new BarEntry(2f, 30f));
-        entries.add(new BarEntry(3f, 30f));
-        */
 
         entries.add(new BarEntry(0f, sumList(mCalories)));
         entries.add(new BarEntry(2f, sumList(mFats)));
@@ -125,11 +111,30 @@ public class BarChartMonthlyFrag extends SimpleFragment implements OnChartGestur
         YAxis leftAxis = mChart.getAxisLeft();
         leftAxis.setTypeface(tf);
         leftAxis.setAxisMinimum(0f); // this replaces setStartAtZero(true)
+        leftAxis.setAxisMaximum(2000*7);
 
         mChart.getAxisRight().setEnabled(false);
 
+        final ArrayList<String> xLabel = new ArrayList<>();
+        xLabel.add("Calories");
+        xLabel.add("");
+        xLabel.add("Fats");
+        xLabel.add("");
+        xLabel.add("Glucides");
+        xLabel.add("");
+        xLabel.add("Salts");
+        xLabel.add("");
+
         XAxis xAxis = mChart.getXAxis();
-        xAxis.setEnabled(false);
+        xAxis.setPosition(XAxis.XAxisPosition.BOTTOM);
+        xAxis.setDrawGridLines(false);
+        xAxis.setValueFormatter(new IAxisValueFormatter() {
+            @Override
+            public String getFormattedValue(float value, AxisBase axis) {
+                return xLabel.get((int)value);
+            }
+        });
+        xAxis.setEnabled(true);
 
         //programatically add the chart
         FrameLayout parent = (FrameLayout) v.findViewById(R.id.barChartMonth);
@@ -279,6 +284,11 @@ public class BarChartMonthlyFrag extends SimpleFragment implements OnChartGestur
     private void fillLists() throws ProductException {
         if(!StatisticsActivity.m_items_month.isEmpty())
         {
+            mCalories.clear(); //We have to clear the lists in order to not load twice the same information
+            mFats.clear();
+            mGlucides.clear();
+            mSalts.clear();
+
             for (Product element : StatisticsActivity.m_items_month)
             {
                 Map<String,Double> nutrients = element.getParsedNutrients();
