@@ -9,8 +9,8 @@
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/settings_image"
-        android:layout_width="170dp"
-        android:layout_height="170dp"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="30dp"
@@ -20,12 +20,11 @@
         android:id="@+id/settings_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/settings_image"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp"
         android:text="@string/display_name"
         android:textColor="@android:color/white"
-        android:textSize="24sp" />
+        android:textSize="24sp"
+        android:layout_below="@+id/settings_image"
+        android:layout_alignStart="@+id/settings_status" />
 
     <Button
         android:id="@+id/settings_age_btn"
@@ -48,11 +47,9 @@
         android:paddingRight="15dp"
         android:text="@string/set_allergies"
         android:textColor="@android:color/widget_edittext_dark"
-        android:layout_marginBottom="8dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="10dp"
-        android:layout_toStartOf="@+id/settings_age_btn" />
+        android:layout_marginTop="27dp"
+        android:layout_below="@+id/settings_degout"
+        android:layout_alignParentStart="true" />
     <Button
         android:id="@+id/settings_degout_btn"
         android:layout_width="wrap_content"
@@ -62,10 +59,9 @@
         android:paddingRight="15dp"
         android:text="@string/set_do_not_like"
         android:textColor="@android:color/widget_edittext_dark"
-        android:layout_alignBaseline="@+id/settings_age_btn"
-        android:layout_alignBottom="@+id/settings_age_btn"
-        android:layout_alignParentEnd="true"
-        android:layout_toEndOf="@+id/settings_age_btn" />
+        android:layout_above="@+id/back"
+        android:layout_toEndOf="@+id/settings_age_btn"
+        android:layout_marginStart="13dp" />
 
     <Button
         android:id="@+id/settings_status_btn"
@@ -88,7 +84,6 @@
         android:paddingRight="25dp"
         android:text="@string/change_image"
         android:textColor="@color/colorPrimary"
-        android:layout_marginTop="15dp"
         android:layout_below="@+id/settings_name"
         android:layout_centerHorizontal="true" />
 
@@ -108,9 +103,8 @@
         android:layout_height="wrap_content"
         android:text="@string/default_age"
         android:textColor="@android:color/white"
-        android:layout_marginTop="16dp"
         android:layout_below="@+id/settings_status"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignEnd="@+id/settings_image" />
 
     <TextView
         android:id="@+id/settings_allergie"
@@ -118,17 +112,23 @@
         android:layout_height="wrap_content"
         android:text="@string/default_allergies"
         android:textColor="@android:color/white"
-        android:layout_marginTop="17dp"
         android:layout_below="@+id/settings_age"
-        android:layout_alignEnd="@+id/settings_image" />
+        android:layout_centerHorizontal="true" />
 
     <TextView
         android:id="@+id/settings_degout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="17dp"
         android:text="@string/default_degout"
         android:textColor="@android:color/white"
         android:layout_below="@+id/settings_allergie"
         android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/back_button"
+        android:layout_below="@+id/settings_age_btn"
+        android:layout_alignEnd="@+id/settings_image_btn" />
 </RelativeLayout>

@@ -6,26 +6,28 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
+
 import ch.epfl.sweng.qeeqbii.R;
 
 public class StartActivity extends AppCompatActivity {
 
-    private FloatingActionButton mGoogleBtn;
+    private ImageButton mGoogleBtn;
     private Button mRegBtn;
     private Button mLoginBtn;
-    private FloatingActionButton mFacebookBtn;
-    private FloatingActionButton mTwitterBtn;
+    private Button mFacebookBtn;
+    private ImageButton mTwitterBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start);
 
-        mGoogleBtn= (FloatingActionButton)  findViewById(R.id.google);
+        mGoogleBtn= (ImageButton)  findViewById(R.id.google);
         mRegBtn = (Button) findViewById(R.id.start_reg_btn);
         mLoginBtn = (Button) findViewById(R.id.start_login_btn);
-        mFacebookBtn = (FloatingActionButton) findViewById(R.id.facebook);
-        mTwitterBtn = (FloatingActionButton) findViewById(R.id.twitter);
+        mFacebookBtn = (Button) findViewById(R.id.facebook);
+        mTwitterBtn = (ImageButton) findViewById(R.id.twitter);
 
 
         mRegBtn.setOnClickListener(new View.OnClickListener() {
