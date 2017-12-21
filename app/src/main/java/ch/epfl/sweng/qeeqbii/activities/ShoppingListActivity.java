@@ -107,6 +107,7 @@ public class ShoppingListActivity extends AppCompatActivity {
             addCluster(product.getCluster(), context);
         }
         m_cart.addProductAndSave(product, context);
+        mAdapter.update();
     }
 
     public static void save(Context context) { m_cart.save( json_file, context); }

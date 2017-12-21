@@ -6,6 +6,8 @@ package ch.epfl.sweng.qeeqbii;
  */
 
 import android.content.Context;
+import android.graphics.Color;
+import android.support.annotation.ColorInt;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -19,6 +21,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import ch.epfl.sweng.qeeqbii.clustering.ClusterType;
+import ch.epfl.sweng.qeeqbii.clustering.ClusterTypeSecondLevel;
 import ch.epfl.sweng.qeeqbii.shopping_cart.ClusterProductList;
 
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder> {
@@ -47,7 +50,6 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     public void addClusterAndSave(ClusterType cluster, Context context)
     {
-        System.out.println("///////////////////////////////////////////::: madapter up to date");
         m_opacities.add(1f);
         m_cluster_product_list.addClusterAndSave(cluster, context);
         notifyDataSetChanged();
@@ -102,10 +104,19 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         if (mOnClickListener != null)
             view.setOnClickListener(mOnClickListener);
 
-        return new ViewHolder(view);}
+        return new ViewHolder(view);
+    }
 
     @Override
     public void onBindViewHolder(ViewHolder viewHolder, int pos) {
+//        if (m_cluster_product_list.getClusters().size() == 0)
+//        {
+//            viewHolder.itemView.setVisibility(View.INVISIBLE);
+//        } else {
+//            viewHolder.itemView.setVisibility(View.VISIBLE);
+//
+//        }
+
         final int position = viewHolder.getAdapterPosition();
         viewHolder.textView.setText(m_cluster_product_list.getClusters().get(position).toString());
         viewHolder.imageView.setImageResource(m_cluster_product_list.getClusters().get(position).getImageId());
@@ -139,6 +150,17 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         viewHolder.isChecked.setAlpha(m_opacities.get(position));
         viewHolder.textView.setAlpha(m_opacities.get(position));
         viewHolder.imageView.setAlpha(m_opacities.get(position));
+        if (m_cluster_product_list.getProductList(ClusterTypeSecondLevel.
+                getClusterType(viewHolder.textView.getText().toString())).size()  > 0) {
+            viewHolder.noItemText.setText(("Number of products : " +
+                    m_cluster_product_list.getProductList(ClusterTypeSecondLevel.
+                            getClusterType(viewHolder.textView.getText().toString())).size()));
+
+            viewHolder.itemView.setBackgroundColor(Color.parseColor("#94ff8e"));
+            //viewHolder.isChecked.setChecked(true);
+            } else {viewHolder.noItemText.setText((""));
+            viewHolder.itemView.setBackgroundColor(Color.WHITE);
+        }
     }
 
     @Override
@@ -159,16 +181,18 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
 
     //NESTED CLASS
-    public class ViewHolder extends RecyclerView.ViewHolder {
+   class ViewHolder extends RecyclerView.ViewHolder {
         private TextView textView;
         private ImageView imageView;
         private CheckBox isChecked;
+        private TextView noItemText;
 
         private ViewHolder(View view) {
             super(view);
             textView = (TextView) view.findViewById(R.id.text);
             imageView = (ImageView) view.findViewById(R.id.shoppingImage);
             isChecked = (CheckBox) view.findViewById(R.id.shoppingCheckbox);
+            noItemText = (TextView) view.findViewById(R.id.no_items_in_cluster);
 
             if (isChecked.isClickable()) {
 
