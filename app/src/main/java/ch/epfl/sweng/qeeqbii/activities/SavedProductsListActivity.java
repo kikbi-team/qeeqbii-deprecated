@@ -11,12 +11,14 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
 import ch.epfl.sweng.qeeqbii.R;
 import ch.epfl.sweng.qeeqbii.Slider;
 import ch.epfl.sweng.qeeqbii.chat.MainActivityChat;
+import ch.epfl.sweng.qeeqbii.open_food.ProductItemAdapter;
 import ch.epfl.sweng.qeeqbii.open_food.RecentlyScannedProducts;
 import ch.epfl.sweng.qeeqbii.open_food.SavedProductsDatabase;
 import ch.epfl.sweng.qeeqbii.open_food.Product;
@@ -36,7 +38,7 @@ public class SavedProductsListActivity extends AppCompatActivity {
 
     Product[] mProducts;
 
-    ArrayAdapter<String> mAdapter;
+    ProductItemAdapter mAdapter;
 
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -47,6 +49,8 @@ public class SavedProductsListActivity extends AppCompatActivity {
 
         String[] product_names = new String[0];
 
+        ArrayList<ProductItemAdapter.ProductItem> listItems = new ArrayList<>();
+
         try
         {
             SavedProductsDatabase.load(getApplicationContext());
@@ -56,6 +60,10 @@ public class SavedProductsListActivity extends AppCompatActivity {
             for (Product prod : mProducts)
             {
                 product_names[i] = prod.getName();
+                ProductItemAdapter.ProductItem item = new ProductItemAdapter.ProductItem();
+                item.name = prod.getName();
+                item.image = prod.getCluster().getImageId();
+                listItems.add(item);
                 name_to_index_map.put(prod.getName(), i);
                 ++i;
             }
@@ -64,8 +72,8 @@ public class SavedProductsListActivity extends AppCompatActivity {
             Log.d(TAG,e.getMessage());
         }
 
-        mAdapter = new ArrayAdapter<>(this.getApplicationContext(), R.layout.list_item_recently_scanned_product,
-                R.id.recently_scanned_product_text_view, product_names);
+
+        mAdapter = new ProductItemAdapter(this.getApplicationContext(), listItems);
 
         list_saved_products.setAdapter(mAdapter);
 
@@ -77,7 +85,7 @@ public class SavedProductsListActivity extends AppCompatActivity {
                 System.out.println("////////////////////////////////////////////////////////////CLICKED");
                 Intent intent = new Intent(SavedProductsListActivity.this, ShowProductActivity.class);
                 System.out.println("////////////////////////////////////////////////////////////INTENT CREATED");
-                String txt = (String) adapter.getItemAtPosition(position);
+                String txt = (String) ((ProductItemAdapter.ProductItem) adapter.getItemAtPosition(position)).name;
                 System.out.println("////////////////////////////////////////////////////////////TXT OK");
                 intent.putExtra("product", mProducts[name_to_index_map.get(txt)]);
                 System.out.println("////////////////////////////////////////////////////////////" + mProducts[name_to_index_map.get(txt)].toString());
@@ -107,7 +115,7 @@ public class SavedProductsListActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public ArrayAdapter getmAdapter() {
+    public ProductItemAdapter getmAdapter() {
         return mAdapter;
     }
 

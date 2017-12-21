@@ -1,4 +1,4 @@
-package ch.epfl.sweng.qeeqbii.comparison;
+package ch.epfl.sweng.qeeqbii.open_food;
 
 /**
  * Created by sergei on 11/30/17.
@@ -13,6 +13,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.github.mikephil.charting.charts.BarChart;
@@ -26,106 +27,43 @@ import java.util.ArrayList;
 import java.util.List;
 
 import ch.epfl.sweng.qeeqbii.R;
+import ch.epfl.sweng.qeeqbii.comparison.ProductsLine;
 
-public class ComparisonGraphAdapter extends BaseAdapter {
-    // contained product lines
-    private List<ProductsLine> lines = null;
+public class ProductItemAdapter extends BaseAdapter {
+    public static class ProductItem {
+        public String name;
+        public int image;
+    }
 
-    // data for the bar charts
-    private ArrayList<BarData> data = null;
+    private ArrayList<ProductItem> items = null;
 
     // context (see BaseAdapter docs)
     private Context mContext = null;
 
     // create empty list
-    public ComparisonGraphAdapter() {
-        lines = new ArrayList<ProductsLine>();
-        data = new ArrayList<BarData>();
-    }
-
-    // preprocessing data and creating objects for the bar chart
-    private static BarData getBarData(ProductsLine line) {
-        // two valuesets, which would have a single value
-        ArrayList<BarEntry> valueSet1 = new ArrayList<>();
-        ArrayList<BarEntry> valueSet2 = new ArrayList<>();
-
-        // adding nutrient values to valuesets
-        valueSet1.add(new BarEntry(1, line.value1.floatValue()));
-        valueSet2.add(new BarEntry(0, line.value2.floatValue()));
-
-        // creating two datasets, each valueset goes to its own dataset
-        BarDataSet barDataSet1 = new BarDataSet(valueSet1, "Product 1");
-        barDataSet1.setColor(Color.rgb(0, 155, 0));
-
-        BarDataSet barDataSet2 = new BarDataSet(valueSet2, "Product 2");
-        barDataSet1.setColor(Color.rgb(155, 0, 0));
-
-        // creating data consisting of two datasets
-        BarData data = new BarData();
-        data.addDataSet(barDataSet1);
-        data.addDataSet(barDataSet2);
-
-        return data;
-    }
-
-    // initialize chart appearance
-    private static void initChart(BarChart chart) {
-        // disable scrolling and zooming
-        chart.setPinchZoom(false);
-        chart.setNestedScrollingEnabled(false);
-        chart.setScaleEnabled(false);
-        chart.setTouchEnabled(false);
-
-
-        // set up x axis
-        chart.getXAxis().setPosition(XAxis.XAxisPosition.TOP);
-        chart.getXAxis().setEnabled(false);
-        chart.getXAxis().setDrawGridLines(false);
-
-        // set up left axis
-        chart.getAxisLeft().setAxisMinimum(0);
-        chart.getAxisLeft().setDrawGridLines(false);
-
-        // set up right axis
-        chart.getAxisRight().setDrawGridLines(false);
-        chart.getAxisRight().setDrawLabels(false);
-
-        chart.setDrawGridBackground(false);
-    }
-
-    // add multiple lines to a bar chart
-    private void setData(BarChart chart, Integer position) {
-        // set data in the chart
-        chart.setData(data.get(position));
-
-        // set nutrient name as description
-        chart.getDescription().setText(lines.get(position).criteria);
-
-        // fix the chart data mangled on scrolling
-        // see https://github.com/PhilJay/MPAndroidChart/issues/1480
-        chart.notifyDataSetChanged();
-        chart.invalidate();
-    }
-
-    public void setContext(Context context) {
+    public ProductItemAdapter(Context context, ArrayList<ProductItem> items) {
+        this.items = items;
         mContext = context;
     }
 
-    // add a product line
-    public void addLine(ProductsLine line) {
-        lines.add(line.copy());
-        data.add(getBarData(line));
+    public void clear()
+    {
+        this.items.clear();
     }
 
     // number of elements
     @Override
     public int getCount() {
-        return lines.size();
+        return items.size();
+    }
+
+    public ProductItem getItemAtPosition(int position) {
+        return items.get(position);
     }
 
     @Override
     public Object getItem(int position) {
-        return position;
+        return items.get(position);
     }
 
     @Override
@@ -144,29 +82,25 @@ public class ComparisonGraphAdapter extends BaseAdapter {
 
         if (convertView == null) {
             Log.d("STATE", "getView " + position + " creating");
-            convertView = inflater.inflate(R.layout.activity_product_comparison_graph, parent, false);
+            convertView = inflater.inflate(R.layout.list_item_recently_scanned_product, parent, false);
             holder = new ViewHolder();
-            holder.criteria = (TextView) convertView.findViewById(R.id.criteria);
-            holder.chart = (HorizontalBarChart) convertView.findViewById(R.id.chart);
-            initChart(holder.chart);
+            holder.name = (TextView) convertView.findViewById(R.id.recently_scanned_product_text_view);
+            holder.image = (ImageView) convertView.findViewById(R.id.recentProductImage);
             convertView.setTag(holder);
         } else {
             Log.d("STATE", "getView " + position + " already exists");
             holder = (ViewHolder) convertView.getTag();
         }
 
-        // setting text
-        holder.criteria.setText(lines.get(position).criteria);
-
-        // adding data to the chart
-        setData(holder.chart, position);
+        holder.name.setText(items.get(position).name);
+        holder.image.setImageResource(items.get(position).image);
 
         return convertView;
     }
 
     // this class represents a single line in the list
     private class ViewHolder {
-        TextView criteria;
-        HorizontalBarChart chart;
+        TextView name;
+        ImageView image;
     }
 }
