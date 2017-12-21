@@ -1,6 +1,9 @@
 package ch.epfl.sweng.qeeqbii.open_food;
 
+import android.graphics.Color;
+
 import java.io.Serializable;
+import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
@@ -225,6 +228,37 @@ public class Product implements Serializable{
 
     public void setParsedIngredients(String[] parsedIngredients) {
         this.mParsedIngredients = parsedIngredients;
+    }
+
+    public int getStickerColor()
+    {
+        try {
+
+            double sum = 0;
+
+            double energy = getParsedNutrients().get("Énergie (kCal)") / 2000;
+            double fats = getParsedNutrients().get("Matières grasses (g)") / 70;
+            double sugar= getParsedNutrients().get("Sucres (g)") / 55;
+            double salt = getParsedNutrients().get("Sel (g)") / 5;
+
+            sum += energy + fats + sugar + salt;
+
+            if (sum < 0.25 && sugar > 0.1 && salt > 0.1)
+                return Color.GREEN;
+
+            if (sum < 0.5 && sugar > 0.5 && salt > 0.15)
+                return Color.YELLOW;
+
+            if (sum < 0.75 && sugar > 0.19)
+                return Color.parseColor("#ffA500");
+
+            return Color.RED;
+
+
+        } catch (ProductException e)
+        {
+            return Color.WHITE;
+        }
     }
 
 

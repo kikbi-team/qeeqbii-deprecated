@@ -29,7 +29,7 @@ return deviceToken.then(result => {
                         icon: "default"
                     }
             };
-console.log('The device token is :  ', token_id);
+console.log('The device token is :  ', deviceToken);
             return admin.messaging().sendToDevice(token_id,payload).then(response => {
                 console.log('This was the notification Feature');
             });
