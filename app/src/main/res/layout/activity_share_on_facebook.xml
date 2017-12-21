@@ -10,7 +10,6 @@
             android:weightSum="1">
 
             <EditText
-                android:id="@+id/post_on_facebook_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.06"

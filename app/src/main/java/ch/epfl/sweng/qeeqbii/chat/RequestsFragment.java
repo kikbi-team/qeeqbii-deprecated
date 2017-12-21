@@ -32,23 +32,19 @@ import de.hdodenhof.circleimageview.CircleImageView;
  * A simple {@link Fragment} subclass.
  */
 public class RequestsFragment extends Fragment {
-    
+
     private RecyclerView mRequestsList;
 
     private DatabaseReference mRequestsDatabase;
     private DatabaseReference mUsersDatabase;
 
     private FirebaseAuth mAuth;
-
     private String mCurrent_user_id;
-
     private View mMainView;
-
 
     public RequestsFragment() {
         // Required empty public constructor
     }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
