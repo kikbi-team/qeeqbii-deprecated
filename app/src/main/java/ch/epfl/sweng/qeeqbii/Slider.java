@@ -16,12 +16,14 @@ import ch.epfl.sweng.qeeqbii.activities.CancerDataShowActivity;
 import ch.epfl.sweng.qeeqbii.activities.DidYouKnowActivity;
 import ch.epfl.sweng.qeeqbii.activities.GraphsActivity;
 import ch.epfl.sweng.qeeqbii.activities.MainActivity;
+import ch.epfl.sweng.qeeqbii.activities.OtherActivity;
 import ch.epfl.sweng.qeeqbii.activities.ProductComparisonActivity;
 import ch.epfl.sweng.qeeqbii.activities.RecentlyScannedProductsActivity;
 import ch.epfl.sweng.qeeqbii.activities.SavedProductsDatesActivity;
 import ch.epfl.sweng.qeeqbii.activities.ShoppingListActivity;
 import ch.epfl.sweng.qeeqbii.activities.StatisticsActivity;
 import ch.epfl.sweng.qeeqbii.chat.MainActivityChat;
+import ch.epfl.sweng.qeeqbii.chat.UsersActivity;
 
 /**
  * Created by adrien on 07.12.17.
@@ -44,19 +46,19 @@ public class Slider {
             activityNames = new HashMap<>();
             drawerIds = new HashMap<>();
 
-            // adding activity names to their slider ids
-            activityNames.put(R.id.nav_main, MainActivity.class);
-            activityNames.put(R.id.nav_didyouknow, DidYouKnowActivity.class);
-            activityNames.put(R.id.nav_chat, MainActivityChat.class);
-            activityNames.put(R.id.nav_graphs, GraphsActivity.class);
-            activityNames.put(R.id.nav_cancerdb, CancerDataShowActivity.class);
+            // New slider conten
+
+
             activityNames.put(R.id.nav_scan, BarcodeScannerActivity.class);
-            activityNames.put(R.id.nav_shopping_cart, ShoppingListActivity.class);
-            activityNames.put(R.id.nav_dataquery, CancerDataQueryActivity.class);
-            activityNames.put(R.id.nav_scannedProducts, RecentlyScannedProductsActivity.class);
+            activityNames.put(R.id.nav_shopping_list, ShoppingListActivity.class);
             activityNames.put(R.id.nav_scanning_history, SavedProductsDatesActivity.class);
             activityNames.put(R.id.nav_stats, StatisticsActivity.class);
+            activityNames.put(R.id.nav_chat, MainActivityChat.class);
             activityNames.put(R.id.nav_comparison, ProductComparisonActivity.class);
+            activityNames.put(R.id.nav_didyouknow, DidYouKnowActivity.class);
+            activityNames.put(R.id.nav_user_profile, UsersActivity.class);
+            activityNames.put(R.id.nav_other, OtherActivity.class);
+
 
             // adding slider drawer ids
             drawerIds.put(MainActivity.class, R.id.drawer_main);

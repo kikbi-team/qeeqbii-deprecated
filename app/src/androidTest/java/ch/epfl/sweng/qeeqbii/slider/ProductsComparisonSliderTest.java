@@ -40,17 +40,6 @@ public class ProductsComparisonSliderTest {
         sliderTest.canGoToBarcodeScanner(layoutId, navViewId);
     }
 
-    @Test
-    public void canGoToCancerDataQuery() {
-        SliderTest sliderTest = new SliderTest();
-        sliderTest.canGoToCancerDataQuery(layoutId, navViewId);
-    }
-
-    @Test
-    public void canGoToCancerdataShowActivity() {
-        SliderTest sliderTest = new SliderTest();
-        sliderTest.canGoToCancerdataShowActivity(layoutId, navViewId);
-    }
 
     @Test
     public void canGoToCancerMainActivityChat() {
@@ -58,17 +47,6 @@ public class ProductsComparisonSliderTest {
         sliderTest.canGoToCancerMainActivityChat(layoutId, navViewId);
     }
 
-    @Test
-    public void canGoToGraphs() {
-        SliderTest sliderTest = new SliderTest();
-        sliderTest.canGoToGraphs(layoutId, navViewId);
-    }
-
-    @Test
-    public void canGoToMain() {
-        SliderTest sliderTest = new SliderTest();
-        sliderTest.canGoToMain(layoutId, navViewId);
-    }
 
     @Test
     public void canGoToShoppingList() {
@@ -93,6 +71,25 @@ public class ProductsComparisonSliderTest {
     public void canGoToProductsComparisonActivity() {
         SliderTest sliderTest = new SliderTest();
         sliderTest.canGoToProductsComparisonActivity(layoutId, navViewId);
+    }
+
+    @Test
+    public void canGoToDidYouKnowActivity() {
+        SliderTest sliderTest = new SliderTest();
+        sliderTest.canGoToDidYouKnowActivity(layoutId, navViewId);
+    }
+
+
+    @Test
+    public void canGoToUsersActivityActivity() {
+        SliderTest sliderTest = new SliderTest();
+        sliderTest.canGoToUsersActivityActivity(layoutId, navViewId);
+    }
+
+    @Test
+    public void canGoToOtherActivity() {
+        SliderTest sliderTest = new SliderTest();
+        sliderTest.canGoToOtherActivity(layoutId, navViewId);
     }
 
     @AfterClass
