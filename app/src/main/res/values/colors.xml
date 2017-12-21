@@ -4,4 +4,5 @@
     <color name="colorPrimaryDark">#226589</color>
     <color name="colorAccent">#38be9e</color>
     <color name="white">#ffffff</color>
+    <color name="cluster_with_product_color">#06e520</color>
 </resources>

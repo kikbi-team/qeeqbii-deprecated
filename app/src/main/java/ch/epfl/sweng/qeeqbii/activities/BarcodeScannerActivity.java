@@ -72,7 +72,7 @@ public class BarcodeScannerActivity extends AppCompatActivity implements ZXingSc
     private static final int ZXING_CAMERA_PERMISSION = 1;
 
     // next activity
-    public static String mNextActivity = null;
+    public String mNextActivity = null;
 
     private static boolean active = false;
 
@@ -116,7 +116,6 @@ public class BarcodeScannerActivity extends AppCompatActivity implements ZXingSc
             startActivity(startIntent);
             finish();
         }
-
 
         // disable autorotate if it was enabled
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LOCKED);
