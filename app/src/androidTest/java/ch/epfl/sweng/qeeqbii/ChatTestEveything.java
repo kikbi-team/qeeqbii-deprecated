@@ -1,22 +1,14 @@
 package ch.epfl.sweng.qeeqbii;
 
 import android.app.Instrumentation;
-import android.content.Context;
-import android.content.Intent;
-import android.support.design.widget.TextInputLayout;
-import android.support.test.InstrumentationRegistry;
-import android.support.test.espresso.Espresso;
 import android.support.test.espresso.ViewInteraction;
 import android.support.test.espresso.contrib.DrawerActions;
 import android.support.test.espresso.contrib.NavigationViewActions;
 import android.support.test.rule.ActivityTestRule;
-import android.support.v7.widget.Toolbar;
 import android.view.Gravity;
-import android.view.MenuItem;
 
 
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
@@ -80,7 +72,7 @@ public class ChatTestEveything {
     @Test
     public void allUsers() {
 
-      /*  // Click sign in
+        // Click sign in
         ViewInteraction appCompatButton = onView(withId(R.id.start_login_btn));
         appCompatButton.perform(click());
 
@@ -120,12 +112,12 @@ public class ChatTestEveything {
         // register next activity that need to be monitored.
         openActionBarOverflowOrOptionsMenu(getInstrumentation().getTargetContext());
         onView(withText("All Users")).perform(click());
-        sleep(500);*/
+        sleep(500);
     }
     @Test
     public void changeImage() {
 
-      /*  // Click sign in
+        // Click sign in
         ViewInteraction appCompatButton = onView(withId(R.id.start_login_btn));
         appCompatButton.perform(click());
 

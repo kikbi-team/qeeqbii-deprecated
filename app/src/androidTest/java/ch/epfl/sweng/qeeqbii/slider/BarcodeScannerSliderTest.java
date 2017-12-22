@@ -39,12 +39,30 @@ public class BarcodeScannerSliderTest {
     @BeforeClass
     public static void run_before() {
         BarcodeToProductActivity.setProductAddingAllowed(false);
+        // Click
+        ViewInteraction appCompatButton1 = onView(withId(R.id.start_login_btn));
+        appCompatButton1.perform(click());
+        String email = "nicolaslesimple@noos.fr";
+        String password = "123456";
+
+        // Enter email
+        ViewInteraction emailField = onView(withId(R.id.email_login_chat));
+        emailField.perform(replaceText(email));;
+
+        // Enter password
+        ViewInteraction passwordField = onView((withId(R.id.password_login_chat)));
+        passwordField.perform(replaceText(password));
+
+        // Click sign in
+        ViewInteraction appCompatButton2 = onView(withId(R.id.login_btn));
+        appCompatButton2.perform(click());
     }
 
     @Test
     public void canGoToBarcodeScanner() {
         SliderTest sliderTest = new SliderTest();
         sliderTest.canGoToBarcodeScanner(layoutId, navViewId);
+
     }
 
 
@@ -98,6 +116,18 @@ public class BarcodeScannerSliderTest {
         SliderTest sliderTest = new SliderTest();
         sliderTest.canGoToOtherActivity(layoutId, navViewId);
     }
+
+    private void enterEmail(String email) {
+        ViewInteraction emailField = onView(withId(R.id.email_login_chat));
+        emailField.perform(replaceText(email));
+    }
+
+    private void enterPassword(String password) {
+        ViewInteraction passwordField = onView((withId(R.id.password_login_chat)));
+        passwordField.perform(replaceText(password));
+    }
+
+
 
     @AfterClass
     public static void finish_all_activities() {

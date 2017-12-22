@@ -182,8 +182,8 @@ public class SavedProductsDatabaseTest {
         }
     }*/
 
-    @AfterClass
-    public static void finish_all_activities() {
-        ActivityFinisher.finishOpenActivities();
-    }
+   // @AfterClass
+   // public static void finish_all_activities() {
+    //    ActivityFinisher.finishOpenActivities();
+    //}
 }

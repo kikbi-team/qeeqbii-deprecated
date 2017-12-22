@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 
 import org.junit.After;
+import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
@@ -43,6 +44,10 @@ public class TwitterTest {
         //Button buttonTwitterLogin = (Button) current_activity.findViewById(R.id.button_twitter_login);
         Thread.sleep(200);
         onView(withId(R.id.button_twitter_login)).perform(click());
+    }
+    @AfterClass
+    public static void finish_all_activities() {
+        ActivityFinisher.finishOpenActivities();
     }
 /*
     @Test
