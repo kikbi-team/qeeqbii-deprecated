@@ -99,6 +99,7 @@ public class FacebookLoginTest {
     @Test
     public void useAppContext() throws Exception {
 
+
         onView(withId(R.id.button_facebook_signout)).perform(click());
         FacebookLoginActivity activity = mActivityRule.getActivity();
         Thread.sleep(200);
